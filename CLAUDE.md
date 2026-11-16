@@ -18,6 +18,7 @@ Proyecto: **Problem Set 3 – Predicting Prices** (Big Data y Machine Learning, 
 - Cada modelo se registra con `registra()` (en `scripts/utils_modelos.R`), que escribe `models/registro_modelos.csv`, las predicciones OOF y de test, y `submissions/<modelo>.csv`.
 - Métrica principal: MAE en pesos sobre predicciones *out-of-fold* con **folds espaciales** (5 bloques k-means). Se reporta también el MAE en las observaciones del train ubicadas en Chapinero (la mejor aproximación al test).
 - No modificar `data/raw/`.
+- Git: **nunca** agregar `Co-Authored-By: Claude` ni otra atribución a Claude en commits o PRs.
 
 ## Entorno (Windows)
 - R: `"/c/Program Files/R/R-4.6.1/bin/Rscript.exe"` (no está en el PATH; no hay Python).

@@ -1,0 +1,3509 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:23:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 385176803,
+  "lat": 4.6096182,
+  "lon": -74.0701012,
+  "tags": {
+    "name": "Terraza Pasteur",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 1230755893,
+  "lat": 4.6169680,
+  "lon": -74.1025076,
+  "tags": {
+    "addr:full": "CARRERA 38 No. 10 - 90",
+    "name": "Centro Comercial Puerto Lopez",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 3342849162,
+  "lat": 4.6406560,
+  "lon": -74.0688212,
+  "tags": {
+    "name": "Mundoarte",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 3420374491,
+  "lat": 4.6268029,
+  "lon": -74.0670522,
+  "tags": {
+    "name": "La Ponderosa",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 5015574130,
+  "lat": 4.5994910,
+  "lon": -74.0744443,
+  "tags": {
+    "name": "Centro Commercial artesanal Plaza Bolívar",
+    "name:es": "Centro Commercial artesanal Plaza Bolívar",
+    "shop": "mall",
+    "toilets": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5018101424,
+  "lat": 4.6019514,
+  "lon": -74.0758577,
+  "tags": {
+    "name": "Centro Commercial Danaranjo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 5173162632,
+  "lat": 4.6406615,
+  "lon": -74.0659963,
+  "tags": {
+    "addr:street": "Avenida Carrera 14",
+    "name": "Feria Artesanal Chapinero",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173588245,
+  "lat": 4.6442894,
+  "lon": -74.0642893,
+  "tags": {
+    "addr:street": "Avenida Carrera 13",
+    "name": "Centro Comercial Chapinero 57",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173738337,
+  "lat": 4.6427478,
+  "lon": -74.0739796,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 24",
+    "name": "Plaza 54 Centro Commercial",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5188989855,
+  "lat": 4.6037313,
+  "lon": -74.0695942,
+  "tags": {
+    "description": "Tiendas de ropa Tatuajes y piercings",
+    "name": "Via libre",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 5204790586,
+  "lat": 4.6004137,
+  "lon": -74.0780205,
+  "tags": {
+    "addr:housenumber": "11-73",
+    "addr:street": "Avenida Carrera 10",
+    "name": "Puerto Locura",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5204790587,
+  "lat": 4.6003086,
+  "lon": -74.0780830,
+  "tags": {
+    "addr:housenumber": "11-73",
+    "addr:street": "Avenida Carrera 10",
+    "name": "Kayrox",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5204790589,
+  "lat": 4.6000682,
+  "lon": -74.0782103,
+  "tags": {
+    "addr:street": "Avenida Carrera 10",
+    "name": "Puerto Lindo",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5204954704,
+  "lat": 4.6037760,
+  "lon": -74.0697442,
+  "tags": {
+    "addr:street": "Avenida Calle 19",
+    "name": "Los Angeles",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5228832782,
+  "lat": 4.6666532,
+  "lon": -74.0547609,
+  "tags": {
+    "addr:housenumber": "12-51",
+    "addr:street": "Calle 82",
+    "name": "Zara Home",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 6153703194,
+  "lat": 4.7254372,
+  "lon": -74.0909656,
+  "tags": {
+    "name": "San German",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 6831033082,
+  "lat": 4.6029321,
+  "lon": -74.0800827,
+  "tags": {
+    "addr:housenumber": "12-27",
+    "addr:street": "Carrera 13A",
+    "name": "Maxienvases CyC",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 6960761040,
+  "lat": 4.6012280,
+  "lon": -74.0775087,
+  "tags": {
+    "addr:street": "Carrera 10",
+    "name": "Centro Comercial Pax Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 6960761177,
+  "lat": 4.6008043,
+  "lon": -74.0770367,
+  "tags": {
+    "name": "Centro Comercial Caravana",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 6960761178,
+  "lat": 4.6008938,
+  "lon": -74.0771768,
+  "tags": {
+    "addr:street": "Carrera 10",
+    "name": "Centro Comercial Candelaria",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 8298490442,
+  "lat": 4.6544071,
+  "lon": -74.1304265,
+  "tags": {
+    "addr:city": "Localidad Fontibón",
+    "addr:housenumber": "77-51",
+    "addr:postcode": "110931",
+    "addr:street": "Calle 18",
+    "name": "Meridiano 13 del Este",
+    "operator": "Activos Capital",
+    "phone": "+57 324 3238965",
+    "shop": "mall",
+    "website": "https://www.meridiano13deleste.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 9092918260,
+  "lat": 4.8099529,
+  "lon": -74.1007541,
+  "tags": {
+    "name": "Centro comercial San Miguel",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 9576459334,
+  "lat": 4.5934422,
+  "lon": -74.0785856,
+  "tags": {
+    "name": "Zona de comercio Ministerio de Hacienda",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 9842151083,
+  "lat": 4.6194913,
+  "lon": -74.0997225,
+  "tags": {
+    "addr:city": "Localidad Puente Aranda",
+    "addr:housenumber": "12-47",
+    "addr:street": "Carrera 38",
+    "name": "Centro Comercial Expo 38",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "operator": "Privado",
+    "payment:cash": "yes",
+    "payment:debit_cards": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 10806584937,
+  "lat": 4.7250739,
+  "lon": -74.1338751,
+  "tags": {
+    "name": "Ronda Del Río",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 10974833952,
+  "lat": 4.6154339,
+  "lon": -74.1030923,
+  "tags": {
+    "name": "Centro Comercial Marimar",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 12616534459,
+  "lat": 4.7227566,
+  "lon": -74.0623637,
+  "tags": {
+    "addr:housenumber": "55-30",
+    "addr:street": "Calle 134",
+    "name": "Centro Comercial Paseo San Rafael",
+    "opening_hours": "Mo-Fr 08:00-21:00; Sa, Su 08:00-22:00",
+    "phone": "+57 601 6434737",
+    "shop": "mall",
+    "website": "https://paseosanrafael.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 12979005260,
+  "lat": 4.6462800,
+  "lon": -74.1030231,
+  "tags": {
+    "name": "Gran Estación Costado Esfera",
+    "shop": "mall",
+    "website": "https://granestacion.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 13110506149,
+  "lat": 4.8468925,
+  "lon": -74.0780739,
+  "tags": {
+    "name": "Centro Comercial Terranova",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 13436096076,
+  "lat": 4.5955190,
+  "lon": -74.0851888,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "name": "Centro Comerical Campo David",
+    "shop": "mall"
+  }
+},
+{
+  "type": "node",
+  "id": 13753482908,
+  "lat": 4.6927307,
+  "lon": -74.0324833,
+  "tags": {
+    "name": "Centro commercial Hacienda Santa Barbara",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 23502427,
+  "center": {
+    "lat": 4.6341744,
+    "lon": -74.1157909
+  },
+  "tags": {
+    "building": "retail",
+    "name": "Zona In",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 24084318,
+  "center": {
+    "lat": 4.6803388,
+    "lon": -74.0820629
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "name": "Centro Comercial Metrópolis",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 24156077,
+  "center": {
+    "lat": 4.6761943,
+    "lon": -74.1196222
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Dorado Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 24156089,
+  "center": {
+    "lat": 4.6835023,
+    "lon": -74.1163421
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Nuestro Bogotá",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 24313862,
+  "center": {
+    "lat": 4.6427118,
+    "lon": -74.0748026
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 53B",
+    "building": "yes",
+    "name": "CC Galerias",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 24421901,
+  "center": {
+    "lat": 4.6181534,
+    "lon": -74.0859900
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "alt_name": "Mallplaza NQS",
+    "building": "yes",
+    "check_date": "2026-02-21",
+    "name": "Mallplaza NQS",
+    "old_name": "Centro Comercial Calima Bogotá",
+    "opening_hours": "Mo-Sa 07:00-20:00",
+    "operator": "Mallplaza",
+    "shop": "mall",
+    "website": "https://mallplazanqs.com/",
+    "wikidata": "Q5761065",
+    "wikimedia_commons": "Category:Centro comercial Mallplaza NQS",
+    "wikipedia": "es:Mallplaza NQS"
+  }
+},
+{
+  "type": "way",
+  "id": 24436904,
+  "center": {
+    "lat": 4.7263651,
+    "lon": -74.0607603
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Colina 138",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 24524622,
+  "center": {
+    "lat": 4.5989867,
+    "lon": -74.0793259
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housename": "Entre Calles 9 y 19 y carreras 10 y 11",
+    "addr:street": "Carrera 10",
+    "building": "yes",
+    "name": "Centro Comercial El Gran San",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 24577218,
+  "center": {
+    "lat": 4.6660655,
+    "lon": -74.0558166
+  },
+  "tags": {
+    "addr:housenumber": "13-05",
+    "addr:street": "Calle 81",
+    "alt_name": "Atlantis Plaza",
+    "building": "retail",
+    "building:levels": "6",
+    "name": "Centro Comercial Atlantis",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "roof:levels": "1",
+    "shop": "mall",
+    "toilets": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 24577224,
+  "center": {
+    "lat": 4.6669060,
+    "lon": -74.0531221
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "82-71",
+    "addr:street": "Carrera 12",
+    "building": "retail",
+    "building:levels": "4",
+    "name": "Centro Comercial Andino",
+    "opening_hours": "Mo-Th 10:00-20:00; Fr-Sa 10:00-21:00; Su 12:00-18:00",
+    "roof:levels": "0",
+    "shop": "mall",
+    "toilets": "yes",
+    "website": "https://www.centroandino.com.co/",
+    "wheelchair": "yes",
+    "wikidata": "Q420862",
+    "wikimedia_commons": "Category:Centro Andino",
+    "wikipedia": "es:Centro comercial Andino"
+  }
+},
+{
+  "type": "way",
+  "id": 24715701,
+  "center": {
+    "lat": 4.6571978,
+    "lon": -74.0577257
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "9",
+    "addr:street": "Avenida Calle 72",
+    "building": "retail",
+    "building:levels": "3",
+    "name": "Centro Comercial Avenida Chile",
+    "shop": "mall",
+    "toilets": "yes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 24827269,
+  "center": {
+    "lat": 4.6929003,
+    "lon": -74.0324536
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "115-60",
+    "addr:street": "Avenida Carrera 7",
+    "addr:suburb": "Usaquén",
+    "brand": "Hacienda Santa Bárbara",
+    "brand:wikidata": "Q5396740",
+    "building": "commercial",
+    "building:levels": "3",
+    "contact:phone": "+57 601 612 0388",
+    "contact:website": "https://www.haciendasantabarbara.com.co/",
+    "heritage": "2",
+    "historic": "building",
+    "name": "Centro Comercial Hacienda Santa Bárbara",
+    "name:en": "Hacienda Santa Bárbara Mall",
+    "opening_hours": "Mo-Sa 10:00-21:00; Su 11:00-19:00",
+    "parking": "yes",
+    "shop": "mall",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 25447617,
+  "center": {
+    "lat": 4.6637775,
+    "lon": -74.1303495
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 20 # 82-52",
+    "building": "yes",
+    "layer": "3",
+    "name": "Centro Comercial Hayuelos",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017",
+    "toilets": "yes",
+    "url": "https://www.hayueloscc.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 28551320,
+  "center": {
+    "lat": 4.7622408,
+    "lon": -74.0464164
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 185",
+    "alt_name": "Centro Comercial Santafé Bogotá",
+    "building": "commercial",
+    "name": "Centro Comercial Santafé",
+    "opening_hours": "Mo-Su 10:00-22:00",
+    "operator": "Centro Comercial Santafé",
+    "shop": "mall",
+    "wheelchair": "yes",
+    "wikidata": "Q420858",
+    "wikimedia_commons": "Category:Centro Comercial Santafé (Bogotá)",
+    "wikipedia": "es:Centro Comercial Santafé (Bogotá)"
+  }
+},
+{
+  "type": "way",
+  "id": 28715320,
+  "center": {
+    "lat": 4.7232930,
+    "lon": -74.1144938
+  },
+  "tags": {
+    "building": "yes",
+    "internet_access": "wlan",
+    "name": "Unicentro de Occidente",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 28918130,
+  "center": {
+    "lat": 4.6650400,
+    "lon": -74.0583028
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "78-5",
+    "addr:postcode": "110221",
+    "addr:street": "Avenida Carrera 15",
+    "building": "yes",
+    "name": "Unilago",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 32575655,
+  "center": {
+    "lat": 4.7122567,
+    "lon": -74.0713585
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Boulevard Niza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 32575664,
+  "center": {
+    "lat": 4.7114519,
+    "lon": -74.0731873
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Niza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 35770790,
+  "center": {
+    "lat": 4.6533572,
+    "lon": -74.1099480
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "24-39",
+    "addr:street": "Carrera 68B",
+    "building": "yes",
+    "name": "Centro Comercial Salitre Plaza",
+    "opening_hours": "08:00-20:00",
+    "shop": "mall",
+    "website": "https://www.salitreplaza.com.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 39743294,
+  "center": {
+    "lat": 4.6908241,
+    "lon": -74.0367690
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 9",
+    "building": "yes",
+    "building:levels": "4",
+    "name": "Centro Comercial Santa Ana",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 39782490,
+  "center": {
+    "lat": 4.6326311,
+    "lon": -74.2008214
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Metro Recreo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 40784872,
+  "center": {
+    "lat": 4.7725848,
+    "lon": -74.0415665
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Calle 195 # 21-48",
+    "addr:street": "Calle 195",
+    "building": "yes",
+    "name": "San Andresito Norte",
+    "opening_hours": "Mo-Sa 08:00-20:00",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 40838986,
+  "center": {
+    "lat": 4.7732917,
+    "lon": -74.0419503
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 45",
+    "building": "yes",
+    "name": "San Andresito Norte",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 40965721,
+  "center": {
+    "lat": 4.7578641,
+    "lon": -74.0444653
+  },
+  "tags": {
+    "addr:street": "Autopista Norte Carrera 45",
+    "building": "yes",
+    "name": "Centro Comercial Panamá",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 41013227,
+  "center": {
+    "lat": 4.7318981,
+    "lon": -74.0420362
+  },
+  "tags": {
+    "addr:street": "Calle 151",
+    "building": "yes",
+    "name": "Centro Comercial Cedritos",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 41877444,
+  "center": {
+    "lat": 4.7327005,
+    "lon": -74.0664890
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "name": "Centro Comercial Parque La Colina",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 45869319,
+  "center": {
+    "lat": 4.7373616,
+    "lon": -74.0858451
+  },
+  "tags": {
+    "addr:street": "Av Suba con Cra 91 (Calle 145 # 91-19)\n\nFrente a la estación de transmilenio Suba - Tv. 91",
+    "building": "yes",
+    "name": "Centro Comercial Centro Suba",
+    "opening_hours": "Mo-Su 08:00-21:00",
+    "phone": "+57 601 7447577",
+    "shop": "mall",
+    "toilets": "yes",
+    "website": "https://www.centrosuba.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 47165675,
+  "center": {
+    "lat": 4.6947762,
+    "lon": -74.0863525
+  },
+  "tags": {
+    "addr:housename": "Titán Plaza",
+    "building": "public",
+    "building:colour": "#ddd5bd",
+    "building:levels": "3",
+    "height": "15",
+    "int_name": "Titán Plaza",
+    "name": "Titán Plaza",
+    "name:es": "Titán Plaza",
+    "roof:colour": "#ac8e84",
+    "shop": "mall",
+    "website": "https://www.titanplaza.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 48002778,
+  "center": {
+    "lat": 4.5842675,
+    "lon": -74.2062380
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Unisur",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 54168221,
+  "center": {
+    "lat": 4.5917491,
+    "lon": -74.1242355
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 27",
+    "building": "yes",
+    "name": "Centro Comercial Centro Mayor",
+    "operator": "Centro Comercial Centro Mayor",
+    "shop": "mall",
+    "wikidata": "Q420867",
+    "wikimedia_commons": "Category:Centro Comercial Centro Mayor",
+    "wikipedia": "es:Centro comercial Centro Mayor"
+  }
+},
+{
+  "type": "way",
+  "id": 57691880,
+  "center": {
+    "lat": 4.7156432,
+    "lon": -74.0293777
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:country": "CO",
+    "addr:housenumber": "138-33",
+    "addr:street": "Carrera 7",
+    "building": "yes",
+    "building:levels": "3",
+    "check_date": "2024-11-04",
+    "dog": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Palatino",
+    "opening_hours": "Mo-Th 10:00-20:00; Fr-Sa 10:00-21:00; Su 11:00-19:00; PH 11:00-19:00",
+    "shop": "mall",
+    "toilets": "yes",
+    "website": "https://ccpalatino.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 58478712,
+  "center": {
+    "lat": 4.7211349,
+    "lon": -74.0460792
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "building": "yes",
+    "name": "Sorpresas",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 62114869,
+  "center": {
+    "lat": 4.6307091,
+    "lon": -74.1690409
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Milenio Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 68421453,
+  "center": {
+    "lat": 4.6943291,
+    "lon": -74.0622944
+  },
+  "tags": {
+    "building": "yes",
+    "building:colour": "white",
+    "name": "Centro Comercial Pasadena",
+    "roof:colour": "gray",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 68423487,
+  "center": {
+    "lat": 4.6937699,
+    "lon": -74.0670590
+  },
+  "tags": {
+    "building": "yes",
+    "name": "CC Puentelargo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 70560354,
+  "center": {
+    "lat": 4.7231305,
+    "lon": -74.0621859
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 134",
+    "alt_name": "Centro Comercial Paseo SaN RafaeL",
+    "building": "yes",
+    "name": "Centro Comercial Paseo San Rafael",
+    "name:en": "San Rafael Mall",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 75917649,
+  "center": {
+    "lat": 4.7446171,
+    "lon": -74.0927406
+  },
+  "tags": {
+    "building": "commercial",
+    "landuse": "commercial",
+    "name": "C.C. Fiesta Suba",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 79378114,
+  "center": {
+    "lat": 4.7387092,
+    "lon": -74.0851351
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Subazar",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 79378189,
+  "center": {
+    "lat": 4.7550677,
+    "lon": -74.1067520
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Hatochico",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 81344987,
+  "center": {
+    "lat": 4.6896596,
+    "lon": -74.0658790
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Master Center",
+    "operator": "Master Center",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 82159789,
+  "center": {
+    "lat": 4.6935954,
+    "lon": -74.0855749
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Plaza 80",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 83886246,
+  "center": {
+    "lat": 4.6426694,
+    "lon": -74.1562685
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housename": "Centro Comercial Tintal Plaza",
+    "addr:street": "Avenida Ciudad de Cali con Avenida de las Américas",
+    "building": "yes",
+    "building:levels": "4",
+    "landuse": "retail",
+    "name": "Tintal Plaza",
+    "shop": "mall",
+    "source": "Local_Knowledge",
+    "website": "https://tintalplaza.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 85990591,
+  "center": {
+    "lat": 4.7387643,
+    "lon": -74.0861818
+  },
+  "tags": {
+    "addr:street": "Avenida Suba",
+    "building": "yes",
+    "name": "Acuarela",
+    "operator": "SurtiMax",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 95935432,
+  "center": {
+    "lat": 4.7112173,
+    "lon": -74.2228190
+  },
+  "tags": {
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 108050041,
+  "center": {
+    "lat": 4.7201755,
+    "lon": -74.0395331
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "name": "CC Plaza 140",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 108050043,
+  "center": {
+    "lat": 4.7207159,
+    "lon": -74.0390552
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "landuse": "retail",
+    "name": "CC Paseo 140",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 108050046,
+  "center": {
+    "lat": 4.7201560,
+    "lon": -74.0377050
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "building": "yes",
+    "name": "CC Futuro 140",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 108050049,
+  "center": {
+    "lat": 4.7198105,
+    "lon": -74.0364569
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "name": "Centro Comercial La Puerta del Sol",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 111449985,
+  "center": {
+    "lat": 4.7168645,
+    "lon": -74.0298724
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 111449988,
+  "center": {
+    "lat": 4.7167361,
+    "lon": -74.0295596
+  },
+  "tags": {
+    "name": "Belmira Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 111449994,
+  "center": {
+    "lat": 4.7166317,
+    "lon": -74.0291756
+  },
+  "tags": {
+    "building": "yes",
+    "name": "C.C. Belmira Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 113220020,
+  "center": {
+    "lat": 4.7173855,
+    "lon": -74.0310896
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 140",
+    "landuse": "commercial",
+    "name": "C.C. Monteverde",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 118401160,
+  "center": {
+    "lat": 4.6798213,
+    "lon": -74.0505889
+  },
+  "tags": {
+    "addr:housenumber": "94-10",
+    "addr:street": "Carrera15",
+    "building": "yes",
+    "name": "K-tronix",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 119873437,
+  "center": {
+    "lat": 4.6876083,
+    "lon": -74.0728669
+  },
+  "tags": {
+    "building": "yes",
+    "name": "AV 68",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 121973852,
+  "center": {
+    "lat": 4.7422322,
+    "lon": -74.0843051
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "Centro Comercial Los Pórticos",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 123723611,
+  "center": {
+    "lat": 4.6964666,
+    "lon": -74.0920889
+  },
+  "tags": {
+    "name": "Centro Comercial San Francisco",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 123832979,
+  "center": {
+    "lat": 4.6937819,
+    "lon": -74.0668743
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "C.C. Puentelargo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 123832981,
+  "center": {
+    "lat": 4.7086100,
+    "lon": -74.0711467
+  },
+  "tags": {
+    "landuse": "commercial",
+    "name": "Centro Comercial Bahía 122",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 126627803,
+  "center": {
+    "lat": 4.7292346,
+    "lon": -74.0524341
+  },
+  "tags": {
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 129055162,
+  "center": {
+    "lat": 4.6264266,
+    "lon": -74.0659110
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "building": "yes",
+    "name": "Plaza 39",
+    "roof:material": "roof_tiles",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 136095198,
+  "center": {
+    "lat": 4.7277372,
+    "lon": -74.0652233
+  },
+  "tags": {
+    "addr:street": "Carrera 58A",
+    "building": "yes",
+    "name": "Centro Comercial Porto Alegre",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 154078917,
+  "center": {
+    "lat": 4.7501977,
+    "lon": -74.0436659
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 170",
+    "building": "yes",
+    "name": "Stuttgart",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 172466153,
+  "center": {
+    "lat": 4.7503379,
+    "lon": -74.0954395
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Plaza Imperial",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 173543160,
+  "center": {
+    "lat": 4.6659880,
+    "lon": -74.0540308
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centrol Comercial El Retiro",
+    "name:es": "El Retiro",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 174317409,
+  "center": {
+    "lat": 4.6709118,
+    "lon": -74.1533563
+  },
+  "tags": {
+    "addr:housenumber": "15A 65",
+    "addr:street": "Carrera 106",
+    "building": "yes",
+    "email": "info@grupozfb.com",
+    "phone": "4046644",
+    "shop": "mall",
+    "website": "https://www.grupozfb.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 175278344,
+  "center": {
+    "lat": 4.6747948,
+    "lon": -74.1444709
+  },
+  "tags": {
+    "amenity": "parking",
+    "building": "commercial",
+    "name": "Fiesta Fontibón",
+    "parking": "rooftop",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 175761015,
+  "center": {
+    "lat": 4.7296245,
+    "lon": -74.0495135
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "building": "yes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 176264568,
+  "center": {
+    "lat": 4.7287653,
+    "lon": -74.0408704
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Plaza 147",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 177612336,
+  "center": {
+    "lat": 4.6292195,
+    "lon": -74.1160515
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Outlet Las Americas",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 188914628,
+  "center": {
+    "lat": 4.6879766,
+    "lon": -74.0642047
+  },
+  "tags": {
+    "addr:street": "Avenida Suba",
+    "building": "yes",
+    "building:levels": "5",
+    "building:material": "brick",
+    "name": "Centro Comercial Iserra 100",
+    "roof:colour": "silver",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 190270293,
+  "center": {
+    "lat": 4.7529533,
+    "lon": -74.0500210
+  },
+  "tags": {
+    "name": "CC Prado Comercial",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 199522385,
+  "center": {
+    "lat": 4.6863285,
+    "lon": -74.0740588
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Centro Comercial Cafam Floresta",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 220538492,
+  "center": {
+    "lat": 4.7669946,
+    "lon": -74.0499261
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housename": "San Pedro",
+    "addr:housenumber": "55a",
+    "addr:street": "Calle 187",
+    "building": "yes",
+    "name": "Centro Comercial San Pedro",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 222373348,
+  "center": {
+    "lat": 4.6208866,
+    "lon": -74.1671690
+  },
+  "tags": {
+    "name": "Claro Telefonia Movil",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 224702675,
+  "center": {
+    "lat": 4.7048556,
+    "lon": -74.1034376
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Primavera",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 239143445,
+  "center": {
+    "lat": 4.7027135,
+    "lon": -74.0495021
+  },
+  "tags": {
+    "addr:housenumber": "122-69",
+    "addr:street": "Carrera 19",
+    "building": "yes",
+    "name": "SB Drive",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 239143446,
+  "center": {
+    "lat": 4.7027196,
+    "lon": -74.0495783
+  },
+  "tags": {
+    "building": "yes",
+    "name": "SB Drive",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 253473074,
+  "center": {
+    "lat": 4.6300507,
+    "lon": -74.1176278
+  },
+  "tags": {
+    "addr:street": "Carrera 65",
+    "building": "mall",
+    "name": "Centro Comercial Outlet Factory",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 253639901,
+  "center": {
+    "lat": 4.7132986,
+    "lon": -74.2217351
+  },
+  "tags": {
+    "addr:city": "Mosquera",
+    "addr:street": "Carrera 3",
+    "building": "retail",
+    "layer": "1",
+    "name": "EcoPlaza",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 253639904,
+  "center": {
+    "lat": 4.7112323,
+    "lon": -74.2228145
+  },
+  "tags": {
+    "building": "yes",
+    "name": "CC El Trébol",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 263671525,
+  "center": {
+    "lat": 4.5937298,
+    "lon": -74.1385479
+  },
+  "tags": {
+    "addr:street": "Diagonal 46A Sur",
+    "building": "yes",
+    "name": "Centro Comercial Venecia Plaza",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 297842759,
+  "center": {
+    "lat": 4.6168950,
+    "lon": -74.1680818
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Centro Comercial Casablanca",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 324802407,
+  "center": {
+    "lat": 4.5725971,
+    "lon": -74.0921509
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial 20 de Julio",
+    "roof:material": "eternit",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 334433530,
+  "center": {
+    "lat": 4.5957426,
+    "lon": -74.1366333
+  },
+  "tags": {
+    "building": "warehouse",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 334433544,
+  "center": {
+    "lat": 4.5955369,
+    "lon": -74.1364471
+  },
+  "tags": {
+    "building": "warehouse",
+    "name": "Textinsumos Plaza Comercial",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 334438054,
+  "center": {
+    "lat": 4.5955903,
+    "lon": -74.1369104
+  },
+  "tags": {
+    "building": "retail",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 334968184,
+  "center": {
+    "lat": 4.6047342,
+    "lon": -74.1845160
+  },
+  "tags": {
+    "addr:city": "Bosa",
+    "addr:housenumber": "79C-27",
+    "addr:street": "Calle 65 Sur",
+    "building": "yes",
+    "name": "Gran Plaza Bosa",
+    "operator": "Pactia SAS",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 342404014,
+  "center": {
+    "lat": 4.7008896,
+    "lon": -74.1155357
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Diver Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 345612197,
+  "center": {
+    "lat": 4.7022416,
+    "lon": -74.0415937
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "shop": "mall",
+    "wikidata": "Q6156040",
+    "wikimedia_commons": "Category:Unicentro",
+    "wikipedia": "es:Unicentro"
+  }
+},
+{
+  "type": "way",
+  "id": 361137315,
+  "center": {
+    "lat": 4.6451304,
+    "lon": -74.1298664
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Bazar Alsacia",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 371507684,
+  "center": {
+    "lat": 4.5941391,
+    "lon": -74.1382754
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "53",
+    "building": "yes",
+    "name": "Centro Comercial Venecia",
+    "note": "Venta de ropa, Calzado, Celulares, Fen Shui, Tiendas Naturistas.",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 371668788,
+  "center": {
+    "lat": 4.5931117,
+    "lon": -74.1385219
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "22",
+    "building": "yes",
+    "name": "Venecia Estación",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 384248378,
+  "center": {
+    "lat": 4.6066734,
+    "lon": -74.2169325
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:housenumber": "33-78",
+    "addr:postcode": "250051",
+    "addr:street": "Carrera 34",
+    "building": "yes",
+    "layer": "-1",
+    "name": "CC Miraflores",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 386566411,
+  "center": {
+    "lat": 4.5869684,
+    "lon": -74.2059920
+  },
+  "tags": {
+    "addr:city": "Comuna 3 La Despensa",
+    "addr:postcode": "250051",
+    "addr:street": "Cl 31 Cr 7",
+    "alt_name": "Centro Comercial Gran Plaza Soacha",
+    "branch": "Soacha",
+    "building": "yes",
+    "name": "Centro Comercial Gran Plaza",
+    "operator": "Centro Comercial Gran Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 386566413,
+  "center": {
+    "lat": 4.5886327,
+    "lon": -74.1948575
+  },
+  "tags": {
+    "addr:city": "Comuna 5 San Mateo",
+    "addr:housenumber": "38 - 89",
+    "addr:postcode": "250054",
+    "addr:street": "Carrera 1",
+    "building": "yes",
+    "description": "Construido por Ospinas e inaugurado en diciembre de 2017",
+    "name": "Centro Comercial Ventura Terreros",
+    "operator": "Centro Comercial Ventura Terreros",
+    "shop": "mall",
+    "website": "https://venturaterreros.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 386566822,
+  "center": {
+    "lat": 4.5811234,
+    "lon": -74.2193140
+  },
+  "tags": {
+    "addr:postcode": "250051",
+    "building": "yes",
+    "name": "Centro Comercial del Parque",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 409337340,
+  "center": {
+    "lat": 4.7519027,
+    "lon": -74.0819167
+  },
+  "tags": {
+    "addr:housenumber": "154A-23",
+    "addr:street": "Carrera 92",
+    "building": "yes",
+    "name": "Los Rosales de Suba",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 476673473,
+  "center": {
+    "lat": 4.5582264,
+    "lon": -74.1220732
+  },
+  "tags": {
+    "addr:street": "Calle 51 Sur",
+    "building": "yes",
+    "name": "Centro comercial Caracas",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 498450718,
+  "center": {
+    "lat": 4.6527593,
+    "lon": -74.1598591
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 94",
+    "building": "commercial",
+    "layer": "1",
+    "name": "Centro Comercial Ciudad Tintal",
+    "nohousenumber": "yes",
+    "opening_hours": "08:00-22:00",
+    "shop": "mall",
+    "toilets": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 498655627,
+  "center": {
+    "lat": 4.7343035,
+    "lon": -74.1078913
+  },
+  "tags": {
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 500223649,
+  "center": {
+    "lat": 4.7457773,
+    "lon": -74.0960858
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Alpaso",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 526835126,
+  "center": {
+    "lat": 4.7536793,
+    "lon": -74.0587357
+  },
+  "tags": {
+    "addr:street": "Calle 169B",
+    "building": "yes",
+    "level": "2",
+    "name": "Centro Comercial Punto 170",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527864877,
+  "center": {
+    "lat": 4.7540853,
+    "lon": -74.0547679
+  },
+  "tags": {
+    "addr:street": "Carrera 55",
+    "building": "residential",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527867207,
+  "center": {
+    "lat": 4.7541339,
+    "lon": -74.0550376
+  },
+  "tags": {
+    "addr:street": "Calle 171",
+    "building": "residential",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528263164,
+  "center": {
+    "lat": 4.6995820,
+    "lon": -74.0426758
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 15",
+    "building": "yes",
+    "name": "Halley",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529085131,
+  "center": {
+    "lat": 4.6148405,
+    "lon": -74.1594041
+  },
+  "tags": {
+    "building": "yes",
+    "name": "La veleñita",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 529085161,
+  "center": {
+    "lat": 4.6141020,
+    "lon": -74.1588917
+  },
+  "tags": {
+    "building": "yes",
+    "name": "palenque",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 529561785,
+  "center": {
+    "lat": 4.7338898,
+    "lon": -74.0561517
+  },
+  "tags": {
+    "addr:street": "Carrera 54",
+    "building": "yes",
+    "name": "Centro Comercial Senderos de la Colina",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530427767,
+  "center": {
+    "lat": 4.7202390,
+    "lon": -74.0683250
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 58",
+    "name": "Plaza Aventura",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537042678,
+  "center": {
+    "lat": 4.5864051,
+    "lon": -74.1026639
+  },
+  "tags": {
+    "addr:city": "Antonio Nariño",
+    "addr:street": "Carrera 24",
+    "building": "yes",
+    "name": "Nuga Best",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537188266,
+  "center": {
+    "lat": 4.6056714,
+    "lon": -74.0726437
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 19",
+    "building": "yes",
+    "name": "Centro Comercial Omni 19",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537446659,
+  "center": {
+    "lat": 4.6001999,
+    "lon": -74.0677248
+  },
+  "tags": {
+    "addr:street": "Carrera 2",
+    "building": "yes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537468848,
+  "center": {
+    "lat": 4.6084768,
+    "lon": -74.0733702
+  },
+  "tags": {
+    "addr:housenumber": "20-39",
+    "addr:street": "Carrera 12",
+    "building": "yes",
+    "name": "RampiCentro",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537774021,
+  "center": {
+    "lat": 4.6083701,
+    "lon": -74.0726342
+  },
+  "tags": {
+    "addr:street": "Carrera 10",
+    "building": "yes",
+    "name": "Centro Comercial 21",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537774026,
+  "center": {
+    "lat": 4.6039232,
+    "lon": -74.0753088
+  },
+  "tags": {
+    "addr:street": "Carrera 10",
+    "building": "commercial",
+    "name": "Centro Comercial",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537774031,
+  "center": {
+    "lat": 4.6018203,
+    "lon": -74.0763564
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 10",
+    "building": "mall",
+    "name": "Centro Comercial Neos Centro",
+    "opening_hours": "sunrise-sunset",
+    "operator": "Centro Comercial Neos Centro",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017",
+    "wikidata": "Q110863401",
+    "wikipedia": "es:Centro comercial Neos Centro"
+  }
+},
+{
+  "type": "way",
+  "id": 538085316,
+  "center": {
+    "lat": 4.6052601,
+    "lon": -74.0810507
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 13",
+    "building": "yes",
+    "name": "Centro Comercial Shopping Center",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 538616659,
+  "center": {
+    "lat": 4.6461028,
+    "lon": -74.1283390
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial El Edén",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 538833074,
+  "center": {
+    "lat": 4.6037704,
+    "lon": -74.0805575
+  },
+  "tags": {
+    "addr:housenumber": "14-43",
+    "addr:street": "Avenida Calle 13",
+    "building": "retail",
+    "name": "Metro 13",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539690732,
+  "center": {
+    "lat": 4.6037582,
+    "lon": -74.0822950
+  },
+  "tags": {
+    "addr:housenumber": "15-79",
+    "addr:street": "Calle 12",
+    "building": "yes",
+    "name": "Pasaje Gigantes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539690747,
+  "center": {
+    "lat": 4.6038881,
+    "lon": -74.0806505
+  },
+  "tags": {
+    "addr:street": "Carrera 15",
+    "building": "yes",
+    "name": "Mundo Tech",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539708559,
+  "center": {
+    "lat": 4.6043424,
+    "lon": -74.0887087
+  },
+  "tags": {
+    "addr:street": "Calle 9",
+    "building": "yes",
+    "name": "San Andresito San Jose",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539708560,
+  "center": {
+    "lat": 4.6046062,
+    "lon": -74.0890764
+  },
+  "tags": {
+    "addr:housenumber": "20-7c",
+    "addr:street": "Calle 9",
+    "building": "yes",
+    "name": "Centro Comercial Jaimor",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539721345,
+  "center": {
+    "lat": 4.6067543,
+    "lon": -74.0904987
+  },
+  "tags": {
+    "addr:city": "Bogota D.C.",
+    "addr:street": "Carrera 24",
+    "building": "office",
+    "name": "Centro Comercial IRIS",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539723319,
+  "center": {
+    "lat": 4.6058218,
+    "lon": -74.0892990
+  },
+  "tags": {
+    "addr:street": "Carrera 22",
+    "building": "yes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539731997,
+  "center": {
+    "lat": 4.6035500,
+    "lon": -74.0885050
+  },
+  "tags": {
+    "addr:street": "Calle 8A",
+    "building": "residential",
+    "name": "Puerto Vallarta Textiles",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539735815,
+  "center": {
+    "lat": 4.6045857,
+    "lon": -74.0895502
+  },
+  "tags": {
+    "addr:street": "Carrera 21",
+    "building": "residential",
+    "name": "CC Nataly",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539735816,
+  "center": {
+    "lat": 4.6059407,
+    "lon": -74.0884689
+  },
+  "tags": {
+    "addr:street": "Calle 10",
+    "building": "yes",
+    "name": "Real Plaza",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540228634,
+  "center": {
+    "lat": 4.6004427,
+    "lon": -74.0817106
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "building": "yes",
+    "building:levels": "10",
+    "name": "Visto Centro de Comercio Mayorista",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540228664,
+  "center": {
+    "lat": 4.6038092,
+    "lon": -74.0889162
+  },
+  "tags": {
+    "addr:street": "Carrera 20",
+    "building": "yes",
+    "name": "Centro Comercial Bury",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540228665,
+  "center": {
+    "lat": 4.6040749,
+    "lon": -74.0889592
+  },
+  "tags": {
+    "addr:street": "Carrera 20",
+    "building": "yes",
+    "name": "Centro comercial Teo",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540257216,
+  "center": {
+    "lat": 4.6042640,
+    "lon": -74.0892180
+  },
+  "tags": {
+    "addr:street": "Calle 9",
+    "building": "yes",
+    "name": "Centro Comercial babilonia",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540262381,
+  "center": {
+    "lat": 4.6068801,
+    "lon": -74.0893737
+  },
+  "tags": {
+    "addr:street": "Carrera 22",
+    "building": "yes",
+    "name": "Puerta Grande San Jose",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540268646,
+  "center": {
+    "lat": 4.6060596,
+    "lon": -74.0888193
+  },
+  "tags": {
+    "addr:street": "Calle 10",
+    "building": "yes",
+    "name": "Centro Comercial Milas",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540528802,
+  "center": {
+    "lat": 4.6362445,
+    "lon": -74.1008062
+  },
+  "tags": {
+    "addr:street": "Carrera 50",
+    "building": "commercial",
+    "name": "Cipres Plaza Comercial",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541137475,
+  "center": {
+    "lat": 4.5670492,
+    "lon": -74.1296994
+  },
+  "tags": {
+    "addr:street": "Calle 53 Sur",
+    "building": "yes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541189419,
+  "center": {
+    "lat": 4.6523045,
+    "lon": -74.1260734
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Calle 17",
+    "building": "yes",
+    "name": "Centro Comercial Multiplaza",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541386220,
+  "center": {
+    "lat": 4.6660256,
+    "lon": -74.1201278
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "75-24",
+    "addr:street": "Carrera 75",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Centro Comercial La Esquina",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 542124899,
+  "center": {
+    "lat": 4.5983958,
+    "lon": -74.1094418
+  },
+  "tags": {
+    "addr:street": "Transversal 31",
+    "building": "yes",
+    "name": "Centro Comercial Ciudad Montes",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 543919587,
+  "center": {
+    "lat": 4.7533265,
+    "lon": -74.0587812
+  },
+  "tags": {
+    "building": "yes",
+    "level": "2",
+    "name": "Centro Comercial Punto 170",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 546436579,
+  "center": {
+    "lat": 4.5817399,
+    "lon": -74.2303295
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:housenumber": "16A-150",
+    "addr:postcode": "250052",
+    "addr:street": "Calle 6 Sur",
+    "building": "yes",
+    "name": "Centro Comercial Parque Campestre",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 546691704,
+  "center": {
+    "lat": 4.5815348,
+    "lon": -74.2203394
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Empresarial Santa Cecilia",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 549996412,
+  "center": {
+    "lat": 4.6073367,
+    "lon": -74.1720978
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Nueva Roma",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 550955121,
+  "center": {
+    "lat": 4.7175550,
+    "lon": -74.2097409
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro comercial Mi centro Funza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 551338934,
+  "center": {
+    "lat": 4.6065680,
+    "lon": -74.1841438
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 551338951,
+  "center": {
+    "lat": 4.6051273,
+    "lon": -74.1876497
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Milenium Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 553333722,
+  "center": {
+    "lat": 4.5808038,
+    "lon": -74.2190585
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Soacha Parque",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 553333727,
+  "center": {
+    "lat": 4.5800303,
+    "lon": -74.2179083
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Sanandresito Soacha",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 553333731,
+  "center": {
+    "lat": 4.5805734,
+    "lon": -74.2185925
+  },
+  "tags": {
+    "building": "yes",
+    "name": "San Remo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 553333733,
+  "center": {
+    "lat": 4.5798094,
+    "lon": -74.2189893
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Santa María Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 557847984,
+  "center": {
+    "lat": 4.7521169,
+    "lon": -74.0845292
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 601802990,
+  "center": {
+    "lat": 4.7506872,
+    "lon": -74.0474238
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "building": "yes",
+    "name": "Centro Comercial Punto 169",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 635048285,
+  "center": {
+    "lat": 4.6513123,
+    "lon": -74.1064041
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "3",
+    "building:material": "glass",
+    "name": "Plaza Claro",
+    "opening_hours": "PH,Mo-Su 08:00-23:00",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 637936743,
+  "center": {
+    "lat": 4.6189676,
+    "lon": -74.1352459
+  },
+  "tags": {
+    "name": "Plaza de las Américas",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 641077184,
+  "center": {
+    "lat": 4.7156572,
+    "lon": -74.2136950
+  },
+  "tags": {
+    "addr:city": "Funza",
+    "addr:street": "Carrera 13",
+    "building": "yes",
+    "name": "Portal de Funza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 645864440,
+  "center": {
+    "lat": 4.7372895,
+    "lon": -74.0844990
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Punto 91",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 653630159,
+  "center": {
+    "lat": 4.6368806,
+    "lon": -74.1885041
+  },
+  "tags": {
+    "name": "Mi Centro Porvenir",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 653630160,
+  "center": {
+    "lat": 4.6367683,
+    "lon": -74.1884375
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Micrentro El Porvenir",
+    "opening_hours": "08:00-22:00",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 653802770,
+  "center": {
+    "lat": 4.7233302,
+    "lon": -74.1144752
+  },
+  "tags": {
+    "name": "Unicentro de Occidente",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 658012540,
+  "center": {
+    "lat": 4.6319474,
+    "lon": -74.1153715
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "1",
+    "name": "Centro Comercial Plaza Central",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 658336131,
+  "center": {
+    "lat": 4.7271285,
+    "lon": -74.0242671
+  },
+  "tags": {
+    "name": "Belaire Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 658336135,
+  "center": {
+    "lat": 4.7291938,
+    "lon": -74.0450619
+  },
+  "tags": {
+    "name": "Caobos 147",
+    "shop": "mall",
+    "website": "https://www.cccaobos147.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 658336142,
+  "center": {
+    "lat": 4.7291863,
+    "lon": -74.0450619
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 660621662,
+  "center": {
+    "lat": 4.6713178,
+    "lon": -74.1532878
+  },
+  "tags": {
+    "name": "Portal de la Sabana",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 671307305,
+  "center": {
+    "lat": 4.7424426,
+    "lon": -74.0850664
+  },
+  "tags": {
+    "building": "yes",
+    "name": "La Campiña",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 685135238,
+  "center": {
+    "lat": 4.5986952,
+    "lon": -74.0745838
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Calle Real de la Candelaria",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 691700385,
+  "center": {
+    "lat": 4.7410045,
+    "lon": -74.0640391
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "3",
+    "building:material": "glass",
+    "name": "MultiDrive",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 693115813,
+  "center": {
+    "lat": 4.7385371,
+    "lon": -74.0360060
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Mediterraneo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 697183242,
+  "center": {
+    "lat": 4.6465581,
+    "lon": -74.1035521
+  },
+  "tags": {
+    "building": "yes",
+    "building:material": "glass",
+    "name": "Esfera",
+    "roof:material": "glass",
+    "roof:shape": "dome",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 698901574,
+  "center": {
+    "lat": 4.7307167,
+    "lon": -74.0235037
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110111",
+    "addr:street": "Ak 7 #155-80",
+    "building": "commercial",
+    "name": "North Point Mall",
+    "opening_hours": "Mo-Sa 07:00-21:00",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "shop": "mall",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 700780503,
+  "center": {
+    "lat": 4.5822105,
+    "lon": -74.1568040
+  },
+  "tags": {
+    "addr:housenumber": "51-21",
+    "addr:street": "Calle 59 Sur",
+    "amenity": "parking",
+    "building": "yes",
+    "layer": "-1",
+    "name": "Centro Comercial Gran Plaza El Ensueño",
+    "opening_hours": "Mo-Su 08:00-22:00",
+    "operator": "PACTIA SAS",
+    "parking": "underground",
+    "shop": "mall",
+    "toilets": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 701888235,
+  "center": {
+    "lat": 4.5950021,
+    "lon": -74.1684781
+  },
+  "tags": {
+    "barrier": "fence",
+    "landuse": "commercial",
+    "name": "Metrosur",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 707127239,
+  "center": {
+    "lat": 4.5887416,
+    "lon": -74.0991523
+  },
+  "tags": {
+    "building": "commercial",
+    "name": "Social del Retrepo",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 753144790,
+  "center": {
+    "lat": 4.7456609,
+    "lon": -74.0503029
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 163B",
+    "building": "yes",
+    "landuse": "commercial",
+    "name": "Edificio Britalia Comercial & Empresarial",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 760591863,
+  "center": {
+    "lat": 4.5144484,
+    "lon": -74.1158433
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Santa Librada",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 813092737,
+  "center": {
+    "lat": 4.6030699,
+    "lon": -74.0799674
+  },
+  "tags": {
+    "addr:housenumber": "#27",
+    "addr:street": "Carrera 13A",
+    "building": "yes",
+    "name": "Centro Comercial Coruña",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 828137569,
+  "center": {
+    "lat": 4.8073143,
+    "lon": -74.0392392
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Bima",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 835174651,
+  "center": {
+    "lat": 4.5997653,
+    "lon": -74.0805629
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial San Victorino Capital",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 842890378,
+  "center": {
+    "lat": 4.7486536,
+    "lon": -74.0488104
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 48",
+    "building": "yes",
+    "name": "Centro Comercial Plaza 167",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 846927614,
+  "center": {
+    "lat": 4.6966918,
+    "lon": -74.1061549
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Empresarial Punto 72",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 884243476,
+  "center": {
+    "lat": 4.5980063,
+    "lon": -74.1525917
+  },
+  "tags": {
+    "addr:street": "Transversal 62G",
+    "building": "yes",
+    "name": "Centro Comercial Paseo Villa del Río",
+    "operator": "Desconocido",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "shop": "mall",
+    "website": "https://www.paseovilladelrio.com/",
+    "wikidata": "Q132083555"
+  }
+},
+{
+  "type": "way",
+  "id": 892865902,
+  "center": {
+    "lat": 4.6541308,
+    "lon": -74.1302516
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 903182130,
+  "center": {
+    "lat": 4.6116808,
+    "lon": -74.2211531
+  },
+  "tags": {
+    "addr:postcode": "250051",
+    "building": "yes",
+    "layer": "1",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 906704696,
+  "center": {
+    "lat": 4.8034030,
+    "lon": -74.0957770
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Meridiano",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 926441667,
+  "center": {
+    "lat": 4.5888342,
+    "lon": -74.2045588
+  },
+  "tags": {
+    "building": "commercial",
+    "building:levels": "5",
+    "height": "20",
+    "name": "Centro Comercial Mercurio",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 945295214,
+  "center": {
+    "lat": 4.7122858,
+    "lon": -74.1133571
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Bochica",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1020359962,
+  "center": {
+    "lat": 4.7173855,
+    "lon": -74.0310896
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1148478396,
+  "center": {
+    "lat": 4.6047106,
+    "lon": -74.0843048
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Centro Comercial Parque España",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1149225064,
+  "center": {
+    "lat": 4.6034775,
+    "lon": -74.0791022
+  },
+  "tags": {
+    "addr:housenumber": "13-34/28",
+    "addr:street": "Avenida Calle 13",
+    "building": "commercial",
+    "name": "Servitel Centro Comercial",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 1175164276,
+  "center": {
+    "lat": 4.7499930,
+    "lon": -74.0595181
+  },
+  "tags": {
+    "building": "yes",
+    "level": "2",
+    "name": "Centro Comercial Arizona",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1177944315,
+  "center": {
+    "lat": 4.6932045,
+    "lon": -74.0859090
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Plaza 80",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1224674323,
+  "center": {
+    "lat": 4.7078878,
+    "lon": -74.2175452
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Balcones de Serrezuela",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1224900424,
+  "center": {
+    "lat": 4.6979877,
+    "lon": -74.2389236
+  },
+  "tags": {
+    "building": "yes",
+    "name": "CC Meridiano Novaterra",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1281179842,
+  "center": {
+    "lat": 4.7611203,
+    "lon": -74.0440672
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 45",
+    "building": "yes",
+    "name": "Centro Comercial Autopista 184",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 1281179843,
+  "center": {
+    "lat": 4.7611619,
+    "lon": -74.0438886
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 45",
+    "building": "yes",
+    "name": "Centro Comercial Autopista 184",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 1360460089,
+  "center": {
+    "lat": 4.5779250,
+    "lon": -74.1303611
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 48C Sur",
+    "building": "yes",
+    "layer": "-1",
+    "name": "Centro Comercial Ciudad Tunal",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "operator": "Centro Comercial Ciudad Tunal",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1375446080,
+  "center": {
+    "lat": 4.5322859,
+    "lon": -74.1181438
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "alt_name": "Altavista Centro Comercial",
+    "landuse": "commercial",
+    "name": "Centro Comercial Altavista",
+    "operator": "Altavista",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1393655405,
+  "center": {
+    "lat": 4.6658248,
+    "lon": -74.1296238
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Cetro Comercial Baleares Plaza",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1412371886,
+  "center": {
+    "lat": 4.6470809,
+    "lon": -74.1019767
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Eldorado",
+    "building": "mall",
+    "building:levels": "3",
+    "layer": "1",
+    "name": "Centro Comercial Gran Estación",
+    "shop": "mall",
+    "wikidata": "Q420856",
+    "wikimedia_commons": "Category:Gran Estación mall",
+    "wikipedia": "es:Gran Estación"
+  }
+},
+{
+  "type": "way",
+  "id": 1422913596,
+  "center": {
+    "lat": 4.6059429,
+    "lon": -74.2228937
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Restaurantes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1422913598,
+  "center": {
+    "lat": 4.6053351,
+    "lon": -74.2225682
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Locales orientales",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1422913599,
+  "center": {
+    "lat": 4.6054843,
+    "lon": -74.2229112
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Locales occidentales",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1510390050,
+  "center": {
+    "lat": 4.8069954,
+    "lon": -74.1036323
+  },
+  "tags": {
+    "building": "yes",
+    "name": "CC Terracota",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1546577970,
+  "center": {
+    "lat": 4.6394365,
+    "lon": -74.1838533
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Trebolis",
+    "shop": "mall"
+  }
+},
+{
+  "type": "way",
+  "id": 1546577971,
+  "center": {
+    "lat": 4.6395988,
+    "lon": -74.1836027
+  },
+  "tags": {
+    "building": "yes",
+    "shop": "mall"
+  }
+},
+{
+  "type": "relation",
+  "id": 5147441,
+  "center": {
+    "lat": 4.7021563,
+    "lon": -74.0412890
+  },
+  "tags": {
+    "alt_name": "Unicentro Bogotá",
+    "name": "Unicentro",
+    "shop": "mall",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17651327,
+  "center": {
+    "lat": 4.6189355,
+    "lon": -74.1354106
+  },
+  "tags": {
+    "addr:city": "Bogotá, Cundinamarca",
+    "addr:housenumber": "6 Sur-94",
+    "addr:postcode": "110831",
+    "addr:street": "Carrera 71D",
+    "building": "commercial",
+    "building:levels": "2",
+    "height": "20",
+    "name": "Centro Comercial Plaza de las Americas",
+    "shop": "mall",
+    "smoking": "no",
+    "type": "multipolygon",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 19135828,
+  "center": {
+    "lat": 4.7108458,
+    "lon": -74.1121586
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 80",
+    "building": "yes",
+    "name": "Centro Comercial Portal 80",
+    "shop": "mall",
+    "type": "multipolygon",
+    "wikidata": "Q124073113",
+    "wikipedia": "es:Centro Comercial Portal 80"
+  }
+},
+{
+  "type": "relation",
+  "id": 19472194,
+  "center": {
+    "lat": 4.6055379,
+    "lon": -74.2227764
+  },
+  "tags": {
+    "addr:housenumber": "13-71",
+    "addr:postcode": "250051",
+    "addr:street": "Carrera 36A",
+    "building": "yes",
+    "name": "Jardín Centro Comercial",
+    "shop": "mall",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 21786886,
+  "center": {
+    "lat": 4.7359591,
+    "lon": -74.0499168
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 45",
+    "building": "yes",
+    "name": "Mazurén",
+    "shop": "mall",
+    "source": "Kaart Ground Survey 2017",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
+

@@ -1,0 +1,1374 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:22:34Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 12750496827,
+  "lat": 4.5936325,
+  "lon": -74.0814651,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 10",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "name": "Estación Intermedia Bicentenario",
+    "network": "TransMilenio",
+    "operator": "TransMielnio",
+    "public_transport": "station",
+    "wikidata": "Q5728121",
+    "wikipedia": "es:Bicentenario (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1035905513,
+  "center": {
+    "lat": 4.5460711,
+    "lon": -74.1209919
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Danubio",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "start_date": "2024-11-02",
+    "wheelchair": "yes",
+    "wikidata": "Q55743872",
+    "wikipedia": "es:Danubio (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1102182427,
+  "center": {
+    "lat": 4.6909307,
+    "lon": -74.0846164
+  },
+  "tags": {
+    "alt_name": "Las Ferias",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Ferias",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wheelchair": "yes",
+    "wikidata": "Q5444304",
+    "wikipedia": "es:Ferias (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1387600590,
+  "center": {
+    "lat": 4.5551105,
+    "lon": -74.2335378
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:street": "Avenida Carrera 4",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "name": "Portal El Vínculo",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wikidata": "Q106644970",
+    "wikipedia": "es:Portal El Vínculo"
+  }
+},
+{
+  "type": "way",
+  "id": 1411907937,
+  "center": {
+    "lat": 4.6453341,
+    "lon": -74.0654197
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "name": "Temporal Calle 57",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wikidata": "Q5021828",
+    "wikipedia": "es:Calle 57 (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1450158777,
+  "center": {
+    "lat": 4.6096877,
+    "lon": -74.0757353
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Temporal Calle 22",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wheelchair": "yes",
+    "wikidata": "Q5021822",
+    "wikimedia_commons": "Category:Calle 22 (estación)",
+    "wikipedia": "es:Calle 22 (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1472137144,
+  "center": {
+    "lat": 4.6003288,
+    "lon": -74.0822455
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Temporal Avenida Jiménez",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1472137157,
+  "center": {
+    "lat": 4.6027943,
+    "lon": -74.0804801
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "alt_name": "Avenida Jiménez",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Avenida Jiménez (Caracas)",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "way",
+  "id": 1473351817,
+  "center": {
+    "lat": 4.6266844,
+    "lon": -74.0687295
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Temporal Avenida 39",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "wheelchair": "yes",
+    "wikidata": "Q4828102",
+    "wikipedia": "es:Avenida 39 (estación)"
+  }
+},
+{
+  "type": "way",
+  "id": 1474313913,
+  "center": {
+    "lat": 4.6042844,
+    "lon": -74.0794055
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "alt_name": "Avenida Jiménez",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Avenida Jiménez (Caracas)",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station"
+  }
+},
+{
+  "type": "relation",
+  "id": 8237776,
+  "center": {
+    "lat": 4.7468966,
+    "lon": -74.0942909
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Suba",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Portal Suba",
+    "network": "TransMilenio",
+    "operator": "TransMilenio S.A.",
+    "public_transport": "station",
+    "roof:colour": "white",
+    "type": "multipolygon",
+    "wikidata": "Q7231489",
+    "wikipedia": "es:Portal Suba"
+  }
+},
+{
+  "type": "relation",
+  "id": 8237809,
+  "center": {
+    "lat": 4.5683214,
+    "lon": -74.1354958
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Ciudad de Villavicencio",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "name": "Parque",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 8237820,
+  "center": {
+    "lat": 4.5768473,
+    "lon": -74.0937020
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Avenida 1° de Mayo",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5713999",
+    "wikipedia": "es:Avenida Primero de Mayo (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 8237821,
+  "center": {
+    "lat": 4.5656390,
+    "lon": -74.0969962
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "level": "2",
+    "name": "Portal 20 de Julio",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q11117108",
+    "wikipedia": "es:Portal 20 de Julio"
+  }
+},
+{
+  "type": "relation",
+  "id": 9894769,
+  "center": {
+    "lat": 4.6122873,
+    "lon": -74.0920891
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "internet_access": "yes",
+    "layer": "1",
+    "name": "Ricaurte",
+    "network": "TransMIlenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7322881",
+    "wikipedia": "es:Ricaurte (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13412059,
+  "center": {
+    "lat": 4.5933188,
+    "lon": -74.1297686
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Sur",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "landuse": "construction",
+    "layer": "1",
+    "name": "General Santander",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5532169",
+    "wikipedia": "es:General Santander (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13423717,
+  "center": {
+    "lat": 4.5947541,
+    "lon": -74.1181614
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "NQS - Calle 30 Sur",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 13431416,
+  "center": {
+    "lat": 4.6014708,
+    "lon": -74.1028994
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "layer": "1",
+    "name": "Santa Isabel",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7419618",
+    "wikipedia": "es:Santa Isabel (estación de TransMilenio)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13431427,
+  "center": {
+    "lat": 4.6681211,
+    "lon": -74.0603263
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 20",
+    "alt_name": "Héroes - Colmena Seguros",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "layer": "1",
+    "name": "Héroes",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q930205",
+    "wikipedia": "es:Héroes (estación de TransMilenio)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13433027,
+  "center": {
+    "lat": 4.5942669,
+    "lon": -74.1342343
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Alquería",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q4735678",
+    "wikipedia": "es:Alquería (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13433041,
+  "center": {
+    "lat": 4.5955549,
+    "lon": -74.1428068
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Sur",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Venecia",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7919667",
+    "wikipedia": "es:Venecia (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13433047,
+  "center": {
+    "lat": 4.5951183,
+    "lon": -74.1474765
+  },
+  "tags": {
+    "alt_name": "Sevillana - Croydon",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Sevillana",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7458052",
+    "wikipedia": "es:Sevillana (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13452528,
+  "center": {
+    "lat": 4.6167880,
+    "lon": -74.0896771
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Paloquemao",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7128647",
+    "wikipedia": "es:Paloquemao (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13469048,
+  "center": {
+    "lat": 4.6233806,
+    "lon": -74.0842262
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "CAD",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q579204",
+    "wikipedia": "es:CAD (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13489920,
+  "center": {
+    "lat": 4.6453182,
+    "lon": -74.0787135
+  },
+  "tags": {
+    "alt_name": "El Campín - UAN",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "El Campín",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5746153",
+    "wikipedia": "es:Campín (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13493305,
+  "center": {
+    "lat": 4.6499095,
+    "lon": -74.0783479
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Norte-Quito-Sur",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Tigo",
+    "network": "TransMilenio",
+    "old_name": "Coliseo;Movistar Arena",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5145738",
+    "wikipedia": "es:Tigo (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13497046,
+  "center": {
+    "lat": 4.6700674,
+    "lon": -74.0713890
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 30",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "NQS Calle 75",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q9048343",
+    "wikipedia": "es:NQS Calle 75 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13497047,
+  "center": {
+    "lat": 4.6756245,
+    "lon": -74.0644485
+  },
+  "tags": {
+    "alt_name": "Castellana",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "La Castellana",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q6461589",
+    "wikipedia": "es:La Castellana (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13593740,
+  "center": {
+    "lat": 4.6619946,
+    "lon": -74.1087614
+  },
+  "tags": {
+    "alt_name": "Avenida Rojas - Unisalesiana",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "layer": "-2",
+    "location": "surface",
+    "name": "Avenida Rojas",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q130980724",
+    "wikipedia": "es:Avenida Rojas (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13626977,
+  "center": {
+    "lat": 4.5968681,
+    "lon": -74.1812765
+  },
+  "tags": {
+    "alt_name": "Bosa",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Estación Bosa",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q18417349",
+    "wikipedia": "es:Estación Bosa (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13636169,
+  "center": {
+    "lat": 4.5945507,
+    "lon": -74.1881925
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:street": "Autopista Sur",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "La Despensa",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5963181",
+    "wikipedia": "es:La Despensa (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13636170,
+  "center": {
+    "lat": 4.5922425,
+    "lon": -74.1930635
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:street": "Autopista Sur",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "León XIII",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5974631",
+    "wikipedia": "es:León XIII (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13636172,
+  "center": {
+    "lat": 4.5863526,
+    "lon": -74.2051953
+  },
+  "tags": {
+    "alt_name": "San Mateo - ARM",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "San Mateo",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q6119373",
+    "wikipedia": "es:San Mateo (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13650268,
+  "center": {
+    "lat": 4.6341905,
+    "lon": -74.1520503
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Transversal 86",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q6151794",
+    "wikipedia": "es:Transversal 86 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 13745214,
+  "center": {
+    "lat": 4.7210612,
+    "lon": -74.0511161
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Norte",
+    "alt_name": "Alcalá - Colegio Santo Tomás Dominicos",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Alcalá",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q4712909",
+    "wikipedia": "es:Alcalá (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 16690677,
+  "center": {
+    "lat": 4.6936230,
+    "lon": -74.0868331
+  },
+  "tags": {
+    "alt_name": "Avenida Boyacá",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Boyacá",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q4952186",
+    "wikipedia": "es:Boyacá (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18436494,
+  "center": {
+    "lat": 4.6152225,
+    "lon": -74.0692278
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "bus_station",
+    "building:material": "glass",
+    "bus": "yes",
+    "layer": "-1",
+    "location": "underground",
+    "name": "Museo Nacional",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "tunnel": "yes",
+    "type": "multipolygon",
+    "wikidata": "Q6033565",
+    "wikipedia": "es:Museo Nacional (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 18579381,
+  "center": {
+    "lat": 4.5814532,
+    "lon": -74.0904206
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 10",
+    "alt_name": "Ciudad Jardín - UAN",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Ciudad Jardín",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5642077",
+    "wikipedia": "es:Ciudad Jardín (estación Transmilenio)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19074981,
+  "center": {
+    "lat": 4.5788512,
+    "lon": -74.1075633
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Olaya",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7083263",
+    "wikipedia": "es:Olaya (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19124486,
+  "center": {
+    "lat": 4.7545885,
+    "lon": -74.0460432
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Norte",
+    "alt_name": "Portal Norte - Unicervantes",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "internet_access": "yes",
+    "name": "Portal Norte",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7231492",
+    "wikipedia": "es:Portal Norte"
+  }
+},
+{
+  "type": "relation",
+  "id": 19135795,
+  "center": {
+    "lat": 4.6260179,
+    "lon": -74.0802963
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Eldorado",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "name": "Concejo de Bogotá",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5690989",
+    "wikipedia": "es:Concejo de Bogotá (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19135796,
+  "center": {
+    "lat": 4.6205227,
+    "lon": -74.0763626
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Eldorado",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "name": "Centro Memoria",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 19455447,
+  "center": {
+    "lat": 4.6009364,
+    "lon": -74.0774455
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 10",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "San Victorino",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q6119771",
+    "wikipedia": "es:San Victorino (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19484905,
+  "center": {
+    "lat": 4.6751602,
+    "lon": -74.1171937
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Eldorado",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Modelia",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q6020015",
+    "wikipedia": "es:Modelia (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19781525,
+  "center": {
+    "lat": 4.5970220,
+    "lon": -74.1693620
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Sur",
+    "alt_name": "Portal Sur - JFK Cooperativa Financiera",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "wlan",
+    "name": "Portal Sur",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q261688",
+    "wikipedia": "es:Portal Sur"
+  }
+},
+{
+  "type": "relation",
+  "id": 19796670,
+  "center": {
+    "lat": 4.6294370,
+    "lon": -74.1731468
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Ciudad de Cali",
+    "alt_name": "Portal Américas",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "wlan",
+    "name": "Portal Américas",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7231488",
+    "wikipedia": "es:Portal Américas"
+  }
+},
+{
+  "type": "relation",
+  "id": 19829446,
+  "center": {
+    "lat": 4.6243360,
+    "lon": -74.0691524
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "construction": "yes",
+    "internet_access:fee": "no",
+    "name": "Calle 34",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q7247894",
+    "wikipedia": "es:Calle 34 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 19905466,
+  "center": {
+    "lat": 4.6313735,
+    "lon": -74.1455852
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida de Las Américas",
+    "amenity": "bus_station",
+    "bus": "yes",
+    "internet_access": "wlan",
+    "name": "Banderas",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q4854530",
+    "wikipedia": "es:Banderas (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20048152,
+  "center": {
+    "lat": 4.6165490,
+    "lon": -74.0722377
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "alt_name": "Calle 26 - Atrio",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "name": "Calle 26",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5021825",
+    "wikipedia": "es:Calle 26 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054153,
+  "center": {
+    "lat": 4.6577070,
+    "lon": -74.0621741
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "alt_name": "Calle 72 - Areandina",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "name": "Calle 72",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5021831",
+    "wikimedia_commons": "Category:Calle 72 (estación)",
+    "wikipedia": "es:Calle 72 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054386,
+  "center": {
+    "lat": 4.5971114,
+    "lon": -74.1112451
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Autopista Sur",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "construction": "yes",
+    "internet_access": "yes",
+    "name": "SENA",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7389732",
+    "wikimedia_commons": "Category:SENA (estación)",
+    "wikipedia": "es:SENA (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054485,
+  "center": {
+    "lat": 4.5946311,
+    "lon": -74.0865833
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Hospital",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5908316",
+    "wikipedia": "es:Hospital (estación de TransMilenio)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054546,
+  "center": {
+    "lat": 4.5979830,
+    "lon": -74.0839619
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Tercer Milenio",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q9086044",
+    "wikimedia_commons": "Category:Tercer Milenio (estación)",
+    "wikipedia": "es:Tercer Milenio (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054932,
+  "center": {
+    "lat": 4.6068817,
+    "lon": -74.0775622
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Calle 19",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5021821",
+    "wikipedia": "es:Calle 19 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20054944,
+  "center": {
+    "lat": 4.6483397,
+    "lon": -74.0648825
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "bus_station",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Calle 63",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5021829",
+    "wikimedia_commons": "Category:Calle 63 (estación)",
+    "wikipedia": "es:Calle 63 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20085222,
+  "center": {
+    "lat": 4.5316836,
+    "lon": -74.1193903
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Portal Usme",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7231490",
+    "wikipedia": "es:Portal Usme"
+  }
+},
+{
+  "type": "relation",
+  "id": 20085223,
+  "center": {
+    "lat": 4.5701363,
+    "lon": -74.1395432
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Boyacá",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Portal Tunal",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q9061859",
+    "wikimedia_commons": "Category:Portal del Tunal",
+    "wikipedia": "es:Portal Tunal"
+  }
+},
+{
+  "type": "relation",
+  "id": 20085224,
+  "center": {
+    "lat": 4.7097565,
+    "lon": -74.1105641
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 80",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Portal 80",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q7231493",
+    "wikimedia_commons": "Category:Portal de la 80",
+    "wikipedia": "es:Portal 80"
+  }
+},
+{
+  "type": "relation",
+  "id": 20250999,
+  "center": {
+    "lat": 4.6161371,
+    "lon": -74.0724502
+  },
+  "tags": {
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Calle 26",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wheelchair": "yes",
+    "wikidata": "Q5021825",
+    "wikipedia": "es:Calle 26 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 20506571,
+  "center": {
+    "lat": 4.6312885,
+    "lon": -74.0679084
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "construction": "yes",
+    "name": "Calle 45",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon",
+    "wikidata": "Q5021823",
+    "wikipedia": "es:Calle 45 (estación)"
+  }
+},
+{
+  "type": "relation",
+  "id": 21411580,
+  "center": {
+    "lat": 4.6030039,
+    "lon": -74.0790766
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Calle 13",
+    "alt_name": "Avenida Jiménez - Intereléctricas",
+    "amenity": "bus_station",
+    "building": "yes",
+    "bus": "yes",
+    "name": "Avenida Jiménez (Calle 13)",
+    "network": "TransMilenio",
+    "operator": "TransMilenio",
+    "public_transport": "station",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
+

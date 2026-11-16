@@ -1,0 +1,6509 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:25:14Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 313416844,
+  "lat": 4.7118162,
+  "lon": -74.0307709,
+  "tags": {
+    "addr:country": "CO",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica El Bosque"
+  }
+},
+{
+  "type": "node",
+  "id": 326170171,
+  "lat": 4.7415046,
+  "lon": -74.0346193,
+  "tags": {
+    "addr:country": "CO",
+    "amenity": "clinic",
+    "emergency": "yes",
+    "name": "Fundación Cardio Infantil Urgencias"
+  }
+},
+{
+  "type": "node",
+  "id": 370255315,
+  "lat": 4.6686029,
+  "lon": -74.0572938,
+  "tags": {
+    "addr:street": "Carrera 17",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Consultorios Country",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 392333383,
+  "lat": 4.6938583,
+  "lon": -74.0555222,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "106-30",
+    "addr:postcode": "110111",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Clínica Vascular Navarra"
+  }
+},
+{
+  "type": "node",
+  "id": 609071708,
+  "lat": 4.7044138,
+  "lon": -74.0410976,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica la Carolina"
+  }
+},
+{
+  "type": "node",
+  "id": 626874480,
+  "lat": 4.6906198,
+  "lon": -74.0571618,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "Clínica de Hipertensión Arterial y Cuidados Coronarios - CHACC",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 632441272,
+  "lat": 4.6160742,
+  "lon": -74.0770651,
+  "tags": {
+    "addr:housenumber": "23-41",
+    "addr:street": "Carrera 19A",
+    "amenity": "hospital",
+    "name": "HCO - Unidad Pediatrica"
+  }
+},
+{
+  "type": "node",
+  "id": 679776977,
+  "lat": 4.5871845,
+  "lon": -74.0866405,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica SaludCoop Policarpa"
+  }
+},
+{
+  "type": "node",
+  "id": 815175854,
+  "lat": 4.5924102,
+  "lon": -74.1068885,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica De Cancer De Bogotà"
+  }
+},
+{
+  "type": "node",
+  "id": 992178647,
+  "lat": 4.5779907,
+  "lon": -74.2207815,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro Medico Cruz Blanca"
+  }
+},
+{
+  "type": "node",
+  "id": 1042145111,
+  "lat": 4.6499703,
+  "lon": -74.0829650,
+  "tags": {
+    "addr:street": "Carrera 45",
+    "amenity": "clinic",
+    "name": "Dispensario Medico Fuerza Aerea",
+    "source": "ourairports.com"
+  }
+},
+{
+  "type": "node",
+  "id": 1193314956,
+  "lat": 4.7444966,
+  "lon": -74.0929713,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Nueva Eps"
+  }
+},
+{
+  "type": "node",
+  "id": 1230757169,
+  "lat": 4.5876389,
+  "lon": -74.1652085,
+  "tags": {
+    "addr:full": "CALLE 64 SUR No. 71 F - 18",
+    "addr:housenumber": "63 A 05 sur",
+    "addr:postcode": "111921",
+    "addr:street": "Carrera 71F",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "CAPS Ismael Perdomo"
+  }
+},
+{
+  "type": "node",
+  "id": 1317977132,
+  "lat": 4.6646389,
+  "lon": -74.0690447,
+  "tags": {
+    "addr:street": "Calle 72",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Totalfarma",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1317977136,
+  "lat": 4.6721415,
+  "lon": -74.0788844,
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Drogas Popular",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 1460310724,
+  "lat": 4.6728771,
+  "lon": -74.1420402,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "Hospital Fontibón"
+  }
+},
+{
+  "type": "node",
+  "id": 1626840072,
+  "lat": 4.6933194,
+  "lon": -74.0555373,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Odontologica Jasban"
+  }
+},
+{
+  "type": "node",
+  "id": 1626844670,
+  "lat": 4.6976859,
+  "lon": -74.0503492,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "orthopaedics;physiotherapy",
+    "name": "Instituto de Ortopedia y Fractura"
+  }
+},
+{
+  "type": "node",
+  "id": 1626845467,
+  "lat": 4.6922180,
+  "lon": -74.0511921,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "LaFam"
+  }
+},
+{
+  "type": "node",
+  "id": 1626846961,
+  "lat": 4.6881060,
+  "lon": -74.0519818,
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica de la Sabana",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 1626852523,
+  "lat": 4.6846581,
+  "lon": -74.0571037,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Edificio Dalí - Clínica Estetica"
+  }
+},
+{
+  "type": "node",
+  "id": 1661279380,
+  "lat": 4.6655942,
+  "lon": -74.0633017,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital de Chapinero"
+  }
+},
+{
+  "type": "node",
+  "id": 1661458473,
+  "lat": 4.6811406,
+  "lon": -74.0485803,
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "Sanitas CLL 95"
+  }
+},
+{
+  "type": "node",
+  "id": 2040979151,
+  "lat": 4.6012791,
+  "lon": -74.0669169,
+  "tags": {
+    "amenity": "hospital",
+    "contact:phone": "+57 601 3394949",
+    "description": "Entrada por el edificio Ñh",
+    "designation": "Centro médico",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Centro Médico Uniandes",
+    "source": "http://medicina.uniandes.edu.co"
+  }
+},
+{
+  "type": "node",
+  "id": 2315535486,
+  "lat": 4.6359714,
+  "lon": -74.0788582,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Salud Total"
+  }
+},
+{
+  "type": "node",
+  "id": 2374397659,
+  "lat": 4.6391828,
+  "lon": -74.0742149,
+  "tags": {
+    "addr:street": "carrera 24 50 - 68",
+    "amenity": "clinic",
+    "emergency": "no",
+    "healthcare": "clinic",
+    "name": "IMEVI sede Galerias",
+    "operator": "Compensar"
+  }
+},
+{
+  "type": "node",
+  "id": 2819032330,
+  "lat": 4.6054814,
+  "lon": -74.1876999,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Policlínico Bosa",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 3419842531,
+  "lat": 4.5994773,
+  "lon": -74.1325970,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Odontología"
+  }
+},
+{
+  "type": "node",
+  "id": 3419846101,
+  "lat": 4.6259760,
+  "lon": -74.0670123,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Instituto Laboratorio Clinico"
+  }
+},
+{
+  "type": "node",
+  "id": 3428155437,
+  "lat": 4.6776186,
+  "lon": -74.1068448,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Colsubsidio Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 3544818813,
+  "lat": 4.6081771,
+  "lon": -74.0806549,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:street": "Calle 16",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica San Francisco de Asis"
+  }
+},
+{
+  "type": "node",
+  "id": 3649459146,
+  "lat": 4.6057840,
+  "lon": -74.0549947,
+  "tags": {
+    "amenity": "hospital",
+    "name": "Puesto de la Cruz Roja",
+    "operator": "Cruz Roja"
+  }
+},
+{
+  "type": "node",
+  "id": 3697926116,
+  "lat": 4.7046979,
+  "lon": -74.0510595,
+  "tags": {
+    "addr:street": "Calle 125",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Laboratorio Clínico Gómez Vesga",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 3754553226,
+  "lat": 4.7062068,
+  "lon": -74.0500367,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "19a-44 Consultorios 512/513/514",
+    "addr:postcode": "110121",
+    "addr:street": "Avenida Calle 127",
+    "amenity": "clinic",
+    "name": "Gastromedicall",
+    "note": "Gastroenterología, Endoscopia, Colonoscopia, Fibroscan, Videocápsula endoscópica, Balón intragástrico, Test de aliento hpilory",
+    "phone": "+571 625 0199 / 625 0210",
+    "website": "http://www.gastromedicall.com"
+  }
+},
+{
+  "type": "node",
+  "id": 3755437887,
+  "lat": 4.6387856,
+  "lon": -74.0675683,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51-14",
+    "addr:street": "Carrera 15",
+    "amenity": "clinic",
+    "name": "Tania Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 4056991817,
+  "lat": 4.6496384,
+  "lon": -74.0636895,
+  "tags": {
+    "amenity": "clinic",
+    "phone": "+57 310 1432"
+  }
+},
+{
+  "type": "node",
+  "id": 4101111353,
+  "lat": 4.6349383,
+  "lon": -74.0674557,
+  "tags": {
+    "addr:housenumber": "47-39",
+    "addr:street": "Avenida Caracas",
+    "amenity": "clinic",
+    "name": "Nueva Esps"
+  }
+},
+{
+  "type": "node",
+  "id": 4103735736,
+  "lat": 4.6292389,
+  "lon": -74.0662134,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "IPS CRC Valoramos"
+  }
+},
+{
+  "type": "node",
+  "id": 4103811703,
+  "lat": 4.6320920,
+  "lon": -74.0657887,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Salud Ocupacional Colcan"
+  }
+},
+{
+  "type": "node",
+  "id": 4115069403,
+  "lat": 4.7422053,
+  "lon": -74.0382268,
+  "tags": {
+    "amenity": "clinic",
+    "name": "clínica orquídeas materno infantil colsubsidio"
+  }
+},
+{
+  "type": "node",
+  "id": 4117589314,
+  "lat": 4.6284326,
+  "lon": -74.0671731,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Fundemos I.p.s."
+  }
+},
+{
+  "type": "node",
+  "id": 4124935696,
+  "lat": 4.6373158,
+  "lon": -74.0664165,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "13-73",
+    "addr:street": "Calle 50",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica De Marly Archivo 50"
+  }
+},
+{
+  "type": "node",
+  "id": 4230329693,
+  "lat": 4.6277000,
+  "lon": -74.0748375,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Goleman Teusaquillo"
+  }
+},
+{
+  "type": "node",
+  "id": 4230798790,
+  "lat": 4.6304281,
+  "lon": -74.1317367,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Orthohand"
+  }
+},
+{
+  "type": "node",
+  "id": 4232060989,
+  "lat": 4.6373383,
+  "lon": -74.0768908,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Goleman LA Soledad"
+  }
+},
+{
+  "type": "node",
+  "id": 4236749589,
+  "lat": 4.6696738,
+  "lon": -74.0590022,
+  "tags": {
+    "addr:street": "Carrera 19A",
+    "amenity": "clinic",
+    "name": "Country Medical Center"
+  }
+},
+{
+  "type": "node",
+  "id": 4267146497,
+  "lat": 4.6521807,
+  "lon": -74.0520929,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "kekerkre"
+  }
+},
+{
+  "type": "node",
+  "id": 4313654837,
+  "lat": 4.6060582,
+  "lon": -74.0714421,
+  "tags": {
+    "addr:housenumber": "19-63",
+    "addr:street": "Carrera 7",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Drogueria Cafam"
+  }
+},
+{
+  "type": "node",
+  "id": 4366360695,
+  "lat": 4.6794398,
+  "lon": -74.0526243,
+  "tags": {
+    "addr:housenumber": "17-12/26",
+    "addr:street": "Calle 93B",
+    "amenity": "clinic",
+    "name": "Medicentro 93",
+    "name:es": "Medicentro 93"
+  }
+},
+{
+  "type": "node",
+  "id": 4549292213,
+  "lat": 4.6682047,
+  "lon": -74.0608220,
+  "tags": {
+    "addr:housenumber": "80-77",
+    "addr:postcode": "111211",
+    "addr:street": "Avenida Carrera 20",
+    "amenity": "clinic",
+    "email": "info@cnsalud.com",
+    "name": "Centro Nacional de La Salud - Medlucara Ltda",
+    "opening_hours": "Mo-Fr 06:00-16:30; Sa 07:00-11:30",
+    "phone": "+57 601 6114020",
+    "website": "https://cnsalud.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 4564102289,
+  "lat": 4.6821974,
+  "lon": -74.0458262,
+  "tags": {
+    "addr:housenumber": "38",
+    "addr:street": "Carrera 12",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Cayre",
+    "opening_hours": "24/7",
+    "phone": "6446800",
+    "website": "https://cayre.co"
+  }
+},
+{
+  "type": "node",
+  "id": 4596421290,
+  "lat": 4.7082642,
+  "lon": -74.1045036,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Eps Cafam",
+    "name:es": "Eps Cafam"
+  }
+},
+{
+  "type": "node",
+  "id": 4701904491,
+  "lat": 4.6718773,
+  "lon": -74.0577017,
+  "tags": {
+    "addr:housenumber": "85-11",
+    "addr:street": "Carrera 19A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Horus"
+  }
+},
+{
+  "type": "node",
+  "id": 4731462022,
+  "lat": 4.6693410,
+  "lon": -74.0575382,
+  "tags": {
+    "amenity": "clinic",
+    "name": "MEDICARTE",
+    "name:es": "MEDICARTE"
+  }
+},
+{
+  "type": "node",
+  "id": 4753302623,
+  "lat": 4.5762585,
+  "lon": -74.0913500,
+  "tags": {
+    "addr:city": "Pereira",
+    "addr:street": "Carrera 8",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Hospital Universitario Clínica San Rafael Urgencias",
+    "name:es": "Hospital universitario clínica San Rafael urgencias",
+    "website": "https://www.ipsclinicasanrafael.com/institucional/"
+  }
+},
+{
+  "type": "node",
+  "id": 4831147422,
+  "lat": 4.6989769,
+  "lon": -74.0719838,
+  "tags": {
+    "addr:street": "Diagonal 115A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "internet_access": "wlan",
+    "name": "E.P.S. Sanitas",
+    "name:es": "E.P.S. Sanitas"
+  }
+},
+{
+  "type": "node",
+  "id": 4832914021,
+  "lat": 4.6413289,
+  "lon": -74.0765505,
+  "tags": {
+    "addr:housenumber": "crra 27A 52-14",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro Odontologíco Fuerza Aérea",
+    "name:es": "Centro Odontologíco Fuerza Aérea"
+  }
+},
+{
+  "type": "node",
+  "id": 4846075122,
+  "lat": 4.6042923,
+  "lon": -74.0702002,
+  "tags": {
+    "amenity": "clinic",
+    "name:ko": "타투상가"
+  }
+},
+{
+  "type": "node",
+  "id": 4946357722,
+  "lat": 4.6689792,
+  "lon": -74.0566707,
+  "tags": {
+    "amenity": "clinic",
+    "check_date": "2024-05-21",
+    "name": "Country",
+    "name:es": "Country"
+  }
+},
+{
+  "type": "node",
+  "id": 5131518962,
+  "lat": 4.6924345,
+  "lon": -74.0441739,
+  "tags": {
+    "addr:street": "Calle 109",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Eyebix",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131876240,
+  "lat": 4.7323395,
+  "lon": -74.0490800,
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "name": "Centro De Análisis Molecular",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131891129,
+  "lat": 4.6970704,
+  "lon": -74.0442072,
+  "tags": {
+    "addr:street": "Avenida Calle 116",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Colmédica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133179544,
+  "lat": 4.6546368,
+  "lon": -74.0606961,
+  "tags": {
+    "addr:housenumber": "69-49",
+    "addr:street": "Carrera 11",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "chiropractic",
+    "name": "Vida Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133412494,
+  "lat": 4.6489104,
+  "lon": -74.0604659,
+  "tags": {
+    "addr:street": "Calle 64",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Espinosa Gómez",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5136183417,
+  "lat": 4.6227687,
+  "lon": -74.0697310,
+  "tags": {
+    "addr:street": "Avenida Calle 34",
+    "amenity": "clinic",
+    "name": "Ecografías",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5136184122,
+  "lat": 4.6229641,
+  "lon": -74.0701654,
+  "tags": {
+    "addr:street": "Avenida Calle 34",
+    "amenity": "clinic",
+    "name": "Orienta Familiar",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5136291456,
+  "lat": 4.6222321,
+  "lon": -74.0704604,
+  "tags": {
+    "addr:street": "Calle 33A",
+    "amenity": "clinic",
+    "name": "Consultorio Medico Familliar",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5137954661,
+  "lat": 4.6851401,
+  "lon": -74.0924067,
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "amenity": "clinic",
+    "name": "Unidad Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5141968075,
+  "lat": 4.6967648,
+  "lon": -74.1125389,
+  "tags": {
+    "addr:housenumber": "91A-65",
+    "addr:street": "Calle 70A",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Veterinaria Animal's Help",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5141986169,
+  "lat": 4.6005189,
+  "lon": -74.1231707,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clinica Veterinaria Animal Zone"
+  }
+},
+{
+  "type": "node",
+  "id": 5143223051,
+  "lat": 4.7271608,
+  "lon": -74.0244720,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "name": "Col Médica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143649088,
+  "lat": 4.6227640,
+  "lon": -74.0692202,
+  "tags": {
+    "addr:street": "Avenida Calle 34",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "abortion",
+    "name": "Ecografias",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143649090,
+  "lat": 4.6227739,
+  "lon": -74.0692620,
+  "tags": {
+    "addr:street": "Avenida Caracas",
+    "amenity": "clinic",
+    "name": "Unidad Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143649096,
+  "lat": 4.6230160,
+  "lon": -74.0691882,
+  "tags": {
+    "addr:street": "Avenida Caracas",
+    "amenity": "clinic",
+    "name": "Instituto Medico La 34",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143661559,
+  "lat": 4.6757263,
+  "lon": -74.0805309,
+  "tags": {
+    "addr:street": "Calle 74A",
+    "amenity": "clinic",
+    "name": "ReviSalud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143940360,
+  "lat": 4.6613129,
+  "lon": -74.0662217,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 71A",
+    "amenity": "clinic",
+    "name": "Clínica Del Tapizado",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5143988756,
+  "lat": 4.6637798,
+  "lon": -74.0602816,
+  "tags": {
+    "addr:street": "Calle 76",
+    "amenity": "clinic",
+    "name": "Fresenus Medical Care",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5145508197,
+  "lat": 4.6686410,
+  "lon": -74.0565626,
+  "tags": {
+    "addr:street": "Carrera 16",
+    "amenity": "clinic",
+    "check_date": "2025-06-26",
+    "healthcare": "clinic",
+    "name": "Centro Médico San Sebastián del Country",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5146197646,
+  "lat": 4.7339927,
+  "lon": -74.0561022,
+  "tags": {
+    "addr:street": "Carrera 54",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "general",
+    "name": "Colmédica sede Colina",
+    "operator": "Colmédica",
+    "operator:type": "private",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5146266674,
+  "lat": 4.6651974,
+  "lon": -74.0644446,
+  "tags": {
+    "addr:street": "Calle 75",
+    "amenity": "clinic",
+    "name": "Lacorsalud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5148470421,
+  "lat": 4.6312218,
+  "lon": -74.0832920,
+  "tags": {
+    "addr:street": "Calle 26A",
+    "amenity": "clinic",
+    "name": "DaVita Centro de Cuidado Renal",
+    "source": "Kaart Ground Survey 2017",
+    "website": "https://espanol.davita.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 5148548245,
+  "lat": 4.6882790,
+  "lon": -74.0519105,
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "name": "Clínica La Sabana",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5150106105,
+  "lat": 4.7230118,
+  "lon": -74.0447620,
+  "tags": {
+    "addr:street": "Carrera 18",
+    "amenity": "clinic",
+    "name": "Consultorio Radiologico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5150727817,
+  "lat": 4.7177171,
+  "lon": -74.0462498,
+  "tags": {
+    "addr:street": "Avenida Calle 134",
+    "amenity": "clinic",
+    "name": "Dr. Luis Carlos Osorio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5150727818,
+  "lat": 4.7177369,
+  "lon": -74.0462989,
+  "tags": {
+    "addr:street": "Avenida Calle 134",
+    "amenity": "clinic",
+    "name": "Dr. Hernando Leuro",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5152585285,
+  "lat": 4.7026554,
+  "lon": -74.0999359,
+  "tags": {
+    "addr:street": "Carrera 85",
+    "amenity": "clinic",
+    "name": "Centro Medico Comunitario",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157343410,
+  "lat": 4.7006791,
+  "lon": -74.0896581,
+  "tags": {
+    "addr:street": "Transversal 73A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica del Vestido Luce",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157557306,
+  "lat": 4.6733291,
+  "lon": -74.0616572,
+  "tags": {
+    "addr:street": "Calle 85A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Reyvelt",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157673761,
+  "lat": 4.6889509,
+  "lon": -74.0968585,
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Accion Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5159673315,
+  "lat": 4.6952577,
+  "lon": -74.1045232,
+  "tags": {
+    "addr:street": "Transversal 83 Bis",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Healthy Skin",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5161451142,
+  "lat": 4.7075722,
+  "lon": -74.1056953,
+  "tags": {
+    "addr:street": "Transversal 94",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Quirisalud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5161992907,
+  "lat": 4.6289886,
+  "lon": -74.0789628,
+  "tags": {
+    "addr:street": "Calle 39A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro De Relevo",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5163360464,
+  "lat": 4.6843076,
+  "lon": -74.0616662,
+  "tags": {
+    "addr:street": "Calle 95",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica Del Pie",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5163624206,
+  "lat": 4.6504728,
+  "lon": -74.0682975,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "17-68",
+    "addr:street": "Avenida Calle 63",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Cruz Blanco",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5171895838,
+  "lat": 4.6729141,
+  "lon": -74.1081705,
+  "tags": {
+    "addr:street": "Avenida Calle 53",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Certi Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173160115,
+  "lat": 4.6551669,
+  "lon": -74.0701808,
+  "tags": {
+    "addr:city": "Barrios Unidos",
+    "addr:street": "Calle 64",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Ortopedica Comunal",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173588243,
+  "lat": 4.6443541,
+  "lon": -74.0642652,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Gaes",
+    "opening_hours": "Mo-Fr 07:30-12:00,13:00-17:30; Sa 09:00-12:00",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173759109,
+  "lat": 4.6433842,
+  "lon": -74.0646549,
+  "tags": {
+    "addr:street": "Avenida Carrera 13",
+    "amenity": "clinic",
+    "check_date:opening_hours": "2024-01-30",
+    "name": "Davita",
+    "opening_hours:signed": "no",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173857738,
+  "lat": 4.6468593,
+  "lon": -74.0615461,
+  "tags": {
+    "addr:street": "Carrera 9",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Medical Shop",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5175067929,
+  "lat": 4.6366631,
+  "lon": -74.0658220,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Salud Total",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5177113879,
+  "lat": 4.6350690,
+  "lon": -74.0752681,
+  "tags": {
+    "addr:street": "Avenida Carrera 24",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Salud Dar",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5177258021,
+  "lat": 4.6390359,
+  "lon": -74.0684623,
+  "tags": {
+    "addr:housenumber": "51-36",
+    "addr:street": "Carrera 16",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "CAFAM Centro de Salud",
+    "source": "Kaart Ground Survey 2017",
+    "website": "http://www.cafam.com.co/salud/home-salud"
+  }
+},
+{
+  "type": "node",
+  "id": 5178658153,
+  "lat": 4.6376738,
+  "lon": -74.0698014,
+  "tags": {
+    "addr:street": "Carrera 17",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Munera's",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5178726291,
+  "lat": 4.6387380,
+  "lon": -74.0677486,
+  "tags": {
+    "addr:street": "Carrera 15",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Cafam Clínica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5178726292,
+  "lat": 4.6373460,
+  "lon": -74.0670227,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Caracas",
+    "alt_name": "Virrey Solís IPS - Sede Chapinero",
+    "amenity": "clinic",
+    "branch": "Chapinero",
+    "healthcare": "clinic",
+    "name": "Virrey Solís IPS",
+    "operator": "Salud Total EPS-S",
+    "operator:type": "private",
+    "operator:wikidata": "Q131987798",
+    "operator:wikipedia": "es:Salud Total",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5178855670,
+  "lat": 4.6304171,
+  "lon": -74.0780061,
+  "tags": {
+    "addr:street": "Calle 40",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Zon Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5178923446,
+  "lat": 4.6369732,
+  "lon": -74.0787898,
+  "tags": {
+    "addr:street": "Avenida Carrera 30",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Juan Bautista",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5178949538,
+  "lat": 4.6437029,
+  "lon": -74.0774364,
+  "tags": {
+    "addr:street": "Calle 53B",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "plastic_surgery",
+    "name": "Clínica Estética",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5202388289,
+  "lat": 4.6057614,
+  "lon": -74.0738658,
+  "tags": {
+    "addr:street": "Calle 18",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica Del Calzado",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5207321898,
+  "lat": 4.5843974,
+  "lon": -74.1042497,
+  "tags": {
+    "addr:street": "Transversal 21A",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Sonoria",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5207383668,
+  "lat": 4.5721429,
+  "lon": -74.0907711,
+  "tags": {
+    "addr:street": "Avenida Primero de Mayo",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Policlínico San Cristobal de Sur",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5208928424,
+  "lat": 4.5889141,
+  "lon": -74.1085375,
+  "tags": {
+    "addr:housenumber": "26-30",
+    "addr:street": "Avenida Primero de Mayo",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínicas Odontologicas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5208928428,
+  "lat": 4.5892957,
+  "lon": -74.1088107,
+  "tags": {
+    "addr:housenumber": "20-26",
+    "addr:street": "Avenida Carrera 27",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "OralMedic",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5208928432,
+  "lat": 4.5894366,
+  "lon": -74.1085949,
+  "tags": {
+    "addr:housenumber": "26-61",
+    "addr:street": "Calle 21 Sur",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Consulta Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5212920829,
+  "lat": 4.6516982,
+  "lon": -74.0569989,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 7 # 69-70",
+    "amenity": "clinic",
+    "check_date": "2025-05-08",
+    "name": "Clínica La Inmaculada",
+    "note": "Clínica siquiátrica",
+    "opening_hours": "24/7",
+    "phone": "+57 601 5870366",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 5228462325,
+  "lat": 4.6339627,
+  "lon": -74.0896639,
+  "tags": {
+    "addr:street": "Avenida Calle 26",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Oral Clinic",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5230736566,
+  "lat": 4.6346674,
+  "lon": -74.0957296,
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Allianz Centro Medico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5231509271,
+  "lat": 4.6880078,
+  "lon": -74.0519977,
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Allianz",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5231539894,
+  "lat": 4.6755668,
+  "lon": -74.0651887,
+  "tags": {
+    "addr:street": "Avenida Carrera 30",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Medical Health Care",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5232944677,
+  "lat": 4.5616362,
+  "lon": -74.1453182,
+  "tags": {
+    "addr:housenumber": "64004",
+    "addr:street": "Carrera 19F",
+    "addr:unit": "2nd Floor",
+    "amenity": "clinic",
+    "description": "2nd Floor",
+    "healthcare": "clinic",
+    "healthcare:speciality": "orthodontics",
+    "name": "Clinic Stetic Dental",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5233751756,
+  "lat": 4.6694587,
+  "lon": -74.1090474,
+  "tags": {
+    "addr:street": "Carrera 72",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Avamed",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5239898550,
+  "lat": 4.5962033,
+  "lon": -74.1309273,
+  "tags": {
+    "addr:street": "Carrera 51B",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Unidad Medica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5240009897,
+  "lat": 4.6292342,
+  "lon": -74.1301667,
+  "tags": {
+    "addr:street": "Avenida de las Américas",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "dermatology",
+    "name": "DERMAINNOVA",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5240174957,
+  "lat": 4.6145209,
+  "lon": -74.1349730,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 69B",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "la Primera",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5242880236,
+  "lat": 4.6178375,
+  "lon": -74.1199620,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 2B",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Consultoria medico",
+    "operator": "Dr. Hermes Triana H.",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5250764221,
+  "lat": 4.6267658,
+  "lon": -74.1510793,
+  "tags": {
+    "addr:street": "Carrera 78K",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Oral Med",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5252831529,
+  "lat": 4.6095325,
+  "lon": -74.1382166,
+  "tags": {
+    "addr:street": "Carrera 68N",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Video Office Medi Call",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5320431171,
+  "lat": 4.7342116,
+  "lon": -74.0290195,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Cancha Microfutbol Altablanca"
+  }
+},
+{
+  "type": "node",
+  "id": 5364323335,
+  "lat": 4.6986477,
+  "lon": -74.0715624,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "neurology;physiotherapy;neurophysology;occupational_therapy",
+    "name": "Electrofisiatría SAS"
+  }
+},
+{
+  "type": "node",
+  "id": 5400448165,
+  "lat": 4.7400297,
+  "lon": -74.0837795,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Compensar"
+  }
+},
+{
+  "type": "node",
+  "id": 5495053499,
+  "lat": 4.6982129,
+  "lon": -74.0899067,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Salud"
+  }
+},
+{
+  "type": "node",
+  "id": 5631380221,
+  "lat": 4.6671535,
+  "lon": -74.0593596,
+  "tags": {
+    "addr:housenumber": "18-36",
+    "addr:street": "Calle 79A",
+    "amenity": "clinic",
+    "name": "Colmedicos",
+    "opening_hours": "Mo-Fr 06:00-18:00"
+  }
+},
+{
+  "type": "node",
+  "id": 6026248318,
+  "lat": 4.6207412,
+  "lon": -74.0713413,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "15-31",
+    "addr:street": "Calle 32",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "pain_control",
+    "name": "Proseguir"
+  }
+},
+{
+  "type": "node",
+  "id": 6026248343,
+  "lat": 4.6197405,
+  "lon": -74.0741141,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 30",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Vital Salud"
+  }
+},
+{
+  "type": "node",
+  "id": 6027734909,
+  "lat": 4.6264581,
+  "lon": -74.0801226,
+  "tags": {
+    "addr:street": "Calle 38",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "plastic_surgery",
+    "name": "MedicalEsthetic",
+    "website": "https://medicalesthetic.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 6032137073,
+  "lat": 4.6228095,
+  "lon": -74.0724666,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 17",
+    "amenity": "clinic",
+    "description": "IPS Salud Ocupacional",
+    "healthcare": "clinic",
+    "healthcare:speciality": "occupational",
+    "name": "Aleandes"
+  }
+},
+{
+  "type": "node",
+  "id": 6040292871,
+  "lat": 4.6967691,
+  "lon": -74.0910835,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Unidad Médica Minuto de Dios"
+  }
+},
+{
+  "type": "node",
+  "id": 6065202086,
+  "lat": 4.6280510,
+  "lon": -74.1191789,
+  "tags": {
+    "amenity": "clinic",
+    "name": "IPS Sura"
+  }
+},
+{
+  "type": "node",
+  "id": 6139325985,
+  "lat": 4.6766660,
+  "lon": -74.0601090,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Home Salud"
+  }
+},
+{
+  "type": "node",
+  "id": 6150373465,
+  "lat": 4.7251222,
+  "lon": -74.0908125,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Unión médica del norte"
+  }
+},
+{
+  "type": "node",
+  "id": 6352691255,
+  "lat": 4.6234814,
+  "lon": -74.0778224,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Colsubsidio Centro de Radicación",
+    "operator": "Colsubsidio"
+  }
+},
+{
+  "type": "node",
+  "id": 6377060254,
+  "lat": 4.6250934,
+  "lon": -74.0759507,
+  "tags": {
+    "addr:housenumber": "24-32",
+    "addr:street": "Calle 35",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "vascular_surgery",
+    "name": "Clinica Vascular de Bogotá",
+    "phone": "+57 317 5202667",
+    "website": "https://clinicavasculardebogota.com"
+  }
+},
+{
+  "type": "node",
+  "id": 6377060261,
+  "lat": 4.6249013,
+  "lon": -74.0750054,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Medicina Laboral"
+  }
+},
+{
+  "type": "node",
+  "id": 6501137717,
+  "lat": 4.6264463,
+  "lon": -74.0728484,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Medicos Sin Fronteras"
+  }
+},
+{
+  "type": "node",
+  "id": 6512097421,
+  "lat": 4.6242063,
+  "lon": -74.0709087,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Prosalud Ocupacional"
+  }
+},
+{
+  "type": "node",
+  "id": 6513742931,
+  "lat": 4.6233782,
+  "lon": -74.0695744,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "34-17",
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "healthcare:speciality": "ultrasound",
+    "name": "Ecografias"
+  }
+},
+{
+  "type": "node",
+  "id": 6518282788,
+  "lat": 4.6375654,
+  "lon": -74.0611792,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51A-56",
+    "addr:street": "Transversal 3",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Santo Tomas"
+  }
+},
+{
+  "type": "node",
+  "id": 6520199856,
+  "lat": 4.6263631,
+  "lon": -74.0702896,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 6655801203,
+  "lat": 4.6705370,
+  "lon": -74.1531345,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "14-50",
+    "addr:street": "Carrera 104",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Compensar EPS Fontibón",
+    "operator": "Compensar EPS",
+    "operator:type": "private",
+    "phone": "+57 601 4441234"
+  }
+},
+{
+  "type": "node",
+  "id": 6658612785,
+  "lat": 4.6726433,
+  "lon": -74.1540324,
+  "tags": {
+    "addr:street": "carrera 106 # 15a",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "CAPS centro de atención prioritaria de salud",
+    "name:en": "Zona franca",
+    "name:es": "CAPS centro de atención prioritaria de salud"
+  }
+},
+{
+  "type": "node",
+  "id": 7600724117,
+  "lat": 4.5927759,
+  "lon": -74.0901629,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "node",
+  "id": 7921161245,
+  "lat": 4.6932049,
+  "lon": -74.0642817,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "transversal 56",
+    "addr:postcode": "111111",
+    "addr:street": "Calle 104B",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "veterinaria",
+    "name": "Hospital Veterianrio"
+  }
+},
+{
+  "type": "node",
+  "id": 9060434038,
+  "lat": 4.6287176,
+  "lon": -74.0641532,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica San Ignacio",
+    "name:en": "San Ignacio Clinic",
+    "name:es": "Clínica San Ignacio"
+  }
+},
+{
+  "type": "node",
+  "id": 9060434040,
+  "lat": 4.6954890,
+  "lon": -74.0329948,
+  "tags": {
+    "amenity": "clinic",
+    "name:en": "Fundacion Santa Fe Clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 9060434041,
+  "lat": 4.6777828,
+  "lon": -74.0573587,
+  "tags": {
+    "amenity": "clinic",
+    "name:en": "Women's clinical fertility center"
+  }
+},
+{
+  "type": "node",
+  "id": 9073636918,
+  "lat": 4.6227654,
+  "lon": -74.0843899,
+  "tags": {
+    "addr:housenumber": "22C-35",
+    "addr:street": "Carrera 30",
+    "addr:unit": "Local 14",
+    "amenity": "clinic",
+    "name": "SYN LAB - Laboratory Covid 19 Test"
+  }
+},
+{
+  "type": "node",
+  "id": 9099674430,
+  "lat": 4.6224398,
+  "lon": -74.0771762,
+  "tags": {
+    "amenity": "clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 9598712460,
+  "lat": 4.6639990,
+  "lon": -74.0659824,
+  "tags": {
+    "amenity": "hospital",
+    "contact:facebook": "https://www.facebook.com/CruzRojaBogota/",
+    "contact:instagram": "cruzrojabogota",
+    "contact:linkedin": "https://www.linkedin.com/company/cruz-roja-colombiana-seccional-cundinamarca-y-bogot%C3%A1/",
+    "contact:twitter": "@cruzrojabogota",
+    "contact:whatsapp": "+57 317 3638993",
+    "contact:youtube": "https://www.youtube.com/user/CRCSCB/videos",
+    "healthcare": "hospital",
+    "name": "Cruz Roja Colombiana - Seccional Cundinamarca Y Bogota",
+    "office": "ngo",
+    "operator": "Cruz Roja Colombiana",
+    "operator:wikidata": "Q7178",
+    "operator:wikipedia": "es:Cruz Roja",
+    "phone": "+57 601 7460909",
+    "website": "https://www.cruzrojabogota.org.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 9598712466,
+  "lat": 4.6725765,
+  "lon": -74.0894790,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Samu 68",
+    "operator": "Cruz Roja Colombiana Seccional Cundinamarca Y Bogota",
+    "operator:type": "private_non_profit"
+  }
+},
+{
+  "type": "node",
+  "id": 9719571617,
+  "lat": 4.6309240,
+  "lon": -74.1901353,
+  "tags": {
+    "addr:housenumber": "89B-19",
+    "addr:street": "Calle 57 Sur",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centros de Atención Prioritaria en Salud Cabañas"
+  }
+},
+{
+  "type": "node",
+  "id": 9719586417,
+  "lat": 4.6093687,
+  "lon": -74.1857388,
+  "tags": {
+    "addr:housenumber": "80H-44",
+    "addr:street": "Calle 65 Sur",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centros de Atención Prioritaria en Salud Bosa Centro"
+  }
+},
+{
+  "type": "node",
+  "id": 9728012074,
+  "lat": 4.6930964,
+  "lon": -74.0463012,
+  "tags": {
+    "amenity": "clinic",
+    "check_date": "2024-06-01",
+    "health_facility:type": "laboratory",
+    "name": "Colcan"
+  }
+},
+{
+  "type": "node",
+  "id": 9736127250,
+  "lat": 4.7070462,
+  "lon": -74.0522841,
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Reina Sofia Colsánitas",
+    "operator": "Colsánitas - Keralty",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 9736127251,
+  "lat": 4.7065206,
+  "lon": -74.0508951,
+  "tags": {
+    "addr:housenumber": "20-56",
+    "addr:street": "Calle 127",
+    "amenity": "clinic",
+    "name": "Clínica Pediátrica Colsánitas",
+    "operator": "Colsánitas - Keralty",
+    "phone": "+57 601 7455100",
+    "website": "https://www.clinicapediatricacolsanitas.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 9948003817,
+  "lat": 4.6961758,
+  "lon": -74.0323599,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Zahnarzt Marta"
+  }
+},
+{
+  "type": "node",
+  "id": 9957887819,
+  "lat": 4.6346179,
+  "lon": -74.1160626,
+  "tags": {
+    "amenity": "clinic",
+    "name": "sanitas EPS - trámite"
+  }
+},
+{
+  "type": "node",
+  "id": 10170715726,
+  "lat": 4.6512522,
+  "lon": -74.1060700,
+  "tags": {
+    "addr:floor": "4",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Colsanitas Salitre"
+  }
+},
+{
+  "type": "node",
+  "id": 10698166605,
+  "lat": 4.6755990,
+  "lon": -74.0623657,
+  "tags": {
+    "amenity": "clinic",
+    "name": "fami care IPS"
+  }
+},
+{
+  "type": "node",
+  "id": 10698169105,
+  "lat": 4.6212859,
+  "lon": -74.0746073,
+  "tags": {
+    "amenity": "clinic",
+    "name:en": "cepa IPS"
+  }
+},
+{
+  "type": "node",
+  "id": 10699711405,
+  "lat": 4.6748959,
+  "lon": -74.0624672,
+  "tags": {
+    "amenity": "clinic",
+    "name:en": "Fami Care IPS"
+  }
+},
+{
+  "type": "node",
+  "id": 10734026507,
+  "lat": 4.6229471,
+  "lon": -74.0769061,
+  "tags": {
+    "addr:housenumber": "24-40",
+    "addr:street": "Calle 27",
+    "amenity": "clinic",
+    "name": "clinica garper medical s.a.s",
+    "phone": "+57 601 3902986",
+    "website": "https://www.garpermedica.com"
+  }
+},
+{
+  "type": "node",
+  "id": 10916002471,
+  "lat": 4.6846510,
+  "lon": -74.0581486,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "95-81",
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "description": "Plan Complementario",
+    "healthcare": "clinic",
+    "name": "Compensar Salud Plan Complementario",
+    "operator": "Compensar",
+    "source": "Kaart Ground Survey 2017;local knowledge"
+  }
+},
+{
+  "type": "node",
+  "id": 10945592815,
+  "lat": 4.7043813,
+  "lon": -74.2300969,
+  "tags": {
+    "amenity": "clinic"
+  }
+},
+{
+  "type": "node",
+  "id": 11152236172,
+  "lat": 4.7113635,
+  "lon": -74.2294304,
+  "tags": {
+    "addr:city": "Mosquera",
+    "addr:housenumber": "8-05",
+    "addr:street": "Calle 8",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "applied_kinesiology;physiatry",
+    "name": "Ango Fisioterapia"
+  }
+},
+{
+  "type": "node",
+  "id": 11263552241,
+  "lat": 4.6646127,
+  "lon": -74.0630409,
+  "tags": {
+    "amenity": "clinic",
+    "name": "IMEVI"
+  }
+},
+{
+  "type": "node",
+  "id": 11423818027,
+  "lat": 4.6188640,
+  "lon": -74.0713732,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Clínica de Especialistas"
+  }
+},
+{
+  "type": "node",
+  "id": 11906880586,
+  "lat": 4.6870140,
+  "lon": -74.0604794,
+  "tags": {
+    "amenity": "clinic",
+    "name": "Clínica de la piel"
+  }
+},
+{
+  "type": "node",
+  "id": 12313761201,
+  "lat": 4.6931627,
+  "lon": -74.0567470,
+  "tags": {
+    "addr:housenumber": "104A-91",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "clinic",
+    "name": "Oncolife 104",
+    "opening_hours": "Fr,Tu-Th,Mo 06:00-17:00; Sa 06:00-13:00",
+    "phone": "+57 601 5803973"
+  }
+},
+{
+  "type": "node",
+  "id": 12313761202,
+  "lat": 4.6905237,
+  "lon": -74.0571549,
+  "tags": {
+    "addr:housenumber": "103-59",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "clinic",
+    "name": "Clínica Oncolife 103",
+    "opening_hours": "24/7",
+    "phone": "+57 601 5803973"
+  }
+},
+{
+  "type": "node",
+  "id": 12341084785,
+  "lat": 4.6507122,
+  "lon": -74.0723703,
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Médico de Especialistas"
+  }
+},
+{
+  "type": "node",
+  "id": 12366031345,
+  "lat": 4.5895932,
+  "lon": -74.0700723,
+  "tags": {
+    "amenity": "hospital",
+    "name": "Hospital Jorge Eliecer Gaitán"
+  }
+},
+{
+  "type": "node",
+  "id": 12994553007,
+  "lat": 4.7073336,
+  "lon": -74.1086305,
+  "tags": {
+    "amenity": "clinic",
+    "check_date": "2025-07-11",
+    "healthcare": "clinic",
+    "healthcare:speciality": "fertility;abortion;blood_check;gynaecology",
+    "internet_access": "no",
+    "name": "Profamilia Quirigua",
+    "operator": "Profamilia",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 13281914702,
+  "lat": 4.7043701,
+  "lon": -74.0420996,
+  "tags": {
+    "amenity": "clinic",
+    "name": "DentiSalud"
+  }
+},
+{
+  "type": "node",
+  "id": 13741244536,
+  "lat": 4.6951722,
+  "lon": -74.0529065,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 21 #108a 10 navarra",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "veterinaria",
+    "name": "Pauvethome veterinaria"
+  }
+},
+{
+  "type": "node",
+  "id": 14294940995,
+  "lat": 4.6238998,
+  "lon": -74.1473158,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "33A-06 Sur",
+    "addr:street": "Carrera 77",
+    "amenity": "clinic",
+    "contact:facebook": "https://www.facebook.com/rejuvenecerestetica_/",
+    "contact:instagram": "https://www.instagram.com/rejuvenecerestetica_/",
+    "email": "medicinaestetica.rejuvenecer@gmail.com",
+    "healthcare": "clinic",
+    "healthcare:speciality": "dermatology",
+    "image": "https://maps.app.goo.gl/kyHt8D7uyTV4V3777",
+    "name": "Rejuvenecer Medicina Estética",
+    "opening_hours": "Mo-Sa 09:00-18:00; Su off",
+    "payment:app": "yes",
+    "payment:cards": "yes",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+57 321 204 5993",
+    "short_name": "Rejuvenecer",
+    "website": "https://rejuvenecer.co"
+  }
+},
+{
+  "type": "node",
+  "id": 14318397701,
+  "lat": 4.6426283,
+  "lon": -74.0688677,
+  "tags": {
+    "addr:housenumber": "16A-16",
+    "addr:street": "Diagonal 54",
+    "amenity": "clinic",
+    "check_date": "2026-10-25",
+    "healthcare": "clinic",
+    "name": "Eusalud Clinica Materno Infantil",
+    "name:en": "Eusalud Maternity and Paediatric Clinic",
+    "website": "https://clinicaeusalud.com.co/clinica-materno-infantil/"
+  }
+},
+{
+  "type": "way",
+  "id": 24038308,
+  "center": {
+    "lat": 4.5884963,
+    "lon": -74.0849677
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Instituto Materno Infantil Concepción Villaveces"
+  }
+},
+{
+  "type": "way",
+  "id": 24249764,
+  "center": {
+    "lat": 4.6489229,
+    "lon": -74.0955891
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Universiario Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 24249781,
+  "center": {
+    "lat": 4.6476447,
+    "lon": -74.0948765
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "building:levels": "3",
+    "healthcare": "hospital",
+    "name": "Clínica del Niño"
+  }
+},
+{
+  "type": "way",
+  "id": 24510160,
+  "center": {
+    "lat": 4.5892920,
+    "lon": -74.0739066
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "UPA Lourdes",
+    "roof:material": "eternit"
+  }
+},
+{
+  "type": "way",
+  "id": 24559320,
+  "center": {
+    "lat": 4.6648488,
+    "lon": -74.0789709
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "67A - 71",
+    "addr:street": "Carrera 52",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Infantil Universitario San José"
+  }
+},
+{
+  "type": "way",
+  "id": 39353079,
+  "center": {
+    "lat": 4.6522013,
+    "lon": -74.0609907
+  },
+  "tags": {
+    "addr:street": "Carrera 10",
+    "amenity": "hospital",
+    "building": "yes",
+    "emergency": "yes",
+    "name": "Clínica Infantil Colsubsidio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 39764638,
+  "center": {
+    "lat": 4.7170991,
+    "lon": -74.0467127
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "building:material": "brick",
+    "healthcare": "clinic",
+    "name": "Instituto Colombiano del Sistema Nervioso Clínica Monserrat",
+    "website": "https://www.clinicamontserrat.com.co/web/"
+  }
+},
+{
+  "type": "way",
+  "id": 42527299,
+  "center": {
+    "lat": 4.7421942,
+    "lon": -74.0230348
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:country": "CO",
+    "addr:full": "KR 7 No 165-0",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "name": "Hospital Simón Bolívar",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 61758777,
+  "center": {
+    "lat": 4.5913053,
+    "lon": -74.0925208
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "source": "WMS Yahoo"
+  }
+},
+{
+  "type": "way",
+  "id": 67416627,
+  "center": {
+    "lat": 4.7040570,
+    "lon": -74.0448610
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "16a-27",
+    "addr:street": "Avenida Callejas - Calle 127",
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Unidad Medico Quirurgica Santa Barbara"
+  }
+},
+{
+  "type": "way",
+  "id": 74268803,
+  "center": {
+    "lat": 4.6717466,
+    "lon": -74.1461862
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital de Fontibón"
+  }
+},
+{
+  "type": "way",
+  "id": 81140805,
+  "center": {
+    "lat": 4.6361823,
+    "lon": -74.0738817
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Palermo"
+  }
+},
+{
+  "type": "way",
+  "id": 83229975,
+  "center": {
+    "lat": 4.6732092,
+    "lon": -74.0891687
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 68",
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 96279050,
+  "center": {
+    "lat": 4.6991176,
+    "lon": -74.0294638
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Colsubsidio Usaquén",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 97636047,
+  "center": {
+    "lat": 4.7044191,
+    "lon": -74.0410980
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "5",
+    "healthcare": "clinic",
+    "name": "La Carolina Centro Médico"
+  }
+},
+{
+  "type": "way",
+  "id": 132577773,
+  "center": {
+    "lat": 4.7418435,
+    "lon": -74.0340397
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Fundación Cardio Infantil"
+  }
+},
+{
+  "type": "way",
+  "id": 153460467,
+  "center": {
+    "lat": 4.6948658,
+    "lon": -74.0337699
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "8",
+    "building:material": "brick",
+    "emergency": "no",
+    "healthcare": "clinic",
+    "name": "Fundacion Medica de los Andes",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 168526080,
+  "center": {
+    "lat": 4.6928950,
+    "lon": -74.0677706
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "building:levels": "3",
+    "building:material": "brick"
+  }
+},
+{
+  "type": "way",
+  "id": 175822270,
+  "center": {
+    "lat": 4.6220388,
+    "lon": -74.1718163
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "name": "CAMI Gran Britalia"
+  }
+},
+{
+  "type": "way",
+  "id": 177991055,
+  "center": {
+    "lat": 4.5766846,
+    "lon": -74.0952086
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "10Bis-22 Sur",
+    "addr:street": "Avenida Primero de Mayo",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Compensar Avenida 1 de Mayo",
+    "operator": "Compensar"
+  }
+},
+{
+  "type": "way",
+  "id": 199522386,
+  "center": {
+    "lat": 4.6861671,
+    "lon": -74.0751930
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "clinic",
+    "healthcare": "clinic",
+    "name": "Centro Salud Cafam",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 220078994,
+  "center": {
+    "lat": 4.5655778,
+    "lon": -74.1077179
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Atención las Lomas"
+  }
+},
+{
+  "type": "way",
+  "id": 225050224,
+  "center": {
+    "lat": 4.6980792,
+    "lon": -74.0728533
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Fundación Clínica Shaio",
+    "opening_hours": "24/7",
+    "phone": "+57 031 5938210",
+    "website": "https://www.shaio.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 230361682,
+  "center": {
+    "lat": 4.5714697,
+    "lon": -74.1282485
+  },
+  "tags": {
+    "addr:street": "Calle 48C Sur",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital El Tunal",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 231391647,
+  "center": {
+    "lat": 4.6950574,
+    "lon": -74.1203222
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housename": "UPA Álamos",
+    "addr:housenumber": "65 - 63",
+    "addr:street": "Carrera 97A",
+    "amenity": "hospital",
+    "building": "yes",
+    "emergency": "yes",
+    "name": "UPA Álamos"
+  }
+},
+{
+  "type": "way",
+  "id": 231977250,
+  "center": {
+    "lat": 4.5913278,
+    "lon": -74.0891721
+  },
+  "tags": {
+    "addr:country": "CO",
+    "addr:full": "AV 1 13 A 61",
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro Dermatológico Federico Lleras Acosta",
+    "phone": "3077072",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 233391214,
+  "center": {
+    "lat": 4.6822270,
+    "lon": -74.1245654
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Fresenius Medical Care"
+  }
+},
+{
+  "type": "way",
+  "id": 233575886,
+  "center": {
+    "lat": 4.5835619,
+    "lon": -74.1319733
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital El Carmen"
+  }
+},
+{
+  "type": "way",
+  "id": 238505519,
+  "center": {
+    "lat": 4.6200718,
+    "lon": -74.1542834
+  },
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Nueva EPS Kennedy"
+  }
+},
+{
+  "type": "way",
+  "id": 244789412,
+  "center": {
+    "lat": 4.6237093,
+    "lon": -74.1542750
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Centro de Salud Famisanar Cafam Kennedy"
+  }
+},
+{
+  "type": "way",
+  "id": 252078996,
+  "center": {
+    "lat": 4.6313163,
+    "lon": -74.0847907
+  },
+  "tags": {
+    "addr:street": "Calle25E",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Centro Médico IMEF",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 252078998,
+  "center": {
+    "lat": 4.6313102,
+    "lon": -74.0854537
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "emergency": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Fundadores"
+  }
+},
+{
+  "type": "way",
+  "id": 258199722,
+  "center": {
+    "lat": 4.7501117,
+    "lon": -74.0654918
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "8",
+    "building:material": "glass",
+    "emergency": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica La Colina"
+  }
+},
+{
+  "type": "way",
+  "id": 305178582,
+  "center": {
+    "lat": 4.6430879,
+    "lon": -74.1614074
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "UPA 92"
+  }
+},
+{
+  "type": "way",
+  "id": 313193639,
+  "center": {
+    "lat": 4.5696300,
+    "lon": -74.0833933
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital San Blas Nivel II E.S.E."
+  }
+},
+{
+  "type": "way",
+  "id": 324799387,
+  "center": {
+    "lat": 4.5526614,
+    "lon": -74.0944097
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital La Victoria"
+  }
+},
+{
+  "type": "way",
+  "id": 326795792,
+  "center": {
+    "lat": 4.6536855,
+    "lon": -74.0656493
+  },
+  "tags": {
+    "addr:city": "Chapinero",
+    "addr:street": "Calle 66",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital de Chapinero-Empresa Soc. Del Estado",
+    "note": "Sede Administrativa y Asistencial Telefono : 3499080",
+    "operator": "SDS",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 334793591,
+  "center": {
+    "lat": 4.6289874,
+    "lon": -74.0688417
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Oftalmológica"
+  }
+},
+{
+  "type": "way",
+  "id": 334798683,
+  "center": {
+    "lat": 4.6324227,
+    "lon": -74.0689012
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Centro de Medicina Bioenergetica ALMHI"
+  }
+},
+{
+  "type": "way",
+  "id": 334930764,
+  "center": {
+    "lat": 4.6262663,
+    "lon": -74.0665422
+  },
+  "tags": {
+    "amenity": "hospital",
+    "name": "Aliansalud"
+  }
+},
+{
+  "type": "way",
+  "id": 334965688,
+  "center": {
+    "lat": 4.6127010,
+    "lon": -74.1110518
+  },
+  "tags": {
+    "addr:housenumber": "3B-40",
+    "addr:street": "Transversal 39",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Sanitas"
+  }
+},
+{
+  "type": "way",
+  "id": 371546548,
+  "center": {
+    "lat": 4.6329633,
+    "lon": -74.0666128
+  },
+  "tags": {
+    "addr:housenumber": "13-13",
+    "addr:street": "Calle 46",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "ICOP"
+  }
+},
+{
+  "type": "way",
+  "id": 371988569,
+  "center": {
+    "lat": 4.6369318,
+    "lon": -74.0639597
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "7-36",
+    "addr:street": "Carrera 9",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date": "2025-06-20",
+    "name": "Centro de Especialidades"
+  }
+},
+{
+  "type": "way",
+  "id": 371993126,
+  "center": {
+    "lat": 4.6401714,
+    "lon": -74.0685380
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Cafam"
+  }
+},
+{
+  "type": "way",
+  "id": 371998454,
+  "center": {
+    "lat": 4.6363910,
+    "lon": -74.0644100
+  },
+  "tags": {
+    "addr:housenumber": "49-22",
+    "addr:name": "Radioterapia Oncología Marly",
+    "addr:street": "Carrera 9",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic"
+  }
+},
+{
+  "type": "way",
+  "id": 372071295,
+  "center": {
+    "lat": 4.6359703,
+    "lon": -74.0662124
+  },
+  "tags": {
+    "addr:housenumber": "48-63",
+    "addr:street": "Carrera 13",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Marly",
+    "opening_hours": "07:00-19:00"
+  }
+},
+{
+  "type": "way",
+  "id": 372071297,
+  "center": {
+    "lat": 4.6357804,
+    "lon": -74.0662407
+  },
+  "tags": {
+    "addr:street": "Carrera 13",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Centro de Servicios Famisanar",
+    "opening_hours": "06:00-22:00"
+  }
+},
+{
+  "type": "way",
+  "id": 372117754,
+  "center": {
+    "lat": 4.6362163,
+    "lon": -74.0644465
+  },
+  "tags": {
+    "addr:housenumber": "49-02",
+    "addr:street": "Carrera 9",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date": "2025-06-20",
+    "name": "Centro Medico"
+  }
+},
+{
+  "type": "way",
+  "id": 390354414,
+  "center": {
+    "lat": 4.6828761,
+    "lon": -74.0570844
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Los Nogales"
+  }
+},
+{
+  "type": "way",
+  "id": 395594654,
+  "center": {
+    "lat": 4.7618982,
+    "lon": -74.0932764
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "yes",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Juan N. Corpas"
+  }
+},
+{
+  "type": "way",
+  "id": 402454561,
+  "center": {
+    "lat": 4.6152068,
+    "lon": -74.1727231
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Ciudad Roma - Colsubsidio"
+  }
+},
+{
+  "type": "way",
+  "id": 408010553,
+  "center": {
+    "lat": 4.6250158,
+    "lon": -74.1818632
+  },
+  "tags": {
+    "addr:housenumber": "Cr 87",
+    "addr:postcode": "110711",
+    "addr:street": "calle 53B S-73",
+    "amenity": "hospital",
+    "name": "Hospital Pablo VI de Bosa",
+    "name:en": "Centros de Atención Prioritaria en Salud Porvenir",
+    "name:es": "Centros de Atención Prioritaria en Salud Porvenir"
+  }
+},
+{
+  "type": "way",
+  "id": 408344492,
+  "center": {
+    "lat": 4.6291753,
+    "lon": -74.0671165
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Hospital Universitario San Ignacio"
+  }
+},
+{
+  "type": "way",
+  "id": 408468025,
+  "center": {
+    "lat": 4.6373186,
+    "lon": -74.0647060
+  },
+  "tags": {
+    "addr:street": "Calle 50",
+    "amenity": "clinic",
+    "name": "Clínica de Marly B"
+  }
+},
+{
+  "type": "way",
+  "id": 408488094,
+  "center": {
+    "lat": 4.6359534,
+    "lon": -74.0649100
+  },
+  "tags": {
+    "addr:housenumber": "9-21",
+    "addr:street": "Calle 49",
+    "amenity": "hospital",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Unidad Radiológica Panoramax"
+  }
+},
+{
+  "type": "way",
+  "id": 408488106,
+  "center": {
+    "lat": 4.6356548,
+    "lon": -74.0650196
+  },
+  "tags": {
+    "addr:housenumber": "48-51",
+    "addr:street": "Carrera 9",
+    "amenity": "hospital",
+    "level": "4",
+    "name": "Unidad Médica"
+  }
+},
+{
+  "type": "way",
+  "id": 409876143,
+  "center": {
+    "lat": 4.6282370,
+    "lon": -74.0672666
+  },
+  "tags": {
+    "addr:housenumber": "40B-41",
+    "addr:street": "Carrera 13",
+    "amenity": "hospital",
+    "building": "yes",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "SaludVida EPS"
+  }
+},
+{
+  "type": "way",
+  "id": 410109440,
+  "center": {
+    "lat": 4.6289357,
+    "lon": -74.0653131
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Auditiva Escucho IPS",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 411098595,
+  "center": {
+    "lat": 4.6516696,
+    "lon": -74.1487251
+  },
+  "tags": {
+    "alt_name": "Hospital El Tintal",
+    "amenity": "hospital",
+    "barrier": "fence",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "landuse": "residential",
+    "name": "Unidad de Servicios de Salud Patio Bonito El Tintal"
+  }
+},
+{
+  "type": "way",
+  "id": 411110249,
+  "center": {
+    "lat": 4.6073906,
+    "lon": -74.1437450
+  },
+  "tags": {
+    "amenity": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 412246743,
+  "center": {
+    "lat": 4.6232340,
+    "lon": -74.0700069
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 34",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Profamilia",
+    "opening_hours": "Mo-Fr 06:00-19:00; Sa 07:00-16:00",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 421201421,
+  "center": {
+    "lat": 4.7033189,
+    "lon": -74.2281610
+  },
+  "tags": {
+    "addr:street": "Calle 3",
+    "amenity": "hospital",
+    "name": "Hospital Maria Auxiliadora",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 430200798,
+  "center": {
+    "lat": 4.6480661,
+    "lon": -74.1063889
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Clínica Colombia",
+    "operator": "Sanitas"
+  }
+},
+{
+  "type": "way",
+  "id": 438544025,
+  "center": {
+    "lat": 4.7118554,
+    "lon": -74.0321227
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "11",
+    "building:material": "brick",
+    "name": "Edificio El Bosque"
+  }
+},
+{
+  "type": "way",
+  "id": 438544379,
+  "center": {
+    "lat": 4.7114509,
+    "lon": -74.0309439
+  },
+  "tags": {
+    "addr:housenumber": "7B-83",
+    "addr:street": "Calle 134",
+    "addr:unit": "Oficina 520",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica El Bosque",
+    "phone": "+57 601 6273399"
+  }
+},
+{
+  "type": "way",
+  "id": 478122407,
+  "center": {
+    "lat": 4.5837128,
+    "lon": -74.1200907
+  },
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Unidad Primaria de Atención Upa Bravo Páez",
+    "operator": "Hospital Rafael Uribe Uribe"
+  }
+},
+{
+  "type": "way",
+  "id": 479816460,
+  "center": {
+    "lat": 4.6157604,
+    "lon": -74.1584241
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Compensar Unidad de Servicios Kennedy",
+    "operator": "Compensar"
+  }
+},
+{
+  "type": "way",
+  "id": 481482654,
+  "center": {
+    "lat": 4.6072828,
+    "lon": -74.2173227
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:housenumber": "33-??",
+    "addr:postcode": "250051",
+    "addr:street": "Carrera 34",
+    "amenity": "hospital",
+    "barrier": "fence",
+    "construction": "health",
+    "description": "Hospital nuevo",
+    "healthcare": "hospital",
+    "name": "Clinica Avidanti Ciudad Verde",
+    "operator": "https://www.avidanti.com/",
+    "operator:type": "private",
+    "website": "https://www.avidanti.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 526309662,
+  "center": {
+    "lat": 4.7000005,
+    "lon": -74.0291820
+  },
+  "tags": {
+    "addr:street": "Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "JoMedical",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 526309663,
+  "center": {
+    "lat": 4.7002058,
+    "lon": -74.0291246
+  },
+  "tags": {
+    "addr:street": "Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "E.P.S. Sanitas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527591530,
+  "center": {
+    "lat": 4.7321590,
+    "lon": -74.0445615
+  },
+  "tags": {
+    "addr:street": "Avenida Santa Bárbara - Carrera 19",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Rosangela Benedetti",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527888122,
+  "center": {
+    "lat": 4.7033368,
+    "lon": -74.0538197
+  },
+  "tags": {
+    "addr:street": "Autopista Norte - Paralela Oriental",
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Idime",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527929423,
+  "center": {
+    "lat": 4.6917481,
+    "lon": -74.0441388
+  },
+  "tags": {
+    "addr:street": "Calle 108",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Maternity Spa",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527961729,
+  "center": {
+    "lat": 4.7471739,
+    "lon": -74.0442881
+  },
+  "tags": {
+    "addr:street": "Carrera 21",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "E.P.S. Sanitas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527971016,
+  "center": {
+    "lat": 4.7400103,
+    "lon": -74.0408453
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 161",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Coomeva EPS",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527972484,
+  "center": {
+    "lat": 4.7395545,
+    "lon": -74.0387509
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 161",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Medic Global Professional IPS",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527978865,
+  "center": {
+    "lat": 4.7487042,
+    "lon": -74.0463289
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Dra. Soffa Alegria",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527990322,
+  "center": {
+    "lat": 4.6564620,
+    "lon": -74.0590290
+  },
+  "tags": {
+    "addr:housenumber": "10-92",
+    "addr:street": "Calle 71",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica De Traumatologia Y Ortopedia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528159571,
+  "center": {
+    "lat": 4.7211582,
+    "lon": -74.0688188
+  },
+  "tags": {
+    "addr:street": "Carrera 58B",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Pointer",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528183670,
+  "center": {
+    "lat": 4.6419542,
+    "lon": -74.0625414
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Cafe Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528185301,
+  "center": {
+    "lat": 4.6404927,
+    "lon": -74.0629751
+  },
+  "tags": {
+    "addr:housenumber": "54-27",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "EPS Sura",
+    "name:es": "EPS Sura",
+    "opening_hours": "Mo-Fr 07:00-20:00; Sa 07:00-13:00",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528188403,
+  "center": {
+    "lat": 4.6389126,
+    "lon": -74.0633161
+  },
+  "tags": {
+    "addr:housenumber": "52-53",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Centro Medico Colmédica",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528204403,
+  "center": {
+    "lat": 4.6276581,
+    "lon": -74.0656426
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "40-11",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date:opening_hours": "2024-02-01",
+    "healthcare": "clinic",
+    "name": "Jave Salud",
+    "opening_hours:signed": "no",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528234915,
+  "center": {
+    "lat": 4.6984564,
+    "lon": -74.0773280
+  },
+  "tags": {
+    "addr:street": "Calle 101",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Asociacion Mutual San Jorge",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528474678,
+  "center": {
+    "lat": 4.7011163,
+    "lon": -74.0317814
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 7C",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica San Miguel",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528476656,
+  "center": {
+    "lat": 4.6667052,
+    "lon": -74.0589017
+  },
+  "tags": {
+    "addr:street": "Carrera 18",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Centro Medico 78",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528502281,
+  "center": {
+    "lat": 4.6778947,
+    "lon": -74.0906853
+  },
+  "tags": {
+    "addr:street": "Carrera 69",
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Hospital Ingativa Bellavista",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528547314,
+  "center": {
+    "lat": 4.6236154,
+    "lon": -74.0695838
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "34 - 47",
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "healthcare:speciality": "cardiology",
+    "name": "Instituto del Corazón de Bucaramanga",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528548770,
+  "center": {
+    "lat": 4.6227409,
+    "lon": -74.0697518
+  },
+  "tags": {
+    "addr:street": "Avenida Caracas",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Orienta Familiar I.P.S EU",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528560008,
+  "center": {
+    "lat": 4.7202429,
+    "lon": -74.0715260
+  },
+  "tags": {
+    "addr:street": "Carrera 59A",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Asociación San Bartolomé Apóstol",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528561843,
+  "center": {
+    "lat": 4.6223440,
+    "lon": -74.0721400
+  },
+  "tags": {
+    "addr:housenumber": "16 - 55",
+    "addr:street": "Calle 33A",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Oriéntame",
+    "office": "foundation",
+    "phone": "+57 601 7447633",
+    "source": "Kaart Ground Survey 2017",
+    "website": "https://orientame.org.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 528565891,
+  "center": {
+    "lat": 4.6183861,
+    "lon": -74.0716598
+  },
+  "tags": {
+    "addr:housenumber": "29-61",
+    "addr:street": "Avenida Caracas",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date": "2024-08-20",
+    "name": "Instituto Medico de Especialistas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529278238,
+  "center": {
+    "lat": 4.6666577,
+    "lon": -74.0687032
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "San Nicolás"
+  }
+},
+{
+  "type": "way",
+  "id": 529309515,
+  "center": {
+    "lat": 4.6286131,
+    "lon": -74.0708441
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Santa Catalina."
+  }
+},
+{
+  "type": "way",
+  "id": 529499066,
+  "center": {
+    "lat": 4.6547449,
+    "lon": -74.0640510
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 67",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Centro Medico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529561782,
+  "center": {
+    "lat": 4.7324141,
+    "lon": -74.0532915
+  },
+  "tags": {
+    "addr:street": "Calle 150",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "I.P.S. Cipres",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529735263,
+  "center": {
+    "lat": 4.6682084,
+    "lon": -74.0566820
+  },
+  "tags": {
+    "addr:housenumber": "82-36",
+    "addr:street": "Carrera 16",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date": "2024-05-21",
+    "name": "Centro Cardiológico de Bogotá",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530035006,
+  "center": {
+    "lat": 4.7231283,
+    "lon": -74.0505424
+  },
+  "tags": {
+    "addr:street": "Autopista Norte - Paralela Oriental",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "CafeSalud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530035019,
+  "center": {
+    "lat": 4.7262378,
+    "lon": -74.0500497
+  },
+  "tags": {
+    "addr:street": "Autopista Norte - Paralela Oriental",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Dos Hemisferios",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530111519,
+  "center": {
+    "lat": 4.7274068,
+    "lon": -74.0495810
+  },
+  "tags": {
+    "addr:street": "Autopista Norte - Paralela Oriental",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Compensar Calle 145",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530125836,
+  "center": {
+    "lat": 4.6694950,
+    "lon": -74.1030759
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 70",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Servimed",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530331495,
+  "center": {
+    "lat": 4.6865435,
+    "lon": -74.0516588
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "building": "yes",
+    "check_date": "2025-04-04",
+    "name": "Clínica Rivas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530331496,
+  "center": {
+    "lat": 4.6872189,
+    "lon": -74.0514974
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Rivas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530419697,
+  "center": {
+    "lat": 4.6707204,
+    "lon": -74.0747586
+  },
+  "tags": {
+    "addr:street": "Calle 74",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Erdintore & Trama",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530424917,
+  "center": {
+    "lat": 4.6926327,
+    "lon": -74.0512655
+  },
+  "tags": {
+    "addr:street": "Calle 106",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "E.P.S. Sanitas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530603619,
+  "center": {
+    "lat": 4.6914922,
+    "lon": -74.0486462
+  },
+  "tags": {
+    "addr:street": "Calle 106",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Avellaneda",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530624456,
+  "center": {
+    "lat": 4.7042772,
+    "lon": -74.0996441
+  },
+  "tags": {
+    "addr:street": "Diagonal 82 Bis",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Unidad renal Fresenius Medical care",
+    "name:es": "Unidad renal Fresenius Medical care",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530629947,
+  "center": {
+    "lat": 4.6916674,
+    "lon": -74.0489290
+  },
+  "tags": {
+    "addr:street": "Carrera 17A",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica New Image",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531288236,
+  "center": {
+    "lat": 4.6702219,
+    "lon": -74.0605747
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 20",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Corvesalud Coodontólogos",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531289026,
+  "center": {
+    "lat": 4.6889639,
+    "lon": -74.0953828
+  },
+  "tags": {
+    "addr:street": "Calle 73",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "DaVita",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531324508,
+  "center": {
+    "lat": 4.6762298,
+    "lon": -74.0595929
+  },
+  "tags": {
+    "addr:street": "Autopista Norte - Paralela Occidental",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Promedico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531476538,
+  "center": {
+    "lat": 4.6853828,
+    "lon": -74.0516080
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "building": "hospital",
+    "building:levels": "4",
+    "colour": "white",
+    "healthcare": "clinic",
+    "name": "Clinica Barraquer",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531493604,
+  "center": {
+    "lat": 4.6927150,
+    "lon": -74.0568661
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Servimed",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531999540,
+  "center": {
+    "lat": 4.6866522,
+    "lon": -74.0607874
+  },
+  "tags": {
+    "addr:housenumber": "48-25",
+    "addr:street": "Avenida Carrera 50",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "healthcare:speciality": "general",
+    "name": "Salud Total",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532043902,
+  "center": {
+    "lat": 4.6513404,
+    "lon": -74.0728859
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "24-88",
+    "addr:street": "Avenida Calle 63",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Alianza",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532073265,
+  "center": {
+    "lat": 4.6506277,
+    "lon": -74.0721841
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "62-50",
+    "addr:street": "Carrera 24",
+    "amenity": "hospital",
+    "building": "hospital",
+    "building:levels": "6",
+    "healthcare": "hospital",
+    "name": "Centro Médico Colsubsidio Calle 63",
+    "roof:levels": "0",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532978914,
+  "center": {
+    "lat": 4.6905240,
+    "lon": -74.0572229
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Sanita Magarita",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532978916,
+  "center": {
+    "lat": 4.6909256,
+    "lon": -74.0571439
+  },
+  "tags": {
+    "addr:housenumber": "103B-03",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "E.P.S. Sanitas",
+    "opening_hours": "Mo-Fr 06:00-20:00; Sa 06:00-17:00",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532978920,
+  "center": {
+    "lat": 4.6914337,
+    "lon": -74.0570845
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica Colombiana",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533046357,
+  "center": {
+    "lat": 4.7260729,
+    "lon": -74.0931042
+  },
+  "tags": {
+    "addr:street": "Calle 129B",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "UPA Rincon",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533052840,
+  "center": {
+    "lat": 4.7107851,
+    "lon": -74.2249377
+  },
+  "tags": {
+    "addr:street": "Calle 10A",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Gimnasio Pedagógico San Rafael",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533177261,
+  "center": {
+    "lat": 4.6799469,
+    "lon": -74.1087146
+  },
+  "tags": {
+    "addr:street": "Calle 63B",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica San Sebastian",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533252847,
+  "center": {
+    "lat": 4.7398661,
+    "lon": -74.0882438
+  },
+  "tags": {
+    "addr:street": "Avenida Suba",
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Centro Medico y Odontologico  - Cifuentes",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533683652,
+  "center": {
+    "lat": 4.6410530,
+    "lon": -74.0750944
+  },
+  "tags": {
+    "addr:street": "Calle 52",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Exámenes Médicos Para el Pase",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533884601,
+  "center": {
+    "lat": 4.6357385,
+    "lon": -74.0774552
+  },
+  "tags": {
+    "addr:street": "Calle 46",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Corsanemos",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 534962151,
+  "center": {
+    "lat": 4.6001268,
+    "lon": -74.0956197
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 3",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Cardiointensiva",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537009002,
+  "center": {
+    "lat": 4.6038132,
+    "lon": -74.1101204
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 36",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Consultorios Medicos",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537772812,
+  "center": {
+    "lat": 4.5760833,
+    "lon": -74.0911476
+  },
+  "tags": {
+    "addr:street": "Carrera 8",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Consulta Externa Clínica San Rafael",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537813155,
+  "center": {
+    "lat": 4.5855736,
+    "lon": -74.1002353
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:street": "Carrera 18",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "E.P.S. Sanitas Centro Medico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537813156,
+  "center": {
+    "lat": 4.5860690,
+    "lon": -74.0998087
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:street": "Carrera 18",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "CafeSalud EPS",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 539470012,
+  "center": {
+    "lat": 4.6298017,
+    "lon": -74.0700269
+  },
+  "tags": {
+    "addr:street": "Carrera 16",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Capital Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540252906,
+  "center": {
+    "lat": 4.5818669,
+    "lon": -74.1080990
+  },
+  "tags": {
+    "addr:housenumber": "19F-18",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540487107,
+  "center": {
+    "lat": 4.5936358,
+    "lon": -74.0885867
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 2",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Pediátrico la Misericordia HOMI",
+    "official_name": "Fundación Hospital Pediátrico la Misericordia HOMI",
+    "operator": "Fundación Hospital Pediátrico la Misericordia HOMI",
+    "operator:type": "public",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540519532,
+  "center": {
+    "lat": 4.6265162,
+    "lon": -74.0915092
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 20",
+    "amenity": "clinic",
+    "building": "roof",
+    "healthcare": "clinic",
+    "name": "EAAB Centro Medico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540740685,
+  "center": {
+    "lat": 4.6324004,
+    "lon": -74.0909423
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 24D",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Premi Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540861322,
+  "center": {
+    "lat": 4.6854797,
+    "lon": -74.0524218
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "2",
+    "healthcare": "clinic",
+    "name": "Complejo Medical Calle 100",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541127746,
+  "center": {
+    "lat": 4.6765769,
+    "lon": -74.0531946
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 92",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541149016,
+  "center": {
+    "lat": 4.5591056,
+    "lon": -74.1260017
+  },
+  "tags": {
+    "addr:street": "Carrera 12",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "CAPS Abraham Lincoln",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541408739,
+  "center": {
+    "lat": 4.6292974,
+    "lon": -74.1358523
+  },
+  "tags": {
+    "addr:street": "Avenida Las Américas",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica del Occidente",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541970655,
+  "center": {
+    "lat": 4.6144652,
+    "lon": -74.1353591
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 69B",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Salud Express",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 542140551,
+  "center": {
+    "lat": 4.6056685,
+    "lon": -74.0833605
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Centenario"
+  }
+},
+{
+  "type": "way",
+  "id": 542284975,
+  "center": {
+    "lat": 4.6009198,
+    "lon": -74.1001420
+  },
+  "tags": {
+    "addr:street": "Calle 2",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Aurum",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 544198643,
+  "center": {
+    "lat": 4.6272113,
+    "lon": -74.0691748
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general;gynaecology;emergency",
+    "name": "Clínica la magdalena"
+  }
+},
+{
+  "type": "way",
+  "id": 548001520,
+  "center": {
+    "lat": 4.5823132,
+    "lon": -74.2003764
+  },
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:postcode": "250054",
+    "addr:street": "Carrera 4 Este",
+    "amenity": "hospital",
+    "barrier": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Cardiovascular del Niño de Cundinamarca",
+    "operator": "Hospital Cardiovascular del Niño de Cundinamarca"
+  }
+},
+{
+  "type": "way",
+  "id": 550950590,
+  "center": {
+    "lat": 4.6068517,
+    "lon": -74.1855977
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Bosa Il Nivel",
+    "name:en": "Hospital Bosa II Nivel",
+    "name:es": "Hospital Bosa Il Nivel Urgencias"
+  }
+},
+{
+  "type": "way",
+  "id": 551338975,
+  "center": {
+    "lat": 4.6179287,
+    "lon": -74.2044370
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "UBA San Bernardino"
+  }
+},
+{
+  "type": "way",
+  "id": 557698998,
+  "center": {
+    "lat": 4.7534120,
+    "lon": -74.0918042
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital de Suba"
+  }
+},
+{
+  "type": "way",
+  "id": 582012500,
+  "center": {
+    "lat": 4.7408029,
+    "lon": -74.0344245
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Fundacion Neumologica"
+  }
+},
+{
+  "type": "way",
+  "id": 591105427,
+  "center": {
+    "lat": 4.5595165,
+    "lon": -74.1384156
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Meissen"
+  }
+},
+{
+  "type": "way",
+  "id": 597167736,
+  "center": {
+    "lat": 4.6199162,
+    "lon": -74.0655189
+  },
+  "tags": {
+    "addr:housenumber": "Carrera 5 No. 33A - 45",
+    "addr:street": "Avenida Carrera 5",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "CAMI La Perseverancia",
+    "operator": "Hospital Centro Oriente"
+  }
+},
+{
+  "type": "way",
+  "id": 617878302,
+  "center": {
+    "lat": 4.6069418,
+    "lon": -74.2137788
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "wall",
+    "healthcare": "hospital",
+    "name": "Teletón Soacha",
+    "operator": "Teletón"
+  }
+},
+{
+  "type": "way",
+  "id": 624079134,
+  "center": {
+    "lat": 4.5706767,
+    "lon": -74.1578075
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "centre",
+    "name": "Centro de Salud Manuela Beltrán",
+    "operator": "Secretaria Distrital de Salud",
+    "operator:type": "public",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 627294936,
+  "center": {
+    "lat": 4.6162674,
+    "lon": -74.1535247
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital de Kennedy",
+    "operator": "Secretaría de Salud de Bogotá"
+  }
+},
+{
+  "type": "way",
+  "id": 633507263,
+  "center": {
+    "lat": 4.8127796,
+    "lon": -74.0997437
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Salud",
+    "operator": "Hospital San Antonio de Chía"
+  }
+},
+{
+  "type": "way",
+  "id": 637289421,
+  "center": {
+    "lat": 4.6245433,
+    "lon": -74.0724752
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "17-48",
+    "addr:postcode": "111311",
+    "addr:street": "Calle 35",
+    "amenity": "clinic",
+    "building": "yes",
+    "email": "fund_licce@epilepsia.org",
+    "healthcare": "clinic",
+    "name": "Fundación Liga Central Contra la Epilepsia",
+    "opening_hours": "Mo-Fr 08:00-18:00",
+    "phone": "+57 601 2455717",
+    "website": "http://www.epilepsia.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 653206988,
+  "center": {
+    "lat": 4.6277141,
+    "lon": -74.0592783
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "12",
+    "addr:street": "Calle 41",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Hospital del Oriente 1",
+    "operator": "Seguro Social"
+  }
+},
+{
+  "type": "way",
+  "id": 657074846,
+  "center": {
+    "lat": 4.5692449,
+    "lon": -74.1494542
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Candelaria IPS"
+  }
+},
+{
+  "type": "way",
+  "id": 660506678,
+  "center": {
+    "lat": 4.7034640,
+    "lon": -74.0293121
+  },
+  "tags": {
+    "addr:housenumber": "7-53",
+    "addr:street": "Calle 127A",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "7",
+    "building:material": "glass",
+    "healthcare": "clinic",
+    "healthcare:speciality": "ophthalmology",
+    "name": "Instituto Nacional de Oftalmología"
+  }
+},
+{
+  "type": "way",
+  "id": 661322624,
+  "center": {
+    "lat": 4.6159740,
+    "lon": -74.2014839
+  },
+  "tags": {
+    "addr:housenumber": "81H-20",
+    "addr:street": "Calle 77 Sur",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "CAPS Villa Javier"
+  }
+},
+{
+  "type": "way",
+  "id": 670507318,
+  "center": {
+    "lat": 4.6923198,
+    "lon": -74.0569077
+  },
+  "tags": {
+    "abandoned": "yes",
+    "addr:city": "Bogotá",
+    "addr:housenumber": "104A 33",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "clinic",
+    "building": "hospital",
+    "building:levels": "6",
+    "healthcare": "clinic",
+    "historic": "yes",
+    "name": "Clinica Jorge Piñeros Corpas",
+    "operator": "SaludCoop EPS",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 670510383,
+  "center": {
+    "lat": 4.6932148,
+    "lon": -74.0556022
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "8",
+    "building:material": "glass",
+    "healthcare": "clinic",
+    "name": "Jasban"
+  }
+},
+{
+  "type": "way",
+  "id": 670565092,
+  "center": {
+    "lat": 4.6938467,
+    "lon": -74.0554629
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "6",
+    "building:material": "brick",
+    "healthcare": "clinic",
+    "name": "Clinica Vascular Navarra"
+  }
+},
+{
+  "type": "way",
+  "id": 670726249,
+  "center": {
+    "lat": 4.6342711,
+    "lon": -74.0709738
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clinica Nueva"
+  }
+},
+{
+  "type": "way",
+  "id": 676288198,
+  "center": {
+    "lat": 4.7106874,
+    "lon": -74.0320533
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Los Cobos"
+  }
+},
+{
+  "type": "way",
+  "id": 676864778,
+  "center": {
+    "lat": 4.6776531,
+    "lon": -74.0572427
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica de la Mujer",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 685127232,
+  "center": {
+    "lat": 4.6021410,
+    "lon": -74.1295380
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "UPA 26 Alcala Muzu"
+  }
+},
+{
+  "type": "way",
+  "id": 691700384,
+  "center": {
+    "lat": 4.7415730,
+    "lon": -74.0639037
+  },
+  "tags": {
+    "addr:housenumber": "152 B - 79",
+    "addr:street": "Carrera 59",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "5",
+    "building:material": "metal",
+    "healthcare": "clinic",
+    "name": "Compensar"
+  }
+},
+{
+  "type": "way",
+  "id": 693427530,
+  "center": {
+    "lat": 4.7011962,
+    "lon": -74.1202387
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "67-57F",
+    "addr:street": "Carrera 101",
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Centro Médico Colsubsidio",
+    "operator": "Colsudsdio"
+  }
+},
+{
+  "type": "way",
+  "id": 693621807,
+  "center": {
+    "lat": 4.6241964,
+    "lon": -74.0709023
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 693636202,
+  "center": {
+    "lat": 4.6237675,
+    "lon": -74.0704296
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Planificación Familiar"
+  }
+},
+{
+  "type": "way",
+  "id": 694274988,
+  "center": {
+    "lat": 4.6374720,
+    "lon": -74.0612915
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51A-56",
+    "addr:street": "Transversal 3",
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Santo Tomás"
+  }
+},
+{
+  "type": "way",
+  "id": 694328931,
+  "center": {
+    "lat": 4.7152756,
+    "lon": -74.1404811
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "121-76",
+    "addr:street": "Calle 64C",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Hospital de Engativá Emaús"
+  }
+},
+{
+  "type": "way",
+  "id": 704036511,
+  "center": {
+    "lat": 4.6233213,
+    "lon": -74.0826462
+  },
+  "tags": {
+    "addr:country": "CO",
+    "addr:housenumber": "29 - 45",
+    "addr:street": "Calle 24",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Méderi Hospital Universitario Mayor",
+    "name:es": "Hospital Universitario Mayor mederi",
+    "operator": "Corporación Hospitalaria Juan Ciudad - Méderi",
+    "operator:type": "private",
+    "source": "Kaart Ground Survey 2017",
+    "website": "https://www.mederi.com.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 707118331,
+  "center": {
+    "lat": 4.5916716,
+    "lon": -74.0924836
+  },
+  "tags": {
+    "addr:country": "CO",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Santa Clara"
+  }
+},
+{
+  "type": "way",
+  "id": 708293046,
+  "center": {
+    "lat": 4.6351637,
+    "lon": -74.2063660
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "yes",
+    "check_date": "por definir",
+    "healthcare": "hospital",
+    "name": "Hospital de Bosa",
+    "note": "Emplazamiento del nuevo hospital",
+    "opening_date": "por definir",
+    "operator": "Subred Suroccidente",
+    "source": "https://bogota.gov.co/mi-ciudad/salud/construccion-y-dotacion-del-nuevo-hospital-de-bosa"
+  }
+},
+{
+  "type": "way",
+  "id": 712430649,
+  "center": {
+    "lat": 4.5801241,
+    "lon": -74.1144958
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Coomeva"
+  }
+},
+{
+  "type": "way",
+  "id": 717330620,
+  "center": {
+    "lat": 4.6743492,
+    "lon": -74.1422077
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "98-72",
+    "addr:street": "Calle 20",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Clínica Medicentro",
+    "operator": "Medicentro Familiar I.P.S.",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 719388105,
+  "center": {
+    "lat": 4.5450090,
+    "lon": -74.1460302
+  },
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Unidad de Servicios de Salud La Estrella"
+  }
+},
+{
+  "type": "way",
+  "id": 734298685,
+  "center": {
+    "lat": 4.5894746,
+    "lon": -74.0875999
+  },
+  "tags": {
+    "amenity": "hospital",
+    "description": "Hospital fundado en el siglo XVII, abandonado por su quiebra entre 1996 a 2019. En proceso de reconstrucción y restauración",
+    "healthcare": "hospital",
+    "name": "Hospital Universitario San Juan de Dios",
+    "operator": "Subred Centro Oriente",
+    "operator:type": "public"
+  }
+},
+{
+  "type": "way",
+  "id": 734298696,
+  "center": {
+    "lat": 4.5879997,
+    "lon": -74.0845417
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Instituto Nacional de Cancerología"
+  }
+},
+{
+  "type": "way",
+  "id": 738588719,
+  "center": {
+    "lat": 4.5711120,
+    "lon": -74.1069018
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "yes",
+    "healthcare": "hospital",
+    "name": "Fundación Hospital San Carlos"
+  }
+},
+{
+  "type": "way",
+  "id": 741106709,
+  "center": {
+    "lat": 4.5628474,
+    "lon": -74.1252874
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "CAMI Clínica de Medicina Interna Tunjuelito"
+  }
+},
+{
+  "type": "way",
+  "id": 741705599,
+  "center": {
+    "lat": 4.5575260,
+    "lon": -74.1120350
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Centro de Atencion Chircales"
+  }
+},
+{
+  "type": "way",
+  "id": 745448317,
+  "center": {
+    "lat": 4.5455684,
+    "lon": -74.1064553
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "USS Diana Turbay"
+  }
+},
+{
+  "type": "way",
+  "id": 758842547,
+  "center": {
+    "lat": 4.4731295,
+    "lon": -74.1217601
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital de Usme"
+  }
+},
+{
+  "type": "way",
+  "id": 758856802,
+  "center": {
+    "lat": 4.5525912,
+    "lon": -74.1447891
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "USS Vista Hermosa"
+  }
+},
+{
+  "type": "way",
+  "id": 762719851,
+  "center": {
+    "lat": 4.5872679,
+    "lon": -74.0837583
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Universitario De La Samaritana"
+  }
+},
+{
+  "type": "way",
+  "id": 762914214,
+  "center": {
+    "lat": 4.5762112,
+    "lon": -74.0905615
+  },
+  "tags": {
+    "addr:housenumber": "17-45 Sur",
+    "addr:street": "Carrera 8",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "name": "Curia Provincial Orden Hospitalaria de San Juan de Dios",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 767410055,
+  "center": {
+    "lat": 4.7069714,
+    "lon": -74.2006748
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Puesto Médico \"El Hato\"",
+    "operator": "Alcaldía de Funza"
+  }
+},
+{
+  "type": "way",
+  "id": 769107350,
+  "center": {
+    "lat": 4.5783382,
+    "lon": -74.1656517
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Urgencias Argenitna",
+    "operator": "Capital Salud",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 777870965,
+  "center": {
+    "lat": 4.6982032,
+    "lon": -74.0311020
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Instituto de Cornea"
+  }
+},
+{
+  "type": "way",
+  "id": 813680664,
+  "center": {
+    "lat": 4.5928430,
+    "lon": -74.0902378
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "layer": "1",
+    "name": "Medicall"
+  }
+},
+{
+  "type": "way",
+  "id": 815163422,
+  "center": {
+    "lat": 4.6344954,
+    "lon": -74.1125415
+  },
+  "tags": {
+    "addr:housenumber": "14 - 41",
+    "addr:street": "Carrera 62",
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Unidad de Urgencias EPS Sanitas"
+  }
+},
+{
+  "type": "way",
+  "id": 815971420,
+  "center": {
+    "lat": 4.6383077,
+    "lon": -74.1262530
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 71 Bis",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Nuestra Señora de la Paz",
+    "operator": "Orden Hospitalaria de San Juan de Dios",
+    "operator:type": "public",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 817532478,
+  "center": {
+    "lat": 4.6773502,
+    "lon": -74.0568956
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Clínica de la Mujer"
+  }
+},
+{
+  "type": "way",
+  "id": 819337803,
+  "center": {
+    "lat": 4.5766742,
+    "lon": -74.0913416
+  },
+  "tags": {
+    "addr:city": "Pereira",
+    "addr:country": "CO",
+    "addr:street": "Carrera 8",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Universitario Clínica San Rafael",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 827893412,
+  "center": {
+    "lat": 4.5880273,
+    "lon": -74.2000885
+  },
+  "tags": {
+    "addr:street": "Carrera 4",
+    "amenity": "clinic",
+    "barrier": "fence",
+    "healthcare": "clinic",
+    "name": "Centro Medico Virrey Solis Soacha",
+    "operator": "IPS Virrey Solis",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 827898837,
+  "center": {
+    "lat": 4.7407950,
+    "lon": -74.1102390
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic"
+  }
+},
+{
+  "type": "way",
+  "id": 829948015,
+  "center": {
+    "lat": 4.6952135,
+    "lon": -74.0332206
+  },
+  "tags": {
+    "amenity": "hospital",
+    "branch": "Principal",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general;psychiatry",
+    "name": "Fundación Santafé de Bogotá",
+    "operator": "Fundación Santafé de Bogotá",
+    "operator:type": "private",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 848045766,
+  "center": {
+    "lat": 4.6851364,
+    "lon": -74.0565337
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "10",
+    "healthcare": "clinic",
+    "name": "Clínica VIP"
+  }
+},
+{
+  "type": "way",
+  "id": 848055198,
+  "center": {
+    "lat": 4.6845984,
+    "lon": -74.0569186
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "building:levels": "9",
+    "building:material": "glass",
+    "healthcare": "clinic",
+    "name": "Centro Médico Dali"
+  }
+},
+{
+  "type": "way",
+  "id": 848622759,
+  "center": {
+    "lat": 4.7109602,
+    "lon": -74.1095929
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 80A",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Engativá",
+    "operator": "Alcadía Mayor de Bogotá",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 857637317,
+  "center": {
+    "lat": 4.6345844,
+    "lon": -74.0617311
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Militar Central",
+    "name:en": "Central Military Hospital",
+    "name:es": "Hospital Militar Central"
+  }
+},
+{
+  "type": "way",
+  "id": 857708541,
+  "center": {
+    "lat": 4.5985006,
+    "lon": -74.0639715
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 5A Este",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "healthcare:speciality": "child_psychiatry;orthopaedics",
+    "name": "Instituto de Ortopedia Infantil Roosevelt",
+    "operator": "Instituto de Ortopedia Infantil Roosevelt",
+    "operator:type": "unkn"
+  }
+},
+{
+  "type": "way",
+  "id": 865499033,
+  "center": {
+    "lat": 4.5219294,
+    "lon": -74.0880409
+  },
+  "tags": {
+    "addr:street": "Transversal 14 E",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro Médico San Juan Camilo Rey"
+  }
+},
+{
+  "type": "way",
+  "id": 900185226,
+  "center": {
+    "lat": 4.6219025,
+    "lon": -74.1497606
+  },
+  "tags": {
+    "addr:city": "Bogota DC",
+    "addr:housenumber": "77-33",
+    "addr:street": "Calle 36 Sur",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Clinca Medical",
+    "operator": "Medical",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 962128768,
+  "center": {
+    "lat": 4.6033177,
+    "lon": -74.0863973
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital de San José"
+  }
+},
+{
+  "type": "way",
+  "id": 966224144,
+  "center": {
+    "lat": 4.6370936,
+    "lon": -74.0649479
+  },
+  "tags": {
+    "addr:street": "Calle 50",
+    "alt_name": "Complejo Marly",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clínica Marly",
+    "name:en": "Marly Clinic",
+    "name:es": "Clínica Marly"
+  }
+},
+{
+  "type": "way",
+  "id": 974848338,
+  "center": {
+    "lat": 4.6343082,
+    "lon": -74.1616004
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Unidad de servicios de Salud Patio Bonito"
+  }
+},
+{
+  "type": "way",
+  "id": 1012835385,
+  "center": {
+    "lat": 4.6474598,
+    "lon": -74.0976524
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1013881851,
+  "center": {
+    "lat": 4.6277582,
+    "lon": -74.1213724
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida de las Américas",
+    "alt_name": "Virrey Solís I.P.S Américas",
+    "amenity": "clinic",
+    "brand:wikidata": "Q134985917",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Virrey Solís I.P.S.",
+    "operator": "Salud Total EPS-S",
+    "operator:type": "private",
+    "operator:wikidata": "Q131987798",
+    "operator:wikipedia": "es:Salud Total"
+  }
+},
+{
+  "type": "way",
+  "id": 1020674818,
+  "center": {
+    "lat": 4.7039645,
+    "lon": -74.0444272
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1023014264,
+  "center": {
+    "lat": 4.7477437,
+    "lon": -74.1029742
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Cafam"
+  }
+},
+{
+  "type": "way",
+  "id": 1056250660,
+  "center": {
+    "lat": 4.4892417,
+    "lon": -74.1100101
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital de Usme"
+  }
+},
+{
+  "type": "way",
+  "id": 1089428514,
+  "center": {
+    "lat": 4.7131646,
+    "lon": -74.0957581
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "Centro de Atención Básica Quirigua",
+    "operator": "Hospital Engativa",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1089988445,
+  "center": {
+    "lat": 4.6697370,
+    "lon": -74.0965420
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "name": "El Bosque Centro Odontologico"
+  }
+},
+{
+  "type": "way",
+  "id": 1089998617,
+  "center": {
+    "lat": 4.6323136,
+    "lon": -74.1372023
+  },
+  "tags": {
+    "amenity": "hospital",
+    "check_date": "2025-10-07",
+    "healthcare": "hospital",
+    "name": "Salud Total"
+  }
+},
+{
+  "type": "way",
+  "id": 1090005912,
+  "center": {
+    "lat": 4.6169241,
+    "lon": -74.0811435
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "HCO-CAMI Samper Mendoza"
+  }
+},
+{
+  "type": "way",
+  "id": 1090170574,
+  "center": {
+    "lat": 4.6921938,
+    "lon": -74.0556850
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Unidad Medica Cecimin"
+  }
+},
+{
+  "type": "way",
+  "id": 1090195083,
+  "center": {
+    "lat": 4.6837419,
+    "lon": -74.0570890
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica de Ojos"
+  }
+},
+{
+  "type": "way",
+  "id": 1090200685,
+  "center": {
+    "lat": 4.6856377,
+    "lon": -74.0533382
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "19a-35",
+    "addr:street": "Calle 100",
+    "amenity": "clinic",
+    "branch": "Calle 100",
+    "brand": "Salud Sura",
+    "building": "yes",
+    "healthcare": "clinic",
+    "mobile": "#888",
+    "name": "Salud Sura",
+    "opening_hours": "Mo-Fr 06:30-20:00; Sa 07:00-13:00; Su-Su 00:00-24:00",
+    "operator": "Seguros SURA Colombia",
+    "operator:type": "private",
+    "phone": "+57601487388",
+    "website": "https://www.sura.co/seguros/personas/salud/centro-de-ayuda/sedes/calle-100"
+  }
+},
+{
+  "type": "way",
+  "id": 1090201467,
+  "center": {
+    "lat": 4.7117661,
+    "lon": -74.1034102
+  },
+  "tags": {
+    "addr:street": "Calle 86",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Club de Leones Antonio Nariño"
+  }
+},
+{
+  "type": "way",
+  "id": 1090905509,
+  "center": {
+    "lat": 4.6847924,
+    "lon": -74.0644933
+  },
+  "tags": {
+    "addr:housenumber": "57-40",
+    "addr:street": "Calle 94C",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "UPA Rionegro",
+    "operator": "SDS"
+  }
+},
+{
+  "type": "way",
+  "id": 1090980950,
+  "center": {
+    "lat": 4.6922749,
+    "lon": -74.0569148
+  },
+  "tags": {
+    "abandoned": "yes",
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1092250585,
+  "center": {
+    "lat": 4.6498504,
+    "lon": -74.0814339
+  },
+  "tags": {
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Clínica Federman"
+  }
+},
+{
+  "type": "way",
+  "id": 1092263996,
+  "center": {
+    "lat": 4.6223941,
+    "lon": -74.1205869
+  },
+  "tags": {
+    "addr:housenumber": "4-33",
+    "addr:street": "Carrera 60",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Atención Prioritaria en Salud - CAMI Trinidad",
+    "phone": "+57 313 2666416"
+  }
+},
+{
+  "type": "way",
+  "id": 1092523509,
+  "center": {
+    "lat": 4.5752854,
+    "lon": -74.0936711
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "CAP San Cristóbal"
+  }
+},
+{
+  "type": "way",
+  "id": 1092547085,
+  "center": {
+    "lat": 4.7420430,
+    "lon": -74.0380239
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "Materno Infantil Colsubsidio",
+    "name:es": "Materno Infantil Colsubsidio"
+  }
+},
+{
+  "type": "way",
+  "id": 1092802605,
+  "center": {
+    "lat": 4.7434986,
+    "lon": -74.0841332
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Cami Suba"
+  }
+},
+{
+  "type": "way",
+  "id": 1094746716,
+  "center": {
+    "lat": 4.7206393,
+    "lon": -74.1148786
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro Médico Ciudadela Colsubsidio",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1096179243,
+  "center": {
+    "lat": 4.7167267,
+    "lon": -74.0466495
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Instituto Colombiano del Sistema Nervioso Clínica Monserrat"
+  }
+},
+{
+  "type": "way",
+  "id": 1096241264,
+  "center": {
+    "lat": 4.7244125,
+    "lon": -74.0492933
+  },
+  "tags": {
+    "alt_name": "Veterinaria",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Guapetones Clínica Veterinaria"
+  }
+},
+{
+  "type": "way",
+  "id": 1101372055,
+  "center": {
+    "lat": 4.6393469,
+    "lon": -74.0745806
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 24",
+    "amenity": "hospital",
+    "check_date": "2025-02-05",
+    "healthcare": "hospital",
+    "healthcare:speciality": "general",
+    "name": "Centro Médico Plan Premium Sanitas"
+  }
+},
+{
+  "type": "way",
+  "id": 1122420283,
+  "center": {
+    "lat": 4.6189715,
+    "lon": -74.1601026
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "name": "Centro Médico EPS Sanitas"
+  }
+},
+{
+  "type": "way",
+  "id": 1158573617,
+  "center": {
+    "lat": 4.6861242,
+    "lon": -74.0567017
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:full": "Calle 100 #23–59, Chapinero, Bogotá, Cundinamarca",
+    "addr:housenumber": "23–59",
+    "addr:postcode": "110221",
+    "addr:street": "Avenida Calle 100",
+    "alt_name": "Clínica Colsubsuidio Calle 100",
+    "amenity": "clinic",
+    "brand": "Colsubsidio",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Clínica Colsubsuidio Cardiovascular",
+    "old_name": "Clínica Cardio Cien;Clínica Cardio 100",
+    "opening_hours": "24/7",
+    "operator": "Colsubsidio",
+    "operator:type": "private",
+    "operator:wikidata": "Q5778030",
+    "operator:wikipedia": "es:Colsubsidio"
+  }
+},
+{
+  "type": "way",
+  "id": 1174069502,
+  "center": {
+    "lat": 4.6796971,
+    "lon": -74.0497500
+  },
+  "tags": {
+    "addr:housenumber": "94-49",
+    "addr:street": "Carrera 14",
+    "amenity": "clinic",
+    "building": "yes",
+    "name": "Medplus",
+    "opening_hours": "Mo-Fr 06:30-19:00; Sa 06:30-13:00"
+  }
+},
+{
+  "type": "way",
+  "id": 1174326444,
+  "center": {
+    "lat": 4.6829353,
+    "lon": -74.0584300
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "14-55",
+    "addr:postcode": "14-55",
+    "addr:street": "Autopista Norte",
+    "amenity": "clinic",
+    "brand": "Colsubsidio",
+    "building": "clinic",
+    "healthcare": "clinic",
+    "layer": "1",
+    "name": "Colsubsidio Clínica La Castellana",
+    "old_name": "Clínica Materno Infantil;Colsubsidio Clínica 94",
+    "opening_hours": "24/7",
+    "operator": "Colsubsidio",
+    "operator:type": "private",
+    "operator:wikidata": "Q5778030",
+    "operator:wikimedia_commons": "Category:Colsubsidio",
+    "operator:wikipedia": "es:Colsubsidio"
+  }
+},
+{
+  "type": "way",
+  "id": 1214236823,
+  "center": {
+    "lat": 4.6365282,
+    "lon": -74.0639020
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Especialistas Av. Séptima"
+  }
+},
+{
+  "type": "way",
+  "id": 1252395474,
+  "center": {
+    "lat": 4.6853534,
+    "lon": -74.0515881
+  },
+  "tags": {
+    "amenity": "clinic",
+    "healthcare": "hospital",
+    "healthcare:speciality": "ophthalmology",
+    "name": "Clinica Barraquer"
+  }
+},
+{
+  "type": "way",
+  "id": 1268469303,
+  "center": {
+    "lat": 4.5959874,
+    "lon": -74.1419293
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Compensar",
+    "operator": "Compensar"
+  }
+},
+{
+  "type": "way",
+  "id": 1337996985,
+  "center": {
+    "lat": 4.5776649,
+    "lon": -74.2028298
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Centro de Salud San Mateo"
+  }
+},
+{
+  "type": "way",
+  "id": 1340650175,
+  "center": {
+    "lat": 4.6023388,
+    "lon": -74.1342120
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 68 # 39-11",
+    "amenity": "clinic",
+    "building": "me",
+    "healthcare": "clinic",
+    "name": "Nueva E.P.S - I.P.S Viva",
+    "operator": "Nueva E.P.S",
+    "phone": "+57 601 7454949",
+    "website": "https://www.nuevaeps.com.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 1351673776,
+  "center": {
+    "lat": 4.5818497,
+    "lon": -74.2127189
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1352237624,
+  "center": {
+    "lat": 4.7121567,
+    "lon": -74.2129003
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Hospital Nuestra Señora De Las Mercedes Funza"
+  }
+},
+{
+  "type": "way",
+  "id": 1396321827,
+  "center": {
+    "lat": 4.6968720,
+    "lon": -74.0325591
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "7‑74",
+    "addr:postcode": "110121",
+    "addr:street": "Calle 119A",
+    "amenity": "clinic",
+    "branch": "Usaquén",
+    "brand": "Salud Sura",
+    "building": "yes",
+    "building:levels": "4",
+    "healthcare": "clinic",
+    "healthcare:speciality": "internal;general;blood_check;paediatrics;gynaecology;humanistic",
+    "mobile": "#888",
+    "name": "Salud Sura Usaquén",
+    "opening_hours": "Mo-Fr 07:00-19:00; Sa 07:00-13:00",
+    "operator": "Seguros SURA Colombia",
+    "operator:type": "private",
+    "payment:apple_pay": "yes",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 4824366",
+    "website": "https://www.sura.co/seguros/personas/salud/centro-de-ayuda/sedes/usaquen"
+  }
+},
+{
+  "type": "way",
+  "id": 1435924866,
+  "center": {
+    "lat": 4.7340795,
+    "lon": -74.0448555
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Clinicentro Cedro Bolivar"
+  }
+},
+{
+  "type": "way",
+  "id": 1436241349,
+  "center": {
+    "lat": 4.7039714,
+    "lon": -74.0537155
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "122-96",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "clinic",
+    "building": "yes",
+    "building:colour": "cornflowerblue",
+    "building:levels": "9",
+    "building:material": "glass",
+    "name": "Colmédica"
+  }
+},
+{
+  "type": "way",
+  "id": 1456565172,
+  "center": {
+    "lat": 4.7095933,
+    "lon": -74.0315212
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Bloque N/ Santa Barbara",
+    "operator": "Compensar",
+    "operator:type": "public/government"
+  }
+},
+{
+  "type": "way",
+  "id": 1472424286,
+  "center": {
+    "lat": 4.6965813,
+    "lon": -74.0328521
+  },
+  "tags": {
+    "addr:city": "Bogota, D.C",
+    "addr:housenumber": "7 - 80",
+    "addr:street": "Calle 119",
+    "addr:suburb": "Usaquén",
+    "amenity": "clinic",
+    "architect": "Giancarlo Mazzanti",
+    "branch": "Edificio Ambulatorio",
+    "brand": "Fundación Santa Fe de Bogotá",
+    "building": "hospital",
+    "building:levels": "12",
+    "building:levels:underground": "3",
+    "building:material": "brick",
+    "building:prefabricated": "no",
+    "certification:edge": "advanced",
+    "certification:leed": "gold",
+    "completion": "2016",
+    "contact:instagram": "fsfb_oficial",
+    "contact:phone": "+57 601 482 4444",
+    "contact:website": "https://www.fundacionsantafedebogota.com",
+    "contact:whatsapp": "+573330334096",
+    "emergency": "no",
+    "healthcare": "clinic",
+    "name": "Edificio Ambulatorio - Fundación Santa Fe de Bogotá",
+    "operator": "Fundación Santa Fe de Bogotá",
+    "operator:type": "private",
+    "roof": "helipad",
+    "smoking": "no",
+    "start_date": "2012",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q5508922"
+  }
+},
+{
+  "type": "way",
+  "id": 1472424295,
+  "center": {
+    "lat": 4.6965808,
+    "lon": -74.0329132
+  },
+  "tags": {
+    "addr:city": "Bogota, D.C",
+    "addr:housenumber": "7 - 80",
+    "addr:street": "Calle 119",
+    "addr:suburb": "Usaquén",
+    "amenity": "hospital",
+    "architect": "Giancarlo Mazzanti",
+    "branch": "Edificio Ambulatorio",
+    "brand": "Fundación Santa Fe de Bogotá",
+    "building": "hospital",
+    "building:levels": "12",
+    "building:levels:underground": "3",
+    "building:material": "brick",
+    "building:prefabricated": "no",
+    "certification:edge": "advanced",
+    "certification:leed": "gold",
+    "completion": "2016",
+    "contact:instagram": "fsfb_oficial",
+    "contact:phone": "+57 601 482 4444",
+    "contact:website": "https://www.fundacionsantafedebogota.com",
+    "contact:whatsapp": "+573330334096",
+    "emergency": "no",
+    "healthcare": "hospital",
+    "internet_access": "yes",
+    "operator": "Fundación Santa Fe de Bogotá",
+    "operator:type": "private",
+    "roof": "helipad",
+    "smoking": "no",
+    "start_date": "2012",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes",
+    "wikidata": "Q5508922"
+  }
+},
+{
+  "type": "way",
+  "id": 1472498608,
+  "center": {
+    "lat": 4.6969483,
+    "lon": -74.0325543
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "operator": "Seguros SURA Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 1490342607,
+  "center": {
+    "lat": 4.6928209,
+    "lon": -74.0676753
+  },
+  "tags": {
+    "amenity": "hospital",
+    "barrier": "yes",
+    "healthcare": "hospital",
+    "name": "Clínica Fray Bartolomé de las Casas"
+  }
+},
+{
+  "type": "way",
+  "id": 1495161683,
+  "center": {
+    "lat": 4.6635905,
+    "lon": -74.0800567
+  },
+  "tags": {
+    "addr:country": "CO",
+    "addr:housenumber": "52 - 25",
+    "addr:street": "Calle 66a",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Hospital Universitario de Barrios Unidos",
+    "name:es": "Hospital Universitario de Barrios Unidos",
+    "operator": "Corporación Hospitalaria Juan Ciudad - Méderi",
+    "operator:type": "private",
+    "website": "https://www.mederi.com.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 1528685156,
+  "center": {
+    "lat": 4.6724874,
+    "lon": -74.0799545
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Puesto de Salud San fernando"
+  }
+},
+{
+  "type": "way",
+  "id": 1537060501,
+  "center": {
+    "lat": 4.7039146,
+    "lon": -74.0441874
+  },
+  "tags": {
+    "amenity": "hospital",
+    "healthcare": "hospital"
+  }
+},
+{
+  "type": "way",
+  "id": 1574728715,
+  "center": {
+    "lat": 4.6641910,
+    "lon": -74.0809805
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 54",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "name": "Instituto de Ortopedía Infantil Roosevelt - Sede Propace",
+    "operator": "Instituto Roosevelt"
+  }
+},
+{
+  "type": "relation",
+  "id": 11313467,
+  "center": {
+    "lat": 4.6690859,
+    "lon": -74.0566880
+  },
+  "tags": {
+    "addr:country": "CO",
+    "addr:street": "Carrera 16",
+    "amenity": "hospital",
+    "emergency": "yes",
+    "healthcare": "hospital",
+    "name": "Clínica Del Country",
+    "type": "multipolygon",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "relation",
+  "id": 13540150,
+  "center": {
+    "lat": 4.5832661,
+    "lon": -74.1055845
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "name": "Centro Policlínico del Olaya",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 14377099,
+  "center": {
+    "lat": 4.7479487,
+    "lon": -74.0364133
+  },
+  "tags": {
+    "amenity": "clinic",
+    "building": "yes",
+    "healthcare": "clinic",
+    "healthcare:speciality": "oncology",
+    "name": "Centro de Tratamiento e Investigación sobre Cáncer",
+    "type": "multipolygon",
+    "website": "https://www.cticsarmientoangulo.org/home",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 14532149,
+  "center": {
+    "lat": 4.7399405,
+    "lon": -74.0250498
+  },
+  "tags": {
+    "amenity": "hospital",
+    "building": "yes",
+    "healthcare": "hospital",
+    "name": "UPA San Cristobal",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
+

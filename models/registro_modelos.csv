@@ -1,0 +1,9 @@
+fecha,modelo,descripcion,params,mae_total,mae_chapinero,mae_fold2,mape_chapinero
+2026-11-14,m00_mediana,Mediana del precio del train (referencia),-,236677408.76785526,350617624.4788274,278407115.7221078,0.35775481763707606
+2026-11-14,m01_ols,"OLS con variables estructurales, ubicación, texto y localidad",-,139268468.13105872,183671150.3328484,145694959.09952608,0.2066706631062952
+2026-11-14,m02_elastic_net,"Elastic net (cuadráticos, interacciones, dummies de localidad)",alpha=1.00; lambda=0.00498 (lambda.min),134889099.60225904,158988398.5794811,147259028.67366537,0.17775929204179067
+2026-11-14,m03_random_forest,"Random forest (ranger), variables con NA -> -1 e indicadores",mtry=35; min.node.size=3; trees=800 (grilla con 300),150344964.8961848,203220231.64651802,155213011.97155645,0.21740879615390207
+2026-11-14,m04_xgboost,"XGBoost, objetivo cuadrático sobre log(precio), early stopping espacial",eta=0.03; max_depth=4; min_child_weight=10; nrounds=745; subsample=0.8; colsample=0.6,137225460.83700696,180233940.81669298,145343049.39327946,0.1996648551244254
+2026-11-14,m05_xgb_precio_m2,XGBoost sobre log(precio por m2); se suma log(área) al predecir,max_depth=4; mcw=10; nrounds=358,133844957.47741708,180791341.1953844,143272274.61799422,0.19733087501510602
+2026-11-14,m06_hibrido_en_xgb,Lasso (tendencia) + XGBoost sobre residuos; validación anidada,lasso lambda.min; xgb max_depth=4; mcw=10; nrounds=35,133977030.75702153,155195793.41783425,148023903.9393193,0.1763268325137823
+2026-11-14,m90_ensamble,Promedio ponderado (en log) de los modelos; pesos que minimizan el MAE OOF,m01_ols=0.05; m02_elastic_net=0.15; m03_random_forest=0.00; m04_xgboost=0.00; m05_xgb_precio_m2=0.45; m06_hibrido_en_xgb=0.35,131120349.1369606,163946254.105645,141593514.17281705,0.1808778622562256

@@ -1,0 +1,3190 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:26:36Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 515919601,
+  "lat": 4.6731551,
+  "lon": -74.0539418,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-10-15",
+    "name": "CAI El Virrey",
+    "phone": "4414709"
+  }
+},
+{
+  "type": "node",
+  "id": 532822329,
+  "lat": 4.5899620,
+  "lon": -74.1383946,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Venecia"
+  }
+},
+{
+  "type": "node",
+  "id": 532878907,
+  "lat": 4.7213426,
+  "lon": -74.0676647,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 58",
+    "amenity": "police",
+    "name": "CAI Colina"
+  }
+},
+{
+  "type": "node",
+  "id": 597239177,
+  "lat": 4.6813148,
+  "lon": -74.1075925,
+  "tags": {
+    "amenity": "police",
+    "name": "Cai Villa Luz"
+  }
+},
+{
+  "type": "node",
+  "id": 600233826,
+  "lat": 4.6936432,
+  "lon": -74.1110068,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Florida"
+  }
+},
+{
+  "type": "node",
+  "id": 602754121,
+  "lat": 4.7170562,
+  "lon": -74.1226356,
+  "tags": {
+    "amenity": "police",
+    "description": "Carrera 112a # 77a - 30",
+    "name": "CAI Villas de Granada"
+  }
+},
+{
+  "type": "node",
+  "id": 610124067,
+  "lat": 4.6829622,
+  "lon": -74.0903870,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-10-03",
+    "name": "CAI Las Ferias"
+  }
+},
+{
+  "type": "node",
+  "id": 893541600,
+  "lat": 4.6462033,
+  "lon": -74.0905846,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI La Esmeralda"
+  }
+},
+{
+  "type": "node",
+  "id": 895064548,
+  "lat": 4.6235446,
+  "lon": -74.0713999,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Teusaquillo"
+  }
+},
+{
+  "type": "node",
+  "id": 910298349,
+  "lat": 4.6816683,
+  "lon": -74.1544367,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Macarena"
+  }
+},
+{
+  "type": "node",
+  "id": 926763150,
+  "lat": 4.6494084,
+  "lon": -74.0831490,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-08-10",
+    "name": "CAI Federmán"
+  }
+},
+{
+  "type": "node",
+  "id": 926763241,
+  "lat": 4.7538729,
+  "lon": -74.1102830,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Fontanar"
+  }
+},
+{
+  "type": "node",
+  "id": 937388505,
+  "lat": 4.6618948,
+  "lon": -74.1272024,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2024-11-20",
+    "name": "CAI Hayuelos"
+  }
+},
+{
+  "type": "node",
+  "id": 968370497,
+  "lat": 4.6480424,
+  "lon": -74.0687577,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI San Luís",
+    "phone": "+57 601 3457366"
+  }
+},
+{
+  "type": "node",
+  "id": 979914711,
+  "lat": 4.6062023,
+  "lon": -74.1052057,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 979914719,
+  "lat": 4.6191468,
+  "lon": -74.1063095,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Gorgonzola"
+  }
+},
+{
+  "type": "node",
+  "id": 1032626969,
+  "lat": 4.6415731,
+  "lon": -74.0585004,
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-07-01",
+    "name": "Estación de Policia de Chapinero",
+    "name:en": "Chapinero Police Station",
+    "police": "offices"
+  }
+},
+{
+  "type": "node",
+  "id": 1234160176,
+  "lat": 4.6354144,
+  "lon": -74.1294639,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Marsella"
+  }
+},
+{
+  "type": "node",
+  "id": 1735966160,
+  "lat": 4.6846023,
+  "lon": -74.0720327,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI"
+  }
+},
+{
+  "type": "node",
+  "id": 1861692404,
+  "lat": 4.6650265,
+  "lon": -74.1184128,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Canal Boyacá",
+    "operator": "Policía Metropolitana de Bogotá"
+  }
+},
+{
+  "type": "node",
+  "id": 1883307345,
+  "lat": 4.5697770,
+  "lon": -74.0858486,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 1957054322,
+  "lat": 4.7062664,
+  "lon": -74.1071902,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Quirigua"
+  }
+},
+{
+  "type": "node",
+  "id": 2139299467,
+  "lat": 4.6935985,
+  "lon": -74.0966194,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI"
+  }
+},
+{
+  "type": "node",
+  "id": 2633039348,
+  "lat": 4.5715122,
+  "lon": -74.1388297,
+  "tags": {
+    "addr:city": "bogota",
+    "addr:street": "Avenida Boyacá Transversal 56A Sur",
+    "amenity": "police",
+    "operator": "Policia Nacional",
+    "phone": "+57 300 2002262"
+  }
+},
+{
+  "type": "node",
+  "id": 2693093833,
+  "lat": 4.6417063,
+  "lon": -74.0745567,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Galerías"
+  }
+},
+{
+  "type": "node",
+  "id": 3291646352,
+  "lat": 4.6815654,
+  "lon": -74.0602685,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "calle 93",
+    "addr:street": "Carrera 47",
+    "amenity": "police",
+    "name": "Region de Policia No.1",
+    "operator": "Policia Nacional"
+  }
+},
+{
+  "type": "node",
+  "id": 3649459145,
+  "lat": 4.6058442,
+  "lon": -74.0549613,
+  "tags": {
+    "amenity": "police",
+    "name": "Estacion Policia de Turismo"
+  }
+},
+{
+  "type": "node",
+  "id": 3901979756,
+  "lat": 4.6306058,
+  "lon": -74.0748838,
+  "tags": {
+    "amenity": "police",
+    "bus": "yes",
+    "name": "CAI La Soledad",
+    "network": "co:dc:sitp",
+    "operator": "SITP",
+    "ref:sitp": "166A00",
+    "source": "BogoMap"
+  }
+},
+{
+  "type": "node",
+  "id": 4154592989,
+  "lat": 4.6467411,
+  "lon": -74.0977218,
+  "tags": {
+    "amenity": "police",
+    "name": "DIPON"
+  }
+},
+{
+  "type": "node",
+  "id": 4247722294,
+  "lat": 4.6348045,
+  "lon": -74.1128241,
+  "tags": {
+    "amenity": "police",
+    "name": "DIPRO"
+  }
+},
+{
+  "type": "node",
+  "id": 4316953096,
+  "lat": 4.7206203,
+  "lon": -74.0468889,
+  "tags": {
+    "amenity": "police",
+    "name": "Cai contador"
+  }
+},
+{
+  "type": "node",
+  "id": 4316978694,
+  "lat": 4.6931284,
+  "lon": -74.0313568,
+  "tags": {
+    "amenity": "police",
+    "name": "Cai santa barbara"
+  }
+},
+{
+  "type": "node",
+  "id": 4349872507,
+  "lat": 4.6166399,
+  "lon": -74.1016868,
+  "tags": {
+    "amenity": "police",
+    "name": "Unidad Permanente de Justicia"
+  }
+},
+{
+  "type": "node",
+  "id": 4433520789,
+  "lat": 4.6819278,
+  "lon": -74.0445377,
+  "tags": {
+    "addr:street": "Carrera 11A",
+    "amenity": "police",
+    "name": "Edificio punto 99",
+    "name:es": "Edificio punto 99"
+  }
+},
+{
+  "type": "node",
+  "id": 4482080597,
+  "lat": 4.7415463,
+  "lon": -74.0267317,
+  "tags": {
+    "amenity": "police",
+    "name": "Estacion Policia Usaquen",
+    "name:es": "Estacion Policia Usaquen",
+    "police": "offices"
+  }
+},
+{
+  "type": "node",
+  "id": 5230992260,
+  "lat": 4.6287304,
+  "lon": -74.0960247,
+  "tags": {
+    "addr:city": "Bogota, D.C.",
+    "addr:street": "Calle 21",
+    "amenity": "police",
+    "name": "Departamento de Policía de Bogotá",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5230992262,
+  "lat": 4.6286692,
+  "lon": -74.0958214,
+  "tags": {
+    "addr:city": "Bogota, D.C.",
+    "addr:housenumber": "42B-10",
+    "addr:street": "Avenida Carrera 40",
+    "amenity": "police",
+    "name": "Departamento de Policía de Bogotá",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5492369422,
+  "lat": 4.6184279,
+  "lon": -74.0784916,
+  "tags": {
+    "addr:housenumber": "19B",
+    "addr:street": "Calle 24",
+    "amenity": "police",
+    "name": "CAI Samper Mendoza"
+  }
+},
+{
+  "type": "node",
+  "id": 5726938021,
+  "lat": 4.6006261,
+  "lon": -74.0715252,
+  "tags": {
+    "amenity": "police"
+  }
+},
+{
+  "type": "node",
+  "id": 6444309785,
+  "lat": 4.6210638,
+  "lon": -74.1691792,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Almenar"
+  }
+},
+{
+  "type": "node",
+  "id": 9060317505,
+  "lat": 4.6738570,
+  "lon": -74.0818191,
+  "tags": {
+    "amenity": "police",
+    "name:en": "Barrios Unidos Police Station",
+    "police": "offices"
+  }
+},
+{
+  "type": "node",
+  "id": 9368565076,
+  "lat": 4.6306044,
+  "lon": -74.0748438,
+  "tags": {
+    "amenity": "police",
+    "bench": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "name": "CAI La Soledad",
+    "network": "SITP",
+    "network:wikidata": "Q6129638",
+    "network:wikipedia": "es:Sistema Integrado de Transporte de Bogotá",
+    "operator": "SITP",
+    "ref:sitp": "166A00",
+    "shelter": "yes",
+    "source": "BogoMap"
+  }
+},
+{
+  "type": "node",
+  "id": 9501131626,
+  "lat": 4.6185562,
+  "lon": -74.0692354,
+  "tags": {
+    "addr:street": "Avenida Calle 32",
+    "amenity": "police",
+    "name": "CAI Telecom"
+  }
+},
+{
+  "type": "node",
+  "id": 11037516705,
+  "lat": 4.6978188,
+  "lon": -74.1402849,
+  "tags": {
+    "amenity": "police",
+    "name:de": "Passkontrolle"
+  }
+},
+{
+  "type": "node",
+  "id": 12552075280,
+  "lat": 4.5856358,
+  "lon": -74.0845998,
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Distrital",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "node",
+  "id": 14181455651,
+  "lat": 4.6313685,
+  "lon": -74.0748574,
+  "tags": {
+    "addr:street": "Parkway",
+    "amenity": "police",
+    "description": "Community Police post.",
+    "name": "CAÍ Solidad"
+  }
+},
+{
+  "type": "way",
+  "id": 37545126,
+  "center": {
+    "lat": 4.7116805,
+    "lon": -74.0573549
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Tierra Linda"
+  }
+},
+{
+  "type": "way",
+  "id": 37633107,
+  "center": {
+    "lat": 4.6469878,
+    "lon": -74.0567147
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2025-08-14",
+    "name": "CAI Granada"
+  }
+},
+{
+  "type": "way",
+  "id": 38187749,
+  "center": {
+    "lat": 4.6458254,
+    "lon": -74.0622225
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Chapinero"
+  }
+},
+{
+  "type": "way",
+  "id": 38243477,
+  "center": {
+    "lat": 4.6561370,
+    "lon": -74.0490913
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2026-10-29",
+    "name": "CAI Rosales"
+  }
+},
+{
+  "type": "way",
+  "id": 39073550,
+  "center": {
+    "lat": 4.6703507,
+    "lon": -74.0500748
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "building:levels": "1",
+    "check_date": "2026-04-18",
+    "name": "CAI Estadero"
+  }
+},
+{
+  "type": "way",
+  "id": 39073923,
+  "center": {
+    "lat": 4.6618621,
+    "lon": -74.0557781
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI"
+  }
+},
+{
+  "type": "way",
+  "id": 48571138,
+  "center": {
+    "lat": 4.6900013,
+    "lon": -74.1025796
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Estación De Policía De SantaHelenita"
+  }
+},
+{
+  "type": "way",
+  "id": 57722864,
+  "center": {
+    "lat": 4.7414960,
+    "lon": -74.0266644
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Servitá"
+  }
+},
+{
+  "type": "way",
+  "id": 72466563,
+  "center": {
+    "lat": 4.8190299,
+    "lon": -74.0746435
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI"
+  }
+},
+{
+  "type": "way",
+  "id": 86470119,
+  "center": {
+    "lat": 4.5810575,
+    "lon": -74.1624849
+  },
+  "tags": {
+    "amenity": "police",
+    "barrier": "yes",
+    "name": "Policia de Carabineros Sierra Morena",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 87217866,
+  "center": {
+    "lat": 4.7050788,
+    "lon": -74.0325477
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Policía de Tránsito",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 97868571,
+  "center": {
+    "lat": 4.5856263,
+    "lon": -74.1031192
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estacion de Policía Restrepo"
+  }
+},
+{
+  "type": "way",
+  "id": 137320588,
+  "center": {
+    "lat": 4.6209978,
+    "lon": -74.0602592
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estacion de Carabineros Parque Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 146203826,
+  "center": {
+    "lat": 4.5805819,
+    "lon": -74.0723004
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI El Dorado"
+  }
+},
+{
+  "type": "way",
+  "id": 151442158,
+  "center": {
+    "lat": 4.6738155,
+    "lon": -74.0818219
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Estación de policía Barrios Unidos"
+  }
+},
+{
+  "type": "way",
+  "id": 174866346,
+  "center": {
+    "lat": 4.6676608,
+    "lon": -74.1486835
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Estación de Policia de Fontibón"
+  }
+},
+{
+  "type": "way",
+  "id": 175822266,
+  "center": {
+    "lat": 4.6244128,
+    "lon": -74.1709820
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Gran Britalia",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "short_name": "CAI"
+  }
+},
+{
+  "type": "way",
+  "id": 220758288,
+  "center": {
+    "lat": 4.5684298,
+    "lon": -74.1629783
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Arborizadora Alta",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 233388432,
+  "center": {
+    "lat": 4.6710739,
+    "lon": -74.1157950
+  },
+  "tags": {
+    "amenity": "police",
+    "barrier": "wall",
+    "name": "Policía Nacional - Dirección de Investigación Criminal",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 233905638,
+  "center": {
+    "lat": 4.5833114,
+    "lon": -74.1272899
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Claret"
+  }
+},
+{
+  "type": "way",
+  "id": 236867364,
+  "center": {
+    "lat": 4.5766335,
+    "lon": -74.1304658
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Tunal",
+    "phone": "7140985"
+  }
+},
+{
+  "type": "way",
+  "id": 278144601,
+  "center": {
+    "lat": 4.6120458,
+    "lon": -74.0698614
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "government",
+    "name": "CAI San Diego"
+  }
+},
+{
+  "type": "way",
+  "id": 313193670,
+  "center": {
+    "lat": 4.5699715,
+    "lon": -74.0859104
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía San Cristóbal",
+    "roof:material": "metal_sheet"
+  }
+},
+{
+  "type": "way",
+  "id": 324530754,
+  "center": {
+    "lat": 4.6955586,
+    "lon": -74.0552369
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Navarra",
+    "phone": "6193227"
+  }
+},
+{
+  "type": "way",
+  "id": 334433539,
+  "center": {
+    "lat": 4.5962005,
+    "lon": -74.1354378
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Alquería"
+  }
+},
+{
+  "type": "way",
+  "id": 334940542,
+  "center": {
+    "lat": 4.6274462,
+    "lon": -74.0667112
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía Teusaquillo",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 342866800,
+  "center": {
+    "lat": 4.5989062,
+    "lon": -74.0999752
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Santa Isabel"
+  }
+},
+{
+  "type": "way",
+  "id": 352361089,
+  "center": {
+    "lat": 4.6330845,
+    "lon": -74.1555786
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Cai Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 359621101,
+  "center": {
+    "lat": 4.5845236,
+    "lon": -74.1072257
+  },
+  "tags": {
+    "addr:street": "Calle 24 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Centenario",
+    "opening_hours": "24/7",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 361482163,
+  "center": {
+    "lat": 4.5893976,
+    "lon": -74.1047439
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Valvanera"
+  }
+},
+{
+  "type": "way",
+  "id": 368373723,
+  "center": {
+    "lat": 4.6920178,
+    "lon": -74.1636238
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 128",
+    "amenity": "police",
+    "barrier": "wall",
+    "name": "Instituto Nacional de Vias",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 371839224,
+  "center": {
+    "lat": 4.5983101,
+    "lon": -74.0924970
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "ESMAD"
+  }
+},
+{
+  "type": "way",
+  "id": 380503352,
+  "center": {
+    "lat": 4.7147602,
+    "lon": -73.9813046
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 380513877,
+  "center": {
+    "lat": 4.6993814,
+    "lon": -73.9832337
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "layer": "1",
+    "name": "Portería del Embalse San Rafael"
+  }
+},
+{
+  "type": "way",
+  "id": 384767719,
+  "center": {
+    "lat": 4.6070534,
+    "lon": -74.2145629
+  },
+  "tags": {
+    "addr:postcode": "250051",
+    "addr:street": "Carrera 33",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Ciudad Verde",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 385056533,
+  "center": {
+    "lat": 4.6060278,
+    "lon": -74.2197436
+  },
+  "tags": {
+    "addr:city": "Comuna 3 La Despensa",
+    "addr:postcode": "250051",
+    "addr:street": "Transversal 34 Calle 17",
+    "amenity": "police",
+    "barrier": "yes",
+    "name": "Estación Policía Ciudad Verde",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 386567963,
+  "center": {
+    "lat": 4.5037814,
+    "lon": -74.2468654
+  },
+  "tags": {
+    "amenity": "police",
+    "barrier": "cable_barrier",
+    "name": "Escuela de Suboficiales Gonzalo Jiménez de Quesada",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 387153872,
+  "center": {
+    "lat": 4.6659627,
+    "lon": -74.0888494
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Policia Ambiental"
+  }
+},
+{
+  "type": "way",
+  "id": 392014268,
+  "center": {
+    "lat": 4.6313723,
+    "lon": -74.0749722
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "CAI La Soledad",
+    "phone": "2886685"
+  }
+},
+{
+  "type": "way",
+  "id": 404987134,
+  "center": {
+    "lat": 4.6497973,
+    "lon": -74.0619374
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "CAI",
+    "name:es": "CAI Lourdes"
+  }
+},
+{
+  "type": "way",
+  "id": 408746302,
+  "center": {
+    "lat": 4.5940078,
+    "lon": -74.1935523
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Inspección de Policia León XIII",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 410600853,
+  "center": {
+    "lat": 4.6273812,
+    "lon": -74.0662377
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 450668734,
+  "center": {
+    "lat": 4.5775790,
+    "lon": -74.1645673
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía Ciudad Bolívar",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 474012765,
+  "center": {
+    "lat": 4.6882577,
+    "lon": -74.1279365
+  },
+  "tags": {
+    "amenity": "police",
+    "barrier": "fence"
+  }
+},
+{
+  "type": "way",
+  "id": 475365938,
+  "center": {
+    "lat": 4.5370106,
+    "lon": -74.0860660
+  },
+  "tags": {
+    "addr:city": "Localidad San Cristóbal",
+    "addr:street": "Calle 48 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Altamira",
+    "opening_hours": "24/7",
+    "operator": "Policía Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 479820479,
+  "center": {
+    "lat": 4.6195478,
+    "lon": -74.1594329
+  },
+  "tags": {
+    "amenity": "police",
+    "barrier": "fence",
+    "name": "Octava Estacion de Policia Kennedy"
+  }
+},
+{
+  "type": "way",
+  "id": 490414365,
+  "center": {
+    "lat": 4.7343043,
+    "lon": -74.0961117
+  },
+  "tags": {
+    "addr:city": "Suba, Bogotá",
+    "addr:housenumber": "Carrera 101",
+    "addr:street": "Calle 132",
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2025-06-14",
+    "name": "Cai Aures",
+    "opening_hours": "24/7",
+    "operator": "Policía Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 494560318,
+  "center": {
+    "lat": 4.7497236,
+    "lon": -74.0830826
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2024-11-16",
+    "name": "CAI El Pinar",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 510563147,
+  "center": {
+    "lat": 4.5442447,
+    "lon": -74.0956026
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Victoria"
+  }
+},
+{
+  "type": "way",
+  "id": 527637699,
+  "center": {
+    "lat": 4.7041422,
+    "lon": -74.2289835
+  },
+  "tags": {
+    "addr:street": "Calle 3",
+    "amenity": "police",
+    "barrier": "yes",
+    "building": "yes",
+    "name": "Estación de Policía de Mosquera",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529739637,
+  "center": {
+    "lat": 4.8161105,
+    "lon": -74.0962762
+  },
+  "tags": {
+    "addr:street": "Carrera 5",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía de Cota",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530162875,
+  "center": {
+    "lat": 4.6901713,
+    "lon": -74.1172493
+  },
+  "tags": {
+    "addr:street": "Transversal 93",
+    "amenity": "police",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "CAI Alamos",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533019914,
+  "center": {
+    "lat": 4.6061725,
+    "lon": -74.0667864
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2026-08-05",
+    "name": "CAI Germania"
+  }
+},
+{
+  "type": "way",
+  "id": 533061408,
+  "center": {
+    "lat": 4.6527124,
+    "lon": -74.0989423
+  },
+  "tags": {
+    "addr:street": "Carrera 66A",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Fondo Rotatorio Policía Nacional",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533266889,
+  "center": {
+    "lat": 4.7110331,
+    "lon": -74.1966737
+  },
+  "tags": {
+    "addr:street": "Calle 26",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Subestación Furatena",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537476048,
+  "center": {
+    "lat": 4.5892466,
+    "lon": -74.0715736
+  },
+  "tags": {
+    "addr:street": "Carrera 3 Este",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Lourdes",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "roof:material": "metal_sheet",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540487115,
+  "center": {
+    "lat": 4.5905155,
+    "lon": -74.0915450
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "police",
+    "barrier": "fence",
+    "name": "Direccion Nacional De Escuelas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541178417,
+  "center": {
+    "lat": 4.6698130,
+    "lon": -74.1192062
+  },
+  "tags": {
+    "addr:street": "Carrera 81",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Modelia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541913678,
+  "center": {
+    "lat": 4.6164953,
+    "lon": -74.0984409
+  },
+  "tags": {
+    "addr:street": "Calle 12",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Policia Internacional De Colombia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 542296244,
+  "center": {
+    "lat": 4.5673301,
+    "lon": -74.1297018
+  },
+  "tags": {
+    "addr:street": "Diagonal 51 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI San Carlos",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 543928803,
+  "center": {
+    "lat": 4.7555494,
+    "lon": -74.0651559
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "amenity": "police",
+    "building": "yes",
+    "level": "1",
+    "name": "CAI San José de Bavaria"
+  }
+},
+{
+  "type": "way",
+  "id": 545069326,
+  "center": {
+    "lat": 4.7532912,
+    "lon": -74.0469746
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Villa del Prado"
+  }
+},
+{
+  "type": "way",
+  "id": 547529698,
+  "center": {
+    "lat": 4.5639037,
+    "lon": -74.2275163
+  },
+  "tags": {
+    "addr:street": "Carrera 4",
+    "amenity": "police",
+    "barrier": "yes",
+    "building": "yes",
+    "name": "Policia Metropolitana de Soacha",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 549195377,
+  "center": {
+    "lat": 4.5652816,
+    "lon": -74.2374517
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía de Compartir",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 549427204,
+  "center": {
+    "lat": 4.5907969,
+    "lon": -74.2263475
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI HogarES Soacha",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 549989929,
+  "center": {
+    "lat": 4.5669062,
+    "lon": -74.1865457
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 36",
+    "amenity": "police",
+    "barrier": "wall",
+    "name": "Estación de Policia de Ciudadela Sucre",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 550451363,
+  "center": {
+    "lat": 4.5325932,
+    "lon": -74.0871322
+  },
+  "tags": {
+    "addr:city": "Barrio Los Libertadores",
+    "addr:street": "Calle 56 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Libertadores",
+    "opening_hours": "24/7",
+    "operator": "Policia Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 550950543,
+  "center": {
+    "lat": 4.6129884,
+    "lon": -74.1872209
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Antonia Santos",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 550953270,
+  "center": {
+    "lat": 4.5973462,
+    "lon": -74.1801100
+  },
+  "tags": {
+    "addr:city": "Localidad Bosa",
+    "addr:street": "Carrera 77G Bis",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bosa La Estación",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 550965964,
+  "center": {
+    "lat": 4.6022354,
+    "lon": -74.1902884
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Piamonte",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 551347366,
+  "center": {
+    "lat": 4.6448514,
+    "lon": -74.1546317
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Tintal",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 551352282,
+  "center": {
+    "lat": 4.6001585,
+    "lon": -74.1867601
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación VII de Policía de Bosa",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 562693574,
+  "center": {
+    "lat": 4.5011001,
+    "lon": -74.1178237
+  },
+  "tags": {
+    "amenity": "police",
+    "check_date": "2026-01-12",
+    "name": "Estación de Policía Usme"
+  }
+},
+{
+  "type": "way",
+  "id": 571828208,
+  "center": {
+    "lat": 4.5733051,
+    "lon": -74.1531760
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Candelaria La Nueva",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 571848577,
+  "center": {
+    "lat": 4.7100465,
+    "lon": -74.0942618
+  },
+  "tags": {
+    "addr:full": "2245535",
+    "amenity": "police",
+    "building": "yes",
+    "contact:phone": "2245535",
+    "name": "CAI Serena",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 593486750,
+  "center": {
+    "lat": 4.6759716,
+    "lon": -74.0267435
+  },
+  "tags": {
+    "addr:housenumber": "km 3.5",
+    "addr:street": "Vía Patios",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI La Calera",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 597105619,
+  "center": {
+    "lat": 4.6552415,
+    "lon": -74.0559385
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2025-10-18",
+    "name": "CAI Chile"
+  }
+},
+{
+  "type": "way",
+  "id": 608488610,
+  "center": {
+    "lat": 4.6584544,
+    "lon": -74.1024297
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Club de Agentes de la Policía"
+  }
+},
+{
+  "type": "way",
+  "id": 608809803,
+  "center": {
+    "lat": 4.6702445,
+    "lon": -74.1075067
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2024-05-18",
+    "name": "CAI Normandia"
+  }
+},
+{
+  "type": "way",
+  "id": 616354653,
+  "center": {
+    "lat": 4.6929105,
+    "lon": -74.1667345
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 624250813,
+  "center": {
+    "lat": 4.6261484,
+    "lon": -74.1917723
+  },
+  "tags": {
+    "addr:street": "Carrera 88C",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bosa La Libertad",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 624260086,
+  "center": {
+    "lat": 4.6417938,
+    "lon": -74.1933268
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Porvenir",
+    "operator": "Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 625163288,
+  "center": {
+    "lat": 4.5998131,
+    "lon": -74.1625082
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Villa del Río",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 625188125,
+  "center": {
+    "lat": 4.7665646,
+    "lon": -73.9995423
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI La Calera",
+    "source": "Survey;BING"
+  }
+},
+{
+  "type": "way",
+  "id": 625582726,
+  "center": {
+    "lat": 4.6707289,
+    "lon": -74.1564874
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Sabana grande",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 626263257,
+  "center": {
+    "lat": 4.7010543,
+    "lon": -74.0653269
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Alhambra",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 631131729,
+  "center": {
+    "lat": 4.6013825,
+    "lon": -74.1104881
+  },
+  "tags": {
+    "addr:street": "Calle 8 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Santa Matilde"
+  }
+},
+{
+  "type": "way",
+  "id": 636200242,
+  "center": {
+    "lat": 4.6091041,
+    "lon": -74.1281735
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Tejar"
+  }
+},
+{
+  "type": "way",
+  "id": 637936733,
+  "center": {
+    "lat": 4.6191418,
+    "lon": -74.1390442
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Plaza de las Américas"
+  }
+},
+{
+  "type": "way",
+  "id": 638855361,
+  "center": {
+    "lat": 4.6261046,
+    "lon": -74.1473205
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Techo",
+    "phone": "+57 601 2997800"
+  }
+},
+{
+  "type": "way",
+  "id": 639205555,
+  "center": {
+    "lat": 4.6190516,
+    "lon": -74.1451521
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Oneida",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 641275407,
+  "center": {
+    "lat": 4.7235257,
+    "lon": -74.0916096
+  },
+  "tags": {
+    "addr:city": "Localidad Suba",
+    "addr:street": "Carrera 93",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI EL RIncón",
+    "opening_hours": "24/7",
+    "operator": "policía Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 641970805,
+  "center": {
+    "lat": 4.6390417,
+    "lon": -74.1611347
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Patio Bonito"
+  }
+},
+{
+  "type": "way",
+  "id": 642708401,
+  "center": {
+    "lat": 4.5860921,
+    "lon": -74.1335588
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 33",
+    "amenity": "police",
+    "layer": "1",
+    "name": "Estacion Sexta de Policía Tunjuelito",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 643149083,
+  "center": {
+    "lat": 4.6329635,
+    "lon": -74.2014722
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Metrovivienda",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 644243477,
+  "center": {
+    "lat": 4.6134370,
+    "lon": -74.1756154
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Roma"
+  }
+},
+{
+  "type": "way",
+  "id": 645886337,
+  "center": {
+    "lat": 4.6921038,
+    "lon": -74.0661806
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Andes"
+  }
+},
+{
+  "type": "way",
+  "id": 648273599,
+  "center": {
+    "lat": 4.6300660,
+    "lon": -74.1791333
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Brasilia",
+    "operator": "Policia Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 651123202,
+  "center": {
+    "lat": 4.6750157,
+    "lon": -74.0628205
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 24",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Polo Club",
+    "phone": "2366986"
+  }
+},
+{
+  "type": "way",
+  "id": 651369846,
+  "center": {
+    "lat": 4.6439503,
+    "lon": -74.1754959
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bellavista"
+  }
+},
+{
+  "type": "way",
+  "id": 653800325,
+  "center": {
+    "lat": 4.7242808,
+    "lon": -74.1125516
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Ciudadela Colsubsidio"
+  }
+},
+{
+  "type": "way",
+  "id": 653801767,
+  "center": {
+    "lat": 4.7243452,
+    "lon": -74.1229651
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2026-10-18",
+    "name": "CAI Calle 80",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 655270835,
+  "center": {
+    "lat": 4.5853759,
+    "lon": -74.1105854
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación 18 de Policía Rafael Uribe Uribe",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 662232271,
+  "center": {
+    "lat": 4.6111627,
+    "lon": -74.2062578
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bosa San José",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 664521186,
+  "center": {
+    "lat": 4.5930181,
+    "lon": -74.1341515
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Fondo Rotatorio Policía Nacional Talleres Muzu"
+  }
+},
+{
+  "type": "way",
+  "id": 664528659,
+  "center": {
+    "lat": 4.7352464,
+    "lon": -74.0704240
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 72",
+    "amenity": "police",
+    "barrier": "wall",
+    "name": "Centro de Estudios Superiores Policiales CESPO",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 674136128,
+  "center": {
+    "lat": 4.6423828,
+    "lon": -74.1411706
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Castilla",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 683611648,
+  "center": {
+    "lat": 4.5822401,
+    "lon": -74.1130591
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación Policía Quiroga",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 685162485,
+  "center": {
+    "lat": 4.6081547,
+    "lon": -74.1975159
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bosa Laureles",
+    "operator": "Policia Nacional de Bogotá"
+  }
+},
+{
+  "type": "way",
+  "id": 690309060,
+  "center": {
+    "lat": 4.5991038,
+    "lon": -74.1451622
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Las Delicias"
+  }
+},
+{
+  "type": "way",
+  "id": 690368985,
+  "center": {
+    "lat": 4.6076961,
+    "lon": -74.1578457
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Timiza"
+  }
+},
+{
+  "type": "way",
+  "id": 691105858,
+  "center": {
+    "lat": 4.6079511,
+    "lon": -74.1660632
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Socorro"
+  }
+},
+{
+  "type": "way",
+  "id": 691839108,
+  "center": {
+    "lat": 4.5920990,
+    "lon": -74.1205871
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Villa Mayor"
+  }
+},
+{
+  "type": "way",
+  "id": 694202845,
+  "center": {
+    "lat": 4.7157629,
+    "lon": -74.1417464
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "64-65",
+    "addr:street": "Carrera 123",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI engativá"
+  }
+},
+{
+  "type": "way",
+  "id": 703229847,
+  "center": {
+    "lat": 4.5777848,
+    "lon": -74.1793768
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Santo Domingo",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 705256912,
+  "center": {
+    "lat": 4.5914618,
+    "lon": -74.1677791
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Perdomo",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 706724712,
+  "center": {
+    "lat": 4.6617744,
+    "lon": -74.0682363
+  },
+  "tags": {
+    "addr:street": "Calle 71",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Alcázares",
+    "phone": "4414958"
+  }
+},
+{
+  "type": "way",
+  "id": 707126660,
+  "center": {
+    "lat": 4.5868346,
+    "lon": -74.0978884
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Restrepo"
+  }
+},
+{
+  "type": "way",
+  "id": 713774868,
+  "center": {
+    "lat": 4.5914069,
+    "lon": -74.0788745
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación Policía La Candelaria"
+  }
+},
+{
+  "type": "way",
+  "id": 734260495,
+  "center": {
+    "lat": 4.5628314,
+    "lon": -74.1491120
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 734350800,
+  "center": {
+    "lat": 4.5821107,
+    "lon": -74.0903033
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Ciudad Berna"
+  }
+},
+{
+  "type": "way",
+  "id": 737159582,
+  "center": {
+    "lat": 4.5765582,
+    "lon": -74.1102877
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Gustavo Restrepo"
+  }
+},
+{
+  "type": "way",
+  "id": 740855379,
+  "center": {
+    "lat": 4.5695098,
+    "lon": -74.1217949
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI San Jorge"
+  }
+},
+{
+  "type": "way",
+  "id": 741940657,
+  "center": {
+    "lat": 4.5550426,
+    "lon": -74.1176400
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Marruecos"
+  }
+},
+{
+  "type": "way",
+  "id": 743376998,
+  "center": {
+    "lat": 4.5641279,
+    "lon": -74.1072284
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Lomas"
+  }
+},
+{
+  "type": "way",
+  "id": 746034456,
+  "center": {
+    "lat": 4.5373635,
+    "lon": -74.1133653
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Danubio"
+  }
+},
+{
+  "type": "way",
+  "id": 757111551,
+  "center": {
+    "lat": 4.5572462,
+    "lon": -74.1464614
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Compartir"
+  }
+},
+{
+  "type": "way",
+  "id": 757400425,
+  "center": {
+    "lat": 4.5538879,
+    "lon": -74.1408303
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Cai Lucero"
+  }
+},
+{
+  "type": "way",
+  "id": 758177142,
+  "center": {
+    "lat": 4.5198650,
+    "lon": -74.1216582
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI La Aurora"
+  }
+},
+{
+  "type": "way",
+  "id": 758844173,
+  "center": {
+    "lat": 4.4708739,
+    "lon": -74.1258638
+  },
+  "tags": {
+    "addr:city": "Localidad Usme",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación Quinta Usme",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 759781159,
+  "center": {
+    "lat": 4.5016448,
+    "lon": -74.1099054
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 92 # 3E 00S",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Yomasa",
+    "note": "Centro de Atención Inmediata de la Policía, ubicado en el barrio El Virrey",
+    "phone": "+57 601 7734900"
+  }
+},
+{
+  "type": "way",
+  "id": 761157410,
+  "center": {
+    "lat": 4.5373371,
+    "lon": -74.1443888
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI La Joya"
+  }
+},
+{
+  "type": "way",
+  "id": 761399452,
+  "center": {
+    "lat": 4.5470023,
+    "lon": -74.1493263
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Vista Hermosa"
+  }
+},
+{
+  "type": "way",
+  "id": 761665805,
+  "center": {
+    "lat": 4.4917343,
+    "lon": -74.1045715
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Nuevo Porvenir"
+  }
+},
+{
+  "type": "way",
+  "id": 762096657,
+  "center": {
+    "lat": 4.4907387,
+    "lon": -74.1148196
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Antonio José de Sucre"
+  }
+},
+{
+  "type": "way",
+  "id": 762180595,
+  "center": {
+    "lat": 4.5422383,
+    "lon": -74.1106495
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Palermo Sur"
+  }
+},
+{
+  "type": "way",
+  "id": 762680931,
+  "center": {
+    "lat": 4.5956565,
+    "lon": -74.0803155
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bolivia"
+  }
+},
+{
+  "type": "way",
+  "id": 762680941,
+  "center": {
+    "lat": 4.5939232,
+    "lon": -74.0805989
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Centro Automático de Despacho MEBOG",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 762684970,
+  "center": {
+    "lat": 4.5895308,
+    "lon": -74.0814665
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Cruces"
+  }
+},
+{
+  "type": "way",
+  "id": 762999745,
+  "center": {
+    "lat": 4.5726059,
+    "lon": -74.0925240
+  },
+  "tags": {
+    "addr:city": "Localida san Cristobál",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI 20 de Julio",
+    "operator": "Policía Nacional",
+    "roof:material": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 763467923,
+  "center": {
+    "lat": 4.5703805,
+    "lon": -74.0777557
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Estación de Auxiliares Bachilleres MEBOG"
+  }
+},
+{
+  "type": "way",
+  "id": 813048208,
+  "center": {
+    "lat": 4.6014381,
+    "lon": -74.0812069
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI San Victorino"
+  }
+},
+{
+  "type": "way",
+  "id": 813526852,
+  "center": {
+    "lat": 4.5580835,
+    "lon": -74.0831394
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Ramajal",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 815793159,
+  "center": {
+    "lat": 4.5871940,
+    "lon": -74.0753323
+  },
+  "tags": {
+    "addr:city": "Santa Fé",
+    "addr:housenumber": "#2-04",
+    "addr:street": "Calle 2 Bis",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Girardot",
+    "operator": "2-80-13-11",
+    "roof:material": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 857647121,
+  "center": {
+    "lat": 4.6040775,
+    "lon": -74.0618856
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Monserrate",
+    "operator": "Policía Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 860766658,
+  "center": {
+    "lat": 4.5592519,
+    "lon": -74.0915438
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Bello Horizonte",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "roof:material": "metal_sheet"
+  }
+},
+{
+  "type": "way",
+  "id": 863305836,
+  "center": {
+    "lat": 4.5853064,
+    "lon": -74.0677510
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Laches",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "roof:material": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 863873615,
+  "center": {
+    "lat": 4.5554456,
+    "lon": -74.0973477
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Guacamayas"
+  }
+},
+{
+  "type": "way",
+  "id": 865499026,
+  "center": {
+    "lat": 4.5179378,
+    "lon": -74.0900226
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "CAI Juan Rey"
+  }
+},
+{
+  "type": "way",
+  "id": 883600251,
+  "center": {
+    "lat": 4.7436911,
+    "lon": -74.0396901
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Cai Toberin"
+  }
+},
+{
+  "type": "way",
+  "id": 936530890,
+  "center": {
+    "lat": 4.6959291,
+    "lon": -74.1728495
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Porvenir Río",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 952156302,
+  "center": {
+    "lat": 4.5916021,
+    "lon": -74.0645118
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Cai Mirador"
+  }
+},
+{
+  "type": "way",
+  "id": 992263241,
+  "center": {
+    "lat": 4.5175465,
+    "lon": -74.0900302
+  },
+  "tags": {
+    "addr:city": "San Cristobal-Usme",
+    "addr:street": "Avenida Carrera 15 Este",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Juan rey",
+    "opening_hours": "24/7",
+    "operator": "Policía Nacional"
+  }
+},
+{
+  "type": "way",
+  "id": 996540204,
+  "center": {
+    "lat": 4.7453678,
+    "lon": -74.1079783
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Cai La Gaitana"
+  }
+},
+{
+  "type": "way",
+  "id": 1007521552,
+  "center": {
+    "lat": 4.6582450,
+    "lon": -74.0770586
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 1012571521,
+  "center": {
+    "lat": 4.6242995,
+    "lon": -74.2125901
+  },
+  "tags": {
+    "addr:postcode": "110721",
+    "addr:street": "Calle 87 Sur",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Campo Verde",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 1014450141,
+  "center": {
+    "lat": 4.5898130,
+    "lon": -74.1320207
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 33",
+    "alt_name": "Escuela de Cadetes de Policía General Francisco José de Paula Santander Omaña",
+    "amenity": "police",
+    "name": "Escuela de Cadetes de Policía General Santander",
+    "not:operator:wikidata": "Q3394180",
+    "operator": "Policía Nacional de Colombia",
+    "short_name": "ECSAN",
+    "wikidata": "Q969519",
+    "wikimedia_commons": "Category:Escuela de Cadetes de Policía Francisco de Paula Santander",
+    "wikipedia": "es:Escuela de Cadetes de Policía General Santander"
+  }
+},
+{
+  "type": "way",
+  "id": 1016635596,
+  "center": {
+    "lat": 4.5799996,
+    "lon": -74.2013773
+  },
+  "tags": {
+    "addr:postcode": "250054",
+    "addr:street": "Calle 30 Bis Este",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI San Mateo",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 1019806436,
+  "center": {
+    "lat": 4.7638993,
+    "lon": -74.0242262
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Codito",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "operator:wikipedia": "es:Policía Nacional de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 1088107576,
+  "center": {
+    "lat": 4.7160358,
+    "lon": -74.1023585
+  },
+  "tags": {
+    "addr:full": "Cr 95D 88 65",
+    "amenity": "police",
+    "building": "yes",
+    "contact:phone": "4410549",
+    "name": "CAI Bachué",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "way",
+  "id": 1097529513,
+  "center": {
+    "lat": 4.7644322,
+    "lon": -74.0404148
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Verbenal"
+  }
+},
+{
+  "type": "way",
+  "id": 1109772501,
+  "center": {
+    "lat": 4.5854636,
+    "lon": -74.2133252
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "construction": "building",
+    "name": "Comando SIES Policía",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1130718501,
+  "center": {
+    "lat": 4.5847715,
+    "lon": -74.1870868
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía La Capilla",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1131079504,
+  "center": {
+    "lat": 4.7377735,
+    "lon": -74.0225779
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "check_date": "2025-11-30",
+    "name": "CAI Villa Nidia",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1149522798,
+  "center": {
+    "lat": 4.5745504,
+    "lon": -74.2261216
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 1",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía Quintas de la Laguna",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1157733010,
+  "center": {
+    "lat": 4.6842561,
+    "lon": -74.0566595
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Dirección Anti-extorción"
+  }
+},
+{
+  "type": "way",
+  "id": 1178174148,
+  "center": {
+    "lat": 4.5750684,
+    "lon": -74.2138384
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Chicó Sur",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1225038034,
+  "center": {
+    "lat": 4.7307605,
+    "lon": -74.2200310
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Siete Trojes",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1230974864,
+  "center": {
+    "lat": 4.7034975,
+    "lon": -74.1291418
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Jaboque",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1262981717,
+  "center": {
+    "lat": 4.7160511,
+    "lon": -74.2056864
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía de Funza",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1333608056,
+  "center": {
+    "lat": 4.7284704,
+    "lon": -74.0135382
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Fuerte de Carabineros Villanidia",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1338166601,
+  "center": {
+    "lat": 4.5901963,
+    "lon": -74.1952806
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Comando Distrito Especial de Policía Soacha",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1340190820,
+  "center": {
+    "lat": 4.7463730,
+    "lon": -74.0540652
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Mazurén"
+  }
+},
+{
+  "type": "way",
+  "id": 1394003216,
+  "center": {
+    "lat": 4.6850546,
+    "lon": -74.1435003
+  },
+  "tags": {
+    "addr:street": "Carrera 109",
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Versalles",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1394003229,
+  "center": {
+    "lat": 4.6711123,
+    "lon": -74.1381332
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI Santander",
+    "opening_hours": "24/7",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "phone": "+57 311 4159215"
+  }
+},
+{
+  "type": "way",
+  "id": 1396674033,
+  "center": {
+    "lat": 4.6292851,
+    "lon": -74.1131692
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Comando Departamental de Policía de Cundinamarca",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1472801250,
+  "center": {
+    "lat": 4.7084519,
+    "lon": -74.0289366
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "civic",
+    "building:levels": "1",
+    "emergency": "yes",
+    "layer": "0",
+    "name": "CAI Bella Suiza",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "police": "outpost"
+  }
+},
+{
+  "type": "way",
+  "id": 1485391708,
+  "center": {
+    "lat": 4.6540377,
+    "lon": -74.0630914
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1488684876,
+  "center": {
+    "lat": 4.7415197,
+    "lon": -74.0853168
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación de Policía de Suba",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1493088918,
+  "center": {
+    "lat": 4.6202321,
+    "lon": -74.1190089
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI GALAN"
+  }
+},
+{
+  "type": "way",
+  "id": 1497686264,
+  "center": {
+    "lat": 4.6403911,
+    "lon": -74.1036131
+  },
+  "tags": {
+    "amenity": "police",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180"
+  }
+},
+{
+  "type": "way",
+  "id": 1535726794,
+  "center": {
+    "lat": 4.6679094,
+    "lon": -74.0795299
+  },
+  "tags": {
+    "amenity": "police",
+    "building": "yes",
+    "name": "CAI"
+  }
+},
+{
+  "type": "relation",
+  "id": 17060700,
+  "center": {
+    "lat": 4.6153754,
+    "lon": -74.0663125
+  },
+  "tags": {
+    "addr:city": "Santa Fé",
+    "addr:street": "Carrera 5",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Estación III de Policia de Santa Fe",
+    "operator": "Policía Nacional de Colombia",
+    "operator:wikidata": "Q3394180",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 17369993,
+  "center": {
+    "lat": 4.6783688,
+    "lon": -74.1090290
+  },
+  "tags": {
+    "amenity": "police",
+    "name": "Club de la Policía Nacional",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
+

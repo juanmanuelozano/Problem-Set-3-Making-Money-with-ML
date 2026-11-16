@@ -1,0 +1,14 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Modelos pesados (se regeneran con los scripts)
+models/*.rds
+models/*.ubj
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,2977 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:24:34Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 578601342,
+  "lat": 4.6941600,
+  "lon": -74.0335483,
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad de los Andes -Práctica Médica",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 604129221,
+  "lat": 4.6825047,
+  "lon": -74.0573312,
+  "tags": {
+    "amenity": "university",
+    "name": "passport"
+  }
+},
+{
+  "type": "node",
+  "id": 997736680,
+  "lat": 4.6607725,
+  "lon": -74.0623842,
+  "tags": {
+    "amenity": "university",
+    "name": "UNICIENCIA Sede Artes"
+  }
+},
+{
+  "type": "node",
+  "id": 1119603209,
+  "lat": 4.6499469,
+  "lon": -74.0573703,
+  "tags": {
+    "amenity": "university",
+    "name": "Corporación Universitaria Iberoamericana"
+  }
+},
+{
+  "type": "node",
+  "id": 1230758732,
+  "lat": 4.6043305,
+  "lon": -74.0782055,
+  "tags": {
+    "addr:full": "CARRERA 13 No. 14 - 69",
+    "amenity": "university",
+    "name": "Academia Superior de Artes de Bogota - ASAB"
+  }
+},
+{
+  "type": "node",
+  "id": 1830381730,
+  "lat": 4.7445448,
+  "lon": -74.0930440,
+  "tags": {
+    "amenity": "university",
+    "name": "Politecnico Grancolombiano"
+  }
+},
+{
+  "type": "node",
+  "id": 4056610494,
+  "lat": 4.6488830,
+  "lon": -74.0608410,
+  "tags": {
+    "addr:housenumber": "63-63",
+    "addr:street": "Cra 8",
+    "amenity": "university",
+    "name": "Fondacion universitaria los libertadores"
+  }
+},
+{
+  "type": "node",
+  "id": 4056991821,
+  "lat": 4.6488476,
+  "lon": -74.0616495,
+  "tags": {
+    "amenity": "university",
+    "check_date": "2025-01-06",
+    "name": "Konrad Lorenz"
+  }
+},
+{
+  "type": "node",
+  "id": 4117589315,
+  "lat": 4.6284642,
+  "lon": -74.0672504,
+  "tags": {
+    "amenity": "university",
+    "name": "Centro de Psicologia Umb"
+  }
+},
+{
+  "type": "node",
+  "id": 4172138591,
+  "lat": 4.6947375,
+  "lon": -74.0304192,
+  "tags": {
+    "amenity": "university",
+    "name": "UniSinú Sede Bogotá"
+  }
+},
+{
+  "type": "node",
+  "id": 4313586757,
+  "lat": 4.6337718,
+  "lon": -74.0670915,
+  "tags": {
+    "amenity": "university",
+    "name": "U. Catolica de Colombia"
+  }
+},
+{
+  "type": "node",
+  "id": 5061070621,
+  "lat": 4.5985279,
+  "lon": -74.0719257,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "amenity": "university",
+    "contact:email": "info@fuac.edu.co",
+    "contact:mobile": "+57 316 0233453",
+    "name": "Fundación Universidad Autónoma de Colombia",
+    "name:es": "Universidad Autonoma",
+    "website": "https://soyautonoma.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 5133992656,
+  "lat": 4.6573616,
+  "lon": -74.0613643,
+  "tags": {
+    "addr:street": "Calle 71",
+    "amenity": "university",
+    "name": "Areandina",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5134028268,
+  "lat": 4.6617272,
+  "lon": -74.0600036,
+  "tags": {
+    "addr:street": "Avenida Carrera 15",
+    "amenity": "university",
+    "name": "Sede administrativa Sergio Arboleda",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5135827992,
+  "lat": 4.6630649,
+  "lon": -74.0575156,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "amenity": "university",
+    "name": "LCI",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5141998425,
+  "lat": 4.6304627,
+  "lon": -74.0717364,
+  "tags": {
+    "amenity": "university",
+    "name": "UNINPAHU Sede cultural 10"
+  }
+},
+{
+  "type": "node",
+  "id": 5141998426,
+  "lat": 4.6303247,
+  "lon": -74.0715240,
+  "tags": {
+    "amenity": "university",
+    "name": "Fundacion universitaria para el desarrollo humano- Sede 16"
+  }
+},
+{
+  "type": "node",
+  "id": 5226954470,
+  "lat": 4.6857088,
+  "lon": -74.0732018,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Av Cra 68",
+    "addr:postcode": "111211",
+    "addr:street": "No. 90-88 – Bloque 1 – Piso 1",
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Fundación Universitaria Cafam - Unicafam",
+    "source": "Kaart Ground Survey 2017",
+    "website": "unicafam.edu.co"
+  }
+},
+{
+  "type": "node",
+  "id": 6032137051,
+  "lat": 4.6178230,
+  "lon": -74.0732437,
+  "tags": {
+    "amenity": "university",
+    "name": "Sede Wayuu",
+    "operator": "Fundación Universitaria Panamericana"
+  }
+},
+{
+  "type": "node",
+  "id": 6501137709,
+  "lat": 4.6267823,
+  "lon": -74.0722644,
+  "tags": {
+    "amenity": "university",
+    "name": "CIDCA"
+  }
+},
+{
+  "type": "node",
+  "id": 6505023962,
+  "lat": 4.6957082,
+  "lon": -74.0914387,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "66",
+    "addr:postcode": "111051",
+    "addr:street": "Carrera 73A",
+    "amenity": "university",
+    "name": "Uniminuto sede virtual y a distancia"
+  }
+},
+{
+  "type": "node",
+  "id": 6831374156,
+  "lat": 4.6046423,
+  "lon": -74.0786257,
+  "tags": {
+    "addr:housenumber": "14-69",
+    "addr:street": "Carrera 13",
+    "amenity": "university",
+    "name": "Academia Superior de Artes de Bogotá"
+  }
+},
+{
+  "type": "node",
+  "id": 6831374157,
+  "lat": 4.6045864,
+  "lon": -74.0781844,
+  "tags": {
+    "addr:housenumber": "14-69",
+    "addr:street": "Carrera 13",
+    "amenity": "university",
+    "name": "Facultad de Artes ASAB"
+  }
+},
+{
+  "type": "node",
+  "id": 6831374158,
+  "lat": 4.6046167,
+  "lon": -74.0781354,
+  "tags": {
+    "addr:housenumber": "13-95",
+    "addr:street": "Carrera 13",
+    "amenity": "university",
+    "name": "Palacio de la Merced"
+  }
+},
+{
+  "type": "node",
+  "id": 6831374159,
+  "lat": 4.6044072,
+  "lon": -74.0781634,
+  "tags": {
+    "addr:housenumber": "14-69",
+    "addr:street": "Carrera 13",
+    "amenity": "university",
+    "name": "Facultad de Artes Asab"
+  }
+},
+{
+  "type": "node",
+  "id": 8986639970,
+  "lat": 4.5829246,
+  "lon": -74.2139286,
+  "tags": {
+    "addr:city": "Soacha",
+    "amenity": "university",
+    "description": "Centro de servicios universitarios",
+    "name": "Fundación Universitaria del Área Andina"
+  }
+},
+{
+  "type": "node",
+  "id": 9735513646,
+  "lat": 4.5984694,
+  "lon": -74.0724129,
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad CUN"
+  }
+},
+{
+  "type": "node",
+  "id": 9829427828,
+  "lat": 4.6659161,
+  "lon": -74.1012001,
+  "tags": {
+    "amenity": "university",
+    "name": "Instituto de Posgrados"
+  }
+},
+{
+  "type": "node",
+  "id": 9895983866,
+  "lat": 4.6324893,
+  "lon": -74.0652511,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 9",
+    "amenity": "university",
+    "name": "Universidad Piloto de Colombia",
+    "name:en": "Pilot University of Colombia",
+    "wikidata": "Q7194466",
+    "wikimedia_commons": "Category:Universidad Piloto de Colombia",
+    "wikipedia": "es:Universidad Piloto de Colombia"
+  }
+},
+{
+  "type": "node",
+  "id": 10951926097,
+  "lat": 4.7043643,
+  "lon": -74.2303199,
+  "tags": {
+    "amenity": "university",
+    "contact:website": "https://ibero.edu.co",
+    "name": "IBERO"
+  }
+},
+{
+  "type": "node",
+  "id": 11194154646,
+  "lat": 4.6619796,
+  "lon": -74.0574125,
+  "tags": {
+    "amenity": "university",
+    "name": "Corporacion Universitaria Unitec"
+  }
+},
+{
+  "type": "node",
+  "id": 12691894276,
+  "lat": 4.6044429,
+  "lon": -74.0683271,
+  "tags": {
+    "amenity": "university",
+    "check_date": "2025-03-22",
+    "name": "Laboratorios de Ingeniería"
+  }
+},
+{
+  "type": "node",
+  "id": 12691894279,
+  "lat": 4.6028471,
+  "lon": -74.0696776,
+  "tags": {
+    "amenity": "university",
+    "check_date": "2025-03-22",
+    "name": "Ingenieria Ambiental"
+  }
+},
+{
+  "type": "node",
+  "id": 12845107157,
+  "lat": 4.6539408,
+  "lon": -74.0604362,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "10A-36",
+    "addr:street": "Calle 69",
+    "amenity": "university",
+    "contact:website": "https://ideas.edu.co",
+    "name": "Corporación Universitaria de Colombia Ideas"
+  }
+},
+{
+  "type": "node",
+  "id": 13076585113,
+  "lat": 4.6053102,
+  "lon": -74.2143727,
+  "tags": {
+    "amenity": "university",
+    "name": "UDR UNAD Soacha",
+    "operator": "Universidad Nacional Abierta y a Distancia",
+    "operator:type": "public",
+    "operator:wikidata": "Q5556466",
+    "wikidata": "Q5556466",
+    "wikimedia_commons": "Category:Universidad Nacional Abierta y a Distancia",
+    "wikipedia": "es:Universidad Nacional Abierta y a Distancia"
+  }
+},
+{
+  "type": "node",
+  "id": 13226836703,
+  "lat": 4.6230177,
+  "lon": -74.0662535,
+  "tags": {
+    "addr:housenumber": "# 36-58",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "university",
+    "name": "Universitaria de Colombia Sede 2",
+    "operator:type": "private",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13227015009,
+  "lat": 4.8467855,
+  "lon": -74.0302030,
+  "tags": {
+    "amenity": "university",
+    "name": "UNICOC (Institución Universitaria Colegios de Colombia)"
+  }
+},
+{
+  "type": "node",
+  "id": 13572536618,
+  "lat": 4.6816030,
+  "lon": -74.0993587,
+  "tags": {
+    "amenity": "university",
+    "name": "U.D.C.A."
+  }
+},
+{
+  "type": "way",
+  "id": 24249802,
+  "center": {
+    "lat": 4.6444006,
+    "lon": -74.0929166
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Escuela Superior de Administración Pública"
+  }
+},
+{
+  "type": "way",
+  "id": 24518550,
+  "center": {
+    "lat": 4.6203350,
+    "lon": -74.0668577
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "created_by": "JOSM",
+    "name": "Colegio Externado Nacional Camilo Torres"
+  }
+},
+{
+  "type": "way",
+  "id": 24546908,
+  "center": {
+    "lat": 4.6727598,
+    "lon": -74.0834876
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "62",
+    "addr:street": "Avenida Calle 68",
+    "amenity": "university",
+    "name": "UniMonserrate-Unión Social",
+    "operator": "Universitaria Monserrate"
+  }
+},
+{
+  "type": "way",
+  "id": 28694342,
+  "center": {
+    "lat": 4.7540385,
+    "lon": -74.0514999
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 170",
+    "amenity": "university",
+    "name": "Universidad ECCI",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 38632979,
+  "center": {
+    "lat": 4.6367954,
+    "lon": -74.0549287
+  },
+  "tags": {
+    "addr:postcode": "11001",
+    "amenity": "university",
+    "contact:facebook": "poligran",
+    "contact:instagram": "poligrancol",
+    "contact:twitter": "poligran",
+    "name": "Politécnico Grancolombiano",
+    "website": "https://www.poli.edu.co/",
+    "wikidata": "Q6081858",
+    "wikimedia_commons": "Category:Politécnico Grancolombiano",
+    "wikipedia": "es:Institución Universitaria Politécnico Grancolombiano"
+  }
+},
+{
+  "type": "way",
+  "id": 40739535,
+  "center": {
+    "lat": 4.6286109,
+    "lon": -74.0637200
+  },
+  "tags": {
+    "addr:housenumber": "40-62",
+    "addr:postcode": "11001",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "university",
+    "contact:facebook": "unijaveriana",
+    "education": "university",
+    "name": "Pontificia Universidad Javeriana",
+    "name:en": "Pontifical Xavierian University",
+    "opening_hours": "Mo-Tu 15:00-18:00",
+    "phone": "+57 601 3208320",
+    "website": "https://www.javeriana.edu.co",
+    "wikidata": "Q1517478",
+    "wikimedia_commons": "Category:Universidad Javeriana",
+    "wikipedia": "es:Pontificia Universidad Javeriana"
+  }
+},
+{
+  "type": "way",
+  "id": 41163579,
+  "center": {
+    "lat": 4.7822656,
+    "lon": -74.0443595
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "205-59",
+    "addr:street": "Avenida Carrera 45",
+    "amenity": "university",
+    "name": "Escuela Colombiana de Ingenieria",
+    "phone": "+57 601 6683600",
+    "website": "https://www.escuelaing.edu.co/es/",
+    "wikidata": "Q5397459",
+    "wikimedia_commons": "Category:Escuela Colombiana de Ingeniería",
+    "wikipedia": "es:Escuela Colombiana de Ingeniería"
+  }
+},
+{
+  "type": "way",
+  "id": 41665413,
+  "center": {
+    "lat": 4.7110823,
+    "lon": -74.0965829
+  },
+  "tags": {
+    "amenity": "university",
+    "designation": "Minuto de Dios",
+    "name": "Uniminuto"
+  }
+},
+{
+  "type": "way",
+  "id": 42506855,
+  "center": {
+    "lat": 4.6440930,
+    "lon": -74.0928581
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "ESAP"
+  }
+},
+{
+  "type": "way",
+  "id": 42643872,
+  "center": {
+    "lat": 4.7546720,
+    "lon": -74.0280288
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "179-03",
+    "addr:street": "Calle 179",
+    "amenity": "university",
+    "education": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Universidad de La Salle - Sede Norte",
+    "operator": "Universidad de La Salle",
+    "website": "https://www.lasalle.edu.co/nuestras-sedes#norte"
+  }
+},
+{
+  "type": "way",
+  "id": 52134394,
+  "center": {
+    "lat": 4.6150255,
+    "lon": -74.0738824
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Fundación Universitaria San Mateo"
+  }
+},
+{
+  "type": "way",
+  "id": 52189297,
+  "center": {
+    "lat": 4.7108262,
+    "lon": -74.0313510
+  },
+  "tags": {
+    "amenity": "university",
+    "education": "university",
+    "internet_access": "yes",
+    "name": "Universidad El Bosque",
+    "operator": "Universidad el bosque",
+    "operator:type": "private",
+    "website": "https://www.unbosque.edu.co/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 59180384,
+  "center": {
+    "lat": 4.6982639,
+    "lon": -74.0892141
+  },
+  "tags": {
+    "alt_name": "Universidad Minuto de Dios",
+    "amenity": "university",
+    "barrier": "yes",
+    "brand": "Uniminuto",
+    "brand:wikidata": "Q5788938",
+    "name": "Uniminuto",
+    "operator": "Uniminuto",
+    "operator:type": "private",
+    "operator:wikipedia": "es:Corporación Universitaria Minuto de Dios",
+    "website": "https://www.uniminuto.edu/"
+  }
+},
+{
+  "type": "way",
+  "id": 59480149,
+  "center": {
+    "lat": 4.7515459,
+    "lon": -74.0298383
+  },
+  "tags": {
+    "addr:housenumber": "172 - 20",
+    "addr:street": "Carrera 8H",
+    "amenity": "university",
+    "name": "Universidad de San Buenaventura",
+    "operator": "Franciscanos"
+  }
+},
+{
+  "type": "way",
+  "id": 72375387,
+  "center": {
+    "lat": 4.6645034,
+    "lon": -74.0612582
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "UNICIENCIA Facultad de Derecho Sede E"
+  }
+},
+{
+  "type": "way",
+  "id": 72375822,
+  "center": {
+    "lat": 4.6646296,
+    "lon": -74.0612441
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "UNICIENCIA - Facultad de Ingenieria Sede I"
+  }
+},
+{
+  "type": "way",
+  "id": 72376771,
+  "center": {
+    "lat": 4.6632221,
+    "lon": -74.0605443
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "UNICIENCIA Facultad de Ciencias Económicas y Administrativas Sede D"
+  }
+},
+{
+  "type": "way",
+  "id": 86369735,
+  "center": {
+    "lat": 4.5918906,
+    "lon": -74.1903784
+  },
+  "tags": {
+    "addr:city": "Comuna 5 San Mateo",
+    "addr:housenumber": "Transversal 7 # 8 - 40",
+    "addr:street": "Autopista Sur",
+    "amenity": "university",
+    "barrier": "yes",
+    "name": "Centro de Tecnologías para la Construcción y la Madera (SENA)",
+    "operator": "Servicio Nacional de Aprendizaje SENA",
+    "operator:type": "public",
+    "website": "http://tecnoparque.sena.edu.co/sedes/cazuca/Paginas/default.aspx",
+    "wikidata": "Q6974078",
+    "wikipedia": "es:Servicio Nacional de Aprendizaje"
+  }
+},
+{
+  "type": "way",
+  "id": 86369756,
+  "center": {
+    "lat": 4.5933208,
+    "lon": -74.1681554
+  },
+  "tags": {
+    "amenity": "university",
+    "layer": "1",
+    "name": "Uniminuto"
+  }
+},
+{
+  "type": "way",
+  "id": 87411587,
+  "center": {
+    "lat": 4.7905356,
+    "lon": -74.0547959
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Campus deportivo Universidad Santo Tomás de Aquino",
+    "short_name": "USTA"
+  }
+},
+{
+  "type": "way",
+  "id": 97255862,
+  "center": {
+    "lat": 4.6040749,
+    "lon": -74.0746897
+  },
+  "tags": {
+    "addr:housename": "Edificio Cámara de Comercio de Bogotá Sede Centro",
+    "addr:housenumber": "16 21",
+    "addr:street": "KR 9",
+    "alt_name": "Cámara de Comercio de Bogotá",
+    "amenity": "university",
+    "building": "yes",
+    "name": "CCB Uni Empresarial",
+    "old_name": "Cámara de Comercio de Bogotá"
+  }
+},
+{
+  "type": "way",
+  "id": 99545300,
+  "center": {
+    "lat": 4.6180205,
+    "lon": -74.0613195
+  },
+  "tags": {
+    "addr:street": "Avenida de los Cerros (Circunvalar), Venado de Oro",
+    "alt_name": "Sede Anexa Universidad Distrital",
+    "amenity": "university",
+    "email": "dmedioa@udistrital.edu.co",
+    "fixme": "en notas hay datos historicos sin clasificar",
+    "image": "http://www.udistrital.edu.co/imagenes/dependencias/80.jpg",
+    "name": "Universidad Distrital Francisco José de Caldas Facultad del Medio Ambiente",
+    "note": "Antes: Sede B Externado CAmilo Torres. Edifico decada 1960 (Alianza para el Progreso), Antes: Concentracion Escolar Thomas Jefferson; Antes: Escuela Rafael Miranda (Fundador Barrio Perseverancia)",
+    "official_name": "Universidad Distrital Francisco José de Caldas (Facultad del Medio Ambiente)",
+    "old_name": "Sede B Externado Camilo Torres",
+    "operator": "Universidad Distrital Francisco José de Caldas",
+    "operator:type": "public",
+    "phone": "2841658 - 3376618",
+    "short_name": "UD",
+    "sorting_name": "distrital universidad",
+    "website": "ambiental.udistrital.edu.co/",
+    "wikidata": "Q3081395",
+    "wikimedia_commons": "Category:Universidad Distrital Francisco José de Caldas",
+    "wikipedia": "es:Universidad Distrital Francisco José de Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 119924432,
+  "center": {
+    "lat": 4.5792589,
+    "lon": -74.1583138
+  },
+  "tags": {
+    "addr:full": "Transversal 70 B N. 73 a 35 sur",
+    "alt_name": "Universidad Distrital Tecnológica",
+    "amenity": "university",
+    "email": "dectecnologica@udistrital.edu.co",
+    "image": "http://www.udistrital.edu.co/imagenes/dependencias/81.jpg",
+    "name": "Universidad Distrital Sede Tecnológica",
+    "official_name": "Universidad Distrital Francisco José de Caldas (Sede Facultad Tecnológica)",
+    "phone": "3239300",
+    "short_name": "UD",
+    "sorting_name": "Distrital Facultad Tecnológica Universidad",
+    "website": "https://www.udistrital.edu.co/",
+    "wikipedia": "es:Universidad Distrital Francisco José de Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 135106307,
+  "center": {
+    "lat": 4.6142974,
+    "lon": -74.0939535
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Biblioteca Universidad Distrital Francisco José de Caldas",
+    "old_name": "Matadero distrital"
+  }
+},
+{
+  "type": "way",
+  "id": 135624702,
+  "center": {
+    "lat": 4.5970226,
+    "lon": -74.0641382
+  },
+  "tags": {
+    "addr:street": "Calle 1",
+    "amenity": "university",
+    "barrier": "yes",
+    "name": "Universidad Distrital Francisco José de Caldas - Sede Vivero",
+    "operator": "Universidad Distrital Francisco José de Caldas",
+    "operator:type": "public",
+    "wikidata": "Q3081395",
+    "wikipedia": "es:Universidad Distrital Francisco José de Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 135625354,
+  "center": {
+    "lat": 4.5986505,
+    "lon": -74.0651660
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Distrital Francisco José de Caldas - Sede Vivero"
+  }
+},
+{
+  "type": "way",
+  "id": 136124928,
+  "center": {
+    "lat": 4.6142736,
+    "lon": -74.0635885
+  },
+  "tags": {
+    "addr:country": "CO",
+    "addr:full": "Carrera 3 26 A 40",
+    "addr:housenumber": "26",
+    "addr:street": "Carrera 3",
+    "alt_name": "Universidad Distrital Facultad de Ciencias y Educacion",
+    "amenity": "university",
+    "barrier": "yes",
+    "contact:email": "dciencia@udistrital.edu.co",
+    "contact:phone": "6012869666 - 6013239300",
+    "contact:website": "https://fciencias.udistrital.edu.co",
+    "image": "http://www.udistrital.edu.co/imagenes/dependencias/20.jpg",
+    "loc_name": "Universidad Distrital",
+    "name": "Universidad Distrital Francisco José de Caldas - Sede Macarena A",
+    "natural": "wood",
+    "official_name": "Universidad Distrital Francisco José de Caldas (Facultad de Ciencias y Educacion)",
+    "operator": "Universidad Distrital Francisco José de Caldas",
+    "operator:type": "public",
+    "short_name": "UD",
+    "sorting_name": "distrital universidad",
+    "wikidata": "Q3081395",
+    "wikipedia": "es:Universidad Distrital Francisco José de Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 136126347,
+  "center": {
+    "lat": 4.6135379,
+    "lon": -74.0652301
+  },
+  "tags": {
+    "addr:full": "Carrera 3 26 A 40",
+    "alt_name": "Universidad Distrital Facultad de Ciencias y Educacion",
+    "amenity": "university",
+    "email": "dciencia@udistrital.edu.co",
+    "image": "http://www.udistrital.edu.co/imagenes/dependencias/20.jpg",
+    "loc_name": "Universidad Distrital",
+    "name": "Universidad Distrital Francisco José de Caldas - Sede Macarena B",
+    "official_name": "Universidad Distrital Francisco José de Caldas (Facultad de Ciencias y Educacion)",
+    "phone": "2869666 - 3239300",
+    "short_name": "UD",
+    "sorting_name": "distrital universidad",
+    "website": "https://fciencias.udistrital.edu.co/",
+    "wikipedia": "es:Universidad Distrital Francisco José de Caldas"
+  }
+},
+{
+  "type": "way",
+  "id": 152747129,
+  "center": {
+    "lat": 4.6295297,
+    "lon": -74.0700486
+  },
+  "tags": {
+    "addr:street": "Carrera 16",
+    "amenity": "university",
+    "building": "school",
+    "designation": "Insitución universitaria Inpahu",
+    "name": "Uninpahu",
+    "source": "Kaart Ground Survey 2017",
+    "website": "https://www.uninpahu.edu.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 152747150,
+  "center": {
+    "lat": 4.6296629,
+    "lon": -74.0703526
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "school",
+    "name": "Uninpahu",
+    "website": "https://www.uninpahu.edu.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 161581334,
+  "center": {
+    "lat": 4.6583848,
+    "lon": -74.0592049
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "fence",
+    "name": "Universidad Pedagógica Nacional",
+    "wheelchair": "no",
+    "wikidata": "Q2495711",
+    "wikipedia": "es:Universidad Pedagógica Nacional (Colombia)"
+  }
+},
+{
+  "type": "way",
+  "id": 171968716,
+  "center": {
+    "lat": 4.5852853,
+    "lon": -74.0975234
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Nacional Abierta y a Distancia"
+  }
+},
+{
+  "type": "way",
+  "id": 172711963,
+  "center": {
+    "lat": 4.5794852,
+    "lon": -74.1008470
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Antonio Nariño"
+  }
+},
+{
+  "type": "way",
+  "id": 172962643,
+  "center": {
+    "lat": 4.5785983,
+    "lon": -74.1018314
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "UAN Facultad de Ingenieria Mecanica"
+  }
+},
+{
+  "type": "way",
+  "id": 175528060,
+  "center": {
+    "lat": 4.6531352,
+    "lon": -74.1447284
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "UniAgustiniana"
+  }
+},
+{
+  "type": "way",
+  "id": 190507510,
+  "center": {
+    "lat": 4.6440538,
+    "lon": -74.0834987
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "52-95",
+    "addr:street": "Carrera 37",
+    "amenity": "university",
+    "building": "yes",
+    "building:levels": "2",
+    "name": "Facultad de Odontología Universidad Nacional de Colombia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 192115771,
+  "center": {
+    "lat": 4.6024942,
+    "lon": -74.0667504
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "office",
+    "name": "Ñl"
+  }
+},
+{
+  "type": "way",
+  "id": 192119030,
+  "center": {
+    "lat": 4.6024039,
+    "lon": -74.0664028
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "office",
+    "name": "Mj"
+  }
+},
+{
+  "type": "way",
+  "id": 212900726,
+  "center": {
+    "lat": 4.7755090,
+    "lon": -74.0353587
+  },
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "name": "Universidad del Rosario Sede del Emprendimiento y la Innovación",
+    "operator": "Universidad del Rosario"
+  }
+},
+{
+  "type": "way",
+  "id": 220535780,
+  "center": {
+    "lat": 4.7616119,
+    "lon": -74.0532880
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "yes",
+    "education": "university",
+    "name": "Universidad Pedagógica Nacional - Campus Valmaria",
+    "operator": "Universidad Pedagogica Nacional",
+    "operator:type": "public",
+    "website": "http://www.pedagogica.edu.co"
+  }
+},
+{
+  "type": "way",
+  "id": 222831348,
+  "center": {
+    "lat": 4.6348165,
+    "lon": -74.0610954
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Facultad Medicina - Universidad Nueva Granada"
+  }
+},
+{
+  "type": "way",
+  "id": 222836689,
+  "center": {
+    "lat": 4.6446147,
+    "lon": -74.0593661
+  },
+  "tags": {
+    "addr:postcode": "11001",
+    "amenity": "university",
+    "contact:facebook": "U.deLaSalle",
+    "contact:instagram": "unisallecol",
+    "contact:twitter": "unisalle",
+    "name": "Universidad de La Salle",
+    "name:en": "University of La Salle",
+    "website": "https://www.lasalle.edu.co",
+    "wikidata": "Q6465150",
+    "wikimedia_commons": "Category:Universidad de la Salle",
+    "wikipedia": "es:Universidad de La Salle (Bogotá)"
+  }
+},
+{
+  "type": "way",
+  "id": 229024345,
+  "center": {
+    "lat": 4.6565472,
+    "lon": -74.0563054
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Santo Tomás"
+  }
+},
+{
+  "type": "way",
+  "id": 231260002,
+  "center": {
+    "lat": 4.5787860,
+    "lon": -74.1236697
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Cooperativa"
+  }
+},
+{
+  "type": "way",
+  "id": 239949491,
+  "center": {
+    "lat": 4.6321258,
+    "lon": -74.0807007
+  },
+  "tags": {
+    "alt_name": "UniEmpresarial",
+    "amenity": "university",
+    "name": "Fundación Universitaria Empresarial",
+    "operator": "Cámara de Comercio de Bogotá"
+  }
+},
+{
+  "type": "way",
+  "id": 240212801,
+  "center": {
+    "lat": 4.6068599,
+    "lon": -74.0677927
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "carrera 4",
+    "addr:street": "Calle 22",
+    "amenity": "university",
+    "contact:facebook": "utadeo.edu.co",
+    "contact:fax": "+57 601 5612107",
+    "contact:instagram": "utadeo.edu.co",
+    "contact:linkedin": "https://www.linkedin.com/school/utadeo/",
+    "contact:phone": "+57 601 2427030",
+    "contact:tiktok": "https://www.tiktok.com/@utadeo.edu.co",
+    "contact:twitter": "UTadeo_edu_co",
+    "contact:website": "https://www.utadeo.edu.co/es",
+    "contact:youtube": "https://www.youtube.com/channel/UC-iXhGLQw9ozhHJYmnngdkg",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Universidad Jorge Tadeo Lozano",
+    "opening_hours": "Mo-Fr 07:00-22:00; Sa 07:00-15:00",
+    "wheelchair": "yes",
+    "wikidata": "Q5937434",
+    "wikimedia_commons": "Category:Universidad Jorge Tadeo Lozano",
+    "wikipedia": "es:Universidad Jorge Tadeo Lozano"
+  }
+},
+{
+  "type": "way",
+  "id": 243297963,
+  "center": {
+    "lat": 4.6340557,
+    "lon": -74.0669617
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "university",
+    "name": "Universidad Catolica - Sede Administrativa",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 300589173,
+  "center": {
+    "lat": 4.7408744,
+    "lon": -74.0828153
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Uniagustiniana"
+  }
+},
+{
+  "type": "way",
+  "id": 320124120,
+  "center": {
+    "lat": 4.6611322,
+    "lon": -74.0596114
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110221",
+    "addr:street": "Calle 74",
+    "amenity": "university",
+    "name": "Universidad Sergio Arboleda",
+    "source": "Kaart Ground Survey 2017",
+    "website": "https://www.usergioarboleda.edu.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 327885504,
+  "center": {
+    "lat": 4.5799424,
+    "lon": -74.0881179
+  },
+  "tags": {
+    "addr:street": "Carrera 8",
+    "amenity": "university",
+    "name": "Corporación Universitaria Remington",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 334629490,
+  "center": {
+    "lat": 4.6301665,
+    "lon": -74.0658047
+  },
+  "tags": {
+    "addr:street": "Carrera 9",
+    "amenity": "university",
+    "building": "university",
+    "name": "Universidad La Gran Colombia",
+    "wikidata": "Q6156504",
+    "wikipedia": "es:Universidad La Gran Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 334704017,
+  "center": {
+    "lat": 4.6301006,
+    "lon": -74.0669886
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "INESCO"
+  }
+},
+{
+  "type": "way",
+  "id": 334786051,
+  "center": {
+    "lat": 4.6257730,
+    "lon": -74.0684402
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad cooperativa de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 334793581,
+  "center": {
+    "lat": 4.6298996,
+    "lon": -74.0687999
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "40A-89",
+    "addr:street": "Carrera 14A",
+    "alt_name": "Universidad Cooperativa",
+    "amenity": "university",
+    "name": "Universidad Cooperativa de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 334793583,
+  "center": {
+    "lat": 4.6293429,
+    "lon": -74.0685460
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Kra 14",
+    "addr:street": "40A-67",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Cooperativa de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 334797789,
+  "center": {
+    "lat": 4.6321623,
+    "lon": -74.0682137
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Cooperativa"
+  }
+},
+{
+  "type": "way",
+  "id": 334797790,
+  "center": {
+    "lat": 4.6323719,
+    "lon": -74.0680702
+  },
+  "tags": {
+    "addr:street": "Calle 45",
+    "amenity": "university",
+    "name": "Universidad Pedagogica y Tecnologica de Colombia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 334797793,
+  "center": {
+    "lat": 4.6324201,
+    "lon": -74.0683557
+  },
+  "tags": {
+    "addr:street": "Calle 45",
+    "amenity": "university",
+    "name": "Zona Cinco: Escuela de Cine y Fotografia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 334798687,
+  "center": {
+    "lat": 4.6321578,
+    "lon": -74.0691288
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Cooperativa"
+  }
+},
+{
+  "type": "way",
+  "id": 334962670,
+  "center": {
+    "lat": 4.6265693,
+    "lon": -74.0693375
+  },
+  "tags": {
+    "addr:housenumber": "39-15",
+    "addr:street": "Avenida Caracas",
+    "amenity": "university",
+    "education": "university",
+    "name": "Universidad Coperativa de Colombia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 340201084,
+  "center": {
+    "lat": 4.6150335,
+    "lon": -74.0675997
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Colegio Mayor de Cundinamarca"
+  }
+},
+{
+  "type": "way",
+  "id": 344782227,
+  "center": {
+    "lat": 4.6829610,
+    "lon": -74.0419567
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Militar Nueva Granada",
+    "operator": "Pública",
+    "wikidata": "Q1294197",
+    "wikimedia_commons": "Category:Universidad Militar Nueva Granada",
+    "wikipedia": "es:Universidad Militar Nueva Granada"
+  }
+},
+{
+  "type": "way",
+  "id": 371994132,
+  "center": {
+    "lat": 4.6396173,
+    "lon": -74.0686925
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Escuela nacional de cine"
+  }
+},
+{
+  "type": "way",
+  "id": 371999091,
+  "center": {
+    "lat": 4.6381918,
+    "lon": -74.0635393
+  },
+  "tags": {
+    "addr:housenumber": "51A-13",
+    "addr:street": "Carrera 7",
+    "amenity": "university",
+    "name": "Admisiones Universidad Santo Tomas. Edificio S",
+    "website": "https://usantotomas.edu.co/inicio"
+  }
+},
+{
+  "type": "way",
+  "id": 372146688,
+  "center": {
+    "lat": 4.6342670,
+    "lon": -74.0687207
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Liceo Universidad Católica de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 372147377,
+  "center": {
+    "lat": 4.6349698,
+    "lon": -74.0688127
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Católica de Colombia",
+    "religion": "christian",
+    "wikipedia": "es:Universidad Católica de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 374197402,
+  "center": {
+    "lat": 4.7543322,
+    "lon": -74.0533204
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Uniagraria",
+    "website": "https://www.uniagraria.edu.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 386495739,
+  "center": {
+    "lat": 4.5980590,
+    "lon": -74.0618018
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "El Venado de Oro - Instituto Alexander Von Humboldt",
+    "operator": "Instituto Humboldt"
+  }
+},
+{
+  "type": "way",
+  "id": 386565833,
+  "center": {
+    "lat": 4.5779884,
+    "lon": -74.2236904
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "fence",
+    "name": "Universidad de Cundinamarca Sede Soacha",
+    "operator": "Universidad de Cundinamarca",
+    "operator:type": "public",
+    "website": "https://www.ucundinamarca.edu.co/",
+    "wikidata": "Q7895317",
+    "wikipedia": "es:Universidad de Cundinamarca"
+  }
+},
+{
+  "type": "way",
+  "id": 395594655,
+  "center": {
+    "lat": 4.7620312,
+    "lon": -74.0928654
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "name": "Juan N. Corpas"
+  }
+},
+{
+  "type": "way",
+  "id": 398077902,
+  "center": {
+    "lat": 4.8102990,
+    "lon": -74.0352078
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Externado de Colombia sede El Alcázar",
+    "operator": "Universidad Externado de Colombia",
+    "operator:type": "private",
+    "wikidata": "Q7894273",
+    "wikipedia": "es:Universidad Externado de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 398439559,
+  "center": {
+    "lat": 4.6669806,
+    "lon": -74.0672124
+  },
+  "tags": {
+    "addr:city": "Barrios Unidos",
+    "addr:housenumber": "75 - 09",
+    "addr:street": "Carrera 27A",
+    "amenity": "university",
+    "name": "CAP Fray Eloy Londoño",
+    "operator": "Universidad de San Buenaventura"
+  }
+},
+{
+  "type": "way",
+  "id": 399333075,
+  "center": {
+    "lat": 4.6659068,
+    "lon": -74.1018885
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Carrera 70",
+    "amenity": "university",
+    "internet_access": "wlan",
+    "name": "Universidad Libre - Sede Bosque Popular",
+    "website": "www.unilibre.edu.co"
+  }
+},
+{
+  "type": "way",
+  "id": 400523369,
+  "center": {
+    "lat": 4.6116962,
+    "lon": -74.0726838
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "name": "Universidad Incca de Colombia",
+    "website": "https://www.unincca.edu.co/",
+    "wikidata": "Q16302657",
+    "wikipedia": "es:Universidad Incca de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 401276003,
+  "center": {
+    "lat": 4.7517119,
+    "lon": -74.0310688
+  },
+  "tags": {
+    "amenity": "university",
+    "education": "university",
+    "name": "Universidad Cooperativa de Colombia sede Norte",
+    "operator": "Universidad Cooperativa de Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 402044613,
+  "center": {
+    "lat": 4.6067469,
+    "lon": -74.0668190
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "23-10",
+    "addr:street": "Carrera 3",
+    "alt_name": "Modulo 16",
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "7",
+    "check_date": "2026-11-13",
+    "description": "El edifico Guillermo Rueda Montaña, o mejor conocido como el módulo 16 de postgrados, fue Primer Premio Nacional de Arquitectura en la categoría de diseño arquitectónico de la Bienal Colombiana de Arquitectura 1998.",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Módulo 16 (Edificio Guillermo Rueda Montaña)",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "phone": "+57 601 2427030",
+    "ref": "M16",
+    "website": "https://www.utadeo.edu.co/es/programas?tipo=posgrado"
+  }
+},
+{
+  "type": "way",
+  "id": 402046627,
+  "center": {
+    "lat": 4.6648273,
+    "lon": -74.0785605
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Fundación Universitaria Ciencias de la Salud"
+  }
+},
+{
+  "type": "way",
+  "id": 402204154,
+  "center": {
+    "lat": 4.5945958,
+    "lon": -74.0704530
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Universidad de la Salle-Sede Centro",
+    "operator": "Universidad de la Salle",
+    "operator:type": "private",
+    "website": "https://lasalle.edu.co/es"
+  }
+},
+{
+  "type": "way",
+  "id": 404858009,
+  "center": {
+    "lat": 4.6491746,
+    "lon": -74.0612508
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "63-28",
+    "addr:street": "Carrera 9A",
+    "amenity": "university",
+    "building": "yes",
+    "building:levels": "4",
+    "name": "Universidad Santo Tomas Campus El Aquinate",
+    "website": "https://usantotomas.edu.co"
+  }
+},
+{
+  "type": "way",
+  "id": 405039879,
+  "center": {
+    "lat": 4.6485705,
+    "lon": -74.0615035
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:country": "CO",
+    "addr:housenumber": "62-43",
+    "addr:street": "Carrera 9 Bis",
+    "amenity": "university",
+    "building": "yes",
+    "building:levels": "8",
+    "check_date": "2024-03-29",
+    "name": "Fundación Konrad Lorenz",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 406123788,
+  "center": {
+    "lat": 4.6060025,
+    "lon": -74.0670803
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "3-30",
+    "addr:street": "Calle 22",
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "8",
+    "description": "Edificio de la Universidad Jorge Tadeo Lozano, módulo 15. En el piso 1, 6 y 8 está TadeoLab, es una plataforma de investigación, innovación y emprendimiento que promueve y coordina proyectos científicos, artísticos y tecnológicos interdisciplinarios.",
+    "name": "TadeoLab, Módulo 15",
+    "ref": "M15",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 406123791,
+  "center": {
+    "lat": 4.6059732,
+    "lon": -74.0662941
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 3 calle 22 A",
+    "alt_name": "Módulo 23 CIPI Utadeo",
+    "amenity": "university",
+    "building": "university",
+    "description": "El (CIPI) Centro de Investigación de Procesos Industriales es un edificio especializado que cuenta con equipos de transferencia de calor, masa y momento en espacios amplios e iluminados. Hace parte de la Universidad Jorge Tadeo Lozano.",
+    "image": "https://www.utadeo.edu.co/sites/tadeo/files/styles/internal_517x290/public/node/area/field_images/1.cipi_.utadeo.az_.1.jpg?itok=wdjJ9t0X",
+    "name": "Moduelo 23 Centro de Investigación de Procesos Industriales (CIPI) Utadeo",
+    "operator": "Modulo 23"
+  }
+},
+{
+  "type": "way",
+  "id": 408339824,
+  "center": {
+    "lat": 4.6310701,
+    "lon": -74.0670221
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Decanatura U.Cooperativa"
+  }
+},
+{
+  "type": "way",
+  "id": 409156782,
+  "center": {
+    "lat": 4.6337133,
+    "lon": -74.0669457
+  },
+  "tags": {
+    "addr:housenumber": "46-40",
+    "addr:street": "Avenida Caracas",
+    "amenity": "university",
+    "name": "Universidad Catolica Facultad de Psicologia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 409272904,
+  "center": {
+    "lat": 4.6331902,
+    "lon": -74.0679116
+  },
+  "tags": {
+    "amenity": "university"
+  }
+},
+{
+  "type": "way",
+  "id": 409394394,
+  "center": {
+    "lat": 4.7881833,
+    "lon": -74.0673142
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "yes",
+    "name": "UniCervantina"
+  }
+},
+{
+  "type": "way",
+  "id": 413217363,
+  "center": {
+    "lat": 4.7168777,
+    "lon": -74.0745124
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Católica Luís Amigó",
+    "website": "https://www.funlam.edu.co/modules/sedebogota/"
+  }
+},
+{
+  "type": "way",
+  "id": 473871451,
+  "center": {
+    "lat": 4.5764931,
+    "lon": -74.2241990
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "yes",
+    "name": "Uniminuto Sede Soacha"
+  }
+},
+{
+  "type": "way",
+  "id": 503850763,
+  "center": {
+    "lat": 4.5995930,
+    "lon": -74.0727076
+  },
+  "tags": {
+    "amenity": "university",
+    "check_date": "2025-05-13",
+    "name": "Universidad La Gran Colombia",
+    "wikidata": "Q6156504",
+    "wikipedia": "es:Universidad La Gran Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 503850764,
+  "center": {
+    "lat": 4.5980403,
+    "lon": -74.0735558
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad La Gran Colombia"
+  }
+},
+{
+  "type": "way",
+  "id": 528476665,
+  "center": {
+    "lat": 4.6682106,
+    "lon": -74.0587013
+  },
+  "tags": {
+    "addr:street": "Carrera 19",
+    "amenity": "university",
+    "building": "yes",
+    "name": "San Martín",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 530427396,
+  "center": {
+    "lat": 4.6934008,
+    "lon": -74.0499290
+  },
+  "tags": {
+    "addr:housenumber": "18B-18",
+    "addr:street": "Calle 106A",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universitaria de Cataluña",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531280964,
+  "center": {
+    "lat": 4.6839769,
+    "lon": -74.0547546
+  },
+  "tags": {
+    "addr:street": "Transversal 21",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Antonio Narino Centro de Convecciones",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532379048,
+  "center": {
+    "lat": 4.6229337,
+    "lon": -74.0691698
+  },
+  "tags": {
+    "addr:housenumber": "34-22",
+    "addr:street": "Avenida Carrera 14",
+    "amenity": "university",
+    "building": "university",
+    "name": "Campoalto",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532379049,
+  "center": {
+    "lat": 4.6239994,
+    "lon": -74.0689100
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "35 - 02",
+    "addr:street": "Calle",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Cenda",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533827423,
+  "center": {
+    "lat": 4.7006091,
+    "lon": -74.1304214
+  },
+  "tags": {
+    "addr:street": "Carrera 109A",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Colegio Psicopedacdgico el Arte del Saber",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540280431,
+  "center": {
+    "lat": 4.5703373,
+    "lon": -74.0988976
+  },
+  "tags": {
+    "addr:street": "Calle 30B Sur",
+    "amenity": "university",
+    "name": "San Mateo C.A.E",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540286164,
+  "center": {
+    "lat": 4.6760705,
+    "lon": -74.0877077
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 68",
+    "amenity": "university",
+    "building": "yes",
+    "building:levels": "17",
+    "building:material": "concrete",
+    "building:use": "education",
+    "name": "Fundacion Universitaria Compensar",
+    "operator:type": "private",
+    "roof:shape": "flat",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 543156094,
+  "center": {
+    "lat": 4.6261921,
+    "lon": -74.1517567
+  },
+  "tags": {
+    "addr:street": "Carrera 78K",
+    "amenity": "university",
+    "building": "school",
+    "name": "Politécnico Internacional",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 544594394,
+  "center": {
+    "lat": 4.6543755,
+    "lon": -74.0729771
+  },
+  "tags": {
+    "addr:full": "CALLE 63 D No. 24 - 31",
+    "alt_name": "Parque Mutis",
+    "amenity": "university",
+    "education": "university",
+    "name": "Universidad del Rosario"
+  }
+},
+{
+  "type": "way",
+  "id": 553394447,
+  "center": {
+    "lat": 4.6347244,
+    "lon": -74.0583065
+  },
+  "tags": {
+    "addr:postcode": "11001",
+    "amenity": "university",
+    "contact:facebook": "uniantonionarino",
+    "contact:instagram": "uniantonionarino",
+    "contact:twitter": "uantonionarino",
+    "name": "Universidad Antonio Nariño",
+    "name:en": "Antonio Nariño University",
+    "website": "https://www.uan.edu.co",
+    "wikidata": "Q6156336",
+    "wikimedia_commons": "Category:Universidad Antonio Nariño",
+    "wikipedia": "es:Universidad Antonio Nariño"
+  }
+},
+{
+  "type": "way",
+  "id": 608481510,
+  "center": {
+    "lat": 4.6485619,
+    "lon": -74.0961023
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "fence",
+    "name": "Universidad Nacional de Colombia - Campus Santa Rosa"
+  }
+},
+{
+  "type": "way",
+  "id": 636184217,
+  "center": {
+    "lat": 4.5976851,
+    "lon": -74.1089830
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "UNAD"
+  }
+},
+{
+  "type": "way",
+  "id": 642708400,
+  "center": {
+    "lat": 4.5898130,
+    "lon": -74.1320207
+  },
+  "tags": {
+    "amenity": "university",
+    "boundary": "urban",
+    "name": "Escuela General de Policía General Santander",
+    "operator": "Policía Nacional de Colombia",
+    "police": "academy",
+    "type": "boundary",
+    "wikidata": "Q969519",
+    "wikimedia_commons": "Category:Escuela de Cadetes de Policía Francisco de Paula Santander",
+    "wikipedia": "es:Escuela de Cadetes de Policía General Santander"
+  }
+},
+{
+  "type": "way",
+  "id": 657074862,
+  "center": {
+    "lat": 4.5824812,
+    "lon": -74.1171962
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Fundación Universitaria San Alfonso"
+  }
+},
+{
+  "type": "way",
+  "id": 692488250,
+  "center": {
+    "lat": 4.6264774,
+    "lon": -74.0718562
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "ANEP"
+  }
+},
+{
+  "type": "way",
+  "id": 693115795,
+  "center": {
+    "lat": 4.7330813,
+    "lon": -74.0391889
+  },
+  "tags": {
+    "amenity": "university",
+    "education": "university",
+    "name": "Escuela Colombiana de Rehabilitacion",
+    "operator": "Escuela Colombiana de Rehabilitacion"
+  }
+},
+{
+  "type": "way",
+  "id": 693629566,
+  "center": {
+    "lat": 4.6237654,
+    "lon": -74.0707395
+  },
+  "tags": {
+    "addr:housenumber": "15-36",
+    "addr:street": "Avenida Calle 34",
+    "amenity": "university",
+    "contact:website": "https://www.coruniversitec.edu.co/",
+    "name": "Corporación Universal de Investigación y Tecnología",
+    "short_name": "Corunivesitec"
+  }
+},
+{
+  "type": "way",
+  "id": 729202855,
+  "center": {
+    "lat": 4.6519282,
+    "lon": -74.0574821
+  },
+  "tags": {
+    "addr:housenumber": "69-17",
+    "addr:street": "Avenida Carrera 7",
+    "amenity": "university",
+    "building": "commercial",
+    "check_date": "2025-06-23",
+    "name": "Academia Nacional de Medicina"
+  }
+},
+{
+  "type": "way",
+  "id": 758806798,
+  "center": {
+    "lat": 4.4816463,
+    "lon": -74.1247666
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Antonio Nariño - Sede Usme"
+  }
+},
+{
+  "type": "way",
+  "id": 762684959,
+  "center": {
+    "lat": 4.5892398,
+    "lon": -74.0840872
+  },
+  "tags": {
+    "amenity": "university",
+    "barrier": "yes",
+    "name": "UniMinuto San Camilo",
+    "operator": "UniMinuto",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 868611053,
+  "center": {
+    "lat": 4.6540442,
+    "lon": -74.0623088
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Consultorio jurídico Universidad Santo Tomás"
+  }
+},
+{
+  "type": "way",
+  "id": 946463665,
+  "center": {
+    "lat": 4.6500884,
+    "lon": -74.0823185
+  },
+  "tags": {
+    "alt_name": "UAN",
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Antonio Nariño",
+    "wikidata": "Q6156336",
+    "wikimedia_commons": "Category:Universidad Antonio Nariño",
+    "wikipedia": "es:Universidad Antonio Nariño"
+  }
+},
+{
+  "type": "way",
+  "id": 948019276,
+  "center": {
+    "lat": 4.6567277,
+    "lon": -74.0633318
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Fundación Universitaria del Área Andina"
+  }
+},
+{
+  "type": "way",
+  "id": 1078280001,
+  "center": {
+    "lat": 4.8449518,
+    "lon": -74.0323551
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad El Bosque"
+  }
+},
+{
+  "type": "way",
+  "id": 1089388334,
+  "center": {
+    "lat": 4.6010011,
+    "lon": -74.1041558
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "UNAD"
+  }
+},
+{
+  "type": "way",
+  "id": 1090311151,
+  "center": {
+    "lat": 4.6422728,
+    "lon": -74.0538773
+  },
+  "tags": {
+    "addr:postcode": "11001",
+    "amenity": "university",
+    "barrier": "fence",
+    "contact:facebook": "UMBUniversidadManuelaBeltran",
+    "contact:instagram": "universidad_umb",
+    "contact:twitter": "UniversidadUMB",
+    "name": "Universidad Manuela Beltrán",
+    "name:en": "Manuela Beltrán University",
+    "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:00-12:00",
+    "website": "https://umb.edu.co",
+    "wikidata": "Q6753029",
+    "wikipedia": "es:Universidad Manuela Beltrán"
+  }
+},
+{
+  "type": "way",
+  "id": 1090378599,
+  "center": {
+    "lat": 4.6262680,
+    "lon": -74.0727964
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "37-11",
+    "addr:street": "Transversal 18A Bis",
+    "amenity": "university",
+    "name": "Politecnico Santa Fe de Bogotá",
+    "website": "https://www.politecnicosantafedebogota.edu.co/portal/"
+  }
+},
+{
+  "type": "way",
+  "id": 1094465450,
+  "center": {
+    "lat": 4.6579247,
+    "lon": -74.0626194
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "70A-34",
+    "addr:street": "Carrera 14A",
+    "alt_name": "Universidad del Área Andina",
+    "amenity": "university",
+    "description": "Encuentra programas de educación: profesionales, especializaciones, maestrías. técnicos, tecnólogos, diplomados, entre otros. Financiamiento e internacionalización de carreras, programas virtuales.",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Fund. Universitaria Área Andina",
+    "operator": "Areandina",
+    "operator:type": "university",
+    "phone": "+57 601 7449191",
+    "website": "https://www.areandina.edu.co/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1295006625,
+  "center": {
+    "lat": 4.6072135,
+    "lon": -74.0678084
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "6",
+    "name": "Módulo 2",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M2"
+  }
+},
+{
+  "type": "way",
+  "id": 1296140126,
+  "center": {
+    "lat": 4.6069027,
+    "lon": -74.0672960
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "22-79",
+    "addr:street": "Carrera 4",
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "4",
+    "healthcare": "psychotherapist",
+    "name": "Modulo 14",
+    "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:00-13:00",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "phone": "+57 601 2427030 x3942",
+    "ref": "M14",
+    "website": "https://www.utadeo.edu.co/es/link/bienestar-universitario/72301/asesoria-psicologica-0"
+  }
+},
+{
+  "type": "way",
+  "id": 1296165256,
+  "center": {
+    "lat": 4.6069432,
+    "lon": -74.0680515
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "9",
+    "name": "Módulo 5",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M5"
+  }
+},
+{
+  "type": "way",
+  "id": 1296244160,
+  "center": {
+    "lat": 4.6068451,
+    "lon": -74.0677287
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "guardhouse",
+    "name": "Porteria",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296478214,
+  "center": {
+    "lat": 4.6068802,
+    "lon": -74.0681254
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "1",
+    "check_date": "2026-08-05",
+    "communication:radio": "yes",
+    "description": "Radio universitaria centrada en la música clásica.106.9 fm",
+    "name": "Módulo 8",
+    "ref": "M8",
+    "source": "local knowledge",
+    "website": "https://www.utadeo.edu.co/es/micrositio/emisora-hjut"
+  }
+},
+{
+  "type": "way",
+  "id": 1296481908,
+  "center": {
+    "lat": 4.6074444,
+    "lon": -74.0680440
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "6",
+    "check_date": "2026-08-05",
+    "name": "Módulo 3",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M3"
+  }
+},
+{
+  "type": "way",
+  "id": 1296481915,
+  "center": {
+    "lat": 4.6066556,
+    "lon": -74.0677702
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "6",
+    "name": "Módulo 13 - Bienestar Universitario",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M13",
+    "website": "https://www.utadeo.edu.co/es/bienestar-universitario"
+  }
+},
+{
+  "type": "way",
+  "id": 1296516021,
+  "center": {
+    "lat": 4.6076398,
+    "lon": -74.0684131
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "2",
+    "description": "Aquí apoyamos tu formación integral, fortaleciendo habilidades necesarias para vivir, convivir, ser productivo y seguir aprendiendo toda la vida, ya que a partir de prácticas y expresiones artísticas promovemos tu participación en experiencias creativas y",
+    "email": "centroarte.cultura@utadeo.edu.co",
+    "internet_access": "yes",
+    "name": "Modulo 9, Centro de Arte y Cultura",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "university",
+    "phone": "+57 601 2427030 x1210",
+    "ref": "M9",
+    "website": "https://www.utadeo.edu.co/es/micrositio/centro-de-arte-y-cultura"
+  }
+},
+{
+  "type": "way",
+  "id": 1296532116,
+  "center": {
+    "lat": 4.6071451,
+    "lon": -74.0681095
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "6",
+    "check_date": "2026-08-05",
+    "internet_access": "yes",
+    "name": "Módulo 4",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296532117,
+  "center": {
+    "lat": 4.6070018,
+    "lon": -74.0682287
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "7",
+    "check_date": "2026-11-06",
+    "name": "Módulo 6",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M6"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733611,
+  "center": {
+    "lat": 4.6069246,
+    "lon": -74.0682464
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "6",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733612,
+  "center": {
+    "lat": 4.6068248,
+    "lon": -74.0684813
+  },
+  "tags": {
+    "alt_name": "Edificio Jaime Forero Valdes",
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "7",
+    "building:levels:underground": "1",
+    "building:roof": "1",
+    "check_date": "2026-11-06",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Módulo 7",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M7"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733613,
+  "center": {
+    "lat": 4.6068572,
+    "lon": -74.0682850
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "bridge",
+    "building:levels": "6",
+    "building:min_level": "1",
+    "name:signed": "no",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733614,
+  "center": {
+    "lat": 4.6071369,
+    "lon": -74.0688447
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "7",
+    "building:levels:underground": "1",
+    "building:roof": "1",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Módulo 7A",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M7A"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733615,
+  "center": {
+    "lat": 4.6069427,
+    "lon": -74.0686625
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "bridge",
+    "building:levels": "6",
+    "building:min_level": "1",
+    "name:signed": "no",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733616,
+  "center": {
+    "lat": 4.6074459,
+    "lon": -74.0683570
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "1",
+    "check_date": "2026-08-05",
+    "name": "Módulo 10",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M10"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733617,
+  "center": {
+    "lat": 4.6073797,
+    "lon": -74.0682288
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "2",
+    "check_date": "2026-10-16",
+    "layer": "-1",
+    "location": "surface",
+    "name": "Módulo 11",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M11"
+  }
+},
+{
+  "type": "way",
+  "id": 1296733618,
+  "center": {
+    "lat": 4.6072452,
+    "lon": -74.0681855
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "1",
+    "building:levels:underground": "1",
+    "check_date": "2026-08-25",
+    "name": "Módulo 25",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "ref": "M25"
+  }
+},
+{
+  "type": "way",
+  "id": 1296748241,
+  "center": {
+    "lat": 4.6067813,
+    "lon": -74.0676594
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "name": "Arcos",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296748242,
+  "center": {
+    "lat": 4.6068208,
+    "lon": -74.0676362
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "university",
+    "name": "Arcos",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 1296750363,
+  "center": {
+    "lat": 4.6070756,
+    "lon": -74.0668725
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "23-09",
+    "addr:street": "Carrera 3B",
+    "amenity": "university",
+    "building": "university",
+    "building:levels": "2",
+    "email": "consultorio.juridico@utadeo.edu.co",
+    "name": "Módulo 17, Consultorio Jurídico Universidad Jorge Tadeo Lozano",
+    "operator": "Universidad de Bogotá Jorge Tadeo Lozano",
+    "operator:type": "private",
+    "phone": "+57 061 2427030 Ext.3178",
+    "ref": "M17",
+    "website": "https://www.utadeo.edu.co/es/micrositio/consultorio-juridico-y-centro-de-conciliacion"
+  }
+},
+{
+  "type": "way",
+  "id": 1303104771,
+  "center": {
+    "lat": 4.6634617,
+    "lon": -74.0550582
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "78-47",
+    "addr:postcode": "110221",
+    "addr:street": "Avenida Carrera 11",
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Universidad EAN",
+    "opening_hours": "Mo-Sa 06:00-22:00",
+    "operator": "EAN",
+    "operator:type": "private",
+    "source": "local knowledge",
+    "website": "https://universidadean.edu.co/",
+    "wikidata": "Q9091550",
+    "wikimedia_commons": "Category:Universidad EAN",
+    "wikipedia": "es:Universidad EAN"
+  }
+},
+{
+  "type": "way",
+  "id": 1312343755,
+  "center": {
+    "lat": 4.6078468,
+    "lon": -74.0672987
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Casa de los Deportes, Universidad de Bogota Jorge Tadeo Lozano",
+    "operator": "Universidad de Bogota Jorge Tadeo Lozano",
+    "operator:type": "university",
+    "website": "https://www.utadeo.edu.co/es/link/guia-de-induccion-tadeista/290214/modulo-22",
+    "wikidata": "Q5937434",
+    "wikimedia_commons": "Category:Universidad Jorge Tadeo Lozano",
+    "wikipedia": "es:Universidad Jorge Tadeo Lozano"
+  }
+},
+{
+  "type": "way",
+  "id": 1312351302,
+  "center": {
+    "lat": 4.6089872,
+    "lon": -74.0676357
+  },
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Facultad de Arte Y Diseño Universidad Jorge Tadeo Lozano",
+    "operator": "Universidad de Bogota Jorge Tadeo Lozano",
+    "operator:type": "university",
+    "website": "https://www.utadeo.edu.co/es/facultad/artes-y-diseno",
+    "wikidata": "Q5937434",
+    "wikimedia_commons": "Category:Universidad Jorge Tadeo Lozano",
+    "wikipedia": "es:Universidad Jorge Tadeo Lozano"
+  }
+},
+{
+  "type": "way",
+  "id": 1529529297,
+  "center": {
+    "lat": 4.6061457,
+    "lon": -74.0689612
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad Central"
+  }
+},
+{
+  "type": "way",
+  "id": 1556621944,
+  "center": {
+    "lat": 4.6819832,
+    "lon": -74.0995625
+  },
+  "tags": {
+    "amenity": "university",
+    "education": "university",
+    "name": "area campo udca"
+  }
+},
+{
+  "type": "relation",
+  "id": 7445710,
+  "center": {
+    "lat": 4.6000116,
+    "lon": -74.0734533
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "education": "university",
+    "name": "Universidad del Rosario",
+    "operator": "Universidad del Rosario",
+    "type": "multipolygon",
+    "wikidata": "Q3997334",
+    "wikipedia": "es:Universidad del Rosario"
+  }
+},
+{
+  "type": "relation",
+  "id": 9087498,
+  "center": {
+    "lat": 4.6370095,
+    "lon": -74.1857935
+  },
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "name": "Universidad Distrital Francisco José de Caldas Sede El Porvenir",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 9231398,
+  "center": {
+    "lat": 4.6381526,
+    "lon": -74.0644389
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Santo Tomás sede principal",
+    "name:en": "Saint Thomas Aquinas University",
+    "type": "multipolygon",
+    "wikidata": "Q7402232",
+    "wikipedia": "es:Universidad Santo Tomás (Colombia)"
+  }
+},
+{
+  "type": "relation",
+  "id": 9881536,
+  "center": {
+    "lat": 4.5948404,
+    "lon": -74.0751559
+  },
+  "tags": {
+    "amenity": "university",
+    "building": "yes",
+    "name": "Universidad Libre",
+    "type": "multipolygon",
+    "wikidata": "Q5500137",
+    "wikipedia": "es:Universidad Libre (Colombia)"
+  }
+},
+{
+  "type": "relation",
+  "id": 10307846,
+  "center": {
+    "lat": 4.6384219,
+    "lon": -74.0858587
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "26-85",
+    "addr:street": "Carrera 45",
+    "alt_name": "Universidad Nacional",
+    "amenity": "university",
+    "barrier": "fence",
+    "email": "mediosdigitales@unal.edu.co",
+    "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UNAL_Logosimbolo.svg/220px-UNAL_Logosimbolo.svg.png",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "loc_name": "Ciudad Universitaria",
+    "name": "Universidad Nacional de Colombia",
+    "name:en": "National University of Colombia",
+    "phone": "+57 601 3165000",
+    "short_name": "UNAL",
+    "type": "multipolygon",
+    "website": "https://unal.edu.co/",
+    "wheelchair": "yes",
+    "wikidata": "Q7894591",
+    "wikipedia": "es:Ciudad Universitaria de Bogotá"
+  }
+},
+{
+  "type": "relation",
+  "id": 10404351,
+  "center": {
+    "lat": 4.5985171,
+    "lon": -74.0724312
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 12B",
+    "amenity": "university",
+    "building": "yes",
+    "education": "university",
+    "internet_access": "yes",
+    "name": "Corporación Unificada Nacional de Educacion Superior - CUN",
+    "type": "multipolygon",
+    "website": "https://cun.edu.co/",
+    "wikidata": "Q20014248",
+    "wikipedia": "es:Corporación Unificada Nacional de Educación Superior"
+  }
+},
+{
+  "type": "relation",
+  "id": 12835669,
+  "center": {
+    "lat": 4.8007412,
+    "lon": -74.0498287
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida El Jardin Calle 222",
+    "amenity": "university",
+    "name": "Universidad de Ciencias Aplicadas y Ambientales",
+    "phone": "+57 601 6760096",
+    "short_name": "U.D.C.A",
+    "type": "multipolygon",
+    "website": "https://udca.edu.co/",
+    "wheelchair": "yes",
+    "wikipedia": "es:Universidad de Ciencias Aplicadas y Ambientales"
+  }
+},
+{
+  "type": "relation",
+  "id": 12850401,
+  "center": {
+    "lat": 4.5959890,
+    "lon": -74.0676559
+  },
+  "tags": {
+    "addr:city": "Santa Fé",
+    "addr:street": "Calle 12",
+    "amenity": "university",
+    "name": "Universidad Externado de Colombia",
+    "type": "multipolygon",
+    "wikidata": "Q7894273",
+    "wikipedia": "es:Universidad Externado de Colombia"
+  }
+},
+{
+  "type": "relation",
+  "id": 12923963,
+  "center": {
+    "lat": 4.6011978,
+    "lon": -74.0645130
+  },
+  "tags": {
+    "amenity": "university",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Universidad de los Andes",
+    "type": "multipolygon",
+    "website": "http://uniandes.edu.co",
+    "wikidata": "Q1569421",
+    "wikipedia": "es:Universidad de los Andes (Colombia)"
+  }
+},
+{
+  "type": "relation",
+  "id": 17546752,
+  "center": {
+    "lat": 4.6012680,
+    "lon": -74.0614514
+  },
+  "tags": {
+    "amenity": "university",
+    "name": "Universidad América",
+    "type": "multipolygon",
+    "wikidata": "Q11050122",
+    "wikipedia": "es:Universidad de América"
+  }
+}
+
+  ]
+}
+

@@ -1,0 +1,3597 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T01:27:35Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 416773307,
+  "lat": 4.7291633,
+  "lon": -74.0661802,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "check_date": "2026-04-20",
+    "leisure": "fitness_centre",
+    "level": "1",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 470308809,
+  "lat": 4.6467195,
+  "lon": -74.1097086,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Atlethic",
+    "website": "https://athleticgym.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 611375592,
+  "lat": 4.7112424,
+  "lon": -74.1121750,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 1661163299,
+  "lat": 4.7038497,
+  "lon": -74.0430092,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 2579001586,
+  "lat": 4.6984415,
+  "lon": -74.0386439,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housename": "YogaSpace",
+    "addr:street": "Calle 119",
+    "leisure": "fitness_centre",
+    "name": "YogaSpace",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "yoga",
+    "website": "https://www.yogaspace.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 2692999082,
+  "lat": 4.5963279,
+  "lon": -74.1262911,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Tropical GYM"
+  }
+},
+{
+  "type": "node",
+  "id": 2774270581,
+  "lat": 4.7234404,
+  "lon": -74.0270121,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 147",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 3214557025,
+  "lat": 4.6792083,
+  "lon": -74.0447800,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 3669350790,
+  "lat": 4.6481210,
+  "lon": -74.0598906,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "check_date": "2025-01-26",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 3800067207,
+  "lat": 4.6803124,
+  "lon": -74.1496251,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "BHB"
+  }
+},
+{
+  "type": "node",
+  "id": 3942685091,
+  "lat": 4.7103454,
+  "lon": -74.0945273,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Titan Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 4110077745,
+  "lat": 4.6287447,
+  "lon": -74.0777239,
+  "tags": {
+    "addr:street": "Avenida 28",
+    "leisure": "fitness_centre",
+    "name": "Academia de Baile",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "dance"
+  }
+},
+{
+  "type": "node",
+  "id": 4223887594,
+  "lat": 4.6641414,
+  "lon": -74.1315356,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "check_date": "2026-08-28",
+    "internet_access": "wlan",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech",
+    "opening_hours": "Mo-Su 05:00-22:00",
+    "website": "https://bodytech.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 4230774190,
+  "lat": 4.7144151,
+  "lon": -74.1262822,
+  "tags": {
+    "addr:housenumber": "73-13",
+    "addr:street": "Carrera 112A",
+    "leisure": "fitness_centre",
+    "name": "dibecol",
+    "opening_hours": "Mo-Su 07:30-21:00",
+    "phone": "+57 601 4312577"
+  }
+},
+{
+  "type": "node",
+  "id": 4368540694,
+  "lat": 4.7049741,
+  "lon": -74.2289492,
+  "tags": {
+    "addr:housenumber": "3-13",
+    "addr:street": "Carrera 1",
+    "email": "info@studiofitness.com.co",
+    "leisure": "fitness_centre",
+    "name": "Fitness Studio",
+    "name:es": "Fitness Studio",
+    "opening_hours": "Mo-Sa 06:30-11:00,17:00-21:00; Su,PH off",
+    "phone": "+57 321 3237430",
+    "website": "http://www.studiofitness.com.co"
+  }
+},
+{
+  "type": "node",
+  "id": 4497878395,
+  "lat": 4.7547716,
+  "lon": -74.0631285,
+  "tags": {
+    "addr:street": "Calle 169B",
+    "leisure": "fitness_centre",
+    "name": "Hardbody 170",
+    "name:en": "Hardbody 170",
+    "name:es": "Hardbody 170"
+  }
+},
+{
+  "type": "node",
+  "id": 4837454374,
+  "lat": 4.6510005,
+  "lon": -74.0544502,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Live Yoga",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 5119887918,
+  "lat": 4.7417722,
+  "lon": -74.0464136,
+  "tags": {
+    "addr:street": "Avenida Calle 161",
+    "leisure": "fitness_centre",
+    "name": "Smart Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5122527834,
+  "lat": 4.7545627,
+  "lon": -74.0631371,
+  "tags": {
+    "addr:street": "Carrera 67",
+    "leisure": "fitness_centre",
+    "name": "Elemental Soul",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5122537081,
+  "lat": 4.7504547,
+  "lon": -74.0614741,
+  "tags": {
+    "addr:street": "Carrera 62",
+    "leisure": "fitness_centre",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131518967,
+  "lat": 4.6923247,
+  "lon": -74.0439844,
+  "tags": {
+    "addr:street": "Calle 109",
+    "leisure": "fitness_centre",
+    "name": "Hard Body",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131817315,
+  "lat": 4.7106160,
+  "lon": -74.2245042,
+  "tags": {
+    "addr:street": "Carrera 3",
+    "leisure": "fitness_centre",
+    "name": "Body Power Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131891092,
+  "lat": 4.6916505,
+  "lon": -74.0450299,
+  "tags": {
+    "addr:street": "Avenida Carrera 15",
+    "leisure": "fitness_centre",
+    "name": "Rehab",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5131910061,
+  "lat": 4.6975214,
+  "lon": -74.0453500,
+  "tags": {
+    "addr:street": "Avenida Calle 116",
+    "leisure": "fitness_centre",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5132124379,
+  "lat": 4.6647582,
+  "lon": -74.0537817,
+  "tags": {
+    "addr:street": "Carrera 11",
+    "leisure": "fitness_centre",
+    "name": "Forma",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133101385,
+  "lat": 4.6984750,
+  "lon": -74.0397376,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 119",
+    "leisure": "fitness_centre",
+    "name": "Black Fitness",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133143538,
+  "lat": 4.6651882,
+  "lon": -74.0471615,
+  "tags": {
+    "addr:street": "Calle 85",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "check_date": "2025-07-06",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 5133392970,
+  "lat": 4.6584011,
+  "lon": -74.0529020,
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "check_date": "2025-01-26",
+    "leisure": "fitness_centre",
+    "name": "Bigg Rosales",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133615334,
+  "lat": 4.6308770,
+  "lon": -74.0645956,
+  "tags": {
+    "addr:housenumber": "43-53",
+    "addr:street": "Avenida Carrera 7",
+    "check_date": "2026-04-09",
+    "leisure": "fitness_centre",
+    "name": "Stark Smart Gym 43",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133641142,
+  "lat": 4.7178701,
+  "lon": -74.1220289,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 5133735331,
+  "lat": 4.6507929,
+  "lon": -74.0631288,
+  "tags": {
+    "addr:housenumber": "64-06",
+    "addr:street": "Calle 64",
+    "check_date": "2024-09-05",
+    "leisure": "fitness_centre",
+    "name": "Mundo Olimpico",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5133797832,
+  "lat": 4.6359763,
+  "lon": -74.0635826,
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "leisure": "fitness_centre",
+    "name": "Ukb X",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5134084672,
+  "lat": 4.6681075,
+  "lon": -74.0574364,
+  "tags": {
+    "addr:street": "Calle 82",
+    "check_date": "2024-06-26",
+    "leisure": "fitness_centre",
+    "name": "Futuro",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5135741961,
+  "lat": 4.6665729,
+  "lon": -74.0555564,
+  "tags": {
+    "addr:street": "Calle 81",
+    "leisure": "fitness_centre",
+    "name": "Gym Club",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5135752656,
+  "lat": 4.6239381,
+  "lon": -74.0741274,
+  "tags": {
+    "addr:street": "Avenida Calle 34",
+    "leisure": "fitness_centre",
+    "name": "Pole Sport",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5138241484,
+  "lat": 4.6613904,
+  "lon": -74.0649961,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 72",
+    "leisure": "fitness_centre",
+    "name": "Citroen",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5141526179,
+  "lat": 4.6553895,
+  "lon": -74.1124437,
+  "tags": {
+    "addr:housenumber": "29",
+    "addr:street": "Avenida Calle 24",
+    "leisure": "fitness_centre",
+    "name": "Curves"
+  }
+},
+{
+  "type": "node",
+  "id": 5146139227,
+  "lat": 4.6640153,
+  "lon": -74.0593589,
+  "tags": {
+    "addr:street": "Calle 77",
+    "leisure": "fitness_centre",
+    "name": "Rapidisimo",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5146184811,
+  "lat": 4.7402475,
+  "lon": -74.0300317,
+  "tags": {
+    "addr:street": "Calle 163A",
+    "leisure": "fitness_centre",
+    "name": "Energym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5148380708,
+  "lat": 4.6755066,
+  "lon": -74.0972870,
+  "tags": {
+    "addr:street": "Avenida Carrera 70",
+    "leisure": "fitness_centre",
+    "name": "Rustikal Box",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5148604191,
+  "lat": 4.7259257,
+  "lon": -74.0430422,
+  "tags": {
+    "addr:street": "Calle 144",
+    "leisure": "fitness_centre",
+    "name": "Natura Spa Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5148762798,
+  "lat": 4.6700380,
+  "lon": -74.0684231,
+  "tags": {
+    "addr:street": "Calle 77",
+    "leisure": "fitness_centre",
+    "name": "Fit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5150641147,
+  "lat": 4.7650569,
+  "lon": -74.0239295,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 4",
+    "leisure": "fitness_centre",
+    "name": "People Fitness",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5152056002,
+  "lat": 4.6905266,
+  "lon": -74.0510042,
+  "tags": {
+    "addr:street": "Calle 104",
+    "leisure": "fitness_centre",
+    "name": "Be Smart",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157702166,
+  "lat": 4.7205727,
+  "lon": -74.0397848,
+  "tags": {
+    "addr:street": "Calle 140",
+    "leisure": "fitness_centre",
+    "name": "Step Ahead",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157767781,
+  "lat": 4.6910554,
+  "lon": -74.0994684,
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "leisure": "fitness_centre",
+    "name": "Crossfit Eagle",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157814538,
+  "lat": 4.6947323,
+  "lon": -74.0498729,
+  "tags": {
+    "addr:street": "Calle 109",
+    "leisure": "fitness_centre",
+    "name": "54D",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157850742,
+  "lat": 4.6950132,
+  "lon": -74.0497136,
+  "tags": {
+    "addr:street": "Calle 109",
+    "leisure": "fitness_centre",
+    "name": "U Spa & Fit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5157933219,
+  "lat": 4.6870752,
+  "lon": -74.0742126,
+  "tags": {
+    "addr:street": "Avenida Carrera 68",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5159329107,
+  "lat": 4.6908042,
+  "lon": -74.0629095,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5159434157,
+  "lat": 4.6879438,
+  "lon": -74.0521324,
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "leisure": "fitness_centre",
+    "name": "Body Tech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5159544335,
+  "lat": 4.7238282,
+  "lon": -74.0529846,
+  "tags": {
+    "addr:street": "Calle 138",
+    "leisure": "fitness_centre",
+    "name": "Studio Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5159839059,
+  "lat": 4.6547990,
+  "lon": -74.0765003,
+  "tags": {
+    "addr:city": "Barrios Unidos",
+    "addr:street": "Carrera 28A",
+    "leisure": "fitness_centre",
+    "name": "Yoga",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 5160995201,
+  "lat": 4.7262586,
+  "lon": -74.0560300,
+  "tags": {
+    "addr:street": "Carrera 53",
+    "leisure": "fitness_centre",
+    "name": "Revolution Fitness",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5161323125,
+  "lat": 4.6942345,
+  "lon": -74.0674654,
+  "tags": {
+    "addr:street": "Avenida Suba",
+    "leisure": "fitness_centre",
+    "name": "Body Brite",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5161897035,
+  "lat": 4.6769586,
+  "lon": -74.0660900,
+  "tags": {
+    "addr:street": "Carrera 49D",
+    "leisure": "fitness_centre",
+    "name": "Fitness Formula 4",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5161989413,
+  "lat": 4.6807102,
+  "lon": -74.0615541,
+  "tags": {
+    "addr:street": "Calle 93",
+    "leisure": "fitness_centre",
+    "name": "Inter Rapidisimo",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5165824509,
+  "lat": 4.6917294,
+  "lon": -74.1010762,
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "leisure": "fitness_centre",
+    "name": "Warriors Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5171543768,
+  "lat": 4.6879846,
+  "lon": -74.0575913,
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "leisure": "fitness_centre",
+    "name": "Met",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173588225,
+  "lat": 4.6447748,
+  "lon": -74.0641997,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "leisure": "fitness_centre",
+    "name": "Healthy",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5173759083,
+  "lat": 4.6442754,
+  "lon": -74.0645029,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "check_date": "2026-01-24",
+    "leisure": "fitness_centre",
+    "name": "Manager Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5174935211,
+  "lat": 4.6841075,
+  "lon": -74.0471300,
+  "tags": {
+    "addr:street": "Avenida Calle 100",
+    "leisure": "fitness_centre",
+    "name": "Spring Center Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5174967960,
+  "lat": 4.7066983,
+  "lon": -74.1232478,
+  "tags": {
+    "addr:street": "Carrera 106A",
+    "leisure": "fitness_centre",
+    "name": "Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5184029055,
+  "lat": 4.7017624,
+  "lon": -74.1301856,
+  "tags": {
+    "addr:street": "Calle 64D",
+    "leisure": "fitness_centre",
+    "name": "Evolution Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5184254416,
+  "lat": 4.7016305,
+  "lon": -74.1159319,
+  "tags": {
+    "addr:street": "Calle 71B",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5184706658,
+  "lat": 4.7131738,
+  "lon": -74.1259771,
+  "tags": {
+    "addr:street": "Calle 72F",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5206764606,
+  "lat": 4.6188240,
+  "lon": -74.0679504,
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00; Fr 05:00-21:00; Sa 08:00-17:00; Su 09:00-17:00",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5214615780,
+  "lat": 4.5749990,
+  "lon": -74.0878883,
+  "tags": {
+    "addr:housenumber": "5-06",
+    "addr:street": "Calle 18 S",
+    "leisure": "fitness_centre",
+    "name": "Korpos Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5217058929,
+  "lat": 4.6170353,
+  "lon": -74.1136271,
+  "tags": {
+    "addr:street": "Carrera 50",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5222200907,
+  "lat": 4.5514294,
+  "lon": -74.0921582,
+  "tags": {
+    "addr:street": "Carretera 4 E (Avenida La Victoria)",
+    "leisure": "fitness_centre",
+    "name": "Fit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5227267088,
+  "lat": 4.6855586,
+  "lon": -74.0655007,
+  "tags": {
+    "addr:street": "Calle 97",
+    "leisure": "fitness_centre",
+    "name": "Almocèn Confectones",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5229109332,
+  "lat": 4.5881402,
+  "lon": -74.1009106,
+  "tags": {
+    "addr:street": "Carrera 24",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Soal"
+  }
+},
+{
+  "type": "node",
+  "id": 5230803423,
+  "lat": 4.6320034,
+  "lon": -74.0934926,
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "leisure": "fitness_centre",
+    "name": "Aqua Fitness",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5230803424,
+  "lat": 4.6319491,
+  "lon": -74.0934521,
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "leisure": "fitness_centre",
+    "name": "Aqua Center Spa",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5231046252,
+  "lat": 4.5434091,
+  "lon": -74.0882240,
+  "tags": {
+    "addr:street": "Diagonal 45 C S",
+    "leisure": "fitness_centre",
+    "name": "Sport Body Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5231440948,
+  "lat": 4.6910110,
+  "lon": -74.0514588,
+  "tags": {
+    "addr:street": "Avenida Carrera 19",
+    "leisure": "fitness_centre",
+    "name": "Little Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5233551320,
+  "lat": 4.6637185,
+  "lon": -74.1179772,
+  "tags": {
+    "addr:city": "bogotá D.C.",
+    "addr:street": "Calle 24",
+    "leisure": "fitness_centre",
+    "name": "Pilates & Workout",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5233772790,
+  "lat": 4.6655832,
+  "lon": -74.1270045,
+  "tags": {
+    "addr:street": "Carrera 82",
+    "fixme": "name",
+    "leisure": "fitness_centre",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5235085429,
+  "lat": 4.6642575,
+  "lon": -74.1285061,
+  "tags": {
+    "addr:street": "Calle 22",
+    "leisure": "fitness_centre",
+    "name": "Figura & Salud",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5235125707,
+  "lat": 4.6646175,
+  "lon": -74.1287278,
+  "tags": {
+    "addr:street": "Calle 22",
+    "leisure": "fitness_centre",
+    "name": "Academia de Tae Kwon-Do Yoo-sin",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5240009893,
+  "lat": 4.6291520,
+  "lon": -74.1293956,
+  "tags": {
+    "addr:street": "Avenida de las Américas",
+    "leisure": "fitness_centre",
+    "name": "Kiwa",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5240218024,
+  "lat": 4.6255028,
+  "lon": -74.1176200,
+  "tags": {
+    "addr:street": "Carrera 60",
+    "leisure": "fitness_centre",
+    "name": "Rapidisimo",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5241240345,
+  "lat": 4.6001203,
+  "lon": -74.1329864,
+  "tags": {
+    "addr:street": "Carrera 52C",
+    "leisure": "fitness_centre",
+    "name": "Crixus Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5242976831,
+  "lat": 4.5975925,
+  "lon": -74.1007028,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 27",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5242976832,
+  "lat": 4.5975631,
+  "lon": -74.1007249,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 27",
+    "leisure": "fitness_centre",
+    "name": "Extreme Body",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5243000901,
+  "lat": 4.5988738,
+  "lon": -74.1045400,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 1B",
+    "leisure": "fitness_centre",
+    "name": "Practicias de Medtacion",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 5251177585,
+  "lat": 4.6520862,
+  "lon": -74.1377807,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 80A Bis",
+    "leisure": "fitness_centre",
+    "name": "Spinning Club",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "node",
+  "id": 5268995224,
+  "lat": 4.6942577,
+  "lon": -74.1042391,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Bally Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 5427941221,
+  "lat": 4.6839510,
+  "lon": -74.1628396,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Entreno"
+  }
+},
+{
+  "type": "node",
+  "id": 5468347022,
+  "lat": 4.6427343,
+  "lon": -74.0745663,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 5541127908,
+  "lat": 4.6517286,
+  "lon": -74.0550420,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Brooklyn Fit-Boxing",
+    "sport": "boxing"
+  }
+},
+{
+  "type": "node",
+  "id": 5550766566,
+  "lat": 4.6186396,
+  "lon": -74.0726692,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "16-09",
+    "addr:street": "Calle 30",
+    "check_date": "2024-08-20",
+    "leisure": "fitness_centre",
+    "name": "Mac Gym",
+    "phone": "+57 320 4931993"
+  }
+},
+{
+  "type": "node",
+  "id": 5762561353,
+  "lat": 4.7143708,
+  "lon": -74.1173640,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "GYM Bee Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 5828496301,
+  "lat": 4.6330265,
+  "lon": -74.0692931,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Body Care"
+  }
+},
+{
+  "type": "node",
+  "id": 5970627986,
+  "lat": 4.6387930,
+  "lon": -74.0723455,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "La Zona de Bloque",
+    "name:en": "Zona de Bloque - Bouldering Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 5976628080,
+  "lat": 4.6424683,
+  "lon": -74.0628470,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Herd Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 6008333295,
+  "lat": 4.6310326,
+  "lon": -74.0753465,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Mento Pilates",
+    "phone": "+57 601 4674030",
+    "sport": "pilates",
+    "website": "https://www.mentopilates.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 6015667058,
+  "lat": 4.6200975,
+  "lon": -74.0746868,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "19-33",
+    "addr:street": "Calle 32",
+    "description": "Organización sin ánimo de lucro IDH",
+    "leisure": "fitness_centre",
+    "name": "Instituto de Desarrollo Humano",
+    "opening_hours": "Mo-Fr 07:00-12:00, 16:00-20:30; Sa 09:00-13:00",
+    "sport": "yoga",
+    "website": "http://www.idh.org.co"
+  }
+},
+{
+  "type": "node",
+  "id": 6016448434,
+  "lat": 4.6166083,
+  "lon": -74.0681061,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "6-41",
+    "addr:street": "Calle 30A",
+    "leisure": "fitness_centre",
+    "name": "Übung Fisioterapia & Pilates",
+    "sport": "pilates"
+  }
+},
+{
+  "type": "node",
+  "id": 6032177216,
+  "lat": 4.6165434,
+  "lon": -74.0728294,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "14-40",
+    "addr:street": "Calle 26A",
+    "leisure": "fitness_centre",
+    "name": "Fundación de Yoga Rissadeva Gur",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 6034974887,
+  "lat": 4.6348030,
+  "lon": -74.0750586,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 24",
+    "description": "Centro de entrenamiento funcional",
+    "leisure": "fitness_centre",
+    "name": "Equilibrium",
+    "opening_hours": "`",
+    "phone": "+57 601 9083113"
+  }
+},
+{
+  "type": "node",
+  "id": 6038219116,
+  "lat": 4.7090200,
+  "lon": -74.2085594,
+  "tags": {
+    "addr:city": "Funza",
+    "addr:street": "Carrera 6",
+    "leisure": "fitness_centre",
+    "name": "Stilos Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 6038219126,
+  "lat": 4.7085398,
+  "lon": -74.2061117,
+  "tags": {
+    "addr:city": "Funza",
+    "addr:floor": "2",
+    "addr:street": "Calle 15",
+    "leisure": "fitness_centre",
+    "name": "Stars Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 6040264206,
+  "lat": 4.6919259,
+  "lon": -74.0847025,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "website": "https://www.smartfit.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 6040409503,
+  "lat": 4.6528198,
+  "lon": -74.0637643,
+  "tags": {
+    "addr:floor": "3",
+    "leisure": "fitness_centre",
+    "name": "Fitness24Seven"
+  }
+},
+{
+  "type": "node",
+  "id": 6069090434,
+  "lat": 4.7211263,
+  "lon": -74.0268579,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "145-87",
+    "addr:street": "Avenida Carrera 7",
+    "branch": "Cedritos",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "description": "Smartfit",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00; Fr 05:00-21:00; Sa 07:00-17:00; Su 08:00-17:00",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "sport": "dumbbells;fitness;athletics;weightlifting;zumba;free_weight;exercise_machines;group_classes;cardio;exercise",
+    "website": "https://www.smartfit.com.co"
+  }
+},
+{
+  "type": "node",
+  "id": 6186351922,
+  "lat": 4.7547991,
+  "lon": -74.0804357,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Body Toned"
+  }
+},
+{
+  "type": "node",
+  "id": 6205551860,
+  "lat": 4.6517096,
+  "lon": -74.0550438,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Cyglo Indoor Cycling",
+    "sport": "boxing"
+  }
+},
+{
+  "type": "node",
+  "id": 6219560189,
+  "lat": 4.6939904,
+  "lon": -74.1173699,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Native Cf Box"
+  }
+},
+{
+  "type": "node",
+  "id": 6317019484,
+  "lat": 4.6994068,
+  "lon": -74.1031448,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "85-36",
+    "addr:postcode": "111051",
+    "addr:street": "Calle 75 Bis",
+    "contact:facebook": "https://www.facebook.com/Kimeraboxbogota/",
+    "leisure": "fitness_centre",
+    "name": "Kimera Box Bogota",
+    "opening_hours": "Mo-Fr 06:00-10:00, 16:30-20:30; Sa 09:00-12:00; Su 09:00-12:00",
+    "payment:cash": "yes",
+    "phone": "+57 313 4620582;+57 321 4055187",
+    "sport": "exercise;fitness;gymnastics;athletics"
+  }
+},
+{
+  "type": "node",
+  "id": 6321934775,
+  "lat": 4.6387593,
+  "lon": -74.0654445,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 6347834697,
+  "lat": 4.6215567,
+  "lon": -74.0733055,
+  "tags": {
+    "addr:housenumber": "32A-46",
+    "addr:street": "Carrera 18",
+    "contact:facebook": "anandamarga1921",
+    "leisure": "fitness_centre",
+    "name": "Fundación Ananda Marga",
+    "phone": "+57 300 3000298",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 6374956516,
+  "lat": 4.7006403,
+  "lon": -74.0812228,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Pilates",
+    "sport": "pilates"
+  }
+},
+{
+  "type": "node",
+  "id": 6377173692,
+  "lat": 4.6290894,
+  "lon": -74.0772949,
+  "tags": {
+    "leisure": "fitness_centre",
+    "sport": "pilates"
+  }
+},
+{
+  "type": "node",
+  "id": 6388382360,
+  "lat": 4.6430253,
+  "lon": -74.0739543,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 6437189814,
+  "lat": 4.6129484,
+  "lon": -74.0666889,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Happy Yoga",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 6474237585,
+  "lat": 4.6451635,
+  "lon": -74.1109845,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Atlétic"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680247,
+  "lat": 4.6407931,
+  "lon": -74.1941010,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680248,
+  "lat": 4.6408572,
+  "lon": -74.1939294,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680249,
+  "lat": 4.6409214,
+  "lon": -74.1938006,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680250,
+  "lat": 4.6408358,
+  "lon": -74.1938221,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680251,
+  "lat": 4.6410925,
+  "lon": -74.1934680,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6680680252,
+  "lat": 4.6410069,
+  "lon": -74.1935002,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 6694853387,
+  "lat": 4.6452831,
+  "lon": -74.1299954,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "One studio zumba"
+  }
+},
+{
+  "type": "node",
+  "id": 6707813736,
+  "lat": 4.5915951,
+  "lon": -74.1237056,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 6781507265,
+  "lat": 4.6752796,
+  "lon": -74.0543038,
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "leisure": "fitness_centre",
+    "name": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 6794103847,
+  "lat": 4.6812303,
+  "lon": -74.1679962,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Powerfist"
+  }
+},
+{
+  "type": "node",
+  "id": 6835892237,
+  "lat": 4.6642380,
+  "lon": -74.0517337,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Ko",
+    "opening_hours": "Mo-Fr 06:00-19:45",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 6844823020,
+  "lat": 4.6620047,
+  "lon": -74.0524398,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Pilates ProWorks"
+  }
+},
+{
+  "type": "node",
+  "id": 6970406285,
+  "lat": 4.6542110,
+  "lon": -74.0538977,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Step ahead"
+  }
+},
+{
+  "type": "node",
+  "id": 7055471417,
+  "lat": 4.7105983,
+  "lon": -74.1309041,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 7107638677,
+  "lat": 4.6810794,
+  "lon": -74.1518431,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "112-58",
+    "addr:postcode": "0000",
+    "addr:street": "Calle 17",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Metro Fontibón",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/metro-fontibon"
+  }
+},
+{
+  "type": "node",
+  "id": 7156385946,
+  "lat": 4.6705587,
+  "lon": -74.0531218,
+  "tags": {
+    "check_date": "2025-10-15",
+    "leisure": "fitness_centre",
+    "name": "Cyglo",
+    "website": "https://cyglocolombia.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 7193950281,
+  "lat": 4.7122139,
+  "lon": -74.0346448,
+  "tags": {
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "brand:wikipedia": "pt:Smart Fit",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Su 04:00-21:00",
+    "sport": "multi",
+    "website": "https://www.smartfit.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 7237403495,
+  "lat": 4.6048359,
+  "lon": -74.0702365,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 7272244731,
+  "lat": 4.6711883,
+  "lon": -74.0526329,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "CrossFit Bogota"
+  }
+},
+{
+  "type": "node",
+  "id": 7313717675,
+  "lat": 4.5858002,
+  "lon": -74.1961746,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Turbo Max"
+  }
+},
+{
+  "type": "node",
+  "id": 8734616140,
+  "lat": 4.7493720,
+  "lon": -74.0644035,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "centro de entrenamiento físico Elmental Soul CF"
+  }
+},
+{
+  "type": "node",
+  "id": 8891565743,
+  "lat": 4.6560002,
+  "lon": -74.1064292,
+  "tags": {
+    "branch": "Torre Central",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 8944567066,
+  "lat": 4.6103368,
+  "lon": -74.1746932,
+  "tags": {
+    "addr:housename": "57 B Sur",
+    "addr:street": "Carrera 79 Bis A",
+    "leisure": "fitness_centre",
+    "name": "Fon Gym Crossfit",
+    "phone": "+57 601 7755630"
+  }
+},
+{
+  "type": "node",
+  "id": 9078375440,
+  "lat": 4.6480272,
+  "lon": -74.1018592,
+  "tags": {
+    "branch": "Gran Estacion",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "name:es": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 9101974917,
+  "lat": 4.6368526,
+  "lon": -74.0633612,
+  "tags": {
+    "check_date:opening_hours": "2024-01-31",
+    "leisure": "fitness_centre",
+    "name": "Kick 5",
+    "opening_hours:signed": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 9406533909,
+  "lat": 4.7911110,
+  "lon": -74.0422887,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Cafam"
+  }
+},
+{
+  "type": "node",
+  "id": 9506331418,
+  "lat": 4.6868765,
+  "lon": -74.0522427,
+  "tags": {
+    "addr:housenumber": "100-46",
+    "addr:street": "Avenida Carrera 19",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 04:00-22:00; Fr 05:00-22:00; Sa 06:00-20:00; Su 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 9998576917,
+  "lat": 4.7480511,
+  "lon": -74.0915606,
+  "tags": {
+    "internet_access": "wlan",
+    "leisure": "fitness_centre",
+    "name:en": "Outdoor gym",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10005345717,
+  "lat": 4.7473690,
+  "lon": -74.0885791,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name:en": "Outdoor gym",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10005345817,
+  "lat": 4.7493194,
+  "lon": -74.0907427,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name:en": "Outdoor gym",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 10057287660,
+  "lat": 4.6201605,
+  "lon": -74.1359396,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "71C-19",
+    "addr:street": "Calle 3 Sur",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Plaza las Americas",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/plaza-las-americas"
+  }
+},
+{
+  "type": "node",
+  "id": 10057305027,
+  "lat": 4.6050847,
+  "lon": -74.1830891,
+  "tags": {
+    "addr:city": "Bosa",
+    "addr:housenumber": "78H-54",
+    "addr:postcode": "00000",
+    "addr:street": "Calle 65 Sur",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/exito-bosa"
+  }
+},
+{
+  "type": "node",
+  "id": 10057307310,
+  "lat": 4.7129978,
+  "lon": -74.2215339,
+  "tags": {
+    "addr:city": "Mosquera",
+    "addr:housenumber": "15A-57",
+    "addr:postcode": "00000",
+    "addr:street": "Carrera 3",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Eco Plaza Mosquera",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/eco-plaza-mosquera"
+  }
+},
+{
+  "type": "node",
+  "id": 10057328417,
+  "lat": 4.6117804,
+  "lon": -74.2232534,
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:postcode": "0000",
+    "addr:street": "CC. Prado Verde",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Prado Verde",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/prado-verde"
+  }
+},
+{
+  "type": "node",
+  "id": 10057336271,
+  "lat": 4.5889787,
+  "lon": -74.2054693,
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:housenumber": "32-35",
+    "addr:street": "Calle 7",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Mercurio Soacha",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/mercurio-soacha"
+  }
+},
+{
+  "type": "node",
+  "id": 10057337190,
+  "lat": 4.6002427,
+  "lon": -74.1571191,
+  "tags": {
+    "addr:city": "Localidad Bosa",
+    "addr:housenumber": "77A-18",
+    "addr:street": "Autopista Sur",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Metro Autopista Sur",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/metro-autopista-sur"
+  }
+},
+{
+  "type": "node",
+  "id": 10057343260,
+  "lat": 4.6415471,
+  "lon": -74.1583600,
+  "tags": {
+    "addr:city": "Bogotá, D.C.",
+    "addr:housenumber": "6-37",
+    "addr:street": "Carrera 86G",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "charge": "$69.900, $79.900 COP",
+    "description": "Tintal Plaza",
+    "fee": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00, Fr 05:00-21:00, Sa 07:00-17:00, Su 08:00-17:00",
+    "phone": "+57 350 3100919",
+    "website": "https://www.smartfit.com.co/gimnasios/tintal-plaza"
+  }
+},
+{
+  "type": "node",
+  "id": 10153092399,
+  "lat": 4.6003683,
+  "lon": -74.1632964,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 10285082670,
+  "lat": 4.6482805,
+  "lon": -74.0688129,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 10687291450,
+  "lat": 4.7174724,
+  "lon": -74.0346315,
+  "tags": {
+    "branch": "Cedritos",
+    "leisure": "fitness_centre",
+    "name": "Bodytech"
+  }
+},
+{
+  "type": "node",
+  "id": 10689059978,
+  "lat": 4.7188627,
+  "lon": -74.0359737,
+  "tags": {
+    "branch": "Calle 140",
+    "leisure": "fitness_centre",
+    "name": "Spinning Center",
+    "website": "https://spinningcentergym.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 11577332175,
+  "lat": 4.6210917,
+  "lon": -74.0674684,
+  "tags": {
+    "brand": "Anytime Fitness",
+    "brand:wikidata": "Q4778364",
+    "check_date": "2026-04-09",
+    "leisure": "fitness_centre",
+    "name": "Anytime Fitness",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 11780718659,
+  "lat": 4.6627456,
+  "lon": -74.0682500,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Athletic"
+  }
+},
+{
+  "type": "node",
+  "id": 11940031857,
+  "lat": 4.6691108,
+  "lon": -74.1193860,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "GAP Fitness",
+    "sport": "crossfit"
+  }
+},
+{
+  "type": "node",
+  "id": 12068393212,
+  "lat": 4.6630794,
+  "lon": -74.0551268,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Gimnasio EAN",
+    "opening_hours": "Mo-Sa 06:00-22:00",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 12106390354,
+  "lat": 4.6184545,
+  "lon": -74.1100516,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Cobra Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 12147043801,
+  "lat": 4.6079446,
+  "lon": -74.0674557,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Gimnasio UJTL",
+    "opening_hours": "Mo-Fr 08:00-17:00",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 12297860241,
+  "lat": 4.5860526,
+  "lon": -74.0945361,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 12568582006,
+  "lat": 4.6543170,
+  "lon": -74.0583054,
+  "tags": {
+    "check_date": "2025-02-07",
+    "leisure": "fitness_centre",
+    "name": "Happyyoga",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "node",
+  "id": 12591351048,
+  "lat": 4.6500456,
+  "lon": -74.0589088,
+  "tags": {
+    "check_date": "2025-02-15",
+    "leisure": "fitness_centre",
+    "name": "Stark Smart Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 12601867066,
+  "lat": 4.5964016,
+  "lon": -74.1529240,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Avenida Calle 57R Sur",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "brand:wikipedia": "es:Smart Fit",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 12610746731,
+  "lat": 4.5903116,
+  "lon": -74.1234207,
+  "tags": {
+    "addr:city": "Bogotá",
+    "alt_name": "Smart Fit Centro Mayor",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 12671203279,
+  "lat": 4.5782433,
+  "lon": -74.1309121,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 48C Sur",
+    "alt_name": "Smart Fit Ciudad Tunal",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 12708282865,
+  "lat": 4.6078247,
+  "lon": -74.2253566,
+  "tags": {
+    "contact:facebook": "https://www.facebook.com/animaltrainersgym",
+    "email": "animaltrainersgym@gmail.com",
+    "leisure": "fitness_centre",
+    "level": "4",
+    "name": "Animal Trainers Gym",
+    "phone": "+57 301 2179475",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 12710809301,
+  "lat": 4.6258071,
+  "lon": -74.1338580,
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "node",
+  "id": 13004864670,
+  "lat": 4.7019860,
+  "lon": -74.1170709,
+  "tags": {
+    "check_date": "2025-07-16",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "GBR-Mobile",
+    "leisure": "fitness_centre",
+    "name": "Smart Fir",
+    "opening_hours": "Mo-Fr 05:00-20:00; Sa-Su,PH 08:00-17:00",
+    "website": "https://www.smartfit.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 13136434013,
+  "lat": 4.5790648,
+  "lon": -74.0820244,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Hyl Gym"
+  }
+},
+{
+  "type": "node",
+  "id": 13190870389,
+  "lat": 4.7234648,
+  "lon": -74.0460060,
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Pilates ProWorks"
+  }
+},
+{
+  "type": "node",
+  "id": 13434568801,
+  "lat": 4.6752595,
+  "lon": -74.0537627,
+  "tags": {
+    "addr:housenumber": "90-47",
+    "addr:street": "Carrera 16",
+    "check_date": "2026-05-01",
+    "contact:instagram": "mapanacolombia",
+    "email": "mapanacrossfit@gmail.com",
+    "leisure": "fitness_centre",
+    "level": "0",
+    "name": "Mapaná",
+    "website": "https://mapana.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 13484695001,
+  "lat": 4.6505721,
+  "lon": -74.0634684,
+  "tags": {
+    "addr:housenumber": "#63A-61",
+    "addr:street": "Avenida Carrera 13",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit - Chapinero Lourdes",
+    "opening_hours": "Mo-Th 05:00-22:00; Fr 05:00-21:00; Sa 07:00-17:00; Su 08:00-17:00"
+  }
+},
+{
+  "type": "node",
+  "id": 13534303639,
+  "lat": 4.6718572,
+  "lon": -74.0887406,
+  "tags": {
+    "brand": "SmartFit",
+    "changing_table": "no",
+    "leisure": "fitness_centre",
+    "level": "5",
+    "name": "SmarFit Home Sentry",
+    "opening_hours": "Mo-Tu,Th 05:00-22:00; We,Fr 05:00-21:00; Sa 07:00-17:00; Su 08:00-17:00; PH 08:00-17:00 open",
+    "operator": "SmartFit",
+    "sauna": "no",
+    "sport": "fitness;gymnastics",
+    "swimming_pool": "no",
+    "toilets": "yes",
+    "toilets:access": "customers",
+    "toilets:wheelchair": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13695194742,
+  "lat": 4.6507877,
+  "lon": -74.0733179,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Calle 63",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "node",
+  "id": 13946438770,
+  "lat": 4.5855150,
+  "lon": -74.1911324,
+  "tags": {
+    "addr:city": "Soacha",
+    "addr:housenumber": "3-43 este piso 2",
+    "addr:street": "Calle 46",
+    "leisure": "fitness_centre",
+    "name": "Sculptor Gym sede Quintanares",
+    "opening_hours": "Mo-Fr 05:00-22:00; Sa 06:00-19:00; Su 07:00-16:00",
+    "sport": "fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 14077993742,
+  "lat": 4.7552423,
+  "lon": -74.1031111,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 117 Calle 151 Bis",
+    "leisure": "fitness_centre",
+    "opening_hours": "24/7",
+    "sport": "fitness",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 14083942202,
+  "lat": 4.7565035,
+  "lon": -74.0990232,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:street": "Carrera 114 # 152B",
+    "leisure": "fitness_centre",
+    "name": "Full Gym"
+  }
+},
+{
+  "type": "way",
+  "id": 121976507,
+  "center": {
+    "lat": 4.7202792,
+    "lon": -74.0381111
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "SPOT 5",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 255222522,
+  "center": {
+    "lat": 4.6305308,
+    "lon": -74.0826901
+  },
+  "tags": {
+    "addr:street": "Calle 26A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Motioin",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 324814391,
+  "center": {
+    "lat": 4.5781041,
+    "lon": -74.0932319
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "CESCO"
+  }
+},
+{
+  "type": "way",
+  "id": 324860706,
+  "center": {
+    "lat": 4.6187305,
+    "lon": -74.1595528
+  },
+  "tags": {
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Bodytech"
+  }
+},
+{
+  "type": "way",
+  "id": 372147820,
+  "center": {
+    "lat": 4.6649139,
+    "lon": -74.1191194
+  },
+  "tags": {
+    "addr:city": "bogotá D.C.",
+    "addr:street": "Calle 24",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Ejercitate",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 372147828,
+  "center": {
+    "lat": 4.6646078,
+    "lon": -74.1188558
+  },
+  "tags": {
+    "addr:street": "Calle 24",
+    "building": "commercial",
+    "leisure": "fitness_centre",
+    "name": "Hard Body",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 407371283,
+  "center": {
+    "lat": 4.7211097,
+    "lon": -74.0269258
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "145-87",
+    "addr:street": "Carrera 7",
+    "branch": "Cedritos",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "opening_hours": "Mo-Th 05:00-22:00; Fr 05:00-21:00; Sa 07:00-17:00; Su 08:00-17:00",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "sport": "weightlifting;cardio;grupal_class;free_weight;pulley_machines;fitness;zumba",
+    "website": "https://www.smartfit.com.co"
+  }
+},
+{
+  "type": "way",
+  "id": 479391772,
+  "center": {
+    "lat": 4.5799164,
+    "lon": -74.1324654
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Body fitness"
+  }
+},
+{
+  "type": "way",
+  "id": 498314878,
+  "center": {
+    "lat": 4.7252823,
+    "lon": -74.0456645
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 19",
+    "building": "yes",
+    "building:levels": "5",
+    "building:material": "glass",
+    "leisure": "fitness_centre",
+    "name": "Spinning Center",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 498618761,
+  "center": {
+    "lat": 4.6329729,
+    "lon": -74.0691337
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Body Care Gym"
+  }
+},
+{
+  "type": "way",
+  "id": 501891184,
+  "center": {
+    "lat": 4.5927593,
+    "lon": -74.1907439
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 526306054,
+  "center": {
+    "lat": 4.7504751,
+    "lon": -74.0620511
+  },
+  "tags": {
+    "addr:street": "Calle 167",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 526513262,
+  "center": {
+    "lat": 4.7418658,
+    "lon": -74.0464785
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 161",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Small Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 526903990,
+  "center": {
+    "lat": 4.7313704,
+    "lon": -74.0439419
+  },
+  "tags": {
+    "addr:street": "Calle 150",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Box Arena",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527383583,
+  "center": {
+    "lat": 4.7219031,
+    "lon": -74.0668989
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 58",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Motion",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527929421,
+  "center": {
+    "lat": 4.6914558,
+    "lon": -74.0444582
+  },
+  "tags": {
+    "addr:street": "Carrera 14B",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Caoba CrossFit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527942596,
+  "center": {
+    "lat": 4.8488502,
+    "lon": -74.0509870
+  },
+  "tags": {
+    "addr:city": "El Cerrito",
+    "addr:street": "Carrera 1",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Hardboody",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 527972485,
+  "center": {
+    "lat": 4.7395351,
+    "lon": -74.0386588
+  },
+  "tags": {
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 527978867,
+  "center": {
+    "lat": 4.7484751,
+    "lon": -74.0462895
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name:en": "Bodytech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528159573,
+  "center": {
+    "lat": 4.7213371,
+    "lon": -74.0687276
+  },
+  "tags": {
+    "addr:street": "Carrera 58B",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Gimsipei",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528242067,
+  "center": {
+    "lat": 4.6990427,
+    "lon": -74.0773715
+  },
+  "tags": {
+    "addr:street": "Carrera 71",
+    "building": "yes",
+    "fixme": "name",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528251430,
+  "center": {
+    "lat": 4.7012186,
+    "lon": -74.0802978
+  },
+  "tags": {
+    "addr:street": "Calle 116",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Crossfit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 528626863,
+  "center": {
+    "lat": 4.7316715,
+    "lon": -74.0869198
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 91",
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 529286171,
+  "center": {
+    "lat": 4.6131632,
+    "lon": -74.1088600
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 529560379,
+  "center": {
+    "lat": 4.7322195,
+    "lon": -74.0525175
+  },
+  "tags": {
+    "addr:street": "Calle 150",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Fitness Factory",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529782169,
+  "center": {
+    "lat": 4.7333395,
+    "lon": -74.0554300
+  },
+  "tags": {
+    "addr:street": "Carrera 54",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Artes Fitness Babies",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 529825198,
+  "center": {
+    "lat": 4.7521917,
+    "lon": -74.0238722
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 7",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio José Joaquín Casas",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530025951,
+  "center": {
+    "lat": 4.7202483,
+    "lon": -74.0510242
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "source": "Kaart Ground Survey 2017",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 530036556,
+  "center": {
+    "lat": 4.6856548,
+    "lon": -74.0948230
+  },
+  "tags": {
+    "addr:street": "Carrera 71B",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Centro de Yoga",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "yoga"
+  }
+},
+{
+  "type": "way",
+  "id": 530339689,
+  "center": {
+    "lat": 4.6683455,
+    "lon": -74.1102437
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "branch": "Normandía",
+    "brand": "Bodytech",
+    "brand:wikidata": "Q16538274",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Bodytech",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530370636,
+  "center": {
+    "lat": 4.7209543,
+    "lon": -74.0449167
+  },
+  "tags": {
+    "addr:street": "Carrera 18",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530427400,
+  "center": {
+    "lat": 4.6938109,
+    "lon": -74.0512706
+  },
+  "tags": {
+    "addr:street": "Calle 106A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Personal Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530654181,
+  "center": {
+    "lat": 4.7230631,
+    "lon": -74.0643141
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 134",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Stark",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 530657795,
+  "center": {
+    "lat": 4.7011649,
+    "lon": -74.0922463
+  },
+  "tags": {
+    "addr:street": "Diagonal 81I",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531280962,
+  "center": {
+    "lat": 4.6817635,
+    "lon": -74.0551062
+  },
+  "tags": {
+    "addr:street": "Transversal 21",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Elena del Mar",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531281767,
+  "center": {
+    "lat": 4.6982979,
+    "lon": -74.0926664
+  },
+  "tags": {
+    "addr:street": "Carrera 76",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Fit 360",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531305141,
+  "center": {
+    "lat": 4.7394784,
+    "lon": -74.0281734
+  },
+  "tags": {
+    "addr:street": "Calle 163A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Body Flex",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531307331,
+  "center": {
+    "lat": 4.7188384,
+    "lon": -74.0357629
+  },
+  "tags": {
+    "addr:street": "Calle 140",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Magma Crossfit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531324503,
+  "center": {
+    "lat": 4.6772071,
+    "lon": -74.0604666
+  },
+  "tags": {
+    "addr:street": "Calle 89A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Cross Fit Zulu",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531328805,
+  "center": {
+    "lat": 4.6945919,
+    "lon": -74.0498391
+  },
+  "tags": {
+    "addr:street": "Calle 109",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "54D",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531507550,
+  "center": {
+    "lat": 4.6885036,
+    "lon": -74.0467533
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 15;Calle 104",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Zumba Vibrarte",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531553788,
+  "center": {
+    "lat": 4.6924729,
+    "lon": -74.1019950
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 72",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Femenino",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531745654,
+  "center": {
+    "lat": 4.7208276,
+    "lon": -74.0529919
+  },
+  "tags": {
+    "addr:street": "Calle 134D",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "MoviFit",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531834919,
+  "center": {
+    "lat": 4.6261855,
+    "lon": -74.0777393
+  },
+  "tags": {
+    "addr:street": "Transversal 28A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Cecil Reddie",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 531945372,
+  "center": {
+    "lat": 4.7305188,
+    "lon": -74.0454330
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Avenida Carrera 19",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Alternative",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532060847,
+  "center": {
+    "lat": 4.6891111,
+    "lon": -74.0671126
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 100",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Living Fitness",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532977786,
+  "center": {
+    "lat": 4.7155230,
+    "lon": -74.0728032
+  },
+  "tags": {
+    "addr:city": "Bogota D.C",
+    "addr:postcode": "111121",
+    "addr:street": "Avenida Suba",
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+},
+{
+  "type": "way",
+  "id": 532978911,
+  "center": {
+    "lat": 4.6904294,
+    "lon": -74.0572405
+  },
+  "tags": {
+    "addr:street": "Autopista Norte",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Cross",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 532983154,
+  "center": {
+    "lat": 4.6521653,
+    "lon": -74.0674286
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 63B",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Totally in Shape Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533666829,
+  "center": {
+    "lat": 4.6381848,
+    "lon": -74.0748191
+  },
+  "tags": {
+    "addr:street": "Carrera 24",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "JJ Gym",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 533884597,
+  "center": {
+    "lat": 4.6313591,
+    "lon": -74.0783466
+  },
+  "tags": {
+    "addr:street": "Carrera 27A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Goleman",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 536144634,
+  "center": {
+    "lat": 4.5998350,
+    "lon": -74.1076783
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 31D",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Talentos",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 537768133,
+  "center": {
+    "lat": 4.5793250,
+    "lon": -74.0872627
+  },
+  "tags": {
+    "addr:street": "Avenida Fucha Avenida Calle 11S",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Boxy GYM",
+    "roof:material": "metal_sheet",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540519534,
+  "center": {
+    "lat": 4.6267793,
+    "lon": -74.0942362
+  },
+  "tags": {
+    "addr:city": "bogota D.C.",
+    "addr:street": "Avenida Calle 20",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Evolution",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 540519536,
+  "center": {
+    "lat": 4.6268604,
+    "lon": -74.0948206
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 20",
+    "building": "roof",
+    "description": "Canchas Sinteticas",
+    "leisure": "fitness_centre",
+    "name": "Fabian Vargas Indoor",
+    "phone": "+57 1 269 8421;+57 319 305 9137",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 540742728,
+  "center": {
+    "lat": 4.6339816,
+    "lon": -74.0952863
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "The Metcon Club",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541178066,
+  "center": {
+    "lat": 4.6773369,
+    "lon": -74.1026303
+  },
+  "tags": {
+    "addr:street": "Carrera 72A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio"
+  }
+},
+{
+  "type": "way",
+  "id": 541186373,
+  "center": {
+    "lat": 4.6674520,
+    "lon": -74.1249940
+  },
+  "tags": {
+    "addr:street": "Carrera 82",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Fitness 29",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541187663,
+  "center": {
+    "lat": 4.6703664,
+    "lon": -74.1082430
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Crossfit Team Ellite",
+    "source": "Kaart Ground Survey 2017",
+    "sport": "crossfit"
+  }
+},
+{
+  "type": "way",
+  "id": 541359075,
+  "center": {
+    "lat": 4.6633514,
+    "lon": -74.1177042
+  },
+  "tags": {
+    "addr:city": "bogotá D.C.",
+    "addr:street": "Calle 24",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Agility",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 541382000,
+  "center": {
+    "lat": 4.6645497,
+    "lon": -74.1287062
+  },
+  "tags": {
+    "addr:street": "Carrera 83",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Box Apolo",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 542161037,
+  "center": {
+    "lat": 4.5766653,
+    "lon": -74.1530385
+  },
+  "tags": {
+    "addr:street": "Carrera 47",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Integral Guatiquia",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 542173906,
+  "center": {
+    "lat": 4.6045837,
+    "lon": -74.1134597
+  },
+  "tags": {
+    "addr:street": "Carrera 38A",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Functional Trainer Center",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 545135670,
+  "center": {
+    "lat": 4.6942465,
+    "lon": -74.1042413
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 557356515,
+  "center": {
+    "lat": 4.7751048,
+    "lon": -74.0348718
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 582372427,
+  "center": {
+    "lat": 4.6054338,
+    "lon": -74.2138092
+  },
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Logroño 2",
+    "not:building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 582372428,
+  "center": {
+    "lat": 4.6052392,
+    "lon": -74.2136319
+  },
+  "tags": {
+    "leisure": "fitness_centre",
+    "name": "Logroño 1",
+    "not:building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 586120972,
+  "center": {
+    "lat": 4.7653760,
+    "lon": -74.0368884
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 188",
+    "building": "yes",
+    "building:levels": "3",
+    "leisure": "fitness_centre",
+    "name": "BodyForm",
+    "opening_hours": "Mo-Fr 05:30-21:30, Sa 08:00-16:00, Su 08:00-13:00",
+    "payment:cash": "yes",
+    "sport": "fitness;exercise;running;weightlifting;calisthenic"
+  }
+},
+{
+  "type": "way",
+  "id": 605101909,
+  "center": {
+    "lat": 4.7620334,
+    "lon": -74.0372876
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 16",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "BodyLife",
+    "sport": "fitness;weightlifting;running;weig"
+  }
+},
+{
+  "type": "way",
+  "id": 641731892,
+  "center": {
+    "lat": 4.6110886,
+    "lon": -74.1659336
+  },
+  "tags": {
+    "addr:city": "bogota",
+    "addr:housenumber": "78-30",
+    "addr:postcode": "1111111",
+    "addr:street": "Calle 49 Sur",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Link Gym Colombia",
+    "opening_hours": "Mo-Fr 05:00-22:00",
+    "phone": "+57 321 3206795"
+  }
+},
+{
+  "type": "way",
+  "id": 660163431,
+  "center": {
+    "lat": 4.7405397,
+    "lon": -74.0409090
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Tabata"
+  }
+},
+{
+  "type": "way",
+  "id": 674825808,
+  "center": {
+    "lat": 4.6922253,
+    "lon": -74.0513983
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Stark"
+  }
+},
+{
+  "type": "way",
+  "id": 691825078,
+  "center": {
+    "lat": 4.5978381,
+    "lon": -74.1086942
+  },
+  "tags": {
+    "brand:wikidata": "Q16538274",
+    "brand:wikipedia": "es:Bodytech",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Bodytech"
+  }
+},
+{
+  "type": "way",
+  "id": 718177932,
+  "center": {
+    "lat": 4.6697087,
+    "lon": -74.1386696
+  },
+  "tags": {
+    "addr:housenumber": "91B-31",
+    "addr:street": "Calle 20A",
+    "building": "yes",
+    "contact:facebook": "https://www.facebook.com/GoGymBta/?ref=aymt_homepage_panel",
+    "leisure": "fitness_centre",
+    "name": "GO GYM BOGOTA",
+    "opening_hours": "Mo-Sa 05:00-22:00",
+    "phone": "+57 601 6454999"
+  }
+},
+{
+  "type": "way",
+  "id": 770863175,
+  "center": {
+    "lat": 4.6673899,
+    "lon": -74.0499334
+  },
+  "tags": {
+    "building": "yes",
+    "check_date": "2025-11-23",
+    "description": "Body Tech ACTIVE",
+    "leisure": "fitness_centre",
+    "name": "Bodytech active kids",
+    "phone": "+57 317 5298546",
+    "sport": "soccer;basketball;multi;swimming;fitness"
+  }
+},
+{
+  "type": "way",
+  "id": 891686324,
+  "center": {
+    "lat": 4.6696048,
+    "lon": -74.1149590
+  },
+  "tags": {
+    "check_date": "2022-11-03",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "leisure": "fitness_centre",
+    "name:signed": "no",
+    "opening_hours": "Mo-Fr 06:00-19:00; Sa-Su 09:00-17:00",
+    "opening_hours:signed": "no",
+    "operator": "Condominio Nuevo Salitre"
+  }
+},
+{
+  "type": "way",
+  "id": 1014343761,
+  "center": {
+    "lat": 4.7109597,
+    "lon": -74.0315982
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Bloque D"
+  }
+},
+{
+  "type": "way",
+  "id": 1164565616,
+  "center": {
+    "lat": 4.6396789,
+    "lon": -74.0616258
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 1301722967,
+  "center": {
+    "lat": 4.5802845,
+    "lon": -74.1238185
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "24-50",
+    "addr:street": "Calle 42 Sur",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Athletic Gym Tunal",
+    "sport": "fitness",
+    "website": "https://athleticgym.com.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 1304917131,
+  "center": {
+    "lat": 4.7560597,
+    "lon": -74.1127145
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "-1",
+    "leisure": "fitness_centre"
+  }
+},
+{
+  "type": "way",
+  "id": 1377601636,
+  "center": {
+    "lat": 4.5907693,
+    "lon": -74.1251214
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "sport": "climbing"
+  }
+},
+{
+  "type": "way",
+  "id": 1539305313,
+  "center": {
+    "lat": 4.5952990,
+    "lon": -74.1702015
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Gimnasio Sculptor"
+  }
+},
+{
+  "type": "way",
+  "id": 1571479010,
+  "center": {
+    "lat": 4.7356318,
+    "lon": -74.0497336
+  },
+  "tags": {
+    "brand": "Smart Fit",
+    "brand:wikidata": "Q30930959",
+    "building": "yes",
+    "leisure": "fitness_centre",
+    "name": "Smart Fit"
+  }
+}
+
+  ]
+}
+

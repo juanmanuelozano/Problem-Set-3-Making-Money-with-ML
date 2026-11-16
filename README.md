@@ -8,7 +8,6 @@ Predicción del precio de venta de viviendas en Bogotá a partir de datos de Pro
 |---|---|
 | Mejor modelo en Chapinero | `m06_hibrido_en_xgb` — MAE OOF de 155 M en Chapinero, 134 M en total |
 | Mejor modelo en el total | `m90_ensamble` — MAE OOF de 131 M |
-| Envío recomendado | [`submissions/m06_hibrido_en_xgb.csv`](submissions/m06_hibrido_en_xgb.csv) |
 
 Detalle e historial en [`BITACORA.md`](BITACORA.md).
 

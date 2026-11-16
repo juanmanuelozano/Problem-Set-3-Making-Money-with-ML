@@ -27,6 +27,15 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
+## 2026-11-16 · Sesión 2: repositorio conectado a GitHub
+
+- El proyecto tenía un `git init` local (rama `master`, sin remoto) y, dentro, un clon vacío de GitHub en la subcarpeta `Problem-Set-3-Making-Money-with-ML/`. Por eso no se podía hacer push.
+- Arreglo: se reemplazó el `.git` externo (no tenía commits) por el del clon, se movió `.gitattributes` a la raíz y se eliminó la subcarpeta.
+- Se hizo el commit de todo el proyecto en `main` y el push a `origin`.
+- Los `.rds` y `.ubj` de `models/` siguen ignorados. El archivo más grande versionado es `data/processed/base_enriquecida.csv` (48 MB, por debajo del límite de 100 MB de GitHub).
+
+---
+
 ## 2026-11-14 · Sesión 1 — Exploración, estructura del repo y primera ronda de modelos
 
 **Exploración y descriptivas**

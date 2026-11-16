@@ -1,8 +1,6 @@
 # Problem Set 3 — Predicting Prices (Bogotá)
 
-Predicción del precio de venta de viviendas en Bogotá a partir de datos de Properati, para la competencia de Kaggle del curso *Big Data y Machine Learning* (Uniandes, 2026-2).
-
-> **Hallazgo central:** el 94% del conjunto de prueba está en **Chapinero**, que casi no aparece en el entrenamiento (307 de 38.644 observaciones). El problema es de **extrapolación espacial** y toda la estrategia de validación y modelación parte de ahí.
+Predicción del precio de venta de viviendas en Bogotá a partir de datos de Properati, para el curso *Big Data y Machine Learning* (Uniandes, 2026-2).
 
 ## Estado actual
 

@@ -32,3 +32,8 @@ Cada decisión registra el contexto, qué se decidió y por qué. Las más recie
 ### D7 · Métrica de selección: Chapinero sobre total (2026-11-14)
 **Decisión:** para elegir el envío pesa más el MAE en las 307 observaciones de Chapinero que el MAE total, teniendo en cuenta su ruido (error estándar de ±8–10 M).
 **Por qué:** el test es Chapinero. El MAE total está dominado por Usaquén (55% del train).
+
+### D8 · No eliminar observaciones por precio extremo (2026-11-16)
+**Contexto:** el precio está acotado en [300, 1.650] M. Los valores extremos del precio por m² vienen casi siempre del área extraída del texto, que perdió los puntos decimales ("96.0 m2" aparece como "960 m2").
+**Decisión:** no se eliminan observaciones del train por su precio ni por su precio por m². El ruido del área se controla con la regla de coherencia de D3.
+**Por qué:** eliminar por precio por m² quitaría anuncios con precios válidos y áreas mal medidas, y en el test no se pueden eliminar filas. Con el área final, solo el 0,4–1,6% de las observaciones tienen |z| > 3 en log(precio/m²). Ver la sección 7 de `reports/01_descriptivas/informe_descriptivas.md`.

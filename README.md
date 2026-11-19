@@ -45,7 +45,8 @@ Requiere R 4.6 con `tidyverse`, `sp`, `httr`, `jsonlite`, `stargazer`, `ranger`,
 Rscript scripts/01_osm_descarga.R    # datos de OpenStreetMap (usa la caché si ya existe)
 Rscript scripts/02_descriptivas.R    # informe 1: figuras, tablas y base enriquecida
 Rscript scripts/03_features.R        # imputaciones, variables finales y folds espaciales
-Rscript scripts/04_elastic_net.R     # referencias, OLS y elastic net
+Rscript scripts/04_regresiones.R     # mediana de referencia y OLS (especificaciones)
+Rscript scripts/04b_elastic_net.R    # elastic net
 Rscript scripts/05_random_forest.R   # ~10 min
 Rscript scripts/06_xgboost.R
 Rscript scripts/07_hibridos.R        # XGBoost sobre precio/m² e híbrido lasso + XGBoost

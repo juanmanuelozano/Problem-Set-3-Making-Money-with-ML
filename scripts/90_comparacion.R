@@ -6,7 +6,7 @@ source("scripts/00_config.R"); source("scripts/utils_modelos.R")
 
 oof <- lee_csv(file.path(P$models, "oof_predicciones.csv"))
 tst <- lee_csv(file.path(P$models, "test_predicciones.csv"))
-modelos <- setdiff(names(oof), c("property_id", "log_price", "fold", "chapinero", "m00_mediana", "m90_ensamble"))
+modelos <- setdiff(names(oof), c("property_id", "log_price", "grupo", "chapinero", "m00_mediana", "m90_ensamble"))
 modelos <- setdiff(modelos, grep("^m9", modelos, value = TRUE))
 
 # ---- Ensamble: pesos no negativos que minimizan el MAE OOF (búsqueda en grilla simplex) ----
@@ -20,7 +20,7 @@ registra("m90_ensamble", "Promedio ponderado (en log) de los modelos; pesos que 
 cat("Nota: los pesos se eligen con las mismas predicciones OOF, así que su MAE es levemente optimista.\n")
 
 reg <- lee_csv(file.path(P$models, "registro_modelos.csv"))
-print(reg %>% select(modelo, mae_total, mae_chapinero, mae_fold2) %>% mutate(across(starts_with("mae"), ~ round(.x / 1e6, 1))))
+print(reg %>% select(modelo, mae_total, mae_chapinero, mae_macro) %>% mutate(across(starts_with("mae"), ~ round(.x / 1e6, 1))))
 
 # ---- Figura 1: comparación de MAE ----
 g1 <- reg %>% select(modelo, `Todo el train` = mae_total, `Train en Chapinero` = mae_chapinero) %>%
@@ -30,7 +30,7 @@ g1 <- reg %>% select(modelo, `Todo el train` = mae_total, `Train en Chapinero` =
   geom_text(aes(label = round(value / 1e6)), position = position_dodge(width = .75), hjust = -.15, size = 3, color = c_ink2) +
   scale_fill_manual(values = c(`Todo el train` = c_train, `Train en Chapinero` = c_test), name = NULL) +
   scale_x_continuous(expand = expansion(mult = c(0, .1))) +
-  labs(title = "Error de predicción por modelo", subtitle = "MAE out-of-fold con folds espaciales (millones de COP)",
+  labs(title = "Error de predicción por modelo", subtitle = sprintf("MAE out-of-fold dejando una localidad afuera, buffer de %s m (millones de COP)", BUFFER_M),
        x = "MAE (millones COP)", y = NULL, caption = fuente)
 ggsave(file.path(P$rep_mod, "figures", "m1_comparacion_mae.png"), g1, width = 7.5, height = 4.5, dpi = 250)
 

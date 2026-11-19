@@ -4,7 +4,7 @@
 # =============================================================================
 suppressMessages({library(tidyverse); library(scales)})
 options(width = 160, scipen = 99)
-set.seed(2026)
+set.seed(123)
 
 # ---- Rutas ----
 P <- list(
@@ -46,6 +46,12 @@ hav <- function(lat1, lon1, lat2, lon2) {
   a <- sin(dlat / 2)^2 + outer(cos(lat1 * r), cos(lat2 * r)) * sin(dlon / 2)^2
   a[] <- pmin(1, sqrt(a))
   2 * 6371000 * asin(a)
+}
+# Distancia (m) de cada punto del conjunto 1 a su vecino más cercano del conjunto 2 (por bloques, para no agotar la memoria)
+dist_min <- function(lat1, lon1, lat2, lon2, bloque = 1000) {
+  out <- numeric(length(lat1))
+  for (ix in split(seq_along(lat1), ceiling(seq_along(lat1) / bloque))) out[ix] <- apply(hav(lat1[ix], lon1[ix], lat2, lon2), 1, min)
+  out
 }
 mae <- function(y, yhat) mean(abs(y - yhat))
 recorta <- function(p) pmin(pmax(p, PRECIO_MIN), PRECIO_MAX)

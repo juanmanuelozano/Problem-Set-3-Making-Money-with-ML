@@ -1,7 +1,7 @@
 # Informe 2 — Modelación: primera ronda
 
 **Problem Set 3: Predicting Prices · Big Data y Machine Learning · Uniandes 2026-2**
-Código: [`scripts/03_features.R`](../../scripts/03_features.R) → [`04`](../../scripts/04_elastic_net.R) · [`05`](../../scripts/05_random_forest.R) · [`06`](../../scripts/06_xgboost.R) · [`07`](../../scripts/07_hibridos.R) → [`90_comparacion.R`](../../scripts/90_comparacion.R)
+Código: [`scripts/03_features.R`](../../scripts/03_features.R) → [`04`](../../scripts/04_regresiones.R) · [`04b`](../../scripts/04b_elastic_net.R) · [`05`](../../scripts/05_random_forest.R) · [`06`](../../scripts/06_xgboost.R) · [`07`](../../scripts/07_hibridos.R) → [`90_comparacion.R`](../../scripts/90_comparacion.R)
 Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_modelos.csv) · Última actualización: 2026-11-14
 
 ---
@@ -26,7 +26,7 @@ Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_mod
   - `mae_chapinero`: las 307 observaciones del train en Chapinero (246 en el fold 2 y 61 en el fold 1). **Es la métrica más relevante para el test, aunque ruidosa**: con n = 307, su error estándar es de unos ±8–10 millones.
   - `mae_fold2`: el bloque de Usaquén y Chapinero (16.492 obs), el más parecido al test.
 - **Variable objetivo:** `log(precio)`. La predicción es `exp(ŷ)` recortada al soporte. Ver [D2](../../docs/decisiones.md).
-- **Variables:** 66 (69 en la versión para árboles, con indicadores de faltante): área imputada (R² OOB 0,83), baños, estrato imputado espacialmente (R² OOB 0,79), piso, antigüedad y parqueaderos del texto, 22 indicadores de amenidades, coordenadas (también rotadas), distancias y densidades de servicios de OSM. Diccionario en [`data/README.md`](../../data/README.md).
+- **Variables:** 66 (69 en la versión para árboles, con indicadores de faltante): área imputada (R² OOB 0,83), baños, estrato imputado espacialmente (R² OOB 0,79), piso, antigüedad y parqueaderos del texto, 22 indicadores de amenidades, coordenadas (también rotadas), distancias y densidades de servicios de OSM. Diccionario en [`docs/guia_variables.md`](../../docs/guia_variables.md).
 
 ## 2. Resultados
 

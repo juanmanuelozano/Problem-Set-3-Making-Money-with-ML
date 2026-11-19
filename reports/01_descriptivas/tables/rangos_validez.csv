@@ -1,0 +1,11 @@
+variable,rango,n_con_dato,n_bajo,n_sobre,valores_fuera_frecuentes
+Área cubierta / total (variable),"[20, 1500]",15531,8,5,"7700, 16, 2, 6, 7, 10"
+"surface_total (03, sin uso)","[20, 2000]",9718,3,7,"7700, 16, 15, 3200, 7200, 17137"
+Área (texto),"[20, 1000]",18297,391,2391,"12, 10, 15, 14, 18, 16"
+Baños (texto),"[1, 8]",9622,6,6,"0, 9"
+bathrooms (variable),"[1, 8]",36368,0,55,"10, 9, 11, 12, 13"
+Estrato (texto),"[1, 6]",3558,0,0,
+Piso (texto),"[1, 40]",4886,0,148,"77, 42, 98, 53, 80, 52"
+Antigüedad (texto),"[0, 60]",1481,0,6,"79, 94, 74, 95"
+Parqueaderos (texto),"[1, 6]",11996,104,143,"0, 7, 8, 9"
+bedrooms (variable),"[1, 10]",48930,186,97,"0, 11"

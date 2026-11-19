@@ -4,7 +4,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-14)
+## Estado actual (2026-11-16)
 
 **Mejores modelos (MAE OOF, folds espaciales, millones de COP):**
 
@@ -23,7 +23,23 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Rezago espacial del precio por m² (kNN dentro de cada fold)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
 - [ ] TF-IDF del texto con lasso
+- [ ] Recuperar los decimales perdidos en el área del texto: los valores mayores de 1.000 (2.391) son áreas multiplicadas por 10 o 100. Dividir y aceptar si pasa la regla de coherencia
+- [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
+- [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
+
+---
+
+## 2026-11-16 · Sesión 3: valores extremos y rangos de validez
+
+- Nuevo script `scripts/02b_extremos.R` y nueva sección 7 del informe de descriptivas, con la figura f10 y 3 tablas. Las secciones 7–10 del informe pasan a ser 8–11.
+- **Rangos de validez:** en casi todas las variables cortan pocos errores evidentes. La excepción es el área del texto (2.391 valores por encima de 1.000).
+- **Hallazgo:** el texto perdió los puntos decimales ("4.0 habitaciones 96.0 m2" aparece como "40 habitaciones 960 m2"). En 121 de 396 títulos con ese formato, N = 10 × `bedrooms`. La regla de coherencia de D3 ya descarta en la modelación la mayoría de las áreas infladas: el p99 del precio por m² con área del texto baja de 37,7 a 10,6 M/m².
+- **Precio:** no tiene outliers propios. 509 en 300 M y 106 en 1.650 M. El valor de 300 M es menos frecuente que otras cifras redondas, lo que apunta a *heaping* y no a censura. En Chapinero, el 3,3% está en 1.600 M o más (0,9% en el resto). Hay *bunching* justo por debajo de 1.000 M.
+- Entorno: el proyecto ahora corre en macOS (`Rscript` en el PATH). Ojo: `Rscript` sin `< /dev/null` puede quedarse esperando la entrada estándar.
+- Decisión D8 en `docs/decisiones.md`.
+- Nueva guía de variables: `docs/guia_variables.md`, con nombre, definición, fuente, script y uso en los modelos. Reemplaza el diccionario parcial de `data/README.md`. Al revisarla se encontró que `sup_total_ok` (en el 03) se calcula pero no se usa.
+- Validación cruzada: no hay una función común. Cada script hace su ciclo sobre el mismo `FOLD` y evalúa con `evalua()`.
 
 ---
 

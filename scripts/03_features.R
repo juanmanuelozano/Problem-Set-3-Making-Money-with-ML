@@ -1,9 +1,8 @@
 # =============================================================================
 # 03_features.R - Base de modelación: variables adicionales del texto, imputación
-#                 de área / baños / estrato y folds espaciales.
+#                 de área / baños / estrato y grupos de validación (localidades).
 # Entradas: data/processed/base_enriquecida.csv (de 02_descriptivas.R)
-# Salidas:  data/processed/base_modelo.rds  (lista: datos, vars, folds)
-#           reports/02_modelos/figures/m0_folds_espaciales.png
+# Salidas:  data/processed/base_modelo.rds  (lista: datos, vars, dist_loc)
 # =============================================================================
 source("scripts/00_config.R")
 suppressMessages(library(ranger))
@@ -34,7 +33,7 @@ pred_area_vars <- c("bedrooms", "es_apto", "lat", "lon", "n_palabras", "dist_cbd
                     grep("^tx_", names(d), value = TRUE))
 d$banos_aux <- coalesce(d$banos, -1)
 f_area <- as.formula(paste("log(sup_obs) ~", paste(c(pred_area_vars, "banos_aux"), collapse = " + ")))
-rf_area <- ranger(f_area, data = filter(d, !is.na(sup_obs)), num.trees = 300, num.threads = 8, seed = 1)
+rf_area <- ranger(f_area, data = filter(d, !is.na(sup_obs)), num.trees = 300, num.threads = 8, seed = 123)
 cat("Imputación área - R2 OOB:", round(rf_area$r.squared, 3), "\n")
 d$area_pred <- exp(predict(rf_area, d, num.threads = 8)$predictions)
 
@@ -53,36 +52,32 @@ print(count(d, muestra, area_fuente) %>% group_by(muestra) %>% mutate(p = round(
 
 # ---- 3. Imputación de baños ----
 rf_banos <- ranger(banos ~ bedrooms + es_apto + log_area + lat + lon + n_palabras + dist_cbd,
-                   data = filter(d, !is.na(banos)), num.trees = 200, num.threads = 8, seed = 1)
+                   data = filter(d, !is.na(banos)), num.trees = 200, num.threads = 8, seed = 123)
 d <- d %>% mutate(banos_imputado = as.integer(is.na(banos)),
                   banos_final = if_else(is.na(banos), round(predict(rf_banos, d, num.threads = 8)$predictions, 1), banos))
 
 # ---- 4. Imputación del estrato (proxy espacial del nivel socioeconómico) ----
 # El estrato es fundamentalmente espacial: se predice con coordenadas y entorno, entrenando con las ~3.800 menciones.
 f_est <- estrato_txt ~ lat + lon + lat_rot1 + lat_rot2 + dist_cbd + dist_transmilenio + n500_restaurante_bar + n500_banco + es_apto
-rf_est <- ranger(f_est, data = filter(d, !is.na(estrato_txt)), num.trees = 300, num.threads = 8, seed = 1)
+rf_est <- ranger(f_est, data = filter(d, !is.na(estrato_txt)), num.trees = 300, num.threads = 8, seed = 123)
 cat("Imputación estrato - R2 OOB:", round(rf_est$r.squared, 3), "\n")
 d$estrato_pred <- predict(rf_est, d, num.threads = 8)$predictions
 d$estrato_final <- coalesce(d$estrato_txt, d$estrato_pred)
 print(d %>% group_by(muestra, chap = localidad %in% "Chapinero") %>% summarise(estrato_medio = mean(estrato_final), .groups = "drop"))
 
-# ---- 5. Folds espaciales ----
-# k-means sobre coordenadas (en km) del train -> 5 bloques contiguos.
+# ---- 5. Grupos de validación: una localidad por fold (D9) ----
+# El único anuncio del train sin localidad (fuera de los polígonos) toma la de su vecino más cercano.
 tr_idx <- which(d$muestra == "train")
-xy <- cbind(x = d$lon[tr_idx] * 111.32 * cos(4.65 * pi / 180), y = d$lat[tr_idx] * 110.57)
-set.seed(2026); km <- kmeans(xy, centers = 5, nstart = 25)
-d$fold <- NA_integer_; d$fold[tr_idx] <- km$cluster
-print(d %>% filter(muestra == "train") %>% count(fold, chapinero = localidad %in% "Chapinero") %>%
-        pivot_wider(names_from = chapinero, values_from = n, names_prefix = "chap_"))
+d$grupo <- d$localidad
+sin <- tr_idx[is.na(d$grupo[tr_idx])]; con <- setdiff(tr_idx, sin)
+for (i in sin) d$grupo[i] <- d$grupo[con][which.min(hav(d$lat[i], d$lon[i], d$lat[con], d$lon[con]))]
+d$grupo[-tr_idx] <- NA
+print(count(d[tr_idx, ], grupo, sort = TRUE), n = 25)
 
-g <- ggplot(d %>% filter(muestra == "train"), aes(lon, lat, color = factor(fold))) +
-  geom_point(size = .3, alpha = .5) +
-  geom_point(data = d %>% filter(muestra == "test"), color = c_ink, size = .2, alpha = .15) +
-  scale_color_manual(values = cat_pal[c(1, 3, 4, 5, 7)], name = "Fold") + coord_quickmap() +
-  guides(color = guide_legend(override.aes = list(size = 3, alpha = 1))) +
-  labs(title = "Folds espaciales para validación cruzada", subtitle = "k-means sobre coordenadas del train (gris oscuro: test)",
-       x = NULL, y = NULL, caption = fuente) + theme(axis.text = element_blank(), panel.grid.major = element_blank())
-ggsave(file.path(P$rep_mod, "figures", "m0_folds_espaciales.png"), g, width = 6, height = 7, dpi = 200)
+# Distancia (m) de cada anuncio del train al anuncio más cercano de cada localidad (0 en la suya).
+# Con esto, los folds con buffer se arman al instante para cualquier distancia (utils_modelos.R).
+grupos <- sort(unique(d$grupo[tr_idx]))
+dist_loc <- sapply(grupos, function(g) { j <- tr_idx[d$grupo[tr_idx] == g]; dist_min(d$lat[tr_idx], d$lon[tr_idx], d$lat[j], d$lon[j]) })
 
 # ---- 6. Conjunto de variables para los modelos ----
 vars_num <- c("log_area", "area_imputada", "area_texto", "bedrooms", "banos_final", "banos_imputado", "es_apto",
@@ -90,8 +85,8 @@ vars_num <- c("log_area", "area_imputada", "area_texto", "bedrooms", "banos_fina
               "lat", "lon", "lat_rot1", "lat_rot2", "year", "month",
               grep("^dist_", names(d), value = TRUE), grep("^n500_", names(d), value = TRUE),
               grep("^tx_", names(d), value = TRUE))
-base <- list(datos = select(d, property_id, muestra, price, localidad, upz, fold, all_of(vars_num)),
-             vars = vars_num)
+base <- list(datos = select(d, property_id, muestra, price, localidad, upz, grupo, all_of(vars_num)),
+             vars = vars_num, dist_loc = dist_loc)
 saveRDS(base, file.path(P$processed, "base_modelo.rds"))
 cat("Variables:", length(vars_num), " | NA restantes (se tratan en cada modelo):\n")
 print(sort(colSums(is.na(base$datos[vars_num])))[colSums(is.na(base$datos[vars_num])) > 0])

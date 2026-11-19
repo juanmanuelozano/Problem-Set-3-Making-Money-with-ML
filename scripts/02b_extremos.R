@@ -12,20 +12,17 @@ d  <- lee_csv(file.path(P$processed, "base_enriquecida.csv"))
 dm <- readRDS(file.path(P$processed, "base_modelo.rds"))$datos   # mismas filas y orden que d
 stopifnot(nrow(d) == nrow(dm), isTRUE(all.equal(d$price, dm$price)), identical(as.character(d$muestra), as.character(dm$muestra)))
 txt <- str_to_lower(paste(d$title, d$description))
-num_txt <- function(x, pat) as.numeric(str_replace(str_match(x, pat)[, 2], ",", "."))
 
 # ---- 1. Rangos de validez: cuántos valores crudos quedan fuera y cuáles son ----
 crudos <- list(
   `Área cubierta / total (variable)` = list(coalesce(d$surface_covered, d$surface_total), 20, 1500),
-  `surface_total (03, sin uso)`       = list(d$surface_total, 20, 2000),
-  `Área (texto)`        = list(num_txt(txt, "(\\d{2,4}(?:[\\.,]\\d+)?)\\s?(?:m2|mts2|mt2|mts|metros cuadrados|metros|mt)\\b"), 20, 1000),
-  `Baños (texto)`       = list(num_txt(txt, "(\\d)\\s?(?:banos|bano)\\b"), 1, 8),
+  `Área (texto)`        = list(num_txt(txt, PATRONES$area), 20, 1000),
+  `Baños (texto)`       = list(num_txt(txt, PATRONES$banos), 1, 8),
   `bathrooms (variable)` = list(d$bathrooms, 1, 8),
-  `Estrato (texto)`     = list(num_txt(txt, "estrato\\s?(\\d)"), 1, 6),
-  `Piso (texto)`        = list(num_txt(txt, "(?:piso|nivel)\\s?(\\d{1,2})\\b"), 1, 40),
-  `Antigüedad (texto)`  = list(coalesce(num_txt(txt, "(\\d{1,2})\\s?anos? de (?:construid|antiguedad)"),
-                                        num_txt(txt, "antiguedad (?:de )?(\\d{1,2})")), 0, 60),
-  `Parqueaderos (texto)` = list(num_txt(txt, "(\\d)\\s?(?:parqueaderos|garajes|parqueadero|garaje)"), 1, 6),
+  `Estrato (texto)`     = list(num_txt(txt, PATRONES$estrato), 1, 6),
+  `Piso (texto)`        = list(num_txt(txt, PATRONES$piso), 1, 40),
+  `Antigüedad (texto)`  = list(coalesce(num_txt(txt, PATRONES$antig), num_txt(txt, PATRONES$antig2)), 0, 60),
+  `Parqueaderos (texto)` = list(num_txt(txt, PATRONES$parq), 1, 6),
   `bedrooms (variable)` = list(d$bedrooms, 1, 10))
 rangos <- imap_dfr(crudos, function(v, nm) {
   x <- v[[1]][!is.na(v[[1]])]; f <- x[x < v[[2]] | x > v[[3]]]

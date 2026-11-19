@@ -1,10 +1,11 @@
 # =============================================================================
 # 04_regresiones.R - Regresiones lineales sin penalización (OLS) sobre log(precio)
 #  0. m00: mediana del train (referencia trivial)
-#  1. Especificaciones hedónicas acumulativas: estructural -> + ubicación -> + texto
-#     -> + efectos fijos de localidad -> + no linealidades. Solo van a una tabla (no al
-#     registro), para no inflar la grilla del ensamble en 90_comparacion.R.
+#  1. Especificaciones hedónicas acumulativas: estructural -> + ubicación -> + texto -> + no linealidades.
+#     Solo van a una tabla (no al registro). Nada lleva dummies de localidad (D10).
 #  2. m01: OLS con la especificación completa (se registra y entra al ensamble)
+#  3. reg_ols_sin_loc y m08: m01 + habitaciones × distancia a cada CBD, por OLS y por regresión de mediana
+#  4. m09 y m10: las mismas dos regresiones sobre el precio por m2 (sin variables de área)
 # Validación: dejar una localidad afuera con buffer (cv_oof, D9).
 # Salidas: reports/02_modelos/tables/ols_especificaciones.csv, models/registro_modelos.csv
 # =============================================================================
@@ -26,16 +27,14 @@ bloques <- list(
                   "n_palabras", "year", "month"),
   ubicacion   = setdiff(c("lat", "lon", "lat_rot1", "lat_rot2", grep("^(dist|n500)_", v, value = TRUE)), no_lineal),
   texto       = grep("^tx_", v, value = TRUE),
-  localidad   = grep("^loc_", v, value = TRUE),
   no_lineal   = no_lineal)
 stopifnot(!anyDuplicated(unlist(bloques)), setequal(unlist(bloques), v))   # cada columna en un solo bloque
 
 # ---- 2. OLS con validación cruzada ----
-ols_coef <- function(X, a) { b <- lm.fit(cbind(1, X[a, , drop = FALSE]), Y[a])$coefficients; b[is.na(b)] <- 0; b }
 ols_oof  <- function(X) drop(cv_oof(function(a, e) cbind(1, X[e, , drop = FALSE]) %*% ols_coef(X, a)))
 
 specs <- set_names(accumulate(names(bloques), c),
-                   c("1. Estructural", "2. + Ubicación", "3. + Texto", "4. + Localidad", "5. + No linealidades"))
+                   c("1. Estructural", "2. + Ubicación", "3. + Texto", "4. + No linealidades"))
 tabla <- imap_dfr(specs, function(b, nombre) {
   cols <- unlist(bloques[b]); p <- ols_oof(Xtr[, cols])
   tibble(especificacion = nombre, n_variables = length(cols),
@@ -45,5 +44,39 @@ print(tabla %>% select(-oof) %>% mutate(across(starts_with("mae"), ~ round(.x / 
 write_csv(select(tabla, -oof), file.path(P$rep_mod, "tables", "ols_especificaciones.csv"))
 
 # ---- 3. Registro de la especificación completa ----
-registra("m01_ols", "OLS con variables estructurales, ubicación, texto, localidad y no linealidades", "-",
+registra("m01_ols", "OLS con variables estructurales, ubicación, texto y no linealidades", "-",
          evalua(last(tabla$oof)), last(tabla$oof), drop(cbind(1, Xte) %*% ols_coef(Xtr, seq_along(Y))))
+
+# ---- 4. Especificación completa + habitaciones × distancia a cada CBD: OLS y LAD ----
+Ztr <- cbind(Xtr, interacciones(TR)); Zte <- cbind(Xte, interacciones(TE))
+
+oof_z <- ols_oof(Ztr)
+registra("reg_ols_sin_loc", "OLS sin dummies de localidad + habitaciones × distancia a cada CBD", "-",
+         evalua(oof_z), oof_z, drop(cbind(1, Zte) %*% ols_coef(Ztr, seq_along(Y))))
+
+# Regresión de mediana (LAD): minimiza el error absoluto, la misma pérdida de la competencia. Se resuelve por
+# mínimos cuadrados reponderados con pesos 1/|residuo| (IRLS); exp() de la mediana del log es la mediana del precio.
+# ponytail: IRLS aproxima la solución exacta; quantreg::rq(method = "fn") si hiciera falta exactitud
+lad_coef <- function(X, a, y = Y, iter = 50) {
+  Xa <- cbind(1, X[a, , drop = FALSE]); w <- rep(1, length(a))
+  for (i in seq_len(iter)) {
+    b <- lm.wfit(Xa, y[a], w)$coefficients; b[is.na(b)] <- 0
+    w <- 1 / pmax(abs(drop(y[a] - Xa %*% b)), 1e-4)
+  }
+  b
+}
+oof_lad <- drop(cv_oof(function(a, e) cbind(1, Ztr[e, , drop = FALSE]) %*% lad_coef(Ztr, a)))
+registra("m08_lad_sin_loc", "Regresión de mediana (pérdida MAE), mismas variables que reg_ols_sin_loc", "IRLS, 50 iteraciones",
+         evalua(oof_lad), oof_lad, drop(cbind(1, Zte) %*% lad_coef(Ztr, seq_along(Y))))
+
+# ---- 5. Precio por m2: las mismas dos regresiones sobre log(precio / área) ----
+# Se excluyen el área y sus términos derivados (log_area, log_area_2, log_area_x_apto, log_area_x_estrato); se
+# conservan los indicadores de la fuente del área. Precio predicho = precio por m2 predicho × m2, es decir,
+# en log: log(precio/m2) + log(área). Así se evalúa en la CV y así se arma el envío.
+W <- !grepl("log_area", colnames(Ztr)); Wtr <- Ztr[, W]; Wte <- Zte[, W]
+la_tr <- TR$log_area; la_te <- TE$log_area; Y_m2 <- Y - la_tr
+for (m in list(list("m09_ols_m2", "OLS", ols_coef), list("m10_lad_m2", "Regresión de mediana (IRLS)", lad_coef))) {
+  oof <- drop(cv_oof(function(a, e) cbind(1, Wtr[e, , drop = FALSE]) %*% m[[3]](Wtr, a, Y_m2))) + la_tr
+  registra(m[[1]], paste(m[[2]], "sobre log(precio por m2), sin variables de área; precio = predicción × m2"), "-",
+           evalua(oof), oof, drop(cbind(1, Wte) %*% m[[3]](Wtr, seq_along(Y), Y_m2)) + la_te)
+}

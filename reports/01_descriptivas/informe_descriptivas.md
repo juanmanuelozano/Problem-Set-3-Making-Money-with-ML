@@ -144,7 +144,6 @@ Los rangos se fijaron por plausibilidad física: un apartaestudio pequeño tiene
 | Variable | Rango | Fuera (bajo / sobre) | Valores fuera más frecuentes | Lectura |
 |---|---|---:|---|---|
 | Área, variable original | [20, 1.500] | 8 / 5 | 2, 6, 7, 7.700 | Errores de digitación |
-| `surface_total` | [20, 2.000] | 3 / 7 | 7.200, 17.137, 108.800 | Área del lote o errores |
 | **Área del texto** | [20, 1.000] | **391 / 2.391** | 10–19; 8.144, 9.620 | Por debajo de 20: terrazas, balcones o depósitos. Por encima de 1.000: **decimales perdidos** (ver abajo) |
 | Baños del texto | [1, 8] | 6 / 6 | 0, 9 | Errores |
 | `bathrooms` original | *sin filtro* | 0 / 55 | 9–13 | No se filtra (posibles casas grandes) |
@@ -176,7 +175,7 @@ Los rangos se fijaron por plausibilidad física: un apartaestudio pequeño tiene
 - **El precio no tiene outliers propiamente dichos: está acotado.** La masa en los topes es pequeña, y el valor exacto de 300 M (509 casos) es menos frecuente que otras cifras redondas, como 450 M (1.020) o 350 M (808). Eso se parece más a una muestra filtrada con *heaping* que a precios censurados y amontonados en el tope. Los inmuebles de 300 M son más pequeños (mediana de 70 m² frente a 113), lo que es coherente con su precio.
 - **El tope superior pesa más en Chapinero**: el 3,3% de sus precios están en 1.600 M o más, frente al 0,9% del resto. En la zona del test, el filtro de 1.650 M excluye una parte mayor de la distribución, y por eso recortar las predicciones a 1.650 M es aún más importante ahí.
 - **Precios psicológicos:** hay 1.097 inmuebles entre 950 y 1.000 M y solo 318 entre 1.000 y 1.050 M. Los vendedores evitan cruzar los mil millones.
-- **Los extremos relativos están en el precio por m², y vienen del área, no del precio.** Con el área de las descriptivas (observada o, si falta, la del texto sin filtrar), el rango p1–p99 del precio por m² de los apartamentos es 3,2–9,8 M/m² cuando el área es observada, pero 0,5–37,7 M/m² cuando viene del texto. Entre el 11% y el 12% de los anuncios con área del texto tienen un z robusto de |z| > 3 en log(precio/m²), frente al 0,5% de los anuncios con área observada. Con el área final de la modelación, el p99 del texto baja a 10,6 M/m² y la proporción con |z| > 3 cae al 0,8%: la regla de coherencia funciona.
+- **Los extremos relativos están en el precio por m², y vienen del área, no del precio.** Con el área de las descriptivas (observada o, si falta, la del texto sin filtrar), el rango p1–p99 del precio por m² de los apartamentos es 3,2–9,8 M/m² cuando el área es observada, pero 0,5–37,7 M/m² cuando viene del texto. Entre el 11% y el 12% de los anuncios con área del texto tienen un z robusto de |z| > 3 en log(precio/m²), frente al 0,5% de los anuncios con área observada. Con el área final de la modelación, el p99 del texto baja a 10,8 M/m² y la proporción con |z| > 3 cae al 0,8%: la regla de coherencia funciona.
 
 **Implicaciones:**
 

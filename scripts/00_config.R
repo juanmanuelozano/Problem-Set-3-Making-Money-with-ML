@@ -2,7 +2,8 @@
 # 00_config.R - Configuración común: rutas, paleta, tema gráfico y funciones
 # Todos los scripts hacen source("scripts/00_config.R") y se corren desde la raíz del repo.
 # =============================================================================
-suppressMessages({library(tidyverse); library(scales)})
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman", repos = "https://cloud.r-project.org")
+suppressMessages(pacman::p_load(tidyverse, scales))
 options(width = 160, scipen = 99)
 set.seed(123)
 
@@ -54,4 +55,16 @@ dist_min <- function(lat1, lon1, lat2, lon2, bloque = 1000) {
   out
 }
 mae <- function(y, yhat) mean(abs(y - yhat))
+
+# ---- Extracción de números del texto (title + description en minúsculas) ----
+# Los rangos válidos se aplican en cada script (02, 03, 02b). Ver docs/guia_variables.md.
+PATRONES <- list(
+  area    = "(\\d{2,4}(?:[\\.,]\\d+)?)\\s?(?:m2|mts2|mt2|mts|metros cuadrados|metros|mt)\\b",
+  banos   = "(\\d)\\s?(?:banos|bano)\\b",
+  estrato = "estrato\\s?(\\d)",
+  piso    = "(?:piso|nivel)\\s?(\\d{1,2})\\b",
+  antig   = "(\\d{1,2})\\s?anos? de (?:construid|antiguedad)",
+  antig2  = "antiguedad (?:de )?(\\d{1,2})",
+  parq    = "(\\d)\\s?(?:parqueaderos|garajes|parqueadero|garaje)")
+num_txt <- function(x, pat) as.numeric(str_replace(str_match(x, pat)[, 2], ",", "."))
 recorta <- function(p) pmin(pmax(p, PRECIO_MIN), PRECIO_MAX)

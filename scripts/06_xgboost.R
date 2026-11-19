@@ -3,7 +3,7 @@
 # Grilla de profundidad y min_child_weight; rondas elegidas por MAE OOF, dejando una localidad afuera con buffer.
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-suppressMessages(library(xgboost))
+suppressMessages(pacman::p_load(xgboost))
 
 Xtr <- matriz_arboles(TR); Xte <- matriz_arboles(TE)
 dtr <- xgb.DMatrix(Xtr, label = Y, nthread = 8); dte <- xgb.DMatrix(Xte, nthread = 8)

@@ -7,7 +7,7 @@
 # el elastic net se reajusta y su margen para las filas de entrenamiento es out-of-fold interno.
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-suppressMessages({library(xgboost); library(glmnet)})
+suppressMessages(pacman::p_load(xgboost, glmnet))
 
 Xtr <- matriz_arboles(TR); Xte <- matriz_arboles(TE)
 Ltr <- matriz_lineal(TR); Lte <- matriz_lineal(TE)

@@ -32,6 +32,9 @@ cv_oof <- function(ajusta_predice, folds = FOLDS) {
   }
   if (ncol(pred) == 1) pred[, 1] else pred
 }
+# Coeficientes OLS (con intercepto) ajustados en las filas `a` de X; los coeficientes no identificados quedan en 0
+ols_coef <- function(X, a, y = Y) { b <- lm.fit(cbind(1, X[a, , drop = FALSE]), y[a])$coefficients; b[is.na(b)] <- 0; b }
+
 # Columna de una matriz de predicciones OOF con menor MAE total (elige lambda, rondas, etc.)
 mejor_columna <- function(pred) which.min(apply(pred, 2, function(p) evalua(p)$mae_total))
 
@@ -46,15 +49,14 @@ xgb_rondas <- function(pr, Xa, ya, Xe, rondas, ma = NULL, me = NULL) {
 
 # Matriz para árboles: NA -> -1 más indicador de faltante
 matriz_arboles <- function(df, vars = base$vars) {
-  X <- as.matrix(df[vars])
-  for (v in c("piso_txt", "antig_txt", "parq_txt")) {
-    X <- cbind(X, setNames(as.integer(is.na(df[[v]])), paste0("na_", v)) |> as.matrix() |> `colnames<-`(paste0("na_", v)))
-  }
+  na <- sapply(c("piso_txt", "antig_txt", "parq_txt"), \(v) as.integer(is.na(df[[v]])))
+  X <- cbind(as.matrix(df[vars]), `colnames<-`(na, paste0("na_", colnames(na))))
   X[is.na(X)] <- -1
   X
 }
 
-# Matriz lineal: imputación por mediana del train + indicadores, términos cuadráticos y dummies de localidad
+# Matriz lineal: imputación por mediana del train + indicadores y términos cuadráticos.
+# Sin dummies de localidad (D10): con la validación por localidad no se pueden estimar para la localidad evaluada.
 matriz_lineal <- function(df, ref = TR, vars = base$vars) {
   X <- df[vars]
   for (v in c("piso_txt", "antig_txt", "parq_txt")) {
@@ -66,9 +68,13 @@ matriz_lineal <- function(df, ref = TR, vars = base$vars) {
   X$log_area_x_apto <- X$log_area * X$es_apto
   X$log_area_x_estrato <- X$log_area * X$estrato_final
   X$dist_cbd_x_apto <- X$dist_cbd * X$es_apto
-  locs <- c("Chapinero", "Usaquén", "Suba", "Teusaquillo", "Barrios Unidos", "Santa Fé", "Fontibón", "Engativá", "Kennedy")
-  for (l in locs) X[[paste0("loc_", make.names(l))]] <- as.integer(df$localidad %in% l)
   as.matrix(X)
+}
+
+# Habitaciones × distancia (km) a cada CBD; se pegan a matriz_lineal() en las regresiones (04, 04b)
+interacciones <- function(df) {
+  h <- c("centro_internacional", "calle72", "parque93")
+  `colnames<-`(sapply(h, \(x) df$bedrooms * df[[paste0("dist_", x)]] / 1000), paste0("bedrooms_x_dist_", h))
 }
 
 # Métricas sobre predicciones out-of-fold (en log) -> MAE en pesos con recorte al soporte
@@ -95,6 +101,7 @@ registra <- function(nombre, descripcion, params, metr, pred_oof_log, pred_test_
   tst <- if (file.exists(tst_f)) lee_csv(tst_f) else tibble(property_id = TE$property_id)
   tst[[nombre]] <- pred_test_log; write_csv(tst, tst_f)
   sub <- tibble(property_id = TE$property_id, price = round(recorta(exp(pred_test_log))))
+  stopifnot(nrow(sub) == nrow(TE), !anyDuplicated(sub$property_id), !anyNA(sub$price))   # formato de Kaggle
   write_csv(sub, file.path(P$subs, paste0(nombre, ".csv")))
   cat(sprintf("[%s] MAE OOF total: %s | Chapinero: %s | macro localidades: %s\n", nombre,
               comma(metr$mae_total / 1e6, .1), comma(metr$mae_chapinero / 1e6, .1), comma(metr$mae_macro / 1e6, .1)))

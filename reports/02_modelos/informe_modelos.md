@@ -1,78 +1,117 @@
-# Informe 2 — Modelación: primera ronda
+# Informe 2 — Modelación: segunda ronda (validación por localidad con buffer)
 
 **Problem Set 3: Predicting Prices · Big Data y Machine Learning · Uniandes 2026-2**
-Código: [`scripts/03_features.R`](../../scripts/03_features.R) → [`04`](../../scripts/04_regresiones.R) · [`04b`](../../scripts/04b_elastic_net.R) · [`05`](../../scripts/05_random_forest.R) · [`06`](../../scripts/06_xgboost.R) · [`07`](../../scripts/07_hibridos.R) → [`90_comparacion.R`](../../scripts/90_comparacion.R)
-Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_modelos.csv) · Última actualización: 2026-11-14
+Código: [`scripts/03_features.R`](../../scripts/03_features.R) · [`03b_buffer.R`](../../scripts/03b_buffer.R) → [`04`](../../scripts/04_regresiones.R) · [`04b`](../../scripts/04b_elastic_net.R) · [`05`](../../scripts/05_random_forest.R) · [`06`](../../scripts/06_xgboost.R) · [`07`](../../scripts/07_hibridos.R) → [`90_comparacion.R`](../../scripts/90_comparacion.R)
+Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_modelos.csv) · Última actualización: 2026-11-18
 
 ---
 
 ## Resumen
 
-- Se estimaron siete modelos más un ensamble, evaluados con **validación cruzada espacial** (5 bloques). Además del MAE total se mide el error en las **307 observaciones del train ubicadas en Chapinero**, la mejor aproximación al test.
-- **Los árboles puros no extrapolan hacia Chapinero.** El random forest tiene un MAE de 203 millones en Chapinero y XGBoost de 180, frente a 159 del elastic net. Chapinero es más caro que casi todo el train, y un árbol no puede predecir por encima de los valores que vio en zonas parecidas. Un modelo lineal, en cambio, extrapola por los gradientes (área × estrato, distancia al CBD).
-- Los mejores modelos combinan ambas ideas:
-  - **m06, híbrido lasso + XGBoost en residuos**: mejor MAE en Chapinero (**155 millones**, MAPE de 17,6%).
-  - **m05, XGBoost sobre el precio por m²**: mejor modelo individual en el total (**134 millones**).
-  - **m90, ensamble**: mejor MAE total (**131 millones**), pero 164 en Chapinero.
-- Todos los modelos **subpredicen Chapinero**: el sesgo medio de m05 es de −135 millones. Corregir ese sesgo es la principal oportunidad de mejora.
+- **Nueva validación:** se deja afuera una localidad a la vez (18 folds), con un **buffer de 500 m**, y todos los modelos usan la misma función `cv_oof()` ([D9](../../docs/decisiones.md)). Los resultados no son comparables con la primera ronda (k-means), que quedó archivada en `models/registro_modelos_kmeans.csv`.
+- **Ningún modelo lleva dummies de localidad** ([D10](../../docs/decisiones.md)). La dummy de la localidad evaluada no se puede estimar, y quitarlas baja el MAE del OLS en Chapinero de 225 a 155 millones.
+- **Mejor modelo para el test: m06, híbrido lasso + XGBoost en residuos**, con **148,5 millones** de MAE en Chapinero. Le gana en Chapinero al elastic net (−6,3 M, *t* pareado = −4,3) y al OLS (−7,1 M, *t* = −4,3), y pierde solo 1–2 M en el total.
+- Los modelos lineales sin dummies quedan muy cerca entre sí: entre 154 y 156 M en Chapinero y alrededor de 132 M en el total. Predecir por m² empeora el total (135 M con elastic net), aunque con penalización empata en Chapinero (153,8 M).
+- Los árboles puros siguen sin extrapolar hacia Chapinero (random forest: 183 M; XGBoost: 163 M).
 
 ## 1. Diseño de la validación
 
-![Folds espaciales](figures/m0_folds_espaciales.png)
+![Fold de Chapinero](figures/m0_fold_chapinero.png)
 
-- **Folds:** k-means (k = 5) sobre las coordenadas en km del train. Los bloques son contiguos, así que el modelo siempre predice zonas que no vio al entrenar.
-- **Métricas** (MAE en pesos, sobre predicciones *out-of-fold*, recortadas a [300, 1.650] millones):
+- **Folds:** cada localidad del train es un fold de evaluación. Del entrenamiento se excluyen los anuncios a menos de 500 m de algún anuncio evaluado. Equivale a `spatialsample::spatial_leave_location_out_cv()` con `buffer`, implementado con una haversine propia en [`utils_modelos.R`](../../scripts/utils_modelos.R). [`check_validacion.R`](../../scripts/check_validacion.R) verifica la partición, el buffer y `cv_oof()`.
+- **Hiperparámetros:** `cv.glmnet(foldid=)` y `xgb.cv()` no admiten buffer. λ y el número de rondas se eligen por MAE OOF mínimo sobre una grilla, con `cv_oof()`, `xgb_rondas()` y `mejor_columna()`.
+- **Métricas** (MAE en pesos, sobre predicciones *out-of-fold* recortadas a [300, 1.650] millones):
   - `mae_total`: todo el train.
-  - `mae_chapinero`: las 307 observaciones del train en Chapinero (246 en el fold 2 y 61 en el fold 1). **Es la métrica más relevante para el test, aunque ruidosa**: con n = 307, su error estándar es de unos ±8–10 millones.
-  - `mae_fold2`: el bloque de Usaquén y Chapinero (16.492 obs), el más parecido al test.
-- **Variable objetivo:** `log(precio)`. La predicción es `exp(ŷ)` recortada al soporte. Ver [D2](../../docs/decisiones.md).
-- **Variables:** 66 (69 en la versión para árboles, con indicadores de faltante): área imputada (R² OOB 0,83), baños, estrato imputado espacialmente (R² OOB 0,79), piso, antigüedad y parqueaderos del texto, 22 indicadores de amenidades, coordenadas (también rotadas), distancias y densidades de servicios de OSM. Diccionario en [`docs/guia_variables.md`](../../docs/guia_variables.md).
+  - `mae_chapinero`: las 307 observaciones del train en Chapinero, cuando Chapinero es el fold evaluado. **Es la métrica más relevante para el test** (D7). Su error estándar es de ±8 M, pero las comparaciones *pareadas* entre modelos son mucho más precisas (±1–4 M).
+  - `mae_macro`: el promedio simple del MAE de las localidades, para que Usaquén (55% del train) no domine.
+- **Semillas:** 123 en todo el proyecto.
+
+### 1.1 Elección del buffer
+
+![Diagnóstico del buffer](figures/m0_buffer_diagnostico.png)
+
+| Criterio | Resultado | Implicación |
+|---|---|---|
+| Autocorrelación de los residuos (OLS hedónico) | 0,10 a menos de 100 m; 0,024 entre 300 y 400 m; menos de 0,01 desde 500 m | Rango práctico ≈ **500 m** |
+| Distancia al vecino de entrenamiento más cercano | Test frente a train: mediana de 96 m. Validación sin buffer: 1.046 m (555 m en Chapinero) | La validación por localidad ya es más exigente que el test; el buffer la aleja más |
+| Sensibilidad del MAE | El random forest es estable hasta 1.000 m. Por encima, se pierde entre el 4% y el 11% del entrenamiento | Buffers grandes cambian el problema |
+
+Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de un límite de localidad sin quitar más del 2–3% del entrenamiento. Tablas en `tables/buffer_*.csv`.
 
 ## 2. Resultados
 
 ![Comparación de MAE](figures/m1_comparacion_mae.png)
 
-| Modelo | Descripción | MAE total (M) | MAE Chapinero (M) | MAPE Chapinero | MAE fold 2 (M) |
+| Modelo | Descripción | MAE total (M) | MAE Chapinero (M) | MAPE Chapinero | MAE promedio por localidad (M) |
 |---|---|---:|---:|---:|---:|
-| m00 | Mediana (referencia) | 236,7 | 350,6 | 35,8% | 278,4 |
-| m01 | OLS | 139,3 | 183,7 | 20,7% | 145,7 |
-| m02 | Elastic net (lasso, α=1) | 134,9 | 159,0 | 17,8% | 147,3 |
-| m03 | Random forest | 150,3 | 203,2 | 21,7% | 155,2 |
-| m04 | XGBoost | 137,2 | 180,2 | 20,0% | 145,3 |
-| m05 | XGBoost sobre precio/m² | **133,8** | 180,8 | 19,7% | **143,3** |
-| m06 | Híbrido lasso + XGBoost en residuos | 134,0 | **155,2** | **17,6%** | 148,0 |
-| m90 | Ensamble ponderado | *131,1* | 163,9 | — | *141,6* |
+| m00 | Mediana (referencia) | 236,7 | 350,6 | 35,8% | 217,7 |
+| m01 | OLS | 132,6 | 154,5 | 17,3% | 151,0 |
+| reg_ols_sin_loc | OLS + habitaciones × distancia a cada CBD | 132,6 | 155,5 | 17,4% | 150,2 |
+| m08 | Regresión de mediana (LAD), mismas variables | 136,4 | 155,4 | 17,7% | 151,5 |
+| m09 | OLS sobre precio/m² (sin variables de área) | 137,5 | 160,5 | 18,2% | 162,0 |
+| m10 | LAD sobre precio/m² (sin variables de área) | 143,0 | 155,4 | 17,8% | 163,4 |
+| m02 | Elastic net (α = 1), mismas variables que reg_ols_sin_loc | **132,2** | 154,7 | 17,3% | 149,8 |
+| m02b | Elastic net (α = 1) sobre precio/m² (sin variables de área) | 135,0 | 153,8 | 17,8% | 162,1 |
+| m11_cart_mse | CART (1 árbol, ranger), hoja = media | 153,0 | 186,4 | 20,4% | 162,6 |
+| m11_cart_mae | CART, hoja = mediana | 154,5 | 187,0 | 20,5% | 162,0 |
+| m11_cart_m2_mse | CART sobre precio/m², hoja = media | 150,0 | 182,7 | 20,5% | 172,6 |
+| m11_cart_m2_mae | CART sobre precio/m², hoja = mediana | 150,9 | 185,0 | 20,6% | 171,7 |
+| m03 | Random forest | 140,5 | 183,0 | 19,5% | 153,7 |
+| m04 | XGBoost | 132,9 | 163,2 | 17,8% | 147,2 |
+| m05 | XGBoost sobre precio/m² | 132,3 | 156,1 | 17,3% | **146,8** |
+| m06 | Híbrido lasso + XGBoost en residuos | 133,6 | **148,5** | **17,0%** | 150,5 |
+| m90 | Ensamble (m04 0,35 · m02 0,30 · m02b 0,20 · m05 0,15) | *129,3* | *154,7* | 17,2% | *146,5* |
 
-*El MAE del ensamble está en cursiva porque es levemente optimista: los pesos se eligieron con las mismas predicciones OOF.*
+*El ensamble está en cursiva porque es levemente optimista: los pesos se eligieron con las mismas predicciones OOF.*
 
-### 2.1 Elastic net (m02)
-- Grilla α ∈ {0; 0,25; 0,5; 0,75; 1} con λ por CV espacial (`cv.glmnet` con `foldid`). La diferencia entre valores de α es pequeña (135–141 millones). Gana el **lasso** (α = 1, λ = 0,005), que conserva 41 de 89 coeficientes.
-- La matriz incluye términos cuadráticos, las interacciones área × estrato, área × apartamento y CBD × apartamento, y dummies de localidad.
-- Los coeficientes estandarizados más grandes son: log(área), **log(área) × estrato**, baños, habitaciones² (negativo) y distancia a la Calle 72 (negativa). La interacción con el estrato es lo que permite extrapolar: el valor de un m² adicional crece con el nivel socioeconómico.
-- Tabla: [`tables/elastic_net_coeficientes.csv`](tables/elastic_net_coeficientes.csv).
+### 2.1 Regresiones lineales (04_regresiones.R)
 
-### 2.2 Random forest (m03)
-- Grilla mtry ∈ {10, 20, 35} × min.node.size ∈ {3, 10}, con 300 árboles. Gana mtry = 35 (casi la mitad de las variables) y el modelo final usa 800 árboles. Un mtry mayor ayuda porque obliga a usar el área y el estrato en casi todos los cortes.
-- Es el peor modelo en Chapinero. Las hojas promedian precios de vecinos más baratos y el bosque comprime las predicciones hacia la media.
+| Especificación (acumulativa) | Variables | R² OOF | MAE total (M) | MAE Chapinero (M) |
+|---|---:|---:|---:|---:|
+| 1. Estructural | 17 | 0,594 | 144,3 | 186,1 |
+| 2. + Ubicación | 47 | 0,602 | 142,6 | 164,6 |
+| 3. + Texto | 69 | 0,625 | 137,4 | 155,6 |
+| 4. + No linealidades | 80 | 0,635 | 132,6 | 154,5 |
 
-### 2.3 XGBoost (m04) y XGBoost sobre precio por m² (m05)
-- Grilla max_depth ∈ {4, 6, 8} × min_child_weight ∈ {3, 10}, η = 0,03, subsample 0,8, colsample 0,6, con early stopping usando los folds espaciales. Gana **depth = 4, mcw = 10** (745 rondas). Los árboles poco profundos generalizan mejor entre zonas.
-- **m05** cambia la variable objetivo a `log(precio) − log(área)`. El árbol aprende el *nivel* de precio por m² de cada ubicación y el área entra de forma multiplicativa, lo que elimina la necesidad de aprender la curva precio-área con escalones. Mejora el MAE total (133,8) y el del fold 2 (143,3), pero no el de Chapinero: el problema de nivel persiste.
+- Cada bloque mejora el total. En Chapinero, la ubicación (−22 M) y el texto (−9 M) son los que más ayudan.
+- Las interacciones habitaciones × distancia a cada CBD (`reg_ols_sin_loc`) no cambian nada (132,6 y 155,5).
+- La regresión de mediana (LAD, IRLS) minimiza la misma pérdida de la competencia, pero no mejora en la validación: empata en Chapinero y pierde 4 M en el total.
+- Los modelos sobre **precio por m²** (precio = predicción × m²) son peores. Imponen una elasticidad precio-área de 1, cuando en los datos es bastante menor.
+
+### 2.2 Elastic net (04b_elastic_net.R: m02 y m02b)
+- Pérdida cuadrática (glmnet, `family = "gaussian"`), con las mismas variables que `reg_ols_sin_loc` (incluye habitaciones × distancia a cada CBD). Se ajusta para el precio (m02) y para el precio por m² sin variables de área (m02b; precio = predicción × m²).
+- **Grilla** (126 configuraciones, tabla en [`tables/elastic_net_grilla.csv`](tables/elastic_net_grilla.csv)):
+  - α ∈ {0; 0,1; 0,25; 0,5; 0,75; 0,9; 1}: grilla de la mezcla L1/L2 cruzada con todo el camino de la penalización, como en Zou y Hastie (2005, *JRSS-B*).
+  - Camino de λ: `nlambda` ∈ {50, 100, 200} y `lambda.min.ratio` ∈ {10⁻³, 10⁻⁴, 10⁻⁵}. Friedman, Hastie y Tibshirani (2010, *JSS*) recomiendan 100 valores en escala log hasta 0,001·λ_max; 10⁻⁴ es el valor por defecto de glmnet con n > p y 10⁻⁵ extiende el camino porque la primera ronda eligió el borde.
+  - Cada camino se valida entero con `cv_oof()` y λ se elige por MAE OOF mínimo.
+- **Resultado:** solo importa α = 0 (ridge), que es 2 M peor en el total. Para α ≥ 0,1, `nlambda` y `lambda.min.ratio` mueven el MAE en menos de 0,5 M. Gana el lasso (α = 1) en ambos objetivos.
+- En el precio, el λ elegido (0,00012) queda en el borde inferior del camino: la penalización casi no ayuda con n = 38.644 y 83 variables, y m02 equivale al OLS (−0,8 M en Chapinero frente a `reg_ols_sin_loc`, *t* = −1,7). Conserva 75 de 83 coeficientes.
+- En el precio por m², la penalización sí ayuda (λ = 0,0017, en el interior del camino): m02b mejora a m09 (OLS por m²) en 6,7 M en Chapinero (*t* = −3,7) y queda empatado con el mejor lineal en esa localidad, pero es 3 M peor en el total y 12 M peor en el promedio por localidad.
+- Sin dummies de localidad, la ubicación entra por las distancias, las densidades, las coordenadas y el estrato.
+
+### 2.3 Random forest (m03) y XGBoost (m04, m05)
+- **Random forest:** gana mtry = 35, min.node.size = 3. Es el peor en Chapinero (183 M), porque las hojas promedian precios de zonas más baratas.
+- **XGBoost:** gana profundidad 4, mcw = 3, con 550 rondas. Los árboles más profundos extrapolan peor (profundidad 8: 170,6 M en Chapinero).
+- **m05**, XGBoost sobre `log(precio) − log(área)`, tiene el mejor MAE promedio por localidad (146,8 M).
+- Importancia en m04 (ganancia): log(área) 47%, baños 12%, estrato 11%, distancia a la Calle 72 5%.
 
 ![Importancia XGBoost](figures/m4_importancia_xgb.png)
 
-Importancia (ganancia, m04): log(área) 45%, baños 16%, estrato 10%, distancia a la Calle 72 6%. Siguen las distancias al Parque 93 y al CBD, los parqueaderos y las coordenadas.
+### 2.3b CART (05b_cart.R: m11)
+- Un solo árbol con ranger (`num.trees = 1`, `mtry` = todas, sin remuestreo). ranger no poda, así que la complejidad se controla con `max.depth` ∈ {3, 4, 5, 6, 8, 10, 12, 15, sin límite} y `min.bucket` ∈ {5, 20, 50, 100, 200, 500} (`min.node.size` = 2 × `min.bucket`), los parámetros que calibran Probst, Boulesteix y Bischl (2019, *JMLR*) para rpart. 108 árboles, tabla en [`tables/cart_grilla.csv`](tables/cart_grilla.csv).
+- Pérdidas: MSE (la hoja predice la media) y MAE (la mediana: árbol LAD de Breiman et al., 1984). Los cortes son por varianza en ambos casos.
+- Ganan árboles poco profundos: profundidad 6 con hojas de 20 en el precio y profundidad 4 en el precio por m². Más profundidad sobreajusta: sin límite y con hojas de 5, el MAE sube a 187 M. Con profundidad ≥ 8, hojas de 100–200 estabilizan el error.
+- La mediana no mejora a la media (1–2 M peor). Es el peor modelo en Chapinero (183–187 M), igual que el random forest: un árbol no extrapola a precios más altos que los de sus hojas. No entra al ensamble.
 
 ### 2.4 Híbrido lasso + XGBoost (m06)
-- El lasso da la predicción base (`base_margin`) y XGBoost aprende solo los residuos.
-- **Validación anidada:** en cada fold externo el lasso se reajusta, y su margen para las filas de entrenamiento es *out-of-fold* interno. Así XGBoost no aprende de residuos "demasiado buenos".
-- El early stopping se detiene en solo 35 rondas: XGBoost hace correcciones pequeñas sobre la tendencia lineal. Con eso basta para tener el mejor error en Chapinero (155,2), sin perder en el total (134,0).
+- El lasso da la predicción base (`base_margin`) y XGBoost aprende los residuos. Es una validación anidada: en cada fold externo, el lasso se reajusta solo con el conjunto de análisis, con CV interna por localidad.
+- El número de rondas elegido es **10, el mínimo de la grilla**: con esta validación, XGBoost solo hace una corrección muy pequeña sobre el lasso. Aun así, esa corrección baja el MAE en Chapinero 5 M frente al lasso solo. Vale la pena probar 1 a 10 rondas.
 
 ### 2.5 Ensamble (m90)
-- Pesos no negativos que suman 1 sobre las predicciones en log, elegidos en una grilla para minimizar el MAE OOF total: **m05 0,45 · m06 0,35 · m02 0,15 · m01 0,05**. El random forest y m04 reciben peso 0.
-- Mejora el total y el fold 2, pero empeora Chapinero frente a m06, porque los pesos se optimizaron para toda la ciudad.
+- **Selección codiciosa con reemplazo** (Caruana et al., 2004): 20 pasos de 0,05. Reemplaza la grilla del símplex, que crecía como 21^k y no aguantaba más de 6 modelos.
+- Pesos: m04 0,35 · m02 0,30 · m02b 0,20 · m05 0,15. Optimiza el MAE total, así que no favorece a Chapinero.
 
-## 3. Diagnóstico: dónde y cómo se equivoca
+## 3. Diagnóstico
 
 ![Error por localidad](figures/m2_error_localidad.png)
 
@@ -80,35 +119,30 @@ Importancia (ganancia, m04): log(área) 45%, baños 16%, estrato 10%, distancia 
 
 | Localidad | n | MAE (M) | Sesgo medio (M) | MAPE |
 |---|---:|---:|---:|---:|
-| Chapinero | 307 | 180,8 | **−134,6** | 19,7% |
-| La Candelaria | 178 | 234,3 | −76,9 | 32,4% |
-| Barrios Unidos | 1.699 | 180,9 | −35,3 | 26,9% |
-| Usaquén | 21.461 | 127,4 | −18,7 | 18,5% |
-| Suba | 5.109 | 123,7 | −19,8 | 18,2% |
-| Kennedy | 1.517 | 120,6 | −4,6 | 23,5% |
+| Usaquén | 21.461 | 125 | −28,1 | 17,4% |
+| Suba | 5.109 | 130 | −29,3 | 18,8% |
+| Barrios Unidos | 1.699 | 179 | −18,6 | 27,2% |
+| **Chapinero** | 307 | 155 | **−85,7** | 17,3% |
+| La Candelaria | 178 | 261 | −149 | 32,7% |
 
-(Modelo m05, predicciones OOF. Tabla completa en [`tables/error_por_localidad.csv`](tables/error_por_localidad.csv).)
+(Modelo m02, el de menor MAE total individual; predicciones OOF. Tabla completa en [`tables/error_por_localidad.csv`](tables/error_por_localidad.csv).)
 
-- En Chapinero el modelo **subpredice de forma sistemática**, sobre todo los inmuebles de más de 1.000 millones: la nube de puntos queda debajo de la diagonal. Es el patrón de *regresión a la media* que se espera cuando una zona cara se predice con información de zonas más baratas.
-- En MAPE, Chapinero (19,7%) no es peor que Usaquén. El MAE es alto porque los precios son altos, no porque el modelo entienda peor la zona; el problema es de **nivel (sesgo)**, no de dispersión.
+- Chapinero se sigue **subprediciendo** (sesgo de −86 M), aunque menos que en la primera ronda con m05 (−135 M). El problema es de nivel, no de dispersión: el MAPE de Chapinero (17%) es igual al de Usaquén.
 
 ## 4. Recomendación para Kaggle
 
 | Prioridad | Archivo | Por qué |
 |---|---|---|
-| 1 | [`submissions/m06_hibrido_en_xgb.csv`](../../submissions/m06_hibrido_en_xgb.csv) | Mejor MAE en Chapinero, la métrica más parecida al test |
-| 2 | [`submissions/m90_ensamble.csv`](../../submissions/m90_ensamble.csv) | Mejor MAE total; sirve para comparar en el leaderboard público |
-| 3 | [`submissions/m02_elastic_net.csv`](../../submissions/m02_elastic_net.csv) | Modelo simple y robusto, como referencia |
+| 1 | [`submissions/m06_hibrido_en_xgb.csv`](../../submissions/m06_hibrido_en_xgb.csv) | Mejor MAE en Chapinero (148,5 M), con ventaja significativa en la comparación pareada |
+| 2 | [`submissions/reg_ols_sin_loc.csv`](../../submissions/reg_ols_sin_loc.csv) | La mejor regresión simple; referencia interpretable |
+| 3 | [`submissions/m90_ensamble.csv`](../../submissions/m90_ensamble.csv) | Mejor MAE total; sirve para ver si el leaderboard premia el total o Chapinero |
 
-El leaderboard público es la única evaluación directa sobre Chapinero. Comparar m06 contra m90 dirá si la métrica de Chapinero del train es una buena guía.
+Si el puntaje público de m06 queda cerca de 148 M, la validación por localidad está bien calibrada para el test. Si queda muy por debajo, la validación es más pesimista de lo necesario (ver §1.1).
 
-## 5. Siguientes pasos (por impacto esperado)
+## 5. Siguientes pasos
 
-1. **Corregir el sesgo en Chapinero.**
-   - *Pesos por cambio de covariables:* entrenar un clasificador test-vs-train y ponderar el train por `p/(1−p)`, para que el modelo se concentre en inmuebles parecidos a los del test.
-   - Calibrar el nivel con las 307 observaciones de Chapinero (por ejemplo, un intercepto por zona estimado con contracción).
-2. **Rezago espacial del precio:** mediana del log del precio por m² de los k vecinos más cercanos del train, calculada dentro de cada fold para evitar fuga. En el test, los vecinos más cercanos de Chapinero sí incluyen las 307 observaciones de la zona.
-3. **Duplicados train-test:** 200 anuncios del test tienen una descripción idéntica en el train (117 con la misma ubicación), y el 80% de los duplicados internos del train tiene el mismo precio. *Hay que confirmar que las reglas del curso permiten explotarlo.*
-4. **Texto más rico:** TF-IDF de uni- y bigramas con lasso, o *embeddings*.
-5. **Datos externos de mejor calidad:** estrato por manzana y avalúo catastral (Datos Abiertos Bogotá), y completar las estaciones de TransMilenio en OSM (solo hay 61 de ~140 etiquetadas).
-6. Afinar los hiperparámetros del híbrido (profundidad, η, número de rondas) y probar `reg:absoluteerror` como objetivo, ya que la métrica es MAE.
+1. **Corregir el sesgo en Chapinero:** pesos por cambio de covariables (clasificador test-vs-train) o calibración del nivel.
+2. **Rezago espacial del precio por m²** (kNN dentro de cada fold). En el test, los vecinos de Chapinero sí incluyen las 307 observaciones de la zona.
+3. **Híbrido:** probar 1 a 10 rondas y `reg:absoluteerror`.
+4. **Texto:** TF-IDF con lasso. Corregir las regex de amenidades (negaciones y límites de palabra) y recuperar los decimales del área.
+5. Decidir si se permite explotar los 200 duplicados exactos entre train y test (reglas del curso).

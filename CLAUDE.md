@@ -14,10 +14,12 @@ Proyecto: **Problem Set 3 – Predicting Prices** (Big Data y Machine Learning, 
 ## Convenciones
 - Idioma: español para código comentado, informes y bitácora.
 - Los scripts se corren desde la raíz: `Rscript scripts/NN_nombre.R`. Todos hacen `source("scripts/00_config.R")`.
+- Librerías: solo con `pacman::p_load()`, en la parte de arriba del script (justo después de los `source()`), nunca `library()` en medio del código. `00_config.R` carga las comunes (`tidyverse`, `scales`) e instala pacman si falta; cada script carga solo las suyas: `suppressMessages(pacman::p_load(glmnet))`.
 - Numeración: `0x` = datos y descriptivas, `03` = variables, `04+` = un modelo por script, `9x` = ensambles y envíos.
 - Cada modelo se registra con `registra()` (en `scripts/utils_modelos.R`), que escribe `models/registro_modelos.csv`, las predicciones OOF y de test, y `submissions/<modelo>.csv`.
 - Métrica principal: MAE en pesos sobre predicciones *out-of-fold* **dejando una localidad afuera, con buffer** (`BUFFER_M` en `scripts/utils_modelos.R`, decisión D9). Se reportan también el MAE en las observaciones del train ubicadas en Chapinero (la mejor aproximación al test) y el MAE promedio entre localidades.
 - Validación cruzada: usar siempre `cv_oof(function(analisis, evaluacion) ...)` de `utils_modelos.R` (no `cv.glmnet(foldid=)` ni `xgb.cv`, que no admiten buffer). Para boosting, `xgb_rondas()` y `mejor_columna()`. Semillas: 123.
+- **Ningún modelo puede llevar dummies (efectos fijos) de localidad** (D10). La localidad solo define los folds de validación.
 - No modificar `data/raw/`.
 - Git: **nunca** agregar `Co-Authored-By: Claude` ni otra atribución a Claude en commits o PRs.
 

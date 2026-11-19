@@ -9,7 +9,7 @@
 # Salidas:  reports/02_modelos/tables/buffer_*.csv, reports/02_modelos/figures/m0_*.png
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-suppressMessages(library(ranger))
+suppressMessages(pacman::p_load(ranger))
 BUFFERS <- c(0, 100, 250, 500, 1000, 1500, 2000)
 
 # ---- 1. Distancia al vecino de entrenamiento más cercano ----
@@ -36,8 +36,8 @@ cat("Test con un vecino del train a 0 m (mismas coordenadas):", mean(nn_test == 
 write_csv(res_nn, file.path(P$rep_mod, "tables", "buffer_distancias.csv"))
 
 # ---- 2. Correlograma de los residuos (OLS hedónico con localidad y coordenadas) ----
-X <- cbind(1, matriz_lineal(TR)); b <- lm.fit(X, Y)$coefficients; b[is.na(b)] <- 0
-r <- drop(Y - X %*% b)
+L <- matriz_lineal(TR); A <- matriz_arboles(TR)
+r <- drop(Y - cbind(1, L) %*% ols_coef(L, seq_along(Y)))
 set.seed(123); s <- sample(length(Y), 6000)
 dd <- hav(TR$lat[s], TR$lon[s], TR$lat[s], TR$lon[s]); rr <- outer(r[s], r[s]) / var(r)
 sup <- upper.tri(dd); dd <- dd[sup]; rr <- rr[sup]
@@ -49,10 +49,9 @@ cat("\nCorrelograma de residuos (bin 1 = mismas coordenadas):\n"); print(corr, n
 write_csv(corr, file.path(P$rep_mod, "tables", "buffer_correlograma.csv"))
 
 # ---- 3. Sensibilidad del MAE al buffer ----
-L <- matriz_lineal(TR); A <- matriz_arboles(TR)
 sens <- map_dfr(BUFFERS, function(b) {
   fo <- folds_localidad(b)
-  ols <- cv_oof(function(a, e) { co <- lm.fit(cbind(1, L[a, ]), Y[a])$coefficients; co[is.na(co)] <- 0; cbind(1, L[e, ]) %*% co }, fo)
+  ols <- cv_oof(function(a, e) cbind(1, L[e, ]) %*% ols_coef(L, a), fo)
   rf <- cv_oof(function(a, e) predict(ranger(x = A[a, ], y = Y[a], num.trees = 150, mtry = 20, min.node.size = 5,
                                              num.threads = 8, seed = 123), A[e, ], num.threads = 8)$predictions, fo)
   cat(sprintf("buffer %4d m listo (análisis medio: %.0f%% del resto)\n", b,
@@ -94,8 +93,8 @@ g2 <- ggplot(mapa %>% filter(between(lat, 4.58, 4.76), between(lon, -74.12, -74.
   scale_color_manual(values = setNames(c(c_train, c_test, c_ink), c("Análisis (entrenamiento)", "Evaluación (Chapinero)",
                                                                  sprintf("Excluido por el buffer (%s m)", BUFFER_M))), name = NULL) +
   guides(color = guide_legend(override.aes = list(size = 3, alpha = 1), ncol = 1)) +
-  labs(title = "Validación dejando una localidad afuera, con buffer",
-       subtitle = "Fold de Chapinero (gris claro: test)", x = NULL, y = NULL, caption = fuente) +
+  labs(title = "Fold de Chapinero con buffer",
+       subtitle = "Validación dejando una localidad afuera (gris claro: test)", x = NULL, y = NULL, caption = fuente) +
   theme(axis.text = element_blank(), panel.grid.major = element_blank())
 ggsave(file.path(P$rep_mod, "figures", "m0_fold_chapinero.png"), g2, width = 6, height = 7.5, dpi = 250)
 cat("Listo.\n")

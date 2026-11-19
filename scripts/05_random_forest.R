@@ -3,7 +3,7 @@
 # Grilla pequeña de mtry y min.node.size, validada dejando una localidad afuera con buffer (cv_oof).
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-suppressMessages(library(ranger))
+suppressMessages(pacman::p_load(ranger))
 
 Xtr <- matriz_arboles(TR); Xte <- matriz_arboles(TE)
 cat("Dimensión X:", dim(Xtr), "\n")

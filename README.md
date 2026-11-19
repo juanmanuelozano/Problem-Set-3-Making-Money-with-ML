@@ -44,7 +44,9 @@ Requiere R 4.6 con `tidyverse`, `sp`, `httr`, `jsonlite`, `stargazer`, `ranger`,
 ```bash
 Rscript scripts/01_osm_descarga.R    # datos de OpenStreetMap (usa la caché si ya existe)
 Rscript scripts/02_descriptivas.R    # informe 1: figuras, tablas y base enriquecida
-Rscript scripts/03_features.R        # imputaciones, variables finales y folds espaciales
+Rscript scripts/02b_extremos.R       # informe 1, sección 7: valores extremos (requiere base_modelo.rds del 03)
+Rscript scripts/03_features.R        # imputaciones, variables finales y grupos de validación (localidades)
+Rscript scripts/03b_buffer.R         # diagnóstico para elegir el buffer de la validación (~20 min)
 Rscript scripts/04_regresiones.R     # mediana de referencia y OLS (especificaciones)
 Rscript scripts/04b_elastic_net.R    # elastic net
 Rscript scripts/05_random_forest.R   # ~10 min
@@ -58,7 +60,7 @@ Rscript scripts/90_comparacion.R     # ensamble, figuras e informe 2
 | `00_config.R` | Rutas, paleta, tema gráfico y funciones (haversine, MAE, recorte) |
 | `utils_modelos.R` | Matrices para modelos lineales y de árboles, evaluación OOF y `registra()` (registro, predicciones y envío) |
 | `01`–`02` | Datos externos y descriptivas |
-| `03` | Ingeniería de variables y folds |
+| `03` | Ingeniería de variables, grupos de validación y elección del buffer (`03b`) |
 | `04`–`07` | Un script por familia de modelos |
 | `90` | Comparación y ensamble |
 

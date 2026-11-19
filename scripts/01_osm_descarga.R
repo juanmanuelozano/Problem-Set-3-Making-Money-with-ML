@@ -2,7 +2,7 @@
 # Guarda en data/external/osm/: localidades y UPZ (polígonos) y puntos de servicios urbanos (lat/lon)
 # Correr desde la raíz del repo. Las respuestas quedan en caché (.json): solo descarga lo que falte.
 source("scripts/00_config.R")
-suppressMessages({library(httr); library(jsonlite)})
+suppressMessages(pacman::p_load(httr, jsonlite))
 
 overpass <- function(q, file) {
   if (file.exists(file)) return(fromJSON(file, simplifyVector = FALSE))

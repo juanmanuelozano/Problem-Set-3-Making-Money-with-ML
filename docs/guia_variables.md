@@ -107,13 +107,12 @@ Valen 1 si el texto contiene el patrón. Fuente: Texto. Script: 02. Modelos: L, 
 | `estrato_pred` | Estrato predicho por un RF espacial (R² OOB 0,79) con `lat`, `lon`, coordenadas rotadas, `dist_cbd`, `dist_transmilenio`, `n500_restaurante_bar`, `n500_banco` y `es_apto` | Imputada (RF) | 03 | — |
 | `estrato_final` | `coalesce(estrato_txt, estrato_pred)`. Es continua en la parte imputada (D4) | Construida | 03 | L, Á |
 | `es_apto` | 1 si `property_type == "Apartamento"` | Construida | 03 | L, Á |
-| `sup_total_ok` | `surface_total` válida en 20–2.000 m². **Se calcula pero no se usa** | Construida | 03 | — |
 
 ## 5. Ubicación
 
 | Variable | Definición | Fuente | Script | Modelos |
 |---|---|---|---|---|
-| `localidad` | Localidad (19 urbanas), asignada por punto en polígono (`sp::point.in.polygon`) con relaciones de OSM de `admin_level=8` | OSM | 02 | L (como `loc_*`) |
+| `localidad` | Localidad (19 urbanas), asignada por punto en polígono (`sp::point.in.polygon`) con relaciones de OSM de `admin_level=8`. Define los folds de validación; **no entra en ningún modelo** (D10) | OSM | 02 | — |
 | `upz` | UPZ (111), asignada por punto en polígono con `admin_level=9` | OSM | 02 | — |
 | `lat_rot1`, `lat_rot2` | `lat + lon` y `lat − lon`: coordenadas rotadas 45°, que ayudan a los árboles a hacer cortes diagonales | Construida | 03 | L, Á |
 
@@ -160,6 +159,5 @@ Se crean al vuelo en [`utils_modelos.R`](../scripts/utils_modelos.R). No están 
 | `na_piso_txt`, `na_antig_txt`, `na_parq_txt` | Indicadores de faltante | L, Á |
 | `<var>_2` | Cuadrado de `log_area`, `bedrooms`, `banos_final`, `estrato_final`, `dist_cbd`, `dist_transmilenio`, `lat` y `lon` | L |
 | `log_area_x_apto`, `log_area_x_estrato`, `dist_cbd_x_apto` | Interacciones | L |
-| `loc_<localidad>` | Dummies de Chapinero, Usaquén, Suba, Teusaquillo, Barrios Unidos, Santa Fé, Fontibón, Engativá y Kennedy. La categoría base son las demás | L |
 
 El híbrido (`07_hibridos.R`) usa además el margen del lasso como `base_margin` de XGBoost. No es una columna, sino un desplazamiento inicial de las predicciones.

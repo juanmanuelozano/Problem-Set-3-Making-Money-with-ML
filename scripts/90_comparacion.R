@@ -9,11 +9,16 @@ tst <- lee_csv(file.path(P$models, "test_predicciones.csv"))
 modelos <- setdiff(names(oof), c("property_id", "log_price", "grupo", "chapinero", "m00_mediana", "m90_ensamble"))
 modelos <- setdiff(modelos, grep("^m9", modelos, value = TRUE))
 
-# ---- Ensamble: pesos no negativos que minimizan el MAE OOF (búsqueda en grilla simplex) ----
+# ---- Ensamble: pesos no negativos que minimizan el MAE OOF ----
+# Selección codiciosa con reemplazo (Caruana et al., 2004): en cada uno de 20 pasos se suma el modelo que más baja
+# el MAE. Da pesos múltiplos de 0,05 como la grilla anterior, pero crece lineal (no 21^k) con el número de modelos.
 M <- as.matrix(oof[modelos]); Mt <- as.matrix(tst[modelos])
-pesos_grid <- expand.grid(rep(list(seq(0, 1, .05)), length(modelos))) %>% filter(abs(rowSums(.) - 1) < 1e-9)
-mae_w <- apply(pesos_grid, 1, function(w) mae(exp(Y), recorta(exp(M %*% w))))
-w <- unlist(pesos_grid[which.min(mae_w), ]); names(w) <- modelos
+cuenta <- setNames(numeric(length(modelos)), modelos); actual <- 0
+for (paso in 1:20) {
+  k <- which.min(apply(M, 2, function(m) mae(exp(Y), recorta(exp((actual * (paso - 1) + m) / paso)))))
+  cuenta[k] <- cuenta[k] + 1; actual <- (actual * (paso - 1) + M[, k]) / paso
+}
+w <- cuenta / 20
 cat("Pesos del ensamble:\n"); print(round(w, 2))
 registra("m90_ensamble", "Promedio ponderado (en log) de los modelos; pesos que minimizan el MAE OOF",
          paste(sprintf("%s=%.2f", modelos, w), collapse = "; "), evalua(drop(M %*% w)), drop(M %*% w), drop(Mt %*% w))
@@ -21,6 +26,19 @@ cat("Nota: los pesos se eligen con las mismas predicciones OOF, así que su MAE 
 
 reg <- lee_csv(file.path(P$models, "registro_modelos.csv"))
 print(reg %>% select(modelo, mae_total, mae_chapinero, mae_macro) %>% mutate(across(starts_with("mae"), ~ round(.x / 1e6, 1))))
+
+# ---- MAE por fold (localidad), al estilo de collect_metrics() de tidymodels ----
+# mae_ponderado = promedio de los folds ponderado por sus anuncios del train (= mae_total);
+# mae_promedio = promedio simple de los folds (= mae_macro); std_err = sd de los MAE de los folds / sqrt(folds)
+oof$m90_ensamble <- drop(M %*% w)
+por_fold <- map_dfr(c(modelos, "m90_ensamble"), \(m) tibble(modelo = m, localidad = oof$grupo, err = abs(exp(Y) - recorta(exp(oof[[m]]))))) %>%
+  group_by(modelo, localidad) %>% summarise(n = n(), mae = mean(err), .groups = "drop")
+write_csv(por_fold, file.path(P$rep_mod, "tables", "mae_por_fold.csv"))
+resumen_cv <- por_fold %>% group_by(modelo) %>%
+  summarise(folds = n(), mae_ponderado = weighted.mean(mae, n), mae_promedio = mean(mae), std_err = sd(mae) / sqrt(n())) %>%
+  arrange(mae_ponderado)
+write_csv(resumen_cv, file.path(P$rep_mod, "tables", "resumen_cv.csv"))
+print(as.data.frame(mutate(resumen_cv, across(-c(modelo, folds), ~ round(.x / 1e6, 1)))))
 
 # ---- Figura 1: comparación de MAE ----
 g1 <- reg %>% select(modelo, `Todo el train` = mae_total, `Train en Chapinero` = mae_chapinero) %>%

@@ -5,25 +5,22 @@
 # Salidas:  data/processed/base_modelo.rds  (lista: datos, vars, dist_loc)
 # =============================================================================
 source("scripts/00_config.R")
-suppressMessages(library(ranger))
+suppressMessages(pacman::p_load(ranger))
 
 d <- lee_csv(file.path(P$processed, "base_enriquecida.csv"))
 d <- d %>% mutate(txt = str_to_lower(paste(title, description)))
-num_txt <- function(x, pat) as.numeric(str_match(x, pat)[, 2])
 
 # ---- 1. Variables adicionales del texto ----
 d <- d %>% mutate(
   n_palabras   = str_count(coalesce(description, ""), "\\S+"),
-  piso_txt     = num_txt(txt, "(?:piso|nivel)\\s?(\\d{1,2})\\b"),
+  piso_txt     = num_txt(txt, PATRONES$piso),
   piso_txt     = if_else(property_type == "Apartamento" & between(piso_txt, 1, 40), piso_txt, NA_real_),
-  antig_txt    = coalesce(num_txt(txt, "(\\d{1,2})\\s?anos? de (?:construid|antiguedad)"),
-                          num_txt(txt, "antiguedad (?:de )?(\\d{1,2})")),
+  antig_txt    = coalesce(num_txt(txt, PATRONES$antig), num_txt(txt, PATRONES$antig2)),
   antig_txt    = if_else(between(antig_txt, 0, 60), antig_txt, NA_real_),
-  parq_txt     = num_txt(txt, "(\\d)\\s?(?:parqueaderos|garajes|parqueadero|garaje)"),
+  parq_txt     = num_txt(txt, PATRONES$parq),
   parq_txt     = if_else(between(parq_txt, 1, 6), parq_txt, NA_real_),
   es_apto      = as.integer(property_type == "Apartamento"),
-  lat_rot1     = lat + lon, lat_rot2 = lat - lon,   # coordenadas rotadas: ayudan a los árboles
-  sup_total_ok = if_else(between(surface_total, 20, 2000), surface_total, NA_real_)
+  lat_rot1     = lat + lon, lat_rot2 = lat - lon   # coordenadas rotadas: ayudan a los árboles
 )
 
 # ---- 2. Imputación del área (log) con random forest ----

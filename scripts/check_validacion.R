@@ -17,7 +17,7 @@ for (g in c("Chapinero", "Bosa", "Teusaquillo")) {
 }
 # cv_oof == ciclo manual (buffer 0, OLS) y salida matricial
 L <- matriz_lineal(TR); fo <- folds_localidad(0)
-co <- function(a) { b <- lm.fit(cbind(1, L[a, ]), Y[a])$coefficients; b[is.na(b)] <- 0; b }
+co <- function(a) ols_coef(L, a)
 p1 <- cv_oof(function(a, e) cbind(1, L[e, ]) %*% co(a), fo)
 p2 <- numeric(length(Y)); for (g in unique(GRUPO)) p2[GRUPO == g] <- cbind(1, L[GRUPO == g, ]) %*% co(which(GRUPO != g))
 stopifnot(isTRUE(all.equal(unname(drop(p1)), p2)))

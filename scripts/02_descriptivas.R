@@ -4,7 +4,7 @@
 # Salidas:  data/processed/base_enriquecida.csv, reports/01_descriptivas/{figures,tables}/
 # =============================================================================
 source("scripts/00_config.R")
-suppressMessages({library(sp); library(stargazer)})
+suppressMessages(pacman::p_load(sp, stargazer))
 
 # ---- 1. Datos ----
 tr <- lee_csv(file.path(P$raw, "train.csv"))
@@ -15,12 +15,11 @@ d <- bind_rows(tr %>% mutate(muestra = "train"), te %>% mutate(muestra = "test")
          fecha = as.Date(sprintf("%d-%02d-01", year, month)))
 
 # ---- 2. Variables extraídas del texto ----
-num_txt <- function(x, pat) as.numeric(str_replace(str_match(x, pat)[, 2], ",", "."))
 d <- d %>% mutate(
-  area_txt  = num_txt(txt, "(\\d{2,4}(?:[\\.,]\\d+)?)\\s?(?:m2|mts2|mt2|mts|metros cuadrados|metros|mt)\\b"),
+  area_txt  = num_txt(txt, PATRONES$area),
   area_txt  = if_else(between(area_txt, 20, 1000), area_txt, NA_real_),
-  banos_txt = num_txt(txt, "(\\d)\\s?(?:banos|bano)\\b"),
-  estrato_txt = num_txt(txt, "estrato\\s?(\\d)"),
+  banos_txt = num_txt(txt, PATRONES$banos),
+  estrato_txt = num_txt(txt, PATRONES$estrato),
   estrato_txt = if_else(between(estrato_txt, 1, 6), estrato_txt, NA_real_),
   sup_obs   = coalesce(surface_covered, surface_total),
   sup_obs   = if_else(between(sup_obs, 20, 1500), sup_obs, NA_real_),
@@ -51,13 +50,7 @@ upz_poly <- lee_csv(file.path(P$osm, "upz_poligonos.csv"))
 d$localidad <- asigna_poly(loc_poly, d$lon, d$lat)
 d$upz <- asigna_poly(upz_poly, d$lon, d$lat)
 
-# ---- 4. Distancias a servicios (haversine, metros) ----
-hav <- function(lat1, lon1, lat2, lon2) {
-  r <- pi / 180; dlat <- outer(lat1, lat2, "-") * r; dlon <- outer(lon1, lon2, "-") * r
-  a <- sin(dlat / 2)^2 + outer(cos(lat1 * r), cos(lat2 * r)) * sin(dlon / 2)^2
-  a[] <- pmin(1, sqrt(a))
-  2 * 6371000 * asin(a)
-}
+# ---- 4. Distancias a servicios (haversine de 00_config.R, metros) ----
 pts <- lee_csv(file.path(P$osm, "servicios_puntos.csv"))
 chunks <- split(seq_len(nrow(d)), ceiling(seq_len(nrow(d)) / 1500))
 for (cp in unique(pts$capa)) {

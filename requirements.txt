@@ -1,0 +1,22 @@
+# Entorno de Python para el texto (scripts/03c_texto.py y 03d_tfidf.py). Instalación desde la raíz:
+#   uv venv --python 3.11
+#   uv pip install -r requirements.txt
+#   uv pip install --no-deps contexto==0.2.0      # sin sus dependencias fijadas de 2021 (no compilan en arm64 / py3.11)
+#   .venv/bin/python -m spacy download es_core_news_md
+# Dependencias que de verdad usan los módulos limpieza, correccion, lematizacion, exploracion y vectorizacion de ConTexto.
+pandas
+pyarrow
+numpy
+scipy
+scikit-learn
+spacy>=3.7
+nltk
+pyspellchecker
+wordcloud
+matplotlib
+opencv-python-headless
+networkx
+gensim
+langid
+googletrans
+setuptools<81

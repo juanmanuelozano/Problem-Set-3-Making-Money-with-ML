@@ -89,6 +89,59 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 - En el precio por m², la penalización sí ayuda (λ = 0,0017, en el interior del camino): m02b mejora a m09 (OLS por m²) en 6,7 M en Chapinero (*t* = −3,7) y queda empatado con el mejor lineal en esa localidad, pero es 3 M peor en el total y 12 M peor en el promedio por localidad.
 - Sin dummies de localidad, la ubicación entra por las distancias, las densidades, las coordenadas y el estrato.
 
+### 2.2b Elastic net sobre componentes principales (04c_elastic_net_pca.R: m12)
+- **Variables:** las componentes de `03e_pca.R` (D12), en tres especificaciones:
+  - (a) PCA de las 37 variables que no son de texto, más las no linealidades de m02;
+  - (b) solo el PCA del texto (50 componentes del TF-IDF);
+  - (c) las dos anteriores juntas.
+- **Diseño:** el mismo de m02, con los dos objetivos. La grilla es α ∈ {0; 0,1; 0,25; 0,5; 0,75; 0,9; 1} × `lambda.min.ratio` ∈ {10⁻⁴, 10⁻⁵, 10⁻⁶}, con `nlambda` = 100 (en m02 `nlambda` no movía el MAE y λ quedó en el borde inferior). Tablas en [`tables/elastic_net_pca_resumen.csv`](tables/elastic_net_pca_resumen.csv) y `_grilla`, `_coeficientes`.
+
+| Modelo | Objetivo | MAE total | Chapinero | Promedio por localidad |
+|---|---|---:|---:|---:|
+| **m12_en_pca_nt_tx** (c) | precio | **131,1** | **149,7** | **146,0** |
+| m12_en_pca_nt_tx_m2 (c) | m² | 131,7 | 152,6 | 150,1 |
+| m02_elastic_net (referencia) | precio | 132,2 | 154,7 | 149,8 |
+| m02b_elastic_net_m2 (referencia) | m² | 135,0 | 153,8 | 162,1 |
+| m12_en_pca_nt (a) | precio | 138,9 | 169,5 | 154,3 |
+| m12_en_pca_nt_m2 (a) | m² | 142,4 | 175,4 | 160,1 |
+| m12_en_pca_tx_m2 (b) | m² | 158,4 | 182,1 | 198,9 |
+| m12_en_pca_tx (b) | precio | 203,9 | 273,5 | 199,3 |
+
+- **El texto aporta, sobre todo en Chapinero:** pasar de (a) a (c) baja el MAE total 7,8 M y el de Chapinero 19,8 M. (c) es el mejor modelo individual en el total y en el promedio por localidad, y en Chapinero es el segundo después de m06 (148,5).
+- **PCA frente a regex:** frente a m02, que lleva el texto como regex y dummies `tx_*`, el PCA del texto mejora 1,1 M en el total y 5,0 M en Chapinero.
+- **El texto solo no basta para el precio** (204 M). Sobre el precio por m² baja a 158 M, porque el área entra como compensación.
+- **En Kaggle (público),** m12_en_pca_nt_tx obtuvo 174,1 y su versión m² 176,8, ambos peores que m02b (172,7). Hay dos causas:
+  1. **El PCA reemplazó las dummies de amenidades.** El PCA truncado conserva poca información de los términos raros, que son las señales de lujo: `penthouse` 5%, `cuarto servicio` 9%, `duplex` 18%, frente a `bano servicio` 80%.
+  2. **En el objetivo m², el área se coló por las componentes de no texto.**
+- **Segunda ronda (especificaciones agregadas):**
+  - **m02 + PCA texto**, que *agrega* el PCA a las variables de m02b: con objetivo m² da 131,2 / 150,4 / 158,3 y mejora a m02b en las tres métricas; con objetivo precio da 128,9 / 146,9 / 144,8.
+  - **PCA no texto sin `log_area` + PCA texto**, con objetivo m²: 131,8 / 148,3 / 156,8. Tiene el menor sesgo en Chapinero (−75 M) y la mayor predicción media del test (802 M).
+- **Penalización:** en el precio gana el lasso con λ ≈ 10⁻⁴, que equivale casi al OLS. En el m² gana α = 0,1–0,25. Las componentes de no texto contienen el área, así que en el objetivo m² el área no queda del todo fuera.
+
+### 2.2c Modelo STAR y encoders (08_xgb_star.R: m13; 08b_en_star.R: m14; D13)
+- **Paso 1, STAR (Mayer et al., 2022):** XGBoost con restricciones de interacción. La estructura es aditiva, y la ubicación (con el estrato) y el texto TF-IDF son grupos. Búsqueda aleatoria de 12 configuraciones, como en el paper (profundidad, L1, L2 y submuestreo, con eta = 0,1). Tabla en [`tables/star_resumen.csv`](tables/star_resumen.csv).
+  - m13_xgb_star_m2: 133,0 / 155,3 / 154,8.
+  - m13_xgb_star (precio): 130,3 / 170,4 / 143,2.
+  - Queda entre XGBoost sin restricciones (m04) y el EN por m².
+  - Las curvas ICE del área son exactamente paralelas ([`figures/m7_star_ice_area.png`](figures/m7_star_ice_area.png)), y ningún árbol mezcla grupos.
+- **Mapa de la prima de ubicación** ([`figures/m6_star_mapa_ubicacion.png`](figures/m6_star_mapa_ubicacion.png)): el máximo está en el nororiente (Chapinero y Usaquén, cerca de +30%) y el mínimo en el suroccidente (cerca de −35%).
+- **Encoder de texto supervisado:** recupera señales de lujo que el PCA perdía. `duplex` ocupa el puesto 21 de 1.000 y `penthouse` el 59; en el PCA conservaban el 18% y el 5% de su varianza. Detalle en [`tables/star_texto_terminos.csv`](tables/star_texto_terminos.csv).
+- **Paso 2, elastic net con encoders frente a elastic net con PCA** (misma grilla y mismos folds):
+
+| Modelo | Objetivo | Total | Chapinero | Promedio por localidad | Sesgo Chapinero | Predicción media test |
+|---|---|---:|---:|---:|---:|---:|
+| m02b (referencia) | m² | 135,0 | 153,8 | 162,1 | −80 | 784 |
+| m02 + PCA texto | m² | **131,2** | 150,4 | 158,3 | −83 | 788 |
+| m02 + encoder texto (m14_en_enc_tx_m2) | m² | 133,4 | **149,2** | 162,3 | −86 | 769 |
+| encoders de ubicación y texto, sin ubicación lineal | m² | 135,5 | 161,7 | 157,7 | −115 | 771 |
+| ídem + distancias lineales | m² | 135,5 | 151,4 | **157,4** | −93 | 787 |
+| m02 + PCA texto | precio | **128,9** | 146,9 | 144,8 | −80 | 779 |
+| **m02 + encoder texto (m14_en_enc_tx)** | precio | 132,2 | **143,6** | **144,1** | **−64** | 787 |
+
+- **Texto, encoder frente a PCA:** el encoder gana en Chapinero (−3,3 M con objetivo precio; −1,1 M con m²) y pierde en el total (+2 a +3 M). Ninguna diferencia en Chapinero es significativa (*t* entre −0,4 y −0,7). Con objetivo precio, el encoder da **el menor MAE en Chapinero y el menor sesgo** de todos los modelos (143,6; −64).
+- **El encoder de ubicación no conviene como reemplazo:** sin la ubicación lineal, el MAE en Chapinero empeora (161,7), y el EN encoge el encoder (coeficiente de 0,65 a 0,85 en m²; de 0,2 a 0,3 en precio). Los árboles se saturan donde hay pocos datos, mientras que las variables lineales extrapolan hacia el nororiente.
+- El coeficiente del encoder de texto en m² es 1,01, es decir, está bien calibrado.
+
 ### 2.3 Random forest (m03) y XGBoost (m04, m05)
 - **Random forest:** gana mtry = 35, min.node.size = 3. Es el peor en Chapinero (183 M), porque las hojas promedian precios de zonas más baratas.
 - **XGBoost:** gana profundidad 4, mcw = 3, con 550 rondas. Los árboles más profundos extrapolan peor (profundidad 8: 170,6 M en Chapinero).

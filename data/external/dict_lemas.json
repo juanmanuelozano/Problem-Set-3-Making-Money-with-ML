@@ -1,0 +1,14 @@
+{
+  "parqueaderos": "parqueadero", "garaje": "parqueadero", "garajes": "parqueadero", "parqueo": "parqueadero", "parqueos": "parqueadero",
+  "apto": "apartamento", "aptos": "apartamento", "apartamentos": "apartamento", "apartaestudios": "apartaestudio",
+  "alcoba": "habitacion", "alcobas": "habitacion", "habitacion": "habitacion", "habitaciones": "habitacion",
+  "bano": "bano", "banos": "bano",
+  "mts": "metro", "metros": "metro",
+  "remodelado": "remodelado", "remodelada": "remodelado", "remodelados": "remodelado", "remodeladas": "remodelado",
+  "terrazas": "terraza", "balcones": "balcon", "balcon": "balcon", "chimeneas": "chimenea", "depositos": "deposito", "deposito": "deposito",
+  "ascensores": "ascensor", "porteria": "porteria", "duplex": "duplex", "penthouse": "penthouse",
+  "amplia": "amplio", "amplias": "amplio", "amplios": "amplio",
+  "iluminada": "iluminado", "iluminadas": "iluminado", "iluminados": "iluminado",
+  "exteriores": "exterior", "interiores": "interior", "cocinas": "cocina", "estudios": "estudio",
+  "estrenar": "estrenar", "conjuntos": "conjunto", "edificios": "edificio"
+}

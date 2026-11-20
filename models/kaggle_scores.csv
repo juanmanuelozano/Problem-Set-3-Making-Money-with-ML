@@ -1,0 +1,8 @@
+modelo,archivo_subido,public_score,fecha
+m04_xgboost,m04_xgboost.csv,172650639.71,2026-11-19
+m02b_elastic_net_m2,m02b_elastic_net_m2.csv,172741166.40,2026-11-18
+m12_en_pca_nt_tx,en_pca_nt_tx.csv,174104320.47,2026-11-19
+reg_ols_sin_loc,reg_ols_sin_loc.csv,183684586.98,2026-11-18
+m11_cart_m2_mse,m11_cart_m2_mse.csv,197057246.93,2026-11-18
+m12_en_pca_tx_m2,en_pca_tx_m2.csv,209176065.05,2026-11-19
+m12_en_pca_nt_tx_m2,en_pca_nt_tx_m2.csv,176843830.65,2026-11-19

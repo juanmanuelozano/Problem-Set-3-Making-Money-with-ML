@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{PCA: Variables que no son de texto. Valor propio (primera fila) y las 8 cargas más altas en valor absoluto, de mayor a menor, de las 10 primeras componentes}
+\label{tab:pca_no_texto}
+\resizebox{\textwidth}{!}{%
+
+\begin{tabular}{cllllllllll}
+\toprule
+ & PC1 & PC2 & PC3 & PC4 & PC5 & PC6 & PC7 & PC8 & PC9 & PC10\\
+\midrule
+$\lambda$ & 6.69 & 4.82 & 3.56 & 2.30 & 1.76 & 1.70 & 1.38 & 1.16 & 1.12 & 1.03\\
+\midrule
+1 & \begin{tabular}[t]{@{}l@{}}dist\_cbd\\(-0.33)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lat\\(-0.31)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_supermercado\\(+0.37)\end{tabular} & \begin{tabular}[t]{@{}l@{}}log\_area\\(+0.52)\end{tabular} & \begin{tabular}[t]{@{}l@{}}year\\(+0.41)\end{tabular} & \begin{tabular}[t]{@{}l@{}}year\\(+0.46)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_parque\\(+0.52)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_gimnasio\\(-0.39)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_policia\\(-0.38)\end{tabular} & \begin{tabular}[t]{@{}l@{}}banos\_imputado\\(-0.53)\end{tabular}\\
+\addlinespace
+2 & \begin{tabular}[t]{@{}l@{}}dist\_calle72\\(-0.30)\end{tabular} & \begin{tabular}[t]{@{}l@{}}estrato\_final\\(-0.29)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_comercial\\(-0.34)\end{tabular} & \begin{tabular}[t]{@{}l@{}}banos\_final\\(+0.52)\end{tabular} & \begin{tabular}[t]{@{}l@{}}month\\(-0.34)\end{tabular} & \begin{tabular}[t]{@{}l@{}}month\\(-0.41)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_parque\\(-0.45)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_gimnasio\\(+0.39)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_policia\\(+0.35)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_hospital\\(+0.29)\end{tabular}\\
+\addlinespace
+3 & \begin{tabular}[t]{@{}l@{}}dist\_parque93\\(-0.27)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_transmilenio\\(-0.29)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_supermercado\\(-0.33)\end{tabular} & \begin{tabular}[t]{@{}l@{}}bedrooms\\(+0.39)\end{tabular} & \begin{tabular}[t]{@{}l@{}}area\_imputada\\(+0.33)\end{tabular} & \begin{tabular}[t]{@{}l@{}}area\_imputada\\(+0.39)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_colegio\\(-0.32)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_colegio\\(-0.31)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_gimnasio\\(+0.34)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_universidad\\(+0.29)\end{tabular}\\
+\addlinespace
+4 & \begin{tabular}[t]{@{}l@{}}n500\_banco\\(+0.26)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lon\\(-0.29)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_centro\_comercial\\(+0.30)\end{tabular} & \begin{tabular}[t]{@{}l@{}}es\_apto\\(-0.27)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_centro\_comercial\\(-0.30)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_parque\\(-0.26)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_colegio\\(+0.28)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_hospital\\(+0.30)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lon\\(-0.26)\end{tabular} & \begin{tabular}[t]{@{}l@{}}month\\(-0.29)\end{tabular}\\
+\addlinespace
+5 & \begin{tabular}[t]{@{}l@{}}n500\_restaurante\_bar\\(+0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_colegio\\(+0.28)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_internacional\\(+0.28)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_transmilenio\\(+0.16)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_parque\\(-0.27)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_centro\_comercial\\(+0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lon\\(+0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_universidad\\(+0.26)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_centro\_comercial\\(-0.26)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_policia\\(-0.27)\end{tabular}\\
+\addlinespace
+6 & \begin{tabular}[t]{@{}l@{}}dist\_banco\\(-0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_internacional\\(-0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_calle72\\(+0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_parque93\\(-0.15)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_hospital\\(+0.27)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_parque\\(+0.22)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_banco\\(-0.21)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_universidad\\(-0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_comercial\\(+0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_policia\\(+0.26)\end{tabular}\\
+\addlinespace
+7 & \begin{tabular}[t]{@{}l@{}}dist\_universidad\\(-0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_parque93\\(+0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lat\\(+0.25)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_hospital\\(-0.14)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_parque\\(+0.27)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_hospital\\(-0.21)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_comercial\\(+0.17)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_colegio\\(+0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}lat\\(-0.22)\end{tabular} & \begin{tabular}[t]{@{}l@{}}n500\_transmilenio\\(+0.24)\end{tabular}\\
+\addlinespace
+8 & \begin{tabular}[t]{@{}l@{}}dist\_gimnasio\\(-0.21)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_colegio\\(-0.23)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_restaurante\_bar\\(-0.22)\end{tabular} & \begin{tabular}[t]{@{}l@{}}estrato\_final\\(+0.13)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_centro\_comercial\\(+0.21)\end{tabular} & \begin{tabular}[t]{@{}l@{}}banos\_imputado\\(+0.19)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_hospital\\(-0.17)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_transmilenio\\(-0.24)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_gimnasio\\(-0.22)\end{tabular} & \begin{tabular}[t]{@{}l@{}}dist\_banco\\(+0.23)\end{tabular}\\
+\bottomrule
+\end{tabular}
+}
+\par\vspace{2pt}\footnotesize Nota: bajo cada variable, su carga; el signo de una componente es arbitrario. 
+Variables estandarizadas; ajustado con train y test.
+\end{table}

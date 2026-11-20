@@ -17,8 +17,7 @@ P <- list(
   rep_desc  = "reports/01_descriptivas",
   rep_mod   = "reports/02_modelos"
 )
-walk(P, dir.create, recursive = TRUE, showWarnings = FALSE)
-for (r in c(P$rep_desc, P$rep_mod)) for (s in c("figures", "tables")) dir.create(file.path(r, s), recursive = TRUE, showWarnings = FALSE)
+walk(c(P, file.path(rep(c(P$rep_desc, P$rep_mod), each = 2), c("figures", "tables"))), dir.create, recursive = TRUE, showWarnings = FALSE)
 
 lee_csv <- function(f) read_csv(f, show_col_types = FALSE, num_threads = 1)  # num_threads=1 evita segfault en este equipo
 

@@ -7,7 +7,8 @@ suppressMessages(pacman::p_load(httr, jsonlite))
 overpass <- function(q, file) {
   if (file.exists(file)) return(fromJSON(file, simplifyVector = FALSE))
   for (url in c("https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter")) {
-    r <- try(POST(url, body = list(data = q), encode = "form", timeout(300)), silent = TRUE)
+    # Overpass responde 406 al user agent por defecto de httr (2026-11): se envía uno genérico
+    r <- try(POST(url, body = list(data = q), encode = "form", timeout(300), user_agent("ps3-texto/1.0")), silent = TRUE)
     if (!inherits(r, "try-error") && status_code(r) == 200) {
       writeLines(content(r, "text", encoding = "UTF-8"), file)
       Sys.sleep(2)
@@ -83,3 +84,11 @@ pts <- imap_dfr(capas, function(sel, nm) {
 })
 write_csv(pts, file.path(P$osm, "servicios_puntos.csv"))
 print(count(pts, capa))
+
+# ---- 3. Nombres de barrios (solo para quitarlos del texto en 03c_texto.py; no son variables) ----
+js <- overpass(sprintf('[out:json][timeout:180];node["place"~"neighbourhood|suburb|quarter"](%s);out tags;', bbox),
+               file.path(P$osm, "barrios.json"))
+barrios <- tibble(nombre = map_chr(js$elements, ~ .x$tags$name %||% NA_character_), tipo = map_chr(js$elements, ~ .x$tags$place)) %>%
+  filter(!is.na(nombre)) %>% distinct()
+write_csv(barrios, file.path(P$osm, "barrios_nombres.csv"))
+cat("Barrios:", nrow(barrios), "\n")

@@ -40,12 +40,10 @@ cat("\nTítulos 'N habitaciones M m2':", sum(!is.na(m[, 1])),
 # ---- 2. Extremos del precio: masa en los topes y heaping ----
 tr  <- d %>% filter(muestra == "train") %>% mutate(p = price / 1e6)
 tmr <- dm %>% filter(muestra == "train")
-topes <- tr %>% group_by(grupo = if_else(localidad %in% "Chapinero", "Chapinero", "Resto")) %>%
+topes <- bind_rows(tr %>% mutate(grupo = if_else(localidad %in% "Chapinero", "Chapinero", "Resto")),
+                   tr %>% mutate(grupo = "Total")) %>% group_by(grupo) %>%
   summarise(n = n(), en_300 = sum(p == 300), pct_hasta_310 = mean(p <= 310), en_1650 = sum(p == 1650),
-            pct_desde_1600 = mean(p >= 1600), pct_mult_10M = mean(p %% 10 == 0), pct_mult_50M = mean(p %% 50 == 0)) %>%
-  bind_rows(tr %>% summarise(grupo = "Total", n = n(), en_300 = sum(p == 300), pct_hasta_310 = mean(p <= 310),
-                             en_1650 = sum(p == 1650), pct_desde_1600 = mean(p >= 1600),
-                             pct_mult_10M = mean(p %% 10 == 0), pct_mult_50M = mean(p %% 50 == 0)))
+            pct_desde_1600 = mean(p >= 1600), pct_mult_10M = mean(p %% 10 == 0), pct_mult_50M = mean(p %% 50 == 0))
 write_csv(topes, file.path(P$rep_desc, "tables", "precio_topes.csv")); print(topes)
 frec <- sort(table(tr$p), decreasing = TRUE)
 cat("\nPrecios más frecuentes:", paste0(names(frec)[1:8], " (", frec[1:8], ")", collapse = ", "), "\n")

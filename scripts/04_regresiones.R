@@ -73,10 +73,9 @@ registra("m08_lad_sin_loc", "Regresión de mediana (pérdida MAE), mismas variab
 # Se excluyen el área y sus términos derivados (log_area, log_area_2, log_area_x_apto, log_area_x_estrato); se
 # conservan los indicadores de la fuente del área. Precio predicho = precio por m2 predicho × m2, es decir,
 # en log: log(precio/m2) + log(área). Así se evalúa en la CV y así se arma el envío.
-W <- !grepl("log_area", colnames(Ztr)); Wtr <- Ztr[, W]; Wte <- Zte[, W]
-la_tr <- TR$log_area; la_te <- TE$log_area; Y_m2 <- Y - la_tr
+o <- arma_objetivos(Ztr, Zte)$m2
 for (m in list(list("m09_ols_m2", "OLS", ols_coef), list("m10_lad_m2", "Regresión de mediana (IRLS)", lad_coef))) {
-  oof <- drop(cv_oof(function(a, e) cbind(1, Wtr[e, , drop = FALSE]) %*% m[[3]](Wtr, a, Y_m2))) + la_tr
+  oof <- drop(cv_oof(function(a, e) cbind(1, o$Xtr[e, , drop = FALSE]) %*% m[[3]](o$Xtr, a, o$y))) + o$off_tr
   registra(m[[1]], paste(m[[2]], "sobre log(precio por m2), sin variables de área; precio = predicción × m2"), "-",
-           evalua(oof), oof, drop(cbind(1, Wte) %*% m[[3]](Wtr, seq_along(Y), Y_m2)) + la_te)
+           evalua(oof), oof, drop(cbind(1, o$Xte) %*% m[[3]](o$Xtr, seq_along(Y), o$y)) + o$off_te)
 }

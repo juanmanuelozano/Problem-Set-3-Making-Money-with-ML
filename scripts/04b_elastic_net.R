@@ -15,11 +15,7 @@
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
 suppressMessages(pacman::p_load(glmnet))
 
-Ztr <- cbind(matriz_lineal(TR), interacciones(TR)); Zte <- cbind(matriz_lineal(TE), interacciones(TE))
-W <- !grepl("log_area", colnames(Ztr))
-objetivos <- list(
-  precio = list(Xtr = Ztr, Xte = Zte, y = Y, off_tr = 0, off_te = 0),
-  m2     = list(Xtr = Ztr[, W], Xte = Zte[, W], y = Y - TR$log_area, off_tr = TR$log_area, off_te = TE$log_area))
+objetivos <- arma_objetivos(cbind(matriz_lineal(TR), interacciones(TR)), cbind(matriz_lineal(TE), interacciones(TE)))
 
 grilla <- expand_grid(objetivo = names(objetivos), alpha = c(0, .1, .25, .5, .75, .9, 1),
                       nlambda = c(50, 100, 200), lambda.min.ratio = c(1e-3, 1e-4, 1e-5))
@@ -55,5 +51,4 @@ for (nm in names(objetivos)) {
     saveRDS(list(fit = fit, lambda = b$lambda, alpha = b$alpha), file.path(P$models, "m02_elastic_net.rds"))
   }
 }
-
 

@@ -77,6 +77,14 @@ interacciones <- function(df) {
   `colnames<-`(sapply(h, \(x) df$bedrooms * df[[paste0("dist_", x)]] / 1000), paste0("bedrooms_x_dist_", h))
 }
 
+# Dos objetivos: log(precio) y log(precio por m2). En el de m2 se quitan las columnas de área (salvo quita_area = FALSE)
+# y el precio se recupera sumando log(área): off_tr / off_te se suman a la predicción (04, 04b, 05b, 07).
+arma_objetivos <- function(Xtr, Xte, quita_area = TRUE) {
+  k <- !(quita_area & grepl("log_area", colnames(Xtr)))
+  list(precio = list(Xtr = Xtr, Xte = Xte, y = Y, off_tr = 0, off_te = 0),
+       m2     = list(Xtr = Xtr[, k], Xte = Xte[, k], y = Y - TR$log_area, off_tr = TR$log_area, off_te = TE$log_area))
+}
+
 # Métricas sobre predicciones out-of-fold (en log) -> MAE en pesos con recorte al soporte
 evalua <- function(pred_log, y_log = Y) {
   p <- recorta(exp(pred_log)); y <- exp(y_log)

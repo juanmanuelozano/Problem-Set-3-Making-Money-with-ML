@@ -11,7 +11,7 @@ suppressMessages(pacman::p_load(xgboost, glmnet))
 
 Xtr <- matriz_arboles(TR); Xte <- matriz_arboles(TE)
 Ltr <- matriz_lineal(TR); Lte <- matriz_lineal(TE)
-la_tr <- TR$log_area; la_te <- TE$log_area
+o <- arma_objetivos(Xtr, Xte, quita_area = FALSE)$m2   # m05 conserva log_area entre las variables
 pr <- list(objective = "reg:squarederror", eta = 0.03, max_depth = 6, min_child_weight = 10,
            subsample = 0.8, colsample_bytree = 0.6, lambda = 1, nthread = 8, seed = 123)
 g_xgb <- file.path(P$rep_mod, "tables", "xgb_grilla.csv")
@@ -21,12 +21,12 @@ if (file.exists(g_xgb)) {  # reutiliza la mejor profundidad encontrada en 06_xgb
 
 # ---- (a) XGBoost sobre log(precio/m2) ----
 RONDAS <- seq(25, 2000, 25)
-oof_a <- cv_oof(function(a, e) xgb_rondas(pr, Xtr[a, ], Y[a] - la_tr[a], Xtr[e, ], RONDAS)) + la_tr
+oof_a <- cv_oof(function(a, e) xgb_rondas(pr, o$Xtr[a, ], o$y[a], o$Xtr[e, ], RONDAS)) + o$off_tr
 j <- mejor_columna(oof_a); oof_a <- oof_a[, j]
-fit_a <- xgb.train(params = pr, data = xgb.DMatrix(Xtr, label = Y - la_tr, nthread = 8), nrounds = RONDAS[j])
+fit_a <- xgb.train(params = pr, data = xgb.DMatrix(o$Xtr, label = o$y, nthread = 8), nrounds = RONDAS[j])
 registra("m05_xgb_precio_m2", "XGBoost sobre log(precio por m2); se suma log(área) al predecir",
          sprintf("max_depth=%d; mcw=%d; nrounds=%d", pr$max_depth, pr$min_child_weight, RONDAS[j]),
-         evalua(oof_a), oof_a, predict(fit_a, xgb.DMatrix(Xte)) + la_te)
+         evalua(oof_a), oof_a, predict(fit_a, xgb.DMatrix(o$Xte)) + o$off_te)
 
 # ---- (b) Híbrido elastic net + XGBoost en residuos, validación anidada ----
 en_margen <- function(idx_tr, idx_pred_list) {

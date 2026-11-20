@@ -1,0 +1,801 @@
+muestra,n,ngrama,frecuencia
+train,1,bano,57172
+train,1,habitacion,49196
+train,1,zona,38722
+train,1,parqueadero,33051
+train,1,piso,31744
+train,1,sala,29825
+train,1,cocina,28601
+train,1,comedor,26929
+train,1,amplio,20048
+train,1,excelente,18153
+train,1,social,17914
+train,1,deposito,15562
+train,1,salon,15265
+train,1,cerca,14979
+train,1,estudio,14519
+train,1,principal,14106
+train,1,independiente,14032
+train,1,terraza,12206
+train,1,acceso,11863
+train,1,integral,11844
+train,1,balcon,11824
+train,1,edificio,11509
+train,1,comercial,11366
+train,1,metro,10763
+train,1,privado,10615
+train,1,parque,10410
+train,1,calle,10108
+train,1,area,9952
+train,1,servicio,9911
+train,1,via,9892
+train,1,lavanderia,9872
+train,1,cuarto,9759
+train,1,centro,9378
+train,1,exterior,9218
+train,1,nivel,9131
+train,1,gimnasio,8352
+train,1,conjunto,8308
+train,1,closet,8200
+train,1,chimenea,8005
+train,1,comunal,7724
+train,1,abierto,7710
+train,1,cubierto,7616
+train,1,espacio,7574
+train,1,buen,7376
+train,1,vista,7180
+train,1,sector,7120
+train,1,ascensor,7098
+train,1,ropa,6830
+train,1,bbq,6655
+train,1,natural,6480
+train,1,gas,6465
+train,1,cerrado,6443
+train,1,madera,6415
+train,1,hermoso,6307
+train,1,iluminado,5991
+train,1,ubicacion,5987
+train,1,visitante,5968
+train,1,infantil,5566
+train,1,iluminacion,5388
+train,1,vigilancia,5266
+train,1,remodelado,5246
+train,1,barrio,4987
+train,1,laminado,4970
+train,1,patio,4778
+train,1,residencial,4745
+train,1,norte,4633
+train,1,lindo,4425
+train,1,verde,4378
+train,1,transporte,4318
+train,1,interior,4249
+train,1,construido,3938
+train,1,seguridad,3912
+train,1,moderno,3835
+train,1,carrera,3823
+train,1,acabado,3787
+train,1,vestier,3750
+train,1,espectacular,3703
+train,1,hall,3669
+train,1,cancha,3657
+train,1,tipo,3644
+train,1,avenida,3481
+train,1,duplex,3421
+train,1,ciudad,3390
+train,1,linea,3297
+train,1,auxiliar,3283
+train,1,hora,3264
+train,1,estrato,3234
+train,1,cuadra,3172
+train,1,luz,3143
+train,1,cada,3136
+train,1,publico,3091
+train,1,americano,3086
+train,1,ano,3037
+train,1,gran,2966
+train,1,inmueble,2921
+train,1,visto,2825
+train,1,nino,2823
+train,1,exclusivo,2682
+train,1,juegos,2681
+train,1,facil,2670
+train,2,sala comedor,21524
+train,2,habitacion bano,16479
+train,2,cocina integral,10923
+train,2,zona lavanderia,9095
+train,2,habitacion principal,9047
+train,2,bano social,8079
+train,2,centro comercial,7539
+train,2,via acceso,7043
+train,2,comedor cocina,6784
+train,2,bano privado,6406
+train,2,bano servicio,5931
+train,2,salon comunal,5796
+train,2,parqueadero visitante,5715
+train,2,principal bano,5328
+train,2,cocina abierto,4955
+train,2,salon social,4861
+train,2,cuarto bano,4808
+train,2,piso madera,4684
+train,2,parqueadero cubierto,4628
+train,2,parqueadero deposito,4533
+train,2,zona ropa,4385
+train,2,bano sala,4123
+train,2,zona verde,3899
+train,2,bano habitacion,3632
+train,2,parqueadero independiente,3492
+train,2,closet bano,3481
+train,2,bano cocina,3337
+train,2,parque infantil,3323
+train,2,excelente ubicacion,3204
+train,2,bano parqueadero,3079
+train,2,comedor chimenea,2886
+train,2,piso habitacion,2862
+train,2,zona social,2859
+train,2,iluminacion natural,2859
+train,2,habitacion closet,2854
+train,2,cerca centro,2824
+train,2,comedor independiente,2745
+train,2,parqueadero linea,2712
+train,2,deposito edificio,2708
+train,2,transporte publico,2675
+train,2,madera laminado,2431
+train,2,nivel habitacion,2319
+train,2,lavanderia independiente,2268
+train,2,piso laminado,2242
+train,2,independiente deposito,2200
+train,2,abierto zona,2187
+train,2,integral zona,2182
+train,2,conjunto cerrado,2181
+train,2,cocina cerrado,2128
+train,2,tipo americano,2108
+train,2,piso exterior,2030
+train,2,zona bbq,2029
+train,2,social cocina,2002
+train,2,vestier bano,1949
+train,2,via principal,1931
+train,2,comedor balcon,1924
+train,2,gimnasio salon,1858
+train,2,hall habitacion,1839
+train,2,tercer piso,1821
+train,2,linea deposito,1819
+train,2,excelente via,1800
+train,2,sala chimenea,1799
+train,2,habitacion sala,1796
+train,2,bano estudio,1787
+train,2,zona lavanderio,1787
+train,2,habitacion estudio,1774
+train,2,amplio zona,1761
+train,2,terraza bbq,1760
+train,2,vigilancia hora,1754
+train,2,estudio cocina,1748
+train,2,club house,1736
+train,2,bano bano,1730
+train,2,cubierto deposito,1696
+train,2,habitacion habitacion,1693
+train,2,vista exterior,1689
+train,2,estudio sala,1680
+train,2,zona residencial,1671
+train,2,amplio espacio,1641
+train,2,balcon cocina,1616
+train,2,servicio bano,1602
+train,2,facil acceso,1590
+train,2,estudio bano,1578
+train,2,area construido,1534
+train,2,luz natural,1512
+train,2,cuarto servicio,1502
+train,2,deposito parqueadero,1498
+train,2,habitacion cada,1469
+train,2,excelente iluminacion,1468
+train,2,salon juegos,1463
+train,2,patio ropa,1450
+train,2,integral gas,1449
+train,2,privado bano,1447
+train,2,caracteristica adicional,1441
+train,2,habitacion amplio,1431
+train,2,estudio habitacion,1431
+train,2,metro habitacion,1430
+train,2,bano completo,1426
+train,2,buena via,1415
+train,2,cancha squash,1401
+train,2,walking closet,1399
+test,1,bano,15696
+test,1,habitacion,12704
+test,1,zona,10158
+test,1,parqueadero,8948
+test,1,cocina,7185
+test,1,sala,7103
+test,1,piso,6797
+test,1,comedor,6472
+test,1,social,5527
+test,1,amplio,5335
+test,1,edificio,5027
+test,1,excelente,4662
+test,1,independiente,4301
+test,1,deposito,4208
+test,1,terraza,3784
+test,1,salon,3681
+test,1,principal,3651
+test,1,privado,3540
+test,1,servicio,3422
+test,1,estudio,3417
+test,1,cuarto,3361
+test,1,balcon,3264
+test,1,metro,3205
+test,1,exterior,3076
+test,1,abierto,2916
+test,1,cerca,2851
+test,1,chimenea,2837
+test,1,acceso,2798
+test,1,area,2718
+test,1,parque,2649
+test,1,vista,2594
+test,1,lavanderia,2508
+test,1,comunal,2496
+test,1,espacio,2476
+test,1,gimnasio,2319
+test,1,natural,2212
+test,1,visitante,2203
+test,1,ascensor,2199
+test,1,closet,2166
+test,1,buen,2107
+test,1,sector,2052
+test,1,via,2042
+test,1,integral,2004
+test,1,norte,2002
+test,1,remodelado,1894
+test,1,madera,1888
+test,1,iluminacion,1884
+test,1,iluminado,1819
+test,1,calle,1816
+test,1,ropa,1798
+test,1,alto,1754
+test,1,ubicacion,1727
+test,1,lindo,1697
+test,1,comercial,1683
+test,1,moderno,1553
+test,1,cerrado,1546
+test,1,gas,1462
+test,1,ciudad,1442
+test,1,espectacular,1436
+test,1,hermoso,1420
+test,1,seguridad,1389
+test,1,centro,1350
+test,1,electrico,1341
+test,1,bbq,1323
+test,1,exclusivo,1250
+test,1,vigilancia,1238
+test,1,cada,1191
+test,1,hall,1177
+test,1,linea,1164
+test,1,vestier,1147
+test,1,visto,1129
+test,1,interior,1070
+test,1,acabado,1065
+test,1,carrera,1045
+test,1,cubierto,1031
+test,1,planta,1028
+test,1,duplex,1013
+test,1,gran,1004
+test,1,restaurante,997
+test,1,bien,977
+test,1,tipo,967
+test,1,nivel,955
+test,1,luz,893
+test,1,construido,880
+test,1,laminado,880
+test,1,mejor,835
+test,1,auxiliar,833
+test,1,lavanderio,833
+test,1,americano,827
+test,1,ano,787
+test,1,apartaestudio,787
+test,1,residencial,785
+test,1,completo,779
+test,1,reservado,775
+test,1,barrio,754
+test,1,infantil,722
+test,1,hora,704
+test,1,ideal,701
+test,1,total,696
+test,1,transporte,679
+test,2,sala comedor,4578
+test,2,habitacion bano,4180
+test,2,bano servicio,2561
+test,2,bano social,2534
+test,2,habitacion principal,2400
+test,2,zona lavanderia,2216
+test,2,cuarto bano,2173
+test,2,parqueadero visitante,2118
+test,2,cocina abierto,1995
+test,2,cocina integral,1899
+test,2,bano privado,1782
+test,2,piso madera,1581
+test,2,parqueadero independiente,1543
+test,2,salon comunal,1518
+test,2,principal bano,1430
+test,2,zona social,1424
+test,2,zona ropa,1424
+test,2,via acceso,1387
+test,2,comedor cocina,1384
+test,2,parqueadero deposito,1320
+test,2,iluminacion natural,1167
+test,2,centro comercial,1053
+test,2,parqueadero linea,1021
+test,2,cocina cerrado,957
+test,2,bano habitacion,953
+test,2,independiente deposito,918
+test,2,deposito edificio,902
+test,2,comedor chimenea,895
+test,2,excelente ubicacion,893
+test,2,closet bano,845
+test,2,bano sala,839
+test,2,piso exterior,812
+test,2,salon social,791
+test,2,cada bano,786
+test,2,habitacion cada,781
+test,2,comedor independiente,769
+test,2,planta electrico,759
+test,2,bano parqueadero,754
+test,2,abierto zona,745
+test,2,sala chimenea,738
+test,2,parqueadero cubierto,707
+test,2,social cocina,667
+test,2,terraza comunal,640
+test,2,hall habitacion,636
+test,2,metro habitacion,631
+test,2,lavanderia independiente,629
+test,2,linea deposito,579
+test,2,bano cocina,575
+test,2,servicio parqueadero,574
+test,2,bano completo,548
+test,2,gimnasio salon,547
+test,2,deposito parqueadero,536
+test,2,seguridad privado,528
+test,2,vestier bano,526
+test,2,bano bano,522
+test,2,social habitacion,499
+test,2,chimenea comedor,499
+test,2,vigilancia hora,494
+test,2,habitacion habitacion,490
+test,2,excelente iluminacion,488
+test,2,tipo americano,474
+test,2,parque infantil,472
+test,2,transporte publico,468
+test,2,bano estudio,464
+test,2,social sala,463
+test,2,walking closet,461
+test,2,amplio zona,459
+test,2,walk closet,457
+test,2,privado ascensor,455
+test,2,via principal,439
+test,2,servicio bano,438
+test,2,vista exterior,437
+test,2,terraza bbq,433
+test,2,cerca parque,432
+test,2,madera laminado,432
+test,2,excelente via,429
+test,2,area social,422
+test,2,amplio espacio,418
+test,2,facil acceso,417
+test,2,habitacion amplio,416
+test,2,integral zona,416
+test,2,zona verde,413
+test,2,integral abierto,412
+test,2,visto exterior,409
+test,2,edificio seguridad,407
+test,2,habitacion closet,397
+test,2,piso laminado,396
+test,2,chimenea gas,394
+test,2,cerrado zona,380
+test,2,habitacion estudio,378
+test,2,zona residencial,376
+test,2,lindo metro,373
+test,2,comedor balcon,370
+test,2,natural edificio,370
+test,2,edificio salon,369
+test,2,luz natural,368
+test,2,cerca centro,368
+test,2,chimenea cocina,367
+test,2,estudio sala,363
+test,2,ano construido,353
+caras,1,bano,16760
+caras,1,habitacion,12857
+caras,1,zona,9365
+caras,1,parqueadero,7721
+caras,1,sala,7562
+caras,1,piso,6826
+caras,1,comedor,6798
+caras,1,amplio,6402
+caras,1,cocina,6399
+caras,1,independiente,5042
+caras,1,social,4985
+caras,1,estudio,4810
+caras,1,excelente,4381
+caras,1,servicio,4268
+caras,1,cuarto,4035
+caras,1,terraza,3830
+caras,1,deposito,3791
+caras,1,principal,3701
+caras,1,salon,3540
+caras,1,metro,3154
+caras,1,privado,3044
+caras,1,nivel,3044
+caras,1,balcon,2967
+caras,1,area,2927
+caras,1,cerca,2877
+caras,1,chimenea,2818
+caras,1,acceso,2624
+caras,1,parque,2604
+caras,1,edificio,2489
+caras,1,espacio,2456
+caras,1,comercial,2451
+caras,1,exterior,2376
+caras,1,integral,2232
+caras,1,lavanderia,2213
+caras,1,via,2022
+caras,1,calle,2015
+caras,1,gimnasio,2005
+caras,1,closet,1917
+caras,1,conjunto,1889
+caras,1,cerrado,1872
+caras,1,vista,1787
+caras,1,madera,1751
+caras,1,abierto,1740
+caras,1,sector,1739
+caras,1,buen,1712
+caras,1,centro,1695
+caras,1,natural,1616
+caras,1,hermoso,1595
+caras,1,comunal,1588
+caras,1,ropa,1583
+caras,1,remodelado,1559
+caras,1,gas,1459
+caras,1,ubicacion,1430
+caras,1,hall,1415
+caras,1,patio,1415
+caras,1,bbq,1412
+caras,1,iluminado,1378
+caras,1,cubierto,1371
+caras,1,iluminacion,1349
+caras,1,visitante,1311
+caras,1,auxiliar,1304
+caras,1,infantil,1289
+caras,1,cancha,1289
+caras,1,cada,1281
+caras,1,espectacular,1267
+caras,1,verde,1254
+caras,1,vestier,1232
+caras,1,seguridad,1193
+caras,1,ascensor,1185
+caras,1,construido,1169
+caras,1,residencial,1166
+caras,1,barrio,1130
+caras,1,jardin,1048
+caras,1,interior,1035
+caras,1,lindo,1014
+caras,1,acabado,994
+caras,1,exclusivo,993
+caras,1,duplex,991
+caras,1,norte,978
+caras,1,gran,963
+caras,1,moderno,960
+caras,1,vigilancia,911
+caras,1,ciudad,885
+caras,1,electrico,855
+caras,1,visto,832
+caras,1,oficina,819
+caras,1,transporte,794
+caras,1,carrera,772
+caras,1,planta,755
+caras,1,linea,738
+caras,1,squash,728
+caras,1,ano,726
+caras,1,ideal,710
+caras,1,juegos,697
+caras,1,laminado,688
+caras,1,luz,681
+caras,1,total,676
+caras,1,avenida,675
+caras,1,nino,674
+caras,1,rentahouse,674
+caras,2,sala comedor,4269
+caras,2,habitacion bano,4176
+caras,2,bano servicio,2935
+caras,2,bano social,2654
+caras,2,cuarto bano,2433
+caras,2,habitacion principal,2359
+caras,2,cocina integral,2085
+caras,2,zona lavanderia,2031
+caras,2,bano privado,1848
+caras,2,comedor independiente,1470
+caras,2,via acceso,1443
+caras,2,centro comercial,1402
+caras,2,parqueadero independiente,1360
+caras,2,salon comunal,1305
+caras,2,parqueadero visitante,1255
+caras,2,piso madera,1225
+caras,2,principal bano,1181
+caras,2,comedor cocina,1064
+caras,2,cocina abierto,1063
+caras,2,zona verde,1059
+caras,2,zona ropa,1018
+caras,2,bano habitacion,1017
+caras,2,parqueadero deposito,991
+caras,2,independiente deposito,935
+caras,2,salon social,899
+caras,2,sala chimenea,885
+caras,2,zona social,803
+caras,2,servicio bano,784
+caras,2,parqueadero cubierto,767
+caras,2,excelente ubicacion,754
+caras,2,cocina cerrado,743
+caras,2,closet bano,738
+caras,2,habitacion cada,736
+caras,2,iluminacion natural,736
+caras,2,parque infantil,735
+caras,2,cada bano,724
+caras,2,hall habitacion,714
+caras,2,nivel habitacion,708
+caras,2,bano sala,689
+caras,2,comedor chimenea,659
+caras,2,comedor auxiliar,645
+caras,2,cuarto servicio,628
+caras,2,parqueadero linea,619
+caras,2,social cocina,619
+caras,2,vestier bano,610
+caras,2,estudio sala,609
+caras,2,bano parqueadero,609
+caras,2,deposito edificio,605
+caras,2,habitacion habitacion,598
+caras,2,bano estudio,597
+caras,2,chimenea comedor,587
+caras,2,piso habitacion,581
+caras,2,lavanderia independiente,578
+caras,2,servicio parqueadero,575
+caras,2,amplio espacio,566
+caras,2,piso exterior,557
+caras,2,conjunto cerrado,543
+caras,2,bano cocina,531
+caras,2,cerca centro,519
+caras,2,amplio zona,518
+caras,2,transporte publico,518
+caras,2,habitacion estudio,499
+caras,2,cancha squash,498
+caras,2,area construido,495
+caras,2,estudio cocina,488
+caras,2,walking closet,485
+caras,2,gimnasio salon,485
+caras,2,club house,480
+caras,2,bano bano,468
+caras,2,estudio habitacion,466
+caras,2,principal vestier,453
+caras,2,abierto zona,417
+caras,2,social sala,415
+caras,2,comedor estudio,413
+caras,2,lavanderia cuarto,412
+caras,2,zona residencial,406
+caras,2,madera laminado,405
+caras,2,zona bbq,403
+caras,2,independiente cocina,396
+caras,2,habitacion closet,396
+caras,2,amplio habitacion,395
+caras,2,linea deposito,393
+caras,2,salon juegos,392
+caras,2,estudio bano,389
+caras,2,social habitacion,384
+caras,2,excelente via,379
+caras,2,privado bano,377
+caras,2,via principal,376
+caras,2,servicio zona,376
+caras,2,bano completo,374
+caras,2,zona lavanderio,373
+caras,2,chimenea gas,369
+caras,2,habitacion amplio,363
+caras,2,tercer piso,362
+caras,2,puerta seguridad,357
+caras,2,integral zona,357
+caras,2,deposito parqueadero,354
+caras,2,nivel sala,350
+caras,2,espacio amplio,349
+caras,2,bano vestier,343
+baratas,1,bano,11975
+baratas,1,habitacion,11550
+baratas,1,zona,10259
+baratas,1,piso,8784
+baratas,1,parqueadero,8527
+baratas,1,cocina,7684
+baratas,1,sala,7378
+baratas,1,comedor,6713
+baratas,1,excelente,4686
+baratas,1,cerca,4565
+baratas,1,salon,4028
+baratas,1,social,3851
+baratas,1,integral,3752
+baratas,1,amplio,3684
+baratas,1,deposito,3503
+baratas,1,acceso,3348
+baratas,1,comercial,3347
+baratas,1,principal,3088
+baratas,1,centro,3009
+baratas,1,via,2933
+baratas,1,calle,2910
+baratas,1,edificio,2821
+baratas,1,conjunto,2655
+baratas,1,cubierto,2619
+baratas,1,lavanderia,2590
+baratas,1,privado,2582
+baratas,1,estudio,2577
+baratas,1,balcon,2577
+baratas,1,parque,2553
+baratas,1,ascensor,2543
+baratas,1,terraza,2267
+baratas,1,closet,2212
+baratas,1,comunal,2211
+baratas,1,metro,2188
+baratas,1,independiente,2138
+baratas,1,area,2127
+baratas,1,gimnasio,2121
+baratas,1,exterior,1987
+baratas,1,vista,1970
+baratas,1,sector,1872
+baratas,1,laminado,1854
+baratas,1,abierto,1823
+baratas,1,gas,1818
+baratas,1,buen,1775
+baratas,1,vigilancia,1700
+baratas,1,bbq,1700
+baratas,1,natural,1688
+baratas,1,ropa,1665
+baratas,1,nivel,1628
+baratas,1,hermoso,1564
+baratas,1,cerrado,1533
+baratas,1,madera,1531
+baratas,1,infantil,1527
+baratas,1,visitante,1523
+baratas,1,iluminado,1515
+baratas,1,norte,1471
+baratas,1,espacio,1465
+baratas,1,ubicacion,1432
+baratas,1,iluminacion,1386
+baratas,1,barrio,1305
+baratas,1,cuarto,1276
+baratas,1,verde,1272
+baratas,1,interior,1265
+baratas,1,residencial,1263
+baratas,1,transporte,1232
+baratas,1,apartaestudio,1186
+baratas,1,hora,1134
+baratas,1,lindo,1098
+baratas,1,chimenea,1091
+baratas,1,tipo,1089
+baratas,1,avenida,1058
+baratas,1,carrera,1048
+baratas,1,servicio,1015
+baratas,1,remodelado,1001
+baratas,1,cuadra,984
+baratas,1,patio,925
+baratas,1,acabado,914
+baratas,1,moderno,907
+baratas,1,estrato,889
+baratas,1,ciudad,882
+baratas,1,publico,876
+baratas,1,transmilenio,872
+baratas,1,americano,867
+baratas,1,seguridad,836
+baratas,1,nino,831
+baratas,1,colegio,819
+baratas,1,supermercado,814
+baratas,1,cancha,793
+baratas,1,construido,793
+baratas,1,inmueble,785
+baratas,1,autopista,774
+baratas,1,luz,756
+baratas,1,juegos,737
+baratas,1,facil,731
+baratas,1,ano,722
+baratas,1,cercano,721
+baratas,1,espectacular,706
+baratas,1,estacion,691
+baratas,1,tercer,690
+baratas,1,cra,687
+baratas,2,sala comedor,6120
+baratas,2,habitacion bano,4166
+baratas,2,cocina integral,3501
+baratas,2,centro comercial,2489
+baratas,2,zona lavanderia,2387
+baratas,2,comedor cocina,2378
+baratas,2,via acceso,2079
+baratas,2,habitacion principal,1829
+baratas,2,parqueadero cubierto,1724
+baratas,2,salon comunal,1682
+baratas,2,parqueadero visitante,1462
+baratas,2,bano sala,1455
+baratas,2,bano privado,1413
+baratas,2,bano social,1364
+baratas,2,salon social,1356
+baratas,2,principal bano,1277
+baratas,2,parqueadero deposito,1266
+baratas,2,zona verde,1192
+baratas,2,piso madera,1146
+baratas,2,cocina abierto,1126
+baratas,2,zona ropa,1121
+baratas,2,bano cocina,1110
+baratas,2,habitacion closet,1067
+baratas,2,closet bano,947
+baratas,2,piso laminado,924
+baratas,2,parque infantil,913
+baratas,2,cerca centro,904
+baratas,2,madera laminado,864
+baratas,2,bano parqueadero,863
+baratas,2,piso habitacion,840
+baratas,2,excelente ubicacion,830
+baratas,2,integral zona,804
+baratas,2,iluminacion natural,753
+baratas,2,transporte publico,743
+baratas,2,cubierto deposito,730
+baratas,2,bano habitacion,730
+baratas,2,conjunto cerrado,726
+baratas,2,zona social,702
+baratas,2,zona bbq,653
+baratas,2,tipo americano,626
+baratas,2,comedor balcon,601
+baratas,2,via principal,597
+baratas,2,abierto zona,583
+baratas,2,vigilancia hora,563
+baratas,2,vista exterior,562
+baratas,2,deposito edificio,546
+baratas,2,tercer piso,545
+baratas,2,comedor chimenea,540
+baratas,2,estacion transmilenio,525
+baratas,2,excelente via,519
+baratas,2,balcon cocina,504
+baratas,2,cocina bano,493
+baratas,2,gimnasio salon,487
+baratas,2,autopista norte,482
+baratas,2,habitacion sala,474
+baratas,2,caracteristica adicional,473
+baratas,2,nivel habitacion,472
+baratas,2,lavanderia parqueadero,469
+baratas,2,integral gas,457
+baratas,2,facil acceso,456
+baratas,2,lavanderia independiente,451
+baratas,2,vigilancia privado,449
+baratas,2,luz natural,442
+baratas,2,buena via,436
+baratas,2,acceso calle,434
+baratas,2,zona lavanderio,427
+baratas,2,excelente iluminacion,426
+baratas,2,bano servicio,420
+baratas,2,piso ceramica,412
+baratas,2,salon juegos,412
+baratas,2,almacen cadena,411
+baratas,2,parqueadero propio,411
+baratas,2,parqueadero independiente,405
+baratas,2,terraza bbq,405
+baratas,2,club house,403
+baratas,2,calentador gas,402
+baratas,2,comedor habitacion,400
+baratas,2,ascensor parqueadero,399
+baratas,2,zona residencial,391
+baratas,2,gas zona,381
+baratas,2,zona comercial,374
+baratas,2,estudio bano,365
+baratas,2,amplio zona,362
+baratas,2,sector residencial,360
+baratas,2,habitacion estudio,357
+baratas,2,metro habitacion,356
+baratas,2,zona comun,355
+baratas,2,piso exterior,351
+baratas,2,vista interior,350
+baratas,2,buen iluminacion,343
+baratas,2,social parqueadero,341
+baratas,2,piso ascensor,338
+baratas,2,vestier bano,333
+baratas,2,zona nino,332
+baratas,2,cuarto piso,332
+baratas,2,social cocina,331
+baratas,2,cuarto bano,330
+baratas,2,integral abierto,327
+baratas,2,estudio cocina,324
+baratas,2,bano piso,324

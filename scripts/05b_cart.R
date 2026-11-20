@@ -12,11 +12,7 @@
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
 suppressMessages(pacman::p_load(ranger))
 
-Xtr <- matriz_arboles(TR); Xte <- matriz_arboles(TE)
-A <- colnames(Xtr) != "log_area"
-objetivos <- list(
-  precio = list(Xtr = Xtr, Xte = Xte, y = Y, off_tr = 0, off_te = 0),
-  m2     = list(Xtr = Xtr[, A], Xte = Xte[, A], y = Y - TR$log_area, off_tr = TR$log_area, off_te = TE$log_area))
+objetivos <- arma_objetivos(matriz_arboles(TR), matriz_arboles(TE))
 
 # Ajusta un árbol con (Xa, ya) y predice Xe con la media (mse) y la mediana (mae) de las hojas
 hojas <- function(Xa, ya, Xe, prof, hoja) {

@@ -192,7 +192,7 @@ g5 <- ggplot(bins, aes(dist, p)) + geom_line(color = c_train, linewidth = .6) + 
 ggsave(file.path(P$rep_desc, "figures", "f5_gradientes_distancia.png"), g5, width = 8, height = 5.5, dpi = 300)
 
 # F6. Coeficientes de amenidades del texto (modelo 4 con EF de localidad)
-co <- broom_like <- summary(mods[[4]])$coefficients
+co <- summary(mods[[4]])$coefficients
 co <- tibble(term = rownames(co), b = co[, 1], se = co[, 2]) %>% filter(str_starts(term, "tx_")) %>%
   mutate(term = str_remove(term, "tx_") %>% str_replace("_", " ") %>% str_to_sentence(), term = fct_reorder(term, b),
          signo = if_else(b > 0, "pos", "neg"))

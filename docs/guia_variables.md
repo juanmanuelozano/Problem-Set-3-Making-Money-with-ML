@@ -161,3 +161,14 @@ Se crean al vuelo en [`utils_modelos.R`](../scripts/utils_modelos.R). No están 
 | `log_area_x_apto`, `log_area_x_estrato`, `dist_cbd_x_apto` | Interacciones | L |
 
 El híbrido (`07_hibridos.R`) usa además el margen del lasso como `base_margin` de XGBoost. No es una columna, sino un desplazamiento inicial de las predicciones.
+
+## 7. Texto procesado (Python, D11)
+
+Se generan con [`03c_texto.py`](../scripts/03c_texto.py) y [`03d_tfidf.py`](../scripts/03d_tfidf.py). Se unen a las demás bases por `property_id`.
+
+| Archivo | Contenido |
+|---|---|
+| `data/processed/texto_limpio.csv` | `property_id`, `muestra`, `texto`. El texto es `title + description` después de: reparar tildes y ñ perdidas, quitar nombres de lugares, corregir errores de tipeo raros, lematizar, quitar stopwords (se conservan `sin` y `no`) y quitar palabras de menos de 3 letras |
+| `data/processed/tfidf.parquet` | Formato largo y disperso: `property_id`, `termino` (unigrama o bigrama), `tfidf` (float32). Solo las celdas distintas de 0; vocabulario de hasta 5.000 términos presentes en al menos 20 anuncios |
+| `data/external/lugares_texto.csv` | Nombres de lugares borrados del texto, con la regla que los capturó y cuántas veces aparecieron |
+| `data/external/dict_lemas.json` | Lemas propios del dominio (unifica sinónimos: `garaje` → `parqueadero`, `alcoba` → `habitacion`) |

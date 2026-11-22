@@ -17,10 +17,14 @@ T0 <- Sys.time(); paso <- function(msg) cat(sprintf("[%5.0f min] %s\n", as.numer
 # ---- Bloques de variables: estructura, ubicación (mismo grupo que el XGB STAR) y texto (TF-IDF, 1.000 términos) ----
 XT <- readRDS(file.path(P$processed, "base_texto.rds"))
 XT <- XT[, order(-colSums(XT != 0))[1:K_TXT]]
-es_loc_red <- function(cn) sub("_2$", "", cn) %in% c("lat", "lon", "lat_rot1", "lat_rot2", "estrato_final") | grepl("^(dist|n500)_", cn)
+es_loc_red <- function(cn) sub("_2$", "", cn) %in% c("lat", "lon", "lat_rot1", "lat_rot2", "estrato_final") |
+  grepl("^(dist|n500)_", cn) | grepl("500$", cn)   # 500$: area_verde500, pisos_prom500 (D15)
+# Zona de lujo (D15, experimental): embajadas, oficinas, hoteles y clubes casi funcionan como dummy de Chapinero; con
+# ellas, la configuración de m17 empeoraba de 146,9 a 166,5 en Chapinero. Las redes no las usan.
+LUJO <- "^(dist|n500)_(embajada|oficina|hotel|club)$"
 bloques_red <- function(df, obj) {
   X <- matriz_lineal(df)
-  X <- X[, !colnames(X) %in% c("log_area_x_estrato", "dist_cbd_x_apto")]   # interacciones que cruzan grupos
+  X <- X[, !colnames(X) %in% c("log_area_x_estrato", "dist_cbd_x_apto") & !grepl(LUJO, colnames(X))]   # cruces de grupos y zona de lujo
   if (obj == "m2") X <- X[, !grepl("log_area", colnames(X))]                # como arma_objetivos()
   u <- es_loc_red(colnames(X))
   list(est = X[, !u], ubi = X[, u], txt = as.matrix(XT[match(df$property_id, rownames(XT)), ]))
@@ -70,8 +74,8 @@ red_general <- function(d, p, l2 = L2) {
 # ---- Entrenamiento por bloques de épocas -> matriz de predicciones (columna = épocas), como xgb_rondas() ----
 # Calibración (Remark 6 de Mayer et al., 2022): se corrige el nivel para que la predicción media del análisis
 # sea igual a la media observada. attr(, "corr") guarda la corrección del último bloque.
-entrena <- function(red, xa, ya, xe, epocas = EPOCAS) {
-  m <- red$modelo; m |> compile(optimizer = optimizer_adam(LR), loss = "mse")
+entrena <- function(red, xa, ya, xe, epocas = EPOCAS, lr = LR, perdida = "mse") {
+  m <- red$modelo; m |> compile(optimizer = optimizer_adam(lr), loss = perdida)
   mu <- mean(ya); yk <- reticulate::np_array(matrix(ya - mu), dtype = "float32"); ant <- 0; corr <- NA
   out <- sapply(epocas, function(ep) {
     m |> fit(xa, yk, epochs = ep, initial_epoch = ant, batch_size = BATCH, verbose = 0); ant <<- ep
@@ -82,13 +86,13 @@ entrena <- function(red, xa, ya, xe, epocas = EPOCAS) {
 }
 
 # Validación cruzada de una red (construye(d) devuelve un modelo nuevo); elige las épocas con mejor_columna()
-cv_red <- function(construye, obj) {
+cv_red <- function(construye, obj, epocas = EPOCAS, lr = LR, perdida = "mse") {
   B <- BR[[obj]]; y <- YR[[obj]]
   oof <- cv_oof(function(a, e) {
     esc <- ajusta_escala(sub_b(B, a)); set_random_seed(123); red <- construye(dims(B))
-    entrena(red, a_keras(esc(sub_b(B, a)), red$tipo), y[a], a_keras(esc(sub_b(B, e)), red$tipo))
+    entrena(red, a_keras(esc(sub_b(B, a)), red$tipo), y[a], a_keras(esc(sub_b(B, e)), red$tipo), epocas, lr, perdida)
   }) + OFF[[obj]]$tr
-  j <- mejor_columna(oof); list(epocas = EPOCAS[j], oof = oof[, j], borde = j == length(EPOCAS))
+  j <- mejor_columna(oof); list(epocas = epocas[j], oof = oof[, j], borde = j == length(epocas))
 }
 
 # Búsqueda: cada fila de `grilla` con objetivo m2; con la mejor, también el objetivo precio. Guarda a medida que avanza.
@@ -108,9 +112,9 @@ busca_red <- function(grilla, construye_de, archivo) {
 }
 
 # Ajuste final con todo el train y las épocas elegidas; devuelve la red y la predicción de test (en log)
-ajusta_final <- function(b, construye_de) {
+ajusta_final <- function(b, construye_de, lr = LR, perdida = "mse") {
   obj <- b$objetivo; esc <- ajusta_escala(BR[[obj]]); set_random_seed(123); red <- construye_de(b, dims(BR[[obj]]))
   xtr <- a_keras(esc(BR[[obj]]), red$tipo); xte <- a_keras(esc(BTE[[obj]]), red$tipo)
-  p <- entrena(red, xtr, YR[[obj]], xte, b$epocas)
+  p <- entrena(red, xtr, YR[[obj]], xte, b$epocas, lr, perdida)
   list(red = red, xtr = xtr, xte = xte, corr = attr(p, "corr"), pred_te = drop(p) + OFF[[obj]]$te)
 }

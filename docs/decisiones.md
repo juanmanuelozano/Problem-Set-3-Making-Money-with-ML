@@ -187,3 +187,21 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 **Afinación:** solo el dropout. NN STAR: p_u ∈ {0; 0,1; 0,2} × p_t ∈ {0; 0,25; 0,5}. Red general: p ∈ {0; 0,1; 0,2; 0,3; 0,5}. En los dos casos se afina con el objetivo m², y con la mejor configuración se ajusta también el objetivo precio.
 
 **Nota sobre la base (2026-11-21):** m17 y m18 se corrieron con la base anterior a D14 y D15 (22 dummies de amenidades, sin las variables de contexto de OSM). Son la excepción a D14: los modelos nuevos usan la base nueva, pero estos se ajustaron antes de traer esos cambios. Habrá que volver a correrlos para compararlos con los modelos nuevos.
+
+**Base nueva en las redes y afinación por etapas (2026-11-21, `08e_nn_star_afinacion.R`):**
+- **Las redes excluyen la zona de lujo de D15** (`dist_*` y `n500_*` de embajadas, oficinas, hoteles y clubes; `LUJO` en `utils_redes.R`).
+  - Ablación con la configuración de m17: la base nueva completa empeora a 137,0 / 166,5, frente a 131,4 / 146,9. Sin la zona de lujo da 133,6 / 148,8.
+  - Esas variables se aprenden fuera de Chapinero (en Usaquén) y no se transfieren a la localidad dejada afuera.
+  - El contexto de OSM también resta un poco: sin él da 131,9 / 148,3. Por decisión del equipo se conserva.
+  - La base vieja con el código actual reproduce m17 exactamente, lo que confirma que el código no es la causa.
+- **Grupos:** `area_verde500` y `pisos_prom500` van al grupo de ubicación (regla `500$`), en las redes y en el XGB STAR (08).
+- **Parámetros nuevos:** `utils_redes.R` acepta la tasa de aprendizaje, la pérdida y la grilla de épocas como parámetros de `entrena()`, `cv_red()` y `ajusta_final()`. Los valores por defecto no cambian (lr 1e-3, MSE y `EPOCAS`).
+- **Afinación** (objetivo m²; cada etapa parte de la ganadora de la anterior, elegida por MAE total):
+  - **Etapa 0:** los datos nuevos.
+  - **Etapa 1:** la tasa, lr ∈ {1e-3, 3e-4, 1e-4}, con épocas hasta 150. Gana 1e-4: el óptimo pasa de 3 a 12–20 épocas.
+  - **Etapa 2:** los dropouts, p_u ∈ {0,1; 0,15} × p_t ∈ {0,5; 0,6; 0,7}. Gana 0,15 / 0,7, los dos en el tope de la grilla, aunque con diferencias de décimas.
+  - **Etapa 3:** la pérdida absoluta. Da el mejor MAE en Chapinero (142,2) pero pierde en el total.
+- **Ganadora, `m19_nn_star_afinada_m2`** (lr 1e-4, p_u 0,15, p_t 0,7, MSE, 20 épocas): 131,6 / 146,6 / 154,3.
+  - Frente a m17: −0,3 M en Chapinero (*t* = −0,1) y +0,3 M en el total (*t* = 1,3).
+  - Su predicción media del test es 801 M, frente a 826 de m17.
+  - No mejora con claridad a m17 ni en Chapinero ni en el nivel del test, así que **no se sube a Kaggle**. **m17 sigue siendo la referencia.**

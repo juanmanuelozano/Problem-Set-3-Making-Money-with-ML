@@ -142,6 +142,48 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 - **El encoder de ubicación no conviene como reemplazo:** sin la ubicación lineal, el MAE en Chapinero empeora (161,7), y el EN encoge el encoder (coeficiente de 0,65 a 0,85 en m²; de 0,2 a 0,3 en precio). Los árboles se saturan donde hay pocos datos, mientras que las variables lineales extrapolan hacia el nororiente.
 - El coeficiente del encoder de texto en m² es 1,01, es decir, está bien calibrado.
 
+### 2.2e Redes neuronales: NN STAR y red general (08c, 08d, 08e; D16)
+- **NN STAR (m17):** es el STAR del paper (sección 3.2), hecho con Keras desde R.
+  - **Arquitectura:** salida = estructura lineal + ubicación 64-32-16 ReLU con atajo lineal + texto TF-IDF 64-32-16 ReLU con atajo lineal. Las ramas solo se suman, así que cada una es un rubro interpretable.
+  - **Ajustes de entrenamiento:** el nivel se calibra (Remark 6 del paper) y las capas de salida arrancan en cero. Con la inicialización por defecto, las ramas se compensaban entre sí y el MAE subía a 200.
+  - **Verificaciones:** la suma de las ramas coincide con la predicción (diferencia de 2e-7) y las ICE de la estructura son paralelas. Sus encoders se correlacionan con los del XGB STAR: 0,955 en ubicación y 0,815 en texto.
+- **Red general (m18):** 64-32-16 con todas las variables mezcladas, con casi el mismo número de parámetros (71.489 frente a 72.757). Así, la comparación aísla el efecto de la estructura.
+
+| Modelo (base de D13) | Total | Chapinero | Promedio por localidad | Sesgo Chapinero | Predicción media test | Kaggle |
+|---|---:|---:|---:|---:|---:|---:|
+| **m17_nn_star_m2** (p_u 0,1, p_t 0,5, 3 épocas) | 131,4 | 146,9 | 153,5 | −67 | **826** | **158,3** |
+| m18_nn_64_m2 (p 0,2, 7 épocas) | 131,5 | 155,9 | 156,7 | −99 | 783 | 167,5 |
+| m13_xgb_star_m2 | 133,0 | 155,3 | 154,8 | −102 | 788 | – |
+| m02b_elastic_net_m2 | 135,0 | 153,8 | 162,1 | −80 | 784 | 172,7 |
+
+- **A igual tamaño, la estructura aditiva gana donde está el test.**
+  - En la validación, el NN STAR empata en el total con la red general y gana en Chapinero por −9,0 M (*t* = −2,0). En Kaggle la diferencia fue casi la misma: −9,2 M.
+  - Frente al XGB STAR, el NN STAR gana −8,4 M en Chapinero (*t* = −2,3). El atajo lineal extrapola hacia el nororiente, donde los árboles se aplanan.
+  - m17 es el mejor envío: 158,3, frente a 172,7 del mejor anterior.
+- **Qué ordena los scores de Kaggle:** con 9 envíos, la predicción media del test es lo que mejor los ordena (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
+- **Datos nuevos (D14, D15) en la red** (configuración de m17; [`tables/nn_ablacion_datos.csv`](tables/nn_ablacion_datos.csv)):
+  - la base nueva completa da 137,0 / 166,5, con una predicción del test de 797;
+  - sin la zona de lujo, 133,6 / 148,8 (815);
+  - sin la zona de lujo ni el contexto de OSM, 131,9 / 148,3 (825);
+  - con las variables viejas, lo mismo que sin lujo ni OSM, así que las 10 amenidades nuevas no aportan;
+  - la base vieja con el código actual reproduce m17 exactamente (control).
+  
+  La zona de lujo (embajadas, oficinas, hoteles y clubes) explica casi todo el deterioro. Se aprende fuera de Chapinero y no se transfiere. Las redes la excluyen.
+- **Afinación por etapas (08e)**, sobre la base nueva sin la zona de lujo y con objetivo m² ([`tables/nn_star_afinacion.csv`](tables/nn_star_afinacion.csv)):
+
+| Etapa | Configuración | Épocas | Total | Chapinero | Sesgo | Test | Frente a m17: Chapinero (*t*) | Frente a m17: total (*t*) |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| 0 · datos | lr 1e-3, p_u 0,1, p_t 0,5 | 3 | 133,6 | 148,8 | −80 | 815 | +1,9 (1,1) | +2,2 (11,6) |
+| 1 · tasa | lr 1e-4 | 12 | 132,4 | 144,7 | −72 | 799 | −2,2 (−0,9) | +1,0 (4,6) |
+| 2 · dropout | **lr 1e-4, p_u 0,15, p_t 0,7** | 20 | **131,6** | 146,6 | −75 | 801 | −0,3 (−0,1) | +0,3 (1,3) |
+| 3 · pérdida | ídem con pérdida absoluta | 16 | 132,4 | **142,2** | −68 | 799 | −4,7 (−1,8) | +1,0 (4,2) |
+
+- **Resultado de la afinación:**
+  - Una tasa de 1e-4 estabiliza la red (el óptimo pasa de 3 a 12–20 épocas) y recupera los ~2 M que costaron los datos nuevos.
+  - El dropout aporta poco.
+  - La pérdida absoluta da el mejor MAE en Chapinero de todas las redes, pero empeora el total y la diferencia con m17 no es significativa.
+  - La ganadora por MAE total, **m19_nn_star_afinada_m2, empata con m17**: −0,3 M en Chapinero y +0,3 M en el total. Además, su predicción del test es más baja (801 frente a 826). **No se sube a Kaggle.**
+
 ### 2.3 Random forest (m03) y XGBoost (m04, m05)
 - **Random forest:** gana mtry = 35, min.node.size = 3. Es el peor en Chapinero (183 M), porque las hojas promedian precios de zonas más baratas.
 - **XGBoost:** gana profundidad 4, mcw = 3, con 550 rondas. Los árboles más profundos extrapolan peor (profundidad 8: 170,6 M en Chapinero).

@@ -29,7 +29,8 @@ Xt <- readRDS(file.path(P$processed, "base_texto.rds"))
 Xt <- Xt[, order(-colSums(Xt != 0))[1:K_TXT]]; colnames(Xt) <- paste0("tf_", colnames(Xt))
 mat <- function(df) cbind(Matrix(matriz_arboles(df), sparse = TRUE), Xt[match(df$property_id, rownames(Xt)), ])
 objetivos <- arma_objetivos(mat(TR), mat(TE))   # m2: sin log_area, precio = predicción × m2
-es_loc <- function(cn) cn %in% c("lat", "lon", "lat_rot1", "lat_rot2", "estrato_final") | grepl("^(dist|n500)_", cn)
+es_loc <- function(cn) cn %in% c("lat", "lon", "lat_rot1", "lat_rot2", "estrato_final") | grepl("^(dist|n500)_", cn) |
+  grepl("500$", cn)   # area_verde500, pisos_prom500 (D15)
 es_txt <- function(cn) startsWith(cn, "tf_")
 grupos <- function(cn) {   # índices desde 0: una lista por variable aditiva + ubicación + texto
   i <- seq_along(cn) - 1L

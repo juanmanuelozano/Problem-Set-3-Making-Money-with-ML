@@ -4,7 +4,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-19)
+## Estado actual (2026-11-21)
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -12,6 +12,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 | Modelo | Total | Chapinero (n=307) | Promedio por localidad |
 |---|---:|---:|---:|
+| **m17_nn_star_m2** (NN STAR, Kaggle **158,3**) | 131,4 | 146,9 | 153,5 |
+| m19_nn_star_afinada_m2 (base nueva sin zona de lujo; empata con m17, no se sube) | 131,6 | 146,6 | 154,3 |
+| m18_nn_64_m2 (red general del mismo tamaño, Kaggle 167,5) | 131,5 | 155,9 | 156,7 |
 | m12_en_pca_nt_tx | **131,1** | 149,7 | 146,0 |
 | m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | **143,6** | **144,1** |
 | m06_hibrido_en_xgb | 133,6 | 148,5 | 150,5 |
@@ -25,7 +28,10 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 **Pendientes / próximos pasos:**
 - [ ] Correr `09_red_neuronal.R` (m16, nnet) en el servidor y subirla a Kaggle. La familia de redes ya está cubierta con m17 y m18 (Keras, D16)
-- [ ] Volver a correr m17/m18 (y el STAR, 08 y 08b) con la base nueva de D14/D15: se corrieron con la base anterior
+- [x] NN STAR con la base nueva (08e → m19): la zona de lujo de D15 lo empeora mucho y se excluye de las redes; sin ella, la afinación empata con m17
+- [ ] Volver a correr el STAR (08 y 08b) con la base nueva, sin la zona de lujo, y con la grilla más rápida (tope de 1.000 rondas; eta 0,2 en la absoluta)
+- [ ] Decidir con el equipo si la zona de lujo de D15 se excluye también de los demás modelos nuevos
+- [ ] NN STAR: promediar varias semillas, y probar sin el contexto de OSM (en la ablación, 131,9 / 148,3 frente a 133,6 / 148,8 con él)
 - [ ] Subir `m15_rf_m2.csv` a Kaggle (RF por m²: 177,3 M en Chapinero en la validación)
 - [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 9)
 - [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
@@ -44,6 +50,31 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
+
+---
+
+## 2026-11-21 · Sesión 9: datos nuevos en la red y afinación del NN STAR
+
+- **Merge con `origin/main`:** trae las 32 amenidades con negaciones (D14) y las 13 variables de contexto de OSM (D15). En el merge, nuestras redes se renumeraron: m15 → **m17_nn_star**, m16 → **m18_nn_64**. Las decisiones de redes pasan a D16.
+- **Ablación de la base nueva** (configuración de m17; `tables/nn_ablacion_datos.csv`):
+  - la base nueva completa da 137,0 / 166,5;
+  - **sin la zona de lujo** (embajadas, oficinas, hoteles y clubes), 133,6 / 148,8;
+  - sin la zona de lujo ni OSM, 131,9 / 148,3;
+  - las amenidades nuevas no aportan;
+  - la base vieja reproduce m17 exactamente (control).
+  
+  **Por decisión del equipo, las redes excluyen la zona de lujo y conservan OSM.**
+- **`utils_redes.R`:** la tasa de aprendizaje, la pérdida y las épocas ahora son parámetros, con los mismos valores por defecto. `area_verde500` y `pisos_prom500` pasan al grupo de ubicación (también en 08).
+- **Afinación por etapas (`08e_nn_star_afinacion.R`, 93 min; `tables/nn_star_afinacion.csv`):**
+  - **Etapa 0 (datos):** 133,6 / 148,8.
+  - **Etapa 1 (tasa):** gana lr 1e-4, con 132,4 / 144,7 y 12 épocas en vez de 3.
+  - **Etapa 2 (dropouts):** gana 0,15 / 0,7, con 131,6 / 146,6, aunque las diferencias son de décimas.
+  - **Etapa 3 (pérdida absoluta):** 132,4 / **142,2**. Es la mejor en Chapinero, pero pierde en el total y la diferencia no es significativa (*t* = −1,8).
+- **Registrada `m19_nn_star_afinada_m2`** (lr 1e-4, p_u 0,15, p_t 0,7, MSE, 20 épocas): 131,6 / 146,6 / 154,3.
+  - Frente a m17: −0,3 M en Chapinero (*t* = −0,1) y +0,3 M en el total (*t* = 1,3).
+  - Su predicción media del test es 801, frente a 826 de m17.
+  - **No cumple el criterio para subirla a Kaggle**, así que m17 sigue siendo la referencia.
+- **Grilla ampliada del XGB STAR:** aplazada. La medición mostró que el texto pesa el 80% del costo por ronda y que el 75% de las rondas se descarta, porque siempre se entrena hasta el tope. Antes de volver a correrla, se acelera.
 
 ---
 

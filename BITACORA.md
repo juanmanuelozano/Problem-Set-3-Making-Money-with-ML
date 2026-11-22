@@ -24,20 +24,72 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 **Envíos a Kaggle:** scores en `models/kaggle_scores.csv` (mejores: m04_xgboost y m02b_elastic_net_m2, ambos con 172,7). Candidatos siguientes: `m14_en_enc_tx.csv` (el mejor en Chapinero en la validación) y `m14_en_enc_tx_m2.csv` o `m12_en_m02_pca_tx_m2.csv`.
 
 **Pendientes / próximos pasos:**
+- [ ] Correr `09_red_neuronal.R` en el servidor (red neuronal, familia obligatoria) y subirla a Kaggle
+- [ ] Subir `m15_rf_m2.csv` a Kaggle (RF por m²: 177,3 M en Chapinero en la validación)
+- [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 7)
+- [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
+- [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
+- [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
 - [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel
-- [ ] Rezago espacial del precio por m² (kNN dentro de cada fold)
+- [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
+- [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
 - [x] TF-IDF del texto: `03c_texto.py` + `03d_tfidf.py` → `data/processed/tfidf.parquet` (D11)
 - [ ] Usar el TF-IDF en R: PCA (`irlba::prcomp_irlba`, sin densificar) o lasso directo sobre la matriz dispersa dentro de `cv_oof`
-- [ ] Arreglar las regex de amenidades (negaciones como "sin ascensor" y "apartaestudio" → `tx_estudio`)
+- [x] Arreglar las regex de amenidades (negaciones y "apartaestudio") y agregar 10 amenidades comunales (D14). Los modelos nuevos ya usan la base con 32 dummies; los anteriores no se vuelven a correr
 - [ ] Recuperar los decimales perdidos en el área del texto: los valores mayores de 1.000 (2.391) son áreas multiplicadas por 10 o 100. Dividir y aceptar si pasa la regla de coherencia
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
 
 ---
+
+## 2026-11-21 · Sesión 7: enunciado, random forest por m² y red neuronal
+
+- Se agregó el enunciado del taller (`docs/Problem_Set_3.pdf`). Se comparó con lo hecho y faltan:
+  - Una **red neuronal**, que es una de las seis familias obligatorias.
+  - Llegar a **≥ 20 envíos a Kaggle**, con al menos uno por familia (van 7).
+  - **CV aleatoria** además de la espacial, para comparar cuál refleja mejor el leaderboard.
+  - El **análisis de negocio**: sobrepredecir cuesta más que subpredecir, ¿se puede confiar en el modelo para comprar?
+  - Las **dos presentaciones** (`best_equipo_XX`, `compare_equipo_XX`).
+  - Cada integrante debe tener **≥ 5 contribuciones** en `main`.
+- **Random forest por m² (`05c_rf_m2.R`, m15).** Objetivo log(precio/m²), 200 árboles en la CV y 500 en el modelo final, mtry = 12, min.node.size = 5.
+  - Con coordenadas: 142,4 M total / **177,3 M en Chapinero** (m03: 140,5 / 183,0).
+  - Sin lat/lon ni rotaciones: 142,7 / 180,1. Las distancias no reemplazan del todo a las coordenadas.
+  - El RF sigue lejos del elastic net en Chapinero: los árboles no extrapolan por encima del rango de precios del train.
+  - Variables más importantes: estrato, apartamento o casa, habitaciones, distancia al Parque 93 y a la Calle 72.
+  - mtry = 25 no alcanzó a correr.
+- **Red neuronal (`09_red_neuronal.R`, m16).** Escrita pero **sin correr**.
+  - Red de una capa oculta con `nnet`, sobre log(precio/m²), con las variables del elastic net estandarizadas dentro de cada fold.
+  - Grilla: size ∈ {5, 15} × decay ∈ {0,1, 1}. Tarda cerca de 1 h, así que se corre en el servidor.
+  - En el curso las redes se hacen con keras3, pero no está instalado en este equipo (Python 3.14, sin TensorFlow). Por eso se usó `nnet`.
+- **Dummies de amenidades (D14).** En `02_descriptivas.R`, las `tx_*` usan ahora `detectar_caracteristica()` (complementaria *Texto como datos*), que atiende negaciones. Además, la búsqueda es sin tildes y con palabras completas.
+  - Pasan de 22 a 32. Las 10 nuevas son: parqueadero de visitantes, parque infantil, salón comunal, zonas verdes, terraza comunal, turco/sauna, squash, planta eléctrica, club house y jacuzzi.
+  - Varias se reparten muy distinto entre train y test:
+    - zonas verdes: 9,6% en train / 3,8% en test;
+    - parque infantil: 11,5% / 6,3%;
+    - parqueadero de visitantes: 11,5% / 16,5%;
+    - planta eléctrica: 2,1% / 5,5%.
+  - Correcciones en las existentes: `tx_estudio` −1.916 (apartaestudios) y `tx_ascensor` −601 ("sin ascensor").
+  - Se regeneraron `base_enriquecida.csv` y `base_modelo.rds` (02 y 03). También cambió la imputación del área, porque usa las `tx_*`, y un poco la del estrato, por correr ranger en otro equipo.
+  - El equipo decidió **no volver a correr los modelos anteriores**: los nuevos (desde m16) usan la base nueva. `09_red_neuronal.R` todavía no se ha corrido, así que usará la base nueva.
+  - No se corrieron `03e_pca.R` ni el STAR (`08_xgb_star.R`). `pca_no_texto.csv` y `star_encoders.csv` siguen siendo de la base anterior; un modelo nuevo que los use debe regenerarlos primero.
+- **Variables de contexto de OSM (D15).** La base pasa de 76 a 89 variables. Las nuevas son:
+  - `dist_cerros`;
+  - `dist_via_principal`;
+  - `area_verde500` (ha de parque a menos de 500 m);
+  - `pisos_prom500` y `n500_edif_pisos`;
+  - `dist_*` y `n500_*` de embajadas, oficinas, hoteles y clubes.
+
+  Detalles:
+  - En OSM, los cerros son la relación 13780896 (reserva forestal, `leisure=nature_reserve`); la Circunvalar no aparece con ese nombre.
+  - `overpass()` ahora reintenta con espera, porque Overpass limita las consultas seguidas.
+  - `02_descriptivas.R` tarda unos 6 min.
+  - Correlación con el log del precio en el train (norte de la ciudad): `dist_embajada` −0,30, `dist_cbd` −0,29, `dist_cerros` −0,13.
+  - Las de embajadas, oficinas, hoteles y clubes son experimentales: casi equivalen a una dummy de localidad.
+- Entorno: esta sesión corrió en un Windows con R 4.5.2 (`"/c/Program Files/R/R-4.5.2/bin/Rscript.exe"`). Se instalaron `ranger`, `sp` y `stargazer`; `xgboost` no está instalado.
 
 ## 2026-11-19 · Sesión 6: librerías con pacman
 

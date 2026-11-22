@@ -103,3 +103,54 @@ Los encoders del paso 2 se ajustan dentro de cada fold externo, sin CV interna. 
 - `max_bin` = 64;
 - búsqueda aleatoria de 12 configuraciones con profundidad ≤ 6 y eta = 0,1;
 - la búsqueda se hace con el objetivo m², y el objetivo precio y la pérdida MAE usan la mejor configuración.
+
+### D14 · Dummies de amenidades con negaciones y 10 amenidades comunales; sin volver a correr los modelos anteriores (2026-11-21)
+
+Las dummies `tx_*` (`02_descriptivas.R`) se construyen ahora con `detectar_caracteristica()`, de la complementaria *Texto como datos*:
+- primero se borran las menciones negadas ("sin", "no tiene", "no cuenta con", "no dispone de", "no hay", con artículo opcional);
+- después se busca si queda una mención positiva.
+
+Además:
+- se busca sobre el texto sin tildes;
+- se exigen palabras completas (`\b`), así que "apartaestudio" ya no es `tx_estudio`;
+- se agregan 10 amenidades comunales: parqueadero de visitantes, parque infantil, salón comunal o social, zonas verdes, terraza comunal, turco o sauna, squash, planta eléctrica, club house y jacuzzi.
+
+En total pasan de 22 a 32. Los cambios más grandes en las existentes: `tx_estudio` −1.916 anuncios y `tx_ascensor` −601 ("sin ascensor").
+
+**Decisión del equipo:** los modelos ya registrados (hasta m15) **no se vuelven a correr**. Se quedan con la base anterior, de 22 dummies, que está en git en el commit 75db2f2. Los modelos nuevos usan la base nueva.
+
+Por eso las métricas de los modelos viejos y de los nuevos no son del todo comparables. Además de las dummies, cambiaron dos imputaciones:
+- **El área imputada:** el random forest de `03_features.R` usa las `tx_*` como predictores. Cambia `log_area` en el 49% de las filas, en promedio un 2,8%.
+- **El estrato imputado:** cambia en promedio 0,03 puntos. Esto no viene de las dummies, porque ese modelo no las usa, sino de haber corrido `ranger` en otro equipo (Windows, ranger 0.18.0).
+
+Los folds de validación no cambian.
+
+### D15 · Variables de contexto de OSM: cerros, vías, área verde, altura de edificios y zona de lujo (2026-11-21)
+
+Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las calcula). Como en D14, solo las usan los modelos nuevos.
+
+- **`dist_cerros`**: distancia al borde de la Reserva Forestal Bosque Oriental de Bogotá.
+  - En OSM es la relación 13780896, con `leisure=nature_reserve` y no `boundary=protected_area`.
+  - La Avenida Circunvalar no aparece con ese nombre en OSM, así que no se usó.
+  - Es continua de Usaquén a Chapinero, así que un modelo lineal la puede extrapolar.
+  - La reserva también bordea el sur, donde estar cerca de los cerros no indica lujo, pero en el train casi no hay anuncios ahí (138).
+- **`dist_via_principal`**: distancia a la vía `highway=trunk|primary` más cercana. Su efecto es ambiguo: acceso frente a ruido.
+- **`area_verde500`**: hectáreas de parque (polígonos `leisure=park`) con algún punto del borde a menos de 500 m.
+  - Complementa a `n500_parque`, que solo cuenta parques: así un parque grande pesa más que uno de bolsillo.
+  - El área se calcula con la fórmula del área de un polígono (*shoelace*), en una proyección local en metros.
+- **`pisos_prom500` y `n500_edif_pisos`**: pisos promedio (`building:levels`) de los edificios a menos de 500 m y cuántos edificios tienen ese dato.
+  - En OSM solo 11.725 edificios tienen el número de pisos, así que la cobertura es irregular.
+  - Donde no hay ningún edificio con dato, se imputa la mediana; `n500_edif_pisos = 0` le indica al modelo que no hay información.
+- **Zona de lujo y de oficinas** (`dist_*` y `n500_*` de embajadas, oficinas, hoteles y clubes). **Experimental:**
+  - se concentran en Chapinero y Usaquén y casi funcionan como una dummy de localidad (D10);
+  - hay que vigilar que no se lleven todo el peso del modelo;
+  - de todas las nuevas, `dist_embajada` es la más correlacionada con el log del precio en el train (−0,30, frente a −0,29 de `dist_cbd`).
+
+**Cálculo de las distancias:**
+- La distancia a una línea o a un borde se aproxima con la distancia al vértice más cercano, después de densificar los segmentos cada 25 m (cerros) o 50 m (vías y parques).
+- Las búsquedas solo miran los puntos dentro de una caja alrededor de cada bloque de anuncios.
+
+**No se agregaron:**
+- *Rezago espacial del precio*: usa precios, así que debe calcularse dentro de cada fold.
+- *Avalúo catastral por manzana*: falta conseguir los datos.
+- *Altitud SRTM*: es redundante con `dist_cerros` y necesita paquetes de rasters.

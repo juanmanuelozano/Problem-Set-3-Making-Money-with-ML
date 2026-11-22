@@ -1,0 +1,281 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-21T23:10:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 1119605215,
+  "lat": 4.7336866,
+  "lon": -74.2124187,
+  "tags": {
+    "leisure": "golf_course",
+    "name": "San Andrés Golf Club"
+  }
+},
+{
+  "type": "way",
+  "id": 28256878,
+  "center": {
+    "lat": 4.7123336,
+    "lon": -74.0417521
+  },
+  "tags": {
+    "barrier": "yes",
+    "leisure": "golf_course",
+    "name": "Country Club"
+  }
+},
+{
+  "type": "way",
+  "id": 28917588,
+  "center": {
+    "lat": 4.7422610,
+    "lon": -74.0509799
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Calle 163B",
+    "addr:street": "Avenida Carrera 45",
+    "barrier": "yes",
+    "landuse": "recreation_ground",
+    "leisure": "golf_course",
+    "name": "Club El Carmel",
+    "sport": "golf;tennis;basketball"
+  }
+},
+{
+  "type": "way",
+  "id": 30785364,
+  "center": {
+    "lat": 4.7018395,
+    "lon": -74.0851627
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "name": "Club Los Lagartos"
+  }
+},
+{
+  "type": "way",
+  "id": 30785384,
+  "center": {
+    "lat": 4.7124592,
+    "lon": -74.0870587
+  },
+  "tags": {
+    "barrier": "yes",
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 41170439,
+  "center": {
+    "lat": 4.7923028,
+    "lon": -74.0747771
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 42059258,
+  "center": {
+    "lat": 4.8342505,
+    "lon": -74.0519801
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 42295577,
+  "center": {
+    "lat": 4.8265078,
+    "lon": -74.0428081
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 42295800,
+  "center": {
+    "lat": 4.8187249,
+    "lon": -74.0366911
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 44504117,
+  "center": {
+    "lat": 4.7043548,
+    "lon": -74.2447293
+  },
+  "tags": {
+    "barrier": "yes",
+    "leisure": "golf_course",
+    "name": "Serrezuela Country Club"
+  }
+},
+{
+  "type": "way",
+  "id": 78135618,
+  "center": {
+    "lat": 4.7770177,
+    "lon": -74.0533410
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 244220862,
+  "center": {
+    "lat": 4.7958266,
+    "lon": -74.0915427
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "name": "Club Pueblo Viejo",
+    "source": "Bing Aerial Map",
+    "source:date": "2004-01-24"
+  }
+},
+{
+  "type": "way",
+  "id": 402785401,
+  "center": {
+    "lat": 4.7349181,
+    "lon": -74.0702843
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 430385249,
+  "center": {
+    "lat": 4.6612959,
+    "lon": -74.0832835
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "name": "Campo de Golf Público",
+    "operator": "Federacion Colombiana de Golf"
+  }
+},
+{
+  "type": "way",
+  "id": 530033136,
+  "center": {
+    "lat": 4.7331681,
+    "lon": -74.2135112
+  },
+  "tags": {
+    "barrier": "yes",
+    "leisure": "golf_course",
+    "name": "San Andrés Golf Club"
+  }
+},
+{
+  "type": "way",
+  "id": 542773254,
+  "center": {
+    "lat": 4.7292175,
+    "lon": -74.1530289
+  },
+  "tags": {
+    "addr:city": "Funza",
+    "leisure": "golf_course",
+    "name": "Club de Golf La Florida",
+    "source": "Kaart Ground Survey 2017"
+  }
+},
+{
+  "type": "way",
+  "id": 676441838,
+  "center": {
+    "lat": 4.5722405,
+    "lon": -74.2439955
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "name": "Club Recreativo y Social Compartir"
+  }
+},
+{
+  "type": "way",
+  "id": 892402121,
+  "center": {
+    "lat": 4.7904987,
+    "lon": -74.0525227
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "name": "Hoyo en Uno",
+    "phone": "+57 316 7927619"
+  }
+},
+{
+  "type": "way",
+  "id": 1019894505,
+  "center": {
+    "lat": 4.7911150,
+    "lon": -74.0434061
+  },
+  "tags": {
+    "leisure": "golf_course",
+    "sport": "miniature_golf"
+  }
+},
+{
+  "type": "way",
+  "id": 1152239937,
+  "center": {
+    "lat": 4.8446549,
+    "lon": -73.9924747
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 1209617757,
+  "center": {
+    "lat": 4.7767588,
+    "lon": -74.0589186
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+},
+{
+  "type": "way",
+  "id": 1497563857,
+  "center": {
+    "lat": 4.7423810,
+    "lon": -74.0509799
+  },
+  "tags": {
+    "leisure": "golf_course"
+  }
+}
+
+  ]
+}
+

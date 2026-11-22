@@ -1,4 +1,4 @@
-# Backend de Python para las redes (scripts/08c_nn_star.R, 08d_nn_general.R; D14). El código es R (keras3);
+# Backend de Python para las redes (scripts/08c_nn_star.R, 08d_nn_general.R; D16). El código es R (keras3);
 # TensorFlow vive en un venv aparte para no romper las versiones de numpy del entorno de texto (.venv).
 # Instalación desde la raíz:
 #   uv venv .venv-tf --python 3.11

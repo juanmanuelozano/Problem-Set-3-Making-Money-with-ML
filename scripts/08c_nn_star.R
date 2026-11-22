@@ -1,5 +1,5 @@
 # =============================================================================
-# 08c_nn_star.R - NN STAR (Mayer, Bourassa, Hoesli y Scognamiglio, 2022, sección 3.2) con ReLU, D14
+# 08c_nn_star.R - NN STAR (Mayer, Bourassa, Hoesli y Scognamiglio, 2022, sección 3.2) con ReLU, D16
 # Salida = suma de tres ramas que nunca se mezclan (cada una es un rubro interpretable):
 #  - Estructura: Dense(1) lineal -> un coeficiente por variable (efectos aditivos, ICE paralelas).
 #  - Ubicación: 64-32-16 ReLU con dropout p_u + atajo lineal (para extrapolar hacia Chapinero) -> encoder de ubicación.
@@ -7,7 +7,7 @@
 # Nivel calibrado (Remark 6 del paper). Sin dummies de localidad (D10); validación cv_oof con buffer (D9).
 # Afinación: p_u en {0, .1, .2} × p_t en {0, .25, .5} con objetivo m2; con la mejor pareja, también objetivo precio.
 # Salidas: tables/nn_star_dropout.csv, data/processed/nn_star_encoders.csv, figures/m8_nn_star_mapa_ubicacion.png,
-#          registro m15_nn_star_m2 y m15_nn_star
+#          registro m17_nn_star_m2 y m17_nn_star
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R"); source("scripts/utils_redes.R")
 
@@ -22,7 +22,7 @@ tab <- busca_red(grilla, construye, file.path(P$rep_mod, "tables", "nn_star_drop
 finales <- tab %>% group_by(objetivo) %>% slice_min(mae_total, n = 1, with_ties = FALSE) %>% ungroup()
 for (k in seq_len(nrow(finales))) {
   b <- finales[k, ]; f <- ajusta_final(b, construye)
-  if (!PRUEBA) registra(paste0("m15_nn_star", if (b$objetivo == "m2") "_m2"),
+  if (!PRUEBA) registra(paste0("m17_nn_star", if (b$objetivo == "m2") "_m2"),
     paste("NN STAR (Keras): estructura lineal + ubicación y texto 64-32-16 ReLU con atajo lineal, ramas sumadas, nivel calibrado;",
           if (b$objetivo == "m2") "sobre log(precio por m2), precio = predicción × m2" else "sobre log(precio)"),
     sprintf("p_u=%g; p_t=%g; épocas=%d; lr=%g; batch=%d; l2=%g; mse", b$p_u, b$p_t, b$epocas, LR, BATCH, L2),

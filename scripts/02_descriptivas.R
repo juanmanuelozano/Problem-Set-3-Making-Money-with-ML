@@ -28,13 +28,31 @@ d <- d %>% mutate(
   banos     = coalesce(bathrooms, if_else(between(banos_txt, 1, 8), banos_txt, NA_real_)),
   log_precio = log(price), precio_m2 = price / area)
 
-amen <- c(parqueadero = "parqueader|garaje", ascensor = "ascensor", terraza = "terraza", balcon = "balcon",
-          chimenea = "chimenea", gimnasio = "gimnasio|\\bgym\\b", piscina = "piscina",
-          vigilancia = "vigilancia|porteria|seguridad 24", deposito = "deposito|bodega", estudio = "estudio",
-          duplex = "duplex", penthouse = "penthouse|pent house", remodelado = "remodelad", estrenar = "estrenar",
-          vista = "vista", bbq = "\\bbbq\\b", conjunto = "conjunto", servicio = "alcoba de servicio|cuarto de servicio",
-          walk_in = "walk in", patio = "patio", jardin = "jardin", exterior = "exterior")
-for (k in names(amen)) d[[paste0("tx_", k)]] <- as.integer(str_detect(d$txt, amen[k]))
+# Amenidades (dummies tx_*). Se busca sobre una copia del texto sin tildes ("balcón" = "balcon") y con \b para
+# exigir palabras completas ("apartaestudio" ya no cuenta como estudio). Las negaciones se atienden con
+# detectar_caracteristica(), de la complementaria "Texto como datos": primero se borran las menciones
+# precedidas de "sin", "no tiene", "no cuenta con" o "no dispone de" (con artículo opcional) y luego se
+# busca si queda una mención positiva. Así "edificio sin ascensor" queda en 0.
+detectar_caracteristica <- function(texto, patron) {
+  negacion <- paste0("\\b(?:sin|no\\s+(?:tiene|cuenta\\s+con|dispone\\s+de|hay))\\s+",
+                     "(?:(?:un|una|el|la|los|las)\\s+)?(?:", patron, ")")
+  as.integer(str_detect(str_remove_all(texto, negacion), patron))
+}
+txt_regex <- stringi::stri_trans_general(d$txt, "Latin-ASCII")
+amen <- c(parqueadero = "\\b(parqueaderos?|garajes?|garages?)\\b", ascensor = "\\bascensor(es)?\\b",
+          terraza = "\\bterrazas?\\b", balcon = "\\bbalcon(es)?\\b", chimenea = "\\bchimeneas?\\b",
+          gimnasio = "\\b(gimnasios?|gym)\\b", piscina = "\\bpiscinas?\\b",
+          vigilancia = "\\b(vigilancia|porterias?|seguridad 24)\\b", deposito = "\\b(depositos?|bodegas?)\\b",
+          estudio = "(?<!aparta )\\bestudios?\\b", duplex = "\\bduplex\\b", penthouse = "\\b(penthouse|pent house)\\b",
+          remodelado = "\\bremodelad[ao]s?\\b", estrenar = "\\bestrenar\\b", vista = "\\bvistas?\\b", bbq = "\\bbbq\\b",
+          conjunto = "\\bconjuntos?\\b", servicio = "\\b(alcoba|cuarto|habitacion) de servicio\\b",
+          walk_in = "\\bwalk in\\b", patio = "\\bpatios?\\b", jardin = "\\b(ante)?jardin(es)?\\b", exterior = "\\bexterior(es)?\\b",
+          # Amenidades comunales nuevas (sesión 7): más frecuentes en edificios de estrato alto o en conjuntos
+          parq_visitantes = "\\bparqueaderos? (de|para) visitantes\\b", parque_infantil = "\\b(parque|zona|juegos) infantil(es)?\\b",
+          salon_comunal = "\\bsalon(es)? (comunal(es)?|social(es)?|de reuniones)\\b", zonas_verdes = "\\bzonas? verdes?\\b",
+          terraza_comunal = "\\bterrazas? comunal(es)?\\b", turco_sauna = "\\b(turcos?|saunas?)\\b", squash = "\\bsquash\\b",
+          planta_electrica = "\\bplantas? electricas?\\b", club_house = "\\bclub house\\b", jacuzzi = "\\bjacuzzis?\\b")
+for (k in names(amen)) d[[paste0("tx_", k)]] <- detectar_caracteristica(txt_regex, amen[k])
 
 # ---- 3. Localidad y UPZ (punto en polígono con sp) ----
 asigna_poly <- function(poly, lon, lat) {
@@ -66,6 +84,77 @@ hitos <- tibble(h = c("centro_internacional", "calle72", "parque93"),
                 lat = c(4.6148, 4.6573, 4.6766), lon = c(-74.0697, -74.0585, -74.0484))
 for (i in seq_len(nrow(hitos))) d[[paste0("dist_", hitos$h[i])]] <- hav(d$lat, d$lon, hitos$lat[i], hitos$lon[i])[, 1]
 d$dist_cbd <- pmin(d$dist_centro_internacional, d$dist_calle72, d$dist_parque93)
+
+# ---- 4b. Variables de contexto: cerros, vías principales, área verde y altura de los edificios (D15) ----
+# Las capas de embajadas, oficinas, hoteles y clubes ya entraron arriba como dist_* y n500_* (01_osm_descarga.R).
+# Metros por grado en Bogotá (proyección equirectangular local; error despreciable a escala de ciudad)
+M_LON <- 111320 * cos(4.65 * pi / 180); M_LAT <- 110574
+
+# Densifica líneas y polígonos: agrega puntos cada `paso` metros, para que la distancia al vértice más cercano
+# aproxime bien la distancia a la línea (error máximo de paso/2)
+densifica <- function(v, paso) {
+  i <- which(v$id[-1] == v$id[-nrow(v)])                       # segmentos: vértice i -> i + 1 de la misma línea
+  largo <- sqrt(((v$lon[i + 1] - v$lon[i]) * M_LON)^2 + ((v$lat[i + 1] - v$lat[i]) * M_LAT)^2)
+  k <- pmax(1, ceiling(largo / paso)); s <- rep(i, k); f <- (sequence(k) - 1) / rep(k, k)
+  bind_rows(tibble(id = v$id[s], lon = v$lon[s] + f * (v$lon[s + 1] - v$lon[s]), lat = v$lat[s] + f * (v$lat[s + 1] - v$lat[s])),
+            v[setdiff(seq_len(nrow(v)), i), c("id", "lon", "lat")])                     # + último vértice de cada línea
+}
+
+# 1. Distancia al borde de la reserva de los cerros orientales: continua de Usaquén a Chapinero, extrapolable
+cerros <- densifica(lee_csv(file.path(P$osm, "cerros_reserva.csv")), 25)
+d$dist_cerros <- dist_min(d$lat, d$lon, cerros$lat, cerros$lon, bloque = 500)
+
+# Búsquedas por radio: anuncios ordenados por latitud en bloques, y solo los puntos dentro de la caja del bloque
+# (ampliada en r metros) como candidatos. f(dist, cand) resume cada fila de la matriz de distancias anuncio ×
+# candidato (en metros; las columnas son los puntos `cand`).
+por_radio <- function(plat, plon, r, f, bloque = 500) {
+  o <- order(d$lat); out <- vector("list", ceiling(length(o) / bloque))
+  for (b in seq_along(out)) {
+    ix <- o[((b - 1) * bloque + 1):min(b * bloque, length(o))]
+    cand <- which(plat >= min(d$lat[ix]) - r / M_LAT & plat <= max(d$lat[ix]) + r / M_LAT &
+                  plon >= min(d$lon[ix]) - r / M_LON & plon <= max(d$lon[ix]) + r / M_LON)
+    dist <- if (length(cand)) hav(d$lat[ix], d$lon[ix], plat[cand], plon[cand]) else matrix(Inf, length(ix), 0)
+    out[[b]] <- tibble(fila = ix) %>% bind_cols(f(dist, cand))
+  }
+  bind_rows(out) %>% arrange(fila) %>% select(-fila)
+}
+
+# 2. Distancia a la vía principal más cercana (highway = trunk/primary). Efecto ambiguo: acceso frente a ruido.
+#    Solo se miran las vías a menos de 3 km del bloque (más rápido); si en esa caja no hay ninguna (o la más
+#    cercana queda a más de 3 km), se calcula contra todas.
+vias <- densifica(lee_csv(file.path(P$osm, "vias_principales.csv")), 50)
+d$dist_via_principal <- por_radio(vias$lat, vias$lon, 3000, function(dist, cand)
+  tibble(x = if (ncol(dist)) apply(dist, 1, min) else rep(Inf, nrow(dist))))$x
+lejos <- which(d$dist_via_principal > 3000)
+if (length(lejos)) d$dist_via_principal[lejos] <- dist_min(d$lat[lejos], d$lon[lejos], vias$lat, vias$lon, bloque = 200)
+
+# 3. Área verde a menos de 500 m: suma del área (ha) de los parques con algún punto del borde a menos de 500 m.
+#    Así un parque grande pesa más que uno de bolsillo (n500_parque solo los cuenta).
+parq <- lee_csv(file.path(P$osm, "parques_poligonos.csv"))
+area_ha <- parq %>% group_by(id) %>%
+  summarise(cerrado = first(lon) == last(lon) & first(lat) == last(lat),
+            a = abs(sum(lon * M_LON * lead(lat * M_LAT, default = first(lat * M_LAT)) -
+                        lead(lon * M_LON, default = first(lon * M_LON)) * lat * M_LAT)) / 2 / 1e4) %>%
+  mutate(a = if_else(cerrado, a, 0))                                      # sin área si el anillo no cierra
+parq_d <- densifica(parq, 50) %>% mutate(k = match(id, area_ha$id))
+verde <- por_radio(parq_d$lat, parq_d$lon, 500, function(dist, cand) {
+  k <- parq_d$k[cand]; dentro <- dist <= 500
+  tibble(area_verde500 = apply(dentro, 1, function(fila) sum(area_ha$a[unique(k[fila])])))
+})
+d$area_verde500 <- verde$area_verde500
+
+# 4. Altura de las construcciones (building:levels): pisos promedio de los edificios a menos de 500 m y cuántos
+#    hay con ese dato. La cobertura de OSM es irregular: sin edificios con dato, se imputa la mediana y el conteo
+#    (n500_edif_pisos = 0) le dice al modelo que no hay información.
+edif <- lee_csv(file.path(P$osm, "edificios_pisos.csv"))
+alt <- por_radio(edif$lat, edif$lon, 500, function(dist, cand) {
+  dentro <- dist <= 500; n <- rowSums(dentro)
+  tibble(n500_edif_pisos = n, pisos_prom500 = if (length(cand)) as.vector(dentro %*% edif$pisos[cand]) / n else NA_real_)
+})
+d$n500_edif_pisos <- alt$n500_edif_pisos
+d$pisos_prom500 <- coalesce(if_else(alt$n500_edif_pisos > 0, alt$pisos_prom500, NA_real_),
+                            median(alt$pisos_prom500[alt$n500_edif_pisos > 0]))
+print(summary(select(d, dist_cerros, dist_via_principal, area_verde500, n500_edif_pisos, pisos_prom500)))
 
 write_csv(select(d, -txt), file.path(P$processed, "base_enriquecida.csv"))
 

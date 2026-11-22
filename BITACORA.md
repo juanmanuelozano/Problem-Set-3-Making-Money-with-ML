@@ -21,17 +21,25 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m05_xgb_precio_m2 | 132,3 | 156,1 | 146,8 |
 | m90_ensamble | *129,3* | *154,7* | *146,5* |
 
-**Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m15_nn_star_m2 con 158,3**, seguido de m16_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
+**Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m17_nn_star_m2 con 158,3**, seguido de m18_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
 
 **Pendientes / próximos pasos:**
+- [ ] Correr `09_red_neuronal.R` (m16, nnet) en el servidor y subirla a Kaggle. La familia de redes ya está cubierta con m17 y m18 (Keras, D16)
+- [ ] Volver a correr m17/m18 (y el STAR, 08 y 08b) con la base nueva de D14/D15: se corrieron con la base anterior
+- [ ] Subir `m15_rf_m2.csv` a Kaggle (RF por m²: 177,3 M en Chapinero en la validación)
+- [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 9)
+- [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
+- [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
+- [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
 - [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel
-- [ ] Rezago espacial del precio por m² (kNN dentro de cada fold)
+- [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
+- [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
 - [x] TF-IDF del texto: `03c_texto.py` + `03d_tfidf.py` → `data/processed/tfidf.parquet` (D11)
 - [ ] Usar el TF-IDF en R: PCA (`irlba::prcomp_irlba`, sin densificar) o lasso directo sobre la matriz dispersa dentro de `cv_oof`
-- [ ] Arreglar las regex de amenidades (negaciones como "sin ascensor" y "apartaestudio" → `tx_estudio`)
+- [x] Arreglar las regex de amenidades (negaciones y "apartaestudio") y agregar 10 amenidades comunales (D14). Los modelos nuevos ya usan la base con 32 dummies; los anteriores no se vuelven a correr
 - [ ] Recuperar los decimales perdidos en el área del texto: los valores mayores de 1.000 (2.391) son áreas multiplicadas por 10 o 100. Dividir y aceptar si pasa la regla de coherencia
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
@@ -39,7 +47,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## 2026-11-21 · Sesión 7: NN STAR, red general y grilla ampliada del XGB STAR (en curso)
+## 2026-11-21 · Sesión 8: NN STAR, red general y grilla ampliada del XGB STAR (en curso)
 
 - **Interpretación del STAR, para la presentación:**
   - El STAR es un solo XGBoost con restricciones de interacción: los grupos se entrenan juntos y compiten por el mismo residuo. El encoder es el rubro de su grupo en la "factura" del modelo, en log del precio por m². Por ejemplo, Chapinero tiene +0,20 ≈ +22%.
@@ -47,24 +55,72 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - Frente a SHAP, el STAR no explica un modelo después de entrenarlo: lo restringe para que su explicación sea exacta y única.
   - **El ascensor no interactúa con nada** (`tx_ascensor` es aditivo en el STAR y lineal en el EN). Solo se combina con otras palabras dentro del texto: "ascensor privado" queda en el puesto 27 de 1.000 y "sin ascensor" en el 49.
 - **Grilla del XGB STAR (08) ampliada.** La anterior quedó en el borde en todos los parámetros. Ahora son tres búsquedas de 20 configuraciones: m² cuadrática, m² absoluta (eta hasta 0,3 y hasta 5.000 rondas) y precio. Detalles en D13. Se registra el mejor de cada búsqueda (nuevo: `m13_xgb_star_m2_mae`), los encoders salen del mejor m² y luego se vuelve a correr 08b.
-- **Redes con Keras desde R (D14):** `scripts/utils_redes.R` y TensorFlow en `.venv-tf`.
-  - **NN STAR (`08c_nn_star.R`, m15):** estructura lineal más ramas de ubicación y de texto 64-32-16 ReLU, cada una con atajo lineal y dropout propio. Tiene 72.757 parámetros. Diagrama: https://claude.ai/artifact/2QqQEJDpwcaxDdsKrqRYhk
-  - **Red general (`08d_nn_general.R`, m16):** 64-32-16 con todo mezclado y 71.489 parámetros, para comparar con el mismo tamaño.
+- **Redes con Keras desde R (D16):** `scripts/utils_redes.R` y TensorFlow en `.venv-tf`.
+  - **NN STAR (`08c_nn_star.R`, m17):** estructura lineal más ramas de ubicación y de texto 64-32-16 ReLU, cada una con atajo lineal y dropout propio. Tiene 72.757 parámetros. Diagrama: https://claude.ai/artifact/2QqQEJDpwcaxDdsKrqRYhk
+  - **Red general (`08d_nn_general.R`, m18):** 64-32-16 con todo mezclado y 71.489 parámetros, para comparar con el mismo tamaño.
   - **Afinación:** solo el dropout.
   - **Prueba de humo (`PRUEBA=1`):** la suma de las ramas coincide con la predicción (diferencia de 5e-7), las ICE salen paralelas y la calibración deja los residuos con media 0.
-- **Primer intento del NN STAR fallido** (MAE 200 en la primera configuración): con pesos aleatorios, las ramas lineales arrancaban con ruido grande y se compensaban entre sí. Se corrigió iniciando las capas de salida en cero (D14). En una prueba con 3 folds queda igual o mejor que la red general, con el óptimo entre 5 y 10 épocas (la grilla de épocas pasa a 1–80).
+- **Primer intento del NN STAR fallido** (MAE 200 en la primera configuración): con pesos aleatorios, las ramas lineales arrancaban con ruido grande y se compensaban entre sí. Se corrigió iniciando las capas de salida en cero (D16). En una prueba con 3 folds queda igual o mejor que la red general, con el óptimo entre 5 y 10 épocas (la grilla de épocas pasa a 1–80).
 - **Resultados del NN STAR (08c, 73 min):**
   - **Mejor configuración:** p_u = 0,1 y p_t = 0,5, con 3 épocas. El óptimo de p_t está en el borde de la grilla; queda pendiente probar 0,6–0,7.
-  - **`m15_nn_star_m2`:** 131,4 / **146,9** / 153,5. Sesgo en Chapinero −67 M y la **predicción media del test más alta de todos (826 M)**.
+  - **`m17_nn_star_m2`:** 131,4 / **146,9** / 153,5. Sesgo en Chapinero −67 M y la **predicción media del test más alta de todos (826 M)**.
   - **Frente a m13_xgb_star_m2:** −8,4 M en Chapinero (*t* = −2,3). **Frente a m02b:** −6,9 M (*t* = −2,0).
-  - **Objetivo precio (`m15_nn_star`):** 136,8 / 154,0, peor que el m².
+  - **Objetivo precio (`m17_nn_star`):** 136,8 / 154,0, peor que el m².
   - **Encoders:** correlación con los del XGB STAR de 0,955 en ubicación y 0,815 en texto.
 - **Resultados de la red general (08d, 35 min, mismo tamaño):**
-  - **Mejor dropout:** p = 0,2 con 7 épocas. `m16_nn_64_m2` da 131,5 / 155,9 / 156,7, con sesgo de −99 M y predicción media del test de 783 M. El objetivo precio da 130,5 / 173,6.
+  - **Mejor dropout:** p = 0,2 con 7 épocas. `m18_nn_64_m2` da 131,5 / 155,9 / 156,7, con sesgo de −99 M y predicción media del test de 783 M. El objetivo precio da 130,5 / 173,6.
   - **NN STAR frente a la red general (m²):** el mismo total (−0,1 M), pero **−9,0 M en Chapinero** (*t* = −2,0). Con objetivo precio, −19,6 M en Chapinero (*t* = −4,2).
   - **Para la presentación:** a igual número de parámetros, la estructura aditiva no le quita precisión al resto de la ciudad y sí mejora la extrapolación a Chapinero.
-- **Kaggle:** `m15_nn_star_m2` obtuvo **158,3** (−14,4 M frente al mejor anterior, 172,7) y `m16_nn_64_m2` obtuvo 167,5. La red general también mejora, pero el STAR le gana por 9,2 M, igual que en la validación en Chapinero (−9,0 M). Con 9 envíos, la predicción media del test ordena los scores con Spearman −0,87.
+- **Kaggle:** `m17_nn_star_m2` obtuvo **158,3** (−14,4 M frente al mejor anterior, 172,7) y `m18_nn_64_m2` obtuvo 167,5. La red general también mejora, pero el STAR le gana por 9,2 M, igual que en la validación en Chapinero (−9,0 M). Con 9 envíos, la predicción media del test ordena los scores con Spearman −0,87.
 - **Grilla ampliada del XGB STAR (08) detenida** a los 13 minutos, porque se van a agregar más datos. El script ya está modificado y probado; se corre después, seguido del 08b. La primera configuración reprodujo exactamente el resultado anterior (133,0 / 155,3).
+- **Merge con origin/main (sesión 7 del otro equipo):** las redes pasan de m15/m16 a **m17_nn_star** y **m18_nn_64**, porque m15 ya era el RF por m² y m16 está reservado para `09_red_neuronal.R`. Su decisión pasa de D14 a **D16**, porque D14 y D15 ya eran amenidades y OSM. Los CSV de `models/` se combinaron sin volver a correr nada. m17 y m18 usan la base anterior a D14/D15.
+
+---
+
+## 2026-11-21 · Sesión 7: enunciado, random forest por m² y red neuronal
+
+- Se agregó el enunciado del taller (`docs/Problem_Set_3.pdf`). Se comparó con lo hecho y faltan:
+  - Una **red neuronal**, que es una de las seis familias obligatorias.
+  - Llegar a **≥ 20 envíos a Kaggle**, con al menos uno por familia (van 7).
+  - **CV aleatoria** además de la espacial, para comparar cuál refleja mejor el leaderboard.
+  - El **análisis de negocio**: sobrepredecir cuesta más que subpredecir, ¿se puede confiar en el modelo para comprar?
+  - Las **dos presentaciones** (`best_equipo_XX`, `compare_equipo_XX`).
+  - Cada integrante debe tener **≥ 5 contribuciones** en `main`.
+- **Random forest por m² (`05c_rf_m2.R`, m15).** Objetivo log(precio/m²), 200 árboles en la CV y 500 en el modelo final, mtry = 12, min.node.size = 5.
+  - Con coordenadas: 142,4 M total / **177,3 M en Chapinero** (m03: 140,5 / 183,0).
+  - Sin lat/lon ni rotaciones: 142,7 / 180,1. Las distancias no reemplazan del todo a las coordenadas.
+  - El RF sigue lejos del elastic net en Chapinero: los árboles no extrapolan por encima del rango de precios del train.
+  - Variables más importantes: estrato, apartamento o casa, habitaciones, distancia al Parque 93 y a la Calle 72.
+  - mtry = 25 no alcanzó a correr.
+- **Red neuronal (`09_red_neuronal.R`, m16).** Escrita pero **sin correr**.
+  - Red de una capa oculta con `nnet`, sobre log(precio/m²), con las variables del elastic net estandarizadas dentro de cada fold.
+  - Grilla: size ∈ {5, 15} × decay ∈ {0,1, 1}. Tarda cerca de 1 h, así que se corre en el servidor.
+  - En el curso las redes se hacen con keras3, pero no está instalado en este equipo (Python 3.14, sin TensorFlow). Por eso se usó `nnet`.
+- **Dummies de amenidades (D14).** En `02_descriptivas.R`, las `tx_*` usan ahora `detectar_caracteristica()` (complementaria *Texto como datos*), que atiende negaciones. Además, la búsqueda es sin tildes y con palabras completas.
+  - Pasan de 22 a 32. Las 10 nuevas son: parqueadero de visitantes, parque infantil, salón comunal, zonas verdes, terraza comunal, turco/sauna, squash, planta eléctrica, club house y jacuzzi.
+  - Varias se reparten muy distinto entre train y test:
+    - zonas verdes: 9,6% en train / 3,8% en test;
+    - parque infantil: 11,5% / 6,3%;
+    - parqueadero de visitantes: 11,5% / 16,5%;
+    - planta eléctrica: 2,1% / 5,5%.
+  - Correcciones en las existentes: `tx_estudio` −1.916 (apartaestudios) y `tx_ascensor` −601 ("sin ascensor").
+  - Se regeneraron `base_enriquecida.csv` y `base_modelo.rds` (02 y 03). También cambió la imputación del área, porque usa las `tx_*`, y un poco la del estrato, por correr ranger en otro equipo.
+  - El equipo decidió **no volver a correr los modelos anteriores**: los nuevos (desde m16) usan la base nueva. `09_red_neuronal.R` todavía no se ha corrido, así que usará la base nueva.
+  - No se corrieron `03e_pca.R` ni el STAR (`08_xgb_star.R`). `pca_no_texto.csv` y `star_encoders.csv` siguen siendo de la base anterior; un modelo nuevo que los use debe regenerarlos primero.
+- **Variables de contexto de OSM (D15).** La base pasa de 76 a 89 variables. Las nuevas son:
+  - `dist_cerros`;
+  - `dist_via_principal`;
+  - `area_verde500` (ha de parque a menos de 500 m);
+  - `pisos_prom500` y `n500_edif_pisos`;
+  - `dist_*` y `n500_*` de embajadas, oficinas, hoteles y clubes.
+
+  Detalles:
+  - En OSM, los cerros son la relación 13780896 (reserva forestal, `leisure=nature_reserve`); la Circunvalar no aparece con ese nombre.
+  - `overpass()` ahora reintenta con espera, porque Overpass limita las consultas seguidas.
+  - `02_descriptivas.R` tarda unos 6 min.
+  - Correlación con el log del precio en el train (norte de la ciudad): `dist_embajada` −0,30, `dist_cbd` −0,29, `dist_cerros` −0,13.
+  - Las de embajadas, oficinas, hoteles y clubes son experimentales: casi equivalen a una dummy de localidad.
+- Entorno: esta sesión corrió en un Windows con R 4.5.2 (`"/c/Program Files/R/R-4.5.2/bin/Rscript.exe"`). Se instalaron `ranger`, `sp` y `stargazer`; `xgboost` no está instalado.
 
 ---
 

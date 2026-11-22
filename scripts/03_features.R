@@ -81,6 +81,7 @@ vars_num <- c("log_area", "area_imputada", "area_texto", "bedrooms", "banos_fina
               "estrato_final", "piso_txt", "antig_txt", "parq_txt", "n_palabras",
               "lat", "lon", "lat_rot1", "lat_rot2", "year", "month",
               grep("^dist_", names(d), value = TRUE), grep("^n500_", names(d), value = TRUE),
+              "area_verde500", "pisos_prom500",                         # contexto (D15)
               grep("^tx_", names(d), value = TRUE))
 base <- list(datos = select(d, property_id, muestra, price, localidad, upz, grupo, all_of(vars_num)),
              vars = vars_num, dist_loc = dist_loc)

@@ -20,6 +20,47 @@ folds_localidad <- function(buffer = BUFFER_M) {
 }
 FOLDS <- folds_localidad()
 
+# ---- "Chapinero sintético": pesos que acercan el train al test (D18, Brenning y Suesse 2026) ----
+# Solo usan las VARIABLES del test, nunca su precio. Sirven para evaluar (mae_twcv, mae_iwcv en evalua()) y
+# para entrenar con pesos (D19). Variables de balanceo: estrato, apartamento, habitaciones, área y distancia al CBD.
+encoge <- function(w, lambda = 0.2) { w1 <- (1 - lambda) * length(w) * w + lambda; w1 / sum(w1) }  # hacia pesos iguales
+ess <- function(w) sum(w)^2 / sum(w^2)                                                         # tamaño efectivo
+vars_balanceo <- function() {
+  corta <- function(x_tr, x_te) {   # quintiles del test
+    br <- unique(quantile(x_te, 0:5 / 5, na.rm = TRUE)); br[1] <- -Inf; br[length(br)] <- Inf
+    list(tr = cut(x_tr, br), te = cut(x_te, br))
+  }
+  fija <- function(x_tr, x_te, f) list(tr = f(x_tr), te = f(x_te))
+  list(estrato  = fija(TR$estrato_final, TE$estrato_final, \(x) factor(pmin(pmax(round(x), 1), 6), 1:6)),
+       apto     = fija(TR$es_apto, TE$es_apto, \(x) factor(x, 0:1)),
+       habit    = fija(TR$bedrooms, TE$bedrooms, \(x) cut(x, c(-Inf, 1, 2, 3, Inf))),
+       area     = corta(TR$log_area, TE$log_area),
+       dist_cbd = corta(TR$dist_cbd, TE$dist_cbd))
+}
+# TWCV: raking (ajuste proporcional iterativo) hasta igualar las proporciones de cada variable a las del test
+pesos_twcv <- function(vars = vars_balanceo(), maxit = 500, tol = 1e-10) {
+  w <- rep(1 / length(TR$price), length(TR$price))
+  objetivo <- map(vars, ~ prop.table(table(.x$te)))
+  for (it in seq_len(maxit)) {
+    for (nm in names(vars)) {
+      f <- vars[[nm]]$tr; s <- tapply(w, f, sum); s[is.na(s)] <- 0
+      w <- w * as.vector(objetivo[[nm]][f] / s[f])
+    }
+    dif <- max(map_dbl(names(vars), \(nm) max(abs(tapply(w, vars[[nm]]$tr, sum) - objetivo[[nm]]), na.rm = TRUE)))
+    if (dif < tol) break
+  }
+  w / sum(w)
+}
+# IWCV: p/(1 - p) de un logit que distingue test de train, con las mismas variables en continuo
+pesos_iwcv <- function() {
+  pool <- bind_rows(TR %>% mutate(es_test = 0), TE %>% mutate(es_test = 1))
+  m <- glm(es_test ~ estrato_final + I(estrato_final^2) + log_area + I(log_area^2) + es_apto + bedrooms +
+             log(dist_cbd) + I(log(dist_cbd)^2), data = pool, family = binomial)
+  p <- predict(m, TR, type = "response"); (p / (1 - p)) / sum(p / (1 - p))
+}
+W_TWCV <- encoge(pesos_twcv())   # para evaluar (encogidos 20%, como en el artículo)
+W_IWCV <- encoge(pesos_iwcv())
+
 # Validación cruzada genérica, para cualquier modelo. ajusta_predice(analisis, evaluacion) recibe índices de filas
 # del train, ajusta con `analisis` y devuelve predicciones (en log) para `evaluacion`: un vector o una matriz con
 # una columna por hiperparámetro (todo el camino de lambda, varias rondas de boosting...). Devuelve las OOF.
@@ -90,13 +131,14 @@ evalua <- function(pred_log, y_log = Y) {
   p <- recorta(exp(pred_log)); y <- exp(y_log)
   tibble(mae_total = mae(y, p), mae_chapinero = mae(y[ES_CHAP], p[ES_CHAP]),
          mae_macro = mean(tapply(abs(y - p), GRUPO, mean)),   # promedio simple entre localidades
-         mape_chapinero = mean(abs(y[ES_CHAP] - p[ES_CHAP]) / y[ES_CHAP]))
+         mape_chapinero = mean(abs(y[ES_CHAP] - p[ES_CHAP]) / y[ES_CHAP]),
+         mae_twcv = sum(W_TWCV * abs(y - p)), mae_iwcv = sum(W_IWCV * abs(y - p)))   # Chapinero sintético (D18)
 }
 
 # Registro acumulado de modelos (un renglón por modelo y versión)
 registra <- function(nombre, descripcion, params, metr, pred_oof_log, pred_test_log) {
   reg_f <- file.path(P$models, "registro_modelos.csv")
-  metr <- select(metr, any_of(c("mae_total", "mae_chapinero", "mae_macro", "mape_chapinero")))
+  metr <- select(metr, any_of(c("mae_total", "mae_chapinero", "mae_macro", "mape_chapinero", "mae_twcv", "mae_iwcv")))
   fila <- tibble(fecha = as.character(Sys.Date()), modelo = nombre, descripcion = descripcion, params = params) %>% bind_cols(metr)
   reg <- if (file.exists(reg_f)) read_csv(reg_f, col_types = cols(.default = "c"), num_threads = 1) %>%
     mutate(across(starts_with("ma"), as.numeric)) %>% filter(modelo != nombre) else NULL

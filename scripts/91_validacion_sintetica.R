@@ -1,5 +1,5 @@
 # =============================================================================
-# 91_validacion_sintetica.R - "Chapinero sintético": validación ponderada hacia el test (D16)
+# 91_validacion_sintetica.R - "Chapinero sintético": validación ponderada hacia el test (D18)
 # Basado en Brenning y Suesse (2026), "Aligning Validation with Deployment: Target-Weighted Cross-Validation
 # for Spatial Prediction" (arXiv 2603.29981).
 # Idea: la validación (una localidad afuera, con buffer) promedia errores de anuncios que se parecen poco al
@@ -8,13 +8,12 @@
 #  - TWCV (target-weighted CV): pesos por calibración (raking) que igualan las proporciones de unas pocas
 #    variables discretizadas a las del test. Encogimiento del 20% hacia pesos iguales (lambda = 0,2).
 #  - IWCV (importance-weighted CV): pesos p/(1 - p) de un logit que distingue test de train (comparación).
+# Los pesos (W_TWCV, W_IWCV) y sus funciones están en utils_modelos.R, para que cualquier modelo los use.
 # Solo se usan las VARIABLES del test, nunca su precio: no hay fuga de información.
 # El error es el absoluto (Kaggle mide MAE). Se compara con los scores públicos de Kaggle.
 # Salidas: tables/validacion_sintetica.csv, tables/vs_pesos_localidad.csv, figures/m6_validacion_sintetica.png
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-
-LAMBDA <- 0.2   # encogimiento de los pesos hacia pesos iguales (el del artículo)
 
 # ---- 1. Errores out-of-fold de todos los modelos registrados ----
 oof <- lee_csv(file.path(P$models, "oof_predicciones.csv"))
@@ -23,23 +22,9 @@ modelos <- setdiff(names(oof), c("property_id", "log_price", "grupo", "chapinero
 y <- exp(oof$log_price)
 err <- sapply(modelos, function(m) abs(y - recorta(exp(oof[[m]]))))   # n_train × modelos, en pesos
 
-# ---- 2. Variables de balanceo, discretizadas con los quintiles del TEST ----
-# Pocas variables (el artículo advierte que muchas celdas vacías dan pesos inestables): estrato, área,
-# tipo de inmueble, habitaciones y cercanía al centro de negocios.
-corta <- function(x_tr, x_te) {
-  br <- unique(quantile(x_te, 0:5 / 5, na.rm = TRUE)); br[1] <- -Inf; br[length(br)] <- Inf
-  list(tr = cut(x_tr, br), te = cut(x_te, br))
-}
-cat_fija <- function(x, f) list(tr = f(x$tr), te = f(x$te))
-v <- list(
-  estrato  = cat_fija(list(tr = TR$estrato_final, te = TE$estrato_final), \(x) factor(pmin(pmax(round(x), 1), 6), 1:6)),
-  apto     = cat_fija(list(tr = TR$es_apto, te = TE$es_apto), \(x) factor(x, 0:1)),
-  habit    = cat_fija(list(tr = TR$bedrooms, te = TE$bedrooms), \(x) cut(x, c(-Inf, 1, 2, 3, Inf))),
-  area     = corta(TR$log_area, TE$log_area),
-  dist_cbd = corta(TR$dist_cbd, TE$dist_cbd)
-)
-
-# Cobertura: toda categoría que aparece en el test debe tener anuncios en el train (si no, no hay pesos posibles)
+# ---- 2. Variables de balanceo (discretizadas con los quintiles del test) y cobertura ----
+# Toda categoría que aparece en el test debe tener anuncios en el train (si no, no hay pesos posibles)
+v <- vars_balanceo()
 for (nm in names(v)) {
   tab <- tibble(cat = levels(v[[nm]]$te), test = as.vector(prop.table(table(v[[nm]]$te))),
                 train = as.vector(prop.table(table(v[[nm]]$tr))), n_train = as.vector(table(v[[nm]]$tr)))
@@ -47,35 +32,9 @@ for (nm in names(v)) {
   stopifnot(all(tab$n_train[tab$test > 0] > 0))
 }
 
-# ---- 3. Pesos TWCV por raking (ajuste proporcional iterativo sobre las proporciones de cada variable) ----
-rake <- function(vars, maxit = 500, tol = 1e-10) {
-  w <- rep(1 / length(vars[[1]]$tr), length(vars[[1]]$tr))
-  objetivo <- map(vars, ~ prop.table(table(.x$te)))
-  for (it in seq_len(maxit)) {
-    for (nm in names(vars)) {
-      f <- vars[[nm]]$tr; s <- tapply(w, f, sum); s[is.na(s)] <- 0
-      w <- w * as.vector(objetivo[[nm]][f] / s[f])
-    }
-    dif <- max(map_dbl(names(vars), function(nm)
-      max(abs(tapply(w, vars[[nm]]$tr, sum) - objetivo[[nm]]), na.rm = TRUE)))
-    if (dif < tol) break
-  }
-  cat(sprintf("\nRaking: %d iteraciones, desajuste máximo %.1e\n", it, dif))
-  w / sum(w)
-}
-encoge <- function(w, lambda = LAMBDA) { w1 <- (1 - lambda) * length(w) * w + lambda; w1 / sum(w1) }
-ess <- function(w) sum(w)^2 / sum(w^2)
-
-w_tw <- encoge(rake(v))
-
-# ---- 4. Pesos IWCV: logit test vs train con las mismas variables (en continuo, con cuadrados) ----
-pool <- bind_rows(TR %>% mutate(es_test = 0), TE %>% mutate(es_test = 1))
-logit <- glm(es_test ~ estrato_final + I(estrato_final^2) + log_area + I(log_area^2) + es_apto + bedrooms +
-               log(dist_cbd) + I(log(dist_cbd)^2), data = pool, family = binomial)
-p <- predict(logit, TR, type = "response")
-w_iw <- encoge((p / (1 - p)) / sum(p / (1 - p)))
-
-cat(sprintf("Tamaño efectivo de muestra (ESS): TWCV %.0f (%.1f%%) | IWCV %.0f (%.1f%%) de %d anuncios\n",
+# ---- 3. Pesos (de utils_modelos.R) y tamaño efectivo de muestra ----
+w_tw <- W_TWCV; w_iw <- W_IWCV
+cat(sprintf("\nTamaño efectivo de muestra (ESS): TWCV %.0f (%.1f%%) | IWCV %.0f (%.1f%%) de %d anuncios\n",
             ess(w_tw), 100 * ess(w_tw) / nrow(TR), ess(w_iw), 100 * ess(w_iw) / nrow(TR), nrow(TR)))
 
 # Composición del "Chapinero sintético": peso total de cada localidad del train
@@ -85,7 +44,7 @@ comp <- tibble(localidad = GRUPO, twcv = w_tw, iwcv = w_iw) %>% group_by(localid
 write_csv(comp, file.path(P$rep_mod, "tables", "vs_pesos_localidad.csv"))
 print(comp %>% mutate(across(c(peso_sin_ponderar, twcv, iwcv), ~ round(100 * .x, 1))), n = 25)
 
-# ---- 5. Diagnóstico: distancia de predicción d (al anuncio de entrenamiento más cercano) ----
+# ---- 4. Diagnóstico: distancia de predicción d (al anuncio de entrenamiento más cercano) ----
 # En la validación, d se mide contra el conjunto de análisis de su fold; en el test, contra todo el train.
 d_val <- numeric(nrow(TR))
 for (f in FOLDS) d_val[f$evaluacion] <- dist_min(TR$lat[f$evaluacion], TR$lon[f$evaluacion],
@@ -96,7 +55,7 @@ cat("\nDistancia de predicción d (m), cuantiles 10/25/50/75/90:\n")
 cat("  validación:", round(quantile(d_val, q)), "\n  test:      ", round(quantile(d_test, q)), "\n")
 cat(sprintf("  test con d < 500 m: %.1f%% | validación con d < 500 m: %.1f%%\n", 100 * mean(d_test < 500), 100 * mean(d_val < 500)))
 
-# ---- 6. MAE por modelo: validación actual, TWCV, IWCV y Kaggle ----
+# ---- 5. MAE por modelo: validación actual, TWCV, IWCV y Kaggle ----
 kaggle <- lee_csv(file.path(P$models, "kaggle_scores.csv")) %>% group_by(modelo) %>%
   summarise(kaggle = min(public_score))
 res <- tibble(modelo = modelos,
@@ -118,7 +77,7 @@ cmp <- map_dfr(c("mae_total", "mae_chapinero", "mae_twcv", "mae_iwcv"), function
 cat("\nComparación con Kaggle:\n"); print(cmp %>% mutate(across(where(is.numeric), ~ round(.x, 2))))
 write_csv(cmp, file.path(P$rep_mod, "tables", "validacion_sintetica_vs_kaggle.csv"))
 
-# ---- 7. Figura: cada validación contra el score de Kaggle ----
+# ---- 6. Figura: cada validación contra el score de Kaggle ----
 etq <- c(mae_total = "CV por localidad (total)", mae_chapinero = "CV: solo Chapinero del train",
          mae_twcv = "Chapinero sintético (TWCV)", mae_iwcv = "Chapinero sintético (IWCV)")
 g <- k %>% pivot_longer(c(mae_total, mae_chapinero, mae_twcv, mae_iwcv), names_to = "validacion", values_to = "mae") %>%

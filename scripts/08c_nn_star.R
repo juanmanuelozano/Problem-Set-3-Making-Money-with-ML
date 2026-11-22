@@ -1,5 +1,5 @@
 # =============================================================================
-# 08c_nn_star.R - NN STAR (Mayer, Bourassa, Hoesli y Scognamiglio, 2022, sección 3.2) con ReLU, D16
+# 08c_nn_star.R - NN STAR (Mayer, Bourassa, Hoesli y Scognamiglio, 2022, sección 3.2) con ReLU, D17
 # Salida = suma de tres ramas que nunca se mezclan (cada una es un rubro interpretable):
 #  - Estructura: Dense(1) lineal -> un coeficiente por variable (efectos aditivos, ICE paralelas).
 #  - Ubicación: 64-32-16 ReLU con dropout p_u + atajo lineal (para extrapolar hacia Chapinero) -> encoder de ubicación.

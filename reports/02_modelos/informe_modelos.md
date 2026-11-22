@@ -142,7 +142,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 - **El encoder de ubicación no conviene como reemplazo:** sin la ubicación lineal, el MAE en Chapinero empeora (161,7), y el EN encoge el encoder (coeficiente de 0,65 a 0,85 en m²; de 0,2 a 0,3 en precio). Los árboles se saturan donde hay pocos datos, mientras que las variables lineales extrapolan hacia el nororiente.
 - El coeficiente del encoder de texto en m² es 1,01, es decir, está bien calibrado.
 
-### 2.2e Redes neuronales: NN STAR y red general (08c, 08d, 08e; D16)
+### 2.2e Redes neuronales: NN STAR y red general (08c, 08d, 08e; D17)
 - **NN STAR (m17):** es el STAR del paper (sección 3.2), hecho con Keras desde R.
   - **Arquitectura:** salida = estructura lineal + ubicación 64-32-16 ReLU con atajo lineal + texto TF-IDF 64-32-16 ReLU con atajo lineal. Las ramas solo se suman, así que cada una es un rubro interpretable.
   - **Ajustes de entrenamiento:** el nivel se calibra (Remark 6 del paper) y las capas de salida arrancan en cero. Con la inicialización por defecto, las ramas se compensaban entre sí y el MAE subía a 200.

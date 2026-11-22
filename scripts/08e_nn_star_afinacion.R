@@ -1,5 +1,5 @@
 # =============================================================================
-# 08e_nn_star_afinacion.R - Afinación por etapas del NN STAR (misma arquitectura que 08c), objetivo m2, D16
+# 08e_nn_star_afinacion.R - Afinación por etapas del NN STAR (misma arquitectura que 08c), objetivo m2, D17
 # Referencia: m17_nn_star_m2 (08c; se llamaba m15_nn_star_m2 antes del merge; Kaggle 158,3). No se toca ni se
 # sobrescribe. Cada etapa parte de la ganadora de la anterior, elegida por MAE total:
 #  0. Datos nuevos (D14, D15) sin la zona de lujo (LUJO en utils_redes.R): la configuración de m17 (lr 1e-3, p_u 0,1,

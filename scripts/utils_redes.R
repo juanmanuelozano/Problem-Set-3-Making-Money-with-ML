@@ -1,5 +1,5 @@
 # =============================================================================
-# utils_redes.R - Funciones comunes de las redes neuronales (08c NN STAR, 08d red general), D16
+# utils_redes.R - Funciones comunes de las redes neuronales (08c NN STAR, 08d red general), D17
 # Keras 3 desde R (keras3); TensorFlow vive en .venv-tf (requirements-tf.txt). Uso, después de utils_modelos.R:
 #   source("scripts/utils_redes.R")
 # Validación igual que el resto: cv_oof() con una localidad afuera y buffer. Las épocas se eligen como las rondas

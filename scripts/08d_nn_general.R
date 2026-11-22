@@ -1,5 +1,5 @@
 # =============================================================================
-# 08d_nn_general.R - Red general (sin estructura), referencia del NN STAR (08c), D16
+# 08d_nn_general.R - Red general (sin estructura), referencia del NN STAR (08c), D17
 # Todas las variables (estructura + ubicación + TF-IDF) entran mezcladas desde la primera capa:
 #   Dense(64, ReLU) -> Dropout(p) -> Dense(32, ReLU) -> Dropout(p) -> Dense(16, ReLU) -> Dense(1)
 # Tiene casi los mismos parámetros que el NN STAR (≈71,5 mil frente a ≈72,8 mil): la comparación aísla el efecto de

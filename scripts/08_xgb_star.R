@@ -8,15 +8,20 @@
 #  - Texto: los 1.000 términos TF-IDF más frecuentes (filtro no supervisado; conserva penthouse, duplex, cuarto
 #    servicio...) -> interactúan. Su componente es un encoder de texto SUPERVISADO, a diferencia del PCA.
 # Sin dummies de localidad (D10). Validación: una localidad afuera con buffer (cv_oof, D9).
-# Grilla (el paper ajusta profundidad, L1, L2 y submuestreo con búsqueda aleatoria y learning rate 0,1): búsqueda
-# aleatoria de N_CONF configuraciones con el objetivo m2; la mejor se usa para el objetivo precio y la pérdida MAE.
+# Grilla (el paper ajusta profundidad, L1, L2 y submuestreo con búsqueda aleatoria y learning rate 0,1): tres búsquedas
+# aleatorias de N_CONF configuraciones (m2 cuadrática, m2 absoluta, precio cuadrática) en un espacio ampliado, porque
+# la grilla anterior quedó en el borde en todos los parámetros. La primera candidata de cada búsqueda es la mejor
+# configuración anterior. Se registra el mejor modelo de cada búsqueda; los encoders salen del mejor m2.
 # Encoders (Algoritmo 1 del paper): se fijan las variables fuera del grupo y se predice; centrados con el train.
 # Salidas: tables/star_{grilla,resumen,texto_terminos}.csv, figures/m6_star_mapa_ubicacion.png, m7_star_ice_area.png,
-#          data/processed/star_encoders.csv, models/star_encoders_folds.rds (para 08b), registro m13_xgb_star[_m2]
+#          data/processed/star_encoders.csv, models/star_encoders_folds.rds (para 08b),
+#          registro m13_xgb_star_m2 (cuadrática), m13_xgb_star_m2_mae (absoluta), m13_xgb_star (precio)
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
 suppressMessages(pacman::p_load(xgboost, Matrix))
-K_TXT <- 1000; N_CONF <- 12; RONDAS <- seq(50, 2000, 50)
+K_TXT <- 1000; N_CONF <- 20
+RONDAS <- list("reg:squarederror" = seq(50, 2000, 50), "reg:absoluteerror" = seq(100, 5000, 100))   # la MAE llegó al tope de 2.000
+if (nzchar(Sys.getenv("PRUEBA"))) { N_CONF <- 2; RONDAS <- map(RONDAS, ~ .x[1:2]) }               # flujo completo en minutos
 T0 <- Sys.time(); paso <- function(msg) cat(sprintf("[%5.0f min] %s\n", as.numeric(difftime(Sys.time(), T0, units = "mins")), msg))
 
 # ---- Matrices: variables de árboles + TF-IDF (dispersa) ----
@@ -31,55 +36,57 @@ grupos <- function(cn) {   # índices desde 0: una lista por variable aditiva + 
   c(as.list(i[!es_loc(cn) & !es_txt(cn)]), list(i[es_loc(cn)], i[es_txt(cn)]))
 }
 
-# ---- Búsqueda aleatoria (objetivo m2, pérdida cuadrática) ----
-espacio <- expand_grid(max_depth = c(3, 4, 6), min_child_weight = c(3, 10, 30), subsample = c(.7, .9),
-                       colsample_bytree = c(.5, .8), lambda = c(1, 10), alpha = c(0, 1))
-set.seed(123); grilla <- espacio[sample(nrow(espacio), N_CONF), ]
-pr_de <- function(cfg, obj, loss = "reg:squarederror")
-  c(list(objective = loss, eta = .1, max_bin = 64, nthread = 8, seed = 123,
+# ---- Búsquedas aleatorias en el espacio ampliado: m2 cuadrática, m2 absoluta y precio cuadrática ----
+espacio <- expand_grid(max_depth = 2:5, min_child_weight = c(1, 3, 5, 10), subsample = c(.8, .9, 1),
+                       colsample_bytree = c(.7, .8, .9, 1), lambda = c(0, .5, 1, 3), alpha = c(0, 1, 3, 10))
+anterior <- tibble(max_depth = 3, min_child_weight = 3, subsample = .9, colsample_bytree = .8, lambda = 1, alpha = 1, eta = .1)
+candidatas <- function(etas) {   # la mejor configuración anterior + N_CONF - 1 al azar
+  e <- expand_grid(espacio, eta = etas); set.seed(123)
+  bind_rows(anterior, e[sample(nrow(e), N_CONF - 1), ])
+}
+pr_de <- function(cfg, obj, loss)
+  c(list(objective = loss, max_bin = 64, nthread = 8, seed = 123,
          interaction_constraints = grupos(colnames(objetivos[[obj]]$Xtr))), as.list(cfg))
-corre <- function(pr, obj) {
+corre <- function(pr, obj, rondas) {
   o <- objetivos[[obj]]
-  oof <- cv_oof(function(a, e) xgb_rondas(pr, o$Xtr[a, ], o$y[a], o$Xtr[e, ], RONDAS)) + o$off_tr
-  j <- mejor_columna(oof); list(nrounds = RONDAS[j], oof = oof[, j], borde = j == length(RONDAS))
+  oof <- cv_oof(function(a, e) xgb_rondas(pr, o$Xtr[a, ], o$y[a], o$Xtr[e, ], rondas)) + o$off_tr
+  j <- mejor_columna(oof); list(nrounds = rondas[j], oof = oof[, j], borde = j == length(rondas))
 }
 f_grilla <- file.path(P$rep_mod, "tables", "star_grilla.csv")
+busquedas <- list(c("m2", "reg:squarederror"), c("m2", "reg:absoluteerror"), c("precio", "reg:squarederror"))
 res <- list()
-for (k in seq_len(nrow(grilla))) {
-  r <- corre(pr_de(grilla[k, ], "m2"), "m2")
-  res[[k]] <- grilla[k, ] %>% mutate(objetivo = "m2", perdida = "reg:squarederror", nrounds = r$nrounds, borde = r$borde) %>%
-    bind_cols(evalua(r$oof)) %>% mutate(oof = list(r$oof))
-  write_csv(select(bind_rows(res), -oof), f_grilla)   # se guarda a medida que avanza
-  paso(sprintf("config %d/%d: depth %d, mcw %d | rondas %d | MAE %.1f | Chap %.1f", k, nrow(grilla), grilla$max_depth[k],
-               grilla$min_child_weight[k], r$nrounds, res[[k]]$mae_total / 1e6, res[[k]]$mae_chapinero / 1e6))
-}
-best <- bind_rows(res) %>% slice_min(mae_total, n = 1, with_ties = FALSE)
-cfg <- select(best, max_depth:alpha)
-
-# ---- Objetivo precio y pérdida MAE con la mejor configuración ----
-extra <- list(c("m2", "reg:absoluteerror"), c("precio", "reg:squarederror"), c("precio", "reg:absoluteerror"))
-for (x in extra) {
-  r <- corre(pr_de(cfg, x[1], x[2]), x[1])
-  res[[length(res) + 1]] <- cfg %>% mutate(objetivo = x[1], perdida = x[2], nrounds = r$nrounds, borde = r$borde) %>%
-    bind_cols(evalua(r$oof)) %>% mutate(oof = list(r$oof))
-  write_csv(select(bind_rows(res), -oof), f_grilla)
-  paso(sprintf("%s / %s: rondas %d | MAE %.1f | Chap %.1f", x[1], x[2], r$nrounds, evalua(r$oof)$mae_total / 1e6,
-               evalua(r$oof)$mae_chapinero / 1e6))
+for (x in busquedas) {
+  cand <- candidatas(if (x[2] == "reg:absoluteerror") c(.1, .2, .3) else .1)   # la MAE avanza más lento: eta más alto
+  for (k in seq_len(nrow(cand))) {
+    r <- corre(pr_de(cand[k, ], x[1], x[2]), x[1], RONDAS[[x[2]]])
+    res[[length(res) + 1]] <- cand[k, ] %>%
+      mutate(busqueda = paste(x, collapse = "/"), objetivo = x[1], perdida = x[2], nrounds = r$nrounds, borde = r$borde) %>%
+      bind_cols(evalua(r$oof)) %>% mutate(oof = list(r$oof))
+    write_csv(select(bind_rows(res), -oof), f_grilla)   # se guarda a medida que avanza
+    paso(sprintf("%s/%s %d/%d: depth %d, mcw %g, eta %g | rondas %d%s | MAE %.1f | Chap %.1f", x[1], x[2], k, nrow(cand),
+                 cand$max_depth[k], cand$min_child_weight[k], cand$eta[k], r$nrounds, if (r$borde) " (borde)" else "",
+                 evalua(r$oof)$mae_total / 1e6, evalua(r$oof)$mae_chapinero / 1e6))
+  }
 }
 tab <- bind_rows(res)
 
-# ---- Modelos finales (mejor pérdida por objetivo), registro y envío ----
-finales <- tab %>% group_by(objetivo) %>% slice_min(mae_total, n = 1, with_ties = FALSE) %>% ungroup()
+# ---- Modelos finales (mejor de cada búsqueda), registro y envío ----
+finales <- tab %>% group_by(busqueda) %>% slice_min(mae_total, n = 1, with_ties = FALSE) %>% ungroup()
+en_borde <- function(b) { v <- names(espacio); v <- v[map_lgl(v, ~ b[[.x]] %in% range(espacio[[.x]]))]
+  if (length(v)) paste(v, collapse = ", ") else "ninguno" }
+nombres <- c("m2/reg:squarederror" = "m13_xgb_star_m2", "m2/reg:absoluteerror" = "m13_xgb_star_m2_mae",
+             "precio/reg:squarederror" = "m13_xgb_star")
 fits <- list()
 for (k in seq_len(nrow(finales))) {
-  b <- finales[k, ]; o <- objetivos[[b$objetivo]]; pr <- pr_de(select(b, max_depth:alpha), b$objetivo, b$perdida)
+  b <- finales[k, ]; o <- objetivos[[b$objetivo]]; pr <- pr_de(select(b, max_depth:eta), b$objetivo, b$perdida)
+  cat(sprintf("%s: parámetros en el borde del espacio ampliado: %s%s\n", b$busqueda, en_borde(b),
+              if (b$borde) "; rondas en el tope" else ""))
   fit <- xgb.train(params = pr, data = xgb.DMatrix(o$Xtr, label = o$y, nthread = 8), nrounds = b$nrounds, verbose = 0)
-  fits[[b$objetivo]] <- list(fit = fit, pr = pr, nrounds = b$nrounds)
-  modelo <- paste0("m13_xgb_star", if (b$objetivo == "m2") "_m2")
-  registra(modelo, paste("XGBoost STAR (restricciones de interacción): estructura aditiva, ubicación y texto TF-IDF como grupos;",
+  fits[[b$busqueda]] <- list(fit = fit, pr = pr, nrounds = b$nrounds)
+  registra(nombres[[b$busqueda]], paste("XGBoost STAR (restricciones de interacción): estructura aditiva, ubicación y texto TF-IDF como grupos;",
                          if (b$objetivo == "m2") "sobre log(precio por m2), precio = predicción × m2" else "sobre log(precio)"),
-           sprintf("%s; depth=%d; mcw=%d; subsample=%.1f; colsample=%.1f; lambda=%g; alpha=%g; eta=0.1; nrounds=%d",
-                   b$perdida, b$max_depth, b$min_child_weight, b$subsample, b$colsample_bytree, b$lambda, b$alpha, b$nrounds),
+           sprintf("%s; depth=%d; mcw=%g; subsample=%.1f; colsample=%.1f; lambda=%g; alpha=%g; eta=%g; nrounds=%d",
+                   b$perdida, b$max_depth, b$min_child_weight, b$subsample, b$colsample_bytree, b$lambda, b$alpha, b$eta, b$nrounds),
            select(b, starts_with("ma")), b$oof[[1]], predict(fit, xgb.DMatrix(o$Xte)) + o$off_te)
   # Verificación: ningún árbol mezcla variables de grupos distintos
   dt <- xgb.model.dt.tree(model = fit); g <- function(f) ifelse(es_txt(f), "texto", ifelse(es_loc(f), "ubicacion", f))
@@ -101,7 +108,9 @@ encoders <- function(fit, Xr, X) {   # Xr: filas de referencia (train) para cent
   sapply(c(ubicacion = "ubicacion", texto = "texto"), function(gr)
     predict(fit, xgb.DMatrix(arma(X, gr))) - mean(predict(fit, xgb.DMatrix(arma(Xr, gr)))))
 }
-fm <- fits$m2; o <- objetivos$m2
+b_m2 <- finales %>% filter(objetivo == "m2") %>% slice_min(mae_total, n = 1, with_ties = FALSE)   # cuadrática o absoluta
+cat("Encoders a partir de:", b_m2$busqueda, "\n")
+fm <- fits[[b_m2$busqueda]]; o <- objetivos$m2
 enc_tr <- encoders(fm$fit, o$Xtr, o$Xtr); enc_te <- encoders(fm$fit, o$Xtr, o$Xte)
 # Chequeo: Algoritmo 1 = suma de predcontrib del grupo (en una muestra)
 set.seed(123); s <- sample(nrow(o$Xtr), 500)
@@ -124,22 +133,11 @@ saveRDS(encs_fold, file.path(P$models, "star_encoders_folds.rds"))
 paso("encoders por fold guardados")
 
 # ---- Figura: mapa de la prima de ubicación (análogo a la figura 11 del paper) ----
-loc_poly <- lee_csv(file.path(P$osm, "localidades_poligonos.csv"))
-mp <- D %>% select(property_id, lat, lon) %>% inner_join(enc, by = "property_id")
-g6 <- ggplot(mp, aes(lon, lat, z = enc_ubicacion)) +
-  geom_polygon(data = loc_poly, aes(lon, lat, group = interaction(nombre, ring)), fill = NA, color = c_muted, linewidth = .25, inherit.aes = FALSE) +
-  stat_summary_2d(fun = median, binwidth = c(.0045, .0045), alpha = .95) +
-  scale_fill_gradient2(low = c_train, mid = "#f4f4f2", high = c_test, midpoint = 0, labels = \(x) percent(exp(x) - 1),
-                       name = "Prima de ubicación sobre el precio por m2") +
-  coord_quickmap(xlim = c(-74.19, -74.015), ylim = c(4.565, 4.775)) +
-  guides(fill = guide_colorbar(barwidth = 14, barheight = .5, title.position = "top")) +
-  labs(title = "Prima de ubicación aprendida por el modelo STAR",
-       subtitle = "Encoder del grupo de ubicación (mediana por celda de ~500 m; train y test)", x = NULL, y = NULL, caption = fuente) +
-  theme(axis.text = element_blank(), panel.grid.major = element_blank())
-ggsave(file.path(P$rep_mod, "figures", "m6_star_mapa_ubicacion.png"), g6, width = 6.5, height = 7.4, dpi = 250)
+mapa_prima(enc, "Prima de ubicación aprendida por el modelo STAR",
+           "Encoder del grupo de ubicación (mediana por celda de ~500 m; train y test)", "m6_star_mapa_ubicacion.png")
 
 # ---- Figura: curvas ICE de log_area en el STAR con objetivo precio (deben ser paralelas) ----
-fp <- fits$precio; op <- objetivos$precio; set.seed(123); s <- sample(nrow(op$Xtr), 150)
+fp <- fits[["precio/reg:squarederror"]]; op <- objetivos$precio; set.seed(123); s <- sample(nrow(op$Xtr), 150)
 grid_a <- quantile(TR$log_area, seq(.02, .98, length.out = 30)); ja <- which(colnames(op$Xtr) == "log_area")
 ice <- map_dfr(grid_a, function(v) { M <- op$Xtr[s, ]; M[, ja] <- v
   tibble(id = s, log_area = v, pred = predict(fp$fit, xgb.DMatrix(M))) })
@@ -168,8 +166,8 @@ print(filter(imp, termino %in% c("penthouse", "cuarto servicio", "duplex", "walk
 # ---- Resumen ----
 kag <- lee_csv(file.path(P$models, "kaggle_scores.csv")) %>% select(modelo, kaggle = public_score)
 reg <- lee_csv(file.path(P$models, "registro_modelos.csv"))
-resumen <- tab %>% select(objetivo, perdida, nrounds, borde, max_depth:alpha, mae_total, mae_chapinero, mae_macro) %>%
-  bind_rows(reg %>% filter(modelo %in% c("m04_xgboost", "m02b_elastic_net_m2")) %>% select(objetivo = modelo, mae_total, mae_chapinero, mae_macro)) %>%
+resumen <- tab %>% select(busqueda, nrounds, borde, max_depth:eta, mae_total, mae_chapinero, mae_macro) %>%
+  bind_rows(reg %>% filter(modelo %in% c("m04_xgboost", "m02b_elastic_net_m2")) %>% select(busqueda = modelo, mae_total, mae_chapinero, mae_macro)) %>%
   mutate(across(starts_with("mae"), ~ round(.x / 1e6, 1))) %>% arrange(mae_total)
 write_csv(resumen, file.path(P$rep_mod, "tables", "star_resumen.csv"))
 cat("\nResumen (MAE OOF, millones):\n"); print(as.data.frame(resumen))

@@ -15,6 +15,7 @@ desktop.ini
 
 # Python (texto)
 .venv/
+.venv-tf/
 __pycache__/
 data/processed/tfidf.parquet
 data/processed/pca_*.csv

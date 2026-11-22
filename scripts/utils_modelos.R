@@ -114,3 +114,19 @@ registra <- function(nombre, descripcion, params, metr, pred_oof_log, pred_test_
   cat(sprintf("[%s] MAE OOF total: %s | Chapinero: %s | macro localidades: %s\n", nombre,
               comma(metr$mae_total / 1e6, .1), comma(metr$mae_chapinero / 1e6, .1), comma(metr$mae_macro / 1e6, .1)))
 }
+
+# Mapa de una prima de ubicación (encoder en log, centrado): mediana por celda de ~500 m (08, 08c; figura 11 del paper)
+mapa_prima <- function(enc, titulo, subtitulo, archivo) {
+  loc_poly <- lee_csv(file.path(P$osm, "localidades_poligonos.csv"))
+  mp <- D %>% select(property_id, lat, lon) %>% inner_join(enc, by = "property_id")
+  g <- ggplot(mp, aes(lon, lat, z = enc_ubicacion)) +
+    geom_polygon(data = loc_poly, aes(lon, lat, group = interaction(nombre, ring)), fill = NA, color = c_muted, linewidth = .25, inherit.aes = FALSE) +
+    stat_summary_2d(fun = median, binwidth = c(.0045, .0045), alpha = .95) +
+    scale_fill_gradient2(low = c_train, mid = "#f4f4f2", high = c_test, midpoint = 0, labels = \(x) percent(exp(x) - 1),
+                         name = "Prima de ubicación sobre el precio por m2") +
+    coord_quickmap(xlim = c(-74.19, -74.015), ylim = c(4.565, 4.775)) +
+    guides(fill = guide_colorbar(barwidth = 14, barheight = .5, title.position = "top")) +
+    labs(title = titulo, subtitle = subtitulo, x = NULL, y = NULL, caption = fuente) +
+    theme(axis.text = element_blank(), panel.grid.major = element_blank())
+  ggsave(file.path(P$rep_mod, "figures", archivo), g, width = 6.5, height = 7.4, dpi = 250)
+}

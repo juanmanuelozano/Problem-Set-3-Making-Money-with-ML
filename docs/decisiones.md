@@ -103,3 +103,34 @@ Los encoders del paso 2 se ajustan dentro de cada fold externo, sin CV interna. 
 - `max_bin` = 64;
 - búsqueda aleatoria de 12 configuraciones con profundidad ≤ 6 y eta = 0,1;
 - la búsqueda se hace con el objetivo m², y el objetivo precio y la pérdida MAE usan la mejor configuración.
+
+**Actualización (2026-11-21):** la grilla quedó en el borde en los seis parámetros. Se cambia por tres búsquedas aleatorias de 20 configuraciones en un espacio ampliado:
+- **Búsquedas:** m² con pérdida cuadrática, m² con pérdida absoluta (con eta ∈ {0,1; 0,2; 0,3} y hasta 5.000 rondas) y precio con pérdida cuadrática.
+- **Espacio:** depth 2–5, mcw {1, 3, 5, 10}, subsample {0,8; 0,9; 1}, colsample {0,7–1}, lambda {0–3} y alpha {0–10}.
+- **Punto de partida:** la primera candidata de cada búsqueda es la mejor configuración anterior.
+- **Encoders:** salen del mejor modelo m², sea de pérdida cuadrática o absoluta.
+
+### D14 · Redes neuronales con Keras desde R: NN STAR y red general del mismo tamaño (2026-11-21)
+**Decisión sobre el entorno:** las redes se escriben en R con `keras3`, como en el paper (que usó keras en R). TensorFlow es solo el backend, instalado en un venv aparte (`.venv-tf`, `requirements-tf.txt`) para no romper las versiones de numpy del entorno de texto (D11). Así se reutilizan `cv_oof`, `evalua` y `registra`.
+
+**NN STAR (`08c_nn_star.R`):**
+- **Estructura:** salida = suma de tres ramas que nunca se mezclan, como en el NN STAR del paper (sección 3.2):
+  - estructura lineal;
+  - ubicación 64-32-16 ReLU con dropout p_u y un atajo lineal;
+  - texto (TF-IDF, 1.000 términos) 64-32-16 ReLU con dropout p_t y un atajo lineal.
+- **Por qué ReLU y atajos:** el paper usa tanh, que se satura como los árboles. Con ReLU y un atajo lineal, la ubicación puede extrapolar hacia Chapinero.
+- **Interpretabilidad:** se conserva igual que en el XGB STAR. Las ICE de estructura son paralelas, y los encoders son las salidas de las ramas.
+- **Variables que se quitan:** las interacciones que cruzan grupos (`log_area_x_estrato`, `dist_cbd_x_apto`).
+
+**Red general (`08d_nn_general.R`):** 64-32-16 ReLU con dropout y todas las variables mezcladas. Tiene 71.489 parámetros, frente a 72.757 del NN STAR, así que la comparación aísla el efecto de la estructura aditiva y no el del tamaño.
+
+**Entrenamiento:**
+- Adam con lr 1e-3, batch 512, MSE y L2 de 1e-4.
+- Estructura y ubicación se estandarizan con las filas de análisis de cada fold; el TF-IDF no se estandariza.
+- Las épocas (de 1 a 80) se eligen por bloques con `mejor_columna()`, como las rondas del boosting, porque el early stopping no admite el buffer (D9).
+- **Las capas de salida empiezan en cero:** el Dense(1) final de cada rama profunda, los atajos lineales y la capa de estructura. Con la inicialización aleatoria por defecto (Glorot), cada rama arrancaba con ruido grande y las ramas se compensaban entre sí. Por ejemplo, la desviación estándar de la rama de estructura era 0,66 y la de texto 0,68, en sentidos opuestos. El primer intento del NN STAR dio un MAE de 200, frente a unos 130 de la red general.
+  - Con ceros, en 3 folds de prueba el NN STAR queda igual o mejor que la red general: Usaquén 125 frente a 130, Suba 126 frente a 131 y Chapinero 153 frente a 153.
+  - El óptimo pasa a estar entre 5 y 10 épocas; después, la red sobreajusta.
+- El nivel se calibra para que la predicción media del análisis sea igual a la media observada (Remark 6 del paper).
+
+**Afinación:** solo el dropout. NN STAR: p_u ∈ {0; 0,1; 0,2} × p_t ∈ {0; 0,25; 0,5}. Red general: p ∈ {0; 0,1; 0,2; 0,3; 0,5}. En los dos casos se afina con el objetivo m², y con la mejor configuración se ajusta también el objetivo precio.

@@ -76,7 +76,7 @@ oofs <- lee_csv(file.path(P$models, "oof_predicciones.csv")); tst <- lee_csv(fil
 reg <- lee_csv(file.path(P$models, "registro_modelos.csv")); kag <- lee_csv(file.path(P$models, "kaggle_scores.csv"))
 mods <- c("m02b_elastic_net_m2", "m12_en_m02_pca_tx_m2", "m14_en_enc_tx_m2", "m14_en_enc_m2", "m14_en_enc_b_m2",
           "m12_en_m02", "m12_en_m02_pca_tx", "m14_en_enc_tx", "m14_en_enc", "m14_en_enc_b",
-          "m04_xgboost", "m13_xgb_star", "m13_xgb_star_m2")
+          "m04_xgboost", "m13_xgb_star", "m13_xgb_star_m2", "m13_xgb_star_m2_mae")
 resumen <- reg %>% filter(modelo %in% mods) %>% select(modelo, mae_total, mae_chapinero, mae_macro) %>%
   mutate(sesgo_chap = map_dbl(modelo, ~ mean(recorta(exp(oofs[[.x]][oofs$chapinero])) - exp(oofs$log_price[oofs$chapinero]))),
          pred_test = map_dbl(modelo, ~ mean(recorta(exp(tst[[.x]]))))) %>%

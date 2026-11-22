@@ -21,7 +21,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m05_xgb_precio_m2 | 132,3 | 156,1 | 146,8 |
 | m90_ensamble | *129,3* | *154,7* | *146,5* |
 
-**Envíos a Kaggle:** scores en `models/kaggle_scores.csv` (mejores: m04_xgboost y m02b_elastic_net_m2, ambos con 172,7). Candidatos siguientes: `m14_en_enc_tx.csv` (el mejor en Chapinero en la validación) y `m14_en_enc_tx_m2.csv` o `m12_en_m02_pca_tx_m2.csv`.
+**Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m15_nn_star_m2 con 158,3**, seguido de m16_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
 
 **Pendientes / próximos pasos:**
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
@@ -36,6 +36,35 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
+
+---
+
+## 2026-11-21 · Sesión 7: NN STAR, red general y grilla ampliada del XGB STAR (en curso)
+
+- **Interpretación del STAR, para la presentación:**
+  - El STAR es un solo XGBoost con restricciones de interacción: los grupos se entrenan juntos y compiten por el mismo residuo. El encoder es el rubro de su grupo en la "factura" del modelo, en log del precio por m². Por ejemplo, Chapinero tiene +0,20 ≈ +22%.
+  - Los autores interpretan cada variable aditiva con curvas ICE paralelas, y el grupo de ubicación con un mapa de su encoder (el *projection trick*). Lo comprueban con el H de Friedman; nosotros con una verificación árbol por árbol, que es más estricta.
+  - Frente a SHAP, el STAR no explica un modelo después de entrenarlo: lo restringe para que su explicación sea exacta y única.
+  - **El ascensor no interactúa con nada** (`tx_ascensor` es aditivo en el STAR y lineal en el EN). Solo se combina con otras palabras dentro del texto: "ascensor privado" queda en el puesto 27 de 1.000 y "sin ascensor" en el 49.
+- **Grilla del XGB STAR (08) ampliada.** La anterior quedó en el borde en todos los parámetros. Ahora son tres búsquedas de 20 configuraciones: m² cuadrática, m² absoluta (eta hasta 0,3 y hasta 5.000 rondas) y precio. Detalles en D13. Se registra el mejor de cada búsqueda (nuevo: `m13_xgb_star_m2_mae`), los encoders salen del mejor m² y luego se vuelve a correr 08b.
+- **Redes con Keras desde R (D14):** `scripts/utils_redes.R` y TensorFlow en `.venv-tf`.
+  - **NN STAR (`08c_nn_star.R`, m15):** estructura lineal más ramas de ubicación y de texto 64-32-16 ReLU, cada una con atajo lineal y dropout propio. Tiene 72.757 parámetros. Diagrama: https://claude.ai/artifact/2QqQEJDpwcaxDdsKrqRYhk
+  - **Red general (`08d_nn_general.R`, m16):** 64-32-16 con todo mezclado y 71.489 parámetros, para comparar con el mismo tamaño.
+  - **Afinación:** solo el dropout.
+  - **Prueba de humo (`PRUEBA=1`):** la suma de las ramas coincide con la predicción (diferencia de 5e-7), las ICE salen paralelas y la calibración deja los residuos con media 0.
+- **Primer intento del NN STAR fallido** (MAE 200 en la primera configuración): con pesos aleatorios, las ramas lineales arrancaban con ruido grande y se compensaban entre sí. Se corrigió iniciando las capas de salida en cero (D14). En una prueba con 3 folds queda igual o mejor que la red general, con el óptimo entre 5 y 10 épocas (la grilla de épocas pasa a 1–80).
+- **Resultados del NN STAR (08c, 73 min):**
+  - **Mejor configuración:** p_u = 0,1 y p_t = 0,5, con 3 épocas. El óptimo de p_t está en el borde de la grilla; queda pendiente probar 0,6–0,7.
+  - **`m15_nn_star_m2`:** 131,4 / **146,9** / 153,5. Sesgo en Chapinero −67 M y la **predicción media del test más alta de todos (826 M)**.
+  - **Frente a m13_xgb_star_m2:** −8,4 M en Chapinero (*t* = −2,3). **Frente a m02b:** −6,9 M (*t* = −2,0).
+  - **Objetivo precio (`m15_nn_star`):** 136,8 / 154,0, peor que el m².
+  - **Encoders:** correlación con los del XGB STAR de 0,955 en ubicación y 0,815 en texto.
+- **Resultados de la red general (08d, 35 min, mismo tamaño):**
+  - **Mejor dropout:** p = 0,2 con 7 épocas. `m16_nn_64_m2` da 131,5 / 155,9 / 156,7, con sesgo de −99 M y predicción media del test de 783 M. El objetivo precio da 130,5 / 173,6.
+  - **NN STAR frente a la red general (m²):** el mismo total (−0,1 M), pero **−9,0 M en Chapinero** (*t* = −2,0). Con objetivo precio, −19,6 M en Chapinero (*t* = −4,2).
+  - **Para la presentación:** a igual número de parámetros, la estructura aditiva no le quita precisión al resto de la ciudad y sí mejora la extrapolación a Chapinero.
+- **Kaggle:** `m15_nn_star_m2` obtuvo **158,3** (−14,4 M frente al mejor anterior, 172,7) y `m16_nn_64_m2` obtuvo 167,5. La red general también mejora, pero el STAR le gana por 9,2 M, igual que en la validación en Chapinero (−9,0 M). Con 9 envíos, la predicción media del test ordena los scores con Spearman −0,87.
+- **Grilla ampliada del XGB STAR (08) detenida** a los 13 minutos, porque se van a agregar más datos. El script ya está modificado y probado; se corre después, seguido del 08b. La primera configuración reprodujo exactamente el resultado anterior (133,0 / 155,3).
 
 ---
 

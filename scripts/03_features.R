@@ -83,6 +83,10 @@ vars_num <- c("log_area", "area_imputada", "area_texto", "bedrooms", "banos_fina
               grep("^dist_", names(d), value = TRUE), grep("^n500_", names(d), value = TRUE),
               "area_verde500", "pisos_prom500",                         # contexto (D15)
               grep("^tx_", names(d), value = TRUE))
+# Embajadas, oficinas, hoteles y clubes NO entran a los modelos (D19): se concentran en Chapinero y Usaquén y
+# actúan como dummies de localidad; con ellas el lasso pasó de 152,9 M a 168,2 M de MAE en Chapinero.
+# Siguen en base_enriquecida.csv para las descriptivas.
+vars_num <- setdiff(vars_num, paste0(rep(c("dist_", "n500_"), each = 4), c("embajada", "oficina", "hotel", "club")))
 base <- list(datos = select(d, property_id, muestra, price, localidad, upz, grupo, all_of(vars_num)),
              vars = vars_num, dist_loc = dist_loc)
 saveRDS(base, file.path(P$processed, "base_modelo.rds"))

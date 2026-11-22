@@ -6,3 +6,14 @@ reg_ols_sin_loc,reg_ols_sin_loc.csv,183684586.98,2026-11-18
 m11_cart_m2_mse,m11_cart_m2_mse.csv,197057246.93,2026-11-18
 m12_en_pca_tx_m2,en_pca_tx_m2.csv,209176065.05,2026-11-19
 m12_en_pca_nt_tx_m2,en_pca_nt_tx_m2.csv,176843830.65,2026-11-19
+m20_en_sin_pesos_m2,m17_en_sin_pesos_m2.csv,171595651.75,2026-11-22
+m15_rf_m2,m15_rf_m2.csv,170070460.29,2026-11-21
+m15_rf_m2_sin_coord,m15_rf_m2_sin_coord.csv,172719089.99,2026-11-21
+m06_hibrido_en_xgb,m06_hibrido_en_xgb.csv,178606472.86,2026-11-21
+m14_en_enc_tx,en_enc_tx.csv,168831256.43,2026-11-20
+en_pca_nt_tx_vars,en_pca_nt_tx_vars.csv,173391249.97,2026-11-19
+m15_nn_star_m2 (Samuel; no está en el repo),m15_nn_star_m2.csv,158281022.13,2026-11-21
+m16_nn_64_m2 (Samuel; no está en el repo),m16_nn_64_m2.csv,167453111.01,2026-11-21
+m17_xgb_ponderado (Juan Manuel; no está en el repo),m17_xgb_ponderado.csv,168653275.97,2026-11-21
+m17b_xgb_tipo_dist (Juan Manuel; no está en el repo),m17b_xgb_tipo_dist.csv,165521770.73,2026-11-21
+m19_nn_star_afinada_m2 (Samuel; no está en el repo),m19_nn_star_afinada_m2.csv,162085135.47,2026-11-21

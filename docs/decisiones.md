@@ -154,3 +154,26 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 - *Rezago espacial del precio*: usa precios, así que debe calcularse dentro de cada fold.
 - *Avalúo catastral por manzana*: falta conseguir los datos.
 - *Altitud SRTM*: es redundante con `dist_cerros` y necesita paquetes de rasters.
+
+### D16 · "Chapinero sintético": validación ponderada hacia el test (TWCV, Brenning y Suesse 2026) (2026-11-22)
+
+`91_validacion_sintetica.R` repondera los errores out-of-fold ya guardados (no se vuelve a entrenar nada) para que los anuncios validados se parezcan al test. Sigue a Brenning y Suesse (2026, arXiv 2603.29981).
+
+**Cómo se hace:**
+- **TWCV:** pesos por *raking* que igualan a las del test las proporciones de 5 variables discretizadas: estrato, apartamento o casa, habitaciones, quintiles de log del área y quintiles de distancia al CBD. Los pesos se encogen un 20% hacia pesos iguales, como en el artículo.
+- **IWCV (comparación):** pesos p/(1−p) de un logit que distingue test de train.
+- Solo se usan las variables del test, nunca su precio.
+
+**Resultados (7 modelos con score en Kaggle):**
+- El MAE por localidad es optimista en 45 M en promedio. Con TWCV el sesgo baja a 32 M e IWCV queda en 41 M.
+- La correlación de Spearman con el orden del leaderboard sube de 0,46 a 0,64 con TWCV y a 0,79 con IWCV.
+- El MAE en los 307 anuncios de Chapinero del train es el más cercano en nivel (−21 M), pero ordena peor (0,50).
+
+**Diagnósticos:**
+- El test es muy distinto: el 100% de los anuncios está a menos de 1,27 km de un CBD (en el train, el 4%); hay 63% de estrato 6 (23% en el train) y 97% de apartamentos.
+- El tamaño efectivo de muestra de TWCV es de solo 1.160 anuncios (3%). El 32% del peso queda en los anuncios de Chapinero del train y el 40% en Usaquén.
+- **No hay cobertura en la distancia de predicción `d`.** En el test, `d` tiene una mediana de 96 m y el 99% está por debajo de 500 m. En la validación con buffer, ninguna observación baja de 500 m. Por eso `d` no puede balancearse; el artículo lo resolvería con buffers de radio aleatorio, lo que obliga a volver a entrenar.
+- Aun con un `d` mucho menor (que debería facilitar la predicción), Kaggle sale peor que la validación. El sesgo viene del cambio en las variables, no de la distancia.
+- Con solo 7 modelos, y 4 de ellos entre 172 y 177 M, las correlaciones de orden son ruidosas.
+
+**Uso:** reportar TWCV junto al MAE por localidad y al de Chapinero. Para elegir entre modelos con MAE parecido, preferir el que gane en TWCV o en IWCV.

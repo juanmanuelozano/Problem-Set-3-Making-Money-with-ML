@@ -46,6 +46,27 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
+## 2026-11-22 · Sesión 8: "Chapinero sintético" (validación ponderada, D16)
+
+- Nuevo `91_validacion_sintetica.R`. Sigue a Brenning y Suesse (2026), *Target-Weighted CV*: repondera los errores out-of-fold para que se parezcan al test. Tarda segundos y no vuelve a entrenar.
+- **Sesgo frente a Kaggle**, en 7 modelos:
+
+  | Validación | Sesgo medio | Spearman con Kaggle |
+  |---|---:|---:|
+  | MAE por localidad | −45 M | 0,46 |
+  | TWCV | −32 M | 0,64 |
+  | IWCV | −41 M | 0,79 |
+  | Solo los 307 de Chapinero del train | −21 M | 0,50 |
+
+  Todas siguen siendo optimistas.
+- **Composición del "Chapinero sintético" (TWCV):** Usaquén 40%, Chapinero 32%, Santa Fe 12%, Suba 5%. El tamaño efectivo de muestra es del 3%.
+- **El test casi no se parece al train:**
+  - 100% de los anuncios a menos de 1,27 km de un CBD (4% en el train);
+  - 63% de estrato 6 (23%);
+  - 97% de apartamentos (76%).
+- **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.
+- Figura para la presentación: `reports/02_modelos/figures/m6_validacion_sintetica.png`.
+
 ## 2026-11-21 · Sesión 7: enunciado, random forest por m² y red neuronal
 
 - Se agregó el enunciado del taller (`docs/Problem_Set_3.pdf`). Se comparó con lo hecho y faltan:

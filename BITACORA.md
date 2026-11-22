@@ -46,7 +46,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## 2026-11-22 · Sesión 8: "Chapinero sintético" (validación ponderada, D16)
+## 2026-11-22 · Sesión 8: "Chapinero sintético" (validación ponderada, D18)
 
 - Nuevo `91_validacion_sintetica.R`. Sigue a Brenning y Suesse (2026), *Target-Weighted CV*: repondera los errores out-of-fold para que se parezcan al test. Tarda segundos y no vuelve a entrenar.
 - **Sesgo frente a Kaggle**, en 7 modelos:
@@ -66,6 +66,30 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - 97% de apartamentos (76%).
 - **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.
 - Figura para la presentación: `reports/02_modelos/figures/m6_validacion_sintetica.png`.
+- **Los pesos pasan a `utils_modelos.R`** (`pesos_twcv()`, `pesos_iwcv()`, `W_TWCV`, `W_IWCV`). `evalua()` y el registro ahora incluyen `mae_twcv` y `mae_iwcv`. `91_validacion_sintetica.R` usa esas mismas funciones.
+- **Lasso por m² entrenado con pesos (`04e_elastic_net_pesos.R`, D19):** no ayuda. Con pesos suaves queda igual y con pesos fuertes empeora (hasta 177 M en Chapinero). Los pesos se usan para evaluar, no para entrenar.
+- **Las variables de embajadas, oficinas, hoteles y clubes empeoraban el modelo:** Chapinero pasaba de 152,9 a 168,2 M. Salen de los modelos (D19) y la base queda con 81 variables.
+- **Nuevo mejor lasso por m²: `m20_en_sin_pesos_m2`.**
+
+  | | Total | Chapinero | TWCV | IWCV |
+  |---|---:|---:|---:|---:|
+  | `m20_en_sin_pesos_m2` | 135,5 | 151,7 | 142,4 | 139,1 |
+  | m02b (base vieja) | 135,0 | 153,8 | 143,6 | 140,8 |
+
+  Es candidato para Kaggle.
+- `09_red_neuronal.R` ahora elige la combinación de la grilla por `mae_twcv`.
+  - Se lanzó en el servidor y se detuvo tras 2 de 4 combinaciones (unos 48 min cada una): TWCV de 154–155 M, peor que el lasso.
+  - Ya no hace falta, porque Samuel cubrió la familia de redes con Keras (rama `redes-neuronales`; su NN STAR tiene 158,3 M en Kaggle, el mejor del equipo).
+- **Kaggle:**
+  - `m20_en_sin_pesos_m2` (subido como `m17_en_sin_pesos_m2.csv`): 171,6 M.
+  - `m15_rf_m2`: 170,1 M.
+
+  El random forest le gana en Kaggle al lasso, aunque en TWCV salía peor (154 M frente a 142 M). TWCV no ordenó bien ese par.
+- **Trabajo en la rama `validacion-sintetica`,** para no tocar `main` mientras el equipo decide cómo unir la rama `redes-neuronales` de Samuel.
+
+  Para no chocar con ella:
+  - las decisiones de esta sesión son **D18** (validación sintética) y **D19** (sin variables de lujo; pesos solo para evaluar), porque Samuel ya usa D16;
+  - los lassos nuevos son **`m20_en_*`**, porque Samuel registra `m17_nn_star` y `m18_nn_64`.
 
 ## 2026-11-21 · Sesión 7: enunciado, random forest por m² y red neuronal
 

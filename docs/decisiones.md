@@ -155,7 +155,7 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 - *Avalúo catastral por manzana*: falta conseguir los datos.
 - *Altitud SRTM*: es redundante con `dist_cerros` y necesita paquetes de rasters.
 
-### D16 · "Chapinero sintético": validación ponderada hacia el test (TWCV, Brenning y Suesse 2026) (2026-11-22)
+### D18 · "Chapinero sintético": validación ponderada hacia el test (TWCV, Brenning y Suesse 2026) (2026-11-22)
 
 `91_validacion_sintetica.R` repondera los errores out-of-fold ya guardados (no se vuelve a entrenar nada) para que los anuncios validados se parezcan al test. Sigue a Brenning y Suesse (2026, arXiv 2603.29981).
 
@@ -177,3 +177,34 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 - Con solo 7 modelos, y 4 de ellos entre 172 y 177 M, las correlaciones de orden son ruidosas.
 
 **Uso:** reportar TWCV junto al MAE por localidad y al de Chapinero. Para elegir entre modelos con MAE parecido, preferir el que gane en TWCV o en IWCV.
+
+### D19 · Sin variables de lujo y oficinas en los modelos; los pesos del Chapinero sintético solo para evaluar (2026-11-22)
+
+**1. Embajadas, oficinas, hoteles y clubes salen de los modelos** (`03_features.R`). Se quedan en `base_enriquecida.csv` para las descriptivas. La base de modelos queda con 81 variables.
+
+En el lasso por m² (04e), quitarlas cambia mucho el resultado:
+
+| | MAE total | Chapinero | TWCV |
+|---|---:|---:|---:|
+| Con ellas | 135,9 M | 168,2 M | 150,5 M |
+| Sin ellas | 135,1 M | 152,9 M | 142,8 M |
+
+Por qué: se concentran en Chapinero y Usaquén, así que al dejar Chapinero afuera el modelo extrapola a valores que nunca vio. Es el mismo argumento de D10 contra las dummies de localidad.
+
+Es un buen ejemplo para la presentación: `dist_embajada` es la variable nueva más correlacionada con el precio (−0,30) y aun así empeora la predicción fuera de muestra.
+
+**2. Entrenar con pesos hacia el test no ayuda** (`04e_elastic_net_pesos.R`).
+
+Se probó el lasso ponderado con pesos IWCV o TWCV elevados a γ ∈ {0,25; 0,5; 1}:
+
+| | TWCV | Chapinero |
+|---|---:|---:|
+| Sin pesos (`m20_en_sin_pesos_m2`) | 142,4 M | 151,7 M |
+| Mejor con pesos (TWCV, γ = 0,25) | 142,3 M | 153,8 M |
+| Pesos completos | hasta 153,7 M | hasta 177 M |
+
+Con pesos fuertes, el modelo aprende de muy pocos anuncios (el tamaño efectivo es del 2–3%).
+
+**Decisión:** los pesos se usan para **evaluar y elegir** hiperparámetros (`mae_twcv` y `mae_iwcv`, que ahora salen en `evalua()` y en el registro), no para entrenar. La red (`09`) elige por `mae_twcv` y entrena sin pesos.
+
+`m20_en_sin_pesos_m2` es el mejor lasso por m² hasta ahora en Chapinero, TWCV e IWCV.

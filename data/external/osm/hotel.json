@@ -1,0 +1,5843 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-21T23:10:51Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 313367674,
+  "lat": 4.6595407,
+  "lon": -74.1085721,
+  "tags": {
+    "addr:street": "Calle 25B",
+    "brand": "Marriott",
+    "brand:wikidata": "Q3918608",
+    "brand:wikipedia": "en:Marriott Hotels & Resorts",
+    "name": "Bogotá Marriott",
+    "operator": "Marriott",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 334407033,
+  "lat": 4.6857884,
+  "lon": -74.0481972,
+  "tags": {
+    "name": "Hotel Andes Plaza",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 356131190,
+  "lat": 4.6776510,
+  "lon": -74.0440023,
+  "tags": {
+    "check_date": "2024-04-17",
+    "name": "Hotel Windsor House",
+    "tourism": "hotel",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 361325694,
+  "lat": 4.6917859,
+  "lon": -74.0354770,
+  "tags": {
+    "name": "Radisson",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 385626394,
+  "lat": 4.6859643,
+  "lon": -74.0501146,
+  "tags": {
+    "name": "Hotel Beldevere",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 420291649,
+  "lat": 4.6325602,
+  "lon": -74.0857725,
+  "tags": {
+    "name": "Hotel Plaza 26",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 469480799,
+  "lat": 4.6325833,
+  "lon": -74.0895936,
+  "tags": {
+    "addr:housenumber": "39A-16",
+    "addr:street": "Calle 25 bis",
+    "phone": "+577036350; +577903553; +573104814707; +573104832186",
+    "tourism": "hotel",
+    "website": "https://www.bogurbanhotel.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 704891059,
+  "lat": 4.6524983,
+  "lon": -74.0559266,
+  "tags": {
+    "brand": "Embassy Suites",
+    "brand:wikidata": "Q5369524",
+    "check_date": "2025-02-05",
+    "name": "Embassy Suites by Hilton Bogotá",
+    "official_name": "Embassy Suites by Hilton",
+    "operator": "Hilton",
+    "stars": "4",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 740166220,
+  "lat": 4.6389801,
+  "lon": -74.0668451,
+  "tags": {
+    "name": "Gavan",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 740166222,
+  "lat": 4.6400281,
+  "lon": -74.0666520,
+  "tags": {
+    "name": "Hotel 53",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 747072703,
+  "lat": 4.6971551,
+  "lon": -74.0302522,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "6-54",
+    "addr:street": "Calle 120A",
+    "name": "Hill House",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 747073211,
+  "lat": 4.7011542,
+  "lon": -74.0305633,
+  "tags": {
+    "name": "Rincón de Santa Bárbara",
+    "tourism": "hotel",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 761701250,
+  "lat": 4.6508272,
+  "lon": -74.0597235,
+  "tags": {
+    "email": "info@hotelvilar.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Apartahotel Vilar América",
+    "phone": "+576015524090: +573186526325",
+    "tourism": "hotel",
+    "website": "https://www.hotelvilaramerica.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 963130845,
+  "lat": 4.6601154,
+  "lon": -74.1089497,
+  "tags": {
+    "addr:street": "Calle 25B",
+    "brand": "Sheraton",
+    "brand:wikidata": "Q634831",
+    "check_date": "2025-10-25",
+    "name": "Sheraton Bogota",
+    "operator": "Sheraton",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1032626208,
+  "lat": 4.6400711,
+  "lon": -74.0600046,
+  "tags": {
+    "check_date": "2026-07-01",
+    "name": "Las Terrazas",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1107033695,
+  "lat": 4.6343786,
+  "lon": -74.0640018,
+  "tags": {
+    "name": "Hotel AB",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1224811557,
+  "lat": 4.5994766,
+  "lon": -74.0775058,
+  "tags": {
+    "name": "Lido",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1459468400,
+  "lat": 4.5983774,
+  "lon": -74.0715269,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Carrera 4",
+    "addr:street": "Calle 12B-12",
+    "amenity": "restaurant",
+    "diet:kosher": "yes",
+    "name": "Centro Plaza",
+    "phone": "+57 601 2433818",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1460558019,
+  "lat": 4.5985367,
+  "lon": -74.0703363,
+  "tags": {
+    "name": "La Vieja Suiza",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1507798750,
+  "lat": 4.5936982,
+  "lon": -74.0703326,
+  "tags": {
+    "name": "Hotel Muisca",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1615705930,
+  "lat": 4.6459826,
+  "lon": -74.0602936,
+  "tags": {
+    "addr:full": "Calle 61 # 5-39",
+    "check_date": "2025-04-13",
+    "email": "reservas@hotelesestelar.com",
+    "fax": "+57 (1) 235 1497",
+    "internet_access": "yes",
+    "internet_access:fee": "yes",
+    "name": "Estelar Suites Jones Hotel Bogotá",
+    "operator": "ESTELAR",
+    "phone": "+57 601 3468246",
+    "stars": "5",
+    "tourism": "hotel",
+    "website": "https://hotelesestelar.com/",
+    "wikidata": "Q111415124"
+  }
+},
+{
+  "type": "node",
+  "id": 1767572479,
+  "lat": 4.6427651,
+  "lon": -74.0598559,
+  "tags": {
+    "lgbtq": "primary",
+    "name": "High Park",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1767572483,
+  "lat": 4.6479069,
+  "lon": -74.0616324,
+  "tags": {
+    "lgbtq": "primary",
+    "name": "San Sebastián",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1790381327,
+  "lat": 4.6328689,
+  "lon": -74.0932983,
+  "tags": {
+    "name": "Boutique city",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1790381341,
+  "lat": 4.6358091,
+  "lon": -74.0931389,
+  "tags": {
+    "name": "La Embajada",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1790381361,
+  "lat": 4.6344757,
+  "lon": -74.0928670,
+  "tags": {
+    "name": "Suite Bogota",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 1790381365,
+  "lat": 4.6356085,
+  "lon": -74.0930100,
+  "tags": {
+    "name": "Cassa Americana",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2009969861,
+  "lat": 4.5968099,
+  "lon": -74.0748320,
+  "tags": {
+    "designation": "5 Estrellas",
+    "name": "Hotel de la Ópera",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2337309520,
+  "lat": 4.5956713,
+  "lon": -74.0710820,
+  "tags": {
+    "email": "abadiacolonial@gmail.com",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Abadia Colonial",
+    "phone": "+57 601 3411884",
+    "tourism": "hotel",
+    "website": "https://www.abadiacolonial.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 2399617866,
+  "lat": 4.6922458,
+  "lon": -74.0669029,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2476836735,
+  "lat": 4.6055461,
+  "lon": -74.0705900,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2596991673,
+  "lat": 4.6949560,
+  "lon": -74.0552376,
+  "tags": {
+    "addr:housenumber": "106B-28",
+    "addr:street": "Paralela Autonorte",
+    "email": "reservas@lancasterhouse.com.co",
+    "internet_access": "wlan",
+    "name": "Lancaster House",
+    "phone": "+57 601 6291100",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "https://www.lancasterhouse.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 2596991676,
+  "lat": 4.6879602,
+  "lon": -74.0493743,
+  "tags": {
+    "name": "La Mansión",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597013246,
+  "lat": 4.6789156,
+  "lon": -74.0537835,
+  "tags": {
+    "name": "Hotel Grand House",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597140216,
+  "lat": 4.6409827,
+  "lon": -74.0747245,
+  "tags": {
+    "name": "El Campín",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597147704,
+  "lat": 4.6538369,
+  "lon": -74.0542940,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "5-47",
+    "addr:street": "Calle 71 A",
+    "name": "Rosales Plaza",
+    "phone": "+57 601 3171100",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597156230,
+  "lat": 4.6881605,
+  "lon": -74.0469000,
+  "tags": {
+    "name": "Hotel Dann Carlton Bogotá",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597158140,
+  "lat": 4.6603256,
+  "lon": -74.0596635,
+  "tags": {
+    "addr:postcode": "11001",
+    "name": "Radisson Metrotel Royal Park",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597331943,
+  "lat": 4.6494726,
+  "lon": -74.0592459,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "65-1",
+    "addr:street": "Carrera 7",
+    "check_date": "2025-01-06",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "Mercure bh Zona Financiera",
+    "name": "Mercure BH Zona Financiera",
+    "phone": "+ (571) 7 44 77 90",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2597347536,
+  "lat": 4.6663787,
+  "lon": -74.0507986,
+  "tags": {
+    "check_date": "2026-01-21",
+    "name": "Retiro 84",
+    "tourism": "hotel",
+    "website": "https://retiro84.com"
+  }
+},
+{
+  "type": "node",
+  "id": 2597350602,
+  "lat": 4.6779201,
+  "lon": -74.0470511,
+  "tags": {
+    "brand": "Holiday Inn Express",
+    "brand:wikidata": "Q5880423",
+    "brand:wikipedia": "en:Holiday Inn Express",
+    "check_date": "2024-04-17",
+    "name": "Holiday Inn Express",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2611093676,
+  "lat": 4.6307642,
+  "lon": -74.0863964,
+  "tags": {
+    "name": "Apartaestudios Kafir",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 2857145250,
+  "lat": 4.6329452,
+  "lon": -74.0870461,
+  "tags": {
+    "addr:city": "Bogota D.C.",
+    "addr:street": "Avenida El Dorado",
+    "name": "Hotel San Pablo",
+    "smoking": "no",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162357369,
+  "lat": 4.6310397,
+  "lon": -74.0887169,
+  "tags": {
+    "name": "Hotel el Expositor",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162357370,
+  "lat": 4.6300377,
+  "lon": -74.0872259,
+  "tags": {
+    "name": "Hotel Suites el Recuerdo",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162357371,
+  "lat": 4.6311812,
+  "lon": -74.0872244,
+  "tags": {
+    "name": "Hotel La premier",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162357372,
+  "lat": 4.6327880,
+  "lon": -74.0863575,
+  "tags": {
+    "addr:street": "Avenida Calle 26",
+    "addr:unit": "38-05",
+    "name": "Hotel Charlotte Plaza 26",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162361072,
+  "lat": 4.6332780,
+  "lon": -74.0912372,
+  "tags": {
+    "name": "Corferias Inn",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162361990,
+  "lat": 4.6320708,
+  "lon": -74.0883687,
+  "tags": {
+    "name": "Hotel Classic",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162361991,
+  "lat": 4.6326501,
+  "lon": -74.0904436,
+  "tags": {
+    "addr:street": "Avenida Carrera 40",
+    "name": "Hotel Quinta Real",
+    "source": "Datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162824203,
+  "lat": 4.6336166,
+  "lon": -74.0956479,
+  "tags": {
+    "name": "Bogota Capital",
+    "source": "Datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162824204,
+  "lat": 4.6319632,
+  "lon": -74.0947026,
+  "tags": {
+    "name": "Madeleine Suite",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162824205,
+  "lat": 4.6315929,
+  "lon": -74.0946824,
+  "tags": {
+    "name": "La Antigua Casa",
+    "source": "datos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3162824206,
+  "lat": 4.6314126,
+  "lon": -74.0949572,
+  "tags": {
+    "name": "Casa Hotel La Estancia",
+    "source": "sdatos.gov.co",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3623479309,
+  "lat": 4.5990988,
+  "lon": -74.0689593,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "12 d N°. 1 a - 24",
+    "name": "Hostal Casa Iraca",
+    "operator": "Cami Alvararado",
+    "phone": "+57 601 3424191",
+    "tourism": "hotel",
+    "website": "https://www.casairaca.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 3636089113,
+  "lat": 4.6795036,
+  "lon": -74.1434812,
+  "tags": {
+    "name": "Hotel Occidente",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3735334043,
+  "lat": 4.5974546,
+  "lon": -74.0697699,
+  "tags": {
+    "addr:city": "Candelaria",
+    "addr:housenumber": "Cr 2",
+    "addr:street": "Calle 12B-31",
+    "name": "Casa Bellavista Hostel",
+    "operator": "(571) 3341230",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3757596698,
+  "lat": 4.6392428,
+  "lon": -74.0660319,
+  "tags": {
+    "addr:housenumber": "59",
+    "addr:street": "Calle 52",
+    "name": "HOTEL",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 3911376390,
+  "lat": 4.6005477,
+  "lon": -74.0716277,
+  "tags": {
+    "name": "Hotel Augusta",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4116753897,
+  "lat": 4.5945883,
+  "lon": -74.0734904,
+  "tags": {
+    "addr:housenumber": "03-71",
+    "addr:street": "Calle 9",
+    "name": "Musicology hostel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4181023289,
+  "lat": 4.7023124,
+  "lon": -74.0433119,
+  "tags": {
+    "name": "Sta Bárbara Boutique",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4184225489,
+  "lat": 4.6796924,
+  "lon": -74.0535041,
+  "tags": {
+    "brand": "Four Points by Sheraton",
+    "brand:wikidata": "Q1439966",
+    "name": "Four Points by Sheraton Bogotá",
+    "phone": "+57 313 5646114",
+    "short_name": "Four Points",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4234142191,
+  "lat": 4.5984954,
+  "lon": -74.0701962,
+  "tags": {
+    "addr:housenumber": "2-36",
+    "addr:street": "Calle 12C",
+    "check_date": "2023-02-26",
+    "name": "Casa Deco",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4258954989,
+  "lat": 4.6218559,
+  "lon": -74.0707316,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Diagonal 33 Bis A",
+    "name": "Hotel Maria Isabel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4260174291,
+  "lat": 4.6040350,
+  "lon": -74.0715640,
+  "tags": {
+    "addr:street": "Calle 18",
+    "name": "Santa Luicia Boutique Spa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4260274590,
+  "lat": 4.6119429,
+  "lon": -74.0718792,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "name": "Hotel Ms Oceania",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4278263595,
+  "lat": 4.6929210,
+  "lon": -74.1992239,
+  "tags": {
+    "addr:street": "Calle 1 #274 C05",
+    "name": "Home Colombia",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4320295241,
+  "lat": 4.6488331,
+  "lon": -74.0583301,
+  "tags": {
+    "name": "Santa Maria",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4361363993,
+  "lat": 4.6304021,
+  "lon": -74.0951633,
+  "tags": {
+    "addr:street": "Carrera 43",
+    "name": "Regency",
+    "name:es": "Regency",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4434404791,
+  "lat": 4.5965461,
+  "lon": -74.0692274,
+  "tags": {
+    "addr:housenumber": "0-57",
+    "addr:street": "Calle 12B",
+    "internet_access": "wlan",
+    "name": "Sayta Hostel",
+    "name:de": "Sayta Hostel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4461326193,
+  "lat": 4.6464251,
+  "lon": -74.0609078,
+  "tags": {
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Viaggio",
+    "tourism": "hotel",
+    "website": "http://www.viaggio.com.co",
+    "wikidata": "Q111885577"
+  }
+},
+{
+  "type": "node",
+  "id": 4486209090,
+  "lat": 4.7223429,
+  "lon": -74.0368974,
+  "tags": {
+    "name": "Home Monteverde",
+    "name:es": "Home Monteverde",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4523625489,
+  "lat": 4.6734912,
+  "lon": -74.1084559,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4603873735,
+  "lat": 4.6318191,
+  "lon": -74.0962981,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110911",
+    "addr:street": "Calle 22Bis No. 43B-56",
+    "description": "Nuestros servicios:\n \n•\tAlojamiento según la acomodación anteriormente relacionada. \n•\tInternet con conexión inalámbrica Wii-Fi, en todo el hotel. \n•\tTv Cable \n•\tAsistencia en cultura y turismo \n•\tRoom Service (sin costo adicional) \n•\tParqueadero gratis p",
+    "internet_access": "wlan",
+    "internet_access:ssid": "hotelchandelier",
+    "name": "Hotel Chandelier",
+    "operator": "Hotel Chandelier",
+    "rooms": "22",
+    "smoking": "no",
+    "stars": "3",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4603919245,
+  "lat": 4.6320363,
+  "lon": -74.0966804,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110911",
+    "addr:street": "Calle 22Bis No. 44A-19",
+    "description": "Nuestros servicios: • Alojamiento según la acomodación anteriormente relacionada. • Internet con conexión inalámbrica Wii-Fi, en todo el hotel. • Tv Cable • Asistencia en cultura y turismo • Room Service (sin costo adicional) • Parqueadero gratis p",
+    "internet_access": "yes",
+    "name": "Hotel Chandelier Park",
+    "operator": "Hotel Chandelier",
+    "rooms": "10",
+    "smoking": "no",
+    "stars": "3",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4609809896,
+  "lat": 4.6097120,
+  "lon": -74.0716927,
+  "tags": {
+    "addr:street": "Calle 23",
+    "name": "Andino INN",
+    "name:en": "Español",
+    "name:es": "Andino INN",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4622668976,
+  "lat": 4.6233234,
+  "lon": -74.0723340,
+  "tags": {
+    "addr:city": "Teusaquillo",
+    "addr:housenumber": "17-01",
+    "addr:postcode": "110099",
+    "addr:street": "Avenida Calle 34",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Bogota Bed and Breakfast",
+    "operator": "Beatriz Leon and Rick Estrada",
+    "rooms": "7",
+    "smoking": "outside",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4640728690,
+  "lat": 4.7109251,
+  "lon": -74.1449609,
+  "tags": {
+    "addr:housenumber": "63A",
+    "addr:street": "Carrera 120",
+    "name": "Casa Tía Tere",
+    "name:es": "Casa Tía Tere",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4683462890,
+  "lat": 4.6217313,
+  "lon": -74.0703231,
+  "tags": {
+    "addr:housenumber": "14-44",
+    "addr:street": "Diagonal 33 bis A",
+    "name": "Hotel Posada Colombiana",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4687641297,
+  "lat": 4.5986856,
+  "lon": -74.0714961,
+  "tags": {
+    "addr:street": "Carrera 4",
+    "check_date": "2025-01-31",
+    "name": "Casa De La Vega",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4702500989,
+  "lat": 4.6787579,
+  "lon": -74.0536104,
+  "tags": {
+    "name": "Casa Antonio",
+    "name:es": "casa antonio",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4825410845,
+  "lat": 4.6663418,
+  "lon": -74.0570240,
+  "tags": {
+    "addr:housenumber": "79-92",
+    "addr:street": "Avenida Carrera 15",
+    "contact:facebook": "https://www.facebook.com/bogotacity.hostel",
+    "internet_access": "wlan",
+    "name": "Hostal Bogota City",
+    "name:en": "Bogota City Hostel",
+    "name:es": "Hostal Bogota City",
+    "opening_hours": "24/7",
+    "phone": "+57 320 3059861",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4828503523,
+  "lat": 4.6464733,
+  "lon": -74.0571708,
+  "tags": {
+    "internet_access": "wlan",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4833616124,
+  "lat": 4.6713624,
+  "lon": -74.0980801,
+  "tags": {
+    "name": "Hotel bogota",
+    "name:en": "Español",
+    "name:es": "Hotel bogota",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 4886573723,
+  "lat": 4.6731947,
+  "lon": -74.1083235,
+  "tags": {
+    "addr:housenumber": "73-49",
+    "addr:street": "Calle 53A",
+    "name:es": "hotel dorado gold",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5015573939,
+  "lat": 4.6001977,
+  "lon": -74.0703496,
+  "tags": {
+    "addr:street": "Carrera 4",
+    "name": "El Dorado",
+    "name:es": "El Dorado",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5015574122,
+  "lat": 4.5986298,
+  "lon": -74.0700555,
+  "tags": {
+    "addr:street": "Calle 12C",
+    "name": "Casa Deco",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5043792028,
+  "lat": 4.5986886,
+  "lon": -74.0701982,
+  "tags": {
+    "addr:street": "Calle 12C",
+    "name": "Hotel Aragon",
+    "name:es": "Hotel Aragon",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5125660872,
+  "lat": 4.6330193,
+  "lon": -74.0710029,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "17-13",
+    "addr:street": "Calle 45",
+    "name": "Von Astorian",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5128995884,
+  "lat": 4.7133542,
+  "lon": -74.2095147,
+  "tags": {
+    "addr:street": "Carrera 9",
+    "name": "Hotel El Sol",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5145823330,
+  "lat": 4.6736291,
+  "lon": -74.0533912,
+  "tags": {
+    "addr:street": "Avenida Carrera 15",
+    "check_date": "2024-05-24",
+    "name": "B3 Virrey",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5176847651,
+  "lat": 4.6410138,
+  "lon": -74.0742501,
+  "tags": {
+    "addr:street": "Carrera 24",
+    "name": "Hotel Siar",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5196239638,
+  "lat": 4.6317587,
+  "lon": -74.0928726,
+  "tags": {
+    "addr:street": "calle 24a",
+    "name": "Hotel Bogota real corferias",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5202920960,
+  "lat": 4.6011627,
+  "lon": -74.0700508,
+  "tags": {
+    "addr:street": "Carrera 4",
+    "name": "Hotel Bicertenario",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5203057131,
+  "lat": 4.6043725,
+  "lon": -74.0676688,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "20-35",
+    "addr:postcode": "117111",
+    "addr:street": "Carrera 3",
+    "email": "bogota@viajerohostels.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Viajero Hostel & Spa",
+    "phone": "+57 304 6830411",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "https://www.viajerohostels.com/en/destinations-colombia/bogota/"
+  }
+},
+{
+  "type": "node",
+  "id": 5203057132,
+  "lat": 4.6042995,
+  "lon": -74.0677019,
+  "tags": {
+    "addr:street": "Carrera 3",
+    "name": "Hotel Inter Bogotá",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5204579769,
+  "lat": 4.6098438,
+  "lon": -74.0723079,
+  "tags": {
+    "addr:street": "Carrera 10",
+    "name": "Hotel Centro Internacional",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5204579770,
+  "lat": 4.6095870,
+  "lon": -74.0724695,
+  "tags": {
+    "addr:street": "Carrera 10",
+    "name": "Hotel Santamaria De Jose",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5205006989,
+  "lat": 4.6048383,
+  "lon": -74.0727271,
+  "tags": {
+    "addr:street": "Carrera 8",
+    "name": "Ambay Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5205048382,
+  "lat": 4.6033871,
+  "lon": -74.0735429,
+  "tags": {
+    "addr:street": "Carrera 8",
+    "name": "Grand Club Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5214461922,
+  "lat": 4.5991276,
+  "lon": -74.0703916,
+  "tags": {
+    "addr:housenumber": "3-50",
+    "addr:street": "Calle 12C",
+    "internet_access": "wlan",
+    "name": "Sweet Dreams Calendaria Magica",
+    "phone": "+57 320 3021507",
+    "tourism": "hotel",
+    "website": "https://www.booking.com/hotel/co/candelaria-magica-centro-historico.es.html"
+  }
+},
+{
+  "type": "node",
+  "id": 5214701083,
+  "lat": 4.6139826,
+  "lon": -74.0755603,
+  "tags": {
+    "addr:street": "Calle 24",
+    "name": "Bogota Center Plaza Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5214890286,
+  "lat": 4.6100030,
+  "lon": -74.0735466,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "name": "Hotel Bogota",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5214890300,
+  "lat": 4.6097256,
+  "lon": -74.0737988,
+  "tags": {
+    "addr:street": "Carrera 13",
+    "name": "Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5216352032,
+  "lat": 4.6111498,
+  "lon": -74.0760751,
+  "tags": {
+    "addr:street": "Calle 22",
+    "name": "Hotel Nuevo Santafe",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5218914008,
+  "lat": 4.6341752,
+  "lon": -74.0716482,
+  "tags": {
+    "addr:street": "Carrera 19",
+    "name": "Hotel Palermo Plaza",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5230720166,
+  "lat": 4.6326193,
+  "lon": -74.0904644,
+  "tags": {
+    "addr:street": "Avenida Carrera 40",
+    "name": "Blu Inn Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5231004079,
+  "lat": 4.6503607,
+  "lon": -74.0678706,
+  "tags": {
+    "addr:housenumber": "17-18",
+    "addr:street": "Avenida Calle 63",
+    "check_date": "2025-01-06",
+    "name": "Hotel Casa Paulina",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5233155124,
+  "lat": 4.6615645,
+  "lon": -74.1098478,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "69D-91",
+    "addr:street": "Avenida Calle 26",
+    "brand": "Holiday Inn",
+    "brand:wikidata": "Q2717882",
+    "brand:wikipedia": "en:Holiday Inn",
+    "name": "Holiday Inn",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5252202524,
+  "lat": 4.6552450,
+  "lon": -74.0706364,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "22-23",
+    "addr:street": "Calle 63F",
+    "internet_access": "yes",
+    "name": "Hotel Ejecutivo Imperial",
+    "rooms": "15",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5301196622,
+  "lat": 4.6654134,
+  "lon": -74.1081028,
+  "tags": {
+    "addr:housenumber": "48",
+    "addr:street": "Carrera 70C",
+    "internet_access": "wlan",
+    "name": "Hotel Confort Bogotà",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5367597139,
+  "lat": 4.6541687,
+  "lon": -74.0618481,
+  "tags": {
+    "addr:housenumber": "68-28",
+    "addr:street": "Carrera 12",
+    "contact:mobile": "+57 310 328 5682",
+    "name": "República Hostel Bogotá",
+    "phone": "+57 601 7049212",
+    "tourism": "hotel",
+    "website": "https://republicahostels.com/bogota/"
+  }
+},
+{
+  "type": "node",
+  "id": 5436723822,
+  "lat": 4.6081415,
+  "lon": -74.0853341,
+  "tags": {
+    "name": "Hotel sabana",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5454322587,
+  "lat": 4.6304126,
+  "lon": -74.0620193,
+  "tags": {
+    "addr:housenumber": "43-95",
+    "addr:street": "Transversal 4",
+    "name": "Hotel Viaggio Urbano",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5541087014,
+  "lat": 4.6515024,
+  "lon": -74.0556591,
+  "tags": {
+    "name": "Zona G Hotel Boutique",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5673748421,
+  "lat": 4.6748667,
+  "lon": -74.0459119,
+  "tags": {
+    "addr:housenumber": "9A-53",
+    "addr:street": "Calle 93A",
+    "name": "Hotel Casa Real",
+    "name:pt": "Hotel Casa Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5739366010,
+  "lat": 4.6440219,
+  "lon": -74.0630382,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Carrera 8B",
+    "brand": "Bed and Breakfast",
+    "email": "olemicasa.hostal@gmail.com",
+    "name": "Ole Mi Casa Hostal",
+    "rooms": "6",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 5817049955,
+  "lat": 4.5978760,
+  "lon": -74.0712630,
+  "tags": {
+    "addr:housenumber": "3/63",
+    "addr:street": "Calle 12B",
+    "name": "Orange Experience Guest House",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6026248303,
+  "lat": 4.6195107,
+  "lon": -74.0741217,
+  "tags": {
+    "name": "Villa Karina",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6026258851,
+  "lat": 4.6204780,
+  "lon": -74.0729397,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 17",
+    "name": "Dalons Colonial",
+    "short_name": "DC Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6026258868,
+  "lat": 4.6223495,
+  "lon": -74.0737973,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6026326071,
+  "lat": 4.6292952,
+  "lon": -74.0756936,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 39A",
+    "name": "Hoteles Bogotá Inn",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6027734912,
+  "lat": 4.6264575,
+  "lon": -74.0798655,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 38",
+    "name": "Hotel Bogotá",
+    "phone": "+57 601 2691183",
+    "tourism": "hotel",
+    "website": "https://www.hotelbogota.com.co"
+  }
+},
+{
+  "type": "node",
+  "id": 6030257325,
+  "lat": 4.6260446,
+  "lon": -74.0731331,
+  "tags": {
+    "name": "Embajador Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6138927105,
+  "lat": 4.6171642,
+  "lon": -74.0732062,
+  "tags": {
+    "addr:housenumber": "28A-24",
+    "addr:street": "Carrera 16",
+    "name": "Hotel Teusaquillo",
+    "phone": "+57 601 2452111",
+    "tourism": "hotel",
+    "website": "https://www.hotelteusaquillo.com"
+  }
+},
+{
+  "type": "node",
+  "id": 6201733164,
+  "lat": 4.6512759,
+  "lon": -74.0581834,
+  "tags": {
+    "brand": "Holiday Inn Express & Suites",
+    "brand:wikidata": "Q5880423",
+    "brand:wikipedia": "en:Holiday Inn Express",
+    "check_date": "2025-02-05",
+    "name": "Holiday Inn Express & Suites",
+    "tourism": "hotel",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6238721986,
+  "lat": 4.6684547,
+  "lon": -74.1234388,
+  "tags": {
+    "name": "Crown Park Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6374955282,
+  "lat": 4.6910972,
+  "lon": -74.0920944,
+  "tags": {
+    "name": "Titan Hotal y Spa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6377060264,
+  "lat": 4.6244788,
+  "lon": -74.0741683,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "19-57",
+    "addr:postcode": "110821",
+    "addr:street": "Calle 35",
+    "email": "gerencia@ecoboutiquehotel.co",
+    "name": "Eco Boutique",
+    "phone": "+57 601 2455834",
+    "tourism": "hotel",
+    "website": "https://www.ecoboutiquehotel.co"
+  }
+},
+{
+  "type": "node",
+  "id": 6420030329,
+  "lat": 4.5971593,
+  "lon": -74.0691759,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "1-20",
+    "addr:street": "Calle 12B Bis",
+    "brand": "CGH HOTELES",
+    "email": "cghcandelaria@gmail.com",
+    "internet_access": "wlan",
+    "name": "CGH Candelaria Boutique",
+    "operator": "CGH",
+    "payment:american_express": "yes",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:maestro": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+57 305 4122018",
+    "rooms": "12",
+    "smoking": "no",
+    "stars": "3",
+    "start_date": "15 marzo 2019",
+    "tourism": "hotel",
+    "website": "https://cgh-candelaria-boutique-co.book.direct/"
+  }
+},
+{
+  "type": "node",
+  "id": 6434347285,
+  "lat": 4.6293866,
+  "lon": -74.0830366,
+  "tags": {
+    "addr:housenumber": "25F-18",
+    "addr:street": "Carrera 33",
+    "name": "NH Bogota Urban 26",
+    "phone": "+57 571 7953300",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6440341885,
+  "lat": 4.6499112,
+  "lon": -74.0582346,
+  "tags": {
+    "addr:housenumber": "6-18",
+    "addr:street": "Calle 66",
+    "internet_access": "wlan",
+    "name": "The Grace Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6452268395,
+  "lat": 4.6066388,
+  "lon": -74.0732121,
+  "tags": {
+    "name": "Los Cerros",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6465945385,
+  "lat": 4.5948108,
+  "lon": -74.0716979,
+  "tags": {
+    "name": "Apartaestudios La Candelaria",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6501137704,
+  "lat": 4.6266506,
+  "lon": -74.0725799,
+  "tags": {
+    "addr:street": "Transversal 18A Bis",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Teusaquillo Boutique",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6501137714,
+  "lat": 4.6257744,
+  "lon": -74.0723202,
+  "tags": {
+    "name": "Casa Nova",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6512238744,
+  "lat": 4.6246600,
+  "lon": -74.0711539,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "35-41",
+    "name": "La Casa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6517065443,
+  "lat": 4.6377136,
+  "lon": -74.0622615,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6517065444,
+  "lat": 4.6376682,
+  "lon": -74.0623567,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6518260957,
+  "lat": 4.6378084,
+  "lon": -74.0617853,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51A-56",
+    "addr:street": "Transversal 4",
+    "name": "Cupos universitarios",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6518282693,
+  "lat": 4.6380588,
+  "lon": -74.0629967,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51A-14",
+    "addr:street": "Avenida Carrera 7",
+    "name": "51 Plaza",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6518282719,
+  "lat": 4.6382084,
+  "lon": -74.0610996,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "4-09",
+    "addr:street": "Transversal 3",
+    "name": "Cupos universitarios",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6518355117,
+  "lat": 4.6385291,
+  "lon": -74.0610915,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "4-20",
+    "addr:street": "Calle 52B",
+    "name": "Casas estudiantiles el Alto",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6519194605,
+  "lat": 4.6256720,
+  "lon": -74.0709896,
+  "tags": {
+    "addr:city": "Teusaquillo",
+    "addr:housenumber": "36-55",
+    "addr:street": "Carrera 16",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6568512107,
+  "lat": 4.5953742,
+  "lon": -74.0733406,
+  "tags": {
+    "addr:housenumber": "9-80",
+    "addr:street": "Carrera 4",
+    "name": "Zohar Hostel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6580428616,
+  "lat": 4.6645625,
+  "lon": -74.0484489,
+  "tags": {
+    "check_date": "2024-06-29",
+    "contact:facebook": "https://www.facebook.com/PortonBogota/",
+    "contact:instagram": "https://www.instagram.com/hotelporton.bogota/",
+    "name": "Hotel Portón Bogotá",
+    "phone": "+57 031 6166611",
+    "tourism": "hotel",
+    "website": "https://www.hotelportonbogota.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 6589943985,
+  "lat": 4.6126428,
+  "lon": -74.1345221,
+  "tags": {
+    "addr:housenumber": "69-05 Pi 3",
+    "addr:postcode": "110841",
+    "addr:street": "Avenida Calle 26 Sur",
+    "internet_access": "wlan",
+    "name": "Santos Inn",
+    "phone": "+57 321 2043605",
+    "tourism": "hotel",
+    "website": "https://www.booking.com/Share-HOX3s4"
+  }
+},
+{
+  "type": "node",
+  "id": 6680498760,
+  "lat": 4.5960961,
+  "lon": -74.0758860,
+  "tags": {
+    "addr:housenumber": "6-45",
+    "addr:street": "Calle 9",
+    "name": "Hotel Casa de la Botica",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6682257782,
+  "lat": 4.6682207,
+  "lon": -74.1417343,
+  "tags": {
+    "addr:housenumber": "17-34",
+    "addr:street": "Cra 96c",
+    "name": "Hotel los Cambulos",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6682287225,
+  "lat": 4.6681567,
+  "lon": -74.1418454,
+  "tags": {
+    "addr:housenumber": "17-30",
+    "addr:street": "Cra 96c",
+    "name": "Hotel Colonial",
+    "phone": "+57 601 2678991",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6732961788,
+  "lat": 4.5962868,
+  "lon": -74.0722454,
+  "tags": {
+    "brand": "Selina",
+    "brand:wikidata": "Q110173599",
+    "name": "Selina la",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6790390245,
+  "lat": 4.6660238,
+  "lon": -74.0507970,
+  "tags": {
+    "check_date": "2025-02-27",
+    "name": "Cabrera Imperial",
+    "tourism": "hotel",
+    "website": "https://www.hotelcabreraimperial.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 6883757867,
+  "lat": 4.6563306,
+  "lon": -74.0527502,
+  "tags": {
+    "name": "bh La Quinta",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 6900350792,
+  "lat": 4.6503970,
+  "lon": -74.0579833,
+  "tags": {
+    "check_date": "2025-02-15",
+    "name": "Matisse",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7020244059,
+  "lat": 4.6492496,
+  "lon": -74.0667305,
+  "tags": {
+    "name": "Nevada suites",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7093843185,
+  "lat": 4.7047889,
+  "lon": -74.0432140,
+  "tags": {
+    "addr:housenumber": "15-36",
+    "addr:street": "Avenida Calle 127",
+    "internet_access": "wlan",
+    "name": "Condominio Plenitud",
+    "phone": "+57 601 6499444",
+    "tourism": "hotel",
+    "website": "https://www.travelers.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 7109425027,
+  "lat": 4.6615405,
+  "lon": -74.0608129,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "15-60",
+    "addr:street": "Calle 74",
+    "brand": "Selina",
+    "check_date": "2023-02-06",
+    "internet_access": "wlan",
+    "name": "Selina Chapinero Bogotá",
+    "phone": "+57 601 5800693",
+    "tourism": "hotel",
+    "website": "https://www.selina.com/colombia/bogota-chapinero/"
+  }
+},
+{
+  "type": "node",
+  "id": 7156383961,
+  "lat": 4.6699506,
+  "lon": -74.0530429,
+  "tags": {
+    "brand": "Sofitel",
+    "brand:wikidata": "Q749431",
+    "check_date": "2024-11-18",
+    "name": "Sofitel",
+    "phone": "+57 601 6466390",
+    "tourism": "hotel",
+    "website": "https://sofitel.accor.com/hotel/0561/index.en.shtml"
+  }
+},
+{
+  "type": "node",
+  "id": 7158489148,
+  "lat": 4.6695836,
+  "lon": -74.0531976,
+  "tags": {
+    "brand": "Four Seasons",
+    "brand:wikidata": "Q1424786",
+    "check_date": "2024-11-18",
+    "name": "Four Seasons",
+    "tourism": "hotel",
+    "website": "https://www.fourseasons.com/bogota/"
+  }
+},
+{
+  "type": "node",
+  "id": 7180014586,
+  "lat": 4.5958305,
+  "lon": -74.0715095,
+  "tags": {
+    "internet_access": "wlan",
+    "name": "Granada Hostel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7253689106,
+  "lat": 4.6723210,
+  "lon": -74.1191570,
+  "tags": {
+    "addr:city": "Fontibón",
+    "addr:street": "Carrera 82",
+    "internet_access": "yes",
+    "name": "Hotel Gran Nuva",
+    "rooms": "30",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7257666585,
+  "lat": 4.6359675,
+  "lon": -74.0722506,
+  "tags": {
+    "name": "Palermo house",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7276955886,
+  "lat": 4.7037351,
+  "lon": -74.1299824,
+  "tags": {
+    "addr:housenumber": "65 B 62",
+    "addr:postcode": "111011",
+    "addr:street": "Carrera 110B",
+    "internet_access": "wlan",
+    "name": "Habitaciones C&S",
+    "name:es": "Habitaciones C&S Bogotá",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7294690525,
+  "lat": 4.7037419,
+  "lon": -74.0465228,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "124-50",
+    "addr:street": "Carrera 18",
+    "brand": "Ayenda Hoteles",
+    "contact:email": "reservashotelcasadelvalle@gmail.com",
+    "contact:mobile": "+57 301 2311425",
+    "contact:phone": "+57 311 8881967",
+    "contact:website": "http://casadelvallehotel.com/",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Hotel Casa del Valle",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7476705402,
+  "lat": 4.6773414,
+  "lon": -74.1349325,
+  "tags": {
+    "name": "Kiwi",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 7765260885,
+  "lat": 4.6916650,
+  "lon": -74.0353283,
+  "tags": {
+    "internet_access": "wlan",
+    "name:en": "Teleport Royal NH Collection",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8279046916,
+  "lat": 4.5908465,
+  "lon": -74.0750545,
+  "tags": {
+    "name": "Candelaria Real Suites",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8511114449,
+  "lat": 4.6412943,
+  "lon": -74.0787464,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "111311",
+    "addr:street": "Avenida Carrera 30 51 80",
+    "brand": "Arena Plaza",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Hotel Arena Plaza",
+    "rooms": "0",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8707740204,
+  "lat": 4.7545053,
+  "lon": -74.1522280,
+  "tags": {
+    "addr:city": "Siberia",
+    "addr:housenumber": "Km 3.9 Costado Sur Siberia-Cota",
+    "addr:street": "Autopista Medellín",
+    "brand": "GHL",
+    "email": "reservas.bogotaoccidente@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "GHL Style Hotel Bogotá Occidente",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 8787676",
+    "rooms": "128",
+    "tourism": "hotel",
+    "website": "https://www.ghlbogotaoccidente.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8783908981,
+  "lat": 4.7046687,
+  "lon": -74.0435171,
+  "tags": {
+    "name": "La Fontana",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8808127332,
+  "lat": 4.6688769,
+  "lon": -74.1140048,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "73B-90",
+    "addr:postcode": "110931",
+    "addr:street": "Calle 25G",
+    "alt_name": "Hampton Inn",
+    "bar": "yes",
+    "brand": "Hampton",
+    "brand:wikidata": "Q5646230",
+    "brand:wikipedia": "en:Hampton by Hilton",
+    "building": "commercial",
+    "check_date": "2022-10-24",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Hampton Aeropuerto de Bogotá",
+    "official_name": "Hampton by Hilton",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "reservation": "required",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8868406123,
+  "lat": 4.5828158,
+  "lon": -74.2195540,
+  "tags": {
+    "name": "Hotel Nuevo Soacha",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8910458286,
+  "lat": 4.6928068,
+  "lon": -74.0348099,
+  "tags": {
+    "name": "Hotel W",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8977863617,
+  "lat": 4.6120098,
+  "lon": -74.0759738,
+  "tags": {
+    "name": "Hotel Santa Fe Suits",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 8985701001,
+  "lat": 4.6311200,
+  "lon": -74.0886568,
+  "tags": {
+    "addr:housenumber": "25-35",
+    "addr:street": "Carrera 38",
+    "name": "Hotel Mont Bleu",
+    "phone": "+57 320 8387522",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 9425595425,
+  "lat": 4.6329892,
+  "lon": -74.0898634,
+  "tags": {
+    "addr:housenumber": "25-45",
+    "addr:street": "Cra 40",
+    "name": "Portal de los Andes",
+    "phone": "+57 322 3663380",
+    "tourism": "hotel",
+    "website": "https://www.hotelportaldelosandes.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 9427034217,
+  "lat": 4.6410093,
+  "lon": -74.0621356,
+  "tags": {
+    "addr:street": "Calle 55",
+    "internet_access": "wlan",
+    "name": "Maceo 55",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 9503248118,
+  "lat": 4.6084698,
+  "lon": -74.0683454,
+  "tags": {
+    "addr:housenumber": "23-34",
+    "addr:street": "Avenida Carrera 5",
+    "email": "reservas@hotelgrandpark.com.co",
+    "name": "Hotel Grand Park",
+    "phone": "+57 601 7450789",
+    "tourism": "hotel",
+    "website": "https://www.hotelgrandpark.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 9842150234,
+  "lat": 4.6236133,
+  "lon": -74.0916148,
+  "tags": {
+    "addr:city": "Bogota D.C.",
+    "addr:housenumber": "35-40",
+    "addr:street": "Calle 19B",
+    "bar": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Cundinamarca Hotel",
+    "phone": "+1 5173302",
+    "smoking": "isolated",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10013170917,
+  "lat": 4.5986755,
+  "lon": -74.0700717,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10168012160,
+  "lat": 4.6323851,
+  "lon": -74.0950343,
+  "tags": {
+    "name": "Hotel Embajada Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10628297005,
+  "lat": 4.6864664,
+  "lon": -74.1321388,
+  "tags": {
+    "addr:housenumber": "30",
+    "addr:postcode": "110311",
+    "addr:street": "Calle 25D",
+    "name": "Aparta Hotel Victoria In",
+    "phone": "+57 320 5875517",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10840856505,
+  "lat": 4.6845065,
+  "lon": -74.0571427,
+  "tags": {
+    "addr:street": "Carrera 45",
+    "internet_access": "wlan",
+    "name": "Tokyo Zero",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10914304554,
+  "lat": 4.6837161,
+  "lon": -74.0526634,
+  "tags": {
+    "addr:housenumber": "96-25",
+    "addr:street": "Avenida Carrera 19",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "https://marbore-dc-hotel.hotelsbogota.net/"
+  }
+},
+{
+  "type": "node",
+  "id": 10916147102,
+  "lat": 4.6859402,
+  "lon": -74.0542902,
+  "tags": {
+    "name": "Cosmos 100",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10938930817,
+  "lat": 4.7044976,
+  "lon": -74.2286435,
+  "tags": {
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10938935845,
+  "lat": 4.7042169,
+  "lon": -74.2282308,
+  "tags": {
+    "name": "Hotel San Martin",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 10975618705,
+  "lat": 4.6080689,
+  "lon": -74.0688408,
+  "tags": {
+    "internet_access": "wlan",
+    "name": "Sabana",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11117243821,
+  "lat": 4.5922914,
+  "lon": -74.0716376,
+  "tags": {
+    "addr:housenumber": "820",
+    "addr:street": "Carrera 1",
+    "name": "Morph",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11265604369,
+  "lat": 4.5997030,
+  "lon": -74.0699324,
+  "tags": {
+    "email": "casatsao@gmail.com",
+    "internet_access": "wlan",
+    "name:en": "casa Tsao",
+    "name:fr": "casa Tsao",
+    "phone": "+57 314 3206016",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11402056569,
+  "lat": 4.6890483,
+  "lon": -74.1290692,
+  "tags": {
+    "addr:housenumber": "26-25",
+    "addr:street": "Carrera 100 Bis",
+    "contact:facebook": "estadiaeldorado",
+    "internet_access": "wlan",
+    "name": "El Dorado",
+    "phone": "+57 316 5297215",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11418153869,
+  "lat": 4.6322901,
+  "lon": -74.0932385,
+  "tags": {
+    "addr:housenumber": "43-13",
+    "addr:street": "Calle 24A",
+    "email": "bogotareal1@gmail.com",
+    "name": "Hotel Bogotá Real",
+    "phone": "+57 300 8333313",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11435336647,
+  "lat": 4.6659080,
+  "lon": -74.0591155,
+  "tags": {
+    "name": "Hoteles Bogota",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11552046869,
+  "lat": 4.6420921,
+  "lon": -74.0645621,
+  "tags": {
+    "addr:housenumber": "10-73",
+    "addr:street": "Calle 55",
+    "name": "Hotel Living 55",
+    "phone": "+576013462949;+573203873698",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11752081369,
+  "lat": 4.6104387,
+  "lon": -74.0719549,
+  "tags": {
+    "addr:housenumber": "2363",
+    "addr:street": "Avenida Carrera 10",
+    "name": "San Francisco Hotel",
+    "opening_hours": "24/7",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 11755563169,
+  "lat": 4.6065000,
+  "lon": -74.0729814,
+  "tags": {
+    "name:en": "Hotel Urban Center Bogata",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12001528127,
+  "lat": 4.6473917,
+  "lon": -74.0626296,
+  "tags": {
+    "name": "Grace chapinero",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12121460644,
+  "lat": 4.6009916,
+  "lon": -74.0717766,
+  "tags": {
+    "name": "Hotel Regina",
+    "stars": "4",
+    "survey:date": "2024-08-19",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12246685823,
+  "lat": 4.6309825,
+  "lon": -74.0857741,
+  "tags": {
+    "name": "Hotel American visa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12337584548,
+  "lat": 4.6048512,
+  "lon": -74.0683065,
+  "tags": {
+    "air_conditioning": "no",
+    "internet_access": "wlan",
+    "name": "Las Aguas Inn",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 12409626001,
+  "lat": 4.6228269,
+  "lon": -74.0730161,
+  "tags": {
+    "name": "Hotel Andino Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12426991401,
+  "lat": 4.6084809,
+  "lon": -74.0778104,
+  "tags": {
+    "name": "Hotel Nuevo Siboney",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12426991501,
+  "lat": 4.6077790,
+  "lon": -74.0795321,
+  "tags": {
+    "name": "Hotel Casa Centro Bogota",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12469918786,
+  "lat": 4.5944165,
+  "lon": -74.0732239,
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "9-27",
+    "addr:postcode": "111711",
+    "addr:street": "Calle 9",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Candelaria House Boutique",
+    "phone": "+57 320 8009472",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12752725401,
+  "lat": 4.6033784,
+  "lon": -74.1889081,
+  "tags": {
+    "name": "Los Palmares",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 12984958935,
+  "lat": 4.6828703,
+  "lon": -74.0622329,
+  "tags": {
+    "name": "Hotel la Castellana Inn",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13055574601,
+  "lat": 4.5990903,
+  "lon": -74.0672460,
+  "tags": {
+    "addr:housenumber": "#0-19",
+    "addr:postcode": "111711",
+    "addr:street": "Calle 12F",
+    "internet_access": "wlan",
+    "name": "Las Aguas Experience",
+    "phone": "+57 311 2161923",
+    "tourism": "hotel",
+    "website": "https://www.lasaguasexperience.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13140109814,
+  "lat": 4.6925632,
+  "lon": -74.1079477,
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "69A-47",
+    "addr:street": "Carrera 86",
+    "name": "Hotel Santo Tomas",
+    "note": "Según https://www.datos.gov.co/resource/n5yy-8nav.json en código 4805 ahi hubo o hay un instituto técnico",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13207459919,
+  "lat": 4.6336143,
+  "lon": -74.0939067,
+  "tags": {
+    "check_date": "2025-10-10",
+    "name": "Boutique Superior",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13322695401,
+  "lat": 4.6838144,
+  "lon": -74.0466826,
+  "tags": {
+    "addr:housenumber": "13-55",
+    "addr:street": "Avenida Calle 100",
+    "name": "Vintage Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13478295641,
+  "lat": 4.6805395,
+  "lon": -74.0404759,
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "99-55",
+    "addr:street": "Carrera 8A",
+    "internet_access": "wlan",
+    "name": "Hotel NH Collection Bogotá WTC Royal",
+    "phone": "+57 601 6341734",
+    "tourism": "hotel",
+    "website": "https://www.nh-hotels.com/"
+  }
+},
+{
+  "type": "node",
+  "id": 13513304601,
+  "lat": 4.6104786,
+  "lon": -74.1635503,
+  "tags": {
+    "internet_access": "wlan",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13516864504,
+  "lat": 4.6416827,
+  "lon": -74.0706290,
+  "tags": {
+    "addr:housenumber": "#53-38",
+    "addr:street": "Carrera 19",
+    "name": "Angelos Bogotá Homes",
+    "phone": "+57 300 5914431",
+    "self_service": "no",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13672564075,
+  "lat": 4.6492047,
+  "lon": -74.0593122,
+  "tags": {
+    "name": "Hotel Mercure bh",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13683751636,
+  "lat": 4.6768154,
+  "lon": -74.0471379,
+  "tags": {
+    "addr:housenumber": "93B-30",
+    "addr:street": "Carrera 11a",
+    "name": "Soy Local Parque de la 93",
+    "tourism": "hotel",
+    "website": "https://soylocal.co/hoteles/parque-de-la-93-soy-local/"
+  }
+},
+{
+  "type": "node",
+  "id": 13757170888,
+  "lat": 4.6751509,
+  "lon": -74.0541483,
+  "tags": {
+    "addr:housenumber": "16-30",
+    "addr:street": "Calle 90",
+    "brand": "Residence Inn",
+    "brand:wikidata": "Q7315394",
+    "check_date": "2026-04-23",
+    "name": "Residence Inn Bogota",
+    "official_name": "Residence Inn by Marriott",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 13972872353,
+  "lat": 4.6859119,
+  "lon": -74.1323814,
+  "tags": {
+    "addr:city": "Bogotá D. C.",
+    "addr:postcode": "110911",
+    "addr:street": "Calle 25C Bis A #101b-03",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Aero Hotel Boutique",
+    "phone": "+57 317 8874375",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 14071365902,
+  "lat": 4.6530756,
+  "lon": -74.0548839,
+  "tags": {
+    "addr:housenumber": "5-44",
+    "addr:street": "Calle 70A",
+    "internet_access": "wlan",
+    "name": "Hotel Coco",
+    "tourism": "hotel",
+    "website": "https://www.hotelcoco.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 14077940201,
+  "lat": 4.6857128,
+  "lon": -74.0563304,
+  "tags": {
+    "name": "Mercure Bogotá Calle 100 (Ex Atton)",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 14077940901,
+  "lat": 4.6857128,
+  "lon": -74.0563304,
+  "tags": {
+    "addr:housenumber": "98-27",
+    "addr:postcode": "110010",
+    "addr:street": "Transversal 23",
+    "internet_access": "wlan",
+    "name": "Mercure Bogotá Calle 100",
+    "tourism": "hotel",
+    "website": "https://all.accor.com/hotel/B471/index.en.shtml"
+  }
+},
+{
+  "type": "node",
+  "id": 14138066277,
+  "lat": 4.6264680,
+  "lon": -74.0709345,
+  "tags": {
+    "addr:street": "Calle 38",
+    "name": "Hotel Suamox",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 14138644346,
+  "lat": 4.6264480,
+  "lon": -74.0709149,
+  "tags": {
+    "addr:street": "Calle 38",
+    "name": "Hotel Suamox",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "node",
+  "id": 14143028601,
+  "lat": 4.6979269,
+  "lon": -74.0309741,
+  "tags": {
+    "addr:housenumber": "7-18",
+    "addr:street": "Calle 121",
+    "email": "usaquen@pepeshouse.com",
+    "opening_hours": "24/7",
+    "phone": "+57 318 1813267",
+    "tourism": "hotel",
+    "website": "https://book.octorate.com/octobook/site/reservation/index.xhtml?codice=152409"
+  }
+},
+{
+  "type": "node",
+  "id": 14190199201,
+  "lat": 4.6872558,
+  "lon": -74.0478173,
+  "tags": {
+    "addr:housenumber": "calle 102-27",
+    "addr:street": "Avenida Carrera 15",
+    "contact:instagram": "thehood_col",
+    "email": "gerencia@thehood.com.co",
+    "internet_access": "wlan",
+    "name": "The Hood 102",
+    "phone": "+57 312 5793559",
+    "self_service": "yes",
+    "tourism": "hotel",
+    "website": "https://thehood.com.co/"
+  }
+},
+{
+  "type": "node",
+  "id": 14259301401,
+  "lat": 4.6431252,
+  "lon": -74.0607876,
+  "tags": {
+    "addr:housenumber": "#58-07",
+    "addr:street": "Carrera 5",
+    "email": "reservas@habhotel.co",
+    "internet_access": "wlan",
+    "name": "HAB Hotel",
+    "opening_hours": "24/7",
+    "phone": "+57 318 547 9611",
+    "tourism": "hotel",
+    "website": "https://habhotel.co/"
+  }
+},
+{
+  "type": "way",
+  "id": 24251997,
+  "center": {
+    "lat": 4.6130321,
+    "lon": -74.0706902
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Carrera 10",
+    "addr:street": "26-21",
+    "brand": "GHL",
+    "building": "hotel",
+    "building:levels": "17",
+    "building:material": "brick",
+    "email": "reservas.tequendama@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Hotel Tequendama Bogotá",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 3822900",
+    "rooms": "143",
+    "tourism": "hotel",
+    "website": "https://www.tequendamahotel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 24368597,
+  "center": {
+    "lat": 4.6215584,
+    "lon": -74.0679453
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Master",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 38187757,
+  "center": {
+    "lat": 4.6510724,
+    "lon": -74.0539751
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Emaus",
+    "stars": "3",
+    "tourism": "hotel",
+    "website": "https://www.hotelemausbogota.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 38243484,
+  "center": {
+    "lat": 4.6430236,
+    "lon": -74.0608843
+  },
+  "tags": {
+    "name": "Hotel la Boutique La Salle",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 47591279,
+  "center": {
+    "lat": 4.7025473,
+    "lon": -74.0289701
+  },
+  "tags": {
+    "building": "yes",
+    "building:levels": "18",
+    "building:material": "glass",
+    "name": "Bogotá Regency",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 70079350,
+  "center": {
+    "lat": 4.6857782,
+    "lon": -74.0541531
+  },
+  "tags": {
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 75737877,
+  "center": {
+    "lat": 4.6709253,
+    "lon": -74.0564199
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 85",
+    "building": "yes",
+    "name": "Las Margaritas",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 84719822,
+  "center": {
+    "lat": 4.6290011,
+    "lon": -74.0904833
+  },
+  "tags": {
+    "brand": "Hilton",
+    "brand:wikidata": "Q598884",
+    "brand:wikipedia": "en:Hilton Hotels & Resorts",
+    "building": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "layer": "1",
+    "name": "Hilton Corferias",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 88044345,
+  "center": {
+    "lat": 4.6922346,
+    "lon": -74.0320105
+  },
+  "tags": {
+    "building:part": "yes",
+    "name": "NH Collection Hacienda Royal",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 97634658,
+  "center": {
+    "lat": 4.6950022,
+    "lon": -74.0438436
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 15",
+    "building": "yes",
+    "name": "Hotel Dann Norte",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 233173952,
+  "center": {
+    "lat": 4.6793527,
+    "lon": -74.1519493
+  },
+  "tags": {
+    "name": "La Estancia",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 239141968,
+  "center": {
+    "lat": 4.6967982,
+    "lon": -74.0498904
+  },
+  "tags": {
+    "addr:housenumber": "114-06",
+    "addr:street": "Avenida Carrera 19",
+    "building": "yes",
+    "building:levels": "6",
+    "name": "Hotel Morrison 114",
+    "operator": "Morrison Hotel",
+    "phone": "+57 601 3788300",
+    "tourism": "hotel",
+    "website": "https://hotelmorrison114.com-hotel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 245922316,
+  "center": {
+    "lat": 4.6298761,
+    "lon": -74.0748155
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 24",
+    "building": "yes",
+    "name": "Hotel Park Way",
+    "source": "survey",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 250408558,
+  "center": {
+    "lat": 4.6295408,
+    "lon": -74.0831775
+  },
+  "tags": {
+    "building": "yes",
+    "layer": "2",
+    "name": "Hotel Urban Royal",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 261268916,
+  "center": {
+    "lat": 4.6750782,
+    "lon": -74.0495241
+  },
+  "tags": {
+    "addr:housenumber": "12-41",
+    "addr:street": "Calle 93",
+    "brand": "Novotel",
+    "brand:wikidata": "Q420545",
+    "brand:wikipedia": "en:Novotel",
+    "building": "hotel",
+    "building:levels": "7",
+    "name": "Novotel Bogota Parque 93",
+    "tourism": "hotel",
+    "website": "https://www.accorhotels.com/es/hotel-B468-novotel-bogota-parque-93-ex-atton/"
+  }
+},
+{
+  "type": "way",
+  "id": 282187394,
+  "center": {
+    "lat": 4.6392546,
+    "lon": -74.0978698
+  },
+  "tags": {
+    "addr:city": "embajada",
+    "addr:housenumber": "calle 24",
+    "addr:street": "carrera 51",
+    "building": "yes",
+    "building:levels": "10",
+    "building:material": "brick",
+    "name": "Hotel Tryp",
+    "tourism": "hotel",
+    "website": "http://www.tryphotels.com/es/hotel-tryp-bogota-embajada-colombia.html"
+  }
+},
+{
+  "type": "way",
+  "id": 302817718,
+  "center": {
+    "lat": 4.6757385,
+    "lon": -74.0507203
+  },
+  "tags": {
+    "addr:city": "Bogotá, D.C.",
+    "addr:housenumber": "13-71",
+    "addr:postcode": "110011",
+    "addr:street": "Calle 93",
+    "brand": "Best Western Plus",
+    "brand:wikidata": "Q830334",
+    "building": "yes",
+    "check_date": "2024-11-18",
+    "name": "Best Western Plus 93 Park",
+    "operator": "Best Western",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 334602721,
+  "center": {
+    "lat": 4.6309600,
+    "lon": -74.0652004
+  },
+  "tags": {
+    "addr:housenumber": "7-93",
+    "addr:street": "Calle 44",
+    "building": "yes",
+    "name": "Hotel Bogota Astral",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 334780845,
+  "center": {
+    "lat": 4.6283947,
+    "lon": -74.0654499
+  },
+  "tags": {
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 334797794,
+  "center": {
+    "lat": 4.6323222,
+    "lon": -74.0685849
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Boyaca Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 334963557,
+  "center": {
+    "lat": 4.6744596,
+    "lon": -74.1475880
+  },
+  "tags": {
+    "addr:housenumber": "103A45",
+    "addr:street": "Avenida Calle 17",
+    "building": "yes",
+    "name": "HOTEL LAS PALMAS",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 334963622,
+  "center": {
+    "lat": 4.6272866,
+    "lon": -74.0680513
+  },
+  "tags": {
+    "addr:housenumber": "38 - 47",
+    "addr:street": "Diagonal 40A",
+    "building": "yes",
+    "name": "Hotel Centro Internacional",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 344333624,
+  "center": {
+    "lat": 4.6558026,
+    "lon": -74.0554162
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "building": "yes",
+    "check_date": "2025-06-23",
+    "name": "Hilton",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 344384207,
+  "center": {
+    "lat": 4.6518281,
+    "lon": -74.0535531
+  },
+  "tags": {
+    "addr:housenumber": "4-08",
+    "addr:street": "Calle 70A",
+    "building": "commercial",
+    "building:levels": "6",
+    "internet_access": "wlan",
+    "name": "Mika",
+    "operator": "GHL",
+    "roof:levels": "0",
+    "tourism": "hotel",
+    "website": "https://www.ghlhoteles.com/hotel/ghl-style-mila/56"
+  }
+},
+{
+  "type": "way",
+  "id": 344384212,
+  "center": {
+    "lat": 4.6483359,
+    "lon": -74.0562584
+  },
+  "tags": {
+    "abandoned": "yes",
+    "brand": "Hilton Garden Inn",
+    "brand:wikidata": "Q1162859",
+    "building": "yes",
+    "name": "Hilton Garden Inn",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 344527955,
+  "center": {
+    "lat": 4.6537813,
+    "lon": -74.0544971
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "5-51",
+    "addr:street": "Avenida Calle 72",
+    "building": "commercial",
+    "building:levels": "6",
+    "height": "15",
+    "name": "Artisan D.C.",
+    "source": "Bing",
+    "tourism": "hotel",
+    "website": "https://www.marriott.com/hotels/travel/bogak-the-artisan-dc-hotel-autograph-collection/"
+  }
+},
+{
+  "type": "way",
+  "id": 371982715,
+  "center": {
+    "lat": 4.6386166,
+    "lon": -74.0668675
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51-09",
+    "addr:street": "Avenida Carrera 14",
+    "building": "yes",
+    "name": "Hotel El Gran Marquez",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wikidata": "Q112022554"
+  }
+},
+{
+  "type": "way",
+  "id": 371982784,
+  "center": {
+    "lat": 4.6400653,
+    "lon": -74.0667691
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "52-59",
+    "addr:street": "Avenida Caracas",
+    "building": "yes",
+    "name": "Hotel 53",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 371988061,
+  "center": {
+    "lat": 4.6403233,
+    "lon": -74.0648899
+  },
+  "tags": {
+    "addr:street": "Carrera 13",
+    "building": "yes",
+    "name": "Hotel Royal Suite",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 394470062,
+  "center": {
+    "lat": 4.6667278,
+    "lon": -74.1410862
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "96-68",
+    "addr:street": "Avenida Calle 17",
+    "building": "hotel",
+    "internet_access": "yes",
+    "layer": "1",
+    "name": "Los Balcones",
+    "phone": "+57 601 2980613",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 394470067,
+  "center": {
+    "lat": 4.6709257,
+    "lon": -74.1440121
+  },
+  "tags": {
+    "building": "hotel",
+    "name": "Hotel Fontibón",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 404727651,
+  "center": {
+    "lat": 4.6785058,
+    "lon": -74.1390081
+  },
+  "tags": {
+    "building": "hotel",
+    "name": "Hotel Golden",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 408449136,
+  "center": {
+    "lat": 4.6347473,
+    "lon": -74.0669202
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 14",
+    "building": "yes",
+    "name": "Escuela Cun",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 408488115,
+  "center": {
+    "lat": 4.6352945,
+    "lon": -74.0650382
+  },
+  "tags": {
+    "addr:housenumber": "9-10",
+    "addr:street": "Calle 48",
+    "building": "yes",
+    "level": "4",
+    "name": "Hotel Ilusiones",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 408518050,
+  "center": {
+    "lat": 4.6351681,
+    "lon": -74.0647525
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "48-08",
+    "addr:street": "Carrera 9",
+    "building": "yes",
+    "name": "Baron V",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 409285505,
+  "center": {
+    "lat": 4.6331935,
+    "lon": -74.0672856
+  },
+  "tags": {
+    "addr:housenumber": "43-24",
+    "addr:street": "Avenida Carrera 14",
+    "building": "yes",
+    "name": "Eloise",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 409653619,
+  "center": {
+    "lat": 4.6365718,
+    "lon": -74.0642230
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "49-49",
+    "addr:street": "Carrera 8",
+    "brand": "Ibis Budget",
+    "brand:wikidata": "Q1458135",
+    "building": "hotel",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Ibis Budget Bogota Marly",
+    "phone": "+57 601 4432750",
+    "tourism": "hotel",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 409854432,
+  "center": {
+    "lat": 4.6288128,
+    "lon": -74.0677629
+  },
+  "tags": {
+    "addr:housenumber": "13-68",
+    "addr:street": "Calle 40C",
+    "building": "yes",
+    "name": "Mas Lujo",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 410380509,
+  "center": {
+    "lat": 4.7146581,
+    "lon": -74.2151442
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Swite Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 410380514,
+  "center": {
+    "lat": 4.7147838,
+    "lon": -74.2143017
+  },
+  "tags": {
+    "addr:housenumber": "04",
+    "building": "yes",
+    "name": "Vivaje Hostal",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 410948852,
+  "center": {
+    "lat": 4.6350560,
+    "lon": -74.0654488
+  },
+  "tags": {
+    "addr:street": "Calle 48",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 428997895,
+  "center": {
+    "lat": 4.6417400,
+    "lon": -74.1050393
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "22-99",
+    "addr:postcode": "111321",
+    "addr:street": "Carrera 60",
+    "brand": "DoubleTree",
+    "brand:wikidata": "Q2504643",
+    "building": "hotel",
+    "building:levels": "18",
+    "building:material": "brick",
+    "check_date": "2026-08-19",
+    "internet_access": "wlan",
+    "name": "DoubleTree",
+    "official_name": "DoubleTree by Hilton",
+    "phone": "+57 601 7477333",
+    "roof:material": "concrete",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "https://www.hilton.com/en/hotels/bogdtdt-doubletree-bogota-salitre-ar/"
+  }
+},
+{
+  "type": "way",
+  "id": 428999894,
+  "center": {
+    "lat": 4.6716080,
+    "lon": -74.1437371
+  },
+  "tags": {
+    "building": "hotel",
+    "name": "Casa Baquero",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 430667308,
+  "center": {
+    "lat": 4.6584169,
+    "lon": -74.1081092
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Calle 25B",
+    "addr:street": "69-51",
+    "brand": "GHL",
+    "building": "hotel",
+    "building:material": "brick",
+    "email": "reservas.capital@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "GHL Hotel Capital",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 4233000",
+    "rooms": "216",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "https://www.hotelcapital.com.co/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 474007978,
+  "center": {
+    "lat": 4.6809442,
+    "lon": -74.1220470
+  },
+  "tags": {
+    "addr:housename": "95-66",
+    "addr:street": "Diagonal 25G",
+    "building": "yes",
+    "building:levels": "7",
+    "name": "City Express",
+    "phone": "+57 601 7448358",
+    "tourism": "hotel",
+    "website": "https://www.cityexpress.com/plus/hoteles-colombia/bogota/bogota/aeropuerto#"
+  }
+},
+{
+  "type": "way",
+  "id": 474012766,
+  "center": {
+    "lat": 4.6877196,
+    "lon": -74.1273321
+  },
+  "tags": {
+    "addr:housenumber": "96J-90",
+    "addr:street": "Avenida Calle 26",
+    "brand": "Courtyard",
+    "brand:wikidata": "Q1053170",
+    "building": "hotel",
+    "building:levels": "9",
+    "layer": "1",
+    "name": "Courtyard",
+    "official_name": "Courtyard by Marriott",
+    "operator": "Marriott",
+    "phone": "+57 601 4841888",
+    "tourism": "hotel",
+    "website": "https://www.espanol.marriott.com/hotels/travel/bogcy-courtyard-by-marriott-bogota-airport/"
+  }
+},
+{
+  "type": "way",
+  "id": 474012767,
+  "center": {
+    "lat": 4.6899577,
+    "lon": -74.1301169
+  },
+  "tags": {
+    "addr:city": "Bogotá D. C.",
+    "addr:housenumber": "102-20",
+    "addr:street": "Avenida Calle 26",
+    "air_conditioning": "yes",
+    "bar": "yes",
+    "brand": "Movich Hotels",
+    "contact:facebook": "https://www.facebook.com/p/Movich-Hotels-100064163885147/",
+    "description": "Close to El Dorado International Airport, the Movich Buró 26 is strategically located in Bogotá, providing comfortable accommodation, transportation to the airport, national cuisine, bar, spa, wet areas, massage service, meeting rooms, parking...",
+    "email": "reservas@movichhotels.com",
+    "image": "https://www.movichhotels.com/cache/4a/e6/4ae6d0361f7e00e15514e216ead403e8.jpg",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "Movich Buró 26",
+    "opening_hours": "24/7",
+    "operator": "Movich Hotels",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 5169898",
+    "reservation": "yes",
+    "rooms": "249",
+    "smoking": "outside",
+    "source": "survey;www.movichhotels.com",
+    "stars": "4",
+    "tourism": "hotel",
+    "website": "https://www.movichhotels.com/esp/bogota/buro26/Pages/index.aspx",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 511580129,
+  "center": {
+    "lat": 4.6306634,
+    "lon": -74.0885651
+  },
+  "tags": {
+    "name": "Hotel Sheridan",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 526259459,
+  "center": {
+    "lat": 4.6956185,
+    "lon": -74.0318789
+  },
+  "tags": {
+    "addr:street": "Carrera 7",
+    "building": "yes",
+    "building:levels": "6",
+    "building:use": "hotel",
+    "check_date": "2024-04-07",
+    "name": "Hampton by Hilton",
+    "roof:shape": "flat",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527179149,
+  "center": {
+    "lat": 4.6325526,
+    "lon": -74.0712512
+  },
+  "tags": {
+    "building": "yes",
+    "name": "la Tua casa",
+    "operator": "la Nuevaa casa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527636309,
+  "center": {
+    "lat": 4.7128209,
+    "lon": -74.2097576
+  },
+  "tags": {
+    "addr:street": "Carrera 9",
+    "building": "yes",
+    "name": "Hotel San Angel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527636314,
+  "center": {
+    "lat": 4.7102114,
+    "lon": -74.2138764
+  },
+  "tags": {
+    "addr:street": "Carrera 9",
+    "building": "yes",
+    "name": "Hotel El Paraiso",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527636321,
+  "center": {
+    "lat": 4.7090762,
+    "lon": -74.2157266
+  },
+  "tags": {
+    "addr:street": "Carrera 9",
+    "building": "yes",
+    "name": "Hospedaje Olimpus",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527986298,
+  "center": {
+    "lat": 4.6619042,
+    "lon": -74.0552631
+  },
+  "tags": {
+    "addr:housenumber": "77-20",
+    "addr:street": "Carrera 11",
+    "building": "yes",
+    "name": "Travel In",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 527994701,
+  "center": {
+    "lat": 4.6753543,
+    "lon": -74.0474642
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "93-77",
+    "addr:postcode": "110221",
+    "addr:street": "Carrera 11",
+    "air_conditioning": "yes",
+    "bar": "yes",
+    "brand": "Click Clack Hotels",
+    "building": "hotel",
+    "contact:facebook": "https://www.facebook.com/clickclackhotel/",
+    "contact:instagram": "https://www.instagram.com/clickclackhotels/",
+    "description": "The Click Clack Hotel Bogotá es un hotel moderno boutique junto al Parque de la 93 en Bogotá con habitaciones de diseño, espacios gastronómicos y servicios para eventos.",
+    "email": "info@clickclackhotel.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "loc_name": "Click Clack Bogotá",
+    "name": "The Click Clack Hotel Bogotá",
+    "opening_hours": "24/7",
+    "operator": "MONKEY BUSINESS GROUP SOCIEDAD POR ACCIONES SIMPLIFICADA",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "payment:maestro": "yes",
+    "payment:mastercard": "yes",
+    "payment:visa": "yes",
+    "phone": "+57 601 7430404",
+    "reservation": "yes",
+    "rooms": "60",
+    "short_name": "Click Clack Bogotá",
+    "smoking": "no",
+    "source": "Kaart Ground Survey 2017",
+    "stars": "4",
+    "tourism": "hotel",
+    "website": "https://www.clickclackhotel.com/es/hoteles/colombia/bogota/clickclackbogota/?",
+    "wheelchair": "yes",
+    "wikidata": "Q111415145"
+  }
+},
+{
+  "type": "way",
+  "id": 528172116,
+  "center": {
+    "lat": 4.6969752,
+    "lon": -74.0437553
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 116",
+    "building": "yes",
+    "check_date": "2025-05-26",
+    "name": "Santafé Boutique",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 528186384,
+  "center": {
+    "lat": 4.6860880,
+    "lon": -74.0502650
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 100",
+    "building": "yes",
+    "name": "GHL Comfort",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 528186387,
+  "center": {
+    "lat": 4.6863628,
+    "lon": -74.0514281
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 100",
+    "building": "yes",
+    "check_date": "2025-04-04",
+    "name": "Bogota Plaza",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 528188078,
+  "center": {
+    "lat": 4.6866622,
+    "lon": -74.0539048
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 100",
+    "building": "yes",
+    "name": "NH Collection",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 528197798,
+  "center": {
+    "lat": 4.6307737,
+    "lon": -74.0647064
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 7",
+    "building": "yes",
+    "name": "Hotel Létoile",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 528226826,
+  "center": {
+    "lat": 4.6521126,
+    "lon": -74.0624935
+  },
+  "tags": {
+    "addr:street": "Calle 66",
+    "building": "yes",
+    "name": "Hotel Brisos del Oasis",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 528560980,
+  "center": {
+    "lat": 4.6863088,
+    "lon": -74.0856327
+  },
+  "tags": {
+    "addr:street": "Calle 77",
+    "building": "yes",
+    "name": "Hotel Ferias Park",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 529068699,
+  "center": {
+    "lat": 4.6329313,
+    "lon": -74.0709841
+  },
+  "tags": {
+    "addr:street": "Calle 45",
+    "building": "house",
+    "building:levels": "2",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 529288207,
+  "center": {
+    "lat": 4.6331176,
+    "lon": -74.0742020
+  },
+  "tags": {
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 529745577,
+  "center": {
+    "lat": 4.6987697,
+    "lon": -74.0714422
+  },
+  "tags": {
+    "addr:street": "Diagonal 115A",
+    "building": "yes",
+    "name": "Hotel Casa Shaioo",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 529778065,
+  "center": {
+    "lat": 4.6722791,
+    "lon": -74.0492957
+  },
+  "tags": {
+    "addr:street": "Calle 90",
+    "building": "yes",
+    "name": "EK Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 529792629,
+  "center": {
+    "lat": 4.6688374,
+    "lon": -74.0526115
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "12-28",
+    "addr:street": "Avenida Calle 85",
+    "building": "yes",
+    "name": "NH Collection Royal Andino",
+    "phone": "+57 601 6513131",
+    "tourism": "hotel",
+    "website": "https://www.nh-collection.com/hotel/nh-collection-bogota-andino-royal"
+  }
+},
+{
+  "type": "way",
+  "id": 530110934,
+  "center": {
+    "lat": 4.6839594,
+    "lon": -74.0527298
+  },
+  "tags": {
+    "addr:housenumber": "19-15",
+    "addr:street": "Calle 97",
+    "building": "yes",
+    "building:levels": "7",
+    "building:material": "brick",
+    "name": "Parque 97",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 530126746,
+  "center": {
+    "lat": 4.6664295,
+    "lon": -74.1063772
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 70",
+    "building": "yes",
+    "name": "Hotel Quintas de Normandia",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530127360,
+  "center": {
+    "lat": 4.6672927,
+    "lon": -74.1103758
+  },
+  "tags": {
+    "addr:street": "Calle 48A",
+    "building": "yes",
+    "check_date": "2024-05-18",
+    "name": "Hotel del Puente Bogotá",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530343125,
+  "center": {
+    "lat": 4.6677121,
+    "lon": -74.1083648
+  },
+  "tags": {
+    "addr:street": "Carrera 71B",
+    "building": "yes",
+    "name": "Hotel Airport Travel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530358521,
+  "center": {
+    "lat": 4.6694063,
+    "lon": -74.1083408
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "name": "Hotel Normandia",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530358522,
+  "center": {
+    "lat": 4.6694494,
+    "lon": -74.1082927
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "name": "Hotel Avenida Boyaea",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530358526,
+  "center": {
+    "lat": 4.6696560,
+    "lon": -74.1080520
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "check_date": "2024-05-18",
+    "name": "Elegant Suite Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 530629946,
+  "center": {
+    "lat": 4.6875738,
+    "lon": -74.0540994
+  },
+  "tags": {
+    "addr:housenumber": "20-65",
+    "addr:street": "Carrera 21",
+    "building": "yes",
+    "name": "Suites 101 Park House S.A.",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 531280965,
+  "center": {
+    "lat": 4.6854156,
+    "lon": -74.0544330
+  },
+  "tags": {
+    "addr:street": "Transversal 21",
+    "brand": "DoubleTree",
+    "brand:wikidata": "Q2504643",
+    "building": "yes",
+    "name": "Double Tree",
+    "official_name": "DoubleTree by Hilton",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 531834925,
+  "center": {
+    "lat": 4.6297206,
+    "lon": -74.0784655
+  },
+  "tags": {
+    "addr:street": "Avenida 28",
+    "building": "yes",
+    "name": "Casa Royal",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 531840371,
+  "center": {
+    "lat": 4.6264527,
+    "lon": -74.0794865
+  },
+  "tags": {
+    "addr:street": "Transversal 29",
+    "building": "yes",
+    "name": "San Nicolás Bogotá",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 531999541,
+  "center": {
+    "lat": 4.6864374,
+    "lon": -74.0613503
+  },
+  "tags": {
+    "addr:housenumber": "49-29",
+    "addr:street": "Calle 98A",
+    "building": "yes",
+    "name": "Hotel Bogota Norte",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 532001915,
+  "center": {
+    "lat": 4.6543859,
+    "lon": -74.0700696
+  },
+  "tags": {
+    "addr:city": "Barrios Unidos",
+    "addr:housenumber": "24-16",
+    "addr:street": "Calle 63D",
+    "building": "yes",
+    "name": "Hotel Estadia 63",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 532022156,
+  "center": {
+    "lat": 4.6526887,
+    "lon": -74.0647274
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 65",
+    "building": "yes",
+    "name": "Paraiso Santo Domingo",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 532022157,
+  "center": {
+    "lat": 4.6525841,
+    "lon": -74.0644622
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 65",
+    "building": "yes",
+    "name": "Amarette",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 532080179,
+  "center": {
+    "lat": 4.6835650,
+    "lon": -74.0590760
+  },
+  "tags": {
+    "addr:street": "Calle 95",
+    "building": "yes",
+    "name": "Confort 80",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 533017256,
+  "center": {
+    "lat": 4.6467632,
+    "lon": -74.0647523
+  },
+  "tags": {
+    "addr:street": "Calle 59A",
+    "alt_name": "Motel Meridian",
+    "building": "yes",
+    "name": "Meridian Suites",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 533040993,
+  "center": {
+    "lat": 4.6522131,
+    "lon": -74.0636324
+  },
+  "tags": {
+    "addr:street": "Calle 65",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 533434001,
+  "center": {
+    "lat": 4.6495238,
+    "lon": -74.0808376
+  },
+  "tags": {
+    "addr:street": "Carrera 36A",
+    "building": "yes",
+    "name": "Burana Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 533921684,
+  "center": {
+    "lat": 4.7028735,
+    "lon": -74.0322537
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110111",
+    "addr:street": "Calle 127",
+    "addr:unit": "7D - 11",
+    "building": "commercial",
+    "building:levels": "8",
+    "internet_access": "wlan",
+    "internet_access:fee": "no",
+    "name": "Hotel Black",
+    "rooms": "70",
+    "stars": "4",
+    "tourism": "hotel",
+    "website": "https://blackbogota.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 533922188,
+  "center": {
+    "lat": 4.7020920,
+    "lon": -74.0296520
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110111",
+    "addr:street": "Calle 127",
+    "addr:unit": "7 - 89",
+    "building": "yes",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Hotel Santa Barbara Real",
+    "operator": "SB hoteles",
+    "rooms": "40",
+    "stars": "4",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 537244952,
+  "center": {
+    "lat": 4.6025110,
+    "lon": -74.0694644
+  },
+  "tags": {
+    "addr:street": "Carrera 4",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 537244958,
+  "center": {
+    "lat": 4.6016612,
+    "lon": -74.0699772
+  },
+  "tags": {
+    "addr:street": "Carrera 4",
+    "building": "yes",
+    "name": "Hotel Lima",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 537774014,
+  "center": {
+    "lat": 4.6522548,
+    "lon": -74.0562738
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "69A-22",
+    "addr:street": "Avenida Carrera 7",
+    "brand": "Four Seasons",
+    "brand:wikidata": "Q1424786",
+    "brand:wikipedia": "en:Four Seasons Hotels and Resorts",
+    "building": "yes",
+    "check_date": "2025-05-08",
+    "name": "Four Seasons Hotel Casa Medina Bogota",
+    "tourism": "hotel",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 538803418,
+  "center": {
+    "lat": 4.6139943,
+    "lon": -74.0755880
+  },
+  "tags": {
+    "addr:street": "Calle 24",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 538837042,
+  "center": {
+    "lat": 4.5575029,
+    "lon": -74.1217684
+  },
+  "tags": {
+    "addr:street": "Avenida Caracas- Calle 51 Sur",
+    "building": "yes",
+    "name": "Hotel Los Molinos",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 539465766,
+  "center": {
+    "lat": 4.6468033,
+    "lon": -74.0690869
+  },
+  "tags": {
+    "addr:street": "Carrera 18",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540288465,
+  "center": {
+    "lat": 4.6311941,
+    "lon": -74.0860334
+  },
+  "tags": {
+    "addr:street": "Carrera 37",
+    "building": "yes",
+    "name": "Borboleta Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540448520,
+  "center": {
+    "lat": 4.6257563,
+    "lon": -74.0848073
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 25",
+    "building": "roof",
+    "name": "Hotel Dorado Plaza",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540448523,
+  "center": {
+    "lat": 4.6314726,
+    "lon": -74.0862430
+  },
+  "tags": {
+    "addr:city": "Bogota D.C.",
+    "addr:street": "Carrera 37",
+    "building": "yes",
+    "name": "ExpoHotel Bogotá",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540448529,
+  "center": {
+    "lat": 4.6280228,
+    "lon": -74.0854972
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 33",
+    "building": "yes",
+    "name": "Hotel Emporium",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540527635,
+  "center": {
+    "lat": 4.6340826,
+    "lon": -74.0934166
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "24A 74",
+    "addr:street": "Carrera 44A",
+    "building": "yes",
+    "name": "Metro 26",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540527637,
+  "center": {
+    "lat": 4.6339841,
+    "lon": -74.0935770
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 44A",
+    "building": "yes",
+    "name": "Hotel Casa La Embajada Colonial",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540527638,
+  "center": {
+    "lat": 4.6337385,
+    "lon": -74.0939418
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 24A",
+    "building": "yes",
+    "name": "AZ Bogotá",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540527640,
+  "center": {
+    "lat": 4.6332170,
+    "lon": -74.0925065
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 43A",
+    "building": "yes",
+    "name": "Casa Quinta Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540533631,
+  "center": {
+    "lat": 4.5851775,
+    "lon": -74.0986348
+  },
+  "tags": {
+    "addr:housenumber": "15-13",
+    "addr:street": "Carrera 16",
+    "building": "yes",
+    "name": "Suite Resort",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540540540,
+  "center": {
+    "lat": 4.6314394,
+    "lon": -74.0940960
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 43",
+    "building": "yes",
+    "name": "Casa Hotel San Agustin",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540540546,
+  "center": {
+    "lat": 4.6338874,
+    "lon": -74.0959342
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 22B",
+    "building": "yes",
+    "name": "Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540540551,
+  "center": {
+    "lat": 4.6322518,
+    "lon": -74.0911195
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 24C",
+    "building": "yes",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540540553,
+  "center": {
+    "lat": 4.6332940,
+    "lon": -74.0918353
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Carrera 43A y Calle 24C",
+    "building": "yes",
+    "name": "Hotel Colombians Suite",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740672,
+  "center": {
+    "lat": 4.6352761,
+    "lon": -74.0930922
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:street": "Calle 24C",
+    "building": "yes",
+    "name": "Hotel Casanavi",
+    "phone": "+57 310 6953127",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel",
+    "website": "www.casanavi.com"
+  }
+},
+{
+  "type": "way",
+  "id": 540740673,
+  "center": {
+    "lat": 4.6334143,
+    "lon": -74.0940791
+  },
+  "tags": {
+    "addr:housenumber": "No. 44-09",
+    "addr:street": "Calle 24A",
+    "building": "yes",
+    "name": "Zafira",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740674,
+  "center": {
+    "lat": 4.6331091,
+    "lon": -74.0938896
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "No. 43B290",
+    "addr:postcode": "11001",
+    "addr:street": "Calle 24A",
+    "building": "yes",
+    "name": "Lamay Hotel Casa",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740676,
+  "center": {
+    "lat": 4.6336382,
+    "lon": -74.0912923
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "No. 24d-18",
+    "addr:street": "Carrera 43A",
+    "building": "yes",
+    "name": "Terraza Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740677,
+  "center": {
+    "lat": 4.6336825,
+    "lon": -74.0905859
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 25B",
+    "building": "yes",
+    "name": "Balcones De Isabela",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740678,
+  "center": {
+    "lat": 4.6335315,
+    "lon": -74.0903043
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "No. 40-67",
+    "addr:street": "Calle 25B",
+    "building": "yes",
+    "name": "Estela",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740691,
+  "center": {
+    "lat": 4.6307811,
+    "lon": -74.0932641
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "22B- 17",
+    "addr:street": "Avenida Carrera 40",
+    "building": "yes",
+    "name": "Hotel Esmeralda Boutique",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740694,
+  "center": {
+    "lat": 4.6314962,
+    "lon": -74.0938120
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "42-52",
+    "addr:street": "Calle 22B",
+    "building": "yes",
+    "name": "Blue House",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740699,
+  "center": {
+    "lat": 4.6324416,
+    "lon": -74.0944269
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 22B",
+    "building": "yes",
+    "name": "DC Firreo Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540740700,
+  "center": {
+    "lat": 4.6331091,
+    "lon": -74.0948727
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.33",
+    "addr:housenumber": "No. 44-36",
+    "addr:street": "Calle 22B",
+    "building": "yes",
+    "name": "Hotel King Bogota",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540741642,
+  "center": {
+    "lat": 4.6300353,
+    "lon": -74.0944533
+  },
+  "tags": {
+    "addr:housenumber": "22-69",
+    "addr:street": "Avenida Carrera 40",
+    "building": "roof",
+    "name": "Hotel Quinta Paredes INN",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540741643,
+  "center": {
+    "lat": 4.6299883,
+    "lon": -74.0945366
+  },
+  "tags": {
+    "addr:housenumber": "22-59",
+    "addr:street": "Avenida Carrera 40",
+    "building": "yes",
+    "name": "Hotel Ferrovial",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540741645,
+  "center": {
+    "lat": 4.6297262,
+    "lon": -74.0948380
+  },
+  "tags": {
+    "addr:street": "Avenida Carrera 40",
+    "building": "yes",
+    "name": "Hotel La Estacion",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540741646,
+  "center": {
+    "lat": 4.6312660,
+    "lon": -74.0964187
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 22",
+    "building": "yes",
+    "name": "Rivera Inn",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540742734,
+  "center": {
+    "lat": 4.6332311,
+    "lon": -74.0947453
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Estelar De La Feria",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540742736,
+  "center": {
+    "lat": 4.6326571,
+    "lon": -74.0943477
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Hotel San Rafael",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540742738,
+  "center": {
+    "lat": 4.6324114,
+    "lon": -74.0941909
+  },
+  "tags": {
+    "addr:housenumber": "43-21",
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Black Tower Premium Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540742742,
+  "center": {
+    "lat": 4.6317044,
+    "lon": -74.0936966
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Hotel Santafé Real",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540742744,
+  "center": {
+    "lat": 4.6312352,
+    "lon": -74.0933864
+  },
+  "tags": {
+    "addr:housenumber": "40-11",
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Hotel Santafé Real",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540751528,
+  "center": {
+    "lat": 4.6317997,
+    "lon": -74.0932832
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Hotel Platinum",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540751529,
+  "center": {
+    "lat": 4.6316461,
+    "lon": -74.0931832
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Isot Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 540751530,
+  "center": {
+    "lat": 4.6314697,
+    "lon": -74.0930540
+  },
+  "tags": {
+    "addr:street": "Avenida Calle 24",
+    "building": "yes",
+    "name": "Splendor",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 541107720,
+  "center": {
+    "lat": 4.6742440,
+    "lon": -74.0480686
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "11-19",
+    "addr:postcode": "110221",
+    "addr:street": "Calle 93",
+    "building": "yes",
+    "name": "Estelar",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 541158441,
+  "center": {
+    "lat": 4.6693050,
+    "lon": -74.1092129
+  },
+  "tags": {
+    "addr:street": "Carrera 72",
+    "building": "yes",
+    "name": "Econo Hotel",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 543517279,
+  "center": {
+    "lat": 4.6133703,
+    "lon": -74.1355138
+  },
+  "tags": {
+    "addr:street": "Calle 31 Sur",
+    "building": "yes",
+    "name": "Doke Vila",
+    "source": "Kaart Ground Survey 2017",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 571892326,
+  "center": {
+    "lat": 4.6806017,
+    "lon": -74.0541696
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "building": "yes",
+    "building:levels": "7",
+    "building:material": "brick",
+    "name": "Casa Dann Carlton",
+    "stars": "5",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 581377919,
+  "center": {
+    "lat": 4.6733040,
+    "lon": -74.1173831
+  },
+  "tags": {
+    "addr:city": "Fontibón",
+    "addr:housenumber": "25G-84",
+    "addr:street": "Carrera 82",
+    "brand": "Hilton Garden Inn",
+    "brand:wikidata": "Q1162859",
+    "brand:wikipedia": "en:Hilton Garden Inn",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "Hotel Hilton Garden Inn Bogota Airport",
+    "stars": "5",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 599470604,
+  "center": {
+    "lat": 4.6569829,
+    "lon": -74.0554455
+  },
+  "tags": {
+    "addr:housenumber": "8-60",
+    "addr:street": "Calle 73",
+    "building": "yes",
+    "name": "JW Marriott",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 610331729,
+  "center": {
+    "lat": 4.6534749,
+    "lon": -74.0529440
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "72-22",
+    "addr:postcode": "110231",
+    "addr:street": "Carrera 4",
+    "brand": "Hotel bs Rosales",
+    "building": "yes",
+    "email": "recepcion@hotelbsrosales.com",
+    "internet_access": "wlan",
+    "name": "Hotel bs Rosales",
+    "phone": "+57 601 7561979",
+    "rooms": "49",
+    "tourism": "hotel",
+    "website": "https://www.hotelbsrosales.com"
+  }
+},
+{
+  "type": "way",
+  "id": 637022500,
+  "center": {
+    "lat": 4.6437736,
+    "lon": -74.0640877
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 57",
+    "building": "yes",
+    "name": "Wicirare Hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 637022502,
+  "center": {
+    "lat": 4.6445095,
+    "lon": -74.0637812
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 58 Bis",
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 637022504,
+  "center": {
+    "lat": 4.6447688,
+    "lon": -74.0632723
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 58 Bis",
+    "brand": "Sheraton",
+    "brand:wikidata": "Q634831",
+    "building": "yes",
+    "name": "Sheraton",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 638012319,
+  "center": {
+    "lat": 4.6147312,
+    "lon": -74.0689840
+  },
+  "tags": {
+    "brand": "Ibis",
+    "brand:wikidata": "Q920166",
+    "building": "yes",
+    "building:levels": "14",
+    "name": "Ibis Bogota Museo",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 686495709,
+  "center": {
+    "lat": 4.5769831,
+    "lon": -74.1231371
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Golden Dream",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 693621804,
+  "center": {
+    "lat": 4.6242992,
+    "lon": -74.0713807
+  },
+  "tags": {
+    "building": "yes",
+    "name": "laney lodge",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 693621819,
+  "center": {
+    "lat": 4.6242854,
+    "lon": -74.0704186
+  },
+  "tags": {
+    "building": "hotel",
+    "layer": "1",
+    "name": "Cabrera Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 693636213,
+  "center": {
+    "lat": 4.6234398,
+    "lon": -74.0710306
+  },
+  "tags": {
+    "building": "yes",
+    "name": "La Casa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 693638930,
+  "center": {
+    "lat": 4.6246215,
+    "lon": -74.0712470
+  },
+  "tags": {
+    "addr:city": "Bogota",
+    "addr:housenumber": "35-41",
+    "building": "yes",
+    "name": "la casa",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 694200027,
+  "center": {
+    "lat": 4.6254784,
+    "lon": -74.0730173
+  },
+  "tags": {
+    "addr:housenumber": "18-40",
+    "addr:street": "Calle 36",
+    "building": "yes",
+    "building:levels": "2",
+    "layer": "-1",
+    "name": "Eco-boutique hotel",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 694274963,
+  "center": {
+    "lat": 4.6379960,
+    "lon": -74.0629851
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "51a-14",
+    "addr:street": "Avenida Carrera 7",
+    "building": "yes",
+    "name": "51 Plaza",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 696158841,
+  "center": {
+    "lat": 4.6441120,
+    "lon": -74.0997537
+  },
+  "tags": {
+    "brand": "Grand Hyatt",
+    "brand:wikidata": "Q1425063",
+    "brand:wikipedia": "en:Hyatt",
+    "building": "yes",
+    "building:levels": "14",
+    "building:material": "glass",
+    "name": "Grand Hyatt",
+    "operator": "Hyatt",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 712521673,
+  "center": {
+    "lat": 4.6159190,
+    "lon": -74.0909540
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel SENA",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 720042786,
+  "center": {
+    "lat": 4.6685860,
+    "lon": -74.1422551
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel ARV",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 723201792,
+  "center": {
+    "lat": 4.6026313,
+    "lon": -74.0705291
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 17 # 4 80",
+    "building": "yes",
+    "email": "hotel@sanmomritz.com.co",
+    "internet_access": "wlan",
+    "name": "Hotel Museo San Moritz",
+    "phone": "745 66 62 - 742 71 10 - 322 304 5279",
+    "rooms": "32",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 746390627,
+  "center": {
+    "lat": 4.6881879,
+    "lon": -74.1307465
+  },
+  "tags": {
+    "addr:city": "Bogotá D. C.",
+    "addr:housenumber": "100-97",
+    "addr:street": "Avenida el Dorado",
+    "check_date": "2024-05-18",
+    "name": "Habitel Centro de Convenciones",
+    "phone": "+57 601 4199999",
+    "tourism": "hotel",
+    "website": "http://www.hotelhabitel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 838404474,
+  "center": {
+    "lat": 4.6327474,
+    "lon": -74.0957528
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Feria Nova",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 937918188,
+  "center": {
+    "lat": 4.7140763,
+    "lon": -74.2415993
+  },
+  "tags": {
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 940189234,
+  "center": {
+    "lat": 4.7471917,
+    "lon": -74.1442593
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Factory Green",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 968008647,
+  "center": {
+    "lat": 4.6690880,
+    "lon": -74.0531763
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:housenumber": "12-66",
+    "addr:postcode": "110221",
+    "addr:street": "Avenida Calle 85",
+    "brand": "AC Hotel",
+    "brand:wikidata": "Q5653536",
+    "building": "commercial",
+    "building:levels": "15",
+    "check_date": "2024-11-18",
+    "name": "AC Hotel",
+    "phone": "+57 601 5082210",
+    "tourism": "hotel",
+    "website": "https://www.marriott.com/en-us/hotels/bogar-ac-hotel-bogota-zona-t/overview/?EM=DNM_ACHOTELBOGOTA.COM"
+  }
+},
+{
+  "type": "way",
+  "id": 1016658344,
+  "center": {
+    "lat": 4.5832437,
+    "lon": -74.2135426
+  },
+  "tags": {
+    "addr:postcode": "250051",
+    "addr:street": "Carrera 7A",
+    "building": "yes",
+    "name": "Hotel Everest R",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1018829370,
+  "center": {
+    "lat": 4.7050686,
+    "lon": -74.0435677
+  },
+  "tags": {
+    "barrier": "yes",
+    "name": "Hotel Fontana Plaza",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1026286197,
+  "center": {
+    "lat": 4.6690694,
+    "lon": -74.0544435
+  },
+  "tags": {
+    "addr:housenumber": "13-54",
+    "addr:street": "Calle 84 Bis",
+    "building": "yes",
+    "name": "Hotel Morrison",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1102985920,
+  "center": {
+    "lat": 4.5922409,
+    "lon": -74.1991416
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Polaris",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1167522337,
+  "center": {
+    "lat": 4.6635907,
+    "lon": -74.0533421
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "10-11",
+    "addr:street": "Calle 80",
+    "brand": "Mercure",
+    "brand:wikidata": "Q1709809",
+    "building": "hotel",
+    "building:levels": "2",
+    "name": "Mercure",
+    "roof:levels": "0",
+    "tourism": "hotel",
+    "website": "https://www.bhhoteles.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1169395975,
+  "center": {
+    "lat": 4.6771501,
+    "lon": -74.0469036
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "NH Royal Pavillon",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1169512972,
+  "center": {
+    "lat": 4.6747436,
+    "lon": -74.0489226
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Calle 93",
+    "addr:street": "11 a - 31",
+    "brand": "GHL",
+    "building": "yes",
+    "email": "reservas.hotel93@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "GHL Collection Hotel 93",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 7457924",
+    "rooms": "40",
+    "tourism": "hotel",
+    "website": "https://www.hotelghl93.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1174018464,
+  "center": {
+    "lat": 4.6809354,
+    "lon": -74.0461394
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:street": "Calle 97-11B",
+    "building": "yes",
+    "building:levels": "8",
+    "name": "Hotel Chicó 97",
+    "operator": "oxoHotel",
+    "tourism": "hotel",
+    "website": "https://hotelchico97.com",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1174082290,
+  "center": {
+    "lat": 4.6806551,
+    "lon": -74.0491545
+  },
+  "tags": {
+    "addr:city": "Bogotá",
+    "addr:postcode": "110221",
+    "addr:street": "CARRERA 14 #95-21",
+    "brand": "Exe Hotels",
+    "brand:wikidata": "Q30880716",
+    "building": "yes",
+    "email": "reservas@hotelexebacata95.com",
+    "name": "Exe Bacatá 95",
+    "phone": "+57 601 7466660",
+    "tourism": "hotel",
+    "website": "https://www.eurostarshotels.com/exe-bacata-95.html"
+  }
+},
+{
+  "type": "way",
+  "id": 1174610785,
+  "center": {
+    "lat": 4.6693368,
+    "lon": -74.0500101
+  },
+  "tags": {
+    "addr:housenumber": "86-74",
+    "addr:street": "Avenida Carrera 11",
+    "building": "yes",
+    "building:levels": "1",
+    "name": "B.O.G.",
+    "phone": "+57 601 6399999",
+    "tourism": "hotel",
+    "website": "https://www.boghotel.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 1256044632,
+  "center": {
+    "lat": 4.6658103,
+    "lon": -74.0505653
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "9-48",
+    "addr:street": "Calle 83",
+    "brand": "GHL",
+    "building": "hotel",
+    "email": "reservas.bioxury@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "customers",
+    "name": "GHL Bioxury Hotel",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 7442800",
+    "rooms": "94",
+    "tourism": "hotel",
+    "website": "https://www.bioxury.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1262939496,
+  "center": {
+    "lat": 4.5805353,
+    "lon": -74.2198768
+  },
+  "tags": {
+    "addr:street": "Calle 12",
+    "building": "yes",
+    "name": "Hotel El Sol",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1314444410,
+  "center": {
+    "lat": 4.5726587,
+    "lon": -74.2247878
+  },
+  "tags": {
+    "addr:housenumber": "1-48",
+    "addr:street": "Carrera 3",
+    "building": "yes",
+    "name": "Hotel El Patriota",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1333947227,
+  "center": {
+    "lat": 4.5721076,
+    "lon": -74.2245464
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Donato",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1355842203,
+  "center": {
+    "lat": 4.6079831,
+    "lon": -74.0688665
+  },
+  "tags": {
+    "building": "yes",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1447049705,
+  "center": {
+    "lat": 4.6604608,
+    "lon": -74.0640348
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Fénix Real",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1447049708,
+  "center": {
+    "lat": 4.6604490,
+    "lon": -74.0645308
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Inn 72",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1488684864,
+  "center": {
+    "lat": 4.7401224,
+    "lon": -74.0861799
+  },
+  "tags": {
+    "building": "yes",
+    "name": "Hotel Montecarlo",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1546448247,
+  "center": {
+    "lat": 4.7001754,
+    "lon": -74.0294996
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Carrea 7 BIs",
+    "addr:street": "124-36",
+    "brand": "GHL",
+    "building": "yes",
+    "email": "reservas.biohotel@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Biohotel Organic Suites Bogotá",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 7420246",
+    "rooms": "70",
+    "tourism": "hotel",
+    "website": "https://www.biohotelcolombia.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1547965222,
+  "center": {
+    "lat": 4.7499828,
+    "lon": -74.0940232
+  },
+  "tags": {
+    "addr:city": "Bogota, D.C",
+    "addr:housenumber": "22",
+    "addr:street": "Calle 150C #103 F",
+    "building": "yes",
+    "name": "HOTEL BOUTIQUE 11-77",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "way",
+  "id": 1550912406,
+  "center": {
+    "lat": 4.7036024,
+    "lon": -74.0431832
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "Carrera 15a",
+    "addr:street": "125 - 26",
+    "brand": "Sonesta",
+    "building": "yes",
+    "email": "reservas.sonestabogota@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Sonesta Hotel Bogotá",
+    "not:brand:wikidata": "Q81003878",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 6585500",
+    "rooms": "126",
+    "tourism": "hotel",
+    "website": "https://www.sonestabogota.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1560220210,
+  "center": {
+    "lat": 4.6669373,
+    "lon": -74.0556876
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:housenumber": "81-20",
+    "addr:street": "Carrera 14",
+    "brand": "GHL",
+    "building": "yes",
+    "email": "reservas.hamilton@ghlhoteles.com",
+    "internet_access": "yes",
+    "internet_access:fee": "no",
+    "name": "Hotel GHL Collection Hamilton",
+    "payment:cash": "yes",
+    "payment:credit_cards": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+57 601 6215455",
+    "rooms": "41",
+    "tourism": "hotel",
+    "website": "https://www.ghlcollectionhamilton.com/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1568407641,
+  "center": {
+    "lat": 4.6314269,
+    "lon": -74.0935681
+  },
+  "tags": {
+    "brand": "Hyatt Place",
+    "brand:wikidata": "Q72629292",
+    "building": "yes",
+    "name": "Hyatt Place",
+    "tourism": "hotel"
+  }
+},
+{
+  "type": "relation",
+  "id": 17615437,
+  "center": {
+    "lat": 4.6618155,
+    "lon": -74.0608889
+  },
+  "tags": {
+    "addr:city": "Bogotá D.C.",
+    "addr:postcode": "110221",
+    "building": "yes",
+    "name": "Hotel Los Héroes",
+    "tourism": "hotel",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
+

@@ -154,3 +154,13 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 - *Rezago espacial del precio*: usa precios, así que debe calcularse dentro de cada fold.
 - *Avalúo catastral por manzana*: falta conseguir los datos.
 - *Altitud SRTM*: es redundante con `dist_cerros` y necesita paquetes de rasters.
+
+### D16 · Pérdida ponderada hacia el test en XGBoost; casas y apartamentos en el mismo modelo (2026-11-21)
+**Contexto:** el test es 97% apartamentos y está en Chapinero. El train tiene 24,5% de casas, casi todas lejos, y solo 307 anuncios en Chapinero. Todos los modelos subpredicen Chapinero.
+**Decisión:**
+- Cada fila del train se pondera según qué tanto se parece al test (corrección por cambio de covariables; Shimodaira, 2000). Los pesos se calculan solo con covariables, nunca con el precio, y se normalizan a media 1.
+- Pesos elegidos: **tipo × distancia**. El tipo lleva la proporción casa/apartamento del train a la del test; la distancia es `exp(−d/2 km)` al anuncio del test más cercano, con piso de 0,05. Ese modelo es m17b. m17 usa solo la distancia.
+- Casas y apartamentos van en el **mismo modelo**, diferenciados por `es_apto` y por los pesos. Un modelo solo de apartamentos no mejoró.
+- Se descarta la razón de densidades de un clasificador train vs. test. Separa casi perfectamente por ubicación (AUC 0,997) y concentra el peso en pocas filas.
+**Por qué:** baja el MAE OOF en Chapinero de 156,8 a 143,3 M (diferencia pareada −13,5 M, *t* = −3,2) y el sesgo de −100 a −61 M, a cambio de +3,6 M en el total.
+**Cautela:** se eligió entre 9 variantes mirando Chapinero; la confirmación debe venir de Kaggle (comparar con m04).

@@ -4,7 +4,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-19)
+## Estado actual (2026-11-21)
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -13,7 +13,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | Modelo | Total | Chapinero (n=307) | Promedio por localidad |
 |---|---:|---:|---:|
 | m12_en_pca_nt_tx | **131,1** | 149,7 | 146,0 |
-| m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | **143,6** | **144,1** |
+| m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | 143,6 | **144,1** |
+| m17b_xgb_tipo_dist (XGB ponderado, D16) | 134,6 | **143,3** | 152,3 |
+| m17_xgb_ponderado (XGB ponderado, D16) | 132,4 | 147,6 | 146,8 |
 | m06_hibrido_en_xgb | 133,6 | 148,5 | 150,5 |
 | m02_elastic_net | 132,2 | 154,7 | 149,8 |
 | m02b_elastic_net_m2 | 135,0 | 153,8 | 162,1 |
@@ -21,7 +23,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m05_xgb_precio_m2 | 132,3 | 156,1 | 146,8 |
 | m90_ensamble | *129,3* | *154,7* | *146,5* |
 
-**Envíos a Kaggle:** scores en `models/kaggle_scores.csv` (mejores: m04_xgboost y m02b_elastic_net_m2, ambos con 172,7). Candidatos siguientes: `m14_en_enc_tx.csv` (el mejor en Chapinero en la validación) y `m14_en_enc_tx_m2.csv` o `m12_en_m02_pca_tx_m2.csv`.
+**Envíos a Kaggle:** scores en `models/kaggle_scores.csv` (mejores: m04_xgboost y m02b_elastic_net_m2, ambos con 172,7). Candidatos siguientes: `m17b_xgb_tipo_dist.csv` y `m17_xgb_ponderado.csv` (comparar con los 172,7 de m04: mismo modelo, con pesos), `m14_en_enc_tx.csv` (el mejor en Chapinero en la validación) y `m14_en_enc_tx_m2.csv` o `m12_en_m02_pca_tx_m2.csv`.
 
 **Pendientes / próximos pasos:**
 - [ ] Correr `09_red_neuronal.R` en el servidor (red neuronal, familia obligatoria) y subirla a Kaggle
@@ -32,7 +34,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
-- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel
+- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16):** en XGBoost, los pesos por tipo y distancia bajan el sesgo de −100 a −61 M. Falta probarlos en el elastic net (m02/m14) y en el híbrido m06, y confirmarlo en Kaggle
 - [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
 - [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
@@ -43,6 +45,35 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
+
+---
+
+## 2026-11-21 · Sesión 8: XGBoost con pérdida ponderada y casas frente a apartamentos (D16)
+
+- **Diagnóstico:**
+  - El test tiene 97% de apartamentos; el train, 75,5%. Las 9.467 casas del train están casi todas lejos de Chapinero (4.753 a más de 5 km).
+  - Las casas del train tienen área mediana de 206 m² frente a 99 de los apartamentos, estrato 3,8 frente a 4,8 y casi nunca mencionan ascensor (1% frente a 21%).
+  - Todos los modelos subpredicen Chapinero, con sesgos de −62 a −120 M.
+- **`10_xgb_ponderado.R`:** XGBoost con los hiperparámetros de m04, sobre la base actual, con la validación por localidad y buffer de 500 m. Se compararon pesos por tipo, por distancia al test (núcleo exponencial) y por razón de densidades (clasificador train vs. test), además de un modelo solo de apartamentos. `xgb_rondas()` ahora acepta pesos (`wa`).
+- **Resultados (MAE OOF en millones; diferencia pareada en Chapinero frente a la base, con su *t*):**
+
+  | Variante | Total | Chapinero | Dif. Chapinero (*t*) | Sesgo Chapinero |
+  |---|---:|---:|---:|---:|
+  | base | 131,0 | 156,8 | — | −100 |
+  | tipo_dist2km (m17b) | 134,6 | **143,3** | −13,5 (−3,2) | −61 |
+  | apto_dist2km | 132,5 | 145,0 | −11,8 (−3,0) | −64 |
+  | dist2km (m17) | 132,4 | 147,6 | −9,2 (−2,6) | −61 |
+  | tipo | 132,1 | 148,4 | −8,4 (−3,1) | −91 |
+  | razon_g05 | 132,1 | 148,8 | −8,0 (−1,9) | −62 |
+  | razon_g1 | 140,0 | 162,2 | +5,4 (+1,0) | −69 |
+
+- **Aprendizajes:**
+  - Los pesos que se concentran *moderadamente* cerca del test mejoran Chapinero de forma significativa y reducen el sesgo en unos 40 M. Cuestan entre 1 y 4 M de MAE total.
+  - La razón de densidades del clasificador es demasiado extrema: AUC de 0,997, separa casi solo por ubicación, y con γ = 1 el tamaño de muestra efectivo cae al 3%. Empeora.
+  - El modelo solo de apartamentos no mejora frente a ponderar por tipo. XGBoost ya separa por `es_apto`, y quitar las casas reduce los datos.
+  - La métrica de "zona objetivo" (Chapinero + 1 km, 3.913 anuncios), fijada antes de correr, **no discriminó**: todas las variantes empeoran un poco ahí (+0,5 a +6 M). La ganancia está en Chapinero mismo. Por eso m17 (elegido por zona) es dist2km y no la mejor en Chapinero.
+  - Las predicciones ponderadas del test son más altas (media de 768 M en m04 frente a 804 M en m17b). Para el análisis de negocio esto importa: menos subpredicción también implica más riesgo de sobrepredecir.
+- **Siguientes pasos:** subir m17b y m17 a Kaggle (la comparación limpia es contra m04, con 172,7). Si mejoran, aplicar los mismos pesos al elastic net y al híbrido (`glmnet` acepta `weights`).
 
 ---
 

@@ -40,8 +40,9 @@ mejor_columna <- function(pred) which.min(apply(pred, 2, function(p) evalua(p)$m
 
 # XGBoost: ajusta max(rondas) rondas y predice con las primeras r rondas para cada r -> matriz (columna = r).
 # Reemplaza el early stopping de xgb.cv, que no admite buffer; las rondas se eligen con mejor_columna().
-xgb_rondas <- function(pr, Xa, ya, Xe, rondas, ma = NULL, me = NULL) {
-  fit <- xgb.train(params = pr, data = xgb.DMatrix(Xa, label = ya, base_margin = ma, nthread = pr$nthread),
+# wa: pesos opcionales de las filas de análisis (pérdida ponderada, 10_xgb_ponderado.R).
+xgb_rondas <- function(pr, Xa, ya, Xe, rondas, ma = NULL, me = NULL, wa = NULL) {
+  fit <- xgb.train(params = pr, data = xgb.DMatrix(Xa, label = ya, base_margin = ma, weight = wa, nthread = pr$nthread),
                    nrounds = max(rondas), verbose = 0)
   de <- xgb.DMatrix(Xe, base_margin = me, nthread = pr$nthread)
   `colnames<-`(sapply(rondas, function(r) predict(fit, de, iterationrange = c(1, r))), rondas)

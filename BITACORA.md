@@ -4,7 +4,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-19)
+## Estado actual (2026-11-22)
+
+**Mejor envío en Kaggle: `m24_ens_optimo` = 152,3 M** (53% NN STAR de Samuel + 40% `m22_xgb_comparables_m2` + 7% `m14_en_enc_tx`; D22). Ya no quedan envíos.
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -85,6 +87,26 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - `m15_rf_m2`: 170,1 M.
 
   El random forest le gana en Kaggle al lasso, aunque en TWCV salía peor (154 M frente a 142 M). TWCV no ordenó bien ese par.
+- **Comparables (`04f_lasso_comparables.R`, D20).** Es un "control sintético" por anuncio: el precio por m² de los 5 y los 20 vecinos del train del mismo tipo, sin duplicados de descripción.
+
+  | | Sin comparables | Con comparables |
+  |---|---:|---:|
+  | CV aleatoria: total | 130 M | 116 M |
+  | CV aleatoria: Chapinero | 150 M | 141 M |
+  | CV aleatoria: TWCV | 138 M | 130 M |
+
+  - En la CV por localidad empeora (193 M), porque el buffer quita los vecinos.
+  - La CV aleatoria exagera la ganancia: los comparables del train están a 19 m en la mediana; los del test, a 151 m.
+  - **Kaggle: `m21_en_comparables_m2` = 167,1 M** (frente a 171,6 M sin comparables).
+- **XGBoost con comparables (`06b_xgb_comparables.R`): `m22_xgb_comparables_m2` = 162,9 M en Kaggle.** Es el mejor XGBoost del equipo y el tercer modelo, detrás de las redes STAR de Samuel (158,3 y 162,1 M).
+  - Se eligió profundidad 6 y 2.500 rondas (el tope) con la CV aleatoria, que en árboles exagera mucho porque memorizan anuncios del mismo edificio.
+  - Las funciones de comparables y `FOLDS_ALEAT` quedaron en `utils_modelos.R`.
+- **Ensamble m22 + NN STAR de Samuel (`92_ensamble_xgb_nnstar.R`, D21).** Promedio aritmético de precios (con convexidad, el MAE queda acotado por el promedio de los MAE), con dos pesos (50/50 y 70% para la red); con un solo envío se sube 70% red (peor caso 159,7 M). Hay que subirlos a Kaggle; la referencia es 158,3 M.
+- **Pesos óptimos del ensamble con los scores de Kaggle (`93_pesos_ensamble.R`, D22).** Con un solo envío restante, los pesos se estimaron sin gastar envíos: con el MAE público de cada modelo y la diferencia media entre sus predicciones se estima la covarianza de los errores (supuesto de normalidad) y se minimiza la varianza del error combinado.
+  - Verificación en el train (OOF por localidad): estimado 126,5 M frente a real 125,1 M.
+  - Pesos: NN STAR 53%, XGB + comparables (m22) 40%, EN + encoder de texto (m14) 7%. Estimado 153,3 M; cota garantizada 160,8 M.
+  - **Kaggle: `m24_ens_optimo` = 152,3 M, el mejor del equipo** (la NN STAR sola: 158,3 M).
+- **Comparables para Samuel:** `03f_comparables.R` → `data/processed/comparables.csv`.
 - **Trabajo en la rama `validacion-sintetica`,** para no tocar `main` mientras el equipo decide cómo unir la rama `redes-neuronales` de Samuel.
 
   Para no chocar con ella:

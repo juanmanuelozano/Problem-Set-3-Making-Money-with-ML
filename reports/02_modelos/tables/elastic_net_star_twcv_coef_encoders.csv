@@ -1,0 +1,13 @@
+modelo,termino,coef
+m23_en_enc_m2,enc_ubicacion,0.8514645611411852
+m23_en_enc_m2,enc_texto,1.4298497599480438
+m23_en_enc,enc_ubicacion,0.3576280072100724
+m23_en_enc,enc_texto,1.7378083262699455
+m23_en_enc,log_area_x_enc_ubic,0.15917158349901472
+m23_en_enc_b_m2,enc_ubicacion,0.5703016889320521
+m23_en_enc_b_m2,enc_texto,1.2306074810767929
+m23_en_enc_b,enc_ubicacion,0
+m23_en_enc_b,enc_texto,1.578888818402292
+m23_en_enc_b,log_area_x_enc_ubic,0.23278358740807967
+m23_en_enc_tx_m2,enc_texto,1.1163218524997354
+m23_en_enc_tx,enc_texto,1.8405333889852231

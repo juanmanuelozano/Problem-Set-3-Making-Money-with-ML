@@ -1,5 +1,5 @@
 # =============================================================================
-# 10_xgb_ponderado.R - XGBoost con pérdida ponderada hacia el test y separación casas / apartamentos (D16)
+# 10_xgb_ponderado.R - XGBoost con pérdida ponderada hacia el test y separación casas / apartamentos (D16b)
 #
 # Motivación: el test es Chapinero y 97% apartamentos; el train tiene 24,5% de casas (casi todas lejos de Chapinero)
 # y solo 307 anuncios en Chapinero. Con pesos iguales, el modelo dedica buena parte de su capacidad a zonas y tipos

@@ -1,0 +1,2 @@
+texto,area_m2,perdida,lr,p_u,p_t,cal,osm,n_sem,etapa,parametros,entradas,epocas,borde,mae_total,mae_chapinero,mae_macro,mape_chapinero,mae_twcv,sesgo_chap,pred_test,dif_chap,t_chap,dif_total,t_total
+64-32-16,FALSE,mae,1e-4,0.15,0.6,twcv,FALSE,1,B_calibracion,72767,49/36/1000,18,FALSE,130997877.2100162,142935974.6667927,153926546.3142906,0.1676664709539024,135845743.2986036,-59988304.16849579,802178534.0682263,-3991263.9845949207,-1.5738761121465934,-371615.8230349919,-1.7352298918187765

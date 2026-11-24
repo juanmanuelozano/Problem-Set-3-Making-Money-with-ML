@@ -6,3 +6,14 @@ reg_ols_sin_loc,reg_ols_sin_loc.csv,183684586.98,2026-11-18
 m11_cart_m2_mse,m11_cart_m2_mse.csv,197057246.93,2026-11-18
 m12_en_pca_tx_m2,en_pca_tx_m2.csv,209176065.05,2026-11-19
 m12_en_pca_nt_tx_m2,en_pca_nt_tx_m2.csv,176843830.65,2026-11-19
+m17_nn_star_m2,m17_nn_star_m2.csv,158281022.13,2026-11-21
+m18_nn_64_m2,m18_nn_64_m2.csv,167453111.01,2026-11-21
+m19_nn_star_afinada_m2,m19_nn_star_afinada_m2.csv,162085135.47,2026-11-22
+m20_nn_star_twcv_m2,m20_nn_star_twcv_m2.csv,162071207.70,2026-11-22
+m25_nn_star_catastro_afinada_m2,m25_nn_star_catastro_afinada_m2.csv,160578863.34,2026-11-23
+m24_nn_star_catastro_m2,m24_nn_star_catastro_m2.csv,156275771.62,2026-11-23
+m32_nn_star_comparables_m2,m32_nn_star_comparables_m2.csv,156492739.28,2026-11-23
+m36_nn_star_vecinos_m2,m36_nn_star_vecinos_m2.csv,160691854.98,2026-11-23
+m37_star_nn_xgb_m2,m37_star_nn_xgb_m2.csv,156830169.35,2026-11-23
+m39_star_nn_xgbcomp_m2,m39_star_nn_xgbcomp_m2.csv,154532268.74,2026-11-23
+m48_star_nn_xgbsq_area_m2,m48_star_nn_xgbsq_area_m2.csv,153326455.92,2026-11-23

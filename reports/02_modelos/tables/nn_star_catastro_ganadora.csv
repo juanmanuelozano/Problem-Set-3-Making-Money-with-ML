@@ -1,0 +1,2 @@
+lr,p_u,p_t,perdida,cal,n_sem,etapa,parametros,epocas,borde,mae_total,mae_chapinero,mae_macro,mape_chapinero,mae_twcv,sesgo_chap,pred_test,dif_chap,t_chap,dif_total,t_total,texto,area_m2,osm,catastro
+1e-4,0.1,0.5,mae,twcv,3,C_semillas,72832,14,FALSE,131225911.46526264,137212185.45250896,155029148.51118463,0.16347745618302972,135452371.49338058,-38119512.734706864,808704777.9636052,-9715053.198878659,-2.9604259309189507,-143581.56778852112,-0.5311115867219393,64-32-16,FALSE,FALSE,valor_estrato

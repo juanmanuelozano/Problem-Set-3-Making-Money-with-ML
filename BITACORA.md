@@ -12,10 +12,13 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 | Modelo | Total | Chapinero (n=307) | Promedio por localidad |
 |---|---:|---:|---:|
+| **m17_nn_star_m2** (NN STAR, Kaggle **158,3**) | 131,4 | 146,9 | 153,5 |
+| m19_nn_star_afinada_m2 (base nueva sin zona de lujo; empata con m17, no se sube) | 131,6 | 146,6 | 154,3 |
+| m18_nn_64_m2 (red general del mismo tamaño, Kaggle 167,5) | 131,5 | 155,9 | 156,7 |
 | m12_en_pca_nt_tx | **131,1** | 149,7 | 146,0 |
 | m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | 143,6 | **144,1** |
-| m17b_xgb_tipo_dist (XGB ponderado, D16) | 134,6 | **143,3** | 152,3 |
-| m17_xgb_ponderado (XGB ponderado, D16) | 132,4 | 147,6 | 146,8 |
+| m17b_xgb_tipo_dist (XGB ponderado, D16b) | 134,6 | **143,3** | 152,3 |
+| m17_xgb_ponderado (XGB ponderado, D16b) | 132,4 | 147,6 | 146,8 |
 | m06_hibrido_en_xgb | 133,6 | 148,5 | 150,5 |
 | m02_elastic_net | 132,2 | 154,7 | 149,8 |
 | m02b_elastic_net_m2 | 135,0 | 153,8 | 162,1 |
@@ -23,18 +26,26 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m05_xgb_precio_m2 | 132,3 | 156,1 | 146,8 |
 | m90_ensamble | *129,3* | *154,7* | *146,5* |
 
-**Envíos a Kaggle:** scores en `models/kaggle_scores.csv` (mejores: m04_xgboost y m02b_elastic_net_m2, ambos con 172,7). Candidatos siguientes: `m17b_xgb_tipo_dist.csv` y `m17_xgb_ponderado.csv` (comparar con los 172,7 de m04: mismo modelo, con pesos), `m14_en_enc_tx.csv` (el mejor en Chapinero en la validación) y `m14_en_enc_tx_m2.csv` o `m12_en_m02_pca_tx_m2.csv`.
+**Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m17_nn_star_m2 con 158,3**, seguido de m18_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
+
+**Candidatos de `main` (XGB ponderado, D16b):** `m17b_xgb_tipo_dist.csv` y `m17_xgb_ponderado.csv` (comparar con los 172,7 de m04: mismo modelo, con pesos).
 
 **Pendientes / próximos pasos:**
-- [ ] Correr `09_red_neuronal.R` en el servidor (red neuronal, familia obligatoria) y subirla a Kaggle
+- [ ] **Catastro (03f, D18):** valor de referencia del suelo por m² (UAECD 2026) y estrato oficial por manzana (SDP), en el grupo de ubicación. Mini corrida en `08h_nn_star_catastro.R` (configuración de m17, con y sin catastro) antes de una corrida completa
+- [ ] **Embeddings de texto (Shen y Ross, 2021, JUE; Sentence-BERT):** `03g_embeddings.py` con `paraphrase-multilingual-MiniLM-L12-v2` (384 dim, ~5 min) sobre el texto original SIN nombres de lugares (no el lematizado), hasta 256-512 tokens. NN STAR: sub-rama 32-16 + atajo lineal dentro del grupo de texto (un solo encoder). XGB STAR: mismo grupo de texto. Medir el aporte con y sin embeddings; e5-base solo si MiniLM muestra señal
+- [ ] Correr `09_red_neuronal.R` (m16, nnet) en el servidor y subirla a Kaggle. La familia de redes ya está cubierta con m17 y m18 (Keras, D17)
+- [x] NN STAR con la base nueva (08e → m19): la zona de lujo de D15 lo empeora mucho y se excluye de las redes; sin ella, la afinación empata con m17
+- [ ] Volver a correr el STAR (08 y 08b) con la base nueva, sin la zona de lujo, y con la grilla más rápida (tope de 1.000 rondas; eta 0,2 en la absoluta)
+- [ ] Decidir con el equipo si la zona de lujo de D15 se excluye también de los demás modelos nuevos
+- [ ] NN STAR: promediar varias semillas, y probar sin el contexto de OSM (en la ablación, 131,9 / 148,3 frente a 133,6 / 148,8 con él)
 - [ ] Subir `m15_rf_m2.csv` a Kaggle (RF por m²: 177,3 M en Chapinero en la validación)
-- [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 7)
+- [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 9)
 - [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
 - [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
 - [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
-- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16):** en XGBoost, los pesos por tipo y distancia bajan el sesgo de −100 a −61 M. Falta probarlos en el elastic net (m02/m14) y en el híbrido m06, y confirmarlo en Kaggle
+- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por tipo y distancia bajan el sesgo de −100 a −61 M. Falta probarlos en el elastic net (m02/m14) y en el híbrido m06, y confirmarlo en Kaggle
 - [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
 - [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
@@ -46,9 +57,21 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
 
+### ⚠️ Para la presentación (discusión de negocio: ¿se pierde plata?)
+**Predecir Chapinero con un modelo entrenado en toda la ciudad genera subpredicción por construcción.** El modelo aprende sobre todo de Usaquén y Suba (27 mil de 38 mil anuncios) y solo de 307 anuncios en Chapinero, una de las localidades más caras. Al estimar con toda la ciudad, las predicciones se encogen hacia la media de Bogotá, y en la cola alta (Chapinero, estrato 6) eso se convierte en un sesgo sistemático hacia abajo. Para una empresa que valora con este modelo, eso puede ser costoso.
+
+**Lo que respalda el argumento:**
+- **Todos los modelos subpredicen Chapinero en la validación:** el sesgo va de −58 M (los mejores) a −115 M (los árboles).
+- **Kaggle premia al que menos subpredice:** con 11 envíos, la predicción media del test ordena los scores con Spearman −0,93. m17 (predicción media de 826 M) saca 158,3; m19 y m20 (~801 M) sacan 162,1, aunque eran mejores en Chapinero en la validación.
+- **El error de nivel no se ve en la validación cruzada:** la localidad evaluada nunca está en el entrenamiento, y en el test el anuncio de entrenamiento más cercano queda a 96 m en promedio (D16).
+
+**La propuesta:** para las localidades cercanas a la media de precios hay más datos parecidos y menos extrapolación, así que un modelo de ML sería más efectivo y confiable ahí (Usaquén: MAE ~125 M). Para un mercado de lujo como Chapinero haría falta un modelo con datos propios de la zona, una calibración del nivel o información externa sobre el nivel de precios (por ejemplo, el valor catastral del suelo, D18).
+
+**Matiz para la discusión:** si el modelo se usa para comprar, la subpredicción hace perder negocios (ofertas demasiado bajas), mientras que la sobrepredicción hace pagar de más. Hay que discutir cuál de los dos errores le cuesta más a la empresa (el análisis de negocio está en los pendientes).
+
 ---
 
-## 2026-11-21 · Sesión 8: XGBoost con pérdida ponderada y casas frente a apartamentos (D16)
+## 2026-11-21 · Sesión 8b (rama main): XGBoost con pérdida ponderada y casas frente a apartamentos (D16b)
 
 - **Diagnóstico:**
   - El test tiene 97% de apartamentos; el train, 75,5%. Las 9.467 casas del train están casi todas lejos de Chapinero (4.753 a más de 5 km).
@@ -77,7 +100,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## 2026-11-22 · Sesión 8: "Chapinero sintético" (validación ponderada, D16)
+## 2026-11-22 · Sesión 10: "Chapinero sintético" (validación ponderada, D16)
 
 - Nuevo `91_validacion_sintetica.R`. Sigue a Brenning y Suesse (2026), *Target-Weighted CV*: repondera los errores out-of-fold para que se parezcan al test. Tarda segundos y no vuelve a entrenar.
 - **Sesgo frente a Kaggle**, en 7 modelos:
@@ -97,6 +120,63 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - 97% de apartamentos (76%).
 - **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.
 - Figura para la presentación: `reports/02_modelos/figures/m6_validacion_sintetica.png`.
+
+---
+
+## 2026-11-21 · Sesión 9: datos nuevos en la red y afinación del NN STAR
+
+- **Merge con `origin/main`:** trae las 32 amenidades con negaciones (D14) y las 13 variables de contexto de OSM (D15). En el merge, nuestras redes se renumeraron: m15 → **m17_nn_star**, m16 → **m18_nn_64**. Las decisiones de redes pasan a D17.
+- **Ablación de la base nueva** (configuración de m17; `tables/nn_ablacion_datos.csv`):
+  - la base nueva completa da 137,0 / 166,5;
+  - **sin la zona de lujo** (embajadas, oficinas, hoteles y clubes), 133,6 / 148,8;
+  - sin la zona de lujo ni OSM, 131,9 / 148,3;
+  - las amenidades nuevas no aportan;
+  - la base vieja reproduce m17 exactamente (control).
+  
+  **Por decisión del equipo, las redes excluyen la zona de lujo y conservan OSM.**
+- **`utils_redes.R`:** la tasa de aprendizaje, la pérdida y las épocas ahora son parámetros, con los mismos valores por defecto. `area_verde500` y `pisos_prom500` pasan al grupo de ubicación (también en 08).
+- **Afinación por etapas (`08e_nn_star_afinacion.R`, 93 min; `tables/nn_star_afinacion.csv`):**
+  - **Etapa 0 (datos):** 133,6 / 148,8.
+  - **Etapa 1 (tasa):** gana lr 1e-4, con 132,4 / 144,7 y 12 épocas en vez de 3.
+  - **Etapa 2 (dropouts):** gana 0,15 / 0,7, con 131,6 / 146,6, aunque las diferencias son de décimas.
+  - **Etapa 3 (pérdida absoluta):** 132,4 / **142,2**. Es la mejor en Chapinero, pero pierde en el total y la diferencia no es significativa (*t* = −1,8).
+- **Registrada `m19_nn_star_afinada_m2`** (lr 1e-4, p_u 0,15, p_t 0,7, MSE, 20 épocas): 131,6 / 146,6 / 154,3.
+  - Frente a m17: −0,3 M en Chapinero (*t* = −0,1) y +0,3 M en el total (*t* = 1,3).
+  - Su predicción media del test es 801, frente a 826 de m17.
+  - **No cumple el criterio para subirla a Kaggle**, así que m17 sigue siendo la referencia.
+- **Grilla ampliada del XGB STAR:** aplazada. La medición mostró que el texto pesa el 80% del costo por ronda y que el 75% de las rondas se descarta, porque siempre se entrena hasta el tope. Antes de volver a correrla, se acelera.
+
+---
+
+## 2026-11-21 · Sesión 8: NN STAR, red general y grilla ampliada del XGB STAR (en curso)
+
+- **Interpretación del STAR, para la presentación:**
+  - El STAR es un solo XGBoost con restricciones de interacción: los grupos se entrenan juntos y compiten por el mismo residuo. El encoder es el rubro de su grupo en la "factura" del modelo, en log del precio por m². Por ejemplo, Chapinero tiene +0,20 ≈ +22%.
+  - Los autores interpretan cada variable aditiva con curvas ICE paralelas, y el grupo de ubicación con un mapa de su encoder (el *projection trick*). Lo comprueban con el H de Friedman; nosotros con una verificación árbol por árbol, que es más estricta.
+  - Frente a SHAP, el STAR no explica un modelo después de entrenarlo: lo restringe para que su explicación sea exacta y única.
+  - **El ascensor no interactúa con nada** (`tx_ascensor` es aditivo en el STAR y lineal en el EN). Solo se combina con otras palabras dentro del texto: "ascensor privado" queda en el puesto 27 de 1.000 y "sin ascensor" en el 49.
+- **Grilla del XGB STAR (08) ampliada.** La anterior quedó en el borde en todos los parámetros. Ahora son tres búsquedas de 20 configuraciones: m² cuadrática, m² absoluta (eta hasta 0,3 y hasta 5.000 rondas) y precio. Detalles en D13. Se registra el mejor de cada búsqueda (nuevo: `m13_xgb_star_m2_mae`), los encoders salen del mejor m² y luego se vuelve a correr 08b.
+- **Redes con Keras desde R (D17):** `scripts/utils_redes.R` y TensorFlow en `.venv-tf`.
+  - **NN STAR (`08c_nn_star.R`, m17):** estructura lineal más ramas de ubicación y de texto 64-32-16 ReLU, cada una con atajo lineal y dropout propio. Tiene 72.757 parámetros. Diagrama: https://claude.ai/artifact/2QqQEJDpwcaxDdsKrqRYhk
+  - **Red general (`08d_nn_general.R`, m18):** 64-32-16 con todo mezclado y 71.489 parámetros, para comparar con el mismo tamaño.
+  - **Afinación:** solo el dropout.
+  - **Prueba de humo (`PRUEBA=1`):** la suma de las ramas coincide con la predicción (diferencia de 5e-7), las ICE salen paralelas y la calibración deja los residuos con media 0.
+- **Primer intento del NN STAR fallido** (MAE 200 en la primera configuración): con pesos aleatorios, las ramas lineales arrancaban con ruido grande y se compensaban entre sí. Se corrigió iniciando las capas de salida en cero (D17). En una prueba con 3 folds queda igual o mejor que la red general, con el óptimo entre 5 y 10 épocas (la grilla de épocas pasa a 1–80).
+- **Resultados del NN STAR (08c, 73 min):**
+  - **Mejor configuración:** p_u = 0,1 y p_t = 0,5, con 3 épocas. El óptimo de p_t está en el borde de la grilla; queda pendiente probar 0,6–0,7.
+  - **`m17_nn_star_m2`:** 131,4 / **146,9** / 153,5. Sesgo en Chapinero −67 M y la **predicción media del test más alta de todos (826 M)**.
+  - **Frente a m13_xgb_star_m2:** −8,4 M en Chapinero (*t* = −2,3). **Frente a m02b:** −6,9 M (*t* = −2,0).
+  - **Objetivo precio (`m17_nn_star`):** 136,8 / 154,0, peor que el m².
+  - **Encoders:** correlación con los del XGB STAR de 0,955 en ubicación y 0,815 en texto.
+- **Resultados de la red general (08d, 35 min, mismo tamaño):**
+  - **Mejor dropout:** p = 0,2 con 7 épocas. `m18_nn_64_m2` da 131,5 / 155,9 / 156,7, con sesgo de −99 M y predicción media del test de 783 M. El objetivo precio da 130,5 / 173,6.
+  - **NN STAR frente a la red general (m²):** el mismo total (−0,1 M), pero **−9,0 M en Chapinero** (*t* = −2,0). Con objetivo precio, −19,6 M en Chapinero (*t* = −4,2).
+  - **Para la presentación:** a igual número de parámetros, la estructura aditiva no le quita precisión al resto de la ciudad y sí mejora la extrapolación a Chapinero.
+- **Kaggle:** `m17_nn_star_m2` obtuvo **158,3** (−14,4 M frente al mejor anterior, 172,7) y `m18_nn_64_m2` obtuvo 167,5. La red general también mejora, pero el STAR le gana por 9,2 M, igual que en la validación en Chapinero (−9,0 M). Con 9 envíos, la predicción media del test ordena los scores con Spearman −0,87.
+- **Grilla ampliada del XGB STAR (08) detenida** a los 13 minutos, porque se van a agregar más datos. El script ya está modificado y probado; se corre después, seguido del 08b. La primera configuración reprodujo exactamente el resultado anterior (133,0 / 155,3).
+- **Merge con origin/main (sesión 7 del otro equipo):** las redes pasan de m15/m16 a **m17_nn_star** y **m18_nn_64**, porque m15 ya era el RF por m² y m16 está reservado para `09_red_neuronal.R`. Su decisión pasa de D14 a D16 y luego a **D17** (D14, D15 y D16 son de amenidades, OSM y la validación ponderada). Los CSV de `models/` se combinaron sin volver a correr nada. m17 y m18 usan la base anterior a D14/D15.
+
+---
 
 ## 2026-11-21 · Sesión 7: enunciado, random forest por m² y red neuronal
 
@@ -142,6 +222,8 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - Correlación con el log del precio en el train (norte de la ciudad): `dist_embajada` −0,30, `dist_cbd` −0,29, `dist_cerros` −0,13.
   - Las de embajadas, oficinas, hoteles y clubes son experimentales: casi equivalen a una dummy de localidad.
 - Entorno: esta sesión corrió en un Windows con R 4.5.2 (`"/c/Program Files/R/R-4.5.2/bin/Rscript.exe"`). Se instalaron `ranger`, `sp` y `stargazer`; `xgboost` no está instalado.
+
+---
 
 ## 2026-11-19 · Sesión 6: librerías con pacman
 

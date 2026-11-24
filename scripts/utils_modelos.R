@@ -35,8 +35,10 @@ cv_oof <- function(ajusta_predice, folds = FOLDS) {
 # Coeficientes OLS (con intercepto) ajustados en las filas `a` de X; los coeficientes no identificados quedan en 0
 ols_coef <- function(X, a, y = Y) { b <- lm.fit(cbind(1, X[a, , drop = FALSE]), y[a])$coefficients; b[is.na(b)] <- 0; b }
 
-# Columna de una matriz de predicciones OOF con menor MAE total (elige lambda, rondas, etc.)
-mejor_columna <- function(pred) which.min(apply(pred, 2, function(p) evalua(p)$mae_total))
+# Columna de una matriz de predicciones OOF con menor MAE total (elige lambda, rondas, etc.). Con pesos `w` (que
+# suman 1, p. ej. los de TWCV de 91_validacion_sintetica.R, D16), elige por MAE ponderado.
+mejor_columna <- function(pred, w = NULL) which.min(apply(pred, 2, function(p)
+  if (is.null(w)) evalua(p)$mae_total else sum(w * abs(exp(Y) - recorta(exp(p))))))
 
 # XGBoost: ajusta max(rondas) rondas y predice con las primeras r rondas para cada r -> matriz (columna = r).
 # Reemplaza el early stopping de xgb.cv, que no admite buffer; las rondas se eligen con mejor_columna().
@@ -115,3 +117,34 @@ registra <- function(nombre, descripcion, params, metr, pred_oof_log, pred_test_
   cat(sprintf("[%s] MAE OOF total: %s | Chapinero: %s | macro localidades: %s\n", nombre,
               comma(metr$mae_total / 1e6, .1), comma(metr$mae_chapinero / 1e6, .1), comma(metr$mae_macro / 1e6, .1)))
 }
+
+# Mapa de una prima de ubicación (encoder en log, centrado): mediana por celda de ~500 m (08, 08c; figura 11 del paper)
+mapa_prima <- function(enc, titulo, subtitulo, archivo) {
+  loc_poly <- lee_csv(file.path(P$osm, "localidades_poligonos.csv"))
+  mp <- D %>% select(property_id, lat, lon) %>% inner_join(enc, by = "property_id")
+  g <- ggplot(mp, aes(lon, lat, z = enc_ubicacion)) +
+    geom_polygon(data = loc_poly, aes(lon, lat, group = interaction(nombre, ring)), fill = NA, color = c_muted, linewidth = .25, inherit.aes = FALSE) +
+    stat_summary_2d(fun = median, binwidth = c(.0045, .0045), alpha = .95) +
+    scale_fill_gradient2(low = c_train, mid = "#f4f4f2", high = c_test, midpoint = 0, labels = \(x) percent(exp(x) - 1),
+                         name = "Prima de ubicación sobre el precio por m2") +
+    coord_quickmap(xlim = c(-74.19, -74.015), ylim = c(4.565, 4.775)) +
+    guides(fill = guide_colorbar(barwidth = 14, barheight = .5, title.position = "top")) +
+    labs(title = titulo, subtitle = subtitulo, x = NULL, y = NULL, caption = fuente) +
+    theme(axis.text = element_blank(), panel.grid.major = element_blank())
+  ggsave(file.path(P$rep_mod, "figures", archivo), g, width = 6.5, height = 7.4, dpi = 250)
+}
+
+# ---- Variables excluidas y validación ponderada (D15, D16, D17) ----
+# Zona de lujo de D15: casi una dummy de Chapinero, empeora mucho la validación (siempre fuera). Contexto de OSM de D15:
+# se decide con la NN STAR (08f mide primero sin y luego con); los demás modelos siguen esa decisión (osm_ganadora()).
+LUJO    <- "^(dist|n500)_(embajada|oficina|hotel|club)$"
+OSM_CTX <- "^(dist_cerros|dist_via_principal|area_verde500|pisos_prom500|n500_edif_pisos)$"
+vars_sin <- function(osm = TRUE, vars = base$vars) vars[!grepl(LUJO, vars) & (osm | !grepl(OSM_CTX, vars))]
+F_GANADORA_NN <- file.path(P$rep_mod, "tables", "nn_star_twcv_ganadora.csv")
+osm_ganadora <- function() if (file.exists(F_GANADORA_NN)) as.logical(read_csv(F_GANADORA_NN, show_col_types = FALSE)$osm[1]) else FALSE
+# Pesos TWCV por anuncio del train (suman 1), de 91_validacion_sintetica.R; MAE ponderado hacia el test
+pesos_twcv <- function() {
+  pw <- lee_csv(file.path(P$processed, "pesos_validacion.csv")); w <- pw$w_twcv[match(TR$property_id, pw$property_id)]
+  stopifnot(!anyNA(w), abs(sum(w) - 1) < 1e-8); w
+}
+mae_w <- function(pred_log, w) sum(w * abs(exp(Y) - recorta(exp(pred_log))))

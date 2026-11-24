@@ -74,6 +74,8 @@ logit <- glm(es_test ~ estrato_final + I(estrato_final^2) + log_area + I(log_are
                log(dist_cbd) + I(log(dist_cbd)^2), data = pool, family = binomial)
 p <- predict(logit, TR, type = "response")
 w_iw <- encoge((p / (1 - p)) / sum(p / (1 - p)))
+# Pesos por anuncio del train, para elegir hiperparámetros con TWCV o IWCV (mejor_columna(pred, w); 08e con CRITERIO=twcv)
+write_csv(tibble(property_id = TR$property_id, w_twcv = w_tw, w_iwcv = w_iw), file.path(P$processed, "pesos_validacion.csv"))
 
 cat(sprintf("Tamaño efectivo de muestra (ESS): TWCV %.0f (%.1f%%) | IWCV %.0f (%.1f%%) de %d anuncios\n",
             ess(w_tw), 100 * ess(w_tw) / nrow(TR), ess(w_iw), 100 * ess(w_iw) / nrow(TR), nrow(TR)))

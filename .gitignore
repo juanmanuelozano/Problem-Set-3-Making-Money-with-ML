@@ -21,3 +21,7 @@ data/processed/tfidf.parquet
 data/processed/pca_*.csv
 data/processed/base_texto.rds
 data/processed/base_no_texto.csv
+data/processed/embeddings_texto.parquet
+
+# Catastro (03f_catastro.R): se descarga de Datos Abiertos Bogotá; muy pesado para git
+data/external/catastro/

@@ -35,8 +35,10 @@ cv_oof <- function(ajusta_predice, folds = FOLDS) {
 # Coeficientes OLS (con intercepto) ajustados en las filas `a` de X; los coeficientes no identificados quedan en 0
 ols_coef <- function(X, a, y = Y) { b <- lm.fit(cbind(1, X[a, , drop = FALSE]), y[a])$coefficients; b[is.na(b)] <- 0; b }
 
-# Columna de una matriz de predicciones OOF con menor MAE total (elige lambda, rondas, etc.)
-mejor_columna <- function(pred) which.min(apply(pred, 2, function(p) evalua(p)$mae_total))
+# Columna de una matriz de predicciones OOF con menor MAE total (elige lambda, rondas, etc.). Con pesos `w` (que
+# suman 1, p. ej. los de TWCV de 91_validacion_sintetica.R, D16), elige por MAE ponderado.
+mejor_columna <- function(pred, w = NULL) which.min(apply(pred, 2, function(p)
+  if (is.null(w)) evalua(p)$mae_total else sum(w * abs(exp(Y) - recorta(exp(p))))))
 
 # XGBoost: ajusta max(rondas) rondas y predice con las primeras r rondas para cada r -> matriz (columna = r).
 # Reemplaza el early stopping de xgb.cv, que no admite buffer; las rondas se eligen con mejor_columna().
@@ -130,3 +132,18 @@ mapa_prima <- function(enc, titulo, subtitulo, archivo) {
     theme(axis.text = element_blank(), panel.grid.major = element_blank())
   ggsave(file.path(P$rep_mod, "figures", archivo), g, width = 6.5, height = 7.4, dpi = 250)
 }
+
+# ---- Variables excluidas y validación ponderada (D15, D16, D17) ----
+# Zona de lujo de D15: casi una dummy de Chapinero, empeora mucho la validación (siempre fuera). Contexto de OSM de D15:
+# se decide con la NN STAR (08f mide primero sin y luego con); los demás modelos siguen esa decisión (osm_ganadora()).
+LUJO    <- "^(dist|n500)_(embajada|oficina|hotel|club)$"
+OSM_CTX <- "^(dist_cerros|dist_via_principal|area_verde500|pisos_prom500|n500_edif_pisos)$"
+vars_sin <- function(osm = TRUE, vars = base$vars) vars[!grepl(LUJO, vars) & (osm | !grepl(OSM_CTX, vars))]
+F_GANADORA_NN <- file.path(P$rep_mod, "tables", "nn_star_twcv_ganadora.csv")
+osm_ganadora <- function() if (file.exists(F_GANADORA_NN)) as.logical(read_csv(F_GANADORA_NN, show_col_types = FALSE)$osm[1]) else FALSE
+# Pesos TWCV por anuncio del train (suman 1), de 91_validacion_sintetica.R; MAE ponderado hacia el test
+pesos_twcv <- function() {
+  pw <- lee_csv(file.path(P$processed, "pesos_validacion.csv")); w <- pw$w_twcv[match(TR$property_id, pw$property_id)]
+  stopifnot(!anyNA(w), abs(sum(w) - 1) < 1e-8); w
+}
+mae_w <- function(pred_log, w) sum(w * abs(exp(Y) - recorta(exp(pred_log))))

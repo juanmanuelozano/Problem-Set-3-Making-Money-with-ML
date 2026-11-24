@@ -9,10 +9,13 @@
 #  - enc_b:  enc + distancias lineales (dist_*): la parte lineal puede extrapolar hacia Chapinero
 # Objetivos log(precio) y log(precio por m2) (sin columnas de área; en m2 tampoco entra log_area × encoder).
 # Grilla de 04c: alpha en {0, .1, .25, .5, .75, .9, 1} × lambda.min.ratio en {1e-4, 1e-5, 1e-6}, nlambda = 100.
-# Salidas: tables/elastic_net_star_{grilla,resumen,coef_encoders}.csv; registro m14_en_<spec>[_m2]
+# Versión TWCV (2026-11-22): base D14 sin zona de lujo y OSM según 08f (vars_sin), encoders del XGB STAR m22, lambda
+# y alpha (y la mejor configuración) elegidos por MAE TWCV (D16). Los m14 (base anterior) no se tocan.
+# Salidas: tables/elastic_net_star_twcv_{grilla,resumen,coef_encoders}.csv; registro m23_en_<spec>[_m2]
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
 suppressMessages(pacman::p_load(glmnet))
+PRUEBA <- nzchar(Sys.getenv("PRUEBA")); W <- pesos_twcv(); base$vars <- vars_sin(osm_ganadora())
 
 encs <- readRDS(file.path(P$models, "star_encoders_folds.rds"))
 ef <- lee_csv(file.path(P$processed, "star_encoders.csv"))
@@ -45,20 +48,20 @@ res <- pmap_dfr(grilla, function(spec, objetivo, alpha, lambda.min.ratio) {
     fit <- glmnet(prep(f(B_tr[a, ], encs[[k]]$ea), objetivo), y[a], alpha = alpha, lambda = lam)
     predict(fit, prep(f(B_tr[e, ], encs[[k]]$ee), objetivo), s = lam)
   }) + off[[objetivo]]$tr
-  j <- mejor_columna(oof)
+  j <- mejor_columna(oof, W)
   tibble(spec, objetivo, alpha, lambda.min.ratio, lambda = lam[j], en_borde = j == length(lam), lam = list(lam), oof = list(oof[, j])) %>%
-    bind_cols(evalua(oof[, j]))
+    bind_cols(evalua(oof[, j])) %>% mutate(mae_twcv = mae_w(.env$oof[, j], W))
 })
-write_csv(select(res, -lam, -oof), file.path(P$rep_mod, "tables", "elastic_net_star_grilla.csv"))
+write_csv(select(res, -lam, -oof), file.path(P$rep_mod, "tables", "elastic_net_star_twcv_grilla.csv"))
 
 # ---- Mejor configuración por especificación y objetivo: ajuste final, registro y envío ----
-mejores <- res %>% group_by(spec, objetivo) %>% slice_min(mae_total, n = 1, with_ties = FALSE) %>% ungroup()
+mejores <- res %>% group_by(spec, objetivo) %>% slice_min(mae_twcv, n = 1, with_ties = FALSE) %>% ungroup()
 coefs <- list()
 for (k in seq_len(nrow(mejores))) {
   b <- mejores[k, ]; f <- specs[[b$spec]]$f
   fit <- glmnet(prep(f(B_tr, E(TR)), b$objetivo), y_obj[[b$objetivo]], alpha = b$alpha, lambda = b$lam[[1]])
-  modelo <- paste0("m14_en_", b$spec, if (b$objetivo == "m2") "_m2")
-  registra(modelo, paste("Elastic net:", specs[[b$spec]]$desc,
+  modelo <- paste0("m23_en_", b$spec, if (b$objetivo == "m2") "_m2")
+  if (!PRUEBA) registra(modelo, paste("Elastic net:", specs[[b$spec]]$desc,
                          if (b$objetivo == "m2") "; sobre log(precio por m2), precio = predicción × m2" else "; sobre log(precio)"),
            sprintf("alpha=%.2f; lambda=%.2g; lambda.min.ratio=%g", b$alpha, b$lambda, b$lambda.min.ratio),
            select(b, starts_with("ma")), b$oof[[1]],
@@ -67,21 +70,22 @@ for (k in seq_len(nrow(mejores))) {
   coefs[[modelo]] <- tibble(modelo, termino = names(co), coef = co) %>% filter(str_detect(termino, "enc"))
 }
 coefs <- bind_rows(coefs)
-write_csv(coefs, file.path(P$rep_mod, "tables", "elastic_net_star_coef_encoders.csv"))
+write_csv(coefs, file.path(P$rep_mod, "tables", "elastic_net_star_twcv_coef_encoders.csv"))
 cat("\nCoeficientes de los encoders (≈ 1 si el encoder está bien calibrado):\n")
 print(as.data.frame(coefs %>% mutate(coef = round(coef, 3))))
 
 # ---- Resumen: encoders frente a PCA (04c), STAR (08) y referencias, con sesgo, predicción de test y Kaggle ----
 oofs <- lee_csv(file.path(P$models, "oof_predicciones.csv")); tst <- lee_csv(file.path(P$models, "test_predicciones.csv"))
 reg <- lee_csv(file.path(P$models, "registro_modelos.csv")); kag <- lee_csv(file.path(P$models, "kaggle_scores.csv"))
-mods <- c("m02b_elastic_net_m2", "m12_en_m02_pca_tx_m2", "m14_en_enc_tx_m2", "m14_en_enc_m2", "m14_en_enc_b_m2",
-          "m12_en_m02", "m12_en_m02_pca_tx", "m14_en_enc_tx", "m14_en_enc", "m14_en_enc_b",
-          "m04_xgboost", "m13_xgb_star", "m13_xgb_star_m2", "m13_xgb_star_m2_mae")
-resumen <- reg %>% filter(modelo %in% mods) %>% select(modelo, mae_total, mae_chapinero, mae_macro) %>%
+mods <- c(paste0("m23_en_", c("enc_tx", "enc", "enc_b")), paste0("m23_en_", c("enc_tx", "enc", "enc_b"), "_m2"),
+          "m22_xgb_star_twcv_m2", "m22_xgb_star_twcv_m2_mae", "m20_nn_star_twcv_m2", "m21_nn_general_twcv_m2",
+          "m14_en_enc_tx", "m17_nn_star_m2", "m02b_elastic_net_m2", "m04_xgboost")
+resumen <- reg %>% filter(modelo %in% mods, modelo %in% names(oofs)) %>% select(modelo, mae_total, mae_chapinero, mae_macro) %>%
+  mutate(mae_twcv = map_dbl(modelo, ~ mae_w(oofs[[.x]][match(TR$property_id, oofs$property_id)], W))) %>%
   mutate(sesgo_chap = map_dbl(modelo, ~ mean(recorta(exp(oofs[[.x]][oofs$chapinero])) - exp(oofs$log_price[oofs$chapinero]))),
          pred_test = map_dbl(modelo, ~ mean(recorta(exp(tst[[.x]]))))) %>%
   left_join(select(kag, modelo, kaggle = public_score), by = "modelo") %>%
   mutate(across(where(is.numeric), ~ round(.x / 1e6, 1))) %>% arrange(match(modelo, mods))
-write_csv(resumen, file.path(P$rep_mod, "tables", "elastic_net_star_resumen.csv"))
+write_csv(resumen, file.path(P$rep_mod, "tables", "elastic_net_star_twcv_resumen.csv"))
 cat("\nValidación cruzada (MAE OOF, millones; una localidad afuera, buffer de", BUFFER_M, "m):\n")
 print(as.data.frame(resumen))

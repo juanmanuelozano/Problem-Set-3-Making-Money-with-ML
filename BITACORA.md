@@ -27,6 +27,8 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 **Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m17_nn_star_m2 con 158,3**, seguido de m18_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
 
 **Pendientes / próximos pasos:**
+- [ ] **Catastro (03f, D18):** valor de referencia del suelo por m² (UAECD 2026) y estrato oficial por manzana (SDP), en el grupo de ubicación. Mini corrida en `08h_nn_star_catastro.R` (configuración de m17, con y sin catastro) antes de una corrida completa
+- [ ] **Embeddings de texto (Shen y Ross, 2021, JUE; Sentence-BERT):** `03g_embeddings.py` con `paraphrase-multilingual-MiniLM-L12-v2` (384 dim, ~5 min) sobre el texto original SIN nombres de lugares (no el lematizado), hasta 256-512 tokens. NN STAR: sub-rama 32-16 + atajo lineal dentro del grupo de texto (un solo encoder). XGB STAR: mismo grupo de texto. Medir el aporte con y sin embeddings; e5-base solo si MiniLM muestra señal
 - [ ] Correr `09_red_neuronal.R` (m16, nnet) en el servidor y subirla a Kaggle. La familia de redes ya está cubierta con m17 y m18 (Keras, D17)
 - [x] NN STAR con la base nueva (08e → m19): la zona de lujo de D15 lo empeora mucho y se excluye de las redes; sin ella, la afinación empata con m17
 - [ ] Volver a correr el STAR (08 y 08b) con la base nueva, sin la zona de lujo, y con la grilla más rápida (tope de 1.000 rondas; eta 0,2 en la absoluta)
@@ -50,6 +52,18 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Arreglar las regex de parqueaderos y baños (falta `\b` antes del número: "10 parqueaderos" se lee como 0)
 - [ ] `bedrooms` = 0 (186) y 11 (97): ¿tratarlos como faltantes o como tope?
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
+
+### ⚠️ Para la presentación (discusión de negocio: ¿se pierde plata?)
+**Predecir Chapinero con un modelo entrenado en toda la ciudad genera subpredicción por construcción.** El modelo aprende sobre todo de Usaquén y Suba (27 mil de 38 mil anuncios) y solo de 307 anuncios en Chapinero, una de las localidades más caras. Al estimar con toda la ciudad, las predicciones se encogen hacia la media de Bogotá, y en la cola alta (Chapinero, estrato 6) eso se convierte en un sesgo sistemático hacia abajo. Para una empresa que valora con este modelo, eso puede ser costoso.
+
+**Lo que respalda el argumento:**
+- **Todos los modelos subpredicen Chapinero en la validación:** el sesgo va de −58 M (los mejores) a −115 M (los árboles).
+- **Kaggle premia al que menos subpredice:** con 11 envíos, la predicción media del test ordena los scores con Spearman −0,93. m17 (predicción media de 826 M) saca 158,3; m19 y m20 (~801 M) sacan 162,1, aunque eran mejores en Chapinero en la validación.
+- **El error de nivel no se ve en la validación cruzada:** la localidad evaluada nunca está en el entrenamiento, y en el test el anuncio de entrenamiento más cercano queda a 96 m en promedio (D16).
+
+**La propuesta:** para las localidades cercanas a la media de precios hay más datos parecidos y menos extrapolación, así que un modelo de ML sería más efectivo y confiable ahí (Usaquén: MAE ~125 M). Para un mercado de lujo como Chapinero haría falta un modelo con datos propios de la zona, una calibración del nivel o información externa sobre el nivel de precios (por ejemplo, el valor catastral del suelo, D18).
+
+**Matiz para la discusión:** si el modelo se usa para comprar, la subpredicción hace perder negocios (ofertas demasiado bajas), mientras que la sobrepredicción hace pagar de más. Hay que discutir cuál de los dos errores le cuesta más a la empresa (el análisis de negocio está en los pendientes).
 
 ---
 

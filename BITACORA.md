@@ -16,7 +16,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m19_nn_star_afinada_m2 (base nueva sin zona de lujo; empata con m17, no se sube) | 131,6 | 146,6 | 154,3 |
 | m18_nn_64_m2 (red general del mismo tamaño, Kaggle 167,5) | 131,5 | 155,9 | 156,7 |
 | m12_en_pca_nt_tx | **131,1** | 149,7 | 146,0 |
-| m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | **143,6** | **144,1** |
+| m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | 143,6 | **144,1** |
+| m17b_xgb_tipo_dist (XGB ponderado, D16b) | 134,6 | **143,3** | 152,3 |
+| m17_xgb_ponderado (XGB ponderado, D16b) | 132,4 | 147,6 | 146,8 |
 | m06_hibrido_en_xgb | 133,6 | 148,5 | 150,5 |
 | m02_elastic_net | 132,2 | 154,7 | 149,8 |
 | m02b_elastic_net_m2 | 135,0 | 153,8 | 162,1 |
@@ -25,6 +27,8 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m90_ensamble | *129,3* | *154,7* | *146,5* |
 
 **Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m17_nn_star_m2 con 158,3**, seguido de m18_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
+
+**Candidatos de `main` (XGB ponderado, D16b):** `m17b_xgb_tipo_dist.csv` y `m17_xgb_ponderado.csv` (comparar con los 172,7 de m04: mismo modelo, con pesos).
 
 **Pendientes / próximos pasos:**
 - [ ] **Catastro (03f, D18):** valor de referencia del suelo por m² (UAECD 2026) y estrato oficial por manzana (SDP), en el grupo de ubicación. Mini corrida en `08h_nn_star_catastro.R` (configuración de m17, con y sin catastro) antes de una corrida completa
@@ -41,7 +45,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
-- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel
+- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por tipo y distancia bajan el sesgo de −100 a −61 M. Falta probarlos en el elastic net (m02/m14) y en el híbrido m06, y confirmarlo en Kaggle
 - [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
 - [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
@@ -64,6 +68,35 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 **La propuesta:** para las localidades cercanas a la media de precios hay más datos parecidos y menos extrapolación, así que un modelo de ML sería más efectivo y confiable ahí (Usaquén: MAE ~125 M). Para un mercado de lujo como Chapinero haría falta un modelo con datos propios de la zona, una calibración del nivel o información externa sobre el nivel de precios (por ejemplo, el valor catastral del suelo, D18).
 
 **Matiz para la discusión:** si el modelo se usa para comprar, la subpredicción hace perder negocios (ofertas demasiado bajas), mientras que la sobrepredicción hace pagar de más. Hay que discutir cuál de los dos errores le cuesta más a la empresa (el análisis de negocio está en los pendientes).
+
+---
+
+## 2026-11-21 · Sesión 8b (rama main): XGBoost con pérdida ponderada y casas frente a apartamentos (D16b)
+
+- **Diagnóstico:**
+  - El test tiene 97% de apartamentos; el train, 75,5%. Las 9.467 casas del train están casi todas lejos de Chapinero (4.753 a más de 5 km).
+  - Las casas del train tienen área mediana de 206 m² frente a 99 de los apartamentos, estrato 3,8 frente a 4,8 y casi nunca mencionan ascensor (1% frente a 21%).
+  - Todos los modelos subpredicen Chapinero, con sesgos de −62 a −120 M.
+- **`10_xgb_ponderado.R`:** XGBoost con los hiperparámetros de m04, sobre la base actual, con la validación por localidad y buffer de 500 m. Se compararon pesos por tipo, por distancia al test (núcleo exponencial) y por razón de densidades (clasificador train vs. test), además de un modelo solo de apartamentos. `xgb_rondas()` ahora acepta pesos (`wa`).
+- **Resultados (MAE OOF en millones; diferencia pareada en Chapinero frente a la base, con su *t*):**
+
+  | Variante | Total | Chapinero | Dif. Chapinero (*t*) | Sesgo Chapinero |
+  |---|---:|---:|---:|---:|
+  | base | 131,0 | 156,8 | — | −100 |
+  | tipo_dist2km (m17b) | 134,6 | **143,3** | −13,5 (−3,2) | −61 |
+  | apto_dist2km | 132,5 | 145,0 | −11,8 (−3,0) | −64 |
+  | dist2km (m17) | 132,4 | 147,6 | −9,2 (−2,6) | −61 |
+  | tipo | 132,1 | 148,4 | −8,4 (−3,1) | −91 |
+  | razon_g05 | 132,1 | 148,8 | −8,0 (−1,9) | −62 |
+  | razon_g1 | 140,0 | 162,2 | +5,4 (+1,0) | −69 |
+
+- **Aprendizajes:**
+  - Los pesos que se concentran *moderadamente* cerca del test mejoran Chapinero de forma significativa y reducen el sesgo en unos 40 M. Cuestan entre 1 y 4 M de MAE total.
+  - La razón de densidades del clasificador es demasiado extrema: AUC de 0,997, separa casi solo por ubicación, y con γ = 1 el tamaño de muestra efectivo cae al 3%. Empeora.
+  - El modelo solo de apartamentos no mejora frente a ponderar por tipo. XGBoost ya separa por `es_apto`, y quitar las casas reduce los datos.
+  - La métrica de "zona objetivo" (Chapinero + 1 km, 3.913 anuncios), fijada antes de correr, **no discriminó**: todas las variantes empeoran un poco ahí (+0,5 a +6 M). La ganancia está en Chapinero mismo. Por eso m17 (elegido por zona) es dist2km y no la mejor en Chapinero.
+  - Las predicciones ponderadas del test son más altas (media de 768 M en m04 frente a 804 M en m17b). Para el análisis de negocio esto importa: menos subpredicción también implica más riesgo de sobrepredecir.
+- **Siguientes pasos:** subir m17b y m17 a Kaggle (la comparación limpia es contra m04, con 172,7). Si mejoran, aplicar los mismos pesos al elastic net y al híbrido (`glmnet` acepta `weights`).
 
 ---
 

@@ -176,7 +176,7 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 - El MAE en los 307 anuncios de Chapinero del train es el más cercano en nivel (−21 M), pero ordena peor (0,50).
 
 **Diagnósticos:**
-- El test es muy distinto: el 100% de los anuncios está a menos de 1,27 km de un CBD (en el train, el 4%); hay 63% de estrato 6 (23% en el train) y 97% de apartamentos.
+- El test es muy distinto: el 96% de los anuncios está a menos de 2 km de un CBD (en el train, el 14%) y el 52% a menos de 1 km (2,6%); hay 63% de estrato 6 (23% en el train) y 97% de apartamentos.
 - El tamaño efectivo de muestra de TWCV es de solo 1.160 anuncios (3%). El 32% del peso queda en los anuncios de Chapinero del train y el 40% en Usaquén.
 - **No hay cobertura en la distancia de predicción `d`.** En el test, `d` tiene una mediana de 96 m y el 99% está por debajo de 500 m. En la validación con buffer, ninguna observación baja de 500 m. Por eso `d` no puede balancearse; el artículo lo resolvería con buffers de radio aleatorio, lo que obliga a volver a entrenar.
 - Aun con un `d` mucho menor (que debería facilitar la predicción), Kaggle sale peor que la validación. El sesgo viene del cambio en las variables, no de la distancia.
@@ -189,11 +189,12 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
 **Contexto:** el test es 97% apartamentos y está en Chapinero. El train tiene 24,5% de casas, casi todas lejos, y solo 307 anuncios en Chapinero. Todos los modelos subpredicen Chapinero.
 **Decisión:**
 - Cada fila del train se pondera según qué tanto se parece al test (corrección por cambio de covariables; Shimodaira, 2000). Los pesos se calculan solo con covariables, nunca con el precio, y se normalizan a media 1.
-- Pesos elegidos: **tipo × distancia**. El tipo lleva la proporción casa/apartamento del train a la del test; la distancia es `exp(−d/2 km)` al anuncio del test más cercano, con piso de 0,05. Ese modelo es m17b. m17 usa solo la distancia.
+- Pesos elegidos: **tipo × distancia**. El tipo lleva la proporción casa/apartamento del train a la del test; la distancia es `exp(−d/2 km)` al anuncio del test más cercano, con piso de 0,05. Ese modelo es m51b (`m51b_xgb_tipo_dist`). m51 (`m51_xgb_ponderado`) usa solo la distancia. *Se registraron como m17 y m17b; se renombraron a m51 y m51b (2026-11-24) para no chocar con `m17_nn_star`.*
 - Casas y apartamentos van en el **mismo modelo**, diferenciados por `es_apto` y por los pesos. Un modelo solo de apartamentos no mejoró.
 - Se descarta la razón de densidades de un clasificador train vs. test. Separa casi perfectamente por ubicación (AUC 0,997) y concentra el peso en pocas filas.
 **Por qué:** baja el MAE OOF en Chapinero de 156,8 a 143,3 M (diferencia pareada −13,5 M, *t* = −3,2) y el sesgo de −100 a −61 M, a cambio de +3,6 M en el total.
 **Cautela:** se eligió entre 9 variantes mirando Chapinero; la confirmación debe venir de Kaggle (comparar con m04).
+**Actualización (2026-11-22):** con la validación ponderada de D16, la mejor variante es la de **solo distancia (m51)**: TWCV de 143,2 frente a 149,8 sin pesos (−6,6 M), mientras que m51b mejora solo 2,3 M. Bajar el peso de las casas ayuda en los 307 anuncios de Chapinero, pero no en la composición completa del test. **Se prefiere m51.**
 
 ### D17 · Redes neuronales con Keras desde R: NN STAR y red general del mismo tamaño (2026-11-21)
 **Decisión sobre el entorno:** las redes se escriben en R con `keras3`, como en el paper (que usó keras en R). TensorFlow es solo el backend, instalado en un venv aparte (`.venv-tf`, `requirements-tf.txt`) para no romper las versiones de numpy del entorno de texto (D11). Así se reutilizan `cv_oof`, `evalua` y `registra`.

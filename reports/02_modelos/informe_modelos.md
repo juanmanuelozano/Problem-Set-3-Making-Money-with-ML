@@ -192,23 +192,26 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 
 ![Importancia XGBoost](figures/m4_importancia_xgb.png)
 
-### 2.3a XGBoost con pérdida ponderada (10_xgb_ponderado.R: m17, m17b; D16b)
+### 2.3a XGBoost con pérdida ponderada (10_xgb_ponderado.R: m51, m51b; D16b)
+*Registrados primero como m17 y m17b; se renombraron a m51 y m51b para no chocar con `m17_nn_star` (sección 2.2e).*
 - **Idea:** corregir el cambio de covariables entre train y test ponderando cada fila por su parecido con el test (Shimodaira, 2000). El test es 97% apartamentos y está en Chapinero; el train tiene 24,5% de casas, casi todas lejos.
 - **Pesos comparados** (solo covariables, media 1): por tipo (proporción casa/apartamento del test), por distancia al test más cercano (`exp(−d/h)`, h = 2 o 5 km, piso de 0,05), sus combinaciones, y la razón de densidades de un clasificador train vs. test con exponente γ ∈ {0,5; 1}. Además, un modelo solo de apartamentos.
 - Mismos hiperparámetros que m04 (profundidad 4, mcw 3, eta 0,03), sobre la base actual. Rondas elegidas por MAE en la zona objetivo (Chapinero + 1 km). Tablas: [`tables/ponderados_resultados.csv`](tables/ponderados_resultados.csv) y [`tables/ponderados_pesos.csv`](tables/ponderados_pesos.csv).
 
-| Variante | Muestra efectiva | Total | Chapinero | Dif. pareada Chapinero (*t*) | Sesgo Chapinero |
-|---|---:|---:|---:|---:|---:|
-| base (pesos iguales) | 100% | 131,0 | 156,8 | — | −100 |
-| **tipo × dist 2 km (m17b)** | 68% | 134,6 | **143,3** | **−13,5 (−3,2)** | −61 |
-| solo apartamentos, dist 2 km | — | 132,5 | 145,0 | −11,8 (−3,0) | −64 |
-| dist 2 km (m17) | 82% | 132,4 | 147,6 | −9,2 (−2,6) | −61 |
-| tipo | 80% | 132,1 | 148,4 | −8,4 (−3,1) | −91 |
-| razón de densidades, γ = 0,5 | 19% | 132,1 | 148,8 | −8,0 (−1,9) | −62 |
-| razón de densidades, γ = 1 | 3% | 140,0 | 162,2 | +5,4 (+1,0) | −69 |
+| Variante | Muestra efectiva | Total | Chapinero | Dif. pareada Chapinero (*t*) | Sesgo Chapinero | TWCV |
+|---|---:|---:|---:|---:|---:|---:|
+| base (pesos iguales) | 100% | 131,0 | 156,8 | — | −100 | 149,8 |
+| **dist 2 km (m51)** | 82% | 132,4 | 147,6 | −9,2 (−2,6) | −61 | **143,2** |
+| solo apartamentos, dist 2 km | — | 132,5 | 145,0 | −11,8 (−3,0) | −64 | 144,5 |
+| tipo | 80% | 132,1 | 148,4 | −8,4 (−3,1) | −91 | 145,7 |
+| tipo × dist 2 km (m51b) | 68% | 134,6 | **143,3** | **−13,5 (−3,2)** | −61 | 147,5 |
+| razón de densidades, γ = 0,5 | 19% | 132,1 | 148,8 | −8,0 (−1,9) | −62 | 147,9 |
+| razón de densidades, γ = 1 | 3% | 140,0 | 162,2 | +5,4 (+1,0) | −69 | 153,7 |
+
+TWCV: MAE out-of-fold reponderado hacia la composición del test (D16). Tabla completa, con IWCV: [`tables/ponderados_twcv.csv`](tables/ponderados_twcv.csv).
 
 - **Lectura:** los pesos moderados mejoran Chapinero de forma significativa y reducen el sesgo en unos 40 M, a cambio de 1–4 M de MAE total. La razón de densidades es demasiado extrema: el clasificador separa casi solo por ubicación (AUC 0,997). El modelo solo de apartamentos no supera a ponderar por tipo.
-- **Cautela:** m17b se eligió entre 9 variantes mirando Chapinero (selección a posteriori). La métrica de zona, fijada antes, no discriminó entre variantes. La comparación limpia es en Kaggle contra m04 (172,7).
+- **TWCV ordena distinto que Chapinero.** La ponderación por distancia (m51) mejora 6,6 M en TWCV; la combinación con tipo (m51b), solo 2,3 M. La ventaja de m51b se concentra en los 307 anuncios de Chapinero, y m51b se eligió mirando esa misma métrica entre 9 variantes. **Se prefiere m51.** La confirmación debe venir de Kaggle, contra m04 (172,7). El m04 del registro usa la base anterior a D14, así que la comparación interna correcta es contra la fila `base` de esta tabla.
 
 ### 2.3b CART (05b_cart.R: m11)
 - Un solo árbol con ranger (`num.trees = 1`, `mtry` = todas, sin remuestreo). ranger no poda, así que la complejidad se controla con `max.depth` ∈ {3, 4, 5, 6, 8, 10, 12, 15, sin límite} y `min.bucket` ∈ {5, 20, 50, 100, 200, 500} (`min.node.size` = 2 × `min.bucket`), los parámetros que calibran Probst, Boulesteix y Bischl (2019, *JMLR*) para rpart. 108 árboles, tabla en [`tables/cart_grilla.csv`](tables/cart_grilla.csv).

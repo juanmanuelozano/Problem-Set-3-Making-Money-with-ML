@@ -1,14 +1,14 @@
 # Informe 1 — Estadísticas descriptivas y motivación espacial
 
 **Problem Set 3: Predicting Prices · Big Data y Machine Learning · Uniandes 2026-2**
-Código: [`scripts/02_descriptivas.R`](../../scripts/02_descriptivas.R) · Datos externos: [`scripts/01_osm_descarga.R`](../../scripts/01_osm_descarga.R)
-Última actualización: 2026-11-16
+Código: [`scripts/02_descriptivas.R`](../../scripts/02_descriptivas.R) · [`scripts/02c_composicion_test.R`](../../scripts/02c_composicion_test.R) · Datos externos: [`scripts/01_osm_descarga.R`](../../scripts/01_osm_descarga.R)
+Última actualización: 2026-11-22
 
 ---
 
 ## Resumen
 
-1. **La muestra de prueba está concentrada en Chapinero**: 9.690 de las 10.286 observaciones (94%) están en esa localidad. En entrenamiento solo hay **307** de 38.644. El reto, por tanto, no es interpolar dentro de la ciudad sino **extrapolar a la zona más cara de Bogotá** con muy pocos ejemplos de ella.
+1. **La muestra de prueba está concentrada en Chapinero**: 9.690 de las 10.286 observaciones (94%) están en esa localidad. En entrenamiento solo hay **307** de 38.644. El reto, por tanto, no es interpolar dentro de la ciudad sino **extrapolar a la zona más cara de Bogotá** con muy pocos ejemplos de ella. La composición también difiere: el test es 63% estrato 6 (23% en el train) y 97% apartamentos (76%), y el 96% está a menos de 2 km de un centro de empleo (14% en el train).
 2. **El precio está acotado entre 300 y 1.650 millones de COP** y se aglomera en cifras redondas. Las predicciones deben respetar ese soporte. No hay outliers de precio propiamente dichos: los extremos aparecen en el precio por m² y vienen de áreas mal extraídas del texto, que **perdió los puntos decimales** ("96.0 m2" se lee como "960 m2").
 3. **El área, el predictor hedónico central, falta en el 69% de los anuncios**. Extrayéndola de la descripción se recupera cerca de un tercio de los faltantes.
 4. **La ubicación pesa mucho**: el precio por m² cae alrededor de 7,5% por cada kilómetro de distancia al centro de empleo más cercano, y Chapinero tiene la mediana más alta de la ciudad (6,8 millones/m²).
@@ -87,6 +87,71 @@ El perfil de los inmuebles de prueba también es distinto:
 | Menciona chimenea | 30% | 30% | 23% |
 
 Las 307 observaciones de Chapinero en el train se parecen mucho al test en sus atributos observables (habitaciones, baños, distancias), lo que las hace **la mejor aproximación disponible al conjunto de prueba**.
+
+### 3.1 Composición de las muestras
+
+Código: [`scripts/02c_composicion_test.R`](../../scripts/02c_composicion_test.R). Tablas: [`composicion_train_test.csv`](tables/composicion_train_test.csv), [`perfil_tipo_inmueble.csv`](tables/perfil_tipo_inmueble.csv) y [`cercania_train_test.csv`](tables/cercania_train_test.csv).
+
+![Composición de train y test](figures/f15_composicion_train_test.png)
+
+| Atributo | Categoría | Train | Train: Chapinero | Test | Test / Train |
+|---|---|---:|---:|---:|---:|
+| Tipo de inmueble | Apartamento | 75,5% | 80,1% | 97,3% | 1,3 |
+| | Casa | 24,5% | 19,9% | 2,7% | 0,1 |
+| Estrato | 3 o menos | 13,3% | 0,7% | 1,5% | 0,1 |
+| | 4 | 35,7% | 14,0% | 16,2% | 0,5 |
+| | 5 | 28,1% | 15,6% | 19,1% | 0,7 |
+| | 6 | 22,9% | 69,7% | 63,2% | 2,8 |
+| Habitaciones | 1 o menos | 7,8% | 17,6% | 17,9% | 2,3 |
+| | 2 | 19,1% | 34,9% | 34,6% | 1,8 |
+| | 3 | 51,4% | 41,7% | 41,4% | 0,8 |
+| | 4 o más | 21,8% | 5,9% | 6,0% | 0,3 |
+| Distancia al CBD más cercano | < 1 km | 2,6% | 58,6% | 52,1% | 20,0 |
+| | 1–2 km | 11,6% | 37,8% | 44,1% | 3,8 |
+| | 2–5 km | 48,7% | 3,6% | 3,8% | 0,1 |
+| | > 5 km | 37,2% | 0,0% | 0,0% | 0,0 |
+
+El estrato y el área corresponden al valor observado o, si falta, al imputado en la etapa de modelación. Los tres centros de empleo son el Centro Internacional, la Calle 72 y el Parque de la 93.
+
+- **La diferencia es geográfica, no de tipo de demanda.** Las proporciones del test son casi idénticas a las de los anuncios del train ubicados en Chapinero, en todos los atributos. Lo que separa al test del train es dónde está cada anuncio. Una vez se fija la localidad, el perfil de los inmuebles es el mismo.
+- **Estrato.** El 63% del test es estrato 6, frente al 23% del train. Los estratos 3 o menos, que son el 13% del train, prácticamente no aparecen en el test.
+- **Tamaño.** El test tiene más unidades pequeñas (el 53% tiene 2 habitaciones o menos, frente al 27% del train) y, al mismo tiempo, una proporción mayor de áreas entre 120 y 180 m². Es el perfil de Chapinero: apartaestudios y apartamentos de una o dos habitaciones junto con apartamentos amplios de estrato alto.
+- **Cercanía a los centros de empleo.** La mediana de la distancia al CBD más cercano es 0,98 km en el test y 3,94 km en el train. El 96% del test está a menos de 2 km, frente al 14% del train, y el 37% del train está a más de 5 km, una zona sin anuncios en el test.
+
+### 3.2 Casas y apartamentos
+
+| | Apartamentos | | | Casas | | |
+|---|---:|---:|---:|---:|---:|---:|
+| | Train: resto | Train: Chapinero | Test | Train: resto | Train: Chapinero | Test |
+| n | 28.931 | 246 | 10.012 | 9.406 | 61 | 274 |
+| Precio mediano (M) | 530 | 744 | — | 690 | 780 | — |
+| Precio por m² mediano (M) | 5,53 | 6,85 | — | 3,44 | 6,73 | — |
+| Área mediana (m²) | 99 | 110 | 116 | 206 | 126 | 192 |
+| Habitaciones (media) | 2,6 | 2,3 | 2,3 | 4,7 | 2,7 | 4,2 |
+| Estrato (media) | 4,8 | 5,6 | 5,4 | 3,8 | 5,2 | 4,3 |
+| Menciona ascensor | 21% | 19% | 21% | 1% | 41% | 9% |
+| Menciona patio o jardín | 6% | 5% | 4% | 45% | 8% | 34% |
+| Distancia mediana al CBD (km) | 3,5 | 1,0 | 1,0 | 5,5 | 0,8 | 1,3 |
+
+- **Casas y apartamentos son mercados distintos.** En el train, fuera de Chapinero, la casa típica duplica el área del apartamento típico, tiene dos habitaciones más, un estrato menor y está más lejos de los centros de empleo. Su precio por m² es 38% menor. Una misma función de precio para los dos tipos de inmueble mezcla relaciones distintas entre área, ubicación y precio.
+- **Las casas del test se parecen a las casas del train, no a las "casas" de Chapinero en el train.** Los 61 anuncios clasificados como casa en Chapinero tienen 126 m², 2,7 habitaciones y ascensor en el 41% de los casos. Por esos atributos y por su precio por m², similar al de los apartamentos de la zona, es probable que muchos sean unidades en edificios o conjuntos registradas como casa. El tipo de inmueble es informativo, pero la etiqueta es ruidosa justo en la zona de interés.
+- **El peso de las casas en la predicción final es pequeño.** Las 274 casas son el 2,7% del test. En entrenamiento representan una cuarta parte de la muestra y, por lo tanto, una parte desproporcionada de la función de pérdida.
+
+### 3.3 Cercanía del train al test
+
+| Distancia al anuncio de prueba más cercano | Anuncios del train | % del train | % casas | Estrato medio | Precio mediano (M) |
+|---|---:|---:|---:|---:|---:|
+| < 0,5 km | 12.610 | 32,6% | 13,5% | 5,1 | 660 |
+| 0,5–1 km | 7.804 | 20,2% | 17,8% | 5,1 | 630 |
+| 1–2 km | 10.044 | 26,0% | 21,9% | 4,4 | 490 |
+| 2–5 km | 6.042 | 15,6% | 45,2% | 3,7 | 470 |
+| > 5 km | 2.144 | 5,5% | 67,6% | 3,2 | 439 |
+
+Un tercio del train está a menos de 500 m de algún anuncio de prueba. Esto se explica por los 596 anuncios del test fuera de Chapinero, sobre todo en Usaquén, y porque el norte de Chapinero limita con la zona más densa del train. A medida que aumenta la distancia al test, crece la proporción de casas (de 14% a 68%) y caen el estrato y el precio.
+
+**Implicaciones:**
+- La distancia al test y el tipo de inmueble resumen buena parte del cambio de composición. Ponderar las observaciones de entrenamiento por su cercanía al test y por el tipo de inmueble reduce el peso de las casas y de los estratos bajos sin excluirlos (D17).
+- Las métricas de validación promediadas sobre todo el train describen una población distinta a la del test. Para comparar modelos conviene reponderar los errores out-of-fold hacia la composición del test (D16).
 
 **Implicaciones para la modelación:**
 - Una validación cruzada aleatoria **sobreestimará el desempeño**, porque evaluaría sobre todo en Usaquén, Suba y Kennedy. Se necesitan **folds espaciales** y una evaluación específica en las observaciones del train ubicadas en Chapinero.
@@ -254,6 +319,7 @@ Lectura:
 Rscript scripts/01_osm_descarga.R   # descarga OSM (usa caché si ya existe)
 Rscript scripts/02_descriptivas.R   # genera figuras, tablas y data/processed/base_enriquecida.csv
 Rscript scripts/02b_extremos.R      # valores extremos (requiere también base_modelo.rds de 03_features.R)
+Rscript scripts/02c_composicion_test.R  # composición train/test y perfil por tipo de inmueble (requiere base_modelo.rds)
 ```
 
 Restricción del entorno: Windows (Control de aplicaciones) bloquea las librerías `sf`, `units` y `geosphere`. Las operaciones espaciales se implementaron con `sp::point.in.polygon` y una función haversine propia.

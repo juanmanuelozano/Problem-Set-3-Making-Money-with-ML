@@ -4,7 +4,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-21)
+## Estado actual (2026-11-22)
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -17,8 +17,8 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 | m18_nn_64_m2 (red general del mismo tamaño, Kaggle 167,5) | 131,5 | 155,9 | 156,7 |
 | m12_en_pca_nt_tx | **131,1** | 149,7 | 146,0 |
 | m14_en_enc_tx (m02 + encoder texto STAR) | 132,2 | 143,6 | **144,1** |
-| m17b_xgb_tipo_dist (XGB ponderado, D16b) | 134,6 | **143,3** | 152,3 |
-| m17_xgb_ponderado (XGB ponderado, D16b) | 132,4 | 147,6 | 146,8 |
+| m51b_xgb_tipo_dist (XGB ponderado, D16b) | 134,6 | **143,3** | 152,3 |
+| m51_xgb_ponderado (XGB ponderado, D16b) | 132,4 | 147,6 | 146,8 |
 | m06_hibrido_en_xgb | 133,6 | 148,5 | 150,5 |
 | m02_elastic_net | 132,2 | 154,7 | 149,8 |
 | m02b_elastic_net_m2 | 135,0 | 153,8 | 162,1 |
@@ -28,7 +28,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 **Envíos a Kaggle:** scores en `models/kaggle_scores.csv`. **Mejor: m17_nn_star_m2 con 158,3**, seguido de m18_nn_64_m2 con 167,5; antes, el mejor era m04 o m02b con 172,7. Con 9 envíos, la predicción media del test es lo que mejor ordena el score (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
 
-**Candidatos de `main` (XGB ponderado, D16b):** `m17b_xgb_tipo_dist.csv` y `m17_xgb_ponderado.csv` (comparar con los 172,7 de m04: mismo modelo, con pesos).
+**Candidatos de `main` (XGB ponderado, D16b):** `m51_xgb_ponderado.csv` (pesos por distancia; TWCV 143,2, −6,6 M frente al mismo XGBoost sin pesos) y, detrás, `m51b_xgb_tipo_dist.csv` (gana solo en los 307 de Chapinero; TWCV 147,5). La comparación en Kaggle es contra los 172,7 de m04. Antes se llamaban m17 y m17b; se renombraron para no chocar con `m17_nn_star`.
 
 **Pendientes / próximos pasos:**
 - [ ] **Catastro (03f, D18):** valor de referencia del suelo por m² (UAECD 2026) y estrato oficial por manzana (SDP), en el grupo de ubicación. Mini corrida en `08h_nn_star_catastro.R` (configuración de m17, con y sin catastro) antes de una corrida completa
@@ -45,7 +45,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
-- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por tipo y distancia bajan el sesgo de −100 a −61 M. Falta probarlos en el elastic net (m02/m14) y en el híbrido m06, y confirmarlo en Kaggle
+- [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por distancia al test bajan el sesgo de −100 a −61 M y el TWCV en 6,6 M (m51). Falta probarlos en el elastic net (m14) y en el híbrido m06, y confirmarlo en Kaggle
 - [ ] Rezago espacial del precio por m² (kNN dentro de cada fold): función en `utils_modelos.R`
 - [x] Variables de contexto de OSM: cerros, vías principales, área verde, altura de edificios y zona de lujo (D15)
 - [ ] Decidir si se permite explotar los 200 duplicados exactos train-test (reglas del curso)
@@ -71,6 +71,30 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
+## 2026-11-22 · Sesión 8c (rama main): TWCV de los XGBoost ponderados y composición del test
+
+- **TWCV e IWCV de las 10 variantes de `10_xgb_ponderado.R`**, todas sobre la misma base, de modo que la diferencia frente a `base` aísla el efecto de los pesos. Tabla: `reports/02_modelos/tables/ponderados_twcv.csv`.
+
+  | Variante | Chapinero | TWCV | Dif. TWCV | IWCV | Dif. IWCV |
+  |---|---:|---:|---:|---:|---:|
+  | base | 156,8 | 149,8 | — | 138,6 | — |
+  | **dist2km (m51)** | 147,6 | **143,2** | **−6,6** | 137,1 | −1,5 |
+  | apto_dist2km | 145,0 | 144,5 | −5,3 | 137,7 | −0,9 |
+  | tipo | 148,4 | 145,7 | −4,2 | 137,0 | −1,6 |
+  | tipo_dist2km (m51b) | 143,3 | 147,5 | −2,3 | 138,5 | −0,1 |
+  | razon_g1 | 162,2 | 153,7 | +3,9 | 146,6 | +8,0 |
+
+  - **m51 es la mejor variante en TWCV, y m51b pierde esa posición.** La ventaja de m51b se concentra en los 307 anuncios de Chapinero; en la composición completa del test, que incluye Usaquén, bajar el peso de las casas no ayuda tanto.
+  - En IWCV las diferencias son menores (−1,6 a +8 M), porque esa validación ya concentra el peso cerca de Chapinero.
+  - El `m04_xgboost` del registro usa la base anterior a D14, así que no sirve para aislar el efecto de los pesos. La comparación correcta es contra `base` en `ponderados_twcv.csv`.
+- **Descriptivas (`02c_composicion_test.R`, sección 3.1–3.3 del informe 1):** composición de train y test por tipo, estrato, habitaciones, área y distancia al CBD; perfil de casas y apartamentos; cercanía del train al test. Figura `f15_composicion_train_test.png`.
+  - El test tiene la misma composición que los anuncios del train en Chapinero: la diferencia entre muestras es geográfica.
+  - Los 61 anuncios marcados como casa en Chapinero tienen el perfil de un apartamento (126 m², 2,7 habitaciones, ascensor en el 41%). La etiqueta de tipo es ruidosa en la zona de interés.
+- **Corrección:** la Sesión 10 y D16 decían que el 100% del test está a menos de 1,27 km de un CBD. La cifra correcta es 96% a menos de 2 km (14% en el train) y 52% a menos de 1 km (2,6%). La distancia máxima en el test es 6,4 km. Se corrigió en ambos documentos.
+- **Siguientes pasos:** subir m51 a Kaggle (comparar con m04); aplicar los pesos por distancia al elastic net con encoder (m14).
+
+---
+
 ## 2026-11-21 · Sesión 8b (rama main): XGBoost con pérdida ponderada y casas frente a apartamentos (D16b)
 
 - **Diagnóstico:**
@@ -83,9 +107,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   | Variante | Total | Chapinero | Dif. Chapinero (*t*) | Sesgo Chapinero |
   |---|---:|---:|---:|---:|
   | base | 131,0 | 156,8 | — | −100 |
-  | tipo_dist2km (m17b) | 134,6 | **143,3** | −13,5 (−3,2) | −61 |
+  | tipo_dist2km (m51b) | 134,6 | **143,3** | −13,5 (−3,2) | −61 |
   | apto_dist2km | 132,5 | 145,0 | −11,8 (−3,0) | −64 |
-  | dist2km (m17) | 132,4 | 147,6 | −9,2 (−2,6) | −61 |
+  | dist2km (m51) | 132,4 | 147,6 | −9,2 (−2,6) | −61 |
   | tipo | 132,1 | 148,4 | −8,4 (−3,1) | −91 |
   | razon_g05 | 132,1 | 148,8 | −8,0 (−1,9) | −62 |
   | razon_g1 | 140,0 | 162,2 | +5,4 (+1,0) | −69 |
@@ -94,9 +118,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - Los pesos que se concentran *moderadamente* cerca del test mejoran Chapinero de forma significativa y reducen el sesgo en unos 40 M. Cuestan entre 1 y 4 M de MAE total.
   - La razón de densidades del clasificador es demasiado extrema: AUC de 0,997, separa casi solo por ubicación, y con γ = 1 el tamaño de muestra efectivo cae al 3%. Empeora.
   - El modelo solo de apartamentos no mejora frente a ponderar por tipo. XGBoost ya separa por `es_apto`, y quitar las casas reduce los datos.
-  - La métrica de "zona objetivo" (Chapinero + 1 km, 3.913 anuncios), fijada antes de correr, **no discriminó**: todas las variantes empeoran un poco ahí (+0,5 a +6 M). La ganancia está en Chapinero mismo. Por eso m17 (elegido por zona) es dist2km y no la mejor en Chapinero.
-  - Las predicciones ponderadas del test son más altas (media de 768 M en m04 frente a 804 M en m17b). Para el análisis de negocio esto importa: menos subpredicción también implica más riesgo de sobrepredecir.
-- **Siguientes pasos:** subir m17b y m17 a Kaggle (la comparación limpia es contra m04, con 172,7). Si mejoran, aplicar los mismos pesos al elastic net y al híbrido (`glmnet` acepta `weights`).
+  - La métrica de "zona objetivo" (Chapinero + 1 km, 3.913 anuncios), fijada antes de correr, **no discriminó**: todas las variantes empeoran un poco ahí (+0,5 a +6 M). La ganancia está en Chapinero mismo. Por eso m51 (elegido por zona) es dist2km y no la mejor en Chapinero.
+  - Las predicciones ponderadas del test son más altas (media de 768 M en m04 frente a 804 M en m51b). Para el análisis de negocio esto importa: menos subpredicción también implica más riesgo de sobrepredecir.
+- **Siguientes pasos:** subir m51b y m51 a Kaggle (la comparación limpia es contra m04, con 172,7). Si mejoran, aplicar los mismos pesos al elastic net y al híbrido (`glmnet` acepta `weights`).
 
 ---
 
@@ -115,7 +139,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   Todas siguen siendo optimistas.
 - **Composición del "Chapinero sintético" (TWCV):** Usaquén 40%, Chapinero 32%, Santa Fe 12%, Suba 5%. El tamaño efectivo de muestra es del 3%.
 - **El test casi no se parece al train:**
-  - 100% de los anuncios a menos de 1,27 km de un CBD (4% en el train);
+  - 96% de los anuncios a menos de 2 km de un CBD (14% en el train) y 52% a menos de 1 km (2,6%);
   - 63% de estrato 6 (23%);
   - 97% de apartamentos (76%).
 - **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.

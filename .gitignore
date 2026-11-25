@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .Rproj.user/
-*.Rproj
+# (el .Rproj sí se versiona: here() lo usa para ubicar la raíz del proyecto)
 
 # Modelos pesados (se regeneran con los scripts)
 models/*.rds
@@ -25,3 +25,6 @@ data/processed/embeddings_texto.parquet
 
 # Catastro (03f_catastro.R): se descarga de Datos Abiertos Bogotá; muy pesado para git
 data/external/catastro/
+
+# Salidas de cada corrida de code/00_main.R (no se versionan)
+output/logs/

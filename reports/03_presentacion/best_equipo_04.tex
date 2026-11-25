@@ -59,17 +59,17 @@
   Juan Manuel Lozano \quad·\quad María José Perez \quad·\quad Samuel Suárez\par\vspace{.3em}
   {\small\color{gris}Equipo 04 · Big Data y Machine Learning · Universidad de los Andes · 2026-2\par}
   \vfill
-  {\small\color{gris}Modelo analizado: \texttt{m24\_ens\_optimo} · MAE en Kaggle: público \kPubCompleto, privado \kPrivCompleto\par}
+  {\small\color{gris}MAE en Kaggle: público \kPubCompleto, privado \kPrivCompleto\par}
   \vspace*{1.5em}
 \end{frame}
 
 % -----------------------------------------------------------------------------
 \begin{frame}{El test no se parece al train: predecimos un barrio que casi no vimos}
   \begin{columns}[T,onlytextwidth]
-    \begin{column}{.22\textwidth}
-      \centering\includegraphics[height=.74\textheight]{f01_mapa}
+    \begin{column}{.28\textwidth}
+      \centering\includegraphics[width=\linewidth]{f01_mapa}
     \end{column}
-    \begin{column}{.42\textwidth}
+    \begin{column}{.37\textwidth}
       \vspace{.4em}\includegraphics[width=\linewidth]{f02_composicion}
     \end{column}
     \begin{column}{.33\textwidth}
@@ -149,9 +149,9 @@
       \begin{tabular}{@{}lrr@{}}
         \toprule
         Componente & Peso & Kaggle (M) \\ \midrule
-        NN STAR (m17) & 53,4\% & \kNN \\
-        XGB con comparables (m22) & 39,9\% & \kXGB \\
-        EN con encoder de texto (m14) & 6,6\% & \kEN \\
+        Red neuronal STAR & 53,4\% & \kNN \\
+        XGBoost con comparables & 39,9\% & \kXGB \\
+        Elastic net con texto & 6,6\% & \kEN \\
         Otros 7 candidatos & 0\% & 167--179 \\ \bottomrule
       \end{tabular}
       \par\vspace{1.2em}
@@ -171,7 +171,7 @@
       \small
       \begin{itemize}\setlength{\itemsep}{.4em}
         \item El método estimó \kEst\M: el resultado quedó prácticamente encima de la estimación y lejos de la cota (\kCota\M).
-        \item Mejora en \kGanaNN\M\ al mejor componente (NN STAR, \kNN\M).
+        \item Mejora en \kGanaNN\M\ al mejor componente (la red neuronal STAR, \kNN\M).
         \item Del público al privado solo empeora \kGapPP\M.
       \end{itemize}
       \mensaje{El ensamble no estaba sobreajustado al leaderboard.}
@@ -184,19 +184,10 @@
   \centering\small
   \input{tablas/metricas.tex}
   \par\vspace{.5em}\raggedright
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item Es una regresión: el AUC y la sensibilidad no aplican. Como análogo, la penúltima fila mide cuánto del decil más caro se identifica como tal.
-      \end{itemize}
-    \end{column}
-    \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item El error típico es del 12\%, pero el MAE lo empujan pocos errores grandes. En Chapinero, el modelo \alert{subvalora}.
-      \end{itemize}
-    \end{column}
-  \end{columns}
-  \nota{OOF aproximadas: $0{,}534\,\hat p_{\text{m17}} + 0{,}399\,\hat p_{\text{m22}} + 0{,}066\,\hat p_{\text{m14}}$. m17 y m14: CV por localidad con buffer. m22: CV aleatoria, optimista (\maeCompMxxii\M\ frente a \kXGB\M\ en Kaggle).}
+  \begin{itemize}
+    \item El error típico es del 12\%, pero el MAE lo empujan pocos errores grandes. En Chapinero, el modelo \alert{subvalora}.
+  \end{itemize}
+  \nota{OOF aproximadas: $0{,}534\,\hat p_{\text{red}} + 0{,}399\,\hat p_{\text{XGB}} + 0{,}066\,\hat p_{\text{EN}}$. La red y el elastic net: CV por localidad con buffer. El XGBoost: CV aleatoria, optimista (\maeCompMxxii\M\ frente a \kXGB\M\ en Kaggle).}
 \end{frame}
 
 % -----------------------------------------------------------------------------
@@ -324,7 +315,6 @@
   \begin{itemize}\setlength{\itemsep}{.5em}
     \item Brenning, A. y Suesse, T. (2026). \emph{Aligning Validation with Deployment: Target-Weighted Cross-Validation for Spatial Prediction}. arXiv:2603.29981.
     \item Datos: Properati (anuncios de Bogotá) y OpenStreetMap (amenidades, vías y cerros).
-    \item Código: \texttt{scripts/93\_pesos\_ensamble.R} (ensamble), \texttt{scripts/91\_validacion\_sintetica.R} (TWCV) y \texttt{scripts/94\_presentacion\_m24.R} (figuras y cifras de esta presentación).
   \end{itemize}
 \end{frame}
 
@@ -333,9 +323,9 @@
 \begin{frame}{Respaldo: alcance del análisis}
   \small
   \begin{itemize}\setlength{\itemsep}{.4em}
-    \item \textbf{Predicciones fuera de muestra del ensamble.} No se volvió a entrenar ningún modelo: se combinan las OOF guardadas de los componentes con los pesos del ensamble. Como m22 viene de la CV aleatoria, el nivel de las métricas es optimista (\maeOOF\M\ en el train, frente a \kPub\M\ en Kaggle). Lo relevante son los patrones: el sesgo por decil y el desempeño en Chapinero.
-    \item \textbf{Reconstrucción en el test.} Recombinar los tres envíos con los pesos reproduce \texttt{m24\_ens\_optimo.csv}, con una diferencia máxima del 0,02\%.
-    \item \textbf{Modelo sustituto.} Un XGBoost (profundidad 5, 800 rondas) ajustado al log de la predicción del m24 en el test, con las 81 variables del modelo y las 4 de comparables. $R^2$ en el 20\% retenido: \rDosSust\ para el precio y \rDosSustM\ para el precio por m². Las coordenadas se agregan en una sola variable.
+    \item \textbf{Predicciones fuera de muestra del ensamble.} No se volvió a entrenar ningún modelo: se combinan las OOF guardadas de los componentes con los pesos del ensamble. Como el XGBoost con comparables viene de la CV aleatoria, el nivel de las métricas es optimista (\maeOOF\M\ en el train, frente a \kPub\M\ en Kaggle). Lo relevante son los patrones: el sesgo por decil y el desempeño en Chapinero.
+    \item \textbf{Reconstrucción en el test.} Recombinar los tres envíos con los pesos reproduce el envío del ensamble, con una diferencia máxima del 0,02\%.
+    \item \textbf{Modelo sustituto.} Un XGBoost (profundidad 5, 800 rondas) ajustado al log de la predicción del ensamble en el test, con las 81 variables del modelo y las 4 de comparables. $R^2$ en el 20\% retenido: \rDosSust\ para el precio y \rDosSustM\ para el precio por m². Las coordenadas se agregan en una sola variable.
     \item \textbf{Pesos TWCV.} \emph{Raking} sobre el estrato, el tipo, las habitaciones y los quintiles del test de área y distancia al CBD, con un encogimiento del 20\% hacia pesos iguales. Tamaño efectivo: \essTWCV.
   \end{itemize}
 \end{frame}

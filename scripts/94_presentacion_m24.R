@@ -11,7 +11,7 @@
 # Salidas: reports/03_presentacion/figuras/*.pdf, reports/03_presentacion/tablas/{cifras,metricas}.tex
 # =============================================================================
 source("scripts/00_config.R"); source("scripts/utils_modelos.R")
-suppressMessages(pacman::p_load(xgboost, patchwork))
+suppressMessages(pacman::p_load(xgboost, patchwork, ggrepel))
 
 DIR <- "reports/03_presentacion"; FIG <- file.path(DIR, "figuras"); TAB <- file.path(DIR, "tablas")
 INT <- "data/interim_presentacion"
@@ -109,17 +109,29 @@ cifra("pTestChap", pct(mean(TE$localidad %in% "Chapinero"))); cifra("nChapTrain"
 cifra("pTrainChap", pct(mean(ES_CHAP), 1)); cifra("nTrain", num(nrow(TR), 0)); cifra("nTest", num(nrow(TE), 0))
 
 # Mapa: dónde está cada muestra
+# Límites y nombres de las localidades (polígonos de OSM; el nombre va en la mediana de los anuncios de cada una)
+loc_pol <- lee_csv(file.path(P$osm, "localidades_poligonos.csv")) %>% mutate(grupo = paste(nombre, ring))
+loc_lbl <- bind_rows(TR, TE) %>% filter(!is.na(localidad)) %>% group_by(localidad) %>%
+  summarise(lon = median(lon), lat = median(lat), .groups = "drop") %>%
+  bind_rows(loc_pol %>% filter(!nombre %in% c(TR$localidad, TE$localidad)) %>% group_by(localidad = nombre) %>%
+              summarise(lon = mean(lon), lat = mean(lat), .groups = "drop")) %>%
+  filter(between(lon, -74.21, -73.99), between(lat, 4.54, 4.82)) %>%
+  mutate(lbl = str_replace(localidad, "Rafael Uribe Uribe", "Rafael Uribe"), chap = localidad == "Chapinero")
 g_mapa <- ggplot() +
+  geom_polygon(data = loc_pol, aes(lon, lat, group = grupo), fill = NA, color = g_claro, linewidth = .2) +
   geom_point(data = TR, aes(lon, lat, color = "Train"), size = .12, alpha = .35, stroke = 0) +
   geom_point(data = TE, aes(lon, lat, color = "Test"), size = .12, alpha = .6, stroke = 0) +
+  geom_text_repel(data = loc_lbl, aes(lon, lat, label = lbl, fontface = ifelse(chap, "bold", "plain")), family = FAM, size = 1.45,
+                  color = g_negro, bg.color = "white", bg.r = .15, box.padding = unit(.8, "pt"), point.padding = 0,
+                  min.segment.length = Inf, max.overlaps = Inf, seed = 123) +
   scale_color_manual(values = c(Train = g_claro, Test = g_negro), breaks = c("Train", "Test"),
                      labels = c(paste0("Train (", num(nrow(TR), 0), ")"), paste0("Test (", num(nrow(TE), 0), ")"))) +
   guides(color = guide_legend(override.aes = list(size = 2, alpha = 1))) +
-  coord_fixed(ratio = 1.003, xlim = c(-74.20, -74.02), ylim = c(4.52, 4.82), expand = FALSE) +
+  coord_fixed(ratio = 1.003, xlim = c(-74.215, -73.985), ylim = c(4.53, 4.83), expand = FALSE) +
   theme_void(base_family = FAM, base_size = 9) +
   theme(legend.position = "bottom", legend.title = element_blank(), plot.margin = margin(0, 0, 0, 0),
         legend.text = element_text(color = g_negro), legend.key.size = unit(8, "pt"))
-guarda(g_mapa, "f01_mapa", w = 1.75, h = 2.85)
+guarda(g_mapa, "f01_mapa", w = 2.3, h = 3.2)
 
 g_compo <- ggplot(compo, aes(p, rasgo)) +
   geom_line(aes(group = rasgo), color = g_tenue, linewidth = 1.6) +
@@ -241,9 +253,9 @@ cifra("kEN", num(mill(K$m14), 1)); cifra("kPubCompleto", num(K$pub, 2)); cifra("
 cifra("kGapPP", num(mill(K$priv - K$pub), 1)); cifra("kGanaNN", num(mill(K$m17 - K$pub), 1))
 
 kag <- tribble(~etq, ~v, ~tipo,
-  "NN STAR (m17) · 53%", K$m17, "Componente",
-  "XGB comparables (m22) · 40%", K$m22, "Componente",
-  "EN texto (m14) · 7%", K$m14, "Componente",
+  "Red neuronal STAR · 53%", K$m17, "Componente",
+  "XGBoost con comparables · 40%", K$m22, "Componente",
+  "Elastic net con texto · 7%", K$m14, "Componente",
   "Cota garantizada", K$cota, "Referencia",
   "Ensamble: estimado", K$est, "Referencia",
   "Ensamble: privado", K$priv, "Ensamble",
@@ -468,7 +480,7 @@ cifra("desacTopQ", pct(des_seg$s[5], 1)); cifra("desacBotQ", pct(des_seg$s[1], 1
 # Compresión: las predicciones del test son menos dispersas que los precios observados en Chapinero
 dist_p <- bind_rows(tibble(v = y[ES_CHAP], serie = "Chapinero, train: precio observado"),
                     tibble(v = ens_oof[ES_CHAP], serie = "Chapinero, train: predicción OOF"),
-                    tibble(v = ens_te, serie = "Test: predicción del m24")) %>%
+                    tibble(v = ens_te, serie = "Test: predicción del ensamble")) %>%
   mutate(serie = factor(serie, unique(serie)))
 cifra("sdLogObsChap", num(sd(log(y[ES_CHAP])), 2)); cifra("sdLogPredTest", num(sd(log(ens_te)), 2))
 cifra("sdLogPredChap", num(sd(log(ens_oof[ES_CHAP])), 2))
@@ -490,10 +502,10 @@ guarda(g_comp + g_des_area + plot_layout(widths = c(1.3, 1)), "f11_compresion_te
 # =============================================================================
 cat("\n[I] Brecha validación-Kaggle\n")
 br <- tribble(~modelo, ~cv, ~twcv, ~kag, ~esquema,
-  "NN STAR (m17)", mean(abs(comp_oof[, "m17"] - y)), sum(W_TWCV * abs(comp_oof[, "m17"] - y)), K$m17, "CV por localidad",
-  "XGB con comparables (m22)", mean(abs(comp_oof[, "m22"] - y)), sum(W_TWCV * abs(comp_oof[, "m22"] - y)), K$m22, "CV aleatoria",
-  "EN con texto (m14)", mean(abs(comp_oof[, "m14"] - y)), sum(W_TWCV * abs(comp_oof[, "m14"] - y)), K$m14, "CV por localidad",
-  "Ensamble óptimo (m24)", mean(abs(ens_oof - y)), sum(W_TWCV * abs(ens_oof - y)), K$pub, "Mezcla")
+  "Red neuronal STAR", mean(abs(comp_oof[, "m17"] - y)), sum(W_TWCV * abs(comp_oof[, "m17"] - y)), K$m17, "CV por localidad",
+  "XGBoost con comparables", mean(abs(comp_oof[, "m22"] - y)), sum(W_TWCV * abs(comp_oof[, "m22"] - y)), K$m22, "CV aleatoria",
+  "Elastic net con texto", mean(abs(comp_oof[, "m14"] - y)), sum(W_TWCV * abs(comp_oof[, "m14"] - y)), K$m14, "CV por localidad",
+  "Ensamble óptimo", mean(abs(ens_oof - y)), sum(W_TWCV * abs(ens_oof - y)), K$pub, "Mezcla")
 print(br %>% mutate(across(c(cv, twcv, kag), ~ round(mill(.x), 1))))
 cifra("brechaEns", num(mill(K$pub - br$twcv[4]), 0)); cifra("brechaNN", num(mill(K$m17 - br$twcv[1]), 0))
 cifra("brechaXGB", num(mill(K$m22 - br$twcv[2]), 0)); cifra("twcvEns", num(mill(br$twcv[4]), 1))

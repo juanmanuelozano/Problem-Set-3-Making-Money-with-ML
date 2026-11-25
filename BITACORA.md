@@ -4,9 +4,11 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-22)
+## Estado actual (2026-11-25)
 
-**Mejor envío en Kaggle: `m24_ens_optimo` = 152,3 M** (53% NN STAR de Samuel + 40% `m22_xgb_comparables_m2` + 7% `m14_en_enc_tx`; D22). Ya no quedan envíos.
+**Mejor envío en Kaggle: `m24_ens_optimo` = 152,3 M público / 153,1 M privado** (53% NN STAR de Samuel + 40% `m22_xgb_comparables_m2` + 7% `m14_en_enc_tx`; D22). Ya no quedan envíos.
+
+**Presentación `best_equipo_04`** lista: `reports/03_presentacion/best_equipo_04.pdf` (fuente `.tex`; figuras y cifras con `scripts/94_presentacion_m24.R`, D23).
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -31,7 +33,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 7)
 - [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
 - [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
-- [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
+- [x] Presentación `best_equipo_04` (ensamble óptimo, 17 diapositivas)
+- [ ] Presentación `compare_equipo_XX`
+- [ ] Validación con buffers de radio aleatorio y folds agrupados por edificio, para que la validación vea las distancias del test (ver presentación, diapositivas 13 y 14)
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
 - [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel
@@ -47,6 +51,20 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Estrato por manzana y avalúo catastral (Datos Abiertos Bogotá)
 
 ---
+
+## 2026-11-25 · Sesión 9: presentación `best_equipo_04` sobre el ensamble óptimo
+
+- **Kaggle privado del m24:** 153.110.838,48 (público 152.328.386,28). Solo empeora 0,8 M: no estaba sobreajustado al leaderboard.
+- Nuevo `94_presentacion_m24.R`: figuras en PDF (gris, Palatino), tabla de métricas y macros de cifras para `reports/03_presentacion/best_equipo_04.tex`. **No vuelve a entrenar nada.**
+  - OOF aproximado del ensamble = 0,534·m17 + 0,399·m22 + 0,066·m14. m17 se trae de `main` con `git show` a `data/interim_presentacion/` (no se versiona). m22 viene de la CV aleatoria, así que el nivel es optimista: 106,5 M en total y 116,2 M con TWCV, frente a 152,3 M en Kaggle.
+  - Recombinar los tres envíos reproduce `m24_ens_optimo.csv` (diferencia máxima de 0,02%).
+- **Hallazgos (todos en la presentación):**
+  - **Chapinero es la localidad menos heterogénea:** la DE del log del precio por m² es 0,27, frente a 0,39 en todo el train; es la menor de 15 localidades. El test también es compacto (la DE de `dist_cbd` es de 460 m, frente a 2.244 m).
+  - **Qué mira el modelo** (sustituto XGBoost sobre la predicción del test, D23): el área explica el 64% del log del precio. En el precio por m² pesan las habitaciones (19%), los comparables (20%) y el estrato (14%).
+  - **Falta de soporte:** solo 285 anuncios del train (0,7%) caen a la vez en el P10–P90 del test en las 8 variables principales; en `dist_cbd`, solo el 5%. TWCV reduce las diferencias estandarizadas (por ejemplo, de −1,4 a −0,4 en `dist_cbd`), pero no las cierra.
+  - **Dónde falla:** hay contracción hacia la media. En el decil más caro el sesgo es de −252 M y en el más barato de +57 M; en el quintil más caro de Chapinero, de −183 M. En el test, solo el 14% de las predicciones pasa de 1.200 M, frente al 21% de los precios observados en Chapinero.
+  - **Por qué falla el sintético:** (i) el tamaño efectivo de TWCV es de 1.160 anuncios (3%); (ii) ningún anuncio de validación está a menos de 500 m de su vecino del train, frente al 99% del test; (iii) en la CV aleatoria del XGB con comparables, el 60% del train tiene comparables a menos de 30 m (mismo edificio), frente al 2% del test. La brecha entre TWCV y Kaggle es de 61 M en el XGB, 19 M en la red y 36 M en el ensamble.
+- El trabajo se hizo en un *worktree* aparte (`../PS3_validacion_sintetica`), porque `main` tenía cambios locales sin commit.
 
 ## 2026-11-22 · Sesión 8: "Chapinero sintético" (validación ponderada, D18)
 

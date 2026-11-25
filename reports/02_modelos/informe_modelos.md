@@ -192,6 +192,22 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 
 Si el puntaje público de m06 queda cerca de 148 M, la validación por localidad está bien calibrada para el test. Si queda muy por debajo, la validación es más pesimista de lo necesario (ver §1.1).
 
+## 4b. El ensamble óptimo (m24) frente al test
+
+Es el mejor envío del equipo: **152,3 M en el público y 153,1 M en el privado**. Combina 53% NN STAR, 40% XGB con comparables y 7% EN con encoder de texto; los pesos se estimaron con los scores públicos (D22). El análisis completo está en la presentación [`best_equipo_04.pdf`](../03_presentacion/best_equipo_04.pdf) (figuras y cifras: `scripts/94_presentacion_m24.R`; método en D23).
+
+| Métrica (OOF aproximado) | Train | Chapinero (train) | TWCV |
+|---|---:|---:|---:|
+| MAE (M) | 106,5 | 126,8 | 116,2 |
+| Sesgo medio (M) | −13,3 | −49,8 | −16,2 |
+| Error porcentual mediano | 11,6% | 11,8% | 11,6% |
+| R² en log | 0,76 | 0,81 | 0,80 |
+
+El nivel es optimista porque m22 viene de la CV aleatoria; la tabla completa está en `reports/03_presentacion/tablas/metricas.tex`.
+
+- **Contracción hacia la media.** El sesgo es de −252 M en el decil más caro y de +57 M en el más barato. En el quintil más caro de Chapinero es de −183 M.
+- **Falta de soporte.** Solo el 0,7% del train cae en el rango central del test en las 8 variables principales. TWCV corrige la composición, pero no la distancia: ningún anuncio de validación está a menos de 500 m del train, frente al 99% del test. Además, los comparables de la CV aleatoria están a 19 m en la mediana, frente a 151 m en el test.
+
 ## 5. Siguientes pasos
 
 1. **Corregir el sesgo en Chapinero:** pesos por cambio de covariables (clasificador test-vs-train) o calibración del nivel.

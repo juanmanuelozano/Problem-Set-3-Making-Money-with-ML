@@ -20,3 +20,15 @@ data/processed/tfidf.parquet
 data/processed/pca_*.csv
 data/processed/base_texto.rds
 data/processed/base_no_texto.csv
+
+# Presentación (94_presentacion_m24.R): insumos traídos de main y auxiliares de LaTeX
+data/interim_presentacion/
+reports/03_presentacion/*.aux
+reports/03_presentacion/*.log
+reports/03_presentacion/*.nav
+reports/03_presentacion/*.out
+reports/03_presentacion/*.snm
+reports/03_presentacion/*.toc
+reports/03_presentacion/*.fls
+reports/03_presentacion/*.fdb_latexmk
+reports/03_presentacion/*.vrb

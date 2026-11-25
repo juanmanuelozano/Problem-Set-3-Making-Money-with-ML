@@ -271,4 +271,25 @@ El buffer quita justo los vecinos que la variable necesita, así que esa CV no s
 
 **Envío:** `m24_ens_optimo.csv`. Las predicciones de Samuel (`m17_nn_star_m2.csv`, `m18_nn_64_m2.csv`) se traen de su rama con `git show` y no se suben a esta rama.
 
-**Resultado en Kaggle:** 152,3 M (público), el mejor del equipo: 6 M menos que la NN STAR sola (158,3 M) y dentro de lo estimado (153,3 M; cota 160,8 M). El método queda validado también en el test.
+**Resultado en Kaggle:** 152,3 M (público), el mejor del equipo: 6 M menos que la NN STAR sola (158,3 M) y dentro de lo estimado (153,3 M; cota 160,8 M). El método queda validado también en el test. **Privado: 153,1 M** (solo 0,8 M más que el público).
+
+### D23 · Cómo se analiza el ensamble óptimo sin volver a entrenar (presentación `best_equipo_04`) (2026-11-25)
+
+`94_presentacion_m24.R` produce las figuras y cifras de la presentación.
+
+**1. OOF del ensamble:** se combinan las OOF guardadas de los componentes con los pesos de D22.
+- No hay una validación común: m17 y m14 vienen de la CV por localidad con buffer, y m22 de la CV aleatoria.
+- Por eso el nivel del MAE es optimista (106,5 M, frente a 152,3 M en Kaggle). Solo se interpretan los **patrones**: el sesgo por decil, el desempeño en Chapinero y las métricas relativas.
+
+**2. Importancia de variables mediante un modelo sustituto.** Un ensamble de red, XGB y elastic net no tiene una importancia común.
+- Se ajusta un XGBoost (profundidad 5, 800 rondas) que imita el log de la predicción del m24 **en el test**, con las 81 variables y las 4 de comparables. Se reporta su R² en el 20% retenido (0,99).
+- Se ajusta un segundo sustituto sobre el log del precio por m² (R² 0,91). Sin él, el área (64%) tapa todo lo demás.
+- La importancia que se reporta es la ganancia; las coordenadas se suman en una sola variable.
+
+**3. Métricas de regresión, no de clasificación.**
+- El AUC y la sensibilidad no aplican. Se reportan MAE, sesgo, MdAPE, el porcentaje con error menor a 10% y 20%, y el R² en log. El RMSE y el MAPE se quitaron de la presentación para simplificarla.
+- Como análogo de la sensibilidad, se reporta la proporción del decil real más caro que cae en el decil más caro predicho.
+
+**4. Falta de soporte.** Para las 8 variables continuas u ordinales principales se reportan:
+- la diferencia de medias estandarizada entre el test y el train, sin pesos y con TWCV;
+- la proporción del train dentro del P10–P90 del test, variable por variable y en todas a la vez (0,7%).

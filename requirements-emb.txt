@@ -1,0 +1,8 @@
+# Entorno "emb" (code/03g_embeddings.py, D25): embeddings de oraciones con sentence-transformers + PyTorch (CPU basta).
+# Lo crea code/00_main.R (asegura_venv("emb") en code/01_setup.R) la primera vez que se corre con PYTHON <- TRUE.
+# A mano (ver README): uv venv <carpeta> --python 3.11 && uv pip install --python <python del entorno> -r requirements-emb.txt
+sentence-transformers
+torch
+pandas
+pyarrow
+numpy

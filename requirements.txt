@@ -1,8 +1,7 @@
-# Entorno de Python para el texto (scripts/03c_texto.py y 03d_tfidf.py). Instalación desde la raíz:
-#   uv venv --python 3.11
-#   uv pip install -r requirements.txt
-#   uv pip install --no-deps contexto==0.2.0      # sin sus dependencias fijadas de 2021 (no compilan en arm64 / py3.11)
-#   .venv/bin/python -m spacy download es_core_news_md
+# Entorno "texto" (code/03c_texto.py y code/03d_tfidf.py, D11): limpieza, lematización y TF-IDF con ConTexto.
+# Lo crea code/00_main.R (asegura_venv("texto") en code/01_setup.R) la primera vez que se corre con PYTHON <- TRUE:
+# instala estas dependencias, luego contexto==0.2.0 con --no-deps (sus dependencias fijadas de 2021 no compilan con
+# Python 3.11) y el modelo es_core_news_md de spaCy. Para instalarlo a mano, ver la sección "R y Python" del README.
 # Dependencias que de verdad usan los módulos limpieza, correccion, lematizacion, exploracion y vectorizacion de ConTexto.
 pandas
 pyarrow

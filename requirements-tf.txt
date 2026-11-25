@@ -1,10 +1,7 @@
-# Backend de Python para las redes (scripts/08c_nn_star.R, 08d_nn_general.R; D17). El código es R (keras3);
-# TensorFlow vive en un venv aparte para no romper las versiones de numpy del entorno de texto (.venv).
-# Instalación desde la raíz:
-#   uv venv .venv-tf --python 3.11
-#   uv pip install --python .venv-tf/bin/python -r requirements-tf.txt
-# En R, keras3 se instala solo con pacman::p_load(keras3); los scripts usan reticulate::use_virtualenv(".venv-tf").
-# Probado con tensorflow 2.21.0 y keras 3.15.1 (macOS arm64).
+# Entorno "tf" (redes 08c-08q, D17): TensorFlow, el backend de keras3. El código de las redes es R; R llega a
+# TensorFlow con reticulate (code/utils_redes.R). Va aparte para no chocar con las versiones de numpy del entorno "texto".
+# Lo crea code/00_main.R (asegura_venv("tf") en code/01_setup.R) la primera vez que se corre con REDES <- TRUE.
+# Para instalarlo a mano, ver la sección "R y Python" del README. Probado con tensorflow 2.21.0 y keras 3.15.1 (macOS arm64).
 tensorflow
 scipy
 pandas

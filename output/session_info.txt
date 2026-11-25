@@ -8,7 +8,7 @@
  collate  Spanish_Colombia.utf8
  ctype    Spanish_Colombia.utf8
  tz       America/Bogota
- date     2026-11-24
+ date     2026-11-25
  pandoc   NA
  quarto   NA
 

@@ -1,10 +1,10 @@
 fila,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10
-lambda,6.69,4.82,3.56,2.30,1.76,1.70,1.38,1.16,1.12,1.03
-1,dist_cbd (-0.33),lat (-0.31),n500_supermercado (+0.37),log_area (+0.52),year (+0.41),year (+0.46),dist_parque (+0.52),dist_gimnasio (-0.39),n500_policia (-0.38),banos_imputado (-0.53)
-2,dist_calle72 (-0.30),estrato_final (-0.29),dist_centro_comercial (-0.34),banos_final (+0.52),month (-0.34),month (-0.41),n500_parque (-0.45),n500_gimnasio (+0.39),dist_policia (+0.35),n500_hospital (+0.29)
-3,dist_parque93 (-0.27),dist_transmilenio (-0.29),dist_supermercado (-0.33),bedrooms (+0.39),area_imputada (+0.33),area_imputada (+0.39),dist_colegio (-0.32),dist_colegio (-0.31),n500_gimnasio (+0.34),n500_universidad (+0.29)
-4,n500_banco (+0.26),lon (-0.29),n500_centro_comercial (+0.30),es_apto (-0.27),n500_centro_comercial (-0.30),n500_parque (-0.26),n500_colegio (+0.28),dist_hospital (+0.30),lon (-0.26),month (-0.29)
-5,n500_restaurante_bar (+0.24),n500_colegio (+0.28),dist_centro_internacional (+0.28),dist_transmilenio (+0.16),dist_parque (-0.27),n500_centro_comercial (+0.24),lon (+0.25),dist_universidad (+0.26),n500_centro_comercial (-0.26),n500_policia (-0.27)
-6,dist_banco (-0.24),dist_centro_internacional (-0.25),dist_calle72 (+0.25),dist_parque93 (-0.15),n500_hospital (+0.27),dist_parque (+0.22),n500_banco (-0.21),n500_universidad (-0.25),dist_centro_comercial (+0.25),dist_policia (+0.26)
-7,dist_universidad (-0.24),dist_parque93 (+0.24),lat (+0.25),dist_hospital (-0.14),n500_parque (+0.27),n500_hospital (-0.21),dist_centro_comercial (+0.17),n500_colegio (+0.24),lat (-0.22),n500_transmilenio (+0.24)
-8,dist_gimnasio (-0.21),dist_colegio (-0.23),dist_restaurante_bar (-0.22),estrato_final (+0.13),dist_centro_comercial (+0.21),banos_imputado (+0.19),dist_hospital (-0.17),dist_transmilenio (-0.24),dist_gimnasio (-0.22),dist_banco (+0.23)
+lambda,9.73,5.81,3.89,2.42,1.86,1.80,1.71,1.44,1.36,1.24
+1,dist_cbd (-0.29),lat (-0.30),n500_supermercado (+0.36),log_area (-0.52),n500_centro_comercial (+0.37),n500_embajada (+0.36),year (+0.58),n500_edif_pisos (-0.47),dist_via_principal (-0.45),n500_transmilenio (-0.38)
+2,dist_embajada (-0.27),dist_club (+0.28),dist_centro_comercial (-0.32),banos_final (-0.50),n500_parque (-0.35),n500_parque (+0.33),month (-0.49),dist_colegio (+0.29),n500_gimnasio (-0.31),area_verde500 (-0.36)
+3,dist_calle72 (-0.26),lon (-0.27),dist_supermercado (-0.32),bedrooms (-0.40),dist_parque (+0.33),dist_parque (-0.30),area_imputada (+0.48),dist_transmilenio (+0.27),n500_parque (+0.29),dist_transmilenio (+0.34)
+4,dist_parque93 (-0.24),dist_transmilenio (-0.26),n500_centro_comercial (+0.27),es_apto (+0.29),n500_hospital (-0.31),dist_colegio (+0.29),banos_imputado (+0.23),dist_hospital (-0.24),n500_transmilenio (+0.27),n500_embajada (+0.31)
+5,dist_hotel (-0.23),estrato_final (-0.25),dist_centro_internacional (+0.26),pisos_prom500 (+0.18),dist_centro_comercial (-0.26),n500_colegio (-0.24),n500_hospital (-0.13),n500_hospital (+0.23),pisos_prom500 (+0.25),n500_gimnasio (-0.25)
+6,dist_cerros (-0.23),dist_centro_internacional (-0.24),lat (+0.25),n500_transmilenio (+0.14),dist_hospital (+0.22),dist_hospital (+0.23),n500_centro_comercial (+0.11),pisos_prom500 (+0.22),dist_universidad (-0.24),dist_supermercado (-0.23)
+7,n500_oficina (+0.21),n500_colegio (+0.23),dist_restaurante_bar (-0.23),dist_transmilenio (-0.13),dist_policia (+0.22),n500_edif_pisos (+0.22),dist_colegio (+0.11),dist_club (+0.21),dist_gimnasio (+0.23),n500_colegio (+0.20)
+8,n500_banco (+0.20),n500_restaurante_bar (+0.23),dist_calle72 (+0.21),dist_parque93 (+0.13),year (-0.21),area_verde500 (+0.22),dist_centro_comercial (-0.11),n500_colegio (-0.21),n500_universidad (+0.22),dist_policia (-0.19)

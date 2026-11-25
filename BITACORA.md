@@ -105,9 +105,13 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - `00_main.R --solo=02c_composicion_test.R`, llamado desde fuera del proyecto, regenera tablas y figura idénticas.
   - `--solo=03d_tfidf.py` crea el entorno `texto` desde R en Windows y corre el .py.
   - Todos los `.R` y `.py` se leen sin errores de sintaxis.
+  - **Corrida completa del main con las banderas por defecto (Windows):** termina sin errores. Desde `04b` hasta `91` (38 pasos) tardó unos 131 min; el más lento es `06_xgboost.R` (~57 min).
+- **Cambios en las métricas al regenerar** (MAE OOF total, frente al registro anterior):
+  - La base procesada no sale idéntica a la del commit anterior: cambia la fuente del área en 8 avisos y se regenera el TF-IDF. Por eso los modelos que se reentrenan se mueven entre −2 y +4 millones (m01 +1,2; m02 +2,9; m04 −2,3, con min_child_weight = 10 y 975 rondas; m05 −2,3).
+  - **m90_ensamble** pasa de 129,3 a 109,2 millones. El registro anterior no se había recalculado después de agregar los modelos STAR y los ponderados; no es un efecto de la base.
+  - No se reentrenaron las redes ni los XGB STAR (`REDES` y `LENTOS` en FALSE), así que sus métricas no cambian.
 - **Pendiente:**
   - Las decisiones D18–D26 se citan en el código, pero no están escritas en `docs/decisiones.md`.
-  - Correr la línea principal completa del main y comparar el registro con el commit anterior.
   - Probar el main en macOS.
 
 ---

@@ -1,58 +1,58 @@
 modelo,localidad,n,mae
-m01_ols,Antonio Nariño,300,150574368.20616195
-m01_ols,Barrios Unidos,1699,181170401.2897022
-m01_ols,Bosa,28,68334687.68999079
-m01_ols,Chapinero,307,154527524.51214504
-m01_ols,Ciudad Bolivar,70,117468335.96809462
-m01_ols,Engativá,1830,130543158.77243611
-m01_ols,Fontibón,1842,127552851.43930389
-m01_ols,Kennedy,1517,115661761.12281331
-m01_ols,La Candelaria,178,263293315.68933877
-m01_ols,Los Mártires,264,180926375.9363391
-m01_ols,Puente Aranda,666,146187843.50919846
-m01_ols,Rafael Uribe Uribe,178,152170820.5105756
-m01_ols,San Cristóbal,69,252531694.23905548
-m01_ols,Santa Fé,933,147737205.3811353
-m01_ols,Suba,5109,132159916.4263989
-m01_ols,Teusaquillo,2074,155751339.30878198
-m01_ols,Tunjuelito,119,116620577.4233844
-m01_ols,Usaquén,21461,124765362.08296439
-m02_elastic_net,Antonio Nariño,300,147883175.38733935
-m02_elastic_net,Barrios Unidos,1699,178814262.79439732
-m02_elastic_net,Bosa,28,70025464.62071784
-m02_elastic_net,Chapinero,307,154716130.4933795
-m02_elastic_net,Ciudad Bolivar,70,115491234.19461042
-m02_elastic_net,Engativá,1830,130416486.78640458
-m02_elastic_net,Fontibón,1842,127322684.93792588
-m02_elastic_net,Kennedy,1517,116592981.29623683
-m02_elastic_net,La Candelaria,178,261479248.31476963
-m02_elastic_net,Los Mártires,264,181838864.97009695
-m02_elastic_net,Puente Aranda,666,149698305.08466643
-m02_elastic_net,Rafael Uribe Uribe,178,146732551.06750855
-m02_elastic_net,San Cristóbal,69,240678840.58783054
-m02_elastic_net,Santa Fé,933,146353248.58850995
-m02_elastic_net,Suba,5109,130465172.69570875
-m02_elastic_net,Teusaquillo,2074,155893811.5055041
-m02_elastic_net,Tunjuelito,119,117392864.19316244
-m02_elastic_net,Usaquén,21461,124605654.352076
-m02b_elastic_net_m2,Antonio Nariño,300,175096579.47115657
-m02b_elastic_net_m2,Barrios Unidos,1699,187075601.35276726
-m02b_elastic_net_m2,Bosa,28,80373824.64622001
-m02b_elastic_net_m2,Chapinero,307,153826230.8872773
-m02b_elastic_net_m2,Ciudad Bolivar,70,120579782.80981316
-m02b_elastic_net_m2,Engativá,1830,141821092.77445334
-m02b_elastic_net_m2,Fontibón,1842,133929168.23874676
-m02b_elastic_net_m2,Kennedy,1517,127169170.13034174
-m02b_elastic_net_m2,La Candelaria,178,259792041.1560555
-m02b_elastic_net_m2,Los Mártires,264,200576203.7014502
-m02b_elastic_net_m2,Puente Aranda,666,172250171.51854935
-m02b_elastic_net_m2,Rafael Uribe Uribe,178,177749479.78583518
-m02b_elastic_net_m2,San Cristóbal,69,265881105.44451058
-m02b_elastic_net_m2,Santa Fé,933,149272853.49299225
-m02b_elastic_net_m2,Suba,5109,132293261.03878394
-m02b_elastic_net_m2,Teusaquillo,2074,160032219.87854892
-m02b_elastic_net_m2,Tunjuelito,119,155990785.21626887
-m02b_elastic_net_m2,Usaquén,21461,123883918.96351998
+m01_ols,Antonio Nariño,300,150626128.5124124
+m01_ols,Barrios Unidos,1699,177473732.5259518
+m01_ols,Bosa,28,70404351.30689424
+m01_ols,Chapinero,307,194178639.0440402
+m01_ols,Ciudad Bolivar,70,116315034.61006859
+m01_ols,Engativá,1830,126556598.89107275
+m01_ols,Fontibón,1842,124595908.16783744
+m01_ols,Kennedy,1517,116251859.73413064
+m01_ols,La Candelaria,178,261492811.13568494
+m01_ols,Los Mártires,264,176291398.44535428
+m01_ols,Puente Aranda,666,147397678.52751717
+m01_ols,Rafael Uribe Uribe,178,168860095.01358938
+m01_ols,San Cristóbal,69,236954577.00680986
+m01_ols,Santa Fé,933,151670330.71367028
+m01_ols,Suba,5109,134055791.66140115
+m01_ols,Teusaquillo,2074,155718183.3274722
+m01_ols,Tunjuelito,119,116020762.1308332
+m01_ols,Usaquén,21461,126461623.5549214
+m02_elastic_net,Antonio Nariño,300,151000542.2417351
+m02_elastic_net,Barrios Unidos,1699,177696041.81933028
+m02_elastic_net,Bosa,28,67861435.45494342
+m02_elastic_net,Chapinero,307,178055241.27897197
+m02_elastic_net,Ciudad Bolivar,70,114676024.22102918
+m02_elastic_net,Engativá,1830,132341971.53098032
+m02_elastic_net,Fontibón,1842,127599211.36276434
+m02_elastic_net,Kennedy,1517,117822028.46065103
+m02_elastic_net,La Candelaria,178,254859596.28947705
+m02_elastic_net,Los Mártires,264,180852065.61672693
+m02_elastic_net,Puente Aranda,666,152739782.65864176
+m02_elastic_net,Rafael Uribe Uribe,178,141975866.97613463
+m02_elastic_net,San Cristóbal,69,226798892.8908085
+m02_elastic_net,Santa Fé,933,143969483.3506052
+m02_elastic_net,Suba,5109,133593409.19317752
+m02_elastic_net,Teusaquillo,2074,155641161.72771594
+m02_elastic_net,Tunjuelito,119,121897112.05448899
+m02_elastic_net,Usaquén,21461,128587397.92963754
+m02b_elastic_net_m2,Antonio Nariño,300,172469363.72024584
+m02b_elastic_net_m2,Barrios Unidos,1699,185966636.19028375
+m02b_elastic_net_m2,Bosa,28,76728207.89306754
+m02b_elastic_net_m2,Chapinero,307,165283870.45956475
+m02b_elastic_net_m2,Ciudad Bolivar,70,118846498.69489203
+m02b_elastic_net_m2,Engativá,1830,144885868.7793487
+m02b_elastic_net_m2,Fontibón,1842,133524522.7752115
+m02b_elastic_net_m2,Kennedy,1517,128504339.83330286
+m02b_elastic_net_m2,La Candelaria,178,263109924.40540478
+m02b_elastic_net_m2,Los Mártires,264,194742660.73261985
+m02b_elastic_net_m2,Puente Aranda,666,177324928.56017599
+m02b_elastic_net_m2,Rafael Uribe Uribe,178,174597680.33508545
+m02b_elastic_net_m2,San Cristóbal,69,258704599.7338615
+m02b_elastic_net_m2,Santa Fé,933,150560039.01506093
+m02b_elastic_net_m2,Suba,5109,131110048.58327234
+m02b_elastic_net_m2,Teusaquillo,2074,163469160.5298965
+m02b_elastic_net_m2,Tunjuelito,119,145497860.01064926
+m02b_elastic_net_m2,Usaquén,21461,124732717.97279768
 m03_random_forest,Antonio Nariño,300,153522734.81877688
 m03_random_forest,Barrios Unidos,1699,183815757.95794383
 m03_random_forest,Bosa,28,83696966.72755693
@@ -60,7 +60,7 @@ m03_random_forest,Chapinero,307,183040005.80213255
 m03_random_forest,Ciudad Bolivar,70,116111717.78126642
 m03_random_forest,Engativá,1830,147754232.32394636
 m03_random_forest,Fontibón,1842,134515364.07100996
-m03_random_forest,Kennedy,1517,116920771.8551515
+m03_random_forest,Kennedy,1517,116920771.85515149
 m03_random_forest,La Candelaria,178,238362490.24104455
 m03_random_forest,Los Mártires,264,166540859.357679
 m03_random_forest,Puente Aranda,666,150656542.41620904
@@ -71,219 +71,1461 @@ m03_random_forest,Suba,5109,141846821.93929946
 m03_random_forest,Teusaquillo,2074,174095591.25770423
 m03_random_forest,Tunjuelito,119,113079846.57587914
 m03_random_forest,Usaquén,21461,132808574.18951984
-m04_xgboost,Antonio Nariño,300,145641401.49589053
-m04_xgboost,Barrios Unidos,1699,179405627.79242495
-m04_xgboost,Bosa,28,74848695.64511374
-m04_xgboost,Chapinero,307,163185609.55237076
-m04_xgboost,Ciudad Bolivar,70,107724693.63111575
-m04_xgboost,Engativá,1830,139111419.18853858
-m04_xgboost,Fontibón,1842,132141692.69683044
-m04_xgboost,Kennedy,1517,116544029.2703784
-m04_xgboost,La Candelaria,178,235043948.14423785
-m04_xgboost,Los Mártires,264,169962566.5420796
-m04_xgboost,Puente Aranda,666,149444110.31703427
-m04_xgboost,Rafael Uribe Uribe,178,135770588.97889057
-m04_xgboost,San Cristóbal,69,235986919.5485049
-m04_xgboost,Santa Fé,933,140423421.93655372
-m04_xgboost,Suba,5109,131797419.02721708
-m04_xgboost,Teusaquillo,2074,158761641.98127037
-m04_xgboost,Tunjuelito,119,109309200.9061615
-m04_xgboost,Usaquén,21461,124920244.13066961
-m05_xgb_precio_m2,Antonio Nariño,300,142634415.86726466
-m05_xgb_precio_m2,Barrios Unidos,1699,178170925.50371754
-m05_xgb_precio_m2,Bosa,28,70034509.79023162
-m05_xgb_precio_m2,Chapinero,307,156070345.46684882
-m05_xgb_precio_m2,Ciudad Bolivar,70,108105286.83269879
-m05_xgb_precio_m2,Engativá,1830,139393712.070736
-m05_xgb_precio_m2,Fontibón,1842,131989284.07922803
-m05_xgb_precio_m2,Kennedy,1517,115608689.38355914
-m05_xgb_precio_m2,La Candelaria,178,233440836.5462784
-m05_xgb_precio_m2,Los Mártires,264,170376368.05987898
-m05_xgb_precio_m2,Puente Aranda,666,151048909.8368785
-m05_xgb_precio_m2,Rafael Uribe Uribe,178,139297187.7605955
-m05_xgb_precio_m2,San Cristóbal,69,245887161.06827584
-m05_xgb_precio_m2,Santa Fé,933,135821607.25307283
-m05_xgb_precio_m2,Suba,5109,129398048.56241311
-m05_xgb_precio_m2,Teusaquillo,2074,157948236.8393599
-m05_xgb_precio_m2,Tunjuelito,119,113343184.62880999
-m05_xgb_precio_m2,Usaquén,21461,124712749.27396172
-m06_hibrido_en_xgb,Antonio Nariño,300,150894910.07930252
-m06_hibrido_en_xgb,Barrios Unidos,1699,179365372.08984134
-m06_hibrido_en_xgb,Bosa,28,69482470.53819253
-m06_hibrido_en_xgb,Chapinero,307,148463466.39573383
-m06_hibrido_en_xgb,Ciudad Bolivar,70,116542170.83412012
-m06_hibrido_en_xgb,Engativá,1830,129259178.87677996
-m06_hibrido_en_xgb,Fontibón,1842,127586013.6225207
-m06_hibrido_en_xgb,Kennedy,1517,115658102.35073973
-m06_hibrido_en_xgb,La Candelaria,178,262716467.67090523
-m06_hibrido_en_xgb,Los Mártires,264,183925770.5722386
-m06_hibrido_en_xgb,Puente Aranda,666,146857518.7181543
-m06_hibrido_en_xgb,Rafael Uribe Uribe,178,150453073.0900886
-m06_hibrido_en_xgb,San Cristóbal,69,247071383.55699676
-m06_hibrido_en_xgb,Santa Fé,933,147897724.1351308
-m06_hibrido_en_xgb,Suba,5109,133203603.12626745
-m06_hibrido_en_xgb,Teusaquillo,2074,155151129.0913302
-m06_hibrido_en_xgb,Tunjuelito,119,117741171.71388425
-m06_hibrido_en_xgb,Usaquén,21461,126775825.16040744
-m08_lad_sin_loc,Antonio Nariño,300,150691110.47150686
-m08_lad_sin_loc,Barrios Unidos,1699,177488334.5668021
-m08_lad_sin_loc,Bosa,28,65106916.67587374
-m08_lad_sin_loc,Chapinero,307,155421670.52871472
-m08_lad_sin_loc,Ciudad Bolivar,70,121444505.39723517
-m08_lad_sin_loc,Engativá,1830,131994213.46904057
-m08_lad_sin_loc,Fontibón,1842,133385122.21232115
-m08_lad_sin_loc,Kennedy,1517,116755509.64768416
-m08_lad_sin_loc,La Candelaria,178,260911645.62463656
-m08_lad_sin_loc,Los Mártires,264,180761287.4508398
-m08_lad_sin_loc,Puente Aranda,666,150047642.1414388
-m08_lad_sin_loc,Rafael Uribe Uribe,178,150924734.45683664
-m08_lad_sin_loc,San Cristóbal,69,243643248.69759125
-m08_lad_sin_loc,Santa Fé,933,150733022.22929308
-m08_lad_sin_loc,Suba,5109,129421493.66212277
-m08_lad_sin_loc,Teusaquillo,2074,160035530.3982464
-m08_lad_sin_loc,Tunjuelito,119,116446826.26129723
-m08_lad_sin_loc,Usaquén,21461,131198724.95556352
-m09_ols_m2,Antonio Nariño,300,170765271.74745408
-m09_ols_m2,Barrios Unidos,1699,184502031.25798222
-m09_ols_m2,Bosa,28,72124689.88209683
-m09_ols_m2,Chapinero,307,160476977.85920992
-m09_ols_m2,Ciudad Bolivar,70,125007761.87177819
-m09_ols_m2,Engativá,1830,142820671.226662
-m09_ols_m2,Fontibón,1842,131790663.43640625
-m09_ols_m2,Kennedy,1517,125033779.74134831
-m09_ols_m2,La Candelaria,178,266356664.39106065
-m09_ols_m2,Los Mártires,264,200309684.9070192
-m09_ols_m2,Puente Aranda,666,169394850.13580137
-m09_ols_m2,Rafael Uribe Uribe,178,173626702.04340956
-m09_ols_m2,San Cristóbal,69,271706758.40835243
-m09_ols_m2,Santa Fé,933,149009160.79179674
-m09_ols_m2,Suba,5109,133382134.58766259
-m09_ols_m2,Teusaquillo,2074,160713917.06095582
-m09_ols_m2,Tunjuelito,119,149972141.87122032
-m09_ols_m2,Usaquén,21461,128661820.23268506
-m10_lad_m2,Antonio Nariño,300,173587291.77328005
-m10_lad_m2,Barrios Unidos,1699,183471416.7324498
-m10_lad_m2,Bosa,28,71320431.88199408
-m10_lad_m2,Chapinero,307,155359213.8666076
-m10_lad_m2,Ciudad Bolivar,70,125106440.5004187
-m10_lad_m2,Engativá,1830,145061228.50445953
-m10_lad_m2,Fontibón,1842,134060986.34990685
-m10_lad_m2,Kennedy,1517,126628838.46195106
-m10_lad_m2,La Candelaria,178,265569154.5639174
-m10_lad_m2,Los Mártires,264,203208899.36493546
-m10_lad_m2,Puente Aranda,666,172647997.86965784
-m10_lad_m2,Rafael Uribe Uribe,178,179690885.21810478
-m10_lad_m2,San Cristóbal,69,265975415.65263307
-m10_lad_m2,Santa Fé,933,150018672.29065678
-m10_lad_m2,Suba,5109,131742266.0092983
-m10_lad_m2,Teusaquillo,2074,165192125.92524004
-m10_lad_m2,Tunjuelito,119,154617612.93658075
-m10_lad_m2,Usaquén,21461,137832866.64455375
-m11_cart_m2_mae,Antonio Nariño,300,177583463.7990399
-m11_cart_m2_mae,Barrios Unidos,1699,195682871.84975773
-m11_cart_m2_mae,Bosa,28,96094122.54737954
-m11_cart_m2_mae,Chapinero,307,184960821.77089795
-m11_cart_m2_mae,Ciudad Bolivar,70,127590603.59493266
-m11_cart_m2_mae,Engativá,1830,155693481.85052663
-m11_cart_m2_mae,Fontibón,1842,141626855.02026692
-m11_cart_m2_mae,Kennedy,1517,132045962.21109986
-m11_cart_m2_mae,La Candelaria,178,267613786.35260865
-m11_cart_m2_mae,Los Mártires,264,187262251.6806012
-m11_cart_m2_mae,Puente Aranda,666,184992519.04470113
-m11_cart_m2_mae,Rafael Uribe Uribe,178,179702203.5167891
-m11_cart_m2_mae,San Cristóbal,69,265840119.7718566
-m11_cart_m2_mae,Santa Fé,933,155497204.20675975
-m11_cart_m2_mae,Suba,5109,148220759.49386346
-m11_cart_m2_mae,Teusaquillo,2074,171314284.70968434
-m11_cart_m2_mae,Tunjuelito,119,175235844.30276608
-m11_cart_m2_mae,Usaquén,21461,143690871.0330836
-m11_cart_m2_mse,Antonio Nariño,300,179784560.64317617
-m11_cart_m2_mse,Barrios Unidos,1699,195994343.03357968
-m11_cart_m2_mse,Bosa,28,96473576.23097603
-m11_cart_m2_mse,Chapinero,307,182724181.3489552
-m11_cart_m2_mse,Ciudad Bolivar,70,128705134.43388817
-m11_cart_m2_mse,Engativá,1830,154572737.14464036
-m11_cart_m2_mse,Fontibón,1842,142246426.53642708
-m11_cart_m2_mse,Kennedy,1517,133744844.55703628
-m11_cart_m2_mse,La Candelaria,178,264792721.11260426
-m11_cart_m2_mse,Los Mártires,264,189133388.78464666
-m11_cart_m2_mse,Puente Aranda,666,185741687.8840314
-m11_cart_m2_mse,Rafael Uribe Uribe,178,185228163.4041482
-m11_cart_m2_mse,San Cristóbal,69,271446086.4648597
-m11_cart_m2_mse,Santa Fé,933,152853798.8080829
-m11_cart_m2_mse,Suba,5109,150935035.50658798
-m11_cart_m2_mse,Teusaquillo,2074,170962556.87746134
-m11_cart_m2_mse,Tunjuelito,119,180289874.17505515
-m11_cart_m2_mse,Usaquén,21461,141324686.15034044
-m11_cart_mae,Antonio Nariño,300,161547072.60033965
-m11_cart_mae,Barrios Unidos,1699,193073047.63763675
-m11_cart_mae,Bosa,28,77070656.06936856
-m11_cart_mae,Chapinero,307,187001842.70338422
-m11_cart_mae,Ciudad Bolivar,70,122419550.07515495
-m11_cart_mae,Engativá,1830,173604958.67876485
-m11_cart_mae,Fontibón,1842,153235560.959302
-m11_cart_mae,Kennedy,1517,130447771.06117347
-m11_cart_mae,La Candelaria,178,248223577.95076132
-m11_cart_mae,Los Mártires,264,176493270.9137417
-m11_cart_mae,Puente Aranda,666,157973174.20030987
-m11_cart_mae,Rafael Uribe Uribe,178,159652609.4974735
-m11_cart_mae,San Cristóbal,69,226304568.81376958
-m11_cart_mae,Santa Fé,933,146360064.79070914
-m11_cart_mae,Suba,5109,152133451.52033126
-m11_cart_mae,Teusaquillo,2074,175548227.86893675
-m11_cart_mae,Tunjuelito,119,126331029.19523917
-m11_cart_mae,Usaquén,21461,148871017.1244709
-m11_cart_mse,Antonio Nariño,300,159573465.94664282
-m11_cart_mse,Barrios Unidos,1699,193142463.9469465
-m11_cart_mse,Bosa,28,91833976.66229613
-m11_cart_mse,Chapinero,307,186366127.8287964
-m11_cart_mse,Ciudad Bolivar,70,121661353.71192339
-m11_cart_mse,Engativá,1830,173841489.21620572
-m11_cart_mse,Fontibón,1842,150607767.77636105
-m11_cart_mse,Kennedy,1517,131235452.63495113
-m11_cart_mse,La Candelaria,178,248880803.40369034
-m11_cart_mse,Los Mártires,264,176938080.89328712
-m11_cart_mse,Puente Aranda,666,158742060.32725894
-m11_cart_mse,Rafael Uribe Uribe,178,164334248.79710606
-m11_cart_mse,San Cristóbal,69,227460396.7352989
-m11_cart_mse,Santa Fé,933,145340699.70780018
-m11_cart_mse,Suba,5109,152525865.69693282
-m11_cart_mse,Teusaquillo,2074,177173106.63328308
-m11_cart_mse,Tunjuelito,119,120275838.84899049
-m11_cart_mse,Usaquén,21461,146125449.5827178
-m90_ensamble,Antonio Nariño,300,144094813.47064304
-m90_ensamble,Barrios Unidos,1699,177099078.093839
-m90_ensamble,Bosa,28,70100097.9751257
-m90_ensamble,Chapinero,307,154678979.91124973
-m90_ensamble,Ciudad Bolivar,70,107614958.55020034
-m90_ensamble,Engativá,1830,133946817.46541488
-m90_ensamble,Fontibón,1842,128069794.84818602
-m90_ensamble,Kennedy,1517,113483697.55509122
-m90_ensamble,La Candelaria,178,243865596.77249593
-m90_ensamble,Los Mártires,264,176402556.39294332
-m90_ensamble,Puente Aranda,666,150120994.1911607
-m90_ensamble,Rafael Uribe Uribe,178,139155757.61012647
-m90_ensamble,San Cristóbal,69,241497694.1041445
-m90_ensamble,Santa Fé,933,139267740.96308294
-m90_ensamble,Suba,5109,127638093.15803671
-m90_ensamble,Teusaquillo,2074,153409525.98992318
-m90_ensamble,Tunjuelito,119,115812167.26904559
-m90_ensamble,Usaquén,21461,120988284.00034784
-reg_ols_sin_loc,Antonio Nariño,300,147841717.1508012
-reg_ols_sin_loc,Barrios Unidos,1699,179545183.9043568
-reg_ols_sin_loc,Bosa,28,70481919.34520476
-reg_ols_sin_loc,Chapinero,307,155532066.23371178
-reg_ols_sin_loc,Ciudad Bolivar,70,116454778.75401759
-reg_ols_sin_loc,Engativá,1830,132302932.72537822
-reg_ols_sin_loc,Fontibón,1842,127365797.71094155
-reg_ols_sin_loc,Kennedy,1517,116484863.14149518
-reg_ols_sin_loc,La Candelaria,178,261325631.82948416
-reg_ols_sin_loc,Los Mártires,264,179178607.24743086
-reg_ols_sin_loc,Puente Aranda,666,149496247.4110137
-reg_ols_sin_loc,Rafael Uribe Uribe,178,149087863.18422857
-reg_ols_sin_loc,San Cristóbal,69,242518172.6072749
-reg_ols_sin_loc,Santa Fé,933,146799316.877498
-reg_ols_sin_loc,Suba,5109,132502515.48395135
-reg_ols_sin_loc,Teusaquillo,2074,155911915.32227162
-reg_ols_sin_loc,Tunjuelito,119,116279086.71799558
-reg_ols_sin_loc,Usaquén,21461,124680393.48632757
+m04_xgboost,Antonio Nariño,300,143411963.58035186
+m04_xgboost,Barrios Unidos,1699,175101851.58823535
+m04_xgboost,Bosa,28,78923689.45085141
+m04_xgboost,Chapinero,307,157054363.75586256
+m04_xgboost,Ciudad Bolivar,70,112063848.41429435
+m04_xgboost,Engativá,1830,132154733.33487496
+m04_xgboost,Fontibón,1842,122542249.4955919
+m04_xgboost,Kennedy,1517,114942421.19873542
+m04_xgboost,La Candelaria,178,229679166.62352276
+m04_xgboost,Los Mártires,264,171235742.55304
+m04_xgboost,Puente Aranda,666,148233097.9900596
+m04_xgboost,Rafael Uribe Uribe,178,134142165.96660383
+m04_xgboost,San Cristóbal,69,230180899.18635756
+m04_xgboost,Santa Fé,933,143293151.86855653
+m04_xgboost,Suba,5109,133876172.70850803
+m04_xgboost,Teusaquillo,2074,156592086.15793538
+m04_xgboost,Tunjuelito,119,112605773.54574567
+m04_xgboost,Usaquén,21461,122442933.3762696
+m05_xgb_precio_m2,Antonio Nariño,300,140194264.28856486
+m05_xgb_precio_m2,Barrios Unidos,1699,175336626.74519977
+m05_xgb_precio_m2,Bosa,28,77186655.19511208
+m05_xgb_precio_m2,Chapinero,307,160591240.9247568
+m05_xgb_precio_m2,Ciudad Bolivar,70,107731584.45002136
+m05_xgb_precio_m2,Engativá,1830,132615779.54791963
+m05_xgb_precio_m2,Fontibón,1842,122151498.4587337
+m05_xgb_precio_m2,Kennedy,1517,113582706.68746336
+m05_xgb_precio_m2,La Candelaria,178,233431169.6977968
+m05_xgb_precio_m2,Los Mártires,264,165698514.1309889
+m05_xgb_precio_m2,Puente Aranda,666,149809063.3141259
+m05_xgb_precio_m2,Rafael Uribe Uribe,178,134496309.1274626
+m05_xgb_precio_m2,San Cristóbal,69,241983186.72758386
+m05_xgb_precio_m2,Santa Fé,933,138093295.55010352
+m05_xgb_precio_m2,Suba,5109,130437961.54579332
+m05_xgb_precio_m2,Teusaquillo,2074,156532266.73063207
+m05_xgb_precio_m2,Tunjuelito,119,114036209.37536432
+m05_xgb_precio_m2,Usaquén,21461,122295749.62056834
+m06_hibrido_en_xgb,Antonio Nariño,300,146370446.56618962
+m06_hibrido_en_xgb,Barrios Unidos,1699,178945742.8685555
+m06_hibrido_en_xgb,Bosa,28,71693873.04271236
+m06_hibrido_en_xgb,Chapinero,307,167447571.6402293
+m06_hibrido_en_xgb,Ciudad Bolivar,70,113684593.91477112
+m06_hibrido_en_xgb,Engativá,1830,132109452.21934499
+m06_hibrido_en_xgb,Fontibón,1842,124455720.81093344
+m06_hibrido_en_xgb,Kennedy,1517,116247065.70541583
+m06_hibrido_en_xgb,La Candelaria,178,254781648.43158156
+m06_hibrido_en_xgb,Los Mártires,264,176509207.00265345
+m06_hibrido_en_xgb,Puente Aranda,666,148665545.18150848
+m06_hibrido_en_xgb,Rafael Uribe Uribe,178,140300814.48941073
+m06_hibrido_en_xgb,San Cristóbal,69,222187296.24021804
+m06_hibrido_en_xgb,Santa Fé,933,142682182.7007672
+m06_hibrido_en_xgb,Suba,5109,131774377.137114
+m06_hibrido_en_xgb,Teusaquillo,2074,154938880.25833717
+m06_hibrido_en_xgb,Tunjuelito,119,114286157.76237142
+m06_hibrido_en_xgb,Usaquén,21461,128651839.21939284
+m08_lad_sin_loc,Antonio Nariño,300,150799885.98679015
+m08_lad_sin_loc,Barrios Unidos,1699,179126809.29600716
+m08_lad_sin_loc,Bosa,28,69390669.79229666
+m08_lad_sin_loc,Chapinero,307,206398630.61228377
+m08_lad_sin_loc,Ciudad Bolivar,70,111822317.66382354
+m08_lad_sin_loc,Engativá,1830,127894228.05178608
+m08_lad_sin_loc,Fontibón,1842,125469520.27266668
+m08_lad_sin_loc,Kennedy,1517,119465658.00359154
+m08_lad_sin_loc,La Candelaria,178,265226547.03978026
+m08_lad_sin_loc,Los Mártires,264,176107931.56872755
+m08_lad_sin_loc,Puente Aranda,666,150853792.32784477
+m08_lad_sin_loc,Rafael Uribe Uribe,178,167591949.08437592
+m08_lad_sin_loc,San Cristóbal,69,233389960.9758062
+m08_lad_sin_loc,Santa Fé,933,156364456.87174278
+m08_lad_sin_loc,Suba,5109,131276513.46079537
+m08_lad_sin_loc,Teusaquillo,2074,159461484.2591316
+m08_lad_sin_loc,Tunjuelito,119,114567906.83359773
+m08_lad_sin_loc,Usaquén,21461,136134954.17490542
+m09_ols_m2,Antonio Nariño,300,171388179.2926961
+m09_ols_m2,Barrios Unidos,1699,182064378.13018087
+m09_ols_m2,Bosa,28,77697957.231791
+m09_ols_m2,Chapinero,307,193507308.82100233
+m09_ols_m2,Ciudad Bolivar,70,121047332.45184143
+m09_ols_m2,Engativá,1830,138625280.81642076
+m09_ols_m2,Fontibón,1842,132854704.099705
+m09_ols_m2,Kennedy,1517,123322113.53487125
+m09_ols_m2,La Candelaria,178,266537417.96887213
+m09_ols_m2,Los Mártires,264,194043741.81425056
+m09_ols_m2,Puente Aranda,666,171422877.79802805
+m09_ols_m2,Rafael Uribe Uribe,178,186891445.41236892
+m09_ols_m2,San Cristóbal,69,263784539.08792785
+m09_ols_m2,Santa Fé,933,153045754.75002757
+m09_ols_m2,Suba,5109,135071222.59738287
+m09_ols_m2,Teusaquillo,2074,164991749.23984498
+m09_ols_m2,Tunjuelito,119,146401943.92811787
+m09_ols_m2,Usaquén,21461,135393233.49940318
+m10_lad_m2,Antonio Nariño,300,177399321.6143928
+m10_lad_m2,Barrios Unidos,1699,184447239.22886822
+m10_lad_m2,Bosa,28,80944517.02649975
+m10_lad_m2,Chapinero,307,196477853.17138237
+m10_lad_m2,Ciudad Bolivar,70,117671755.60877723
+m10_lad_m2,Engativá,1830,140942108.44302452
+m10_lad_m2,Fontibón,1842,133020775.24846281
+m10_lad_m2,Kennedy,1517,125074120.6767006
+m10_lad_m2,La Candelaria,178,266613681.9897946
+m10_lad_m2,Los Mártires,264,196009357.64139748
+m10_lad_m2,Puente Aranda,666,173108002.38109607
+m10_lad_m2,Rafael Uribe Uribe,178,202194148.60534164
+m10_lad_m2,San Cristóbal,69,271887807.17854357
+m10_lad_m2,Santa Fé,933,153193231.26293433
+m10_lad_m2,Suba,5109,134691684.0166674
+m10_lad_m2,Teusaquillo,2074,168223411.3880835
+m10_lad_m2,Tunjuelito,119,151463156.6027746
+m10_lad_m2,Usaquén,21461,141882636.78342023
+m11_cart_m2_mae,Antonio Nariño,300,168284828.58028784
+m11_cart_m2_mae,Barrios Unidos,1699,192517151.29476297
+m11_cart_m2_mae,Bosa,28,79176778.80266632
+m11_cart_m2_mae,Chapinero,307,183852446.1356298
+m11_cart_m2_mae,Ciudad Bolivar,70,109994495.94543047
+m11_cart_m2_mae,Engativá,1830,146621816.90053016
+m11_cart_m2_mae,Fontibón,1842,137348269.69209987
+m11_cart_m2_mae,Kennedy,1517,132661003.51098253
+m11_cart_m2_mae,La Candelaria,178,260909078.65627518
+m11_cart_m2_mae,Los Mártires,264,186224752.31957597
+m11_cart_m2_mae,Puente Aranda,666,176515288.3491764
+m11_cart_m2_mae,Rafael Uribe Uribe,178,157710051.52632844
+m11_cart_m2_mae,San Cristóbal,69,237716795.24828276
+m11_cart_m2_mae,Santa Fé,933,156804062.2857443
+m11_cart_m2_mae,Suba,5109,147232062.84960872
+m11_cart_m2_mae,Teusaquillo,2074,176416894.0006257
+m11_cart_m2_mae,Tunjuelito,119,155647753.72724262
+m11_cart_m2_mae,Usaquén,21461,143895510.1127764
+m11_cart_m2_mse,Antonio Nariño,300,168257142.68855885
+m11_cart_m2_mse,Barrios Unidos,1699,193083325.13774794
+m11_cart_m2_mse,Bosa,28,83736688.34372784
+m11_cart_m2_mse,Chapinero,307,182519579.19616535
+m11_cart_m2_mse,Ciudad Bolivar,70,113114613.50362056
+m11_cart_m2_mse,Engativá,1830,147961692.9525334
+m11_cart_m2_mse,Fontibón,1842,138358283.88173583
+m11_cart_m2_mse,Kennedy,1517,134996116.69590184
+m11_cart_m2_mse,La Candelaria,178,258524835.60367236
+m11_cart_m2_mse,Los Mártires,264,188450546.94911212
+m11_cart_m2_mse,Puente Aranda,666,176076691.32697278
+m11_cart_m2_mse,Rafael Uribe Uribe,178,165059888.03945193
+m11_cart_m2_mse,San Cristóbal,69,244893705.42780945
+m11_cart_m2_mse,Santa Fé,933,154201367.25975597
+m11_cart_m2_mse,Suba,5109,148632184.0765198
+m11_cart_m2_mse,Teusaquillo,2074,177138796.07808706
+m11_cart_m2_mse,Tunjuelito,119,162549716.02926946
+m11_cart_m2_mse,Usaquén,21461,141781933.98735008
+m11_cart_mae,Antonio Nariño,300,180927428.30350208
+m11_cart_mae,Barrios Unidos,1699,198032336.79356202
+m11_cart_mae,Bosa,28,79234386.01744364
+m11_cart_mae,Chapinero,307,178859254.50651938
+m11_cart_mae,Ciudad Bolivar,70,126327288.58571453
+m11_cart_mae,Engativá,1830,168284767.76055872
+m11_cart_mae,Fontibón,1842,140473373.6519617
+m11_cart_mae,Kennedy,1517,127154381.97369371
+m11_cart_mae,La Candelaria,178,258810668.53932554
+m11_cart_mae,Los Mártires,264,171426850.59844437
+m11_cart_mae,Puente Aranda,666,161253138.2340008
+m11_cart_mae,Rafael Uribe Uribe,178,160221885.52590704
+m11_cart_mae,San Cristóbal,69,230370289.7644854
+m11_cart_mae,Santa Fé,933,150805399.27646938
+m11_cart_mae,Suba,5109,178891989.59059027
+m11_cart_mae,Teusaquillo,2074,188184863.0156889
+m11_cart_mae,Tunjuelito,119,127219327.73109266
+m11_cart_mae,Usaquén,21461,145709127.52235147
+m11_cart_mse,Antonio Nariño,300,180235650.04674006
+m11_cart_mse,Barrios Unidos,1699,198217780.30228725
+m11_cart_mse,Bosa,28,84013718.57142779
+m11_cart_mse,Chapinero,307,176979335.31820852
+m11_cart_mse,Ciudad Bolivar,70,123548471.5730385
+m11_cart_mse,Engativá,1830,167794029.69998044
+m11_cart_mse,Fontibón,1842,139704909.59096894
+m11_cart_mse,Kennedy,1517,129452914.43576649
+m11_cart_mse,La Candelaria,178,257277545.41697899
+m11_cart_mse,Los Mártires,264,171132673.74229935
+m11_cart_mse,Puente Aranda,666,163020824.31437185
+m11_cart_mse,Rafael Uribe Uribe,178,167781511.30970865
+m11_cart_mse,San Cristóbal,69,232892405.63829502
+m11_cart_mse,Santa Fé,933,151517693.22152156
+m11_cart_mse,Suba,5109,173690014.74552664
+m11_cart_mse,Teusaquillo,2074,187889771.44056508
+m11_cart_mse,Tunjuelito,119,120412392.43485136
+m11_cart_mse,Usaquén,21461,144006997.57706067
+m12_en_m02,Antonio Nariño,300,151000542.2417351
+m12_en_m02,Barrios Unidos,1699,177696041.81933028
+m12_en_m02,Bosa,28,67861435.45494342
+m12_en_m02,Chapinero,307,178055241.27897197
+m12_en_m02,Ciudad Bolivar,70,114676024.22102918
+m12_en_m02,Engativá,1830,132341971.53098032
+m12_en_m02,Fontibón,1842,127599211.36276434
+m12_en_m02,Kennedy,1517,117822028.46065103
+m12_en_m02,La Candelaria,178,254859596.28947705
+m12_en_m02,Los Mártires,264,180852065.61672693
+m12_en_m02,Puente Aranda,666,152739782.65864176
+m12_en_m02,Rafael Uribe Uribe,178,141975866.97613463
+m12_en_m02,San Cristóbal,69,226798892.8908085
+m12_en_m02,Santa Fé,933,143969483.3506052
+m12_en_m02,Suba,5109,133593409.19317752
+m12_en_m02,Teusaquillo,2074,155641161.72771594
+m12_en_m02,Tunjuelito,119,121897112.05448899
+m12_en_m02,Usaquén,21461,128587397.92963754
+m12_en_m02_m2,Antonio Nariño,300,172464598.3240795
+m12_en_m02_m2,Barrios Unidos,1699,185967138.00836998
+m12_en_m02_m2,Bosa,28,76735866.25590189
+m12_en_m02_m2,Chapinero,307,165294930.92877173
+m12_en_m02_m2,Ciudad Bolivar,70,118844580.72585759
+m12_en_m02_m2,Engativá,1830,144923153.68867198
+m12_en_m02_m2,Fontibón,1842,133549434.6576537
+m12_en_m02_m2,Kennedy,1517,128510320.44754787
+m12_en_m02_m2,La Candelaria,178,263147436.90548244
+m12_en_m02_m2,Los Mártires,264,194660106.8022047
+m12_en_m02_m2,Puente Aranda,666,177295009.1709936
+m12_en_m02_m2,Rafael Uribe Uribe,178,174545875.3558754
+m12_en_m02_m2,San Cristóbal,69,258724011.8879751
+m12_en_m02_m2,Santa Fé,933,150602769.2170865
+m12_en_m02_m2,Suba,5109,131114995.79129198
+m12_en_m02_m2,Teusaquillo,2074,163484681.6834427
+m12_en_m02_m2,Tunjuelito,119,145503127.71750855
+m12_en_m02_m2,Usaquén,21461,124756417.16099057
+m12_en_m02_pca_nt_tx,Antonio Nariño,300,147528408.64503834
+m12_en_m02_pca_nt_tx,Barrios Unidos,1699,176482492.89134386
+m12_en_m02_pca_nt_tx,Bosa,28,69273386.1190463
+m12_en_m02_pca_nt_tx,Chapinero,307,169911861.1930613
+m12_en_m02_pca_nt_tx,Ciudad Bolivar,70,103757375.76425575
+m12_en_m02_pca_nt_tx,Engativá,1830,125908033.62038186
+m12_en_m02_pca_nt_tx,Fontibón,1842,123434347.12351736
+m12_en_m02_pca_nt_tx,Kennedy,1517,116026247.55900724
+m12_en_m02_pca_nt_tx,La Candelaria,178,241185837.5265268
+m12_en_m02_pca_nt_tx,Los Mártires,264,177753567.19293335
+m12_en_m02_pca_nt_tx,Puente Aranda,666,151645876.96449816
+m12_en_m02_pca_nt_tx,Rafael Uribe Uribe,178,141109914.11901033
+m12_en_m02_pca_nt_tx,San Cristóbal,69,214068964.97548178
+m12_en_m02_pca_nt_tx,Santa Fé,933,137411307.18939474
+m12_en_m02_pca_nt_tx,Suba,5109,124789394.93755138
+m12_en_m02_pca_nt_tx,Teusaquillo,2074,149658539.1031635
+m12_en_m02_pca_nt_tx,Tunjuelito,119,118543823.20977828
+m12_en_m02_pca_nt_tx,Usaquén,21461,126705353.75499442
+m12_en_m02_pca_nt_tx_m2,Antonio Nariño,300,153979559.07660767
+m12_en_m02_pca_nt_tx_m2,Barrios Unidos,1699,180317048.71175033
+m12_en_m02_pca_nt_tx_m2,Bosa,28,73395543.79208438
+m12_en_m02_pca_nt_tx_m2,Chapinero,307,167765725.20283917
+m12_en_m02_pca_nt_tx_m2,Ciudad Bolivar,70,108529281.56708348
+m12_en_m02_pca_nt_tx_m2,Engativá,1830,131225649.49831064
+m12_en_m02_pca_nt_tx_m2,Fontibón,1842,124873712.8692671
+m12_en_m02_pca_nt_tx_m2,Kennedy,1517,119837935.70303431
+m12_en_m02_pca_nt_tx_m2,La Candelaria,178,246386742.5824614
+m12_en_m02_pca_nt_tx_m2,Los Mártires,264,182671286.07574198
+m12_en_m02_pca_nt_tx_m2,Puente Aranda,666,159431007.72976172
+m12_en_m02_pca_nt_tx_m2,Rafael Uribe Uribe,178,149738940.95800707
+m12_en_m02_pca_nt_tx_m2,San Cristóbal,69,225906660.21463922
+m12_en_m02_pca_nt_tx_m2,Santa Fé,933,138432297.4562177
+m12_en_m02_pca_nt_tx_m2,Suba,5109,123832810.53893201
+m12_en_m02_pca_nt_tx_m2,Teusaquillo,2074,149264146.7188451
+m12_en_m02_pca_nt_tx_m2,Tunjuelito,119,130548165.14703053
+m12_en_m02_pca_nt_tx_m2,Usaquén,21461,122683973.17450914
+m12_en_m02_pca_tx,Antonio Nariño,300,146536663.016424
+m12_en_m02_pca_tx,Barrios Unidos,1699,175933113.0170037
+m12_en_m02_pca_tx,Bosa,28,68417722.1373131
+m12_en_m02_pca_tx,Chapinero,307,165112906.6077737
+m12_en_m02_pca_tx,Ciudad Bolivar,70,104658970.19852142
+m12_en_m02_pca_tx,Engativá,1830,127134320.21698391
+m12_en_m02_pca_tx,Fontibón,1842,124432131.77958135
+m12_en_m02_pca_tx,Kennedy,1517,116596003.83960874
+m12_en_m02_pca_tx,La Candelaria,178,240154830.49090305
+m12_en_m02_pca_tx,Los Mártires,264,174280524.70835176
+m12_en_m02_pca_tx,Puente Aranda,666,150385092.11163542
+m12_en_m02_pca_tx,Rafael Uribe Uribe,178,137398703.8159531
+m12_en_m02_pca_tx,San Cristóbal,69,215886881.31814778
+m12_en_m02_pca_tx,Santa Fé,933,136650005.2555732
+m12_en_m02_pca_tx,Suba,5109,123720206.49295825
+m12_en_m02_pca_tx,Teusaquillo,2074,151714804.35075295
+m12_en_m02_pca_tx,Tunjuelito,119,119035730.73175438
+m12_en_m02_pca_tx,Usaquén,21461,126481492.32298526
+m12_en_m02_pca_tx_m2,Antonio Nariño,300,167791478.0070272
+m12_en_m02_pca_tx_m2,Barrios Unidos,1699,185647070.88864282
+m12_en_m02_pca_tx_m2,Bosa,28,75412938.24308343
+m12_en_m02_pca_tx_m2,Chapinero,307,157761162.15985012
+m12_en_m02_pca_tx_m2,Ciudad Bolivar,70,112392413.64065659
+m12_en_m02_pca_tx_m2,Engativá,1830,142690599.33852845
+m12_en_m02_pca_tx_m2,Fontibón,1842,132971076.89149193
+m12_en_m02_pca_tx_m2,Kennedy,1517,129359273.18463938
+m12_en_m02_pca_tx_m2,La Candelaria,178,256848497.80626786
+m12_en_m02_pca_tx_m2,Los Mártires,264,192921919.85889223
+m12_en_m02_pca_tx_m2,Puente Aranda,666,173650305.47706148
+m12_en_m02_pca_tx_m2,Rafael Uribe Uribe,178,169733499.41854525
+m12_en_m02_pca_tx_m2,San Cristóbal,69,254624291.0149022
+m12_en_m02_pca_tx_m2,Santa Fé,933,145723106.01931357
+m12_en_m02_pca_tx_m2,Suba,5109,125161654.7180045
+m12_en_m02_pca_tx_m2,Teusaquillo,2074,158443201.286293
+m12_en_m02_pca_tx_m2,Tunjuelito,119,145818327.92342663
+m12_en_m02_pca_tx_m2,Usaquén,21461,121437096.93377534
+m12_en_pca_nt,Antonio Nariño,300,154631896.72058776
+m12_en_pca_nt,Barrios Unidos,1699,184986975.24796453
+m12_en_pca_nt,Bosa,28,83422507.17411093
+m12_en_pca_nt,Chapinero,307,200790152.67623007
+m12_en_pca_nt,Ciudad Bolivar,70,115396358.40402102
+m12_en_pca_nt,Engativá,1830,131904079.05710232
+m12_en_pca_nt,Fontibón,1842,134921553.67365783
+m12_en_pca_nt,Kennedy,1517,115240492.6610957
+m12_en_pca_nt,La Candelaria,178,264918399.21523887
+m12_en_pca_nt,Los Mártires,264,184575584.97482306
+m12_en_pca_nt,Puente Aranda,666,158604006.73415008
+m12_en_pca_nt,Rafael Uribe Uribe,178,156346395.32880884
+m12_en_pca_nt,San Cristóbal,69,219647558.55871323
+m12_en_pca_nt,Santa Fé,933,154504008.20653388
+m12_en_pca_nt,Suba,5109,143470172.22103265
+m12_en_pca_nt,Teusaquillo,2074,163952106.72333652
+m12_en_pca_nt,Tunjuelito,119,122380574.30857499
+m12_en_pca_nt,Usaquén,21461,136801601.94722003
+m12_en_pca_nt_m2,Antonio Nariño,300,169040520.36186603
+m12_en_pca_nt_m2,Barrios Unidos,1699,191955314.85916224
+m12_en_pca_nt_m2,Bosa,28,82212419.8089256
+m12_en_pca_nt_m2,Chapinero,307,197678833.3648389
+m12_en_pca_nt_m2,Ciudad Bolivar,70,114911702.89420594
+m12_en_pca_nt_m2,Engativá,1830,140410422.82229507
+m12_en_pca_nt_m2,Fontibón,1842,133747401.00061865
+m12_en_pca_nt_m2,Kennedy,1517,116373031.75421098
+m12_en_pca_nt_m2,La Candelaria,178,263170180.52679682
+m12_en_pca_nt_m2,Los Mártires,264,193654516.76760286
+m12_en_pca_nt_m2,Puente Aranda,666,168996386.42316985
+m12_en_pca_nt_m2,Rafael Uribe Uribe,178,168825179.19467703
+m12_en_pca_nt_m2,San Cristóbal,69,236445219.9309576
+m12_en_pca_nt_m2,Santa Fé,933,158774521.1926744
+m12_en_pca_nt_m2,Suba,5109,138623037.67176154
+m12_en_pca_nt_m2,Teusaquillo,2074,156630872.64940253
+m12_en_pca_nt_m2,Tunjuelito,119,133443742.96261458
+m12_en_pca_nt_m2,Usaquén,21461,135225795.22219563
+m12_en_pca_nt_tx,Antonio Nariño,300,149702952.49054706
+m12_en_pca_nt_tx,Barrios Unidos,1699,179484054.92832395
+m12_en_pca_nt_tx,Bosa,28,76750347.03358756
+m12_en_pca_nt_tx,Chapinero,307,176847575.04716727
+m12_en_pca_nt_tx,Ciudad Bolivar,70,101036994.74745274
+m12_en_pca_nt_tx,Engativá,1830,127089750.26845732
+m12_en_pca_nt_tx,Fontibón,1842,125501714.20655973
+m12_en_pca_nt_tx,Kennedy,1517,117458377.0436134
+m12_en_pca_nt_tx,La Candelaria,178,246185527.3489377
+m12_en_pca_nt_tx,Los Mártires,264,183343191.982194
+m12_en_pca_nt_tx,Puente Aranda,666,153982138.97173804
+m12_en_pca_nt_tx,Rafael Uribe Uribe,178,146773833.91463912
+m12_en_pca_nt_tx,San Cristóbal,69,205429990.7965555
+m12_en_pca_nt_tx,Santa Fé,933,141879371.32443354
+m12_en_pca_nt_tx,Suba,5109,126648823.76612231
+m12_en_pca_nt_tx,Teusaquillo,2074,151656025.11621684
+m12_en_pca_nt_tx,Tunjuelito,119,121382475.1072506
+m12_en_pca_nt_tx,Usaquén,21461,129106118.1296568
+m12_en_pca_nt_tx_m2,Antonio Nariño,300,155539828.36413017
+m12_en_pca_nt_tx_m2,Barrios Unidos,1699,185368633.55464262
+m12_en_pca_nt_tx_m2,Bosa,28,77715104.11419685
+m12_en_pca_nt_tx_m2,Chapinero,307,173369363.00824547
+m12_en_pca_nt_tx_m2,Ciudad Bolivar,70,104392638.98057915
+m12_en_pca_nt_tx_m2,Engativá,1830,133117683.6374894
+m12_en_pca_nt_tx_m2,Fontibón,1842,126233618.66216205
+m12_en_pca_nt_tx_m2,Kennedy,1517,119314898.38602471
+m12_en_pca_nt_tx_m2,La Candelaria,178,247863079.7704355
+m12_en_pca_nt_tx_m2,Los Mártires,264,185885777.82603508
+m12_en_pca_nt_tx_m2,Puente Aranda,666,162457141.55038515
+m12_en_pca_nt_tx_m2,Rafael Uribe Uribe,178,153273440.06324512
+m12_en_pca_nt_tx_m2,San Cristóbal,69,222971162.1782903
+m12_en_pca_nt_tx_m2,Santa Fé,933,143535924.39121258
+m12_en_pca_nt_tx_m2,Suba,5109,124222025.82351339
+m12_en_pca_nt_tx_m2,Teusaquillo,2074,148022325.89241758
+m12_en_pca_nt_tx_m2,Tunjuelito,119,131020656.39568219
+m12_en_pca_nt_tx_m2,Usaquén,21461,124588405.68011525
+m12_en_pca_nt_tx_sa,Antonio Nariño,300,149980461.41776603
+m12_en_pca_nt_tx_sa,Barrios Unidos,1699,179752434.6707488
+m12_en_pca_nt_tx_sa,Bosa,28,76652218.30288906
+m12_en_pca_nt_tx_sa,Chapinero,307,165656087.36569223
+m12_en_pca_nt_tx_sa,Ciudad Bolivar,70,103527456.69433637
+m12_en_pca_nt_tx_sa,Engativá,1830,126915857.36493237
+m12_en_pca_nt_tx_sa,Fontibón,1842,125215881.55002418
+m12_en_pca_nt_tx_sa,Kennedy,1517,116131374.64624894
+m12_en_pca_nt_tx_sa,La Candelaria,178,244760162.13340396
+m12_en_pca_nt_tx_sa,Los Mártires,264,175569544.06731164
+m12_en_pca_nt_tx_sa,Puente Aranda,666,153782796.65742254
+m12_en_pca_nt_tx_sa,Rafael Uribe Uribe,178,147362839.5405014
+m12_en_pca_nt_tx_sa,San Cristóbal,69,210704561.02516335
+m12_en_pca_nt_tx_sa,Santa Fé,933,140409943.6638905
+m12_en_pca_nt_tx_sa,Suba,5109,124864366.55934663
+m12_en_pca_nt_tx_sa,Teusaquillo,2074,151253468.8632587
+m12_en_pca_nt_tx_sa,Tunjuelito,119,122802116.22078143
+m12_en_pca_nt_tx_sa,Usaquén,21461,127322168.89223902
+m12_en_pca_nt_tx_sa_m2,Antonio Nariño,300,169612760.3447224
+m12_en_pca_nt_tx_sa_m2,Barrios Unidos,1699,191175105.1467894
+m12_en_pca_nt_tx_sa_m2,Bosa,28,81318582.56420016
+m12_en_pca_nt_tx_sa_m2,Chapinero,307,171337772.72525808
+m12_en_pca_nt_tx_sa_m2,Ciudad Bolivar,70,107349297.06587914
+m12_en_pca_nt_tx_sa_m2,Engativá,1830,141726292.54491493
+m12_en_pca_nt_tx_sa_m2,Fontibón,1842,130904216.47884685
+m12_en_pca_nt_tx_sa_m2,Kennedy,1517,128400261.4912802
+m12_en_pca_nt_tx_sa_m2,La Candelaria,178,258286658.90304652
+m12_en_pca_nt_tx_sa_m2,Los Mártires,264,201022894.2497022
+m12_en_pca_nt_tx_sa_m2,Puente Aranda,666,174857167.096182
+m12_en_pca_nt_tx_sa_m2,Rafael Uribe Uribe,178,169159605.3118185
+m12_en_pca_nt_tx_sa_m2,San Cristóbal,69,247087521.44109222
+m12_en_pca_nt_tx_sa_m2,Santa Fé,933,151231433.4169355
+m12_en_pca_nt_tx_sa_m2,Suba,5109,125207103.76130672
+m12_en_pca_nt_tx_sa_m2,Teusaquillo,2074,157900204.1598046
+m12_en_pca_nt_tx_sa_m2,Tunjuelito,119,144737786.50706354
+m12_en_pca_nt_tx_sa_m2,Usaquén,21461,121577196.84558272
+m12_en_pca_tx,Antonio Nariño,300,176402280.93987027
+m12_en_pca_tx,Barrios Unidos,1699,246807578.83400926
+m12_en_pca_tx,Bosa,28,216478728.42464393
+m12_en_pca_tx,Chapinero,307,273553221.8553032
+m12_en_pca_tx,Ciudad Bolivar,70,151931022.5257244
+m12_en_pca_tx,Engativá,1830,183523406.12451965
+m12_en_pca_tx,Fontibón,1842,165548622.20849165
+m12_en_pca_tx,Kennedy,1517,172358470.3998634
+m12_en_pca_tx,La Candelaria,178,256936581.446401
+m12_en_pca_tx,Los Mártires,264,207402718.1239056
+m12_en_pca_tx,Puente Aranda,666,185513513.02139798
+m12_en_pca_tx,Rafael Uribe Uribe,178,196577318.56884283
+m12_en_pca_tx,San Cristóbal,69,184049217.49610862
+m12_en_pca_tx,Santa Fé,933,180654697.2839969
+m12_en_pca_tx,Suba,5109,196575563.51981747
+m12_en_pca_tx,Teusaquillo,2074,238395750.63092634
+m12_en_pca_tx,Tunjuelito,119,147091124.89397582
+m12_en_pca_tx,Usaquén,21461,207476167.98337662
+m12_en_pca_tx_m2,Antonio Nariño,300,201987345.21692115
+m12_en_pca_tx_m2,Barrios Unidos,1699,197306272.06147397
+m12_en_pca_tx_m2,Bosa,28,166768685.70174497
+m12_en_pca_tx_m2,Chapinero,307,182136985.6942775
+m12_en_pca_tx_m2,Ciudad Bolivar,70,156543725.0759873
+m12_en_pca_tx_m2,Engativá,1830,186481866.47320378
+m12_en_pca_tx_m2,Fontibón,1842,150983121.96509808
+m12_en_pca_tx_m2,Kennedy,1517,215622068.98660576
+m12_en_pca_tx_m2,La Candelaria,178,240978088.75128826
+m12_en_pca_tx_m2,Los Mártires,264,197458644.75966573
+m12_en_pca_tx_m2,Puente Aranda,666,227539552.72120503
+m12_en_pca_tx_m2,Rafael Uribe Uribe,178,257218671.7833574
+m12_en_pca_tx_m2,San Cristóbal,69,334432642.442077
+m12_en_pca_tx_m2,Santa Fé,933,143942110.03718328
+m12_en_pca_tx_m2,Suba,5109,140961127.15469632
+m12_en_pca_tx_m2,Teusaquillo,2074,163894523.51349205
+m12_en_pca_tx_m2,Tunjuelito,119,279529564.98436666
+m12_en_pca_tx_m2,Usaquén,21461,148101179.8489409
+m13_xgb_star,Antonio Nariño,300,150715345.93809977
+m13_xgb_star,Barrios Unidos,1699,172829646.85731775
+m13_xgb_star,Bosa,28,69835733.17238797
+m13_xgb_star,Chapinero,307,170372448.8154648
+m13_xgb_star,Ciudad Bolivar,70,110922742.6721007
+m13_xgb_star,Engativá,1830,135790590.59017342
+m13_xgb_star,Fontibón,1842,122310649.07804461
+m13_xgb_star,Kennedy,1517,114539798.67728885
+m13_xgb_star,La Candelaria,178,220247166.12179294
+m13_xgb_star,Los Mártires,264,178249453.65962347
+m13_xgb_star,Puente Aranda,666,144447188.73466322
+m13_xgb_star,Rafael Uribe Uribe,178,136858094.0519077
+m13_xgb_star,San Cristóbal,69,208704410.32270503
+m13_xgb_star,Santa Fé,933,130075209.83753066
+m13_xgb_star,Suba,5109,123142604.95227237
+m13_xgb_star,Teusaquillo,2074,149781368.12252614
+m13_xgb_star,Tunjuelito,119,113914951.42804185
+m13_xgb_star,Usaquén,21461,125400994.00557795
+m13_xgb_star_m2,Antonio Nariño,300,171167819.9143953
+m13_xgb_star_m2,Barrios Unidos,1699,185977876.58288804
+m13_xgb_star_m2,Bosa,28,67762655.3219869
+m13_xgb_star_m2,Chapinero,307,155328785.82950228
+m13_xgb_star_m2,Ciudad Bolivar,70,120695706.74917312
+m13_xgb_star_m2,Engativá,1830,138553654.93514413
+m13_xgb_star_m2,Fontibón,1842,132750556.78899871
+m13_xgb_star_m2,Kennedy,1517,124593298.78328922
+m13_xgb_star_m2,La Candelaria,178,233086828.7360896
+m13_xgb_star_m2,Los Mártires,264,193413503.930765
+m13_xgb_star_m2,Puente Aranda,666,163737841.44572234
+m13_xgb_star_m2,Rafael Uribe Uribe,178,154481700.44963306
+m13_xgb_star_m2,San Cristóbal,69,250546499.1571017
+m13_xgb_star_m2,Santa Fé,933,141164167.13060054
+m13_xgb_star_m2,Suba,5109,127747910.36427788
+m13_xgb_star_m2,Teusaquillo,2074,154573422.64886287
+m13_xgb_star_m2,Tunjuelito,119,146901464.99925804
+m13_xgb_star_m2,Usaquén,21461,123936311.03402275
+m14_en_enc,Antonio Nariño,300,159018362.36629343
+m14_en_enc,Barrios Unidos,1699,180205921.00754428
+m14_en_enc,Bosa,28,70942619.8176612
+m14_en_enc,Chapinero,307,152939424.77537382
+m14_en_enc,Ciudad Bolivar,70,115446730.33781761
+m14_en_enc,Engativá,1830,131859926.83976895
+m14_en_enc,Fontibón,1842,128031106.0234544
+m14_en_enc,Kennedy,1517,120415348.82652561
+m14_en_enc,La Candelaria,178,216320175.66530448
+m14_en_enc,Los Mártires,264,174720561.99565265
+m14_en_enc,Puente Aranda,666,149724619.7846109
+m14_en_enc,Rafael Uribe Uribe,178,125230052.42049353
+m14_en_enc,San Cristóbal,69,206315754.63759586
+m14_en_enc,Santa Fé,933,138093545.11438173
+m14_en_enc,Suba,5109,126313461.3926908
+m14_en_enc,Teusaquillo,2074,148037495.28885284
+m14_en_enc,Tunjuelito,119,120185575.66940421
+m14_en_enc,Usaquén,21461,129865997.46338429
+m14_en_enc_b,Antonio Nariño,300,158688711.23918638
+m14_en_enc_b,Barrios Unidos,1699,180403893.63627574
+m14_en_enc_b,Bosa,28,71003943.54189663
+m14_en_enc_b,Chapinero,307,153875780.60370404
+m14_en_enc_b,Ciudad Bolivar,70,114125676.8105972
+m14_en_enc_b,Engativá,1830,130261631.58348435
+m14_en_enc_b,Fontibón,1842,127191773.96196097
+m14_en_enc_b,Kennedy,1517,121899218.91210015
+m14_en_enc_b,La Candelaria,178,217013731.33386916
+m14_en_enc_b,Los Mártires,264,180755814.03402424
+m14_en_enc_b,Puente Aranda,666,150938326.4281969
+m14_en_enc_b,Rafael Uribe Uribe,178,125693018.72289112
+m14_en_enc_b,San Cristóbal,69,209814946.3720006
+m14_en_enc_b,Santa Fé,933,140846626.24661463
+m14_en_enc_b,Suba,5109,125812645.21461143
+m14_en_enc_b,Teusaquillo,2074,149838139.05946937
+m14_en_enc_b,Tunjuelito,119,119507311.09076071
+m14_en_enc_b,Usaquén,21461,130176610.53885807
+m14_en_enc_b_m2,Antonio Nariño,300,172967173.8565558
+m14_en_enc_b_m2,Barrios Unidos,1699,192816693.45963332
+m14_en_enc_b_m2,Bosa,28,71475195.63781047
+m14_en_enc_b_m2,Chapinero,307,151350984.06145462
+m14_en_enc_b_m2,Ciudad Bolivar,70,117830603.79985619
+m14_en_enc_b_m2,Engativá,1830,146213549.27210987
+m14_en_enc_b_m2,Fontibón,1842,135811406.89786896
+m14_en_enc_b_m2,Kennedy,1517,127319912.43030186
+m14_en_enc_b_m2,La Candelaria,178,241856863.8694676
+m14_en_enc_b_m2,Los Mártires,264,203784559.38512492
+m14_en_enc_b_m2,Puente Aranda,666,168405597.59563804
+m14_en_enc_b_m2,Rafael Uribe Uribe,178,162639820.50007448
+m14_en_enc_b_m2,San Cristóbal,69,244751280.02373457
+m14_en_enc_b_m2,Santa Fé,933,141274080.39377454
+m14_en_enc_b_m2,Suba,5109,127719221.25806244
+m14_en_enc_b_m2,Teusaquillo,2074,154401609.26526842
+m14_en_enc_b_m2,Tunjuelito,119,146730047.79240304
+m14_en_enc_b_m2,Usaquén,21461,126333103.30713274
+m14_en_enc_m2,Antonio Nariño,300,171578199.86558264
+m14_en_enc_m2,Barrios Unidos,1699,187053619.5960244
+m14_en_enc_m2,Bosa,28,75118214.41008373
+m14_en_enc_m2,Chapinero,307,161683835.42706656
+m14_en_enc_m2,Ciudad Bolivar,70,119081473.56732827
+m14_en_enc_m2,Engativá,1830,146101854.54087025
+m14_en_enc_m2,Fontibón,1842,133476395.87733245
+m14_en_enc_m2,Kennedy,1517,129889776.87148778
+m14_en_enc_m2,La Candelaria,178,235399499.1657246
+m14_en_enc_m2,Los Mártires,264,200857641.75101706
+m14_en_enc_m2,Puente Aranda,666,168047470.62600842
+m14_en_enc_m2,Rafael Uribe Uribe,178,165487666.96604562
+m14_en_enc_m2,San Cristóbal,69,244784894.3964501
+m14_en_enc_m2,Santa Fé,933,141102907.51495928
+m14_en_enc_m2,Suba,5109,127066554.73470272
+m14_en_enc_m2,Teusaquillo,2074,154305628.2947453
+m14_en_enc_m2,Tunjuelito,119,150679991.39301392
+m14_en_enc_m2,Usaquén,21461,126958945.88101438
+m14_en_enc_tx,Antonio Nariño,300,151201702.37512794
+m14_en_enc_tx,Barrios Unidos,1699,176445634.59801695
+m14_en_enc_tx,Bosa,28,77584375.22167559
+m14_en_enc_tx,Chapinero,307,143622034.36911005
+m14_en_enc_tx,Ciudad Bolivar,70,111299887.17074774
+m14_en_enc_tx,Engativá,1830,127085836.35297355
+m14_en_enc_tx,Fontibón,1842,123636970.50998536
+m14_en_enc_tx,Kennedy,1517,118685564.93818519
+m14_en_enc_tx,La Candelaria,178,232939120.83764398
+m14_en_enc_tx,Los Mártires,264,183102153.1099133
+m14_en_enc_tx,Puente Aranda,666,149021926.27390745
+m14_en_enc_tx,Rafael Uribe Uribe,178,146572542.48564672
+m14_en_enc_tx,San Cristóbal,69,199695262.00768322
+m14_en_enc_tx,Santa Fé,933,135745504.92084932
+m14_en_enc_tx,Suba,5109,121631136.42335986
+m14_en_enc_tx,Teusaquillo,2074,148966621.36003032
+m14_en_enc_tx,Tunjuelito,119,116834794.77061382
+m14_en_enc_tx,Usaquén,21461,129071020.43650694
+m14_en_enc_tx_m2,Antonio Nariño,300,182855415.0829998
+m14_en_enc_tx_m2,Barrios Unidos,1699,195402178.55793178
+m14_en_enc_tx_m2,Bosa,28,72932387.31355806
+m14_en_enc_tx_m2,Chapinero,307,149238383.19837317
+m14_en_enc_tx_m2,Ciudad Bolivar,70,114833338.53895721
+m14_en_enc_tx_m2,Engativá,1830,145114306.3377755
+m14_en_enc_tx_m2,Fontibón,1842,137655170.6947789
+m14_en_enc_tx_m2,Kennedy,1517,128046028.71622191
+m14_en_enc_tx_m2,La Candelaria,178,258807927.96460915
+m14_en_enc_tx_m2,Los Mártires,264,212854316.85763088
+m14_en_enc_tx_m2,Puente Aranda,666,174317044.05384278
+m14_en_enc_tx_m2,Rafael Uribe Uribe,178,180165335.55991262
+m14_en_enc_tx_m2,San Cristóbal,69,266259138.08099583
+m14_en_enc_tx_m2,Santa Fé,933,148280558.5998698
+m14_en_enc_tx_m2,Suba,5109,124154611.57471098
+m14_en_enc_tx_m2,Teusaquillo,2074,156765732.12000015
+m14_en_enc_tx_m2,Tunjuelito,119,151489993.94494277
+m14_en_enc_tx_m2,Usaquén,21461,121861403.60191555
+m15_rf_m2,Antonio Nariño,300,161329944.99953514
+m15_rf_m2,Barrios Unidos,1699,192590545.31948334
+m15_rf_m2,Bosa,28,68944469.17497765
+m15_rf_m2,Chapinero,307,177274940.42882904
+m15_rf_m2,Ciudad Bolivar,70,112772127.19241819
+m15_rf_m2,Engativá,1830,148934562.86429638
+m15_rf_m2,Fontibón,1842,138409713.55961284
+m15_rf_m2,Kennedy,1517,125241330.94458462
+m15_rf_m2,La Candelaria,178,244049556.4047933
+m15_rf_m2,Los Mártires,264,183373388.38507286
+m15_rf_m2,Puente Aranda,666,165124105.05673328
+m15_rf_m2,Rafael Uribe Uribe,178,164714552.3556455
+m15_rf_m2,San Cristóbal,69,286658070.4606618
+m15_rf_m2,Santa Fé,933,145672118.18038878
+m15_rf_m2,Suba,5109,144331336.4915551
+m15_rf_m2,Teusaquillo,2074,157919806.91609263
+m15_rf_m2,Tunjuelito,119,160041541.43422517
+m15_rf_m2,Usaquén,21461,133971514.31500404
+m15_rf_m2_sin_coord,Antonio Nariño,300,163334779.14612508
+m15_rf_m2_sin_coord,Barrios Unidos,1699,192390304.89091873
+m15_rf_m2_sin_coord,Bosa,28,62211574.355644815
+m15_rf_m2_sin_coord,Chapinero,307,180131732.95341957
+m15_rf_m2_sin_coord,Ciudad Bolivar,70,114339065.6785894
+m15_rf_m2_sin_coord,Engativá,1830,149487133.95939702
+m15_rf_m2_sin_coord,Fontibón,1842,136330221.7807875
+m15_rf_m2_sin_coord,Kennedy,1517,123728140.61853866
+m15_rf_m2_sin_coord,La Candelaria,178,248742828.93741447
+m15_rf_m2_sin_coord,Los Mártires,264,186132001.7845714
+m15_rf_m2_sin_coord,Puente Aranda,666,164630652.55115026
+m15_rf_m2_sin_coord,Rafael Uribe Uribe,178,171736315.27456942
+m15_rf_m2_sin_coord,San Cristóbal,69,275341971.35639197
+m15_rf_m2_sin_coord,Santa Fé,933,145292185.20237404
+m15_rf_m2_sin_coord,Suba,5109,144846817.13735962
+m15_rf_m2_sin_coord,Teusaquillo,2074,157839086.75742558
+m15_rf_m2_sin_coord,Tunjuelito,119,160908640.9616205
+m15_rf_m2_sin_coord,Usaquén,21461,134494415.98442304
+m17_nn_star,Antonio Nariño,300,152375242.74905828
+m17_nn_star,Barrios Unidos,1699,175564482.95075798
+m17_nn_star,Bosa,28,62082152.109572105
+m17_nn_star,Chapinero,307,153954320.56690535
+m17_nn_star,Ciudad Bolivar,70,116250296.97011009
+m17_nn_star,Engativá,1830,128463557.61901084
+m17_nn_star,Fontibón,1842,124983030.11837825
+m17_nn_star,Kennedy,1517,109916380.99194504
+m17_nn_star,La Candelaria,178,236222731.36847478
+m17_nn_star,Los Mártires,264,188135291.58670163
+m17_nn_star,Puente Aranda,666,149444378.40113223
+m17_nn_star,Rafael Uribe Uribe,178,123607489.79598323
+m17_nn_star,San Cristóbal,69,197443754.0798413
+m17_nn_star,Santa Fé,933,133377954.41606173
+m17_nn_star,Suba,5109,123049451.13502124
+m17_nn_star,Teusaquillo,2074,149400205.67983955
+m17_nn_star,Tunjuelito,119,124606507.07711604
+m17_nn_star,Usaquén,21461,137375347.07939452
+m17_nn_star_m2,Antonio Nariño,300,173452173.69654337
+m17_nn_star_m2,Barrios Unidos,1699,183731537.91418347
+m17_nn_star_m2,Bosa,28,65892278.00647014
+m17_nn_star_m2,Chapinero,307,146927238.6513876
+m17_nn_star_m2,Ciudad Bolivar,70,115982816.51757723
+m17_nn_star_m2,Engativá,1830,136047545.62784174
+m17_nn_star_m2,Fontibón,1842,130240882.61808121
+m17_nn_star_m2,Kennedy,1517,121923076.62943445
+m17_nn_star_m2,La Candelaria,178,252157372.56570223
+m17_nn_star_m2,Los Mártires,264,203411890.2468914
+m17_nn_star_m2,Puente Aranda,666,168906768.2932043
+m17_nn_star_m2,Rafael Uribe Uribe,178,139158246.74746186
+m17_nn_star_m2,San Cristóbal,69,229954200.2901581
+m17_nn_star_m2,Santa Fé,933,143809532.4743223
+m17_nn_star_m2,Suba,5109,124309574.86213894
+m17_nn_star_m2,Teusaquillo,2074,155569244.48810816
+m17_nn_star_m2,Tunjuelito,119,149717471.45994127
+m17_nn_star_m2,Usaquén,21461,122179587.0789747
+m18_nn_64,Antonio Nariño,300,141741370.64573145
+m18_nn_64,Barrios Unidos,1699,173231041.72827524
+m18_nn_64,Bosa,28,78978046.2055637
+m18_nn_64,Chapinero,307,173557919.53173265
+m18_nn_64,Ciudad Bolivar,70,109574138.98369233
+m18_nn_64,Engativá,1830,127704970.72433831
+m18_nn_64,Fontibón,1842,125674886.51947494
+m18_nn_64,Kennedy,1517,105293153.91784023
+m18_nn_64,La Candelaria,178,236784275.39219242
+m18_nn_64,Los Mártires,264,186273782.86765653
+m18_nn_64,Puente Aranda,666,146021075.56500033
+m18_nn_64,Rafael Uribe Uribe,178,128979039.53621691
+m18_nn_64,San Cristóbal,69,220148289.7471742
+m18_nn_64,Santa Fé,933,161032377.08657104
+m18_nn_64,Suba,5109,121399568.68398964
+m18_nn_64,Teusaquillo,2074,163843318.60501546
+m18_nn_64,Tunjuelito,119,118951039.12371847
+m18_nn_64,Usaquén,21461,124310684.89001137
+m18_nn_64_m2,Antonio Nariño,300,163703641.34073767
+m18_nn_64_m2,Barrios Unidos,1699,173249421.9442597
+m18_nn_64_m2,Bosa,28,71071530.77910222
+m18_nn_64_m2,Chapinero,307,155908442.8122616
+m18_nn_64_m2,Ciudad Bolivar,70,118020682.42457293
+m18_nn_64_m2,Engativá,1830,135930705.20431864
+m18_nn_64_m2,Fontibón,1842,133583821.13688709
+m18_nn_64_m2,Kennedy,1517,114078756.11540899
+m18_nn_64_m2,La Candelaria,178,265806361.51745176
+m18_nn_64_m2,Los Mártires,264,204337204.66117546
+m18_nn_64_m2,Puente Aranda,666,157775366.4023014
+m18_nn_64_m2,Rafael Uribe Uribe,178,153621527.42322883
+m18_nn_64_m2,San Cristóbal,69,275714043.3317505
+m18_nn_64_m2,Santa Fé,933,144663273.1780348
+m18_nn_64_m2,Suba,5109,126003815.84858891
+m18_nn_64_m2,Teusaquillo,2074,157119346.06590337
+m18_nn_64_m2,Tunjuelito,119,147605567.33356684
+m18_nn_64_m2,Usaquén,21461,122843083.10617866
+m19_nn_star_afinada_m2,Antonio Nariño,300,170071211.51532486
+m19_nn_star_afinada_m2,Barrios Unidos,1699,182165528.49592414
+m19_nn_star_afinada_m2,Bosa,28,74576492.17829315
+m19_nn_star_afinada_m2,Chapinero,307,146640190.22349873
+m19_nn_star_afinada_m2,Ciudad Bolivar,70,113782327.48363943
+m19_nn_star_afinada_m2,Engativá,1830,138997040.01822335
+m19_nn_star_afinada_m2,Fontibón,1842,131724610.40228087
+m19_nn_star_afinada_m2,Kennedy,1517,124200582.35361408
+m19_nn_star_afinada_m2,La Candelaria,178,251045984.94612736
+m19_nn_star_afinada_m2,Los Mártires,264,197997880.58315223
+m19_nn_star_afinada_m2,Puente Aranda,666,168998073.85162932
+m19_nn_star_afinada_m2,Rafael Uribe Uribe,178,146084675.1955997
+m19_nn_star_afinada_m2,San Cristóbal,69,241841322.95665792
+m19_nn_star_afinada_m2,Santa Fé,933,142658050.18043175
+m19_nn_star_afinada_m2,Suba,5109,124643846.22234799
+m19_nn_star_afinada_m2,Teusaquillo,2074,154682011.56758547
+m19_nn_star_afinada_m2,Tunjuelito,119,144451713.78177062
+m19_nn_star_afinada_m2,Usaquén,21461,122341477.48716542
+m20_nn_star_twcv_m2,Antonio Nariño,300,171867462.44559887
+m20_nn_star_twcv_m2,Barrios Unidos,1699,182806457.61411038
+m20_nn_star_twcv_m2,Bosa,28,68889559.15293452
+m20_nn_star_twcv_m2,Chapinero,307,142935974.66679272
+m20_nn_star_twcv_m2,Ciudad Bolivar,70,117186783.60005091
+m20_nn_star_twcv_m2,Engativá,1830,139511220.5321056
+m20_nn_star_twcv_m2,Fontibón,1842,134601405.57849023
+m20_nn_star_twcv_m2,Kennedy,1517,124010849.05612803
+m20_nn_star_twcv_m2,La Candelaria,178,250751857.26640683
+m20_nn_star_twcv_m2,Los Mártires,264,202174098.38418657
+m20_nn_star_twcv_m2,Puente Aranda,666,173093044.8960722
+m20_nn_star_twcv_m2,Rafael Uribe Uribe,178,141645930.78904498
+m20_nn_star_twcv_m2,San Cristóbal,69,237346368.06362757
+m20_nn_star_twcv_m2,Santa Fé,933,139315678.99746007
+m20_nn_star_twcv_m2,Suba,5109,123657139.60873313
+m20_nn_star_twcv_m2,Teusaquillo,2074,152895527.50340137
+m20_nn_star_twcv_m2,Tunjuelito,119,146672056.87457177
+m20_nn_star_twcv_m2,Usaquén,21461,121316418.62751484
+m20b_nn_star_twcv_3sem_m2,Antonio Nariño,300,172872564.5763732
+m20b_nn_star_twcv_3sem_m2,Barrios Unidos,1699,181900407.125303
+m20b_nn_star_twcv_3sem_m2,Bosa,28,71313939.84995262
+m20b_nn_star_twcv_3sem_m2,Chapinero,307,141446370.12507057
+m20b_nn_star_twcv_3sem_m2,Ciudad Bolivar,70,116539444.33570273
+m20b_nn_star_twcv_3sem_m2,Engativá,1830,140067998.66050825
+m20b_nn_star_twcv_3sem_m2,Fontibón,1842,134850898.9058953
+m20b_nn_star_twcv_3sem_m2,Kennedy,1517,124086992.83619109
+m20b_nn_star_twcv_3sem_m2,La Candelaria,178,248223653.9882785
+m20b_nn_star_twcv_3sem_m2,Los Mártires,264,203375777.55977976
+m20b_nn_star_twcv_3sem_m2,Puente Aranda,666,173770306.20249355
+m20b_nn_star_twcv_3sem_m2,Rafael Uribe Uribe,178,150646202.2762381
+m20b_nn_star_twcv_3sem_m2,San Cristóbal,69,251664658.6480087
+m20b_nn_star_twcv_3sem_m2,Santa Fé,933,140196705.39866287
+m20b_nn_star_twcv_3sem_m2,Suba,5109,124658872.99111515
+m20b_nn_star_twcv_3sem_m2,Teusaquillo,2074,154977238.82446873
+m20b_nn_star_twcv_3sem_m2,Tunjuelito,119,146435649.39607134
+m20b_nn_star_twcv_3sem_m2,Usaquén,21461,121147368.19081822
+m21_nn_general_twcv_m2,Antonio Nariño,300,164733801.18087837
+m21_nn_general_twcv_m2,Barrios Unidos,1699,180849905.36479014
+m21_nn_general_twcv_m2,Bosa,28,68621347.32086676
+m21_nn_general_twcv_m2,Chapinero,307,142027317.42316818
+m21_nn_general_twcv_m2,Ciudad Bolivar,70,115074669.59674367
+m21_nn_general_twcv_m2,Engativá,1830,141095466.53878868
+m21_nn_general_twcv_m2,Fontibón,1842,139368222.0244646
+m21_nn_general_twcv_m2,Kennedy,1517,124284514.57947053
+m21_nn_general_twcv_m2,La Candelaria,178,259733312.91670966
+m21_nn_general_twcv_m2,Los Mártires,264,203977474.39473432
+m21_nn_general_twcv_m2,Puente Aranda,666,169898722.04939613
+m21_nn_general_twcv_m2,Rafael Uribe Uribe,178,152505849.78602877
+m21_nn_general_twcv_m2,San Cristóbal,69,266715299.96326038
+m21_nn_general_twcv_m2,Santa Fé,933,143961002.9961407
+m21_nn_general_twcv_m2,Suba,5109,129674506.15007469
+m21_nn_general_twcv_m2,Teusaquillo,2074,161497306.9527113
+m21_nn_general_twcv_m2,Tunjuelito,119,141383552.75886837
+m21_nn_general_twcv_m2,Usaquén,21461,124996607.50306113
+m22_xgb_star_twcv_m2,Antonio Nariño,300,167737799.9424535
+m22_xgb_star_twcv_m2,Barrios Unidos,1699,186393853.4900806
+m22_xgb_star_twcv_m2,Bosa,28,70562044.5558974
+m22_xgb_star_twcv_m2,Chapinero,307,156867486.95788875
+m22_xgb_star_twcv_m2,Ciudad Bolivar,70,115575045.84230995
+m22_xgb_star_twcv_m2,Engativá,1830,141416467.9763149
+m22_xgb_star_twcv_m2,Fontibón,1842,135727981.96026233
+m22_xgb_star_twcv_m2,Kennedy,1517,123349748.60449447
+m22_xgb_star_twcv_m2,La Candelaria,178,230952385.77678972
+m22_xgb_star_twcv_m2,Los Mártires,264,193603180.29910174
+m22_xgb_star_twcv_m2,Puente Aranda,666,165826234.59987065
+m22_xgb_star_twcv_m2,Rafael Uribe Uribe,178,150000260.85123444
+m22_xgb_star_twcv_m2,San Cristóbal,69,247050737.7974259
+m22_xgb_star_twcv_m2,Santa Fé,933,141982981.50721616
+m22_xgb_star_twcv_m2,Suba,5109,126966605.22915761
+m22_xgb_star_twcv_m2,Teusaquillo,2074,151623029.78098604
+m22_xgb_star_twcv_m2,Tunjuelito,119,137081431.43927303
+m22_xgb_star_twcv_m2,Usaquén,21461,124309356.39068405
+m22_xgb_star_twcv_m2_mae,Antonio Nariño,300,175116791.6332221
+m22_xgb_star_twcv_m2_mae,Barrios Unidos,1699,187051700.8787048
+m22_xgb_star_twcv_m2_mae,Bosa,28,69072190.12061198
+m22_xgb_star_twcv_m2_mae,Chapinero,307,154906794.59689838
+m22_xgb_star_twcv_m2_mae,Ciudad Bolivar,70,116418761.99430259
+m22_xgb_star_twcv_m2_mae,Engativá,1830,146882444.558831
+m22_xgb_star_twcv_m2_mae,Fontibón,1842,136927582.98063505
+m22_xgb_star_twcv_m2_mae,Kennedy,1517,125384938.96492791
+m22_xgb_star_twcv_m2_mae,La Candelaria,178,238624330.4240265
+m22_xgb_star_twcv_m2_mae,Los Mártires,264,200024960.33087793
+m22_xgb_star_twcv_m2_mae,Puente Aranda,666,171670614.18262234
+m22_xgb_star_twcv_m2_mae,Rafael Uribe Uribe,178,158678883.9059588
+m22_xgb_star_twcv_m2_mae,San Cristóbal,69,261912025.26785025
+m22_xgb_star_twcv_m2_mae,Santa Fé,933,145828396.591812
+m22_xgb_star_twcv_m2_mae,Suba,5109,131660862.90606208
+m22_xgb_star_twcv_m2_mae,Teusaquillo,2074,153860816.83076584
+m22_xgb_star_twcv_m2_mae,Tunjuelito,119,145420451.80961576
+m22_xgb_star_twcv_m2_mae,Usaquén,21461,126285096.70335779
+m23_en_enc,Antonio Nariño,300,158627503.26591718
+m23_en_enc,Barrios Unidos,1699,181707284.8801734
+m23_en_enc,Bosa,28,69868055.64616163
+m23_en_enc,Chapinero,307,157287984.38725403
+m23_en_enc,Ciudad Bolivar,70,115930261.67232116
+m23_en_enc,Engativá,1830,136202723.1436811
+m23_en_enc,Fontibón,1842,131212737.81960666
+m23_en_enc,Kennedy,1517,120357360.75387195
+m23_en_enc,La Candelaria,178,209982502.04097852
+m23_en_enc,Los Mártires,264,179267849.7920076
+m23_en_enc,Puente Aranda,666,149902454.05081183
+m23_en_enc,Rafael Uribe Uribe,178,131665620.6704245
+m23_en_enc,San Cristóbal,69,202817296.8429821
+m23_en_enc,Santa Fé,933,139440576.50650513
+m23_en_enc,Suba,5109,125245722.78568375
+m23_en_enc,Teusaquillo,2074,145538519.77590019
+m23_en_enc,Tunjuelito,119,116767277.9644518
+m23_en_enc,Usaquén,21461,132469848.1075622
+m23_en_enc_b,Antonio Nariño,300,160152617.97490466
+m23_en_enc_b,Barrios Unidos,1699,181697137.7282459
+m23_en_enc_b,Bosa,28,69526425.18091492
+m23_en_enc_b,Chapinero,307,160596208.68205488
+m23_en_enc_b,Ciudad Bolivar,70,116594155.16190952
+m23_en_enc_b,Engativá,1830,141077184.49632555
+m23_en_enc_b,Fontibón,1842,134154303.67808506
+m23_en_enc_b,Kennedy,1517,124315040.31908575
+m23_en_enc_b,La Candelaria,178,218270671.0117994
+m23_en_enc_b,Los Mártires,264,184713235.72124732
+m23_en_enc_b,Puente Aranda,666,150658972.15356657
+m23_en_enc_b,Rafael Uribe Uribe,178,135628216.7520429
+m23_en_enc_b,San Cristóbal,69,212790706.97077662
+m23_en_enc_b,Santa Fé,933,139990999.18506202
+m23_en_enc_b,Suba,5109,126050777.56158511
+m23_en_enc_b,Teusaquillo,2074,145115661.94203603
+m23_en_enc_b,Tunjuelito,119,117280529.42379853
+m23_en_enc_b,Usaquén,21461,136126185.87705848
+m23_en_enc_b_m2,Antonio Nariño,300,170263039.7895943
+m23_en_enc_b_m2,Barrios Unidos,1699,195485248.59931335
+m23_en_enc_b_m2,Bosa,28,75864077.00462194
+m23_en_enc_b_m2,Chapinero,307,150829499.94523633
+m23_en_enc_b_m2,Ciudad Bolivar,70,117182613.84900546
+m23_en_enc_b_m2,Engativá,1830,151080264.34172684
+m23_en_enc_b_m2,Fontibón,1842,139209841.98000237
+m23_en_enc_b_m2,Kennedy,1517,128422401.13299665
+m23_en_enc_b_m2,La Candelaria,178,241924103.47113156
+m23_en_enc_b_m2,Los Mártires,264,204981935.4243293
+m23_en_enc_b_m2,Puente Aranda,666,169857417.6848763
+m23_en_enc_b_m2,Rafael Uribe Uribe,178,162052683.47479072
+m23_en_enc_b_m2,San Cristóbal,69,248123320.883839
+m23_en_enc_b_m2,Santa Fé,933,144294346.74840912
+m23_en_enc_b_m2,Suba,5109,127091771.04877281
+m23_en_enc_b_m2,Teusaquillo,2074,152776384.47640577
+m23_en_enc_b_m2,Tunjuelito,119,140605917.16080981
+m23_en_enc_b_m2,Usaquén,21461,127222549.29382621
+m23_en_enc_m2,Antonio Nariño,300,170428025.84372467
+m23_en_enc_m2,Barrios Unidos,1699,187625739.02111635
+m23_en_enc_m2,Bosa,28,79344641.97951931
+m23_en_enc_m2,Chapinero,307,159248867.32078943
+m23_en_enc_m2,Ciudad Bolivar,70,117852980.15227337
+m23_en_enc_m2,Engativá,1830,152477324.1053078
+m23_en_enc_m2,Fontibón,1842,137384857.91983756
+m23_en_enc_m2,Kennedy,1517,130406517.37780872
+m23_en_enc_m2,La Candelaria,178,231049676.04782245
+m23_en_enc_m2,Los Mártires,264,204361917.67643222
+m23_en_enc_m2,Puente Aranda,666,169160023.72685376
+m23_en_enc_m2,Rafael Uribe Uribe,178,164691229.0484321
+m23_en_enc_m2,San Cristóbal,69,242895372.89684838
+m23_en_enc_m2,Santa Fé,933,144481562.36542064
+m23_en_enc_m2,Suba,5109,126625303.19892706
+m23_en_enc_m2,Teusaquillo,2074,152925471.20187664
+m23_en_enc_m2,Tunjuelito,119,146839809.9531154
+m23_en_enc_m2,Usaquén,21461,129776693.44787131
+m23_en_enc_tx,Antonio Nariño,300,150308620.7894251
+m23_en_enc_tx,Barrios Unidos,1699,175904554.50884244
+m23_en_enc_tx,Bosa,28,80104300.3578486
+m23_en_enc_tx,Chapinero,307,144087150.29544756
+m23_en_enc_tx,Ciudad Bolivar,70,111119268.71872422
+m23_en_enc_tx,Engativá,1830,128636633.64997716
+m23_en_enc_tx,Fontibón,1842,125429613.98283912
+m23_en_enc_tx,Kennedy,1517,119186523.11131313
+m23_en_enc_tx,La Candelaria,178,225673142.2432996
+m23_en_enc_tx,Los Mártires,264,188626774.46200576
+m23_en_enc_tx,Puente Aranda,666,149840408.61557215
+m23_en_enc_tx,Rafael Uribe Uribe,178,144989698.3202616
+m23_en_enc_tx,San Cristóbal,69,185332336.79907563
+m23_en_enc_tx,Santa Fé,933,140264077.81559217
+m23_en_enc_tx,Suba,5109,123933295.00111967
+m23_en_enc_tx,Teusaquillo,2074,149226079.1698628
+m23_en_enc_tx,Tunjuelito,119,116448609.53087284
+m23_en_enc_tx,Usaquén,21461,132889324.78171325
+m23_en_enc_tx_m2,Antonio Nariño,300,178541511.64998755
+m23_en_enc_tx_m2,Barrios Unidos,1699,193830316.74793842
+m23_en_enc_tx_m2,Bosa,28,78830195.22420418
+m23_en_enc_tx_m2,Chapinero,307,146835368.04516178
+m23_en_enc_tx_m2,Ciudad Bolivar,70,112969276.13096893
+m23_en_enc_tx_m2,Engativá,1830,144377956.73947534
+m23_en_enc_tx_m2,Fontibón,1842,138612488.3315645
+m23_en_enc_tx_m2,Kennedy,1517,128836410.75376758
+m23_en_enc_tx_m2,La Candelaria,178,255275814.6699053
+m23_en_enc_tx_m2,Los Mártires,264,210322006.24477673
+m23_en_enc_tx_m2,Puente Aranda,666,173200466.61910042
+m23_en_enc_tx_m2,Rafael Uribe Uribe,178,172519615.20625016
+m23_en_enc_tx_m2,San Cristóbal,69,253806196.35574228
+m23_en_enc_tx_m2,Santa Fé,933,147891954.1109293
+m23_en_enc_tx_m2,Suba,5109,124658914.00076461
+m23_en_enc_tx_m2,Teusaquillo,2074,154849678.84806553
+m23_en_enc_tx_m2,Tunjuelito,119,144206648.6206791
+m23_en_enc_tx_m2,Usaquén,21461,125508535.66466327
+m24_nn_star_catastro_m2,Antonio Nariño,300,176159037.6392886
+m24_nn_star_catastro_m2,Barrios Unidos,1699,183261912.52368662
+m24_nn_star_catastro_m2,Bosa,28,66094194.81429124
+m24_nn_star_catastro_m2,Chapinero,307,139187522.2496812
+m24_nn_star_catastro_m2,Ciudad Bolivar,70,111280049.42360678
+m24_nn_star_catastro_m2,Engativá,1830,138083935.7484006
+m24_nn_star_catastro_m2,Fontibón,1842,129714037.95083347
+m24_nn_star_catastro_m2,Kennedy,1517,122194695.80116889
+m24_nn_star_catastro_m2,La Candelaria,178,263774856.02416462
+m24_nn_star_catastro_m2,Los Mártires,264,198792061.40061703
+m24_nn_star_catastro_m2,Puente Aranda,666,172835302.10448357
+m24_nn_star_catastro_m2,Rafael Uribe Uribe,178,138795011.85515037
+m24_nn_star_catastro_m2,San Cristóbal,69,246138274.22632715
+m24_nn_star_catastro_m2,Santa Fé,933,140694856.41462222
+m24_nn_star_catastro_m2,Suba,5109,124733026.48770821
+m24_nn_star_catastro_m2,Teusaquillo,2074,151222553.66412506
+m24_nn_star_catastro_m2,Tunjuelito,119,145925381.2039856
+m24_nn_star_catastro_m2,Usaquén,21461,123599655.10858269
+m25_nn_star_catastro_afinada_m2,Antonio Nariño,300,174551052.75207883
+m25_nn_star_catastro_afinada_m2,Barrios Unidos,1699,180559629.2114332
+m25_nn_star_catastro_afinada_m2,Bosa,28,64868432.08962762
+m25_nn_star_catastro_afinada_m2,Chapinero,307,137212185.45250893
+m25_nn_star_catastro_afinada_m2,Ciudad Bolivar,70,117948613.95393544
+m25_nn_star_catastro_afinada_m2,Engativá,1830,141363840.9305587
+m25_nn_star_catastro_afinada_m2,Fontibón,1842,133481330.85453315
+m25_nn_star_catastro_afinada_m2,Kennedy,1517,126698606.86529076
+m25_nn_star_catastro_afinada_m2,La Candelaria,178,260211010.98851132
+m25_nn_star_catastro_afinada_m2,Los Mártires,264,194207429.0069717
+m25_nn_star_catastro_afinada_m2,Puente Aranda,666,174645811.5628156
+m25_nn_star_catastro_afinada_m2,Rafael Uribe Uribe,178,150123682.03750163
+m25_nn_star_catastro_afinada_m2,San Cristóbal,69,250392100.58836707
+m25_nn_star_catastro_afinada_m2,Santa Fé,933,140240152.82595956
+m25_nn_star_catastro_afinada_m2,Suba,5109,124050637.44052298
+m25_nn_star_catastro_afinada_m2,Teusaquillo,2074,153196519.52221745
+m25_nn_star_catastro_afinada_m2,Tunjuelito,119,145370066.9651486
+m25_nn_star_catastro_afinada_m2,Usaquén,21461,121403570.15334097
+m26_nn_general_catastro_m2,Antonio Nariño,300,167363253.16097775
+m26_nn_general_catastro_m2,Barrios Unidos,1699,173413705.85266307
+m26_nn_general_catastro_m2,Bosa,28,79193523.27598707
+m26_nn_general_catastro_m2,Chapinero,307,145800363.07702062
+m26_nn_general_catastro_m2,Ciudad Bolivar,70,117012058.62056667
+m26_nn_general_catastro_m2,Engativá,1830,143025219.32371616
+m26_nn_general_catastro_m2,Fontibón,1842,127853140.61101235
+m26_nn_general_catastro_m2,Kennedy,1517,121913909.61154789
+m26_nn_general_catastro_m2,La Candelaria,178,251852698.9859691
+m26_nn_general_catastro_m2,Los Mártires,264,186659495.44085592
+m26_nn_general_catastro_m2,Puente Aranda,666,164523982.92371127
+m26_nn_general_catastro_m2,Rafael Uribe Uribe,178,167526527.3212938
+m26_nn_general_catastro_m2,San Cristóbal,69,281475434.9029782
+m26_nn_general_catastro_m2,Santa Fé,933,144165658.78860682
+m26_nn_general_catastro_m2,Suba,5109,127470975.32954265
+m26_nn_general_catastro_m2,Teusaquillo,2074,156737687.88501757
+m26_nn_general_catastro_m2,Tunjuelito,119,153070651.16855234
+m26_nn_general_catastro_m2,Usaquén,21461,120547651.1993625
+m27_xgb_star_catastro_m2,Antonio Nariño,300,173752884.66766477
+m27_xgb_star_catastro_m2,Barrios Unidos,1699,179674628.79402533
+m27_xgb_star_catastro_m2,Bosa,28,67836508.63190204
+m27_xgb_star_catastro_m2,Chapinero,307,152068050.61221352
+m27_xgb_star_catastro_m2,Ciudad Bolivar,70,114641976.94103982
+m27_xgb_star_catastro_m2,Engativá,1830,149223610.96474004
+m27_xgb_star_catastro_m2,Fontibón,1842,130316678.72236787
+m27_xgb_star_catastro_m2,Kennedy,1517,125725221.30427131
+m27_xgb_star_catastro_m2,La Candelaria,178,249491848.85542005
+m27_xgb_star_catastro_m2,Los Mártires,264,194443169.06584188
+m27_xgb_star_catastro_m2,Puente Aranda,666,175335845.32632646
+m27_xgb_star_catastro_m2,Rafael Uribe Uribe,178,156099859.31019673
+m27_xgb_star_catastro_m2,San Cristóbal,69,250324823.34329572
+m27_xgb_star_catastro_m2,Santa Fé,933,140307837.96256253
+m27_xgb_star_catastro_m2,Suba,5109,123534547.04803547
+m27_xgb_star_catastro_m2,Teusaquillo,2074,148827513.47770542
+m27_xgb_star_catastro_m2,Tunjuelito,119,144088182.51186007
+m27_xgb_star_catastro_m2,Usaquén,21461,124687929.84317736
+m27_xgb_star_catastro_m2_mae,Antonio Nariño,300,177863046.4245088
+m27_xgb_star_catastro_m2_mae,Barrios Unidos,1699,180652880.51766238
+m27_xgb_star_catastro_m2_mae,Bosa,28,63081175.030232
+m27_xgb_star_catastro_m2_mae,Chapinero,307,142781903.40119177
+m27_xgb_star_catastro_m2_mae,Ciudad Bolivar,70,115964668.79990242
+m27_xgb_star_catastro_m2_mae,Engativá,1830,152157250.46577367
+m27_xgb_star_catastro_m2_mae,Fontibón,1842,131205557.22742535
+m27_xgb_star_catastro_m2_mae,Kennedy,1517,129605428.58049
+m27_xgb_star_catastro_m2_mae,La Candelaria,178,245896497.67046133
+m27_xgb_star_catastro_m2_mae,Los Mártires,264,199821164.3166736
+m27_xgb_star_catastro_m2_mae,Puente Aranda,666,175659731.2659238
+m27_xgb_star_catastro_m2_mae,Rafael Uribe Uribe,178,161188230.0385408
+m27_xgb_star_catastro_m2_mae,San Cristóbal,69,263594079.02649984
+m27_xgb_star_catastro_m2_mae,Santa Fé,933,141269444.57272625
+m27_xgb_star_catastro_m2_mae,Suba,5109,125845438.14069383
+m27_xgb_star_catastro_m2_mae,Teusaquillo,2074,145961656.58514303
+m27_xgb_star_catastro_m2_mae,Tunjuelito,119,141172245.63280666
+m27_xgb_star_catastro_m2_mae,Usaquén,21461,126173319.99697302
+m28_nn_star_peso_twcv_m2,Antonio Nariño,300,174536757.48761937
+m28_nn_star_peso_twcv_m2,Barrios Unidos,1699,183897439.35322133
+m28_nn_star_peso_twcv_m2,Bosa,28,69799971.35872495
+m28_nn_star_peso_twcv_m2,Chapinero,307,138286583.30808935
+m28_nn_star_peso_twcv_m2,Ciudad Bolivar,70,113811197.09874046
+m28_nn_star_peso_twcv_m2,Engativá,1830,141425395.1514014
+m28_nn_star_peso_twcv_m2,Fontibón,1842,134822292.13918248
+m28_nn_star_peso_twcv_m2,Kennedy,1517,129877094.5815396
+m28_nn_star_peso_twcv_m2,La Candelaria,178,256728844.56780416
+m28_nn_star_peso_twcv_m2,Los Mártires,264,199715795.3334912
+m28_nn_star_peso_twcv_m2,Puente Aranda,666,178735615.79608032
+m28_nn_star_peso_twcv_m2,Rafael Uribe Uribe,178,160932808.82065788
+m28_nn_star_peso_twcv_m2,San Cristóbal,69,252947472.64531302
+m28_nn_star_peso_twcv_m2,Santa Fé,933,139771805.58802
+m28_nn_star_peso_twcv_m2,Suba,5109,125689378.11768374
+m28_nn_star_peso_twcv_m2,Teusaquillo,2074,154580792.05431587
+m28_nn_star_peso_twcv_m2,Tunjuelito,119,149010478.66663352
+m28_nn_star_peso_twcv_m2,Usaquén,21461,123171635.20217374
+m29_nn_general_peso_twcv_m2,Antonio Nariño,300,172195263.7751008
+m29_nn_general_peso_twcv_m2,Barrios Unidos,1699,175853285.41151991
+m29_nn_general_peso_twcv_m2,Bosa,28,78940314.83617754
+m29_nn_general_peso_twcv_m2,Chapinero,307,147634164.96762207
+m29_nn_general_peso_twcv_m2,Ciudad Bolivar,70,118008505.77886808
+m29_nn_general_peso_twcv_m2,Engativá,1830,145748955.72305754
+m29_nn_general_peso_twcv_m2,Fontibón,1842,131742221.11507143
+m29_nn_general_peso_twcv_m2,Kennedy,1517,129094382.20266072
+m29_nn_general_peso_twcv_m2,La Candelaria,178,262008478.44877583
+m29_nn_general_peso_twcv_m2,Los Mártires,264,191550055.62301406
+m29_nn_general_peso_twcv_m2,Puente Aranda,666,172030614.79092324
+m29_nn_general_peso_twcv_m2,Rafael Uribe Uribe,178,179990449.61071828
+m29_nn_general_peso_twcv_m2,San Cristóbal,69,277299352.6561406
+m29_nn_general_peso_twcv_m2,Santa Fé,933,150384169.1715821
+m29_nn_general_peso_twcv_m2,Suba,5109,128230597.67264676
+m29_nn_general_peso_twcv_m2,Teusaquillo,2074,157811185.38977593
+m29_nn_general_peso_twcv_m2,Tunjuelito,119,164504417.94027528
+m29_nn_general_peso_twcv_m2,Usaquén,21461,128216334.74749573
+m30_nn_star_pu03_m2,Antonio Nariño,300,172889119.84960598
+m30_nn_star_pu03_m2,Barrios Unidos,1699,182012456.13445815
+m30_nn_star_pu03_m2,Bosa,28,65292629.0261145
+m30_nn_star_pu03_m2,Chapinero,307,141512655.01425296
+m30_nn_star_pu03_m2,Ciudad Bolivar,70,111457825.52820833
+m30_nn_star_pu03_m2,Engativá,1830,137284922.98340118
+m30_nn_star_pu03_m2,Fontibón,1842,131223503.63324073
+m30_nn_star_pu03_m2,Kennedy,1517,124474708.54071668
+m30_nn_star_pu03_m2,La Candelaria,178,267243016.66285422
+m30_nn_star_pu03_m2,Los Mártires,264,197198866.5995426
+m30_nn_star_pu03_m2,Puente Aranda,666,171046107.31959075
+m30_nn_star_pu03_m2,Rafael Uribe Uribe,178,141929055.86493954
+m30_nn_star_pu03_m2,San Cristóbal,69,243490952.68055522
+m30_nn_star_pu03_m2,Santa Fé,933,141311510.2757875
+m30_nn_star_pu03_m2,Suba,5109,125320774.59821482
+m30_nn_star_pu03_m2,Teusaquillo,2074,150627226.58484095
+m30_nn_star_pu03_m2,Tunjuelito,119,147107437.50773984
+m30_nn_star_pu03_m2,Usaquén,21461,123370172.63511528
+m31_nn_star_pt025_m2,Antonio Nariño,300,176651616.99242696
+m31_nn_star_pt025_m2,Barrios Unidos,1699,183090947.65801346
+m31_nn_star_pt025_m2,Bosa,28,65623221.45483453
+m31_nn_star_pt025_m2,Chapinero,307,138463997.4208592
+m31_nn_star_pt025_m2,Ciudad Bolivar,70,111122064.99089414
+m31_nn_star_pt025_m2,Engativá,1830,138190006.37168264
+m31_nn_star_pt025_m2,Fontibón,1842,130628735.53049979
+m31_nn_star_pt025_m2,Kennedy,1517,124984836.5239699
+m31_nn_star_pt025_m2,La Candelaria,178,263655968.105029
+m31_nn_star_pt025_m2,Los Mártires,264,196726037.1832523
+m31_nn_star_pt025_m2,Puente Aranda,666,173173455.68020403
+m31_nn_star_pt025_m2,Rafael Uribe Uribe,178,140447592.0192192
+m31_nn_star_pt025_m2,San Cristóbal,69,239834390.2254495
+m31_nn_star_pt025_m2,Santa Fé,933,140444825.5871866
+m31_nn_star_pt025_m2,Suba,5109,125306136.44981007
+m31_nn_star_pt025_m2,Teusaquillo,2074,151845648.70292962
+m31_nn_star_pt025_m2,Tunjuelito,119,146575913.10693723
+m31_nn_star_pt025_m2,Usaquén,21461,125275762.4499354
+m32_nn_star_comparables_m2,Antonio Nariño,300,147580806.17548728
+m32_nn_star_comparables_m2,Barrios Unidos,1699,172987620.32174468
+m32_nn_star_comparables_m2,Bosa,28,80221177.33430831
+m32_nn_star_comparables_m2,Chapinero,307,142577748.64166844
+m32_nn_star_comparables_m2,Ciudad Bolivar,70,113754733.52682894
+m32_nn_star_comparables_m2,Engativá,1830,131256285.00976613
+m32_nn_star_comparables_m2,Fontibón,1842,117167395.79601325
+m32_nn_star_comparables_m2,Kennedy,1517,117019208.91199866
+m32_nn_star_comparables_m2,La Candelaria,178,242138878.04495937
+m32_nn_star_comparables_m2,Los Mártires,264,166925193.36337855
+m32_nn_star_comparables_m2,Puente Aranda,666,166222554.97589603
+m32_nn_star_comparables_m2,Rafael Uribe Uribe,178,137216855.65085346
+m32_nn_star_comparables_m2,San Cristóbal,69,214348454.29859924
+m32_nn_star_comparables_m2,Santa Fé,933,130232781.5441973
+m32_nn_star_comparables_m2,Suba,5109,114874210.80641587
+m32_nn_star_comparables_m2,Teusaquillo,2074,141111222.96089846
+m32_nn_star_comparables_m2,Tunjuelito,119,133909543.00372972
+m32_nn_star_comparables_m2,Usaquén,21461,112526305.79658404
+m33_nn_star_tanh_ubi_m2,Antonio Nariño,300,177194843.32771754
+m33_nn_star_tanh_ubi_m2,Barrios Unidos,1699,184752571.10120323
+m33_nn_star_tanh_ubi_m2,Bosa,28,67940818.26202083
+m33_nn_star_tanh_ubi_m2,Chapinero,307,142929491.26225388
+m33_nn_star_tanh_ubi_m2,Ciudad Bolivar,70,112266700.94992551
+m33_nn_star_tanh_ubi_m2,Engativá,1830,139007699.201124
+m33_nn_star_tanh_ubi_m2,Fontibón,1842,133573237.8214922
+m33_nn_star_tanh_ubi_m2,Kennedy,1517,127476679.16576302
+m33_nn_star_tanh_ubi_m2,La Candelaria,178,267494132.8625142
+m33_nn_star_tanh_ubi_m2,Los Mártires,264,200904788.94288027
+m33_nn_star_tanh_ubi_m2,Puente Aranda,666,174141515.77801538
+m33_nn_star_tanh_ubi_m2,Rafael Uribe Uribe,178,144787515.70073664
+m33_nn_star_tanh_ubi_m2,San Cristóbal,69,255015400.05131322
+m33_nn_star_tanh_ubi_m2,Santa Fé,933,143749338.7548979
+m33_nn_star_tanh_ubi_m2,Suba,5109,127492013.49169268
+m33_nn_star_tanh_ubi_m2,Teusaquillo,2074,152919877.08273995
+m33_nn_star_tanh_ubi_m2,Tunjuelito,119,148601636.21525264
+m33_nn_star_tanh_ubi_m2,Usaquén,21461,123884529.66518913
+m34_nn_star_construccion_m2,Antonio Nariño,300,174454992.9749485
+m34_nn_star_construccion_m2,Barrios Unidos,1699,181927332.2029826
+m34_nn_star_construccion_m2,Bosa,28,64928894.15120852
+m34_nn_star_construccion_m2,Chapinero,307,143361587.24624792
+m34_nn_star_construccion_m2,Ciudad Bolivar,70,114909534.35907418
+m34_nn_star_construccion_m2,Engativá,1830,138785624.15702677
+m34_nn_star_construccion_m2,Fontibón,1842,130850529.11006588
+m34_nn_star_construccion_m2,Kennedy,1517,121347962.6088703
+m34_nn_star_construccion_m2,La Candelaria,178,261903104.51516303
+m34_nn_star_construccion_m2,Los Mártires,264,197732447.59484056
+m34_nn_star_construccion_m2,Puente Aranda,666,173188477.5023272
+m34_nn_star_construccion_m2,Rafael Uribe Uribe,178,136998682.45773154
+m34_nn_star_construccion_m2,San Cristóbal,69,244968778.05167687
+m34_nn_star_construccion_m2,Santa Fé,933,144290194.1057521
+m34_nn_star_construccion_m2,Suba,5109,124966702.41619647
+m34_nn_star_construccion_m2,Teusaquillo,2074,149706133.30176017
+m34_nn_star_construccion_m2,Tunjuelito,119,145758011.14559263
+m34_nn_star_construccion_m2,Usaquén,21461,122543700.80752236
+m35_nn_star_embeddings_m2,Antonio Nariño,300,171386777.021117
+m35_nn_star_embeddings_m2,Barrios Unidos,1699,181381106.50134155
+m35_nn_star_embeddings_m2,Bosa,28,67588083.3948926
+m35_nn_star_embeddings_m2,Chapinero,307,135323583.6916685
+m35_nn_star_embeddings_m2,Ciudad Bolivar,70,107164006.9587758
+m35_nn_star_embeddings_m2,Engativá,1830,136146186.5236341
+m35_nn_star_embeddings_m2,Fontibón,1842,133914153.05065879
+m35_nn_star_embeddings_m2,Kennedy,1517,125119921.73672943
+m35_nn_star_embeddings_m2,La Candelaria,178,263224146.1615855
+m35_nn_star_embeddings_m2,Los Mártires,264,194647762.33661082
+m35_nn_star_embeddings_m2,Puente Aranda,666,170782818.86132333
+m35_nn_star_embeddings_m2,Rafael Uribe Uribe,178,160246969.04091373
+m35_nn_star_embeddings_m2,San Cristóbal,69,244073824.3179133
+m35_nn_star_embeddings_m2,Santa Fé,933,142172345.23146695
+m35_nn_star_embeddings_m2,Suba,5109,130045086.969437
+m35_nn_star_embeddings_m2,Teusaquillo,2074,150538188.63161895
+m35_nn_star_embeddings_m2,Tunjuelito,119,153567788.0348019
+m35_nn_star_embeddings_m2,Usaquén,21461,125637865.4698133
+m36_nn_star_vecinos_m2,Antonio Nariño,300,151884723.53772798
+m36_nn_star_vecinos_m2,Barrios Unidos,1699,176192929.49862492
+m36_nn_star_vecinos_m2,Bosa,28,70657587.6732413
+m36_nn_star_vecinos_m2,Chapinero,307,142428524.93956
+m36_nn_star_vecinos_m2,Ciudad Bolivar,70,134280835.9025036
+m36_nn_star_vecinos_m2,Engativá,1830,133584605.26205038
+m36_nn_star_vecinos_m2,Fontibón,1842,119661509.18131733
+m36_nn_star_vecinos_m2,Kennedy,1517,120384623.93930227
+m36_nn_star_vecinos_m2,La Candelaria,178,247974246.1118891
+m36_nn_star_vecinos_m2,Los Mártires,264,177947580.75176075
+m36_nn_star_vecinos_m2,Puente Aranda,666,166570829.55369577
+m36_nn_star_vecinos_m2,Rafael Uribe Uribe,178,140310078.0650537
+m36_nn_star_vecinos_m2,San Cristóbal,69,248734005.34887356
+m36_nn_star_vecinos_m2,Santa Fé,933,132713250.52599604
+m36_nn_star_vecinos_m2,Suba,5109,116867594.50619523
+m36_nn_star_vecinos_m2,Teusaquillo,2074,142562174.17163455
+m36_nn_star_vecinos_m2,Tunjuelito,119,135290291.04896313
+m36_nn_star_vecinos_m2,Usaquén,21461,113147068.00660206
+m37_star_nn_xgb_m2,Antonio Nariño,300,173248900.32183206
+m37_star_nn_xgb_m2,Barrios Unidos,1699,180635146.71100372
+m37_star_nn_xgb_m2,Bosa,28,63689191.08118096
+m37_star_nn_xgb_m2,Chapinero,307,139221532.92338073
+m37_star_nn_xgb_m2,Ciudad Bolivar,70,112030897.87454265
+m37_star_nn_xgb_m2,Engativá,1830,143097419.10205054
+m37_star_nn_xgb_m2,Fontibón,1842,129392810.72753322
+m37_star_nn_xgb_m2,Kennedy,1517,123736754.5916506
+m37_star_nn_xgb_m2,La Candelaria,178,252871752.4253513
+m37_star_nn_xgb_m2,Los Mártires,264,197246492.54623574
+m37_star_nn_xgb_m2,Puente Aranda,666,172268043.4397121
+m37_star_nn_xgb_m2,Rafael Uribe Uribe,178,145393001.8349954
+m37_star_nn_xgb_m2,San Cristóbal,69,254198361.8328456
+m37_star_nn_xgb_m2,Santa Fé,933,139731882.80233
+m37_star_nn_xgb_m2,Suba,5109,123159867.61987017
+m37_star_nn_xgb_m2,Teusaquillo,2074,146823966.43639535
+m37_star_nn_xgb_m2,Tunjuelito,119,141661721.00491378
+m37_star_nn_xgb_m2,Usaquén,21461,122363125.36419734
+m38_xgb_star_comparables_m2_mae,Antonio Nariño,300,152612042.27420422
+m38_xgb_star_comparables_m2_mae,Barrios Unidos,1699,176287944.7111832
+m38_xgb_star_comparables_m2_mae,Bosa,28,83380754.10432708
+m38_xgb_star_comparables_m2_mae,Chapinero,307,150066598.8304647
+m38_xgb_star_comparables_m2_mae,Ciudad Bolivar,70,117805364.05161674
+m38_xgb_star_comparables_m2_mae,Engativá,1830,132995627.23054083
+m38_xgb_star_comparables_m2_mae,Fontibón,1842,120283602.33393171
+m38_xgb_star_comparables_m2_mae,Kennedy,1517,116089912.71926732
+m38_xgb_star_comparables_m2_mae,La Candelaria,178,245009916.42097285
+m38_xgb_star_comparables_m2_mae,Los Mártires,264,167858285.3169379
+m38_xgb_star_comparables_m2_mae,Puente Aranda,666,169592916.32100415
+m38_xgb_star_comparables_m2_mae,Rafael Uribe Uribe,178,138908076.72311652
+m38_xgb_star_comparables_m2_mae,San Cristóbal,69,224050821.6423678
+m38_xgb_star_comparables_m2_mae,Santa Fé,933,130237853.41888787
+m38_xgb_star_comparables_m2_mae,Suba,5109,117515830.23236609
+m38_xgb_star_comparables_m2_mae,Teusaquillo,2074,143625743.41226268
+m38_xgb_star_comparables_m2_mae,Tunjuelito,119,132321691.27919696
+m38_xgb_star_comparables_m2_mae,Usaquén,21461,113646897.48828283
+m39_star_nn_xgbcomp_m2,Antonio Nariño,300,163591343.3322201
+m39_star_nn_xgbcomp_m2,Barrios Unidos,1699,176661992.8585807
+m39_star_nn_xgbcomp_m2,Bosa,28,70710841.58483243
+m39_star_nn_xgbcomp_m2,Chapinero,307,139422769.60699677
+m39_star_nn_xgbcomp_m2,Ciudad Bolivar,70,110825816.87566344
+m39_star_nn_xgbcomp_m2,Engativá,1830,133594881.19749625
+m39_star_nn_xgbcomp_m2,Fontibón,1842,122658086.35425562
+m39_star_nn_xgbcomp_m2,Kennedy,1517,117909984.34082206
+m39_star_nn_xgbcomp_m2,La Candelaria,178,250495212.7463853
+m39_star_nn_xgbcomp_m2,Los Mártires,264,183272173.97846866
+m39_star_nn_xgbcomp_m2,Puente Aranda,666,167918633.08463332
+m39_star_nn_xgbcomp_m2,Rafael Uribe Uribe,178,135440127.39157218
+m39_star_nn_xgbcomp_m2,San Cristóbal,69,234370222.49608168
+m39_star_nn_xgbcomp_m2,Santa Fé,933,133286858.81598347
+m39_star_nn_xgbcomp_m2,Suba,5109,118892436.40628366
+m39_star_nn_xgbcomp_m2,Teusaquillo,2074,145308198.2352048
+m39_star_nn_xgbcomp_m2,Tunjuelito,119,138646260.3126149
+m39_star_nn_xgbcomp_m2,Usaquén,21461,116022754.63125761
+m40_star_2nn_xgbcomp_m2,Antonio Nariño,300,154371140.9245991
+m40_star_2nn_xgbcomp_m2,Barrios Unidos,1699,172523099.0303925
+m40_star_2nn_xgbcomp_m2,Bosa,28,75730230.15970248
+m40_star_2nn_xgbcomp_m2,Chapinero,307,140196394.48647353
+m40_star_2nn_xgbcomp_m2,Ciudad Bolivar,70,107935413.34784573
+m40_star_2nn_xgbcomp_m2,Engativá,1830,131382724.26856378
+m40_star_2nn_xgbcomp_m2,Fontibón,1842,117581156.28831388
+m40_star_2nn_xgbcomp_m2,Kennedy,1517,115945321.23630655
+m40_star_2nn_xgbcomp_m2,La Candelaria,178,242776413.69168678
+m40_star_2nn_xgbcomp_m2,Los Mártires,264,171796405.23856598
+m40_star_2nn_xgbcomp_m2,Puente Aranda,666,165918668.25370517
+m40_star_2nn_xgbcomp_m2,Rafael Uribe Uribe,178,135216862.37741938
+m40_star_2nn_xgbcomp_m2,San Cristóbal,69,223425085.46199766
+m40_star_2nn_xgbcomp_m2,Santa Fé,933,129297006.20712961
+m40_star_2nn_xgbcomp_m2,Suba,5109,114929831.46200266
+m40_star_2nn_xgbcomp_m2,Teusaquillo,2074,141582980.45444337
+m40_star_2nn_xgbcomp_m2,Tunjuelito,119,134963302.1720828
+m40_star_2nn_xgbcomp_m2,Usaquén,21461,111049923.46786694
+m41_xgb_star_comparables_distinto_m2,Antonio Nariño,300,150586179.60859907
+m41_xgb_star_comparables_distinto_m2,Barrios Unidos,1699,172412814.73796442
+m41_xgb_star_comparables_distinto_m2,Bosa,28,79084054.62966827
+m41_xgb_star_comparables_distinto_m2,Chapinero,307,142758104.24025327
+m41_xgb_star_comparables_distinto_m2,Ciudad Bolivar,70,114734232.71526837
+m41_xgb_star_comparables_distinto_m2,Engativá,1830,132248179.58036384
+m41_xgb_star_comparables_distinto_m2,Fontibón,1842,118739100.90516587
+m41_xgb_star_comparables_distinto_m2,Kennedy,1517,117152889.88374314
+m41_xgb_star_comparables_distinto_m2,La Candelaria,178,238555035.6302447
+m41_xgb_star_comparables_distinto_m2,Los Mártires,264,167722504.40532982
+m41_xgb_star_comparables_distinto_m2,Puente Aranda,666,160148774.52857703
+m41_xgb_star_comparables_distinto_m2,Rafael Uribe Uribe,178,143931405.1304842
+m41_xgb_star_comparables_distinto_m2,San Cristóbal,69,221471530.9344191
+m41_xgb_star_comparables_distinto_m2,Santa Fé,933,131879638.45719157
+m41_xgb_star_comparables_distinto_m2,Suba,5109,115537661.07032938
+m41_xgb_star_comparables_distinto_m2,Teusaquillo,2074,143217511.91941544
+m41_xgb_star_comparables_distinto_m2,Tunjuelito,119,133879343.22620855
+m41_xgb_star_comparables_distinto_m2,Usaquén,21461,110505189.4517214
+m42_nn_star_area_m2,Antonio Nariño,300,157811997.13145116
+m42_nn_star_area_m2,Barrios Unidos,1699,175049336.66540635
+m42_nn_star_area_m2,Bosa,28,66113574.90688228
+m42_nn_star_area_m2,Chapinero,307,144609874.89966923
+m42_nn_star_area_m2,Ciudad Bolivar,70,112923815.01322535
+m42_nn_star_area_m2,Engativá,1830,128830111.29230683
+m42_nn_star_area_m2,Fontibón,1842,123315039.63666998
+m42_nn_star_area_m2,Kennedy,1517,112220822.86936674
+m42_nn_star_area_m2,La Candelaria,178,251998340.17883822
+m42_nn_star_area_m2,Los Mártires,264,178825379.23021135
+m42_nn_star_area_m2,Puente Aranda,666,152771863.34498623
+m42_nn_star_area_m2,Rafael Uribe Uribe,178,122678315.73463318
+m42_nn_star_area_m2,San Cristóbal,69,214092110.61250395
+m42_nn_star_area_m2,Santa Fé,933,134352503.8406687
+m42_nn_star_area_m2,Suba,5109,121799346.96787211
+m42_nn_star_area_m2,Teusaquillo,2074,144562352.50881577
+m42_nn_star_area_m2,Tunjuelito,119,123072417.12663348
+m42_nn_star_area_m2,Usaquén,21461,125841868.19307731
+m43_xgb_star_comparables_area_m2_mae,Antonio Nariño,300,143063467.16196555
+m43_xgb_star_comparables_area_m2_mae,Barrios Unidos,1699,170164401.4740657
+m43_xgb_star_comparables_area_m2_mae,Bosa,28,78162064.55557455
+m43_xgb_star_comparables_area_m2_mae,Chapinero,307,142152394.08883137
+m43_xgb_star_comparables_area_m2_mae,Ciudad Bolivar,70,112005361.48261632
+m43_xgb_star_comparables_area_m2_mae,Engativá,1830,124494012.46151745
+m43_xgb_star_comparables_area_m2_mae,Fontibón,1842,110594954.14251296
+m43_xgb_star_comparables_area_m2_mae,Kennedy,1517,108823257.16750446
+m43_xgb_star_comparables_area_m2_mae,La Candelaria,178,230752143.76603574
+m43_xgb_star_comparables_area_m2_mae,Los Mártires,264,156797335.7937541
+m43_xgb_star_comparables_area_m2_mae,Puente Aranda,666,153768124.05432162
+m43_xgb_star_comparables_area_m2_mae,Rafael Uribe Uribe,178,133252628.77307358
+m43_xgb_star_comparables_area_m2_mae,San Cristóbal,69,207022124.60801938
+m43_xgb_star_comparables_area_m2_mae,Santa Fé,933,123186794.10612832
+m43_xgb_star_comparables_area_m2_mae,Suba,5109,111731702.40164544
+m43_xgb_star_comparables_area_m2_mae,Teusaquillo,2074,135593024.38675642
+m43_xgb_star_comparables_area_m2_mae,Tunjuelito,119,118209832.01041524
+m43_xgb_star_comparables_area_m2_mae,Usaquén,21461,110040153.11981736
+m44_star_nn_xgbcomp_area_m2,Antonio Nariño,300,152897630.0088309
+m44_star_nn_xgbcomp_area_m2,Barrios Unidos,1699,172506214.79634306
+m44_star_nn_xgbcomp_area_m2,Bosa,28,70257897.0578368
+m44_star_nn_xgbcomp_area_m2,Chapinero,307,136361720.80720127
+m44_star_nn_xgbcomp_area_m2,Ciudad Bolivar,70,106557404.91819602
+m44_star_nn_xgbcomp_area_m2,Engativá,1830,128544756.44634318
+m44_star_nn_xgbcomp_area_m2,Fontibón,1842,116826908.34654082
+m44_star_nn_xgbcomp_area_m2,Kennedy,1517,112306612.22725596
+m44_star_nn_xgbcomp_area_m2,La Candelaria,178,241680908.79755288
+m44_star_nn_xgbcomp_area_m2,Los Mártires,264,173942938.2948111
+m44_star_nn_xgbcomp_area_m2,Puente Aranda,666,158819557.0335749
+m44_star_nn_xgbcomp_area_m2,Rafael Uribe Uribe,178,132990688.97408842
+m44_star_nn_xgbcomp_area_m2,San Cristóbal,69,225041736.38901943
+m44_star_nn_xgbcomp_area_m2,Santa Fé,933,129191732.5204626
+m44_star_nn_xgbcomp_area_m2,Suba,5109,114505811.28919512
+m44_star_nn_xgbcomp_area_m2,Teusaquillo,2074,140733956.60693157
+m44_star_nn_xgbcomp_area_m2,Tunjuelito,119,127635479.14405344
+m44_star_nn_xgbcomp_area_m2,Usaquén,21461,112452233.47721273
+m46_star_nn_xgbcomp_area_7030_m2,Antonio Nariño,300,157838684.43876177
+m46_star_nn_xgbcomp_area_7030_m2,Barrios Unidos,1699,174446055.3409545
+m46_star_nn_xgbcomp_area_7030_m2,Bosa,28,69075323.37905736
+m46_star_nn_xgbcomp_area_7030_m2,Chapinero,307,136672907.04207522
+m46_star_nn_xgbcomp_area_7030_m2,Ciudad Bolivar,70,108045452.12821898
+m46_star_nn_xgbcomp_area_7030_m2,Engativá,1830,130440018.11986363
+m46_star_nn_xgbcomp_area_7030_m2,Fontibón,1842,119557104.92793266
+m46_star_nn_xgbcomp_area_7030_m2,Kennedy,1517,114297559.58375674
+m46_star_nn_xgbcomp_area_7030_m2,La Candelaria,178,246511827.12297052
+m46_star_nn_xgbcomp_area_7030_m2,Los Mártires,264,179589614.10905555
+m46_star_nn_xgbcomp_area_7030_m2,Puente Aranda,666,161833673.93987465
+m46_star_nn_xgbcomp_area_7030_m2,Rafael Uribe Uribe,178,133478991.5871491
+m46_star_nn_xgbcomp_area_7030_m2,San Cristóbal,69,229327273.0412181
+m46_star_nn_xgbcomp_area_7030_m2,Santa Fé,933,131597219.44523151
+m46_star_nn_xgbcomp_area_7030_m2,Suba,5109,116508764.00138828
+m46_star_nn_xgbcomp_area_7030_m2,Teusaquillo,2074,142874749.4494753
+m46_star_nn_xgbcomp_area_7030_m2,Tunjuelito,119,131930408.5749149
+m46_star_nn_xgbcomp_area_7030_m2,Usaquén,21461,114569749.10326207
+m47_xgb_star_comparables_area_sq_m2,Antonio Nariño,300,142269355.38084126
+m47_xgb_star_comparables_area_sq_m2,Barrios Unidos,1699,164039246.233004
+m47_xgb_star_comparables_area_sq_m2,Bosa,28,78537890.80069174
+m47_xgb_star_comparables_area_sq_m2,Chapinero,307,137887802.51328287
+m47_xgb_star_comparables_area_sq_m2,Ciudad Bolivar,70,110154473.24559134
+m47_xgb_star_comparables_area_sq_m2,Engativá,1830,122713250.04234457
+m47_xgb_star_comparables_area_sq_m2,Fontibón,1842,107208473.73858295
+m47_xgb_star_comparables_area_sq_m2,Kennedy,1517,108640147.39485635
+m47_xgb_star_comparables_area_sq_m2,La Candelaria,178,220765483.78460532
+m47_xgb_star_comparables_area_sq_m2,Los Mártires,264,154075258.16704777
+m47_xgb_star_comparables_area_sq_m2,Puente Aranda,666,145996863.75239173
+m47_xgb_star_comparables_area_sq_m2,Rafael Uribe Uribe,178,130877932.82854824
+m47_xgb_star_comparables_area_sq_m2,San Cristóbal,69,205932658.99577507
+m47_xgb_star_comparables_area_sq_m2,Santa Fé,933,120814387.05412807
+m47_xgb_star_comparables_area_sq_m2,Suba,5109,109791215.34353165
+m47_xgb_star_comparables_area_sq_m2,Teusaquillo,2074,134280216.0990072
+m47_xgb_star_comparables_area_sq_m2,Tunjuelito,119,110857531.46887401
+m47_xgb_star_comparables_area_sq_m2,Usaquén,21461,107008831.85303207
+m48_star_nn_xgbsq_area_m2,Antonio Nariño,300,152021185.41121542
+m48_star_nn_xgbsq_area_m2,Barrios Unidos,1699,169649973.56318223
+m48_star_nn_xgbsq_area_m2,Bosa,28,69334622.20331137
+m48_star_nn_xgbsq_area_m2,Chapinero,307,133153117.98166643
+m48_star_nn_xgbsq_area_m2,Ciudad Bolivar,70,103413778.2692427
+m48_star_nn_xgbsq_area_m2,Engativá,1830,126539646.52966928
+m48_star_nn_xgbsq_area_m2,Fontibón,1842,114973128.26595987
+m48_star_nn_xgbsq_area_m2,Kennedy,1517,111980917.37330958
+m48_star_nn_xgbsq_area_m2,La Candelaria,178,237238169.21459872
+m48_star_nn_xgbsq_area_m2,Los Mártires,264,172383296.73197904
+m48_star_nn_xgbsq_area_m2,Puente Aranda,666,155223556.98066545
+m48_star_nn_xgbsq_area_m2,Rafael Uribe Uribe,178,131892689.58601919
+m48_star_nn_xgbsq_area_m2,San Cristóbal,69,224693062.9011224
+m48_star_nn_xgbsq_area_m2,Santa Fé,933,129081946.49898434
+m48_star_nn_xgbsq_area_m2,Suba,5109,113141311.68970396
+m48_star_nn_xgbsq_area_m2,Teusaquillo,2074,139575507.63173068
+m48_star_nn_xgbsq_area_m2,Tunjuelito,119,125692784.85027154
+m48_star_nn_xgbsq_area_m2,Usaquén,21461,111059719.21104676
+m49_nn_general_m24_m2,Antonio Nariño,300,159814362.15515086
+m49_nn_general_m24_m2,Barrios Unidos,1699,175845257.97096023
+m49_nn_general_m24_m2,Bosa,28,78894872.39210404
+m49_nn_general_m24_m2,Chapinero,307,147652925.72047552
+m49_nn_general_m24_m2,Ciudad Bolivar,70,114069571.85670736
+m49_nn_general_m24_m2,Engativá,1830,147442567.07766515
+m49_nn_general_m24_m2,Fontibón,1842,130308693.95867904
+m49_nn_general_m24_m2,Kennedy,1517,124265444.80109884
+m49_nn_general_m24_m2,La Candelaria,178,249331105.68139356
+m49_nn_general_m24_m2,Los Mártires,264,185546408.68671647
+m49_nn_general_m24_m2,Puente Aranda,666,161102415.29140013
+m49_nn_general_m24_m2,Rafael Uribe Uribe,178,162258239.3747362
+m49_nn_general_m24_m2,San Cristóbal,69,270179235.40070707
+m49_nn_general_m24_m2,Santa Fé,933,153577831.10336137
+m49_nn_general_m24_m2,Suba,5109,134376263.90164322
+m49_nn_general_m24_m2,Teusaquillo,2074,161061471.32844543
+m49_nn_general_m24_m2,Tunjuelito,119,169828752.20190164
+m49_nn_general_m24_m2,Usaquén,21461,131690600.29985976
+m50_xgb_general_comparables_area_sq_m2,Antonio Nariño,300,138623919.05465412
+m50_xgb_general_comparables_area_sq_m2,Barrios Unidos,1699,162157529.91954932
+m50_xgb_general_comparables_area_sq_m2,Bosa,28,79831184.43946125
+m50_xgb_general_comparables_area_sq_m2,Chapinero,307,131490777.8590158
+m50_xgb_general_comparables_area_sq_m2,Ciudad Bolivar,70,110223485.84383182
+m50_xgb_general_comparables_area_sq_m2,Engativá,1830,116209221.76007922
+m50_xgb_general_comparables_area_sq_m2,Fontibón,1842,106493507.7869742
+m50_xgb_general_comparables_area_sq_m2,Kennedy,1517,100808456.01374394
+m50_xgb_general_comparables_area_sq_m2,La Candelaria,178,212850634.70634705
+m50_xgb_general_comparables_area_sq_m2,Los Mártires,264,153053416.32510093
+m50_xgb_general_comparables_area_sq_m2,Puente Aranda,666,145098099.23754054
+m50_xgb_general_comparables_area_sq_m2,Rafael Uribe Uribe,178,123783842.36529079
+m50_xgb_general_comparables_area_sq_m2,San Cristóbal,69,183086184.14445603
+m50_xgb_general_comparables_area_sq_m2,Santa Fé,933,115926867.49269909
+m50_xgb_general_comparables_area_sq_m2,Suba,5109,106195679.08643298
+m50_xgb_general_comparables_area_sq_m2,Teusaquillo,2074,134797647.16210774
+m50_xgb_general_comparables_area_sq_m2,Tunjuelito,119,113125180.078315
+m50_xgb_general_comparables_area_sq_m2,Usaquén,21461,101490289.5754304
+m51_xgb_ponderado,Antonio Nariño,300,144256471.58044672
+m51_xgb_ponderado,Barrios Unidos,1699,176982548.69482285
+m51_xgb_ponderado,Bosa,28,89140841.89513087
+m51_xgb_ponderado,Chapinero,307,147624647.82476452
+m51_xgb_ponderado,Ciudad Bolivar,70,115742187.10058634
+m51_xgb_ponderado,Engativá,1830,133022574.45359367
+m51_xgb_ponderado,Fontibón,1842,122573969.61356214
+m51_xgb_ponderado,Kennedy,1517,118885670.38860632
+m51_xgb_ponderado,La Candelaria,178,227274702.47812656
+m51_xgb_ponderado,Los Mártires,264,170782173.39353764
+m51_xgb_ponderado,Puente Aranda,666,150320061.55587924
+m51_xgb_ponderado,Rafael Uribe Uribe,178,140090343.50643685
+m51_xgb_ponderado,San Cristóbal,69,227933757.40729266
+m51_xgb_ponderado,Santa Fé,933,144892897.62591165
+m51_xgb_ponderado,Suba,5109,136181353.89480188
+m51_xgb_ponderado,Teusaquillo,2074,161602325.7988866
+m51_xgb_ponderado,Tunjuelito,119,110686610.89392632
+m51_xgb_ponderado,Usaquén,21461,124000180.38809486
+m51b_xgb_tipo_dist,Antonio Nariño,300,147725902.1968861
+m51b_xgb_tipo_dist,Barrios Unidos,1699,179975775.4899244
+m51b_xgb_tipo_dist,Bosa,28,126977029.95949961
+m51b_xgb_tipo_dist,Chapinero,307,143281706.38851434
+m51b_xgb_tipo_dist,Ciudad Bolivar,70,121003302.77713308
+m51b_xgb_tipo_dist,Engativá,1830,140166308.73581436
+m51b_xgb_tipo_dist,Fontibón,1842,128886177.7717894
+m51b_xgb_tipo_dist,Kennedy,1517,125809569.70250085
+m51b_xgb_tipo_dist,La Candelaria,178,220426574.93623108
+m51b_xgb_tipo_dist,Los Mártires,264,170395854.3501746
+m51b_xgb_tipo_dist,Puente Aranda,666,151633252.71793196
+m51b_xgb_tipo_dist,Rafael Uribe Uribe,178,154502699.87787423
+m51b_xgb_tipo_dist,San Cristóbal,69,224243222.3247916
+m51b_xgb_tipo_dist,Santa Fé,933,146437440.927256
+m51b_xgb_tipo_dist,Suba,5109,134306881.9262354
+m51b_xgb_tipo_dist,Teusaquillo,2074,162585519.2204383
+m51b_xgb_tipo_dist,Tunjuelito,119,136379387.16718256
+m51b_xgb_tipo_dist,Usaquén,21461,126102501.8523136
+m90_ensamble,Antonio Nariño,300,137298143.9783257
+m90_ensamble,Barrios Unidos,1699,160596060.87290743
+m90_ensamble,Bosa,28,77721851.66505194
+m90_ensamble,Chapinero,307,131048962.93930072
+m90_ensamble,Ciudad Bolivar,70,106797815.42959042
+m90_ensamble,Engativá,1830,115131102.43578455
+m90_ensamble,Fontibón,1842,105026280.88869943
+m90_ensamble,Kennedy,1517,99300905.2822345
+m90_ensamble,La Candelaria,178,213946913.69447163
+m90_ensamble,Los Mártires,264,152150826.02195647
+m90_ensamble,Puente Aranda,666,142546429.73315206
+m90_ensamble,Rafael Uribe Uribe,178,123349290.38919234
+m90_ensamble,San Cristóbal,69,187285460.25232518
+m90_ensamble,Santa Fé,933,116867364.23634446
+m90_ensamble,Suba,5109,105048174.70405573
+m90_ensamble,Teusaquillo,2074,132547687.02115914
+m90_ensamble,Tunjuelito,119,112536722.57687657
+m90_ensamble,Usaquén,21461,100527478.58557369
+reg_ols_sin_loc,Antonio Nariño,300,148597671.96945748
+reg_ols_sin_loc,Barrios Unidos,1699,177337486.61957896
+reg_ols_sin_loc,Bosa,28,72125107.61861998
+reg_ols_sin_loc,Chapinero,307,196524064.3559349
+reg_ols_sin_loc,Ciudad Bolivar,70,113253839.38358782
+reg_ols_sin_loc,Engativá,1830,127588359.80845734
+reg_ols_sin_loc,Fontibón,1842,124486495.75830254
+reg_ols_sin_loc,Kennedy,1517,117634097.13749593
+reg_ols_sin_loc,La Candelaria,178,259389763.99695218
+reg_ols_sin_loc,Los Mártires,264,175522620.37398377
+reg_ols_sin_loc,Puente Aranda,666,151132460.71660632
+reg_ols_sin_loc,Rafael Uribe Uribe,178,165155649.66980612
+reg_ols_sin_loc,San Cristóbal,69,226840577.15267736
+reg_ols_sin_loc,Santa Fé,933,152189066.27629077
+reg_ols_sin_loc,Suba,5109,134510510.41758406
+reg_ols_sin_loc,Teusaquillo,2074,157151433.56338027
+reg_ols_sin_loc,Tunjuelito,119,114916908.6006338
+reg_ols_sin_loc,Usaquén,21461,126592630.08850211

@@ -135,7 +135,7 @@ g <- k %>% pivot_longer(c(mae_total, mae_chapinero, mae_twcv, mae_iwcv), names_t
        x = "MAE público en Kaggle (millones de COP)", y = "MAE estimado en la validación (millones)", caption = fuente)
 ggsave(file.path(P$fig_mod, "m6_validacion_sintetica.png"), g, width = 11, height = 4, dpi = 300)
 
-# ---- 8. Variantes de la pérdida ponderada en XGBoost (10_xgb_ponderado.R, D17) ----
+# ---- 8. Variantes de la pérdida ponderada en XGBoost (10_xgb_ponderado.R, D16b) ----
 # Todas comparten la misma base, así que la diferencia frente a `base` aísla el efecto de los pesos de entrenamiento.
 f_pond <- file.path(P$models, "ponderados_oof.rds")
 if (file.exists(f_pond)) {

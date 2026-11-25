@@ -4,9 +4,13 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-22)
+## Estado actual (2026-11-24)
+
+**Reproducción:** todo se corre con `code/00_main.R` (D27; instrucciones en el [README](README.md)). El código está en `code/` y las figuras y tablas en `output/`.
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
+
+**Mejor envío en Kaggle:** `m48_star_nn_xgbsq_area_m2`, con 153,3 (detalle en `models/kaggle_scores.csv`). La tabla de abajo no se ha actualizado con los modelos m24–m50 de la rama de redes.
 
 **Mejores modelos (MAE OOF, millones de COP):**
 
@@ -71,9 +75,45 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
+## 2026-11-24 · Sesión 11: organización del repositorio y script maestro (D27)
+
+- **Estructura de la guía del curso:**
+  - `scripts/` pasa a `code/`, y las figuras y tablas de `reports/*/` pasan a `output/figures|tables/{01_descriptivas,02_modelos}/`. Se usó `git mv`, así que la historia se conserva.
+  - Se crearon `Problem-Set-3-Making-Money-with-ML.Rproj` (ahora se versiona) y `code/exploratorio/`, donde quedó `check_validacion.R`.
+  - Cambios de nombre: `00_config.R` → `01_setup.R` y `01_osm_descarga.R` → `01b_osm_descarga.R`. Los demás conservan su número.
+- **`code/00_main.R`:**
+  - Corre los 51 pasos en orden, incluidas las variantes por variables de entorno (`CATASTRO`, `CRITERIO`, `GANADORA`, `VARIANTE`). Cada uno corre en un proceso nuevo de R o de Python y deja su log en `output/logs/`.
+  - Los interruptores son `DESCARGAS`, `PYTHON`, `REDES`, `LENTOS` y `PRUEBA`. En la terminal también funcionan `--todo`, `--solo=…` y las opciones con el mismo nombre de cada interruptor.
+  - Si a un paso apagado le falta un archivo que produce y que otro paso necesita, corre igual.
+  - Al final escribe `output/session_info.txt` y `output/python_<entorno>.txt`.
+- **`code/01_setup.R`:**
+  - Es el único lugar donde se cargan paquetes: un solo `p_load`, más `sf` y `keras3` como opcionales. Se quitaron los `p_load` de los 22 scripts que los tenían.
+  - Todas las rutas salen de `here::here()` (`P$fig_desc`, `P$tab_mod`, `P$external`…).
+  - Funciones de Python: `dir_venv()`, `python_de()` (Windows o macOS) y `asegura_venv()`, que crea los entornos `texto`, `emb` y `tf` con uv o con reticulate en `~/.virtualenvs/ps3-*`.
+  - `descarga_zip()` baja el catastro de 03f y 03h si falta.
+- **Python:**
+  - Los tres .py arman sus rutas desde `Path(__file__)`.
+  - Archivo nuevo: `requirements-emb.txt`, para el entorno de embeddings, que antes solo estaba documentado en un comentario.
+  - `utils_redes.R` usa `dir_venv("tf")`.
+- **Corrección:** `08e_nn_star_afinacion.R` tenía una comilla mal puesta en la descripción de `registra()` y no se podía ni leer (error de sintaxis en `main`). Se corrigió.
+- **Nombres:** los XGB ponderados m17 y m17b pasan a **m51_xgb_ponderado** y **m51b_xgb_tipo_dist**, porque chocaban con `m17_nn_star`. Se renombraron en el registro, en las predicciones, en los envíos y en los textos; no se reentrenó nada.
+- **Documentación:**
+  - README reescrito: cómo correr en RStudio y en la terminal, interruptores, R frente a Python, entornos, estructura y problemas conocidos.
+  - Rutas actualizadas en los informes, CLAUDE.md, `docs/` y los README de `data/` y `models/`. Todos los enlaces relativos de los `.md` resuelven.
+- **Verificación:**
+  - `00_main.R --solo=02c_composicion_test.R`, llamado desde fuera del proyecto, regenera tablas y figura idénticas.
+  - `--solo=03d_tfidf.py` crea el entorno `texto` desde R en Windows y corre el .py.
+  - Todos los `.R` y `.py` se leen sin errores de sintaxis.
+- **Pendiente:**
+  - Las decisiones D18–D26 se citan en el código, pero no están escritas en `docs/decisiones.md`.
+  - Correr la línea principal completa del main y comparar el registro con el commit anterior.
+  - Probar el main en macOS.
+
+---
+
 ## 2026-11-22 · Sesión 8c (rama main): TWCV de los XGBoost ponderados y composición del test
 
-- **TWCV e IWCV de las 10 variantes de `10_xgb_ponderado.R`**, todas sobre la misma base, de modo que la diferencia frente a `base` aísla el efecto de los pesos. Tabla: `reports/02_modelos/tables/ponderados_twcv.csv`.
+- **TWCV e IWCV de las 10 variantes de `10_xgb_ponderado.R`**, todas sobre la misma base, de modo que la diferencia frente a `base` aísla el efecto de los pesos. Tabla: `output/tables/02_modelos/ponderados_twcv.csv`.
 
   | Variante | Chapinero | TWCV | Dif. TWCV | IWCV | Dif. IWCV |
   |---|---:|---:|---:|---:|---:|
@@ -143,7 +183,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - 63% de estrato 6 (23%);
   - 97% de apartamentos (76%).
 - **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.
-- Figura para la presentación: `reports/02_modelos/figures/m6_validacion_sintetica.png`.
+- Figura para la presentación: `output/figures/02_modelos/m6_validacion_sintetica.png`.
 
 ---
 
@@ -180,7 +220,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - Frente a SHAP, el STAR no explica un modelo después de entrenarlo: lo restringe para que su explicación sea exacta y única.
   - **El ascensor no interactúa con nada** (`tx_ascensor` es aditivo en el STAR y lineal en el EN). Solo se combina con otras palabras dentro del texto: "ascensor privado" queda en el puesto 27 de 1.000 y "sin ascensor" en el 49.
 - **Grilla del XGB STAR (08) ampliada.** La anterior quedó en el borde en todos los parámetros. Ahora son tres búsquedas de 20 configuraciones: m² cuadrática, m² absoluta (eta hasta 0,3 y hasta 5.000 rondas) y precio. Detalles en D13. Se registra el mejor de cada búsqueda (nuevo: `m13_xgb_star_m2_mae`), los encoders salen del mejor m² y luego se vuelve a correr 08b.
-- **Redes con Keras desde R (D17):** `scripts/utils_redes.R` y TensorFlow en `.venv-tf`.
+- **Redes con Keras desde R (D17):** `code/utils_redes.R` y TensorFlow en `.venv-tf`.
   - **NN STAR (`08c_nn_star.R`, m17):** estructura lineal más ramas de ubicación y de texto 64-32-16 ReLU, cada una con atajo lineal y dropout propio. Tiene 72.757 parámetros. Diagrama: https://claude.ai/artifact/2QqQEJDpwcaxDdsKrqRYhk
   - **Red general (`08d_nn_general.R`, m18):** 64-32-16 con todo mezclado y 71.489 parámetros, para comparar con el mismo tamaño.
   - **Afinación:** solo el dropout.
@@ -251,13 +291,13 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ## 2026-11-19 · Sesión 6: librerías con pacman
 
-- Todas las librerías se cargan ahora con `pacman::p_load()` al inicio de cada script, justo después de los `source()` (ya no hay `library()`). `00_config.R` instala pacman si falta. Se mantuvo el orden de carga, así que los conflictos de nombres se resuelven igual. La convención quedó en `CLAUDE.md`.
+- Todas las librerías se cargan ahora con `pacman::p_load()` al inicio de cada script, justo después de los `source()` (ya no hay `library()`). `01_setup.R` instala pacman si falta. Se mantuvo el orden de carga, así que los conflictos de nombres se resuelven igual. La convención quedó en `CLAUDE.md`.
 - La columna de texto original (`title`, `description`) está en `data/raw/*.csv` y en `base_enriquecida.csv`, pero no en `base_modelo.rds`. Para TF-IDF hay que unirla por `property_id`.
 - Verificación: todos los scripts se leen sin errores de sintaxis y `check_validacion.R` pasa. No cambió ningún modelo.
 - Limpieza del código (auditoría de sobreingeniería):
   - Nueva función `arma_objetivos()` en `utils_modelos.R`: arma los objetivos log(precio) y log(precio por m²). Reemplaza cuatro versiones repetidas en 04, 04b, 05b y 07; en 07, m05 la usa con `quita_area = FALSE` para conservar `log_area` entre las variables.
   - `topes` en 02b con un solo `summarise`.
-  - Las carpetas de `00_config.R` se crean en una sola línea.
+  - Las carpetas de `01_setup.R` se crean en una sola línea.
   - Se borró el alias sin uso `broom_like` (02).
   - Pendientes de esa auditoría (no aplicados): borrar los `.rds`/`.ubj` de modelos que nadie lee, mover los parámetros de XGBoost y `RONDAS` (repetidos en 06 y 07) a utils, y quitar argumentos que nunca se cambian.
 - **Texto en Python con ConTexto (D11):** nuevos `03c_texto.py` (preprocesamiento, n-gramas y nubes) y `03d_tfidf.py` (TF-IDF). Entorno: `.venv` con Python 3.11 creado con uv; se instala `contexto --no-deps` porque sus dependencias fijadas de 2021 no compilan en arm64. ConTexto necesita el parche `collections.Iterable`.
@@ -268,7 +308,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
     - `remover_stopwords(lista_expresiones=)` borra subcadenas, no palabras completas. Por eso los lugares se quitan con código propio.
     - `Corrector` con `dict` arma listas del tamaño de cada frecuencia y tardaba unos 15 min. Con una lista tarda 4 s.
     - `lematizar_texto` carga el modelo en cada llamada, así que el lematizador se crea una sola vez.
-  - Problema encontrado en OSM: Overpass responde 406 al user agent por defecto de httr. Se agregó uno genérico en `01_osm_descarga.R`, que ahora también descarga los nombres de barrios (`barrios_nombres.csv`, 1.159 nombres; no cambia `servicios_puntos.csv`).
+  - Problema encontrado en OSM: Overpass responde 406 al user agent por defecto de httr. Se agregó uno genérico en `01b_osm_descarga.R`, que ahora también descarga los nombres de barrios (`barrios_nombres.csv`, 1.159 nombres; no cambia `servicios_puntos.csv`).
   - Resultado:
     - Se quitan los nombres de lugares: 3,9% del texto (`bogota`, `chico`, `santa barbara`, `cedritos`, `usaquen`, `chapinero`…).
     - Se corrigen 3.155 errores de tipeo raros (0,13%).
@@ -368,14 +408,14 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - Envío generado: `submissions/reg_ols_sin_loc.csv`. Se agregó una verificación del formato de Kaggle en `registra()`.
 
 **Otros**
-- Auditoría de complejidad: `PATRONES` y `num_txt()` en `00_config.R`, sin la `hav()` duplicada, sin `sup_total_ok`, y `matriz_arboles` simplificada. Se verificó que `base_modelo.rds` queda idéntica.
+- Auditoría de complejidad: `PATRONES` y `num_txt()` en `01_setup.R`, sin la `hav()` duplicada, sin `sup_total_ok`, y `matriz_arboles` simplificada. Se verificó que `base_modelo.rds` queda idéntica.
 - Nueva guía de variables (`docs/guia_variables.md`). El informe de modelos se reescribió para esta ronda.
 
 ---
 
 ## 2026-11-16 · Sesión 3: valores extremos y rangos de validez
 
-- Nuevo script `scripts/02b_extremos.R` y nueva sección 7 del informe de descriptivas, con la figura f10 y 3 tablas. Las secciones 7–10 del informe pasan a ser 8–11.
+- Nuevo script `code/02b_extremos.R` y nueva sección 7 del informe de descriptivas, con la figura f10 y 3 tablas. Las secciones 7–10 del informe pasan a ser 8–11.
 - **Rangos de validez:** en casi todas las variables cortan pocos errores evidentes. La excepción es el área del texto (2.391 valores por encima de 1.000).
 - **Hallazgo:** el texto perdió los puntos decimales ("4.0 habitaciones 96.0 m2" aparece como "40 habitaciones 960 m2"). En 121 de 396 títulos con ese formato, N = 10 × `bedrooms`. La regla de coherencia de D3 ya descarta en la modelación la mayoría de las áreas infladas: el p99 del precio por m² con área del texto baja de 37,7 a 10,8 M/m².
 - **Precio:** no tiene outliers propios. 509 en 300 M y 106 en 1.650 M. El valor de 300 M es menos frecuente que otras cifras redondas, lo que apunta a *heaping* y no a censura. En Chapinero, el 3,3% está en 1.600 M o más (0,9% en el resto). Hay *bunching* justo por debajo de 1.000 M.
@@ -406,7 +446,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - Informe: `reports/01_descriptivas/informe_descriptivas.md` (9 figuras, 5 tablas).
 
 **Estructura del repo**
-- Se creó la estructura `data/ scripts/ models/ submissions/ reports/ docs/`, junto con `README.md`, `BITACORA.md`, `CLAUDE.md` y `docs/decisiones.md` (D1–D5).
+- Se creó la estructura `data/ code/ models/ submissions/ reports/ docs/`, junto con `README.md`, `BITACORA.md`, `CLAUDE.md` y `docs/decisiones.md` (D1–D5).
 
 **Modelación (ronda 1)**
 - Variables: imputación del área con RF (R² OOB 0,83) y regla de coherencia para el área del texto; estrato imputado espacialmente (R² OOB 0,79).

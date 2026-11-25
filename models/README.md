@@ -1,6 +1,6 @@
 # Modelos
 
-Los archivos los escribe automáticamente `registra()` (en `scripts/utils_modelos.R`).
+Los archivos los escribe automáticamente `registra()` (en `code/utils_modelos.R`).
 
 | Archivo | Contenido |
 |---|---|

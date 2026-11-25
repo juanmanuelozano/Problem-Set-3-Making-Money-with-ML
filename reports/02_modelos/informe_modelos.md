@@ -1,7 +1,7 @@
 # Informe 2 — Modelación: segunda ronda (validación por localidad con buffer)
 
 **Problem Set 3: Predicting Prices · Big Data y Machine Learning · Uniandes 2026-2**
-Código: [`scripts/03_features.R`](../../scripts/03_features.R) · [`03b_buffer.R`](../../scripts/03b_buffer.R) → [`04`](../../scripts/04_regresiones.R) · [`04b`](../../scripts/04b_elastic_net.R) · [`05`](../../scripts/05_random_forest.R) · [`06`](../../scripts/06_xgboost.R) · [`07`](../../scripts/07_hibridos.R) → [`90_comparacion.R`](../../scripts/90_comparacion.R)
+Código: [`code/03_features.R`](../../code/03_features.R) · [`03b_buffer.R`](../../code/03b_buffer.R) → [`04`](../../code/04_regresiones.R) · [`04b`](../../code/04b_elastic_net.R) · [`05`](../../code/05_random_forest.R) · [`06`](../../code/06_xgboost.R) · [`07`](../../code/07_hibridos.R) → [`90_comparacion.R`](../../code/90_comparacion.R)
 Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_modelos.csv) · Última actualización: 2026-11-18
 
 ---
@@ -16,9 +16,9 @@ Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_mod
 
 ## 1. Diseño de la validación
 
-![Fold de Chapinero](figures/m0_fold_chapinero.png)
+![Fold de Chapinero](../../output/figures/02_modelos/m0_fold_chapinero.png)
 
-- **Folds:** cada localidad del train es un fold de evaluación. Del entrenamiento se excluyen los anuncios a menos de 500 m de algún anuncio evaluado. Equivale a `spatialsample::spatial_leave_location_out_cv()` con `buffer`, implementado con una haversine propia en [`utils_modelos.R`](../../scripts/utils_modelos.R). [`check_validacion.R`](../../scripts/check_validacion.R) verifica la partición, el buffer y `cv_oof()`.
+- **Folds:** cada localidad del train es un fold de evaluación. Del entrenamiento se excluyen los anuncios a menos de 500 m de algún anuncio evaluado. Equivale a `spatialsample::spatial_leave_location_out_cv()` con `buffer`, implementado con una haversine propia en [`utils_modelos.R`](../../code/utils_modelos.R). [`check_validacion.R`](../../code/exploratorio/check_validacion.R) verifica la partición, el buffer y `cv_oof()`.
 - **Hiperparámetros:** `cv.glmnet(foldid=)` y `xgb.cv()` no admiten buffer. λ y el número de rondas se eligen por MAE OOF mínimo sobre una grilla, con `cv_oof()`, `xgb_rondas()` y `mejor_columna()`.
 - **Métricas** (MAE en pesos, sobre predicciones *out-of-fold* recortadas a [300, 1.650] millones):
   - `mae_total`: todo el train.
@@ -28,7 +28,7 @@ Registro de métricas: [`models/registro_modelos.csv`](../../models/registro_mod
 
 ### 1.1 Elección del buffer
 
-![Diagnóstico del buffer](figures/m0_buffer_diagnostico.png)
+![Diagnóstico del buffer](../../output/figures/02_modelos/m0_buffer_diagnostico.png)
 
 | Criterio | Resultado | Implicación |
 |---|---|---|
@@ -40,7 +40,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 
 ## 2. Resultados
 
-![Comparación de MAE](figures/m1_comparacion_mae.png)
+![Comparación de MAE](../../output/figures/02_modelos/m1_comparacion_mae.png)
 
 | Modelo | Descripción | MAE total (M) | MAE Chapinero (M) | MAPE Chapinero | MAE promedio por localidad (M) |
 |---|---|---:|---:|---:|---:|
@@ -80,7 +80,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 
 ### 2.2 Elastic net (04b_elastic_net.R: m02 y m02b)
 - Pérdida cuadrática (glmnet, `family = "gaussian"`), con las mismas variables que `reg_ols_sin_loc` (incluye habitaciones × distancia a cada CBD). Se ajusta para el precio (m02) y para el precio por m² sin variables de área (m02b; precio = predicción × m²).
-- **Grilla** (126 configuraciones, tabla en [`tables/elastic_net_grilla.csv`](tables/elastic_net_grilla.csv)):
+- **Grilla** (126 configuraciones, tabla en [`elastic_net_grilla.csv`](../../output/tables/02_modelos/elastic_net_grilla.csv)):
   - α ∈ {0; 0,1; 0,25; 0,5; 0,75; 0,9; 1}: grilla de la mezcla L1/L2 cruzada con todo el camino de la penalización, como en Zou y Hastie (2005, *JRSS-B*).
   - Camino de λ: `nlambda` ∈ {50, 100, 200} y `lambda.min.ratio` ∈ {10⁻³, 10⁻⁴, 10⁻⁵}. Friedman, Hastie y Tibshirani (2010, *JSS*) recomiendan 100 valores en escala log hasta 0,001·λ_max; 10⁻⁴ es el valor por defecto de glmnet con n > p y 10⁻⁵ extiende el camino porque la primera ronda eligió el borde.
   - Cada camino se valida entero con `cv_oof()` y λ se elige por MAE OOF mínimo.
@@ -94,7 +94,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
   - (a) PCA de las 37 variables que no son de texto, más las no linealidades de m02;
   - (b) solo el PCA del texto (50 componentes del TF-IDF);
   - (c) las dos anteriores juntas.
-- **Diseño:** el mismo de m02, con los dos objetivos. La grilla es α ∈ {0; 0,1; 0,25; 0,5; 0,75; 0,9; 1} × `lambda.min.ratio` ∈ {10⁻⁴, 10⁻⁵, 10⁻⁶}, con `nlambda` = 100 (en m02 `nlambda` no movía el MAE y λ quedó en el borde inferior). Tablas en [`tables/elastic_net_pca_resumen.csv`](tables/elastic_net_pca_resumen.csv) y `_grilla`, `_coeficientes`.
+- **Diseño:** el mismo de m02, con los dos objetivos. La grilla es α ∈ {0; 0,1; 0,25; 0,5; 0,75; 0,9; 1} × `lambda.min.ratio` ∈ {10⁻⁴, 10⁻⁵, 10⁻⁶}, con `nlambda` = 100 (en m02 `nlambda` no movía el MAE y λ quedó en el borde inferior). Tablas en [`elastic_net_pca_resumen.csv`](../../output/tables/02_modelos/elastic_net_pca_resumen.csv) y `_grilla`, `_coeficientes`.
 
 | Modelo | Objetivo | MAE total | Chapinero | Promedio por localidad |
 |---|---|---:|---:|---:|
@@ -119,13 +119,13 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 - **Penalización:** en el precio gana el lasso con λ ≈ 10⁻⁴, que equivale casi al OLS. En el m² gana α = 0,1–0,25. Las componentes de no texto contienen el área, así que en el objetivo m² el área no queda del todo fuera.
 
 ### 2.2c Modelo STAR y encoders (08_xgb_star.R: m13; 08b_en_star.R: m14; D13)
-- **Paso 1, STAR (Mayer et al., 2022):** XGBoost con restricciones de interacción. La estructura es aditiva, y la ubicación (con el estrato) y el texto TF-IDF son grupos. Búsqueda aleatoria de 12 configuraciones, como en el paper (profundidad, L1, L2 y submuestreo, con eta = 0,1). Tabla en [`tables/star_resumen.csv`](tables/star_resumen.csv).
+- **Paso 1, STAR (Mayer et al., 2022):** XGBoost con restricciones de interacción. La estructura es aditiva, y la ubicación (con el estrato) y el texto TF-IDF son grupos. Búsqueda aleatoria de 12 configuraciones, como en el paper (profundidad, L1, L2 y submuestreo, con eta = 0,1). Tabla en [`star_resumen.csv`](../../output/tables/02_modelos/star_resumen.csv).
   - m13_xgb_star_m2: 133,0 / 155,3 / 154,8.
   - m13_xgb_star (precio): 130,3 / 170,4 / 143,2.
   - Queda entre XGBoost sin restricciones (m04) y el EN por m².
-  - Las curvas ICE del área son exactamente paralelas ([`figures/m7_star_ice_area.png`](figures/m7_star_ice_area.png)), y ningún árbol mezcla grupos.
-- **Mapa de la prima de ubicación** ([`figures/m6_star_mapa_ubicacion.png`](figures/m6_star_mapa_ubicacion.png)): el máximo está en el nororiente (Chapinero y Usaquén, cerca de +30%) y el mínimo en el suroccidente (cerca de −35%).
-- **Encoder de texto supervisado:** recupera señales de lujo que el PCA perdía. `duplex` ocupa el puesto 21 de 1.000 y `penthouse` el 59; en el PCA conservaban el 18% y el 5% de su varianza. Detalle en [`tables/star_texto_terminos.csv`](tables/star_texto_terminos.csv).
+  - Las curvas ICE del área son exactamente paralelas ([`m7_star_ice_area.png`](../../output/figures/02_modelos/m7_star_ice_area.png)), y ningún árbol mezcla grupos.
+- **Mapa de la prima de ubicación** ([`m6_star_mapa_ubicacion.png`](../../output/figures/02_modelos/m6_star_mapa_ubicacion.png)): el máximo está en el nororiente (Chapinero y Usaquén, cerca de +30%) y el mínimo en el suroccidente (cerca de −35%).
+- **Encoder de texto supervisado:** recupera señales de lujo que el PCA perdía. `duplex` ocupa el puesto 21 de 1.000 y `penthouse` el 59; en el PCA conservaban el 18% y el 5% de su varianza. Detalle en [`star_texto_terminos.csv`](../../output/tables/02_modelos/star_texto_terminos.csv).
 - **Paso 2, elastic net con encoders frente a elastic net con PCA** (misma grilla y mismos folds):
 
 | Modelo | Objetivo | Total | Chapinero | Promedio por localidad | Sesgo Chapinero | Predicción media test |
@@ -161,7 +161,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
   - Frente al XGB STAR, el NN STAR gana −8,4 M en Chapinero (*t* = −2,3). El atajo lineal extrapola hacia el nororiente, donde los árboles se aplanan.
   - m17 es el mejor envío: 158,3, frente a 172,7 del mejor anterior.
 - **Qué ordena los scores de Kaggle:** con 9 envíos, la predicción media del test es lo que mejor los ordena (Spearman −0,87), por encima del MAE total (0,63) y del de Chapinero (0,53).
-- **Datos nuevos (D14, D15) en la red** (configuración de m17; [`tables/nn_ablacion_datos.csv`](tables/nn_ablacion_datos.csv)):
+- **Datos nuevos (D14, D15) en la red** (configuración de m17; [`nn_ablacion_datos.csv`](../../output/tables/02_modelos/nn_ablacion_datos.csv)):
   - la base nueva completa da 137,0 / 166,5, con una predicción del test de 797;
   - sin la zona de lujo, 133,6 / 148,8 (815);
   - sin la zona de lujo ni el contexto de OSM, 131,9 / 148,3 (825);
@@ -169,7 +169,7 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
   - la base vieja con el código actual reproduce m17 exactamente (control).
   
   La zona de lujo (embajadas, oficinas, hoteles y clubes) explica casi todo el deterioro. Se aprende fuera de Chapinero y no se transfiere. Las redes la excluyen.
-- **Afinación por etapas (08e)**, sobre la base nueva sin la zona de lujo y con objetivo m² ([`tables/nn_star_afinacion.csv`](tables/nn_star_afinacion.csv)):
+- **Afinación por etapas (08e)**, sobre la base nueva sin la zona de lujo y con objetivo m² ([`nn_star_afinacion.csv`](../../output/tables/02_modelos/nn_star_afinacion.csv)):
 
 | Etapa | Configuración | Épocas | Total | Chapinero | Sesgo | Test | Frente a m17: Chapinero (*t*) | Frente a m17: total (*t*) |
 |---|---|---:|---:|---:|---:|---:|---|---|
@@ -190,13 +190,13 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 - **m05**, XGBoost sobre `log(precio) − log(área)`, tiene el mejor MAE promedio por localidad (146,8 M).
 - Importancia en m04 (ganancia): log(área) 47%, baños 12%, estrato 11%, distancia a la Calle 72 5%.
 
-![Importancia XGBoost](figures/m4_importancia_xgb.png)
+![Importancia XGBoost](../../output/figures/02_modelos/m4_importancia_xgb.png)
 
 ### 2.3a XGBoost con pérdida ponderada (10_xgb_ponderado.R: m51, m51b; D16b)
 *Registrados primero como m17 y m17b; se renombraron a m51 y m51b para no chocar con `m17_nn_star` (sección 2.2e).*
 - **Idea:** corregir el cambio de covariables entre train y test ponderando cada fila por su parecido con el test (Shimodaira, 2000). El test es 97% apartamentos y está en Chapinero; el train tiene 24,5% de casas, casi todas lejos.
 - **Pesos comparados** (solo covariables, media 1): por tipo (proporción casa/apartamento del test), por distancia al test más cercano (`exp(−d/h)`, h = 2 o 5 km, piso de 0,05), sus combinaciones, y la razón de densidades de un clasificador train vs. test con exponente γ ∈ {0,5; 1}. Además, un modelo solo de apartamentos.
-- Mismos hiperparámetros que m04 (profundidad 4, mcw 3, eta 0,03), sobre la base actual. Rondas elegidas por MAE en la zona objetivo (Chapinero + 1 km). Tablas: [`tables/ponderados_resultados.csv`](tables/ponderados_resultados.csv) y [`tables/ponderados_pesos.csv`](tables/ponderados_pesos.csv).
+- Mismos hiperparámetros que m04 (profundidad 4, mcw 3, eta 0,03), sobre la base actual. Rondas elegidas por MAE en la zona objetivo (Chapinero + 1 km). Tablas: [`ponderados_resultados.csv`](../../output/tables/02_modelos/ponderados_resultados.csv) y [`ponderados_pesos.csv`](../../output/tables/02_modelos/ponderados_pesos.csv).
 
 | Variante | Muestra efectiva | Total | Chapinero | Dif. pareada Chapinero (*t*) | Sesgo Chapinero | TWCV |
 |---|---:|---:|---:|---:|---:|---:|
@@ -208,13 +208,13 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
 | razón de densidades, γ = 0,5 | 19% | 132,1 | 148,8 | −8,0 (−1,9) | −62 | 147,9 |
 | razón de densidades, γ = 1 | 3% | 140,0 | 162,2 | +5,4 (+1,0) | −69 | 153,7 |
 
-TWCV: MAE out-of-fold reponderado hacia la composición del test (D16). Tabla completa, con IWCV: [`tables/ponderados_twcv.csv`](tables/ponderados_twcv.csv).
+TWCV: MAE out-of-fold reponderado hacia la composición del test (D16). Tabla completa, con IWCV: [`ponderados_twcv.csv`](../../output/tables/02_modelos/ponderados_twcv.csv).
 
 - **Lectura:** los pesos moderados mejoran Chapinero de forma significativa y reducen el sesgo en unos 40 M, a cambio de 1–4 M de MAE total. La razón de densidades es demasiado extrema: el clasificador separa casi solo por ubicación (AUC 0,997). El modelo solo de apartamentos no supera a ponderar por tipo.
 - **TWCV ordena distinto que Chapinero.** La ponderación por distancia (m51) mejora 6,6 M en TWCV; la combinación con tipo (m51b), solo 2,3 M. La ventaja de m51b se concentra en los 307 anuncios de Chapinero, y m51b se eligió mirando esa misma métrica entre 9 variantes. **Se prefiere m51.** La confirmación debe venir de Kaggle, contra m04 (172,7). El m04 del registro usa la base anterior a D14, así que la comparación interna correcta es contra la fila `base` de esta tabla.
 
 ### 2.3b CART (05b_cart.R: m11)
-- Un solo árbol con ranger (`num.trees = 1`, `mtry` = todas, sin remuestreo). ranger no poda, así que la complejidad se controla con `max.depth` ∈ {3, 4, 5, 6, 8, 10, 12, 15, sin límite} y `min.bucket` ∈ {5, 20, 50, 100, 200, 500} (`min.node.size` = 2 × `min.bucket`), los parámetros que calibran Probst, Boulesteix y Bischl (2019, *JMLR*) para rpart. 108 árboles, tabla en [`tables/cart_grilla.csv`](tables/cart_grilla.csv).
+- Un solo árbol con ranger (`num.trees = 1`, `mtry` = todas, sin remuestreo). ranger no poda, así que la complejidad se controla con `max.depth` ∈ {3, 4, 5, 6, 8, 10, 12, 15, sin límite} y `min.bucket` ∈ {5, 20, 50, 100, 200, 500} (`min.node.size` = 2 × `min.bucket`), los parámetros que calibran Probst, Boulesteix y Bischl (2019, *JMLR*) para rpart. 108 árboles, tabla en [`cart_grilla.csv`](../../output/tables/02_modelos/cart_grilla.csv).
 - Pérdidas: MSE (la hoja predice la media) y MAE (la mediana: árbol LAD de Breiman et al., 1984). Los cortes son por varianza en ambos casos.
 - Ganan árboles poco profundos: profundidad 6 con hojas de 20 en el precio y profundidad 4 en el precio por m². Más profundidad sobreajusta: sin límite y con hojas de 5, el MAE sube a 187 M. Con profundidad ≥ 8, hojas de 100–200 estabilizan el error.
 - La mediana no mejora a la media (1–2 M peor). Es el peor modelo en Chapinero (183–187 M), igual que el random forest: un árbol no extrapola a precios más altos que los de sus hojas. No entra al ensamble.
@@ -229,9 +229,9 @@ TWCV: MAE out-of-fold reponderado hacia la composición del test (D16). Tabla co
 
 ## 3. Diagnóstico
 
-![Error por localidad](figures/m2_error_localidad.png)
+![Error por localidad](../../output/figures/02_modelos/m2_error_localidad.png)
 
-![Predicho vs observado](figures/m3_pred_obs_chapinero.png)
+![Predicho vs observado](../../output/figures/02_modelos/m3_pred_obs_chapinero.png)
 
 | Localidad | n | MAE (M) | Sesgo medio (M) | MAPE |
 |---|---:|---:|---:|---:|
@@ -241,7 +241,7 @@ TWCV: MAE out-of-fold reponderado hacia la composición del test (D16). Tabla co
 | **Chapinero** | 307 | 155 | **−85,7** | 17,3% |
 | La Candelaria | 178 | 261 | −149 | 32,7% |
 
-(Modelo m02, el de menor MAE total individual; predicciones OOF. Tabla completa en [`tables/error_por_localidad.csv`](tables/error_por_localidad.csv).)
+(Modelo m02, el de menor MAE total individual; predicciones OOF. Tabla completa en [`error_por_localidad.csv`](../../output/tables/02_modelos/error_por_localidad.csv).)
 
 - Chapinero se sigue **subprediciendo** (sesgo de −86 M), aunque menos que en la primera ronda con m05 (−135 M). El problema es de nivel, no de dispersión: el MAPE de Chapinero (17%) es igual al de Usaquén.
 

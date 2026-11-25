@@ -1,6 +1,6 @@
 # =============================================================================
 # check_validacion.R - Verificación de la validación cruzada (folds por localidad con buffer y cv_oof).
-# Uso: Rscript code/check_validacion.R   (falla con error si algo no se cumple)
+# Uso: Rscript code/exploratorio/check_validacion.R   (falla con error si algo no se cumple)
 # =============================================================================
 source(here::here("code", "01_setup.R")); source(here::here("code", "utils_modelos.R"))
 ev <- unlist(map(FOLDS, "evaluacion"))

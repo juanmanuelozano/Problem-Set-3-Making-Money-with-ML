@@ -1,7 +1,7 @@
 # Informe 1 — Estadísticas descriptivas y motivación espacial
 
 **Problem Set 3: Predicting Prices · Big Data y Machine Learning · Uniandes 2026-2**
-Código: [`scripts/02_descriptivas.R`](../../scripts/02_descriptivas.R) · [`scripts/02c_composicion_test.R`](../../scripts/02c_composicion_test.R) · Datos externos: [`scripts/01_osm_descarga.R`](../../scripts/01_osm_descarga.R)
+Código: [`code/02_descriptivas.R`](../../code/02_descriptivas.R) · [`code/02c_composicion_test.R`](../../code/02c_composicion_test.R) · Datos externos: [`code/01b_osm_descarga.R`](../../code/01b_osm_descarga.R)
 Última actualización: 2026-11-22
 
 ---
@@ -33,7 +33,7 @@ Las fuentes externas vienen de **OpenStreetMap** (API Overpass): límites de las
 
 ## 2. La variable objetivo
 
-![Distribución del precio](figures/f3_distribucion_precio.png)
+![Distribución del precio](../../output/figures/01_descriptivas/f3_distribucion_precio.png)
 
 | Estadístico | Valor (millones COP) |
 |---|---:|
@@ -52,7 +52,7 @@ Las fuentes externas vienen de **OpenStreetMap** (API Overpass): límites de las
 
 ## 3. El hallazgo central: entrenamiento y prueba viven en lugares distintos
 
-![Mapa train vs test](figures/f1_mapa_train_test.png)
+![Mapa train vs test](../../output/figures/01_descriptivas/f1_mapa_train_test.png)
 
 | Localidad | n train | n test | Mediana precio (M) | Mediana precio/m² (M) |
 |---|---:|---:|---:|---:|
@@ -67,7 +67,7 @@ Las fuentes externas vienen de **OpenStreetMap** (API Overpass): límites de las
 | Santa Fe | 933 | 8 | 490 | 6,22 |
 | Resto (9 localidades) | 1.873 | 9 | — | — |
 
-Tabla completa: [`tables/localidades.csv`](tables/localidades.csv).
+Tabla completa: [`localidades.csv`](../../output/tables/01_descriptivas/localidades.csv).
 
 En el nivel de UPZ, el test se reparte en **Chicó Lago (4.286), El Refugio (3.432), Pardo Rubio (1.430) y Chapinero (495)**. En el train esas cuatro UPZ suman 307 observaciones. El texto lo confirma: "Rosales" aparece en el 15,3% de los anuncios del test y en el 0,2% de los del train, y "Chicó" en el 31% frente al 3,4%.
 
@@ -90,9 +90,9 @@ Las 307 observaciones de Chapinero en el train se parecen mucho al test en sus a
 
 ### 3.1 Composición de las muestras
 
-Código: [`scripts/02c_composicion_test.R`](../../scripts/02c_composicion_test.R). Tablas: [`composicion_train_test.csv`](tables/composicion_train_test.csv), [`perfil_tipo_inmueble.csv`](tables/perfil_tipo_inmueble.csv) y [`cercania_train_test.csv`](tables/cercania_train_test.csv).
+Código: [`code/02c_composicion_test.R`](../../code/02c_composicion_test.R). Tablas: [`composicion_train_test.csv`](../../output/tables/01_descriptivas/composicion_train_test.csv), [`perfil_tipo_inmueble.csv`](../../output/tables/01_descriptivas/perfil_tipo_inmueble.csv) y [`cercania_train_test.csv`](../../output/tables/01_descriptivas/cercania_train_test.csv).
 
-![Composición de train y test](figures/f15_composicion_train_test.png)
+![Composición de train y test](../../output/figures/01_descriptivas/f15_composicion_train_test.png)
 
 | Atributo | Categoría | Train | Train: Chapinero | Test | Test / Train |
 |---|---|---:|---:|---:|---:|
@@ -159,17 +159,17 @@ Un tercio del train está a menos de 500 m de algún anuncio de prueba. Esto se 
 
 ## 4. Geografía del precio
 
-![Mapa de precio por m²](figures/f2_mapa_precio_m2.png)
+![Mapa de precio por m²](../../output/figures/01_descriptivas/f2_mapa_precio_m2.png)
 
 El precio por m² dibuja el patrón conocido de Bogotá: crece hacia el **nororiente**, a lo largo del eje de los cerros orientales entre la Calle 26 y la Calle 127. Los valores más altos están en el límite entre Chapinero y Usaquén (zona del Parque 93, Chicó y El Retiro) y en algunos enclaves de Teusaquillo y Santa Fe (Centro Internacional, La Macarena). Los más bajos están en el suroccidente (Kennedy, Bosa, Ciudad Bolívar).
 
-![Precio por m² por localidad](figures/f4_precio_m2_localidad.png)
+![Precio por m² por localidad](../../output/figures/01_descriptivas/f4_precio_m2_localidad.png)
 
 Chapinero es la localidad más cara por metro cuadrado (mediana de 6,8 millones) y tiene una dispersión amplia (rango intercuartílico de ~5,7 a 8,2). Le siguen Santa Fe (6,2) y Usaquén (5,5). En el otro extremo, Antonio Nariño, Puente Aranda y Kennedy tienen medianas de 2,6 a 3,2 millones por m².
 
 ## 5. Gradientes de distancia
 
-![Gradientes de distancia](figures/f5_gradientes_distancia.png)
+![Gradientes de distancia](../../output/figures/01_descriptivas/f5_gradientes_distancia.png)
 
 - **Distancia al centro de empleo (CBD):** es el gradiente más limpio y monótono, coherente con el modelo monocéntrico (Alonso-Muth-Mills). Se definieron tres polos: Centro Internacional, Calle 72 y Parque de la 93. El precio por m² pasa de ~6,5 millones a menos de 1 km de un polo a ~3,7 millones a 9 km. La correlación con `log(precio)` es de −0,29.
 - **Distancia a TransMilenio:** el gradiente es *positivo* (más lejos, más caro). No es que el transporte reste valor, sino que las troncales recorren corredores de ingreso medio y bajo, mientras que la zona más rica del nororiente está relativamente lejos de ellas. Es un ejemplo de **confusión espacial**: el efecto causal del transporte no se identifica con una correlación simple.
@@ -177,7 +177,7 @@ Chapinero es la localidad más cara por metro cuadrado (mediana de 6,8 millones)
 
 ## 6. Atributos estructurales y datos faltantes
 
-![Precio vs área](figures/f8_precio_area.png)
+![Precio vs área](../../output/figures/01_descriptivas/f8_precio_area.png)
 
 | Variable | % faltante (train) | % faltante (test) |
 |---|---:|---:|
@@ -189,7 +189,7 @@ Chapinero es la localidad más cara por metro cuadrado (mediana de 6,8 millones)
 | `bedrooms` | 0% | 0% |
 | Estrato mencionado en el texto | 7,7% disponible | 5,8% disponible |
 
-![Fuente del área](figures/f7_area_fuente.png)
+![Fuente del área](../../output/figures/01_descriptivas/f7_area_fuente.png)
 
 - **Área.** Es el atributo hedónico central y su relación con el precio es casi lineal en logaritmos para apartamentos de 40 a 250 m². Se aplana después por el tope de 1.650 millones. La extracción del texto usa expresiones regulares (por ejemplo, "120 m2", "85 mts", "200 metros") y se limita a valores entre 20 y 1.000 m². **Advertencia:** la extracción es ruidosa (a veces captura el área de una terraza o del lote) y conviene contrastarla con habitaciones y baños antes de usarla sin filtro.
 - **Baños** es la variable con mayor correlación simple con el log del precio (0,56). Captura a la vez tamaño y calidad.
@@ -200,7 +200,7 @@ Correlaciones simples con `log(precio)` en el train: baños 0,56 · área 0,35 �
 
 ## 7. Valores extremos y rangos de validez
 
-Código: [`scripts/02b_extremos.R`](../../scripts/02b_extremos.R). Tablas: `rangos_validez.csv`, `precio_topes.csv` y `precio_m2_extremos.csv`.
+Código: [`code/02b_extremos.R`](../../code/02b_extremos.R). Tablas: `rangos_validez.csv`, `precio_topes.csv` y `precio_m2_extremos.csv`.
 
 ### 7.1 Por qué se usan esos rangos
 
@@ -225,7 +225,7 @@ Los rangos se fijaron por plausibilidad física: un apartaestudio pequeño tiene
 
 ### 7.2 Extremos del precio
 
-![Precio por m2 según la fuente del área](figures/f10_precio_m2_extremos.png)
+![Precio por m2 según la fuente del área](../../output/figures/01_descriptivas/f10_precio_m2_extremos.png)
 
 | | Chapinero | Resto | Total |
 |---|---:|---:|---:|
@@ -251,7 +251,7 @@ Los rangos se fijaron por plausibilidad física: un apartaestudio pequeño tiene
 
 ## 8. Evolución temporal
 
-![Evolución temporal](figures/f9_tiempo.png)
+![Evolución temporal](../../output/figures/01_descriptivas/f9_tiempo.png)
 
 El precio por m² de los apartamentos se mantiene estable en el periodo (5,2–5,9 millones). El de las casas es más volátil por el menor número de observaciones mensuales. No se observa un choque visible asociado a la pandemia de 2020; si hubo uno, coincide con la caída en el número de anuncios (no hay datos de junio de 2020). El año y el mes entran como controles menores.
 
@@ -259,7 +259,7 @@ El precio por m² de los apartamentos se mantiene estable en el periodo (5,2–5
 
 La descripción contiene atributos que no están en las variables estructuradas. Se construyeron 22 indicadores de mención y se estimaron sus primas en una regresión hedónica que controla por área, habitaciones, baños, tipo de inmueble, año, distancias y localidad:
 
-![Primas de amenidades](figures/f6_amenidades_texto.png)
+![Primas de amenidades](../../output/figures/01_descriptivas/f6_amenidades_texto.png)
 
 | Atributo | Prima estimada | Interpretación |
 |---|---:|---|
@@ -276,7 +276,7 @@ Las primas negativas no deben leerse como causales. Probablemente capturan el ti
 
 ## 10. Regresión hedónica de referencia
 
-Variable dependiente: `log(precio)`. Muestra: train con área y baños observados (n = 18.135). Tabla completa en LaTeX: [`tables/hedonica_motivacional.tex`](tables/hedonica_motivacional.tex).
+Variable dependiente: `log(precio)`. Muestra: train con área y baños observados (n = 18.135). Tabla completa en LaTeX: [`hedonica_motivacional.tex`](../../output/tables/01_descriptivas/hedonica_motivacional.tex).
 
 | | (1) Estructural | (2) + Ubicación | (3) + Texto | (4) + EF localidad |
 |---|---:|---:|---:|---:|
@@ -315,11 +315,18 @@ Lectura:
 
 ### Reproducibilidad
 
-```bash
-Rscript scripts/01_osm_descarga.R   # descarga OSM (usa caché si ya existe)
-Rscript scripts/02_descriptivas.R   # genera figuras, tablas y data/processed/base_enriquecida.csv
-Rscript scripts/02b_extremos.R      # valores extremos (requiere también base_modelo.rds de 03_features.R)
-Rscript scripts/02c_composicion_test.R  # composición train/test y perfil por tipo de inmueble (requiere base_modelo.rds)
+Todo el informe se regenera con el script maestro (instrucciones en el [README](../../README.md)):
+
+```r
+source("code/00_main.R")   # en RStudio, con el proyecto abierto. En la terminal: Rscript code/00_main.R
 ```
 
-Restricción del entorno: Windows (Control de aplicaciones) bloquea las librerías `sf`, `units` y `geosphere`. Las operaciones espaciales se implementaron con `sp::point.in.polygon` y una función haversine propia.
+Scripts de este informe:
+- `01b_osm_descarga.R`: OpenStreetMap, con caché.
+- `02_descriptivas.R`: figuras, tablas y `data/processed/base_enriquecida.csv`.
+- `02b_extremos.R` y `02c_composicion_test.R`: los dos usan `base_modelo.rds`, que genera `03_features.R`.
+- `03c_texto.py`: nubes de palabras (f11–f14) y tablas de texto.
+
+Las figuras quedan en [`output/figures/01_descriptivas/`](../../output/figures/01_descriptivas/) y las tablas en [`output/tables/01_descriptivas/`](../../output/tables/01_descriptivas/).
+
+Las operaciones espaciales usan `sp::point.in.polygon` y una función haversine propia. Así se hizo porque en un equipo del grupo el Control de aplicaciones de Windows bloqueaba `sf`, `units` y `geosphere`.

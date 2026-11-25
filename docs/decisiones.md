@@ -39,14 +39,14 @@ Cada decisión registra el contexto, qué se decidió y por qué. Las más recie
 **Por qué:** eliminar por precio por m² quitaría anuncios con precios válidos y áreas mal medidas, y en el test no se pueden eliminar filas. Con el área final, solo entre el 0,2% y el 1,6% de las observaciones (según tipo y fuente del área) tienen |z| > 3 en log(precio/m²). Ver la sección 7 de `reports/01_descriptivas/informe_descriptivas.md`.
 
 ### D9 · Validación dejando una localidad afuera, con buffer de 500 m (2026-11-18)
-**Contexto:** reemplaza los 5 bloques k-means de D1. Se buscaba replicar `spatialsample::spatial_leave_location_out_cv()` combinada con el `buffer` de `spatial_block_cv()`. `spatialsample` no está instalado y `sf` está bloqueado en Windows, así que se implementó en `scripts/utils_modelos.R` (`folds_localidad()` y `cv_oof()`), con una haversine propia.
+**Contexto:** reemplaza los 5 bloques k-means de D1. Se buscaba replicar `spatialsample::spatial_leave_location_out_cv()` combinada con el `buffer` de `spatial_block_cv()`. `spatialsample` no está instalado y `sf` está bloqueado en Windows, así que se implementó en `code/utils_modelos.R` (`folds_localidad()` y `cv_oof()`), con una haversine propia.
 **Decisión:**
 - Cada localidad del train es un fold de evaluación (18 folds). El único anuncio sin localidad toma la de su vecino más cercano.
 - Del conjunto de análisis se excluyen los anuncios a menos de 500 m de algún anuncio evaluado.
 - Todos los modelos validan con `cv_oof()`. Los hiperparámetros (lambda, rondas de boosting) se eligen por MAE OOF mínimo, porque `cv.glmnet(foldid=)` y `xgb.cv()` no admiten buffer.
 - Todas las semillas pasan a 123.
 
-**Por qué 500 m** (`scripts/03b_buffer.R`, figura `m0_buffer_diagnostico.png`):
+**Por qué 500 m** (`code/03b_buffer.R`, figura `m0_buffer_diagnostico.png`):
 1. *Autocorrelación de los residuos* de un OLS hedónico:
    - 0,10 a menos de 100 m, 0,05 entre 100 y 200 m, 0,024 entre 300 y 400 m.
    - Menos de 0,01 desde 500 m y prácticamente 0 desde unos 800 m.
@@ -133,7 +133,7 @@ Los folds de validación no cambian.
 
 ### D15 · Variables de contexto de OSM: cerros, vías, área verde, altura de edificios y zona de lujo (2026-11-21)
 
-Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las calcula). Como en D14, solo las usan los modelos nuevos.
+Se agregan a la base (`01b_osm_descarga.R` las descarga y `02_descriptivas.R` las calcula). Como en D14, solo las usan los modelos nuevos.
 
 - **`dist_cerros`**: distancia al borde de la Reserva Forestal Bosque Oriental de Bogotá.
   - En OSM es la relación 13780896, con `leisure=nature_reserve` y no `boundary=protected_area`.
@@ -240,3 +240,21 @@ Se agregan a la base (`01_osm_descarga.R` las descarga y `02_descriptivas.R` las
   - Frente a m17: −0,3 M en Chapinero (*t* = −0,1) y +0,3 M en el total (*t* = 1,3).
   - Su predicción media del test es 801 M, frente a 826 de m17.
   - No mejora con claridad a m17 ni en Chapinero ni en el nivel del test, así que **no se sube a Kaggle**. **m17 sigue siendo la referencia.**
+
+### D27 · Organización del repositorio y script maestro (2026-11-24)
+**Contexto:** en la entrega anterior hubo problemas de reproducibilidad. Había scripts sueltos que se corrían a mano y en un orden implícito, rutas que dependían del directorio de trabajo, comandos de Python escritos para macOS (`.venv/bin/python`) y paquetes cargados en cada script.
+**Decisión:**
+- **Estructura de la guía del curso:** `code/` (antes `scripts/`) y `output/figures|tables/` (antes dentro de `reports/`). Los informes `.md` se quedan en `reports/` y enlazan a `output/`. El proyecto de R (`.Rproj`) se versiona.
+- **Un solo punto de entrada, `code/00_main.R`:**
+  - Corre los pasos en orden, cada uno en un proceso nuevo de R o de Python, y guarda un log por script.
+  - Escribe `output/session_info.txt` (`sessioninfo`) y `output/python_<entorno>.txt` (`pip freeze`).
+  - Los bloques caros (descargas, Python, redes, lentos) se encienden con interruptores. Si un paso apagado produce un archivo que otro paso necesita y ese archivo falta, el paso corre igual.
+- **Configuración:** `code/01_setup.R` (antes `00_config.R`) es el único lugar donde se cargan paquetes y se definen rutas. Las rutas salen de `here::here()`, así que funcionan desde RStudio y desde la terminal, en cualquier carpeta.
+- **Python desde R:**
+  - Hay tres entornos separados (`texto`, `emb`, `tf`), porque sus dependencias son incompatibles. Los crea `asegura_venv()` (con uv si está instalado, o con reticulate) fuera de la carpeta sincronizada, en `~/.virtualenvs/ps3-*`.
+  - El ejecutable se resuelve según el sistema operativo (`Scripts/python.exe` o `bin/python`).
+  - Los .py arman sus rutas desde su propia ubicación.
+- **Numeración:** se conserva la de antes, porque la bitácora, las decisiones y los informes la citan. Solo cambian `00_config` → `01_setup` y `01_osm_descarga` → `01b_osm_descarga`. Lo que no forma parte de la corrida va a `code/exploratorio/`.
+- El catastro (03f, 03h) se descarga solo si falta, con `descarga_zip()`.
+
+**Por qué:** cualquier miembro del equipo, o el evaluador, puede reproducir todo con `source("code/00_main.R")` en Windows o en macOS, sin saber el orden de los scripts ni cómo se instala Python.

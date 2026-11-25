@@ -5,8 +5,8 @@ Todas las variables del proyecto: nombre, definición, fuente y dónde se constr
 **Bases**
 
 - `data/raw/{train,test}.csv`: datos originales de Kaggle (anuncios de Properati).
-- `data/processed/base_enriquecida.csv`: datos originales más variables del texto y de OSM. La genera [`02_descriptivas.R`](../scripts/02_descriptivas.R).
-- `data/processed/base_modelo.rds`: variables finales, imputaciones y folds espaciales. La genera [`03_features.R`](../scripts/03_features.R).
+- `data/processed/base_enriquecida.csv`: datos originales más variables del texto y de OSM. La genera [`02_descriptivas.R`](../code/02_descriptivas.R).
+- `data/processed/base_modelo.rds`: variables finales, imputaciones y folds espaciales. La genera [`03_features.R`](../code/03_features.R).
 
 **Fuentes**
 
@@ -14,7 +14,7 @@ Todas las variables del proyecto: nombre, definición, fuente y dónde se constr
 |---|---|
 | **Properati** | Columnas originales de Kaggle (`train.csv` y `test.csv`) |
 | **Texto** | Expresiones regulares sobre `title + description` en minúsculas. El texto viene sin tildes y **sin puntos decimales**: "96.0 m2" aparece como "960 m2" (ver la sección 7 de [`informe_descriptivas.md`](../reports/01_descriptivas/informe_descriptivas.md)) |
-| **OSM** | OpenStreetMap vía la API Overpass, descargado el 2026-11-14 con [`01_osm_descarga.R`](../scripts/01_osm_descarga.R). Es la foto *actual* de OSM, no la de 2019–2021 |
+| **OSM** | OpenStreetMap vía la API Overpass, descargado el 2026-11-14 con [`01b_osm_descarga.R`](../code/01b_osm_descarga.R). Es la foto *actual* de OSM, no la de 2019–2021 |
 | **Construida** | Calculada a partir de otras variables |
 | **Imputada (RF)** | Predicha con un random forest (`ranger`) entrenado con las filas que sí tienen el dato. Usa train y test, porque son covariables y no el precio |
 
@@ -152,7 +152,7 @@ Coordenadas fijadas a mano en el script 02. Fuente: Construida. Modelos: L, Á.
 
 ## 6. Variables que solo existen dentro de las matrices de modelación
 
-Se crean al vuelo en [`utils_modelos.R`](../scripts/utils_modelos.R). No están guardadas en ninguna base.
+Se crean al vuelo en [`utils_modelos.R`](../code/utils_modelos.R). No están guardadas en ninguna base.
 
 | Variable | Definición | Matriz |
 |---|---|---|
@@ -164,7 +164,7 @@ El híbrido (`07_hibridos.R`) usa además el margen del lasso como `base_margin`
 
 ## 7. Texto procesado (Python, D11)
 
-Se generan con [`03c_texto.py`](../scripts/03c_texto.py) y [`03d_tfidf.py`](../scripts/03d_tfidf.py). Se unen a las demás bases por `property_id`.
+Se generan con [`03c_texto.py`](../code/03c_texto.py) y [`03d_tfidf.py`](../code/03d_tfidf.py). Se unen a las demás bases por `property_id`.
 
 | Archivo | Contenido |
 |---|---|

@@ -162,24 +162,37 @@ py_corre <- function(nombre, args, ...) {
   invisible(r)
 }
 
-# Crea el entorno si no existe: busca un Python 3.11 en el equipo (o lo instala con reticulate), crea el entorno e
-# instala sus requirements. Solo hace falta la primera vez; tarda varios minutos (TensorFlow y PyTorch pesan ~1 GB).
+# Crea el entorno si no existe e instala sus requirements. Solo hace falta la primera vez; tarda varios minutos
+# (TensorFlow y PyTorch pesan cerca de 1 GB). Dos caminos, el mismo resultado:
+#  - con uv (https://docs.astral.sh/uv/, si está instalado): descarga Python 3.11 si hace falta; es el más rápido.
+#  - sin uv: reticulate busca un Python 3.11 en el equipo o lo instala (install_python) y crea el entorno con pip.
 asegura_venv <- function(nombre) {
   if (hay_venv(nombre)) return(invisible(python_de(dir_venv(nombre))))
-  d <- dir_venv(nombre); v <- VENVS[[nombre]]
+  d <- dir_venv(nombre); v <- VENVS[[nombre]]; py <- python_de(d)
   message("Creando el entorno de Python '", nombre, "' en ", d, " (solo la primera vez)...")
-  base <- reticulate::virtualenv_starter(PYTHON_VERSION)
-  if (is.null(base)) {
-    message("No se encontró Python ", PYTHON_VERSION, " en el equipo: se instala con reticulate::install_python().")
-    base <- reticulate::install_python(paste0(PYTHON_VERSION, ":latest"))
-  }
   dir.create(dirname(d), recursive = TRUE, showWarnings = FALSE)
-  reticulate::virtualenv_create(d, python = base, packages = NULL)
-  py_corre(nombre, c("-m", "pip", "install", "--upgrade", "pip"))
-  py_corre(nombre, c("-m", "pip", "install", "-r", v$req))
-  if (nombre == "texto") {
-    py_corre(nombre, c("-m", "pip", "install", "--no-deps", "contexto==0.2.0"))   # sin sus dependencias fijadas de 2021
-    py_corre(nombre, c("-m", "spacy", "download", "es_core_news_md"))             # modelo de lematización
+  uv <- Sys.which("uv")
+  instala <- if (nzchar(uv)) {
+    corre_uv <- function(...) {
+      r <- processx::run(uv, c(...), echo = TRUE, stderr_to_stdout = TRUE, error_on_status = FALSE)
+      if (r$status != 0) stop("Falló: uv ", paste(c(...), collapse = " "))
+    }
+    corre_uv("venv", d, "--python", PYTHON_VERSION, "--seed")   # --seed: con pip, que usa `spacy download`
+    function(...) corre_uv("pip", "install", "--python", py, ...)
+  } else {
+    base <- reticulate::virtualenv_starter(PYTHON_VERSION)
+    if (is.null(base)) {
+      message("No se encontró Python ", PYTHON_VERSION, " en el equipo: se instala con reticulate::install_python().")
+      base <- reticulate::install_python(paste0(PYTHON_VERSION, ":latest"))
+    }
+    reticulate::virtualenv_create(d, python = base, packages = NULL)
+    py_corre(nombre, c("-m", "pip", "install", "--upgrade", "pip"))
+    function(...) py_corre(nombre, c("-m", "pip", "install", ...))
   }
-  invisible(python_de(d))
+  instala("-r", v$req)
+  if (nombre == "texto") {
+    instala("--no-deps", "contexto==0.2.0")                              # sin sus dependencias fijadas de 2021
+    py_corre(nombre, c("-m", "spacy", "download", "es_core_news_md"))    # modelo de lematización de spaCy
+  }
+  invisible(py)
 }

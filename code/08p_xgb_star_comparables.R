@@ -68,6 +68,23 @@ if (!GENERAL) stopifnot(nrow(mezcla) == 0) else paso(sprintf("XGB general: %.0f%
 if (!PRUEBA && GENERAL) registra("m50_xgb_general_comparables_area_sq_m2",
   "XGBoost GENERAL (sin restricciones de interacción) con los datos y la configuración de m47: catastro + comparables + log(área), cuadrática, profundidad 4 (08p, VARIANTE=area_sq_general); comparación STAR vs general; OOF de la CV por edificio",
   sprintf("reg:squarederror; depth=4; mcw=3; subsample=0.8; colsample=0.7; lambda=1; alpha=0; eta=0.05; nrounds=%d; sin restricciones", RONDAS[j]), m, oof, pte)
+# Componentes por grupo en el test (para comparar con las ramas de la red, ramas_m24_test.csv de 08l; todavía no las
+# usa ningún script)
+if (!PRUEBA && VAR == "area_sq") {
+  cb <- predict(fit, xgb.DMatrix(cbind(o$Xte, C_te)), predcontrib = TRUE)
+  cnb <- colnames(cb)
+  comp_te <- tibble(
+    property_id = TE$property_id,
+    est = rowSums(cb[, !es_loc(cnb) & !es_txt(cnb) & cnb != "BIAS"]),
+    ubi = rowSums(cb[, es_loc(cnb)]),
+    txt = rowSums(cb[, es_txt(cnb)]),
+    cte = cb[, "BIAS"],
+    offset = o$off_te
+  )
+  suma <- comp_te$est + comp_te$ubi + comp_te$txt + comp_te$cte + comp_te$offset
+  stopifnot(max(abs(suma - pte)) < 1e-4) # la descomposición suma exacto
+  write_csv(comp_te, file.path(P$processed, "ramas_m47_test.csv"))
+}
 if (!PRUEBA && VAR == "area_sq") registra("m47_xgb_star_comparables_area_sq_m2",
   "XGB STAR con catastro + comparables + log(área), configuración cuadrática de m41 (08p, VARIANTE=area_sq); OOF de la CV agrupada por edificio; sobre log(precio por m2)",
   sprintf("reg:squarederror; depth=4; mcw=3; subsample=0.8; colsample=0.7; lambda=1; alpha=0; eta=0.05; nrounds=%d", RONDAS[j]), m, oof, pte)

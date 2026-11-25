@@ -1,0 +1,31 @@
+modelo,variable,shap_abs,grupo
+nn,log_area,0.3627618087494501,Área
+nn,txt,0.07281021255761244,Texto: TF-IDF o encoder
+nn,bedrooms,0.03376739757848302,Habitaciones y baños
+nn,es_apto,0.02991910198934097,Tipo de inmueble
+nn,banos_imputado,0.02581117079879933,Habitaciones y baños
+nn,banos_final,0.02332814835931943,Habitaciones y baños
+nn,tx_gimnasio,0.015155250809109757,Texto: dummies y números
+nn,bedrooms_2,0.013327214303611525,Habitaciones y baños
+nn,year,0.01220444334733598,Fecha
+nn,tx_vista,0.011907862457503745,Texto: dummies y números
+xgb,log_area,0.2772827896610475,Área
+xgb,comp20,0.09379093659184218,Comparables (precio de vecinos)
+xgb,estrato_final,0.05933115444251962,Estrato
+xgb,comp5,0.03370798090199059,Comparables (precio de vecinos)
+xgb,banos_imputado,0.019120486101834103,Habitaciones y baños
+xgb,tx_gimnasio,0.0187202396048815,Texto: dummies y números
+xgb,tx_terraza,0.018580198532796202,Texto: dummies y números
+xgb,banos_final,0.01845663597772909,Habitaciones y baños
+xgb,parq_txt,0.018062904354417698,Texto: dummies y números
+xgb,bedrooms,0.017362997644234383,Habitaciones y baños
+en,log_area,0.283654241719735,Área
+en,log_area_x_estrato,0.21213271515585488,Interacción
+en,enc_texto,0.12908580801680314,Texto: TF-IDF o encoder
+en,log_area_2,0.11462590681407134,Área
+en,es_apto,0.10046461701650622,Tipo de inmueble
+en,dist_centro_internacional,0.09639176921240343,Entorno (OSM)
+en,log_area_x_apto,0.08825689735491193,Interacción
+en,estrato_final,0.055404205218713205,Estrato
+en,dist_cbd,0.05516234564368587,Entorno (OSM)
+en,dist_parque93,0.034864985698559614,Entorno (OSM)

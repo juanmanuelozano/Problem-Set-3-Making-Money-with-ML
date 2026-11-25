@@ -48,9 +48,24 @@ P <- list(
   tab_desc  = here("output", "tables", "01_descriptivas"),
   fig_mod   = here("output", "figures", "02_modelos"),
   tab_mod   = here("output", "tables", "02_modelos"),
+  fig_pres  = here("output", "figures", "03_presentacion"),
+  tab_pres  = here("output", "tables", "03_presentacion"),   # también las cifras del texto (numeros*.tex)
+  pres      = here("reports", "03_presentacion"),            # el .tex de la presentación (95 lo compila)
   logs      = here("output", "logs")
 )
 walk(P, dir.create, recursive = TRUE, showWarnings = FALSE)
+
+# Copia temporal de un archivo tal como estaba en un commit de git. La usan los scripts que reproducen modelos con
+# bases o envíos anteriores (04g, 95, 97). Hace falta un clon completo del repositorio con git en el PATH.
+desde_git <- function(commit, ruta) {
+  f <- tempfile(fileext = paste0(".", tools::file_ext(ruta)))
+  st <- system2("git", c("-C", shQuote(RAIZ), "show", shQuote(paste0(commit, ":", ruta))), stdout = f)
+  if (st != 0) {
+    stop("No se pudo leer ", ruta, " del commit ", commit, ". Use un clon completo (git fetch --all).", call. = FALSE)
+  }
+  f
+}
+lee_csv_git <- function(commit, ruta) lee_csv(desde_git(commit, ruta))
 
 lee_csv <- function(f) read_csv(f, show_col_types = FALSE, num_threads = 1)  # num_threads = 1 evita un segfault en Windows
 

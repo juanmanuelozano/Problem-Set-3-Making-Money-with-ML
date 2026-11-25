@@ -1,0 +1,16 @@
+% Generado por code/95_presentacion.R: no editar a mano
+\begin{tabular}{l r}
+\toprule
+Cómo entra el texto & MAE en Kaggle \\
+\midrule
+\multicolumn{2}{l}{\textit{Elastic net, mismas variables base}} \\
+Sin variables de texto & 198,6 \\
+Dummies directas (expresiones regulares) & 184,4 \\
+Dummies + PCA del TF-IDF (50 componentes) & 175,9 \\
+Dummies + encoder de texto del STAR & \textbf{168,8} \\
+\midrule
+\multicolumn{2}{l}{\textit{NN STAR}} \\
+Sin rama de texto & 171,7 \\
+Rama de texto: encoder sobre el TF-IDF & \textbf{156,3} \\
+\bottomrule
+\end{tabular}

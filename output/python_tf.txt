@@ -1,0 +1,2 @@
+# Entorno de Python "tf" (/Users/samuel/.venvs/ps3-tf): Python 3.11.16
+

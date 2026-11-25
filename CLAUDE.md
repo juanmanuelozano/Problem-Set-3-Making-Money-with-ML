@@ -14,7 +14,7 @@ Proyecto: **Problem Set 3 – Predicting Prices** (Big Data y Machine Learning, 
 ## Convenciones
 - Idioma: español para código comentado, informes y bitácora.
 - **Estructura (D27):** el código está en `code/`, las figuras y tablas en `output/figures|tables/{01_descriptivas,02_modelos}/` y los informes `.md` en `reports/`, que enlazan a `../../output/`. Todo se reproduce con `code/00_main.R`. Un script nuevo se agrega a la tabla `pasos` del main, con su bandera, sus variables de entorno y los archivos que produce.
-- Todos los scripts de R empiezan con `source(here::here("code", "01_setup.R"))`, y los utils se cargan igual: `source(here::here("code", "utils_modelos.R"))`. **Las rutas salen solo del objeto `P`** (`P$raw`, `P$processed`, `P$models`, `P$external`, `P$fig_desc`, `P$tab_desc`, `P$fig_mod`, `P$tab_mod`…); nunca rutas relativas sueltas ni `setwd()`. Un script suelto se corre desde la raíz con `Rscript code/NN_nombre.R`, o con el main: `--solo=NN_nombre.R`.
+- Todos los scripts de R empiezan con `source(here::here("code", "01_setup.R"))`, y los utils se cargan igual: `source(here::here("code", "utils_modelos.R"))`. **Las rutas salen solo del objeto `P`** (`P$raw`, `P$processed`, `P$models`, `P$external`, `P$fig_desc`, `P$tab_desc`, `P$fig_mod`, `P$tab_mod`, `P$fig_pres`, `P$tab_pres`, `P$pres`…); nunca rutas relativas sueltas ni `setwd()`. Para leer un archivo de un commit anterior (bases o envíos viejos), `desde_git(commit, ruta)` o `lee_csv_git()`, siempre con un commit fijo, no con el nombre de una rama (D28). Un script suelto se corre desde la raíz con `Rscript code/NN_nombre.R`, o con el main: `--solo=NN_nombre.R`.
 - **Los paquetes se cargan solo en `code/01_setup.R`**, en un único `pacman::p_load()`. `sf` y `keras3` son opcionales y se controlan con `HAY_SF` y `HAY_KERAS`. Los scripts nunca llaman a `library()` ni a `p_load()`.
 - **Python (D11, D25):**
   - Scripts: `code/03c_texto.py` y `03d_tfidf.py` usan el entorno `texto` (`requirements.txt`); `03g_embeddings.py` usa el entorno `emb` (`requirements-emb.txt`).
@@ -27,7 +27,8 @@ Proyecto: **Problem Set 3 – Predicting Prices** (Big Data y Machine Learning, 
   - Las épocas se eligen por bloques, como las rondas del boosting.
   - Con `PRUEBA=1` en el entorno (o `--prueba` en el main), 08, 08c, 08d y 08e corren el flujo completo en minutos.
   - Las redes excluyen la zona de lujo de D15 (`LUJO` en `utils_redes.R`).
-- Numeración: `0x` = datos y descriptivas, `03` = variables, `04+` = un modelo por script, `9x` = ensambles y envíos.
+- Numeración: `0x` = datos y descriptivas, `03` = variables, `04+` = un modelo por script, `90`–`94` = ensambles y envíos, `95`–`99` = presentación (`reports/03_presentacion/`, D28).
+- **Estilo:** el código nuevo sigue la [guía de estilo del tidyverse](https://style.tidyverse.org/) (`styler::style_file()`): una instrucción por línea, sin `;`, y llamadas largas partidas en varias líneas.
 - Cada modelo se registra con `registra()` (en `code/utils_modelos.R`), que escribe `models/registro_modelos.csv`, las predicciones OOF y de test, y `submissions/<modelo>.csv`.
 - Métrica principal: MAE en pesos sobre predicciones *out-of-fold* **dejando una localidad afuera, con buffer** (`BUFFER_M` en `code/utils_modelos.R`, decisión D9). Se reportan también el MAE en las observaciones del train ubicadas en Chapinero (la mejor aproximación al test) y el MAE promedio entre localidades.
 - Validación cruzada: usar siempre `cv_oof(function(analisis, evaluacion) ...)` de `utils_modelos.R` (no `cv.glmnet(foldid=)` ni `xgb.cv`, que no admiten buffer). Para boosting, `xgb_rondas()` y `mejor_columna()`. Semillas: 123.

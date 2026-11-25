@@ -9,7 +9,10 @@
 #     (pendiente < 1: la rama sobrerreacciona; > 1: se queda corta). En todo el train y en Chapinero.
 #  2. Ablación: MAE con la rama de texto reemplazada por su media.
 #  3. Pendientes estimadas dejando una localidad afuera y aplicadas a ella (sin reusar la localidad evaluada).
-# No registra modelos. Salida: tables/nn_star_ramas.csv
+# Registra m52_nn_star_sin_texto_m2: la configuración de m24 entrenada con todo el train, con la rama de texto
+# reemplazada por su promedio al predecir (igual que la ablación en la validación), para tener su puntaje en Kaggle.
+# Salidas: output/tables/02_modelos/nn_star_ramas.csv y data/processed/ramas_m24_test.csv (salida de cada rama en el
+# test; todavía no la usa ningún script).
 # =============================================================================
 source(here::here("code", "01_setup.R")); source(here::here("code", "utils_modelos.R")); source(here::here("code", "utils_redes.R"))
 
@@ -40,7 +43,51 @@ sin_txt <- oof - R[, "txt"] + mean(R[, "txt"])
 loo <- rep(NA_real_, nrow(TR))
 for (g in unique(GRUPO)) { s <- GRUPO == g; m <- lm(z ~ est + ubi + txt, data = d[!s, ]); loo[s] <- predict(m, d[s, ]) + corr[s] + OFF$m2$tr[s] }
 res <- tibble(variante = c("m24 reproducida", "sin texto", "pendientes por rama (fuera de la localidad)"), oof = list(oof, sin_txt, loo)) %>%
-  mutate(map_dfr(oof, evalua), pred_media_chap = map_dbl(oof, ~ mean(recorta(exp(.x[ES_CHAP])))), sesgo_chap = pred_media_chap - mean(y[ES_CHAP]))
+  mutate(map_dfr(oof, evalua), mae_twcv = map_dbl(oof, ~ mae_w(.x, pesos_twcv())), pred_media_chap = map_dbl(oof, ~ mean(recorta(exp(.x[ES_CHAP])))), sesgo_chap = pred_media_chap - mean(y[ES_CHAP]))
 print(as.data.frame(select(res, -oof) %>% mutate(across(where(is.double), ~ round(.x / 1e6, 1)))))
 write_csv(bind_rows(tab %>% mutate(tipo = "pendiente"), select(res, -oof) %>% mutate(tipo = "variante")), file.path(P$tab_mod, "nn_star_ramas.csv"))
+
+# ---- Modelo final sin texto (m52): entrena con todo el train y apaga la rama de texto en el test ----
+f <- ajusta_final(tibble(objetivo = "m2", epocas = EP), \(g, d) red_star(d, .1, .5), 1e-3, "mse")
+ramas_de <- function(x) {
+  sapply(predict(f$red$ramas, x, batch_size = 8192, verbose = 0), drop)
+}
+r_tr <- ramas_de(f$xtr)
+r_te <- ramas_de(f$xte)
+pte_sin <- f$pred_te - r_te[, 3] + mean(r_tr[, 3])
+if (!PRUEBA) {
+  write_csv(
+    tibble(
+      property_id = TE$property_id, est = r_te[, 1], ubi = r_te[, 2],
+      txt = r_te[, 3], cte = f$corr, offset = OFF$m2$te, pred = f$pred_te
+    ),
+    file.path(P$processed, "ramas_m24_test.csv")
+  )
+}
+m_sin <- filter(res, variante == "sin texto")
+# Ya subido a Kaggle (171,7): no se vuelve a registrar, para no reemplazar el
+# envío calificado con otra corrida de TensorFlow (no es determinística).
+ya_subido <- file.exists(file.path(P$subs, "m52_nn_star_sin_texto_m2.csv"))
+if (!PRUEBA && !ya_subido) {
+  registra(
+    "m52_nn_star_sin_texto_m2",
+    paste(
+      "NN STAR con la configuración de m24 y la rama de texto apagada",
+      "(reemplazada por su promedio), 08l; ablación del texto;",
+      "sobre log(precio por m2)"
+    ),
+    sprintf(
+      paste(
+        "lr=1e-3; p_u=0.1; p_t=0.5; pérdida=mse; calibración=simple;",
+        "semillas=1; épocas=%d; rama de texto = promedio"
+      ),
+      EP
+    ),
+    select(m_sin, starts_with("ma")), m_sin$oof[[1]], pte_sin
+  )
+}
+paso(sprintf(
+  "Test: predicción media con texto %.1f M | sin texto %.1f M",
+  mean(recorta(exp(f$pred_te))) / 1e6, mean(recorta(exp(pte_sin))) / 1e6
+))
 paso("Listo.")

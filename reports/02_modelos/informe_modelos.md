@@ -184,6 +184,28 @@ Se eligió 500 m: elimina la fuga entre anuncios casi vecinos a ambos lados de u
   - La pérdida absoluta da el mejor MAE en Chapinero de todas las redes, pero empeora el total y la diferencia con m17 no es significativa.
   - La ganadora por MAE total, **m19_nn_star_afinada_m2, empata con m17**: −0,3 M en Chapinero y +0,3 M en el total. Además, su predicción del test es más baja (801 frente a 826). **No se sube a Kaggle.**
 
+### 2.2f ¿Cuánto aporta el texto? Ablaciones (04g, 04h, 08l, 08r; moraleja 1 de la presentación)
+Se quita el texto a modelos de las tres familias, con la misma validación (CV por localidad con buffer) y, cuando hay envío, con el puntaje de Kaggle.
+
+| Modelo | Cómo entra el texto | Total | Chapinero | TWCV | Kaggle |
+|---|---|---:|---:|---:|---:|
+| m53_en_sin_texto (04g; base del 18/11) | sin texto | 138,2 | 167,8 | – | 198,6 |
+| m12_en_m02 (base del 18/11, como se subió) | dummies de las expresiones regulares | 132,2 | 154,1 | – | 184,4 |
+| m12_en_m02_pca_tx (como se subió) | dummies + 50 componentes del TF-IDF | 128,9 | 146,9 | – | 175,9 |
+| m14_en_enc_tx | dummies + encoder de texto del STAR | 132,2 | 143,6 | – | **168,8** |
+| m55_en_enc_tx_sin_dummies (04h) | solo el encoder | 135,4 | 144,2 | – | – |
+| m54_en_enc_tx_dummies (04h) | dummies + encoder (base y encoders actuales) | 134,8 | 144,4 | – | – |
+| m24_nn_star_catastro_m2 (reproducida en 08l) | rama de texto | 133,7 | 139,0 | 140,0 | **156,3** |
+| m52_nn_star_sin_texto_m2 (08l) | rama de texto apagada (su promedio) | 138,8 | 152,0 | 146,1 | 171,7 |
+| m22_xgb_star_twcv_m2 | grupo de texto (1.000 términos TF-IDF) | 133,2 | 156,9 | 140,1 | – |
+| m56_xgb_star_sin_texto_m2 (08r) | sin el grupo de texto (las dummies se quedan) | 138,5 | 164,6 | 146,1 | – |
+
+- **El texto vale ~30 M en Kaggle en el elastic net** (198,6 sin texto frente a 168,8 con dummies y encoder) y **15 M en la NN STAR** (171,7 frente a 156,3). En la validación, quitarlo cuesta ~6 M de TWCV tanto en la red como en el XGB STAR.
+- **La forma importa:** con las mismas dummies, el encoder supervisado del STAR gana 7 M en Kaggle al PCA del TF-IDF, que maximiza la varianza y no la información sobre el precio.
+- **Las dummies casi no aportan si ya está el encoder** (m54 frente a m55: −0,6 M en el total, +0,2 M en Chapinero), aunque el encoder no ve los números (piso, antigüedad, parqueaderos) que extraen las expresiones regulares.
+- **La red y los árboles leen el texto parecido, no igual** (`96_texto_modelos.R`): sus componentes de texto tienen correlación 0,80 y sus perfiles de términos 0,96; en el 4,9 % de los anuncios empujan en sentidos opuestos (más de 2 % cada uno).
+- m53 se subió como `m51_en_sin_texto.csv` y se renombró porque `main` ya usa m51 (D28). El MAE de m12_en_m02 en el registro actual (135,0) es el de la base nueva: el main lo volvió a entrenar (D27).
+
 ### 2.3 Random forest (m03) y XGBoost (m04, m05)
 - **Random forest:** gana mtry = 35, min.node.size = 3. Es el peor en Chapinero (183 M), porque las hojas promedian precios de zonas más baratas.
 - **XGBoost:** gana profundidad 4, mcw = 3, con 550 rondas. Los árboles más profundos extrapolan peor (profundidad 8: 170,6 M en Chapinero).

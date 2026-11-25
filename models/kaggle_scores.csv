@@ -17,3 +17,8 @@ m36_nn_star_vecinos_m2,m36_nn_star_vecinos_m2.csv,160691854.98,2026-11-23
 m37_star_nn_xgb_m2,m37_star_nn_xgb_m2.csv,156830169.35,2026-11-23
 m39_star_nn_xgbcomp_m2,m39_star_nn_xgbcomp_m2.csv,154532268.74,2026-11-23
 m48_star_nn_xgbsq_area_m2,m48_star_nn_xgbsq_area_m2.csv,153326455.92,2026-11-23
+m14_en_enc_tx,en_enc_tx.csv,168831256.43,2026-11-20
+m12_en_m02,m12_en_m02.csv,184367537.50,2026-11-24
+m12_en_m02_pca_tx,m12_en_m02_pca_tx.csv,175913947.38,2026-11-24
+m52_nn_star_sin_texto_m2,m52_nn_star_sin_texto_m2.csv,171673396.75,2026-11-24
+m53_en_sin_texto,m51_en_sin_texto.csv,198632754.46,2026-11-24

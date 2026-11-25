@@ -38,6 +38,7 @@ BANDERAS <- c(DESCARGAS = DESCARGAS, PYTHON = PYTHON, REDES = REDES, LENTOS = LE
 # ---- 2. Pasos, en orden de ejecución ----
 # bandera NA = siempre | env: variante del script | produce: salidas que usan otros pasos | requiere: sf, keras o entorno
 d <- function(...) file.path("data", ...)
+tp <- function(...) file.path("output", "tables", "03_presentacion", ...)
 pasos <- tribble(
   ~etapa,                    ~script,                         ~bandera,    ~env,                        ~produce,                                                                  ~requiere,
   "1. Datos externos",       "01b_osm_descarga.R",            "DESCARGAS", "",                          d("external", "osm", c("localidades_poligonos.csv", "servicios_puntos.csv", "barrios_nombres.csv")), "",
@@ -55,6 +56,7 @@ pasos <- tribble(
   "3. Modelos",              "04_regresiones.R",              NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04b_elastic_net.R",             NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04c_elastic_net_pca.R",         NA,          "",                          character(0),                                                              "",
+  "3. Modelos",              "04g_en_sin_texto.R",            NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04d_diagnostico_ubicacion.R",   NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "05_random_forest.R",            "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "05b_cart.R",                    NA,          "",                          character(0),                                                              "",
@@ -73,6 +75,9 @@ pasos <- tribble(
   "5. STAR y redes",         "08g_nn_general_twcv.R",         "REDES",     "GANADORA=twcv",             character(0),                                                              "keras",
   "5. STAR y redes",         "08_xgb_star.R",                 "LENTOS",    "CATASTRO=no",               character(0),                                                              "",
   "5. STAR y redes",         "08b_en_star.R",                 "LENTOS",    "",                          character(0),                                                              "",
+  # 04h usa los encoders por fold de 08 (models/star_encoders_folds.rds, no se versiona)
+  "5. STAR y redes",         "04h_en_encoder_sin_dummies.R",  "LENTOS",    "",                          character(0),                                                              "",
+  "5. STAR y redes",         "08r_xgb_star_sin_texto.R",      "LENTOS",    "",                          character(0),                                                              "",
   "5. STAR y redes",         "08h_nn_star_catastro.R",        "REDES",     "",                          character(0),                                                              "keras",
   "5. STAR y redes",         "08i_nn_star_catastro.R",        "REDES",     "",                          character(0),                                                              "keras",
   "5. STAR y redes",         "08g_nn_general_twcv.R",         "REDES",     "GANADORA=catastro",         character(0),                                                              "keras",
@@ -92,7 +97,13 @@ pasos <- tribble(
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=area_sq_general",  character(0),                                                              "",
   "6. Ensambles y cierre",   "94_star_nn_xgb.R",              NA,          "",                          character(0),                                                              "",
   "6. Ensambles y cierre",   "90_comparacion.R",              NA,          "",                          character(0),                                                              "",
-  "6. Ensambles y cierre",   "91_validacion_sintetica.R",     NA,          "",                          character(0),                                                              ""
+  "6. Ensambles y cierre",   "91_validacion_sintetica.R",     NA,          "",                          character(0),                                                              "",
+  # presentación (reports/03_presentacion): 96-99 dejan tablas y figuras; 95 las junta y compila el .tex
+  "7. Presentación",         "96_texto_modelos.R",            "REDES",     "",                          tp(c("texto_terminos.csv", "texto_componentes.csv", "texto_comparacion.csv")),"keras",
+  "7. Presentación",         "97_shap_ensamble.R",            "REDES",     "",                          tp("shap_grupos.csv"),                                                     "keras",
+  "7. Presentación",         "98_mapas_star.R",               "REDES",     "",                          tp("mapas_ubicacion.csv"),                                                 "keras",
+  "7. Presentación",         "99_negocio.R",                  NA,          "",                          character(0),                                                              "",
+  "7. Presentación",         "95_presentacion.R",             NA,          "",                          character(0),                                                              ""
 )
 stopifnot(all(file.exists(file.path(P$code, pasos$script))))
 if (nzchar(DESDE)) {

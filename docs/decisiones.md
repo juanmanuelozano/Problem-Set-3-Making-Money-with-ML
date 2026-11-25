@@ -258,3 +258,13 @@ Se agregan a la base (`01b_osm_descarga.R` las descarga y `02_descriptivas.R` la
 - El catastro (03f, 03h) se descarga solo si falta, con `descarga_zip()`.
 
 **Por qué:** cualquier miembro del equipo, o el evaluador, puede reproducir todo con `source("code/00_main.R")` en Windows o en macOS, sin saber el orden de los scripts ni cómo se instala Python.
+
+### D28 · La presentación entra al main; sus análisis usan los envíos tal como se calificaron (2026-11-25)
+**Contexto:** la presentación (`reports/03_presentacion/compare_equipo_4.tex`) se armó en la rama `redes-neuronales` con scripts sueltos (95–99) y tres ablaciones del texto (04g, 04h, 08r). Mientras tanto, `main` reorganizó el repositorio (D27) y, al correr el main con las banderas por defecto, volvió a entrenar varios modelos que ya estaban calificados en Kaggle (m04, m02b, m11_cart_m2_mse, reg_ols_sin_loc, m12_*). Sus archivos actuales (registro, OOF y envío) ya no son los que recibieron el puntaje. También cambiaron los pesos TWCV (`pesos_validacion.csv`), porque cambió la base.
+**Decisión:**
+- Los scripts de la presentación pasan a `code/` y al main, en la etapa "7. Presentación": 96, 97 y 98 con la bandera `REDES` (reentrenan redes); 99 y 95 siempre. El 95 compila el `.tex` con `latexmk` si está instalado. Figuras y tablas van a `output/figures|tables/03_presentacion/`; el `.tex` y el PDF se quedan en `reports/03_presentacion/`.
+- **La comparación validación–Kaggle (moraleja 4) usa los modelos tal como se subieron:** `95_presentacion.R` lee el registro, las OOF, los envíos y los pesos TWCV del commit `f5786a2` (`ENVIADOS`). Lo que no estaba en ese commit (m52, m53…) sale de los archivos actuales. Los archivos de la rama de María José salen del commit fijo `b4948f0` (`VALIDACION_SINTETICA`), no del nombre de la rama, que puede avanzar.
+- Los modelos que se reproducen con bases anteriores (04g y 97, con la base del commit `87b076a`) leen esos archivos con `desde_git()` de `01_setup.R`.
+- **Nombres:** `m51_en_sin_texto` pasa a **m53_en_sin_texto**, porque `main` ya usa m51 para el XGB ponderado. En `kaggle_scores.csv`, `archivo_subido` conserva el nombre con que se subió (`m51_en_sin_texto.csv`).
+
+**Por qué:** correlacionar el puntaje de Kaggle con las predicciones de un modelo reentrenado mezcla dos modelos distintos. Con los commits fijos, la presentación se reproduce con las mismas cifras aunque el main vuelva a entrenar los modelos o la otra rama avance. **Límite:** las tablas descriptivas del PCA del texto (diapositiva 4) salen de la corrida actual de `03e_pca.R`, así que pueden moverse un poco si cambia el TF-IDF.

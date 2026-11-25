@@ -5,7 +5,7 @@ Este repositorio predice el precio de venta de viviendas en Bogotá con datos de
 | | |
 |---|---|
 | Mejor envío en Kaggle | `m48_star_nn_xgbsq_area_m2`: NN STAR con catastro + XGB STAR con comparables. MAE público de **153,3 M** |
-| Informes | [Descriptivas y motivación espacial](reports/01_descriptivas/informe_descriptivas.md) · [Modelación](reports/02_modelos/informe_modelos.md) |
+| Informes | [Descriptivas y motivación espacial](reports/01_descriptivas/informe_descriptivas.md) · [Modelación](reports/02_modelos/informe_modelos.md) · [Presentación](reports/03_presentacion/compare_equipo_4.pdf) |
 | Historial y decisiones | [`BITACORA.md`](BITACORA.md) · [`docs/decisiones.md`](docs/decisiones.md) |
 
 ---
@@ -56,8 +56,8 @@ Están al principio de `code/00_main.R`. También se encienden con las opciones 
 |---|---|---|---|
 | `DESCARGAS` (`--descargas`) | OpenStreetMap (`01b`) y catastro de Bogotá (`03f`, `03h`) | 10–30 min | se usa la caché de `data/` |
 | `PYTHON` (`--python`) | texto con ConTexto (`03c`), TF-IDF (`03d`) y embeddings (`03g`) | 20–30 min, más la primera instalación | se usan los archivos guardados |
-| `REDES` (`--redes`) | redes neuronales con Keras (`08c`–`08q`) y XGB STAR con comparables (`08p`) | varias horas | se usan las predicciones registradas |
-| `LENTOS` (`--lentos`) | buffer (`03b`), random forests (`05`, `05c`), `nnet` (`09`), XGB ponderado (`10`), XGB STAR (`08`, `08b`) | 4–5 h | se usan las predicciones registradas |
+| `REDES` (`--redes`) | redes neuronales con Keras (`08c`–`08q`), XGB STAR con comparables (`08p`) y los análisis de la presentación que reentrenan redes (`96`–`98`) | varias horas | se usan las predicciones y tablas guardadas |
+| `LENTOS` (`--lentos`) | buffer (`03b`), random forests (`05`, `05c`), `nnet` (`09`), XGB ponderado (`10`), XGB STAR (`08`, `08b`) y las ablaciones del texto con el STAR (`04h`, `08r`) | 4–5 h | se usan las predicciones registradas |
 | `PRUEBA` (`--prueba`) | grillas mínimas en las redes y en los XGB STAR | minutos | — |
 
 **Regla de seguridad.** Un paso apagado **corre de todos modos** si falta alguno de los archivos que produce y que otros pasos necesitan. Por ejemplo, en un clon nuevo faltan `tfidf.parquet` y `base_texto.rds`, que no se suben a git por su tamaño. En ese caso el main corre `03d` y `03e` aunque `PYTHON = FALSE`, y crea el entorno de Python si no existe.
@@ -67,6 +67,7 @@ Están al principio de `code/00_main.R`. También se encienden con las opciones 
 - `output/figures/` y `output/tables/`, con subcarpetas `01_descriptivas/` y `02_modelos/`: todas las figuras y tablas de los informes.
 - `models/registro_modelos.csv` (métricas de cada modelo), `models/oof_predicciones.csv` y `models/test_predicciones.csv`.
 - `submissions/<modelo>.csv`: archivos listos para Kaggle.
+- `reports/03_presentacion/compare_equipo_4.pdf`: la presentación, que `95_presentacion.R` compila con `latexmk` si está instalado (TeX Live o MiKTeX). Sus figuras y cifras quedan en `output/figures|tables/03_presentacion/`.
 - `output/session_info.txt`: versión de R, sistema operativo y versión de cada paquete (`sessioninfo::session_info()`).
 - `output/python_<entorno>.txt`: versión de Python y paquetes exactos (`pip freeze`) de cada entorno usado.
 - `output/logs/<script>.log` y `output/logs/resumen_corrida.csv`: la salida completa de cada script, qué corrió, qué se saltó y por qué, y cuánto tardó cada paso. No se versionan.
@@ -130,6 +131,7 @@ Problem-Set-3-Making-Money-with-ML/
 │   ├── 01b_ … 03h_          ← datos externos, descriptivas, texto y variables
 │   ├── 04_ … 10_            ← un script por familia de modelos
 │   ├── 90_ … 94_            ← comparación, validación ponderada y ensambles
+│   ├── 95_ … 99_            ← figuras, cifras y compilación de la presentación
 │   ├── utils_*.R            ← validación cruzada, registro de modelos, redes, comparables
 │   └── exploratorio/        ← verificaciones que no forman parte de la corrida
 ├── data/
@@ -140,12 +142,12 @@ Problem-Set-3-Making-Money-with-ML/
 ├── models/                  ← registro de métricas y predicciones OOF y de test
 ├── submissions/             ← un .csv por modelo, listo para Kaggle
 ├── output/
-│   ├── figures/             ← 01_descriptivas/, 02_modelos/
-│   ├── tables/              ← 01_descriptivas/, 02_modelos/
+│   ├── figures/             ← 01_descriptivas/, 02_modelos/, 03_presentacion/
+│   ├── tables/              ← 01_descriptivas/, 02_modelos/, 03_presentacion/
 │   ├── logs/                ← salida de cada corrida (no se versiona)
 │   └── session_info.txt     ← entorno de R de la última corrida
-├── reports/                 ← informes en Markdown (enlazan a output/)
-└── docs/                    ← decisiones metodológicas, guía de variables, enunciado
+├── reports/                 ← informes en Markdown (enlazan a output/) y la presentación en LaTeX (03_presentacion/)
+└── docs/                    ← decisiones metodológicas, guía de variables (y variables de los modelos finales), enunciado
 ```
 
 ### Scripts por etapa
@@ -158,9 +160,10 @@ La numeración sigue el orden lógico del proyecto: `0x` son datos y descriptiva
 | Datos externos | `01b_osm_descarga.R` | localidades, UPZ, barrios, servicios, vías, parques y edificios de OpenStreetMap (Overpass, con caché) |
 | Descriptivas | `02_descriptivas.R`, `02b_extremos.R`, `02c_composicion_test.R` | informe 1: mapas, gradientes, extremos, composición de train y test |
 | Variables | `03_features.R`, `03b_buffer.R`, `03c`/`03d`/`03g` (Python), `03e_pca.R`, `03f_catastro.R`, `03h_construcciones.R` | imputaciones, folds de validación, buffer, texto, PCA, catastro |
-| Modelos | `04`–`07`, `09`, `10` | OLS, elastic net, CART, random forest, XGBoost, híbridos, `nnet`, XGBoost ponderado |
-| STAR y redes | `08`–`08q` | XGB STAR, elastic net con encoders, NN STAR y red general (Keras) |
+| Modelos | `04`–`07`, `09`, `10` | OLS, elastic net, CART, random forest, XGBoost, híbridos, `nnet`, XGBoost ponderado; `04g` es el elastic net sin texto (ablación) |
+| STAR y redes | `08`–`08r`, `04h` | XGB STAR, elastic net con encoders, NN STAR y red general (Keras); ablaciones del texto (`04h`, `08l`, `08r`) |
 | Ensambles | `90_comparacion.R`, `91_validacion_sintetica.R`, `94_star_nn_xgb.R` | comparación, validación ponderada hacia el test (TWCV), combinaciones STAR |
+| Presentación | `96_texto_modelos.R`, `97_shap_ensamble.R`, `98_mapas_star.R`, `99_negocio.R`, `95_presentacion.R` | texto en la red y en los árboles, SHAP del ensamble, mapas de ubicación, sesgo por localidad; `95` arma las figuras y cifras y compila el `.tex` |
 
 ### Convenciones del código
 
@@ -174,5 +177,6 @@ La numeración sigue el orden lógico del proyecto: `0x` son datos y descriptiva
 ## Problemas conocidos
 
 - **Control de aplicaciones de Windows.** En algunos equipos bloquea paquetes compilados como `sf`. Si `sf` no carga, el main salta `03f` y `03h` con un aviso y usa `catastro.csv` y `construcciones.csv`, que están en git.
+- **Archivos de commits anteriores.** `04g`, `95` y `97` reproducen modelos con bases o envíos anteriores y los leen de git (`desde_git()`, commits fijos; D28). Hace falta un clon completo (no `--depth 1`), con la rama `validacion-sintetica` del remoto, y git en el PATH.
 - **Tiempos.** La corrida por defecto reutiliza los modelos caros. Con `--todo`, la reproducción completa tarda varias horas; las redes y el XGB STAR son la mayor parte.
 - **Modelos de versiones anteriores del código.** Algunos modelos del registro (por ejemplo, `m04_xgboost` y `m17_nn_star`) se entrenaron con la base anterior a D14 y D15. Si se vuelven a correr, sus scripts usan la base actual, y las métricas pueden cambiar respecto de las del informe. El detalle está en la bitácora.

@@ -1,0 +1,41 @@
+modelo,grupo,shap_abs
+nn,Área,0.36269630684318765
+nn,Habitaciones y baños,0.06106245521949197
+nn,Tipo de inmueble,0.02991910198934097
+nn,Texto: dummies y números,0.043542461324032763
+nn,Fecha,0.011107786045785589
+nn,Estrato,0.12350937208671213
+nn,Coordenadas,0.007589140619762914
+nn,Entorno (OSM),0.11776943888664451
+nn,Texto: TF-IDF o encoder,0.07281021255761244
+nn,Comparables (precio de vecinos),0
+xgb,Área,0.2763145915118207
+xgb,Habitaciones y baños,0.02926887058201373
+xgb,Tipo de inmueble,0.008914594345010301
+xgb,Texto: dummies y números,0.059880052688495285
+xgb,Fecha,0.0056840307088496045
+xgb,Estrato,0.05933115444251962
+xgb,Coordenadas,0.021827221763876935
+xgb,Entorno (OSM),0.0726310710033533
+xgb,Texto: TF-IDF o encoder,0
+xgb,Comparables (precio de vecinos),0.1234415289930339
+en,Área,0.2530533761023047
+en,Habitaciones y baños,0.022002625531859287
+en,Tipo de inmueble,0.06415869176746003
+en,Texto: dummies y números,0.026591565051231815
+en,Fecha,0.008620981441964801
+en,Estrato,0.04292711002016521
+en,Coordenadas,0.005106423087312539
+en,Entorno (OSM),0.10013390426711555
+en,Texto: TF-IDF o encoder,0.12908580801680314
+en,Comparables (precio de vecinos),0
+ens,Área,0.31911509980233466
+ens,Habitaciones y baños,0.03903477728471077
+ens,Tipo de inmueble,0.008211727046288723
+ens,Texto: dummies y números,0.04613219559591575
+ens,Fecha,0.007331922818705396
+ens,Estrato,0.0907198784225013
+ens,Coordenadas,0.008964040452214345
+ens,Entorno (OSM),0.0964713772200928
+ens,Texto: TF-IDF o encoder,0.046414787544610536
+ens,Comparables (precio de vecinos),0.04930247254076121

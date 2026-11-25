@@ -28,3 +28,15 @@ data/external/catastro/
 
 # Salidas de cada corrida de code/00_main.R (no se versionan)
 output/logs/
+
+# Auxiliares de LaTeX (la presentación se compila en reports/03_presentacion) y basura de R/macOS
+reports/**/*.aux
+reports/**/*.fdb_latexmk
+reports/**/*.fls
+reports/**/*.log
+reports/**/*.nav
+reports/**/*.out
+reports/**/*.snm
+reports/**/*.toc
+Rplots.pdf
+.DS_Store

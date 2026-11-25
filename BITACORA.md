@@ -4,9 +4,9 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 ---
 
-## Estado actual (2026-11-24)
+## Estado actual (2026-11-25)
 
-**Reproducción:** todo se corre con `code/00_main.R` (D27; instrucciones en el [README](README.md)). El código está en `code/` y las figuras y tablas en `output/`.
+**Reproducción:** todo se corre con `code/00_main.R` (D27; instrucciones en el [README](README.md)). El código está en `code/` y las figuras y tablas en `output/`. La presentación (`reports/03_presentacion/compare_equipo_4.pdf`) también sale del main (etapa 7, D28).
 
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
@@ -45,8 +45,10 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [ ] Subir `m15_rf_m2.csv` a Kaggle (RF por m²: 177,3 M en Chapinero en la validación)
 - [ ] Llegar a ≥ 20 envíos a Kaggle con las 6 familias (van 9)
 - [ ] CV aleatoria frente a CV espacial: ¿cuál ordena los modelos como el leaderboard?
-- [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
-- [ ] Presentaciones `best_equipo_XX` y `compare_equipo_XX`
+- [x] Análisis de negocio: sesgo por localidad, k* y "Messis" de Chapinero (`99_negocio.R`, moraleja de negocio)
+- [x] Presentación `compare_equipo_4` (`95`–`99`); `best_equipo_04` está en la rama `validacion-sintetica`
+- [ ] Correr el main completo en macOS y `08r_xgb_star_sin_texto.R` (no se alcanzó en la sesión 12)
+- [ ] Unir `validacion-sintetica` (7 commits que no están en main) y, con eso, pasar `95`/`97` a leer de main en lugar del commit `b4948f0`
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
 - [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por distancia al test bajan el sesgo de −100 a −61 M y el TWCV en 6,6 M (m51). Falta probarlos en el elastic net (m14) y en el híbrido m06, y confirmarlo en Kaggle
@@ -72,6 +74,31 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 **La propuesta:** para las localidades cercanas a la media de precios hay más datos parecidos y menos extrapolación, así que un modelo de ML sería más efectivo y confiable ahí (Usaquén: MAE ~125 M). Para un mercado de lujo como Chapinero haría falta un modelo con datos propios de la zona, una calibración del nivel o información externa sobre el nivel de precios (por ejemplo, el valor catastral del suelo, D18).
 
 **Matiz para la discusión:** si el modelo se usa para comprar, la subpredicción hace perder negocios (ofertas demasiado bajas), mientras que la sobrepredicción hace pagar de más. Hay que discutir cuál de los dos errores le cuesta más a la empresa (el análisis de negocio está en los pendientes).
+
+---
+
+## 2026-11-25 · Sesión 12: la presentación y las ablaciones del texto entran a la estructura de main (D28)
+
+Trabajo de `redes-neuronales` que no estaba en `main` (sin commitear), pasado a la estructura de D27 en la rama `integracion-main`:
+- **Ablaciones del texto (moraleja 1):**
+  - `04g_en_sin_texto.R` → **m53_en_sin_texto** (antes `m51_en_sin_texto`; m51 ya era el XGB ponderado de main). Elastic net de m02 sin las variables del texto, con la base del 18/11 (commit `87b076a`). Kaggle 198,6, frente a 184,4 de m12_en_m02 y 168,8 de m14.
+  - `04h_en_encoder_sin_dummies.R` → m54 (dummies + encoder) y m55 (solo encoder): 134,8 / 144,4 y 135,4 / 144,2. Las dummies casi no aportan si ya está el encoder.
+  - `08l_nn_star_ramas.R` ahora registra **m52_nn_star_sin_texto_m2** (rama de texto apagada; Kaggle 171,7 frente a 156,3 de m24) y guarda el TWCV de cada variante.
+  - `08r_xgb_star_sin_texto.R` → m56 (XGB STAR de m22 sin el grupo TF-IDF): 138,5 / 164,6, TWCV 146,1 frente a 140,1.
+  - Detalle en la sección 2.2f del [informe de modelos](reports/02_modelos/informe_modelos.md).
+- **Presentación (`reports/03_presentacion/compare_equipo_4.tex`):** `96_texto_modelos.R` (texto en la red y en el XGB), `97_shap_ensamble.R` (SHAP del ensamble m24_ens_optimo), `98_mapas_star.R` (ubicación de m48 en el mapa), `99_negocio.R` (sesgo por localidad, k*, "Messis") y `95_presentacion.R` (figuras, tablas, `numeros.tex` y compilación con latexmk).
+- **Cambios al pasarlos a main:**
+  - Todos van en la tabla `pasos` de `00_main.R`: 04g, 99 y 95 siempre; 04h y 08r con `LENTOS`; 96–98 con `REDES` (y corren solos si falta su tabla).
+  - Rutas solo desde `P` (`P$fig_pres`, `P$tab_pres`, `P$pres`, nuevas en `01_setup.R`); figuras y tablas en `output/*/03_presentacion/`; el `.tex` lee de ahí (`\graphicspath`, `\tablas`). Sin `p_load` en los scripts. Estilo tidyverse en los archivos nuevos.
+  - `desde_git()` y `lee_csv_git()` en `01_setup.R` reemplazan los `system2("git", ...)` sueltos. La rama de María José se lee del commit fijo `b4948f0`, no de `origin/validacion-sintetica`.
+  - **Corrección (D28):** `main` volvió a entrenar modelos que ya estaban calificados en Kaggle (m04, m02b, m12_*, m11_cart_m2_mse, reg_ols_sin_loc), así que la tabla validación–Kaggle de la moraleja 4 los habría cruzado con un puntaje que no es suyo. `95` ahora lee registro, OOF, envíos y pesos TWCV del commit `f5786a2`, el de los envíos.
+  - `04g` comparaba su reproducción de m12 con el registro, que main cambió (135,0 con la base nueva): ahora compara con el valor de la base del 18/11 (132,2).
+  - `.gitignore`: auxiliares de LaTeX, `Rplots.pdf` y `.DS_Store`.
+- **Verificación (macOS):**
+  - `00_main.R --solo=04g,04h,96,97,98,99,95` corre sin errores en 5,4 min. 04g reproduce m12_en_m02 (132,2); m53, m54 y m55 dan envíos idénticos byte a byte; 96 y 98 reproducen m24 y m47 (correlación 1,000 en el test); el ensamble se reproduce con una diferencia mediana de 0,003 %.
+  - Las 7 tablas `.tex` y las cifras de `numeros.tex` y `numeros_negocio.tex` salen **idénticas** a las de la presentación original, y el PDF se compila desde el main.
+  - Todos los `.R` de `code/` se leen sin errores de sintaxis.
+  - **No se corrió:** el main completo con las banderas por defecto en macOS ni `08r` (su m56 ya estaba registrado). Quedan pendientes.
 
 ---
 

@@ -1,19 +1,11 @@
 # =============================================================================
-# 00_main.R - Script maestro: reproduce el proyecto de principio a fin (R y Python) en Windows y macOS
-#
-# Uso (ver README.md):
-#   - RStudio: abrir Problem-Set-3-Making-Money-with-ML.Rproj y correr source("code/00_main.R").
-#   - Terminal, desde cualquier carpeta:  Rscript code/00_main.R   (opciones: --todo, --descargas, --python, --redes,
-#     --lentos, --prueba, --solo=a.R,b.R; por ejemplo, Rscript code/00_main.R --todo reproduce todo desde cero).
-#
-# Cada script corre en un proceso de R (o de Python) NUEVO, con la raíz del proyecto como directorio de trabajo: ningún
-# objeto pasa de un script a otro, solo los archivos que cada uno guarda. La salida de cada script queda en
-# output/logs/<script>.log. Si un script falla, la corrida se detiene y dice cuál fue y dónde está su log.
-# Al final se escriben output/session_info.txt (paquetes de R) y output/python_<entorno>.txt (paquetes de Python).
+# 00_main.R - Script maestro: corre todo el proyecto (R y Python)
+# Uso: source("code/00_main.R") con el .Rproj abierto, o Rscript code/00_main.R [--todo --descargas --python --redes
+#      --lentos --prueba --solo=a.R,b.R --desde=a.R]. Ver README.md.
+# Cada script corre en un proceso aparte; su salida queda en output/logs/. Al final: output/session_info.txt.
 # =============================================================================
-# Si se llama desde una carpeta fuera del proyecto (Rscript <ruta>/code/00_main.R), se ubica la raíz a partir de la ruta
-# de este archivo; dentro del proyecto (RStudio con el .Rproj, o la terminal en cualquier subcarpeta) here() ya la encuentra.
-local({
+local({   # raíz del proyecto cuando se llama desde otra carpeta
+
   f <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE))
   if (!length(f)) f <- tryCatch(sys.frame(1)$ofile, error = function(e) NULL)
   if (length(f) && !file.exists(file.path(here::here(), "code", "00_main.R"))) {
@@ -23,17 +15,15 @@ local({
 source(here::here("code", "01_setup.R"))
 
 # ---- 1. Interruptores ----
-# Con todo en FALSE se corre la línea principal (descriptivas, base de modelación y modelos rápidos) y se reutilizan los
-# resultados guardados de lo demás. Un paso apagado igual corre si falta alguno de los archivos que produce y que otros
-# pasos necesitan (por ejemplo, en un clon nuevo faltan tfidf.parquet y base_texto.rds, que no están en git).
-DESCARGAS <- FALSE  # OpenStreetMap (01b) y catastro (03f, 03h): descargas de internet; si no, se usa la caché de data/
-PYTHON    <- FALSE  # texto con ConTexto (03c), TF-IDF (03d) y embeddings (03g); crea los entornos de Python si faltan
-REDES     <- FALSE  # redes neuronales con Keras (08c-08q, 08p): varias horas; crea el entorno de TensorFlow si falta
-LENTOS    <- FALSE  # buffer (03b), random forests (05, 05c), red nnet (09), XGB ponderado (10), XGB STAR (08, 08b)
-PRUEBA    <- FALSE  # TRUE: las redes y los XGB STAR corren con grillas mínimas (flujo completo en minutos, PRUEBA=1)
-SOLO_PASOS <- character(0)   # p. ej. c("04_regresiones.R", "90_comparacion.R"): corre solo esos pasos, sin mirar banderas
+# En FALSE se usan los resultados guardados; un paso apagado corre igual si falta un archivo que produce.
+DESCARGAS <- FALSE  # OpenStreetMap (01b) y catastro (03f, 03h)
+PYTHON    <- FALSE  # texto (03c), TF-IDF (03d) y embeddings (03g)
+REDES     <- FALSE  # redes con Keras (08c-08q) y 08p; varias horas
+LENTOS    <- FALSE  # 03b, 05, 05c, 09, 10, 08 y 08b
+PRUEBA    <- FALSE  # grillas mínimas en redes y XGB STAR (PRUEBA=1)
+SOLO_PASOS <- character(0)   # p. ej. c("04_regresiones.R"): solo esos pasos
+DESDE      <- ""             # p. ej. "04b_elastic_net.R": retoma desde ese paso
 
-# Opciones de la línea de comandos (sobrescriben lo anterior)
 args <- commandArgs(trailingOnly = TRUE)
 if ("--todo" %in% args) DESCARGAS <- PYTHON <- REDES <- LENTOS <- TRUE
 if ("--descargas" %in% args) DESCARGAS <- TRUE
@@ -42,12 +32,11 @@ if ("--redes" %in% args) REDES <- TRUE
 if ("--lentos" %in% args) LENTOS <- TRUE
 if ("--prueba" %in% args) PRUEBA <- TRUE
 if (any(startsWith(args, "--solo="))) SOLO_PASOS <- strsplit(sub("^--solo=", "", grep("^--solo=", args, value = TRUE)[1]), ",")[[1]]
+if (any(startsWith(args, "--desde="))) DESDE <- sub("^--desde=", "", grep("^--desde=", args, value = TRUE)[1])
 BANDERAS <- c(DESCARGAS = DESCARGAS, PYTHON = PYTHON, REDES = REDES, LENTOS = LENTOS)
 
 # ---- 2. Pasos, en orden de ejecución ----
-# script: archivo en code/ | bandera: NA = siempre; si no, el interruptor que lo enciende | env: variables de entorno
-# (variantes del mismo script) | produce: archivos que otros pasos necesitan (si falta alguno, el paso corre igual)
-# requiere: "sf", "keras" o el entorno de Python ("texto", "emb") | etapa: para el resumen.
+# bandera NA = siempre | env: variante del script | produce: salidas que usan otros pasos | requiere: sf, keras o entorno
 d <- function(...) file.path("data", ...)
 pasos <- tribble(
   ~etapa,                    ~script,                         ~bandera,    ~env,                        ~produce,                                                                  ~requiere,
@@ -74,7 +63,7 @@ pasos <- tribble(
   "3. Modelos",              "07_hibridos.R",                 NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "09_red_neuronal.R",             "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "10_xgb_ponderado.R",            "LENTOS",    "",                          character(0),                                                              "",
-  # Pesos de la validación ponderada (TWCV, D16): los usan los XGB STAR y las redes para elegir hiperparámetros
+  # pesos TWCV (D16) para 08*
   "4. Validación ponderada", "91_validacion_sintetica.R",     "LENTOS|REDES", "",                       d("processed", "pesos_validacion.csv"),                                    "",
   "5. STAR y redes",         "08c_nn_star.R",                 "REDES",     "",                          character(0),                                                              "keras",
   "5. STAR y redes",         "08d_nn_general.R",              "REDES",     "",                          character(0),                                                              "keras",
@@ -95,7 +84,7 @@ pasos <- tribble(
   "5. STAR y redes",         "08k_nn_star_comparables.R",     "REDES",     "",                          character(0),                                                              "keras",
   "5. STAR y redes",         "08o_nn_star_datos_nuevos.R",    "REDES",     "",                          character(0),                                                              "keras",
   "5. STAR y redes",         "08q_nn_general_m24.R",          "REDES",     "",                          character(0),                                                              "keras",
-  # 08p elige el peso de su combinación con la red de 08k (models/nn_star_comparables.rds): va con las redes
+  # 08p usa models/nn_star_comparables.rds (08k)
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=",                 character(0),                                                              "",
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=distinto",         character(0),                                                              "",
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=area",             character(0),                                                              "",
@@ -106,6 +95,10 @@ pasos <- tribble(
   "6. Ensambles y cierre",   "91_validacion_sintetica.R",     NA,          "",                          character(0),                                                              ""
 )
 stopifnot(all(file.exists(file.path(P$code, pasos$script))))
+if (nzchar(DESDE)) {
+  if (!DESDE %in% pasos$script) stop("--desde: no hay un paso llamado ", DESDE)
+  pasos <- pasos[seq(match(DESDE, pasos$script), nrow(pasos)), ]
+}
 
 # ---- 3. Funciones de ejecución ----
 rscript <- file.path(R.home("bin"), if (.Platform$OS.type == "windows") "Rscript.exe" else "Rscript")
@@ -113,12 +106,12 @@ min_desde <- function(t) as.numeric(difftime(Sys.time(), t, units = "mins"))
 nombre_log <- function(p) file.path(P$logs, paste0(tools::file_path_sans_ext(p$script),
                                                    if (nzchar(p$env)) paste0("__", gsub("[^A-Za-z0-9]+", "_", p$env)), ".log"))
 vars_de <- function(p) {
-  v <- c(PRUEBA = if (PRUEBA) "1" else "", PYTHONUTF8 = "1")   # PYTHONUTF8: tildes bien impresas en Windows
+  v <- c(PRUEBA = if (PRUEBA) "1" else "", PYTHONUTF8 = "1")
   if (nzchar(p$env)) { kv <- strsplit(p$env, "=", fixed = TRUE)[[1]]; v[kv[1]] <- if (length(kv) > 1) kv[2] else "" }
   v
 }
 
-# ¿Corre el paso? Devuelve "" si corre o el motivo por el que se salta
+# "" si el paso corre; si no, el motivo
 decide <- function(p) {
   faltan <- p$produce[[1]][!file.exists(here(p$produce[[1]]))]
   if (length(SOLO_PASOS)) { if (!p$script %in% SOLO_PASOS) return("no está en SOLO_PASOS") }
@@ -159,16 +152,14 @@ for (i in seq_len(nrow(pasos))) {
   t <- Sys.time(); corre(p)
   resumen[[i]] <- tibble(etapa = p$etapa, paso = etiqueta, estado = "corrió", minutos = round(min_desde(t), 1), motivo = "")
 }
-resumen <- bind_rows(resumen)   # (los pasos fuera de SOLO_PASOS no aparecen)
+resumen <- bind_rows(resumen)
 write_csv(resumen, file.path(P$logs, "resumen_corrida.csv"))
 cat(sprintf("\n=== Resumen (%.1f min en total) ===\n", min_desde(T0)))
 print(as.data.frame(resumen), right = FALSE, row.names = FALSE)
 
-# ---- 5. Información de la sesión ----
-# R: los paquetes cargados por 01_setup.R son los mismos que usan todos los scripts.
+# ---- 5. Información de la sesión (R y entornos de Python) ----
 si <- sessioninfo::session_info(to_file = file.path(P$output, "session_info.txt"))
 print(si)
-# Python: versiones exactas de cada entorno que exista
 for (n in names(VENVS)) if (hay_venv(n)) {
   r <- processx::run(python_de(dir_venv(n)), c("-m", "pip", "freeze"), error_on_status = FALSE)
   v <- processx::run(python_de(dir_venv(n)), "--version", error_on_status = FALSE)

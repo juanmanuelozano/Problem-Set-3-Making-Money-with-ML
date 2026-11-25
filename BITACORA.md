@@ -96,6 +96,7 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
   - Archivo nuevo: `requirements-emb.txt`, para el entorno de embeddings, que antes solo estaba documentado en un comentario.
   - `utils_redes.R` usa `dir_venv("tf")`.
 - **Corrección:** `08e_nn_star_afinacion.R` tenía una comilla mal puesta en la descripción de `registra()` y no se podía ni leer (error de sintaxis en `main`). Se corrigió.
+- **Corrección:** `04_regresiones.R` fallaba con la base actual, porque `area_verde500` y `pisos_prom500` (D15) no estaban en ningún bloque. Se agregaron al bloque de ubicación (regla `500$`, como en las redes). El main ahora acepta `--desde=<script>` para retomar una corrida.
 - **Nombres:** los XGB ponderados m17 y m17b pasan a **m51_xgb_ponderado** y **m51b_xgb_tipo_dist**, porque chocaban con `m17_nn_star`. Se renombraron en el registro, en las predicciones, en los envíos y en los textos; no se reentrenó nada.
 - **Documentación:**
   - README reescrito: cómo correr en RStudio y en la terminal, interruptores, R frente a Python, entornos, estructura y problemas conocidos.

@@ -29,8 +29,7 @@ from contexto.correccion import Corrector
 from contexto.lematizacion import LematizadorSpacy
 from contexto.exploracion import frecuencia_ngramas, par_nubes
 
-# Rutas absolutas desde la raíz del proyecto (carpeta que contiene code/): el script funciona sin importar el directorio
-# desde el que se llame. Lo corre code/00_main.R con el python del entorno correspondiente.
+# Rutas desde la raíz del proyecto (la carpeta que contiene code/)
 RAIZ = Path(__file__).resolve().parents[1]
 TAB = RAIZ / "output" / "tables" / "01_descriptivas"
 FIG = RAIZ / "output" / "figures" / "01_descriptivas"
@@ -173,7 +172,7 @@ print(f"Precio p25 = {p25 / 1e6:,.0f} M, p75 = {p75 / 1e6:,.0f} M; caras: {len(g
 filas = []
 for nombre, g in grupos.items():
     m = nombre.split("_")[1]
-    junto = " ".join(g.texto)   # ponytail: une anuncios; se cuela un bigrama falso por anuncio, despreciable
+    junto = " ".join(g.texto)   # une anuncios; se cuela un bigrama falso por anuncio, despreciable
     for n in (1, 2):
         filas += [(m, n, k, v) for k, v in frecuencia_ngramas(junto, n, n_max=100).items()]
     par_nubes(junto, n1=1, n2=2, graficar=False, ubicacion_archivo=str(FIG / f"{nombre}_nubes.png"))

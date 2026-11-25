@@ -17,8 +17,7 @@ import numpy as np
 import pandas as pd
 from contexto.vectorizacion import VectorizadorFrecuencias
 
-# Rutas absolutas desde la raíz del proyecto (carpeta que contiene code/): el script funciona sin importar el directorio
-# desde el que se llame. Lo corre code/00_main.R con el python del entorno correspondiente.
+# Rutas desde la raíz del proyecto (la carpeta que contiene code/)
 RAIZ = Path(__file__).resolve().parents[1]
 
 d = pd.read_csv(RAIZ / "data/processed/texto_limpio.csv", keep_default_na=False)   # texto vacío = "" y no NaN

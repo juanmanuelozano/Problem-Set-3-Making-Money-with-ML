@@ -30,7 +30,7 @@ registra("m05_xgb_precio_m2", "XGBoost sobre log(precio por m2); se suma log(ár
 # ---- (b) Híbrido elastic net + XGBoost en residuos, validación anidada ----
 en_margen <- function(idx_tr, idx_pred_list) {
   # Ajusta lasso en idx_tr con CV interna por localidad; devuelve margen OOF interno para idx_tr y predicción para otras filas
-  # ponytail: la CV interna no lleva buffer (cv.glmnet no lo admite); solo afecta la elección de lambda del margen
+  # la CV interna no lleva buffer (cv.glmnet no lo admite); solo afecta la elección de lambda del margen
   cvi <- cv.glmnet(Ltr[idx_tr, ], Y[idx_tr], alpha = 1, foldid = as.integer(factor(GRUPO[idx_tr])), keep = TRUE, type.measure = "mae")
   j <- which(cvi$lambda == cvi$lambda.min)
   c(list(oof = cvi$fit.preval[, j]), map(idx_pred_list, ~ drop(predict(cvi, .x, s = "lambda.min"))))

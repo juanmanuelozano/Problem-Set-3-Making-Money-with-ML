@@ -25,7 +25,8 @@ bloques <- list(
   estructural = c("log_area", "area_imputada", "area_texto", "bedrooms", "banos_final", "banos_imputado", "es_apto",
                   "estrato_final", "piso_txt", "antig_txt", "parq_txt", grep("^na_", v, value = TRUE),
                   "n_palabras", "year", "month"),
-  ubicacion   = setdiff(c("lat", "lon", "lat_rot1", "lat_rot2", grep("^(dist|n500)_", v, value = TRUE)), no_lineal),
+  ubicacion   = setdiff(unique(c("lat", "lon", "lat_rot1", "lat_rot2", grep("^(dist|n500)_", v, value = TRUE),
+                                 grep("500$", v, value = TRUE))), no_lineal),   # 500$: area_verde500, pisos_prom500 (D15)
   texto       = grep("^tx_", v, value = TRUE),
   no_lineal   = no_lineal)
 stopifnot(!anyDuplicated(unlist(bloques)), setequal(unlist(bloques), v))   # cada columna en un solo bloque
@@ -56,7 +57,7 @@ registra("reg_ols_sin_loc", "OLS sin dummies de localidad + habitaciones × dist
 
 # Regresión de mediana (LAD): minimiza el error absoluto, la misma pérdida de la competencia. Se resuelve por
 # mínimos cuadrados reponderados con pesos 1/|residuo| (IRLS); exp() de la mediana del log es la mediana del precio.
-# ponytail: IRLS aproxima la solución exacta; quantreg::rq(method = "fn") si hiciera falta exactitud
+# IRLS aproxima la solución exacta; quantreg::rq(method = "fn") si hiciera falta exactitud
 lad_coef <- function(X, a, y = Y, iter = 50) {
   Xa <- cbind(1, X[a, , drop = FALSE]); w <- rep(1, length(a))
   for (i in seq_len(iter)) {

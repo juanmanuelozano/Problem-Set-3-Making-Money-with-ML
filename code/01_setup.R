@@ -16,6 +16,7 @@ suppressMessages(pacman::p_load(
   Matrix, arrow, irlba,                # matrices dispersas, parquet, PCA truncado
   glmnet, ranger, xgboost, nnet,
   RANN,                                # comparables
+  patchwork, ggrepel,                  # figuras de la presentación best_equipo_04 (95b)
   reticulate
 ))
 

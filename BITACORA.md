@@ -8,6 +8,10 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 
 **Reproducción:** todo se corre con `code/00_main.R` (D27; instrucciones en el [README](README.md)). El código está en `code/` y las figuras y tablas en `output/`. La presentación (`reports/03_presentacion/compare_equipo_4.pdf`) también sale del main (etapa 7, D28).
 
+**Mejor envío en Kaggle: `m24_ens_optimo` = 152,3 M público / 153,1 M privado** (53% NN STAR de Samuel + 40% `m22_xgb_comparables_m2` + 7% `m14_en_enc_tx`; D22). Ya no quedan envíos.
+
+**Presentación `best_equipo_04`** lista: `reports/03_presentacion/best_equipo_04.pdf` (fuente `.tex`; figuras y cifras con `code/95b_presentacion_best.R`, D29).
+
 **Validación:** se deja afuera una localidad a la vez, con buffer de 500 m (D9). No es comparable con la ronda k-means. **Ningún modelo lleva dummies de localidad** (D10).
 
 **Mejor envío en Kaggle:** `m48_star_nn_xgbsq_area_m2`, con 153,3 (detalle en `models/kaggle_scores.csv`). La tabla de abajo no se ha actualizado con los modelos m24–m50 de la rama de redes.
@@ -48,7 +52,10 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 - [x] Análisis de negocio: sesgo por localidad, k* y "Messis" de Chapinero (`99_negocio.R`, moraleja de negocio)
 - [x] Presentación `compare_equipo_4` (`95`–`99`); `best_equipo_04` está en la rama `validacion-sintetica`
 - [ ] Correr el main completo en macOS y `08r_xgb_star_sin_texto.R` (no se alcanzó en la sesión 12)
-- [ ] Unir `validacion-sintetica` (7 commits que no están en main) y, con eso, pasar `95`/`97` a leer de main en lugar del commit `b4948f0`
+- [x] Unir `validacion-sintetica` a la estructura de main (sesión 13). `95`/`97` siguen leyendo del commit fijo `b4948f0` (D28), que ahora está en la historia de main
+- [ ] Análisis de negocio: sobrepredicción, regla de compra, recomendación
+- [x] Presentación `best_equipo_04` (ensamble óptimo, 17 diapositivas)
+- [ ] Validación con buffers de radio aleatorio y folds agrupados por edificio, para que la validación vea las distancias del test (ver presentación, diapositivas 13 y 14)
 - [ ] Subir m06 (y reg_ols_sin_loc / m90) a Kaggle y anotar el score público aquí. Comparar con los 148,5 M de m06 en Chapinero para ver si la validación está calibrada
 - [ ] Híbrido: el número de rondas quedó en el mínimo de la grilla (10). Probar de 1 a 10 rondas
 - [ ] Corregir la subpredicción en Chapinero (sesgo de −82 M en m02): pesos por cambio de covariables o calibración del nivel. **Avance (D16b):** en XGBoost, los pesos por distancia al test bajan el sesgo de −100 a −61 M y el TWCV en 6,6 M (m51). Falta probarlos en el elastic net (m14) y en el híbrido m06, y confirmarlo en Kaggle
@@ -76,6 +83,14 @@ Diario de trabajo. **Se actualiza al final de cada sesión**: la entrada más re
 **Matiz para la discusión:** si el modelo se usa para comprar, la subpredicción hace perder negocios (ofertas demasiado bajas), mientras que la sobrepredicción hace pagar de más. Hay que discutir cuál de los dos errores le cuesta más a la empresa (el análisis de negocio está en los pendientes).
 
 ---
+
+## 2026-11-25 · Sesión 13: la rama `validacion-sintetica` entra a main (rama `integracion-validacion`)
+
+- Se une `origin/validacion-sintetica` (comparables D20, ensamble D21-D22, presentación `best_equipo_04`) en `integracion-validacion`, que parte de `origin/main`. Conflictos en `.gitignore`, `BITACORA.md` y `docs/decisiones.md`, resueltos conservando ambas ramas.
+- `best_equipo_04`: las diapositivas 15 a 17 se salían del marco (gráficas muy altas); las figuras quedan al 80% del ancho.
+- El script temporal de esas diapositivas pasa a `code/95c_presentacion_best_sintetico.R` (genera f13-f15 y `cifras_vs.tex`) y entra al script maestro después de `95b`.
+- `code/utils_comparables_d20.R` (funciones de comparables que usan 03i, 04f y 06b) entra al repositorio.
+- No se suben: `best_equipo_04_nuevo.tex` y `best_equipo_04_old.pdf` (copias de trabajo) ni `compare_equipo_04.pdf` (copia idéntica de `compare_equipo_4.pdf`, que es el que generan `95_presentacion.R` y enlaza el README).
 
 ## 2026-11-25 · Sesión 12: la presentación y las ablaciones del texto entran a la estructura de main (D28)
 
@@ -196,6 +211,20 @@ Trabajo de `redes-neuronales` que no estaba en `main` (sin commitear), pasado a 
 
 ---
 
+## 2026-11-25 · Sesión 9: presentación `best_equipo_04` sobre el ensamble óptimo
+
+- **Kaggle privado del m24:** 153.110.838,48 (público 152.328.386,28). Solo empeora 0,8 M: no estaba sobreajustado al leaderboard.
+- Nuevo `94_presentacion_m24.R`: figuras en PDF (gris, Palatino), tabla de métricas y macros de cifras para `reports/03_presentacion/best_equipo_04.tex`. **No vuelve a entrenar nada.**
+  - OOF aproximado del ensamble = 0,534·m17 + 0,399·m22 + 0,066·m14. m17 se trae de `main` con `git show` a `data/interim_presentacion/` (no se versiona). m22 viene de la CV aleatoria, así que el nivel es optimista: 106,5 M en total y 116,2 M con TWCV, frente a 152,3 M en Kaggle.
+  - Recombinar los tres envíos reproduce `m24_ens_optimo.csv` (diferencia máxima de 0,02%).
+- **Hallazgos (todos en la presentación):**
+  - **Chapinero es la localidad menos heterogénea:** la DE del log del precio por m² es 0,27, frente a 0,39 en todo el train; es la menor de 15 localidades. El test también es compacto (la DE de `dist_cbd` es de 460 m, frente a 2.244 m).
+  - **Qué mira el modelo** (sustituto XGBoost sobre la predicción del test, D23): el área explica el 64% del log del precio. En el precio por m² pesan las habitaciones (19%), los comparables (20%) y el estrato (14%).
+  - **Falta de soporte:** solo 285 anuncios del train (0,7%) caen a la vez en el P10–P90 del test en las 8 variables principales; en `dist_cbd`, solo el 5%. TWCV reduce las diferencias estandarizadas (por ejemplo, de −1,4 a −0,4 en `dist_cbd`), pero no las cierra.
+  - **Dónde falla:** hay contracción hacia la media. En el decil más caro el sesgo es de −252 M y en el más barato de +57 M; en el quintil más caro de Chapinero, de −183 M. En el test, solo el 14% de las predicciones pasa de 1.200 M, frente al 21% de los precios observados en Chapinero.
+  - **Por qué falla el sintético:** (i) el tamaño efectivo de TWCV es de 1.160 anuncios (3%); (ii) ningún anuncio de validación está a menos de 500 m de su vecino del train, frente al 99% del test; (iii) en la CV aleatoria del XGB con comparables, el 60% del train tiene comparables a menos de 30 m (mismo edificio), frente al 2% del test. La brecha entre TWCV y Kaggle es de 61 M en el XGB, 19 M en la red y 36 M en el ensamble.
+- El trabajo se hizo en un *worktree* aparte (`../PS3_validacion_sintetica`), porque `main` tenía cambios locales sin commit.
+
 ## 2026-11-22 · Sesión 10: "Chapinero sintético" (validación ponderada, D16)
 
 - Nuevo `91_validacion_sintetica.R`. Sigue a Brenning y Suesse (2026), *Target-Weighted CV*: repondera los errores out-of-fold para que se parezcan al test. Tarda segundos y no vuelve a entrenar.
@@ -216,6 +245,50 @@ Trabajo de `redes-neuronales` que no estaba en `main` (sin commitear), pasado a 
   - 97% de apartamentos (76%).
 - **Distancia de predicción `d`:** mediana de 96 m en el test, y ningún anuncio de la validación por debajo de 500 m. Aun así, Kaggle sale peor: el sesgo viene del cambio en las variables.
 - Figura para la presentación: `output/figures/02_modelos/m6_validacion_sintetica.png`.
+- **Los pesos pasan a `utils_modelos.R`** (`pesos_twcv()`, `pesos_iwcv()`, `W_TWCV`, `W_IWCV`). `evalua()` y el registro ahora incluyen `mae_twcv` y `mae_iwcv`. `91_validacion_sintetica.R` usa esas mismas funciones.
+- **Lasso por m² entrenado con pesos (`04e_elastic_net_pesos.R`, D19):** no ayuda. Con pesos suaves queda igual y con pesos fuertes empeora (hasta 177 M en Chapinero). Los pesos se usan para evaluar, no para entrenar.
+- **Las variables de embajadas, oficinas, hoteles y clubes empeoraban el modelo:** Chapinero pasaba de 152,9 a 168,2 M. Salen de los modelos (D19) y la base queda con 81 variables.
+- **Nuevo mejor lasso por m²: `m20_en_sin_pesos_m2`.**
+
+  | | Total | Chapinero | TWCV | IWCV |
+  |---|---:|---:|---:|---:|
+  | `m20_en_sin_pesos_m2` | 135,5 | 151,7 | 142,4 | 139,1 |
+  | m02b (base vieja) | 135,0 | 153,8 | 143,6 | 140,8 |
+
+  Es candidato para Kaggle.
+- `09_red_neuronal.R` ahora elige la combinación de la grilla por `mae_twcv`.
+  - Se lanzó en el servidor y se detuvo tras 2 de 4 combinaciones (unos 48 min cada una): TWCV de 154–155 M, peor que el lasso.
+  - Ya no hace falta, porque Samuel cubrió la familia de redes con Keras (rama `redes-neuronales`; su NN STAR tiene 158,3 M en Kaggle, el mejor del equipo).
+- **Kaggle:**
+  - `m20_en_sin_pesos_m2` (subido como `m17_en_sin_pesos_m2.csv`): 171,6 M.
+  - `m15_rf_m2`: 170,1 M.
+
+  El random forest le gana en Kaggle al lasso, aunque en TWCV salía peor (154 M frente a 142 M). TWCV no ordenó bien ese par.
+- **Comparables (`04f_lasso_comparables.R`, D20).** Es un "control sintético" por anuncio: el precio por m² de los 5 y los 20 vecinos del train del mismo tipo, sin duplicados de descripción.
+
+  | | Sin comparables | Con comparables |
+  |---|---:|---:|
+  | CV aleatoria: total | 130 M | 116 M |
+  | CV aleatoria: Chapinero | 150 M | 141 M |
+  | CV aleatoria: TWCV | 138 M | 130 M |
+
+  - En la CV por localidad empeora (193 M), porque el buffer quita los vecinos.
+  - La CV aleatoria exagera la ganancia: los comparables del train están a 19 m en la mediana; los del test, a 151 m.
+  - **Kaggle: `m21_en_comparables_m2` = 167,1 M** (frente a 171,6 M sin comparables).
+- **XGBoost con comparables (`06b_xgb_comparables.R`): `m22_xgb_comparables_m2` = 162,9 M en Kaggle.** Es el mejor XGBoost del equipo y el tercer modelo, detrás de las redes STAR de Samuel (158,3 y 162,1 M).
+  - Se eligió profundidad 6 y 2.500 rondas (el tope) con la CV aleatoria, que en árboles exagera mucho porque memorizan anuncios del mismo edificio.
+  - Las funciones de comparables y `FOLDS_ALEAT` quedaron en `utils_modelos.R`.
+- **Ensamble m22 + NN STAR de Samuel (`92_ensamble_xgb_nnstar.R`, D21).** Promedio aritmético de precios (con convexidad, el MAE queda acotado por el promedio de los MAE), con dos pesos (50/50 y 70% para la red); con un solo envío se sube 70% red (peor caso 159,7 M). Hay que subirlos a Kaggle; la referencia es 158,3 M.
+- **Pesos óptimos del ensamble con los scores de Kaggle (`93_pesos_ensamble.R`, D22).** Con un solo envío restante, los pesos se estimaron sin gastar envíos: con el MAE público de cada modelo y la diferencia media entre sus predicciones se estima la covarianza de los errores (supuesto de normalidad) y se minimiza la varianza del error combinado.
+  - Verificación en el train (OOF por localidad): estimado 126,5 M frente a real 125,1 M.
+  - Pesos: NN STAR 53%, XGB + comparables (m22) 40%, EN + encoder de texto (m14) 7%. Estimado 153,3 M; cota garantizada 160,8 M.
+  - **Kaggle: `m24_ens_optimo` = 152,3 M, el mejor del equipo** (la NN STAR sola: 158,3 M).
+- **Comparables para Samuel:** `03f_comparables.R` → `data/processed/comparables.csv`.
+- **Trabajo en la rama `validacion-sintetica`,** para no tocar `main` mientras el equipo decide cómo unir la rama `redes-neuronales` de Samuel.
+
+  Para no chocar con ella:
+  - las decisiones de esta sesión son **D18** (validación sintética) y **D19** (sin variables de lujo; pesos solo para evaluar), porque Samuel ya usa D16;
+  - los lassos nuevos son **`m20_en_*`**, porque Samuel registra `m17_nn_star` y `m18_nn_64`.
 
 ---
 

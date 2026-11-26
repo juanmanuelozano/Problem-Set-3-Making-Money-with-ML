@@ -19,7 +19,7 @@ source(here::here("code", "01_setup.R"))
 DESCARGAS <- FALSE  # OpenStreetMap (01b) y catastro (03f, 03h)
 PYTHON    <- FALSE  # texto (03c), TF-IDF (03d) y embeddings (03g)
 REDES     <- FALSE  # redes con Keras (08c-08q) y 08p; varias horas
-LENTOS    <- FALSE  # 03b, 05, 05c, 09, 10, 08 y 08b
+LENTOS    <- FALSE  # 03b, 05, 05c, 09, 10, 08, 08b y los modelos de D19-D20 (04e, 04f, 06b)
 PRUEBA    <- FALSE  # grillas mínimas en redes y XGB STAR (PRUEBA=1)
 SOLO_PASOS <- character(0)   # p. ej. c("04_regresiones.R"): solo esos pasos
 DESDE      <- ""             # p. ej. "04b_elastic_net.R": retoma desde ese paso
@@ -53,15 +53,21 @@ pasos <- tribble(
   "2. Descriptivas y base",  "03f_catastro.R",                "DESCARGAS", "",                          d("processed", "catastro.csv"),                                            "sf",
   "2. Descriptivas y base",  "03h_construcciones.R",          "DESCARGAS", "",                          d("processed", "construcciones.csv"),                                      "sf",
   "2. Descriptivas y base",  "03g_embeddings.py",             "PYTHON",    "",                          character(0),                                                              "emb",
+  # comparables por anuncio (D20): los usa 95b; 04f y 06b los recalculan dentro de cada fold
+  "2. Descriptivas y base",  "03i_comparables.R",             NA,          "",                          d("processed", "comparables.csv"),                                         "",
   "3. Modelos",              "04_regresiones.R",              NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04b_elastic_net.R",             NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04c_elastic_net_pca.R",         NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04g_en_sin_texto.R",            NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "04d_diagnostico_ubicacion.R",   NA,          "",                          character(0),                                                              "",
+  # lasso con pesos hacia el test (D19) y con comparables (D20): m20_en_*, m21
+  "3. Modelos",              "04e_elastic_net_pesos.R",       "LENTOS",    "",                          character(0),                                                              "",
+  "3. Modelos",              "04f_lasso_comparables.R",       "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "05_random_forest.R",            "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "05b_cart.R",                    NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "05c_rf_m2.R",                   "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "06_xgboost.R",                  NA,          "",                          character(0),                                                              "",
+  "3. Modelos",              "06b_xgb_comparables.R",         "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "07_hibridos.R",                 NA,          "",                          character(0),                                                              "",
   "3. Modelos",              "09_red_neuronal.R",             "LENTOS",    "",                          character(0),                                                              "",
   "3. Modelos",              "10_xgb_ponderado.R",            "LENTOS",    "",                          character(0),                                                              "",
@@ -95,6 +101,9 @@ pasos <- tribble(
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=area",             character(0),                                                              "",
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=area_sq",          character(0),                                                              "",
   "5. STAR y redes",         "08p_xgb_star_comparables.R",    "REDES",     "VARIANTE=area_sq_general",  character(0),                                                              "",
+  # 92 y 93 combinan los envíos tal como se calificaron en Kaggle (commits fijos, D28): m23 y m24_ens_optimo
+  "6. Ensambles y cierre",   "92_ensamble_xgb_nnstar.R",      NA,          "",                          character(0),                                                              "",
+  "6. Ensambles y cierre",   "93_pesos_ensamble.R",           NA,          "",                          character(0),                                                              "",
   "6. Ensambles y cierre",   "94_star_nn_xgb.R",              NA,          "",                          character(0),                                                              "",
   "6. Ensambles y cierre",   "90_comparacion.R",              NA,          "",                          character(0),                                                              "",
   "6. Ensambles y cierre",   "91_validacion_sintetica.R",     NA,          "",                          character(0),                                                              "",
@@ -103,7 +112,10 @@ pasos <- tribble(
   "7. Presentación",         "97_shap_ensamble.R",            "REDES",     "",                          tp("shap_grupos.csv"),                                                     "keras",
   "7. Presentación",         "98_mapas_star.R",               "REDES",     "",                          tp("mapas_ubicacion.csv"),                                                 "keras",
   "7. Presentación",         "99_negocio.R",                  NA,          "",                          character(0),                                                              "",
-  "7. Presentación",         "95_presentacion.R",             NA,          "",                          character(0),                                                              ""
+  "7. Presentación",         "95_presentacion.R",             NA,          "",                          character(0),                                                              "",
+  # best_equipo_04 (D29): ensamble óptimo y por qué no funcionó el Chapinero sintético; compila su .tex
+  "7. Presentación",         "95b_presentacion_best.R",       NA,          "",                          character(0),                                                              "",
+  "7. Presentación",         "95c_presentacion_best_sintetico.R", NA,      "",                          character(0),                                                              ""
 )
 stopifnot(all(file.exists(file.path(P$code, pasos$script))))
 if (nzchar(DESDE)) {

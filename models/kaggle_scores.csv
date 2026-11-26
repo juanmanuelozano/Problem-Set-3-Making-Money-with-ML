@@ -22,3 +22,13 @@ m12_en_m02,m12_en_m02.csv,184367537.50,2026-11-24
 m12_en_m02_pca_tx,m12_en_m02_pca_tx.csv,175913947.38,2026-11-24
 m52_nn_star_sin_texto_m2,m52_nn_star_sin_texto_m2.csv,171673396.75,2026-11-24
 m53_en_sin_texto,m51_en_sin_texto.csv,198632754.46,2026-11-24
+m20_en_sin_pesos_m2,m17_en_sin_pesos_m2.csv,171595651.75,2026-11-22
+m15_rf_m2,m15_rf_m2.csv,170070460.29,2026-11-21
+m15_rf_m2_sin_coord,m15_rf_m2_sin_coord.csv,172719089.99,2026-11-21
+m06_hibrido_en_xgb,m06_hibrido_en_xgb.csv,178606472.86,2026-11-21
+en_pca_nt_tx_vars,en_pca_nt_tx_vars.csv,173391249.97,2026-11-19
+m17_xgb_ponderado (Juan Manuel; no está en el repo),m17_xgb_ponderado.csv,168653275.97,2026-11-21
+m17b_xgb_tipo_dist (Juan Manuel; no está en el repo),m17b_xgb_tipo_dist.csv,165521770.73,2026-11-21
+m21_en_comparables_m2,m21_en_comparables_m2.csv,167128697.87,2026-11-22
+m22_xgb_comparables_m2,m22_xgb_comparables_m2.csv,162936278.45,2026-11-22
+m24_ens_optimo (53% NN STAR + 40% m22 + 7% m14),m24_ens_optimo.csv,152328386.28,2026-11-22

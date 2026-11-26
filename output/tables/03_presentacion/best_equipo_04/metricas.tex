@@ -1,0 +1,16 @@
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+ & Train completo & Chapinero (train) & Chapinero sintético \\
+ & {\footnotesize ($n = \nTrain$)} & {\footnotesize ($n = \nChapTrain$)} & {\footnotesize (TWCV, $n_{ef} = \essTWCV$)} \\
+\midrule
+MAE (millones) & 106,5 & 126,8 & 116,2 \\
+Sesgo medio (millones) & $-$13,3 & $-$49,8 & $-$16,2 \\
+Error porcentual mediano & 11,6\% & 11,8\% & 11,6\% \\
+Con error $<10\%$ & 44,1\% & 42,7\% & 44,1\% \\
+Con error $<20\%$ & 72,1\% & 74,3\% & 71,4\% \\
+$R^2$ en logaritmos & 0,76 & 0,81 & 0,80 \\
+Sensibilidad del decil más caro & 61,8\% & 64,5\% & -- \\
+\midrule
+\textbf{MAE en Kaggle (millones)} & \multicolumn{3}{r}{público \textbf{\kPub}\quad privado \textbf{\kPriv}} \\
+\bottomrule
+\end{tabular}

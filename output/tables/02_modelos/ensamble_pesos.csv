@@ -1,0 +1,11 @@
+modelo,kaggle_M,peso,mae_estimado_M,cota_M
+NN STAR (Samuel),158.3,0.534,153.3,160.8
+XGB + comparables,162.9,0.399,153.3,160.8
+Lasso + comparables,167.1,0,153.3,160.8
+NN 64 (Samuel),167.5,0,153.3,160.8
+EN + encoder texto (m14),168.8,0.066,153.3,160.8
+Random forest m2,170.1,0,153.3,160.8
+Lasso m2 base nueva (m20),171.6,0,153.3,160.8
+XGBoost (m04),172.7,0,153.3,160.8
+EN m2 (m02b),172.7,0,153.3,160.8
+Híbrido EN+XGB (m06),178.6,0,153.3,160.8

@@ -38,5 +38,9 @@ reports/**/*.nav
 reports/**/*.out
 reports/**/*.snm
 reports/**/*.toc
+reports/**/*.vrb
 Rplots.pdf
 .DS_Store
+
+# Caché de distancias de la presentación best_equipo_04 (95b)
+data/processed/distancias_d_best.rds

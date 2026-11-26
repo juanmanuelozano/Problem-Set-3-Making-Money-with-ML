@@ -241,6 +241,103 @@ Se agregan a la base (`01b_osm_descarga.R` las descarga y `02_descriptivas.R` la
   - Su predicción media del test es 801 M, frente a 826 de m17.
   - No mejora con claridad a m17 ni en Chapinero ni en el nivel del test, así que **no se sube a Kaggle**. **m17 sigue siendo la referencia.**
 
+### D19 · Sin variables de lujo y oficinas en los modelos; los pesos del Chapinero sintético solo para evaluar (2026-11-22)
+
+**1. Embajadas, oficinas, hoteles y clubes salen de los modelos.** Se quedan en `base_enriquecida.csv` para las descriptivas. La base de modelos queda con 81 variables.
+
+*Al integrar con main (2026-11-25):* `base_modelo.rds` vuelve a tener las 89 variables, porque main entrena sus modelos con ellas y sus resultados deben poder reproducirse. La exclusión se aplica en los scripts de esta decisión y de D20 con `vars_sin()` (`LUJO` en `utils_modelos.R`, la misma lista que usan las redes): `matriz_lineal(TR, vars = vars_sin())`. Da exactamente la misma matriz de 81 variables, en el mismo orden. Queda pendiente decidir con el equipo si los demás modelos también la excluyen.
+
+En el lasso por m² (04e), quitarlas cambia mucho el resultado:
+
+| | MAE total | Chapinero | TWCV |
+|---|---:|---:|---:|
+| Con ellas | 135,9 M | 168,2 M | 150,5 M |
+| Sin ellas | 135,1 M | 152,9 M | 142,8 M |
+
+Por qué: se concentran en Chapinero y Usaquén, así que al dejar Chapinero afuera el modelo extrapola a valores que nunca vio. Es el mismo argumento de D10 contra las dummies de localidad.
+
+Es un buen ejemplo para la presentación: `dist_embajada` es la variable nueva más correlacionada con el precio (−0,30) y aun así empeora la predicción fuera de muestra.
+
+**2. Entrenar con pesos hacia el test no ayuda** (`04e_elastic_net_pesos.R`).
+
+Se probó el lasso ponderado con pesos IWCV o TWCV elevados a γ ∈ {0,25; 0,5; 1}:
+
+| | TWCV | Chapinero |
+|---|---:|---:|
+| Sin pesos (`m20_en_sin_pesos_m2`) | 142,4 M | 151,7 M |
+| Mejor con pesos (TWCV, γ = 0,25) | 142,3 M | 153,8 M |
+| Pesos completos | hasta 153,7 M | hasta 177 M |
+
+Con pesos fuertes, el modelo aprende de muy pocos anuncios (el tamaño efectivo es del 2–3%).
+
+**Decisión:** los pesos se usan para **evaluar y elegir** hiperparámetros (`mae_twcv` y `mae_iwcv`, que ahora salen en `evalua()` y en el registro), no para entrenar. La red (`09`) elige por `mae_twcv` y entrena sin pesos.
+
+`m20_en_sin_pesos_m2` es el mejor lasso por m² hasta ahora en Chapinero, TWCV e IWCV.
+
+### D20 · Comparables: precio por m² de los vecinos del train, un "control sintético" por anuncio (2026-11-22)
+
+`04f_lasso_comparables.R` agrega al lasso por m² cuatro variables: el precio por m² (en log) de los 5 y de los 20 anuncios del train más cercanos **del mismo tipo** (apartamento o casa), ponderados por 1/(distancia + 30 m), y la distancia media a ellos. Es la lógica de un avaluador y el rezago espacial que estaba pendiente.
+
+**Motivación (de D16):** el 99% del test tiene un anuncio del train a menos de 500 m (mediana 96 m). Los modelos no usaban esa información.
+
+**Sin fuga de información:**
+- En cada fold, los comparables salen solo del conjunto de análisis, y nunca es el anuncio mismo.
+- No se usan como comparables los anuncios con la **misma descripción**: el mismo inmueble publicado dos veces (8.078 descripciones repetidas en el train y 200 compartidas con el test; `USA_DUPLICADOS = FALSE`).
+
+**Validación (lambda elegido por TWCV en la CV aleatoria):**
+
+| | Sin comparables | Con comparables |
+|---|---:|---:|
+| CV aleatoria: total | 130 M | 116 M |
+| CV aleatoria: Chapinero | 150 M | 141 M |
+| CV aleatoria: TWCV | 138 M | 130 M |
+| CV por localidad con buffer: TWCV | 143 M | 193 M |
+
+El buffer quita justo los vecinos que la variable necesita, así que esa CV no sirve para estos modelos.
+
+**Cuidado:** en la CV aleatoria, los 5 comparables de un anuncio del train están a 19 m en la mediana (a menudo en el mismo edificio); los del test, a 151 m. La CV aleatoria exagera la ganancia. El lasso pone más peso en el promedio de 20 vecinos que en el de 5, que es menos sensible a eso.
+
+**Registro:** `m21_en_comparables_m2`, con las predicciones out-of-fold de la CV por localidad, para que sea comparable con el resto del registro. Por eso ahí luce mal. El juez es Kaggle; la referencia es m20 sin comparables, con 171,6 M.
+
+**Actualización (XGBoost con comparables, `06b_xgb_comparables.R`, `m22_xgb_comparables_m2`):**
+- Kaggle: **162,9 M**, el mejor XGBoost del equipo (el de Juan Manuel, sin comparables, sacó 165,5 M) y el tercer mejor modelo.
+- Los comparables mejoran tanto el lasso (de 171,6 a 167,1 M) como los árboles.
+- La CV aleatoria **no sirve para estimar el nivel del error en árboles**: el XGBoost sin comparables da 100 M en ella, frente a 133 M en la CV por localidad y 172,7 M en Kaggle. Los árboles memorizan anuncios del mismo edificio y descripciones repetidas que quedan en folds distintos, y las rondas llegan al tope de la grilla (2.500). Solo sirve para comparar con y sin comparables a igual configuración: el TWCV baja de 116 a 110,5 M con profundidad 4.
+- Siguiente paso: una CV aleatoria agrupada por edificio (mismas coordenadas en el mismo fold), para elegir hiperparámetros sin memorización.
+- Las funciones de comparables (`prepara_comparables()`, `comparables_*()`) y `FOLDS_ALEAT` están en `utils_modelos.R`, para que los use cualquier modelo.
+
+### D21 · Ensamble del XGBoost con comparables y la NN STAR de Samuel (2026-11-22)
+
+`92_ensamble_xgb_nnstar.R` promedia (aritméticamente) el precio de `m22_xgb_comparables_m2` (162,9 M en Kaggle) y de la NN STAR de Samuel (`m17_nn_star_m2`, 158,3 M; leída de su rama `redes-neuronales` con `git show`, sin unir ramas).
+
+- Las predicciones de los dos tienen una correlación de 0,94 en log, pero difieren 94 M por anuncio en promedio: se equivocan distinto.
+- Los pesos no se estiman con validación, porque las OOF de los dos vienen de CV distintas (aleatoria y por localidad). Se prueban dos pesos fijos: 50/50 y 70% para la red. Como el valor absoluto es convexo, el MAE del promedio no supera el promedio de los MAE: el peor caso es 160,6 M (50/50) o 159,7 M (70% red). Con un solo envío disponible se sube 70% red.
+- Envíos: `m23_ens_xgbcomp_nnstar_50.csv` y `m23_ens_xgbcomp_nnstar_70nn.csv`.
+- `03i_comparables.R` (antes `03f_comparables.R`; 03f es ahora el catastro) exporta `data/processed/comparables.csv` (las 4 variables de comparables, train y test) para que Samuel pruebe su red con ellas.
+
+### D22 · Pesos del ensamble estimados con los scores públicos de Kaggle (2026-11-22)
+
+`93_pesos_ensamble.R` elige los pesos de un ensamble **sin gastar envíos**.
+
+**Cómo:**
+- Se conoce el MAE público de cada modelo y sus predicciones sobre el test.
+- Bajo errores aproximadamente normales, E|e| = σ·√(2/π) y E|p_i − p_j| = √(2/π)·sd(e_i − e_j). De ahí sale la covarianza de los errores sin conocer los precios del test: Cov(e_i, e_j) = (σ_i² + σ_j² − D_ij)/2.
+- Los pesos (no negativos, que suman 1) minimizan w'Σw.
+- **Garantía exacta:** el MAE del promedio de precios no supera el promedio ponderado de los MAE, porque el valor absoluto es convexo.
+
+**Verificación en el train** (OOF de la CV por localidad, 8 modelos): MAE estimado del ensamble óptimo 126,5 M; real 125,1 M; el mejor individual tenía 132,2 M. El método acierta y es algo conservador.
+
+**Test (10 candidatos con score público):** el óptimo usa NN STAR 53%, XGB con comparables 40% y m14 7%. Su MAE estimado es 153,3 M, con cota garantizada de 160,8 M; el mejor individual tiene 158,3 M.
+
+| Alternativa | Estimado | Cota |
+|---|---:|---:|
+| 70/30 (NN/XGB) | 153,8 M | 159,7 M |
+| 59/41 | 153,4 M | 160,2 M |
+
+**Envío:** `m24_ens_optimo.csv`. Las predicciones de Samuel (`m17_nn_star_m2.csv`, `m18_nn_64_m2.csv`) se traen de su rama con `git show` y no se suben a esta rama.
+
+**Resultado en Kaggle:** 152,3 M (público), el mejor del equipo: 6 M menos que la NN STAR sola (158,3 M) y dentro de lo estimado (153,3 M; cota 160,8 M). El método queda validado también en el test. **Privado: 153,1 M** (solo 0,8 M más que el público).
+
 ### D27 · Organización del repositorio y script maestro (2026-11-24)
 **Contexto:** en la entrega anterior hubo problemas de reproducibilidad. Había scripts sueltos que se corrían a mano y en un orden implícito, rutas que dependían del directorio de trabajo, comandos de Python escritos para macOS (`.venv/bin/python`) y paquetes cargados en cada script.
 **Decisión:**
@@ -268,3 +365,24 @@ Se agregan a la base (`01b_osm_descarga.R` las descarga y `02_descriptivas.R` la
 - **Nombres:** `m51_en_sin_texto` pasa a **m53_en_sin_texto**, porque `main` ya usa m51 para el XGB ponderado. En `kaggle_scores.csv`, `archivo_subido` conserva el nombre con que se subió (`m51_en_sin_texto.csv`).
 
 **Por qué:** correlacionar el puntaje de Kaggle con las predicciones de un modelo reentrenado mezcla dos modelos distintos. Con los commits fijos, la presentación se reproduce con las mismas cifras aunque el main vuelva a entrenar los modelos o la otra rama avance. **Límite:** las tablas descriptivas del PCA del texto (diapositiva 4) salen de la corrida actual de `03e_pca.R`, así que pueden moverse un poco si cambia el TF-IDF.
+
+### D29 · Cómo se analiza el ensamble óptimo sin volver a entrenar (presentación `best_equipo_04`) (2026-11-25)
+
+`95b_presentacion_best.R` (antes `94_presentacion_m24.R`, en la rama `validacion-sintetica`, donde esta decisión era la D23) produce las figuras y cifras de la presentación y compila el `.tex`. Igual que en D28, lee de commits fijos: los OOF y envíos de la rama (`589aff9`), los de las redes (`f5786a2`) y la tabla validación–Kaggle de la presentación (`b4948f0`). Ya no usa la carpeta `data/interim_presentacion/`, que se llenaba a mano con `git show`.
+
+**1. OOF del ensamble:** se combinan las OOF guardadas de los componentes con los pesos de D22.
+- No hay una validación común: m17 y m14 vienen de la CV por localidad con buffer, y m22 de la CV aleatoria.
+- Por eso el nivel del MAE es optimista (106,5 M, frente a 152,3 M en Kaggle). Solo se interpretan los **patrones**: el sesgo por decil, el desempeño en Chapinero y las métricas relativas.
+
+**2. Importancia de variables mediante un modelo sustituto.** Un ensamble de red, XGB y elastic net no tiene una importancia común.
+- Se ajusta un XGBoost (profundidad 5, 800 rondas) que imita el log de la predicción del m24 **en el test**, con las 81 variables y las 4 de comparables. Se reporta su R² en el 20% retenido (0,99).
+- Se ajusta un segundo sustituto sobre el log del precio por m² (R² 0,91). Sin él, el área (64%) tapa todo lo demás.
+- La importancia que se reporta es la ganancia; las coordenadas se suman en una sola variable.
+
+**3. Métricas de regresión, no de clasificación.**
+- El AUC y la sensibilidad no aplican. Se reportan MAE, sesgo, MdAPE, el porcentaje con error menor a 10% y 20%, y el R² en log. El RMSE y el MAPE se quitaron de la presentación para simplificarla.
+- Como análogo de la sensibilidad, se reporta la proporción del decil real más caro que cae en el decil más caro predicho.
+
+**4. Falta de soporte.** Para las 8 variables continuas u ordinales principales se reportan:
+- la diferencia de medias estandarizada entre el test y el train, sin pesos y con TWCV;
+- la proporción del train dentro del P10–P90 del test, variable por variable y en todas a la vez (0,7%).
